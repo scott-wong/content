@@ -14,8 +14,18 @@ description: |-
 
   The Compliance Operator does not automatically resolve dependency issues that can occur between remediations. Users should perform a rescan after remediations are applied to ensure accurate results.
 
+  <p><strong>中文说明：</strong></p>
+  <a href="https://docs.openshift.com/container-platform/latest/security/compliance_operator/co-overview.html">Compliance Operator</a> 会根据不同的合规基准扫描主机和平台（OCP）配置中的软件缺陷和不当配置。如果存在修复，Compliance Operator 允许其扫描对失败的规则自动应用修复。
+
+  自动应用修复只能在经过仔细考虑后进行。
+
+  Compliance Operator 不会自动解决修复之间可能出现的依赖关系问题。用户应在应用修复后重新扫描，以确保结果准确。
+
 rationale: |-
   With enabled AutoApplyRemediation compliance failures get automatically corrected.
+
+  <p><strong>中文理由：</strong></p>
+  启用 AutoApplyRemediation 后，合规失败会自动得到纠正。
 
 ocil_clause: 'compliance operator is not automatically remediating the cluster'
 

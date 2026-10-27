@@ -7,6 +7,9 @@ description: |-
     The RBAC role cluster-admin provides wide-ranging powers over the
     environment and should be used only where and when needed.
 
+    <p><strong>中文说明：</strong></p>
+    RBAC 角色 <tt>cluster-admin</tt> 对环境拥有广泛权力，仅应在需要时使用。
+
 rationale: |-
     Kubernetes provides a set of default roles where RBAC is used. Some of these
     roles such as cluster-admin provide wide-ranging privileges which should
@@ -16,6 +19,9 @@ rationale: |-
     cluster and in all namespaces. When used in a RoleBinding, it gives full
     control over every resource in the rolebinding's namespace, including the
     namespace itself.
+
+    <p><strong>中文理由：</strong></p>
+    Kubernetes 提供一组使用 RBAC 的默认角色。其中某些角色（例如 <tt>cluster-admin</tt>）拥有广泛权限，只应在绝对必要时应用。<tt>cluster-admin</tt> 等角色允许超级用户访问权限，可对任意资源执行任意操作。在 ClusterRoleBinding 中使用时，它将拥有对集群中所有命名空间内每个资源的完全控制权。在 RoleBinding 中使用时，它将拥有对 RoleBinding 所在命名空间中每个资源的完全控制权，包括该命名空间本身。
 
 severity: medium
 

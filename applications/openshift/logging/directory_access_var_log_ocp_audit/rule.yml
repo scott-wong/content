@@ -18,9 +18,18 @@ description: |-
     utility to read audit rules during daemon startup, add the rule to
     <tt>/etc/audit/audit.rules</tt> file.
 
+    <p><strong>中文说明：</strong></p>
+    审计系统应收集读取 OpenShift 审计日志目录的访问事件。以下审计规则将确保收集对审计日志目录的访问。
+    <pre>-a always,exit -F dir=/var/log/openshift-apiserver/ -F perm=r -F auid>={{{ auid }}} -F auid!=unset -F key=access-audit-trail</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将该规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将该规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+
 rationale: |-
     Attempts to read the logs should be recorded, suspicious access to audit log files could be an indicator of malicious activity on a system.
     Auditing these events could serve as evidence of potential system compromise.'
+
+    <p><strong>中文理由：</strong></p>
+    应记录读取日志的尝试，对审计日志文件的可疑访问可能是系统上恶意活动的迹象。审计这些事件可作为潜在系统失陷的证据。
 
 references:
     nist: AU-2(d),AU-12(c),AC-6(9),CM-6(a)

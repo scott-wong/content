@@ -10,9 +10,17 @@ description: |-
     {{{ describe_file_owner(file="/var/log/openshift-apiserver", owner="root") }}}
     {{{ describe_file_owner(file="/var/log/openshift-apiserver/*", owner="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    所有审计日志必须由 root 用户和组拥有。默认情况下，OpenShift 审计日志路径为 <pre>/var/log/openshift-apiserver/</pre>。
+    确保 <tt>/var/log/openshift-apiserver</tt> 的文件所有者为 <tt>root</tt>。
+    确保 <tt>/var/log/openshift-apiserver/*</tt> 的文件所有者为 <tt>root</tt>。
+
 rationale: |-
     Unauthorized disclosure of audit records can reveal system and configuration data to
     attackers, thus compromising its confidentiality.
+
+    <p><strong>中文理由：</strong></p>
+    未经授权披露审计记录可能会向攻击者泄露系统和配置数据，从而损害其机密性。
 
 severity: medium
 

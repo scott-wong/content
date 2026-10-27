@@ -24,11 +24,25 @@ description: |-
       ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    要禁用只读端口，请编辑 kubelet 配置。编辑 <tt>openshift-kube-apiserver</tt> ConfigMap，并将 <tt>kubelet-read-only-port</tt> 参数设置为 0：
+    <pre>
+    "apiServerArguments":{
+      ...
+      "kubelet-read-only-port":[
+        "0"
+      ],
+      ...
+    </pre>
+
 rationale: |-
     OpenShift disables the read-only port (<tt>10255</tt>) on all nodes by setting the
     read-only port kubelet flag to <tt>0</tt>. This ensures only
     authenticated connections are able to receive information about the OpenShift
     system.
+
+    <p><strong>中文理由：</strong></p>
+    OpenShift 通过将只读端口 kubelet 标志设置为 <tt>0</tt>，在所有节点上禁用只读端口（<tt>10255</tt>）。这可确保只有经过身份验证的连接才能接收有关 OpenShift 系统的信息。
 
 severity: medium
 

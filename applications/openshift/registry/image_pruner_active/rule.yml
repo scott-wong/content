@@ -14,6 +14,14 @@ description: |-
   {{{ weblink(link="https://access.redhat.com/documentation/en-us/openshift_container_platform/latest/html/building_applications/pruning-objects") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  内部镜像仓库中因使用时长、状态或超出限制而不再被系统需要的镜像会自动清理。集群管理员可以配置 Pruning Custom Resource，或暂停该功能。
+  </p>
+  <p>
+  有关配置 ImagePruner 的更多信息，请查阅 OpenShift 文档：https://access.redhat.com/documentation/en-us/openshift_container_platform/latest/html/building_applications/pruning-objects
+  </p>
+
 
 rationale: |-
   <p>
@@ -25,6 +33,14 @@ rationale: |-
   <p>
   Removing stale or obsolete images and only keeping the most recent versions
   of those that are still in use removes any possibility of vulnerable images being deployed.
+  </p>
+
+  <p><strong>中文理由：</strong></p>
+  <p>
+  需要从镜像仓库中移除过时和陈旧的镜像，以确保容器平台保持安全状态。虽然存储这些镜像不会直接构成威胁，但它们会增加这些镜像被部署的可能性。
+  </p>
+  <p>
+  移除陈旧或过时的镜像，并仅保留仍在使用的最新版本，可消除易受攻击镜像被部署的可能性。
   </p>
 
 identifiers:

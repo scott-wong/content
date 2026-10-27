@@ -31,11 +31,39 @@ description: |-
     </pre>
   In order to configure this rule to check for an alternative cipher, both var_kubelet_tls_cipher_suites_regex
   and var_kubelet_tls_cipher_suites have to be set
+
+  <p><strong>中文说明：</strong></p>
+  确保 Kubelet 配置为仅使用强加密算法。要为 kubelet 设置密码套件，请为每个 <tt>MachineConfigPool</tt> 按以下示例创建新的或修改现有的 <tt>KubeletConfig</tt> 对象：
+  <pre>
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: KubeletConfig
+    metadata:
+       name: kubelet-config-$pool
+    spec:
+        machineConfigPoolSelector:
+            matchLabels:
+                pools.operator.machineconfiguration.openshift.io/$pool_name: ""
+        kubeletConfig:
+          tlsCipherSuites:
+          - TLS_AES_128_GCM_SHA256
+          - TLS_AES_256_GCM_SHA384
+          - TLS_CHACHA20_POLY1305_SHA256
+          - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+          - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+          - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+          - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+          - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+          - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+  </pre>
+  若要将此规则配置为检查其他密码套件，必须同时设置 var_kubelet_tls_cipher_suites_regex 和 var_kubelet_tls_cipher_suites。
 rationale: |-
   TLS ciphers have had a number of known vulnerabilities and weaknesses,
   which can reduce the protection provided by them. By default Kubernetes
   supports a number of TLS ciphersuites including some that have security
   concerns, weakening the protection provided.
+
+  <p><strong>中文理由：</strong></p>
+  TLS 密码算法存在若干已知漏洞和弱点，这会降低其提供的保护。默认情况下，Kubernetes 支持多种 TLS 密码套件，其中包括一些存在安全问题的套件，从而削弱所提供的保护。
 
 severity: medium
 

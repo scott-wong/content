@@ -19,9 +19,26 @@ description: |-
     </pre> you would call
     <pre>oc patch image.config.openshift.io cluster --patch="$(cat /tmp/allowed-import-registries-patch.yaml)" --type=merge</pre>
 
+    <p><strong>中文说明：</strong></p>
+    配置 <tt>allowedRegistriesForImport</tt> 限制普通用户可从中导入镜像的容器镜像仓库。控制此项很重要，因为能够搭建恶意镜像仓库的用户可以导入声称包含合法内容层 SHA 的内容。可以通过使用 <pre>oc patch</pre> 应用以下清单来设置允许导入的镜像仓库。例如，如果将以下代码段保存到 <pre>/tmp/allowed-import-registries-patch.yaml</pre>：
+
+    <pre>
+    spec:
+      allowedRegistriesForImport:
+      - domainName: my-trusted-registry.internal.example.com
+        insecure: false
+    </pre>
+
+    则应调用：
+
+    <pre>oc patch image.config.openshift.io cluster --patch="$(cat /tmp/allowed-import-registries-patch.yaml)" --type=merge</pre>
+
 rationale: |-
     Allowed registries for import should be specified to limit the registries 
     from which users may import images.
+
+    <p><strong>中文理由：</strong></p>
+    应指定允许导入的镜像仓库，以限制用户可从中导入镜像的镜像仓库。
 
 severity: medium
 

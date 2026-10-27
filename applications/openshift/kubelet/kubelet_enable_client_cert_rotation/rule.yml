@@ -22,9 +22,21 @@ description: |-
     ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    为使 kubelet 能够轮换客户端证书，请在 kubelet 节点上编辑 kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt>，并设置以下参数：
+    <pre>
+    featureGates:
+    ...
+      RotateKubeletClientCertificate: true
+    ...
+    </pre>
+
 rationale: |-
     Allowing the kubelet to auto-update the certificates ensure that there is no downtime
     in certificate renewal as well as ensures confidentiality and integrity.
+
+    <p><strong>中文理由：</strong></p>
+    允许 kubelet 自动更新证书可确保证书续期期间不会发生停机，并确保机密性和完整性。
 
 severity: medium
 

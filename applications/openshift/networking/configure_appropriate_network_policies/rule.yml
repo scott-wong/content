@@ -7,6 +7,9 @@ description: |-
   only the required communications are allowed. The Network Policies should precisely define
   source and target using label selectors and ports.
 
+  <p><strong>中文说明：</strong></p>
+  以适当方式在任何应用命名空间中配置 Network Policy，确保仅允许所需的通信。Network Policy 应使用标签选择器和端口精确限定源和目标。
+
 rationale: |-
   By default, all pod to pod traffic within a cluster is allowed. Network
   Policy creates a pod- level firewall that can be used to restrict traffic
@@ -21,6 +24,11 @@ rationale: |-
   services communicate only with necessary entities, reducing unauthorized access risks. In case
   of a breach, these policies contain compromised pods, preventing widespread malicious activity.
   Additionally, they enhance monitoring and detection of anomalous network activities.
+
+  <p><strong>中文理由：</strong></p>
+  默认情况下，集群内所有 Pod 之间的流量都被允许。Network Policy 会创建 Pod 级防火墙，可用于限制源之间的流量。通过使用标签选择 Pod 的 Network Policy，可以限制该 Pod 的流量。一旦命名空间中存在选择特定 Pod 的 Network Policy，该 Pod 就会拒绝任何 Network Policy 未允许的连接。命名空间中未被任何 Network Policy 选择的其他 Pod 仍会接受所有流量。
+
+  以最小允许通信为原则实施 Kubernetes Network Policy 可减少入口点并限制攻击者在集群内的移动，从而增强安全性。它确保 Pod 和服务仅与必要的实体通信，降低未授权访问风险。一旦发生安全泄露，这些策略可将受影响的 Pod 隔离，防止恶意活动扩散。此外，这些策略还可增强对异常网络活动的监控和检测。
 
 severity: medium
 

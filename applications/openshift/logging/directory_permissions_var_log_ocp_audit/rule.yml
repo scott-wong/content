@@ -8,7 +8,14 @@ platform: ocp4-master-node
 description: |-
     {{{ describe_file_permissions(file="/var/log/openshift-apiserver/", perms="0700") }}}
 
-rationale: 'If users can write to audit logs, audit trails can be modified or destroyed.'
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/var/log/openshift-apiserver/</tt> 的目录权限为 <tt>0700</tt>。
+
+rationale: |-
+    If users can write to audit logs, audit trails can be modified or destroyed.
+
+    <p><strong>中文理由：</strong></p>
+    如果用户能够写入审计日志，审计跟踪就可能被修改或销毁。
 
 severity: medium
 

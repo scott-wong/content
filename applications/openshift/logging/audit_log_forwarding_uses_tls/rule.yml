@@ -16,9 +16,21 @@ description: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/latest/observability/logging/logging-6.0/log6x-clf.html") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  OpenShift 审计在 API Server 级别工作，记录发往服务器的所有请求。审计默认启用，最佳实践是使用安全协议将审计日志发送到集群外进行保留。
+  </p>
+  <p>
+  cluster-logging-operator 可通过 <pre>ClusterLogForwarders</pre> 资源实现此目的。上述资源可配置为将日志发送到不同的第三方系统。有关更多信息，请参阅官方文档：
+  <a href="https://docs.openshift.com/container-platform/latest/observability/logging/logging-6.0/log6x-clf.html">官方文档</a>
+  </p>
+
 rationale: |-
   It is necessary to ensure that any configured output uses the TLS protocol to receive
   logs in order to ensure the confidentiality, integrity and authenticity of the logs.
+
+  <p><strong>中文理由：</strong></p>
+  必须确保任何已配置的输出均使用 TLS 协议接收日志，以保证日志的机密性、完整性和真实性。
 
 references:
   nerc-cip: CIP-003-8 R5.2,CIP-004-6 R3.3,CIP-007-3 R6.5

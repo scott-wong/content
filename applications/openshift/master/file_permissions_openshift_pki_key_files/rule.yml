@@ -6,10 +6,16 @@ title: 'Verify Permissions on the OpenShift PKI Private Key Files'
 description: |-
   {{{ describe_file_permissions(file="/etc/kubernetes/static-pod-resources/*/*/*/*.key", perms="0600") }}}
 
+  <p><strong>中文说明：</strong></p>
+  要正确设置 <tt>/etc/kubernetes/static-pod-resources/*/*/*/*.key</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/*/*/*/*.key</tt>。
+
 rationale: |-
   OpenShift makes use of a number of key files as part of the operation of its
   components. The permissions on these files should be set to <pre>600</pre>
   to protect their integrity and confidentiality.
+
+  <p><strong>中文理由：</strong></p>
+  OpenShift 在组件运行过程中使用多种密钥文件。这些文件的权限应设置为 <pre>600</pre>，以保护其完整性和机密性。
 
 identifiers:
   cce@ocp4: CCE-83580-1

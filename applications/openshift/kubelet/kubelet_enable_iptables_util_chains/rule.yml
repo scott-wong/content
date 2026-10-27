@@ -20,11 +20,18 @@ description: |-
     on the kubelet node(s) and set the below parameter:
     <pre>makeIPTablesUtilChains: true</pre>
 
+    <p><strong>中文说明：</strong></p>
+    kubelet 能够自动配置防火墙，以允许容器访问所需端口并连接网络资源和目标；这种能力可能导致安全事件。要允许 kubelet 修改防火墙，请在 kubelet 节点上编辑 kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt>，并设置以下参数：
+    <pre>makeIPTablesUtilChains: true</pre>
+
 rationale: |-
     The kubelet should automatically configure the firewall settings to allow access and
     networking traffic through. This ensures that when a pod or container is running that
     the correct ports are configured as well as removing the ports when a pod or
     container is no longer in existence.
+
+    <p><strong>中文理由：</strong></p>
+    kubelet 应自动配置防火墙设置，以允许访问和网络流量通过。这可确保 Pod 或容器运行时配置正确的端口，并在 Pod 或容器不再存在时移除相应端口。
 
 severity: medium
 

@@ -18,12 +18,26 @@ description: |-
                                         text="the relevant documentation.") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  生产环境可能禁止直接访问 Internet，转而提供 HTTP 或 HTTPS 代理。
+  </p>
+  <p>
+  Proxy 对象用于管理集群范围的出站代理。设置该对象可确保容器获得适当的环境变量，从而按照组织要求将流量发往代理。
+  </p>
+  <p>
+  有关更多信息，请参阅<a href="https://docs.openshift.com/container-platform/latest/networking/enable-cluster-wide-proxy.html">相关文档</a>。
+  </p>
+
 rationale: |-
   External networks tend to be outside of organizational control. By ensuring
   that egress traffic goes through an authorized proxy, one is able to ensure
   that expected and safe traffic is coming out, and malicious actors
   aren't leaking sensitive information, or calling back from a central command
   center to get further instructions upon intrusion.
+
+  <p><strong>中文理由：</strong></p>
+  外部网络通常不在组织控制范围内。通过确保出站流量经过授权代理，可以确保传出的是预期且安全的流量，并防止恶意行为者在入侵后泄露敏感信息或从中心命令控制服务器回连以获取进一步指令。
 
 references:
   nerc-cip: CIP-004-6 R2.2.4,CIP-004-6 R3,CIP-007-3 R5.1,CIP-007-3 R6.1

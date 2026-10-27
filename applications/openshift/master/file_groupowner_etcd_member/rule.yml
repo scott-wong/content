@@ -3,7 +3,11 @@ documentation_complete: true
 
 title: 'Verify Group Who Owns The etcd Member Pod Specification File'
 
-description: '{{{ describe_file_group_owner(file="/etc/kubernetes/manifests/etcd-pod.yaml", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/kubernetes/manifests/etcd-pod.yaml", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/kubernetes/manifests/etcd-pod.yaml</tt> 的文件所属组为 <tt>root</tt>。
 
 rationale: |-
     The etcd pod specification file controls various parameters that
@@ -12,6 +16,9 @@ rationale: |-
     storage of all of its REST API object. You should restrict its file
     permissions to maintain the integrity of the file. The file should be
     writable by only the administrators on the system.
+
+    <p><strong>中文理由：</strong></p>
+    etcd Pod 规范文件控制用于设置主节点上 etcd 服务行为的各种参数。etcd 是 Kubernetes 用于持久存储其所有 REST API 对象的高可用键值存储。应限制该文件的权限，以维护其完整性。只有系统管理员应能够写入该文件。
 
 severity: medium
 

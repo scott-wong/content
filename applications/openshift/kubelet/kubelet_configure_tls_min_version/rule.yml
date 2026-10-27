@@ -58,12 +58,52 @@ description: |-
                 text="the relevant documentation") }}}.
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    配置 <tt>tlsSecurityProfile</tt> 指定在与外部公开服务器建立连接时使用的 TLS 配置。尽管建立连接时使用安全传输模式，但所用协议未必始终足够强，无法防止传输中的数据被截获和操纵。配置的 TLS 安全配置档不应使用任何具有已知安全漏洞的协议、密码套件或算法。
+    </p>
+
+    <p>
+    <tt>tlsSecurityProfile</tt> 可配置为使用 custom、intermediate、modern 或 old 配置档之一。应始终避免使用 Old 配置档；使用 custom 配置档时必须格外谨慎，因为错误配置可能造成灾难性后果。使用 Custom 配置档时，始终建议将最低 TLS 版本配置为 TLSv1.2 或更高版本，或使用预定义的 Intermediate 或 modern 配置档。如果未配置 TLS 安全配置档，则默认的 TLS 安全配置档为 Intermediate。
+    </p>
+
+    <p>
+    要为 Kubelet 配置以 TLSv1.2 为最低 TLS 版本的 Custom tlsSecurityProfile，请为每个 <tt>MachineConfigPool</tt> 按以下示例创建新的或修改现有的 <tt>KubeletConfig</tt> 对象：
+    <pre>
+      apiVersion: machineconfiguration.openshift.io/v1
+      kind: KubeletConfig
+      metadata:
+          name: kubelet-tls-config-$pool
+      spec:
+          tlsSecurityProfile:
+              type: Custom
+              custom:
+                  ciphers:
+                  - ECDHE-ECDSA-CHACHA20-POLY1305
+                  - ECDHE-RSA-CHACHA20-POLY1305
+                  - ECDHE-RSA-AES128-GCM-SHA256
+                  - ECDHE-ECDSA-AES128-GCM-SHA256
+                  minTLSVersion: {{{ xccdf_value("var_kubelet_tls_min_version") }}}
+          machineConfigPoolSelector:
+              matchLabels:
+                  pools.operator.machineconfiguration.openshift.io/$pool_name: ""
+    </pre>
+    若要将此规则配置为检查其他 TLS 版本，必须同时更新 var_kubelet_tls_min_version_regex 和 var_kubelet_tls_min_version。
+    </p>
+
+    <p>
+    有关更多信息，请参阅 OpenShift <a href="https://docs.openshift.com/container-platform/4.11/nodes/nodes/nodes-nodes-tls.html">相关文档</a>。
+    </p>
+
 rationale: |-
     The authenticity and integrity of the container platform and communication
     between nodes and components must be secure. If an insecure protocol,
     cipher, or algorithms is used, during transmission of data, the data can be
     intercepted and manipulated. To thwart the manipulation of the data during
     transmission secure protocol, cipher and algorithms must be used.
+
+    <p><strong>中文理由：</strong></p>
+    容器平台以及节点和组件之间通信的真实性与完整性必须得到保障。如果在数据传输过程中使用不安全的协议、密码套件或算法，数据可能被截获和操纵。为防止传输期间的数据被操纵，必须使用安全的协议、密码套件和算法。
 
 severity: medium
 

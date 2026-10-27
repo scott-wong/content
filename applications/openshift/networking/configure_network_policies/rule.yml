@@ -9,10 +9,16 @@ description: |-
     restrict traffic in the cluster. OpenShift supports Kubernetes NetworkPolicy
     using a Kubernetes Container Network Interface (CNI) plug-in.
 
+    <p><strong>中文说明：</strong></p>
+    Kubernetes 有多种可用的 CNI 插件。如果使用的 CNI 不支持 Network Policy，可能无法有效限制集群中的流量。OpenShift 通过 Kubernetes Container Network Interface（CNI）插件支持 Kubernetes NetworkPolicy。
+
 rationale: |-
     Kubernetes network policies are enforced by the CNI plugin in use. As such
     it is important to ensure that the CNI plugin supports both Ingress and
     Egress network policies.
+
+    <p><strong>中文理由：</strong></p>
+    Kubernetes Network Policy 由所使用的 CNI 插件强制执行。因此，必须确保 CNI 插件同时支持 Ingress 和 Egress Network Policy。
 
 severity: high
 

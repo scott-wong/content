@@ -46,10 +46,50 @@ description: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/latest/security/audit-log-policy-config.html",
               text="the documentation") }}}
   </p>
-  
+
+  <p><strong>中文说明：</strong></p>
+  <p>
+  OpenShift 可通过标准 Kubernetes 审计能力审计对 API Server 所发请求的详细信息。
+  </p>
+
+  <p>
+  在 OpenShift 中，API Server 的审计默认启用。审计提供与安全相关的按时间顺序记录，记载个人用户、管理员或系统其他组件影响系统的活动序列。审计在 API Server 级别工作，记录发往服务器的所有请求。每条审计日志包含两项记录：
+  </p>
+
+  <p>
+  请求行包含：
+  </p>
+
+  <ul>
+    <li>允许匹配响应行的唯一 ID（见 #2）</li>
+    <li>请求的源 IP</li>
+    <li>所调用的 HTTP 方法</li>
+    <li>调用该操作的原始用户</li>
+    <li>该操作所模拟的用户（self 表示用户本人）</li>
+    <li>该操作所模拟的组（lookup 表示用户的组）</li>
+    <li>请求的命名空间，或 none</li>
+    <li>请求的 URI</li>
+  </ul>
+
+  <p>
+  响应行包含：
+  </p>
+
+  <ul>
+    <li>前述唯一 ID</li>
+    <li>响应代码</li>
+  </ul>
+
+  <p>
+  有关如何配置审计配置档的更多信息，请访问
+  <a href="https://docs.openshift.com/container-platform/latest/security/audit-log-policy-config.html">文档</a>。
+  </p>
 rationale: |-
   Logging is an important detective control for all systems, to detect potential
   unauthorised access.
+
+  <p><strong>中文理由：</strong></p>
+  日志记录是所有系统的重要检测控制，用于发现潜在的未经授权访问。
 
 identifiers:
   cce@ocp4: CCE-83577-7

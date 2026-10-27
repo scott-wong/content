@@ -7,6 +7,9 @@ description: |-
   Disable access to the Kubernetes API from outside the node network if it is
   not required.
 
+  <p><strong>中文说明：</strong></p>
+  如果不需要，请禁用从节点网络外部访问 Kubernetes API。
+
 rationale: |-
   In a private cluster, the master node has two endpoints, a private and public
   endpoint. The private endpoint is the internal IP address of the master,
@@ -22,6 +25,11 @@ rationale: |-
   vulnerable to an attack. Unless required, disabling public endpoint will help
   prevent such threats, and require the attacker to be on the master's VPC
   network to perform any attack on the Kubernetes API.
+
+  <p><strong>中文理由：</strong></p>
+  在私有集群中，master 节点有两个端点：私有端点和公共端点。私有端点是 master 的内部 IP 地址，位于 master VPC 网络中的内部负载均衡器之后。节点使用私有端点与 master 通信。公共端点允许从 master 的 VPC 网络外部访问 Kubernetes API。
+
+  尽管 Kubernetes API 要求使用授权令牌执行敏感操作，但漏洞仍可能使 Kubernetes 以不受限制的访问方式公开。此外，攻击者可能识别当前集群和 Kubernetes API 版本，并判断其是否存在易受攻击的风险。除非确有需要，否则禁用公共端点有助于防止此类威胁，并要求攻击者位于 master 的 VPC 网络中才能对 Kubernetes API 执行任何攻击。
 
 severity: unknown
 

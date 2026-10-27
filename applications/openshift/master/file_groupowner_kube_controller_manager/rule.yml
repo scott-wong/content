@@ -3,12 +3,19 @@ documentation_complete: true
 
 title: 'Verify Group Who Owns The Kubernetes Controller Manager Pod Specification File'
 
-description: '{{{ describe_file_group_owner(file="/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml</tt> 的文件所属组为 <tt>root</tt>。
 
 rationale: |-
     The Kubernetes specification file contains information about the configuration of the
     Kubernetes Controller Manager Server that is configured on the system. Protection of this file is
     critical for OpenShift security.
+
+    <p><strong>中文理由：</strong></p>
+    Kubernetes 规范文件包含有关系统上配置的 Kubernetes Controller Manager Server 配置的信息。保护此文件对 OpenShift 安全至关重要。
 
 severity: medium
 

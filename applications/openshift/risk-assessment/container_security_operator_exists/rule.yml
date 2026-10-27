@@ -25,9 +25,25 @@ description: |-
       {{{ weblink(link="https://docs.openshift.com/container-platform/latest/security/pod-vulnerability-scan.html") }}}
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    使用 Red Hat Quay Container Security Operator，可以在 OpenShift Container Platform Web 控制台中查看集群活动 Pod 所用容器镜像的漏洞扫描结果。Red Hat Quay Container Security Operator 会：
+    </p>
+    <ul>
+      <li>监视所有命名空间或指定命名空间中与 Pod 关联的容器</li>
+      <li>在镜像仓库正在运行镜像扫描时（例如 Quay.io 或启用了 Clair 扫描的 Red Hat Quay 镜像仓库），查询容器来源镜像仓库以获取漏洞信息</li>
+      <li>通过 Kubernetes API 中的 ImageManifestVuln 对象公开漏洞信息</li>
+    </ul>
+    <p>
+    有关 Container Security Operator 的更多信息，请查阅 OpenShift 文档：https://docs.openshift.com/container-platform/latest/security/pod-vulnerability-scan.html
+    </p>
+
 rationale: |-
   Vulnerabilities in software packages can be exploited by hackers or malicious
   users to obtain unauthorized access to resources.
+
+  <p><strong>中文理由：</strong></p>
+  软件包中的漏洞可能被黑客或恶意用户利用，以获取对资源的未授权访问。
 
 references:
   nist: CM-6(b)

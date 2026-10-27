@@ -50,12 +50,59 @@ description: |-
               text="official Kubernetes documentation") }}}.
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  OpenShift 审计在 API Server 级别工作，记录发往服务器的所有请求。但是，如果 API Server 实例无法写入错误，必须发出告警，以便组织采取相关操作，例如关闭该实例。
+  </p>
+  <p>
+  Kubernetes 默认提供可用于编写此类告警的指标：
+  </p>
+
+  <ul>
+    <li><tt>apiserver_audit_event_total</tt></li>
+    <li><tt>apiserver_audit_error_total</tt></li>
+  </ul>
+
+  OCP 4.9+ 提供了此类示例：
+
+  <pre>
+  apiVersion: monitoring.coreos.com/v1
+  kind: PrometheusRule
+  metadata:
+    name: audit-errors
+    namespace: openshift-kube-apiserver
+  spec:
+    groups:
+    - name: apiserver-audit
+      rules:
+      - alert: AuditLogError
+        annotations:
+          summary: |-
+            An API Server instance was unable to write audit logs. This could be
+            triggered by the node running out of space, or a malicious actor
+            tampering with the audit logs.
+          description: An API Server had an error writing to an audit log.
+        expr: |
+          sum by (apiserver,instance)(rate(apiserver_audit_error_total{apiserver=~".+-apiserver"}[5m])) / sum by (apiserver,instance) (rate(apiserver_audit_event_total{apiserver=~".+-apiserver"}[5m])) > 0
+        for: 1m
+        labels:
+          severity: warning
+  </pre>
+
+  <p>
+  有关更多信息，请参阅
+  <a href="https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html">Kubernetes 官方文档</a>。
+  </p>
+
 rationale: |-
   When there are errors writing audit logs, security events will not be logged
   by that specific API Server instance. Security Incident Response teams use
   these audit logs, amongst other artifacts, to determine the impact of
   security breaches or events. Without these logs, it becomes very difficult
   to assess a situation and do appropriate root cause analysis in such incidents.
+
+  <p><strong>中文理由：</strong></p>
+  当写入审计日志出现错误时，该特定 API Server 实例将不会记录安全事件。安全事件响应团队会使用这些审计日志及其他工件来确定安全泄露或事件的影响。没有这些日志，就很难评估情况并在此类事件中开展适当的根本原因分析。
 
 references:
   nerc-cip: CIP-003-8 R5.1.1,CIP-003-8 R5.3,CIP-004-6 R2.3,CIP-007-3 R5.1,CIP-007-3 R5.1.1,CIP-007-3 R5.1.2

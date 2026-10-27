@@ -6,10 +6,16 @@ title: 'Only use approved container registries'
 description: |-
   Use approved container registries.
 
+  <p><strong>中文说明：</strong></p>
+  使用经批准的容器镜像仓库。
+
 rationale: |-
   Allowing unrestricted access to external container registries provides the
   opportunity for malicious or unapproved containers to be deployed into the
   cluster. Allowlisting only approved container registries reduces this risk.
+
+  <p><strong>中文理由：</strong></p>
+  允许不受限制地访问外部容器镜像仓库，会使恶意或未经批准的容器有机会部署到集群中。仅允许经批准的容器镜像仓库可降低此风险。
 
 severity: unknown
 

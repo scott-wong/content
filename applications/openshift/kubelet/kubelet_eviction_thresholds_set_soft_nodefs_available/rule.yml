@@ -41,12 +41,47 @@ description: |-
   {{{ kubernetes_variable_instruction(field_name="nodefs.available", variable_name="var_kubelet_evictionsoft_nodefs_available") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>在 OpenShift Container Platform 节点上会执行两种垃圾回收：</p>
+
+  <ul>
+    <li>容器垃圾回收：删除已终止的容器。</li>
+    <li>镜像垃圾回收：删除未被任何正在运行的 Pod 引用的镜像。</li>
+  </ul>
+
+  <p>
+  可使用驱逐阈值执行容器垃圾回收。镜像垃圾回收依赖节点上 cAdvisor 报告的磁盘使用情况，以决定从节点删除哪些镜像。
+  </p>
+
+  <p>
+  OpenShift 管理员可通过为每个 Machine Config Pool 创建一个 kubeletConfig 对象，并结合使用以下任意组合，来配置 OpenShift Container Platform 执行垃圾回收的方式：
+  </p>
+
+  <ul>
+    <li>容器软驱逐</li>
+    <li>容器硬驱逐</li>
+    <li>镜像驱逐</li>
+  </ul>
+
+  <p>
+  要进行配置，请遵循以下文档中的说明：
+  <a href="https://docs.openshift.com/container-platform/4.6/nodes/nodes/nodes-nodes-garbage-collection.html#nodes-nodes-garbage-collection-configuring_nodes-nodes-configuring">文档</a>
+  </p>
+
+  <p>
+  本规则涉及 <tt>evictionSoft</tt> 部分的 <tt>nodefs.available</tt> 设置。
+  修复将根据变量 <tt>var_kubelet_evictionsoft_nodefs_available</tt> 将字段 <tt>nodefs.available</tt> 设置为相应的值。
+  </p>
+
 rationale: |-
   Garbage collection is important to ensure sufficient resource availability
   and avoiding degraded performance and availability. In the worst case, the
   system might crash or just be unusable for a long period of time.
   Based on your system resources and tests, choose an appropriate threshold
   value to activate garbage collection.
+
+  <p><strong>中文理由：</strong></p>
+  垃圾回收对于确保资源可用性充足、避免性能和可用性下降非常重要。在最坏情况下，系统可能崩溃，或在很长时间内无法使用。请根据系统资源和测试结果，选择适当的阈值来触发垃圾回收。
 
 identifiers:
   cce@ocp4: CCE-84119-7

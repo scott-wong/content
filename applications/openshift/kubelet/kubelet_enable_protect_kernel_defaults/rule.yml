@@ -16,6 +16,11 @@ description: |-
   Protect tuned kernel parameters from being overwritten by the kubelet.
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  保护已调优的内核参数，防止其被 kubelet 覆盖。
+  </p>
+
 {{%- if product == "ocp4"  %}}
   <p>
   Before enabling this kernel parameter, it's important and
@@ -84,6 +89,9 @@ rationale: |-
   parameters should be appropriately set to match the desired secured system
   state. Ignoring this could potentially lead to running pods with undesired
   kernel behavior.
+
+  <p><strong>中文理由：</strong></p>
+  内核参数通常由系统管理员在系统投入生产前进行调优和加固。这些参数用于保护内核和系统。依赖此类参数的 kubelet 内核默认值应进行适当设置，以符合所需的安全系统状态。忽略这一点可能导致运行的 Pod 出现非预期的内核行为。
 
 
 severity: medium

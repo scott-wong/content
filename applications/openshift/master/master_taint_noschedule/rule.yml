@@ -4,7 +4,7 @@ title: Verify that Control Plane Nodes are not schedulable for workloads
 
 {{% set jqfilter = '[ .items[] | select(.spec.taints[]?.key == "node-role.kubernetes.io/master" and .spec.taints[]?.effect == "NoSchedule") | .metadata.name ]' %}}
 
-description: -|
+description: |-
     <p>
     User workloads should not be colocated with control plane workloads. To ensure that the scheduler won't
     schedule workloads on the master nodes, the taint "node-role.kubernetes.io/master" with the "NoSchedule"
@@ -20,12 +20,22 @@ description: -|
     exclude this rule.
     </p>
 
-rationale: -|
+    <p><strong>中文说明：</strong></p>
+    <p>用户工作负载不应与控制平面工作负载共置。为确保调度器不会在 master 节点上调度工作负载，在大多数集群配置（不包括 SNO 和紧凑集群）中，默认会设置键为 <tt>"node-role.kubernetes.io/master"</tt>、效果为 <tt>"NoSchedule"</tt> 的污点。</p>
+    <p>无需重启即可集中配置 master 节点的调度：</p>
+    <pre>oc edit schedulers.config.openshift.io cluster</pre>
+    <p>有关详情，请参阅 <a href="https://access.redhat.com/solutions/4564851">Red Hat Solution</a>。</p>
+    <p>如果运行环境需要控制平面与用户工作负载共置，则需要排除本规则。</p>
+
+rationale: |-
     By separating user workloads and the control plane workloads we can better ensure that there is
     no ill effects from workload boosts to each other. Furthermore we ensure that an adversary who gets
     control over a badly secured workload container is not colocated to critical components of the control plane.
     In some setups it might be necessary to make the control plane schedulable for workloads i.e.
     Single Node Openshift (SNO) or Compact Cluster (Three Node Cluster) setups.
+
+    <p><strong>中文理由：</strong></p>
+    <p>通过将用户工作负载与控制平面工作负载分离，可以更好地确保双方不会因工作负载峰值而相互产生不利影响。此外，还可确保获得保护薄弱的工作负载容器控制权的攻击者无法与控制平面的关键组件共置。某些环境可能需要使控制平面可调度工作负载，例如单节点 OpenShift（SNO）或紧凑集群（三节点集群）环境。</p>
 
 identifiers:
     cce@ocp4: CCE-88731-5

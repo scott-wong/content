@@ -74,6 +74,57 @@ description: |-
               text="the documentation") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  在启用覆盖保护之前，请设置所需调优的内核参数。请注意，取决于集群节点运行的 Linux 发行版及版本，这些参数可能已经设置好。请参阅规则说明进行检查。
+  </p>
+
+  <p>
+  在启用内核参数覆盖保护默认值之前，必须检查这些值是否已设置为所需值。如果尚未设置，必须先创建一个持久保存所需 sysctl 的 <tt>MachineConfig</tt> 对象。所需 sysctl 如下：
+  </p>
+
+  <pre>
+  kernel.keys.root_maxbytes={{{ kernel_root_maxbytes_val }}}
+  kernel.keys.root_maxkeys={{{ kernel_root_maxkeys_val }}}
+  kernel.panic={{{ kernel_panic_val }}}
+  kernel.panic_on_oops={{{ kernel_panic_on_oops_val }}}
+  vm.overcommit_memory={{{ vm_overcommit_memory_val }}}
+  vm.panic_on_oom={{{ vm_panic_on_oom_val }}}
+  </pre>
+
+  <p>
+  这些参数必须通过 MachineConfig 启用，因为它们需要在节点启动时、Kubelet 启动之前可用。清单可如下所示：
+  </p>
+
+  <pre>
+  ---
+  apiVersion: machineconfiguration.openshift.io/v1
+  kind: MachineConfig
+  metadata:
+    labels:
+      machineconfiguration.openshift.io/role: master
+    name: 75-master-kubelet-sysctls
+  spec:
+    config:
+      ignition:
+        version: 3.1.0
+      storage:
+        files:
+        - contents:
+            source: data:,vm.overcommit_memory%3D1%0Avm.panic_on_oom%3D0%0Akernel.panic%3D10%0Akernel.panic_on_oops%3D1%0Akernel.keys.root_maxkeys%3D1000000%0Akernel.keys.root_maxbytes%3D25000000%0A
+          mode: 0644
+          path: /etc/sysctl.d/90-kubelet.conf
+          overwrite: true
+  </pre>
+
+  <p>
+  每个相关 <tt>MachineConfigPool</tt> 都需要在集群中执行此操作。
+  </p>
+
+  <p>
+  要进行配置，请按 OpenShift <a href="https://docs.openshift.com/container-platform/latest/nodes/nodes/nodes-nodes-managing.html">相关文档</a> 中的说明操作。
+  </p>
+
 rationale: |-
   Kernel parameters are usually tuned and hardened by the system administrators
   before putting the systems into production. These parameters protect the
@@ -81,6 +132,9 @@ rationale: |-
   parameters should be appropriately set to match the desired secured system
   state. Ignoring this could potentially lead to running pods with undesired
   kernel behavior.
+
+  <p><strong>中文理由：</strong></p>
+  内核参数通常由系统管理员在系统投入生产前进行调优和加固。这些参数用于保护内核和系统。依赖此类参数的 kubelet 内核默认值应进行适当设置，以符合所需的安全系统状态。忽略这一点可能导致运行的 Pod 出现非预期的内核行为。
 
 
 severity: medium

@@ -20,10 +20,29 @@ description: |-
     </pre> you would call
     <pre>oc patch image.config.openshift.io cluster --patch="$(cat /tmp/allowed-registries-patch.yaml)" --type=merge</pre>
 
+    <p><strong>中文说明：</strong></p>
+    配置 <tt>registrySources.allowedRegistries</tt> 决定 OpenShift 容器运行时可为构建和 Pod 访问的允许镜像仓库。此配置设置确保除指定镜像仓库外的所有镜像仓库都被阻止。
+
+    可以通过使用 <pre>oc patch</pre> 应用以下清单来设置允许的镜像仓库。例如，如果将以下代码段保存到 <pre>/tmp/allowed-registries-patch.yaml</pre>：
+
+    <pre>
+    spec:
+      registrySources:
+        allowedRegistries:
+        - my-trusted-registry.internal.example.com
+    </pre>
+
+    则应调用：
+
+    <pre>oc patch image.config.openshift.io cluster --patch="$(cat /tmp/allowed-registries-patch.yaml)" --type=merge</pre>
+
 rationale: |-
     Allowed registries should be configured to restrict the registries that the
     OpenShift container runtime can access, and all other registries should be
     blocked.
+
+    <p><strong>中文理由：</strong></p>
+    应配置允许的镜像仓库，以限制 OpenShift 容器运行时可以访问的镜像仓库，并阻止所有其他镜像仓库。
 
 severity: medium
 

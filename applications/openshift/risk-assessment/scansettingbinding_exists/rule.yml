@@ -11,9 +11,15 @@ description: |-
   to different compliance benchmarks. It uses OpenSCAP as a backend,
   which is a known and certified tool to do such scans.
 
+  <p><strong>中文说明：</strong></p>
+  <a href="https://docs.openshift.com/container-platform/latest/security/compliance_operator/co-overview.html">Compliance Operator</a> 会根据不同的合规基准扫描主机和平台（OCP）配置中的软件缺陷和不当配置。它使用 OpenSCAP 作为后端，OpenSCAP 是已知且经过认证的工具，可用于执行此类扫描。
+
 rationale: |-
   Vulnerability scanning and risk management are important detective controls
   for all systems, to detect potential flaws and unauthorised access.
+
+  <p><strong>中文理由：</strong></p>
+  漏洞扫描和风险管理是所有系统的重要检测性控制措施，可用于发现潜在缺陷和未授权访问。
 
 identifiers:
   cce@ocp4: CCE-83697-3

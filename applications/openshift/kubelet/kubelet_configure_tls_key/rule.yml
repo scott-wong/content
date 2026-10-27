@@ -17,9 +17,16 @@ description: |-
     and configure the kubelet private key file.
     <pre>tlsPrivateKeyFile: /path/to/TLS/private.key</pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保已配置 kubelet 的 TLS 服务器私钥证书，请编辑 kubelet 配置文件 <tt>/etc/kubernetes/kubelet.conf</tt>，并配置 kubelet 私钥文件。
+    <pre>tlsPrivateKeyFile: /path/to/TLS/private.key</pre>
+
 rationale: |-
     Without cryptographic integrity protections, information can be
     altered by unauthorized users without detection.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有加密完整性保护，未授权用户可以在不被发现的情况下更改信息。
 
 severity: medium
 

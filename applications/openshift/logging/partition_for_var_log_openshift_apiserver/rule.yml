@@ -10,12 +10,29 @@ description: |-
     <tt>/var/log/openshift-apiserver</tt> directory.
     {{{ partition_description(part="/var/log/openshift-apiserver") }}}
 
+    <p><strong>中文说明：</strong></p>
+    OpenShift API server 审计日志存储在 <tt>/var/log/openshift-apiserver</tt> 目录中。
+    <p>
+    Red Hat CoreOS 的分区是第 1 天操作，之后无法更改。有关添加指定独立 <code>/var/log/openshift-apiserver</code> 分区的 MachineConfig 清单，请遵循：
+    <a href="https://docs.openshift.com/container-platform/latest/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-user-infra-machines-advanced_disk_installing-platform-agnostic">OpenShift Container Platform 文档</a>
+    </p>
+    <p>
+    注意，Red Hat OpenShift 文档通常引用块设备，例如 <tt>/dev/vda</tt>。可用块设备的名称取决于底层基础设施（裸金属还是云）以及具体实例类型。例如，在 AWS 中，有些实例类型使用 NVMe 驱动器（<tt>/dev/nvme*</tt>），另一些使用 <tt>/dev/xvda*</tt>。
+
+    您需要查找基础设施的相关文档。在许多情况下，最简单的方法是使用仅提供 SSH 访问的 Ignition 配置启动单台机器，并通过例如 <tt>lsblk</tt> 命令检查块设备。
+
+    对于物理硬件，最佳实践是使用 <tt>/dev/disk/by-id/</tt> 或 <tt>/dev/disk/by-path</tt> 链接引用设备。
+    </p>
+
 rationale: |-
     Placing <tt>/var/log/openshift-apiserver</tt> in its own partition
     enables better separation between Openshift API server audit
     files and other log files, and helps ensure that
     auditing cannot be halted due to the partition running out
     of space.
+
+    <p><strong>中文理由：</strong></p>
+    将 <tt>/var/log/openshift-apiserver</tt> 放在独立分区上，可以更好地区分 OpenShift API server 审计文件和其他日志文件，并有助于确保审计不会因分区空间耗尽而停止。
 
 severity: medium
 

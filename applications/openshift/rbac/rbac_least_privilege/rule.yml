@@ -9,6 +9,25 @@ description: |-
 
     {{{ fix_openshift_rbac_least_privilege() | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    基于角色的访问控制（RBAC）对象决定用户是否可以在项目中执行给定操作。
+
+    如果存在绑定了不应拥有角色的用户或组，请使用以下集群角色绑定和本地角色绑定命令修改用户或组权限：
+
+    通过执行以下命令从集群 RBAC 角色中移除用户：
+    <tt>oc adm policy remove-cluster-role-from-user role username</tt>
+
+    通过执行以下命令从集群 RBAC 角色中移除组：
+    <tt>oc adm policy remove-cluster-role-from-group role groupname</tt>
+
+    通过执行以下命令从本地 RBAC 角色中移除用户：
+    <tt>oc adm policy remove-role-from-user role username</tt>
+
+    通过执行以下命令从本地 RBAC 角色中移除组：
+    <tt>oc adm policy remove-role-from-group role groupname</tt>
+
+    注意：有关更多信息，请参阅 https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html
+
 rationale: |-
     Controlling and limiting users access to system services and resources
     is key to securing the platform and limiting the intentional or
@@ -19,6 +38,9 @@ rationale: |-
     can control who has what access to cluster level services. The other is
     Local RBAC policies, which allow project developers/administrators to
     control what level of access users have to a given project or namespace.
+
+    <p><strong>中文理由：</strong></p>
+    控制和限制用户对系统服务和资源的访问，是保护平台安全并限制故意或意外破坏系统及其服务的关键。OpenShift 提供强大的 RBAC 策略系统，可按需将授权策略定义得足够详细。此外，RBAC 策略分为两层：第一层是集群 RBAC 策略，管理员可通过它控制谁对集群级服务拥有何种访问权限；另一层是本地 RBAC 策略，允许项目开发者或管理员控制用户对给定项目或命名空间的访问级别。
 
 severity: high
 

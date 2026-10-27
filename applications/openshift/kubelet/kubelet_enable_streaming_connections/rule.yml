@@ -22,10 +22,28 @@ description: |-
             streamingConnectionIdleTimeout: {{{ xccdf_value("var_streaming_connection_timeouts") }}}
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    不应禁用流式连接超时，因为它们有助于防止拒绝服务攻击。要配置流式连接超时并为 kubelet 设置 <tt>streamingConnectionIdleTimeout</tt> 选项，请按以下示例创建 <tt>KubeletConfig</tt> 对象：
+    <pre>
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: KubeletConfig
+    metadata:
+       name: kubelet-config-$pool
+    spec:
+        machineConfigPoolSelector:
+            matchLabels:
+                pools.operator.machineconfiguration.openshift.io/$pool_name: ""
+        kubeletConfig:
+            streamingConnectionIdleTimeout: {{{ xccdf_value("var_streaming_connection_timeouts") }}}
+    </pre>
+
 rationale: |-
     Ensuring connections have timeouts helps to protect against denial-of-service attacks as
     well as disconnect inactive connections. In addition, setting connections timeouts helps
     to prevent from running out of ephemeral ports.
+
+    <p><strong>中文理由：</strong></p>
+    确保连接具有超时有助于防止拒绝服务攻击，并断开非活动连接。此外，设置连接超时有助于防止临时端口耗尽。
 
 severity: medium
 

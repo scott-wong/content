@@ -15,10 +15,21 @@ description: |-
   [1] {{{ weblink(link="https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  RBAC 是 Kubernetes 和 OpenShift 中至关重要的安全功能。它使管理员能够划分授予 Service Account 的权限，从而限制其获得的资源访问权限。通过适当定义集群角色，可以将组织策略固化为代码。[1]
+  </p>
+  <p>
+  [1] https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html
+  </p>
+
 rationale: |-
   By defining RBAC cluster roles, one is able to limit the permissions
   given to a Service Account, and thus limit the blast radius
   that an account compromise would have.
+
+  <p><strong>中文理由：</strong></p>
+  通过定义 RBAC 集群角色，可以限制授予 Service Account 的权限，从而减小账户被攻陷时的影响范围。
 
 identifiers:
   cce@ocp4: CCE-86595-6

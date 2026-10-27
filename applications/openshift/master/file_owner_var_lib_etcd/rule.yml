@@ -3,12 +3,19 @@ documentation_complete: true
 
 title: 'Verify User Who Owns The OpenShift etcd Data Directory'
 
-description: '{{{ describe_file_owner(file="/var/lib/etcd", owner="root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/var/lib/etcd", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    要将 <tt>/var/lib/etcd</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /var/lib/etcd</tt>。
 
 rationale: |-
     The <tt>/var/lib/etcd</tt> directory contains highly-available distributed key/value data storage
     across an OpenShift cluster. Allowing access to users to this directory could compromise OpenShift
     data and the cluster.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/lib/etcd</tt> 目录包含跨 OpenShift 集群的高可用分布式键值数据存储。允许用户访问此目录可能危及 OpenShift 数据和集群。
 
 severity: medium
 

@@ -2,7 +2,7 @@ documentation_complete: true
 
 title: Check Egress IPs Assignable to Nodes
 
-description: -|
+description: |-
     <p>
     The OpenShift Container Platform egress IP address functionality allows you to ensure that the
     traffic from one or more pods in one or more namespaces has a consistent source IP address for
@@ -15,11 +15,20 @@ description: -|
     {{{ weblink(link="https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html/ovn-kubernetes_network_plugin/configuring-egress-ips-ovn") }}}
     </p>
 
-rationale: -|
+    <p><strong>中文说明：</strong></p>
+    <p>OpenShift Container Platform 的出站 IP 地址功能可确保一个或多个命名空间中的一个或多个 Pod 发往集群网络外部服务的流量具有一致的源 IP 地址。</p>
+    <p>指定的节点可通过以下命令在不重启的情况下配置所需标签：</p>
+    <pre>$ oc label nodes $NODENAME k8s.ovn.org/egress-assignable=""</pre>
+    <p>有关详情，请参阅<a href="https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html/ovn-kubernetes_network_plugin/configuring-egress-ips-ovn">Red Hat 文档</a>。</p>
+
+rationale: |-
     By using egress IPs you can provide a consistent IP to external services and configure special
     firewall rules which precisely select this IP. This allows for more control on external systems.
     Furthermore you can bind the IPs to specific nodes, which handle all the network connections to
     achieve a better separation of duties between the different nodes.
+
+    <p><strong>中文理由：</strong></p>
+    <p>通过使用出站 IP，可以向外部服务提供一致的 IP，并配置精确选择该 IP 的特殊防火墙规则。这便于对外部系统实施更多控制。此外，还可以将 IP 绑定到特定节点，由这些节点处理所有网络连接，从而在不同节点之间实现更好的职责分离。</p>
 
 identifiers:
     cce@ocp4: CCE-86787-9

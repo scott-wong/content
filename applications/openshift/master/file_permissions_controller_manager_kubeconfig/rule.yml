@@ -6,11 +6,17 @@ title: 'Verify Permissions on the OpenShift Controller Manager Kubeconfig File'
 description: |-
   {{{ describe_file_permissions(file="/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/configmaps/controller-manager-kubeconfig/kubeconfig", perms="0600") }}}
 
+  <p><strong>中文说明：</strong></p>
+  要正确设置 <tt>/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/configmaps/controller-manager-kubeconfig/kubeconfig</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/configmaps/controller-manager-kubeconfig/kubeconfig</tt>。
+
 rationale: |-
   The Controller Manager's kubeconfig contains information about how the
   component will access the API server. You should restrict its file
   permissions to maintain the integrity of the file. The file should be
   writable by only the administrators on the system.
+
+  <p><strong>中文理由：</strong></p>
+  Controller Manager 的 kubeconfig 包含有关该组件如何访问 API 服务器的信息。应限制该文件的权限以保持文件完整性。该文件应仅允许系统管理员写入。
 
 identifiers:
   cce@ocp4: CCE-83604-9

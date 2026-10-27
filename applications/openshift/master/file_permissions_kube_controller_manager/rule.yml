@@ -6,11 +6,17 @@ title: 'Verify Permissions on the Kubernetes Controller Manager Pod Specificatio
 description: |-
     {{{ describe_file_permissions(file="/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml", perms="0600") }}}
 
+    <p><strong>中文说明：</strong></p>
+    要正确设置 <tt>/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml</tt>。
+
 rationale: |-
     If the Kubernetes specification file is writable by a group-owner or the
     world the risk of its compromise is increased. The file contains the configuration of
     an Kubernetes Controller Manager server that is configured on the system. Protection of this file is
     critical for OpenShift security.
+
+    <p><strong>中文理由：</strong></p>
+    如果 Kubernetes 规范文件可由文件所属组或其他用户写入，其遭入侵的风险会增加。该文件包含系统中配置的 Kubernetes Controller Manager Server 的配置。保护该文件对 OpenShift 安全至关重要。
 
 severity: medium
 

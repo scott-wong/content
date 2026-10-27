@@ -6,11 +6,17 @@ title: 'Verify Permissions on the Kubernetes Scheduler Kubeconfig File'
 description: |-
   {{{ describe_file_permissions(file="/etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/configmaps/scheduler-kubeconfig/kubeconfig", perms="0600") }}}
 
+  <p><strong>中文说明：</strong></p>
+  要正确设置 <tt>/etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/configmaps/scheduler-kubeconfig/kubeconfig</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/configmaps/scheduler-kubeconfig/kubeconfig</tt>。
+
 rationale: |-
   The kubeconfig for the Scheduler contains parameters for the scheduler
   to access the Kube API. You should restrict its file permissions to maintain
   the integrity of the file. The file should be writable by only the
   administrators on the system.
+
+  <p><strong>中文理由：</strong></p>
+  调度器的 kubeconfig 包含供调度器访问 Kube API 的参数。应限制该文件的权限以保持文件完整性。该文件应仅允许系统管理员写入。
 
 identifiers:
   cce@ocp4: CCE-83772-4

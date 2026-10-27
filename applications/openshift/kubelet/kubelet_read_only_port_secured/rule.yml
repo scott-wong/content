@@ -13,10 +13,16 @@ title: 'kubelet - Ensure that the --read-only-port is secured'
 description: |-
   Disable the read-only port.
 
+  <p><strong>中文说明：</strong></p>
+  禁用只读端口。
+
 rationale: |-
   The Kubelet process provides a read-only API in addition to the main Kubelet API.
   Unauthenticated access is provided to this read-only API which could possibly retrieve
   potentially sensitive information about the cluster.
+
+  <p><strong>中文理由：</strong></p>
+  Kubelet 进程除主 Kubelet API 外，还提供只读 API。该只读 API 允许未经身份验证的访问，可能获取有关集群的潜在敏感信息。
 
 severity: medium
 

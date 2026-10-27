@@ -7,10 +7,16 @@ description: |-
   Disable public IP addresses for cluster nodes, so that they only have private
   IP addresses. Private Nodes are nodes with no public IP addresses.
 
+  <p><strong>中文说明：</strong></p>
+  禁用集群节点的公共 IP 地址，使其仅具有私有 IP 地址。Private Nodes 是指没有公共 IP 地址的节点。
+
 rationale: |-
   Disabling public IP addresses on cluster nodes restricts access to only
   internal networks, forcing attackers to obtain local network access before
   attempting to compromise the underlying Kubernetes hosts.
+
+  <p><strong>中文理由：</strong></p>
+  禁用集群节点的公共 IP 地址会将访问限制为仅限内部网络，迫使攻击者在尝试攻陷底层 Kubernetes 主机之前先获得本地网络访问权限。
 
 severity: unknown
 

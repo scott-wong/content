@@ -21,6 +21,15 @@ description: |-
     {{{ weblink(link="https://docs.openshift.com/container-platform/latest/networking/network_policy/default-network-policy.html",
     text="the relevant documentation") }}}.
 
+    <p><strong>中文说明：</strong></p>
+    为新创建的项目配置一个模板，以使用默认 Network Policy，并确保默认项目模板引用此模板。
+
+    OpenShift Container Platform API 服务器会根据集群项目配置资源中由 <tt>projectRequestTemplate</tt> 参数标识的项目模板自动创建新项目。
+
+    作为集群管理员，可以修改默认项目模板，使新建项目满足所选合规标准。
+
+    有关配置默认 Network Policy 的更多信息，请参阅<a href="https://docs.openshift.com/container-platform/latest/networking/network_policy/default-network-policy.html">相关文档</a>。
+
 rationale: |-
     Running different applications on the same Kubernetes cluster creates a risk of one
     compromised application attacking a neighboring application. Network segmentation is
@@ -35,6 +44,13 @@ rationale: |-
     Ensuring that the project configuration references
     a project template that sets up the required objects for new projects ensures
     that all new projects will be set in accordance with centralized settings.
+
+    <p><strong>中文理由：</strong></p>
+    在同一 Kubernetes 集群上运行不同应用程序会带来一个风险：某个应用程序被攻陷后可能攻击相邻应用程序。网络分段对于确保容器只能与其应该通信的对象通信至关重要。在给定命名空间中引入 Network Policy 后，该策略不允许的所有流量都会被拒绝。
+
+    编辑默认项目模板，使其在所有新命名空间中包含 NetworkPolicy，可确保所有命名空间都至少包含一些 NetworkPolicy 对象。
+
+    确保项目配置引用一个为新项目设置所需对象的项目模板，可确保所有新项目都按照集中配置进行设置。
 
 severity: medium
 
