@@ -125,7 +125,7 @@ def _field_range(text, key):
         end = len(text) if end_of_line == -1 else end_of_line + 1
         return line_start, _include_trailing_blank_lines(text, end)
 
-    if stripped.startswith(("|", ">")):
+    if stripped.startswith(("|", ">")) or stripped == "-|":
         content_start = line_end
     elif not stripped:
         content_start = line_end
@@ -147,8 +147,14 @@ def _field_range(text, key):
 def extract_field_value(text, key):
     start, end = _field_range(text, key)
     raw = text[start:end]
+    raw_for_yaml = re.sub(
+        r"^([A-Za-z_][A-Za-z0-9_-]*:)[ \t]*-\|",
+        r"\1 |-",
+        raw,
+        count=1,
+    )
     try:
-        document = yaml.safe_load(raw)
+        document = yaml.safe_load(raw_for_yaml)
     except yaml.YAMLError as exc:
         raise TranslationError("cannot parse field {!r}: {}".format(key, exc)) from exc
     if not isinstance(document, dict) or key not in document:
@@ -194,6 +200,13 @@ def _trailing_newlines(text):
 
 
 def _update_block_field(raw, key, translation):
+    raw = re.sub(
+        r"^({}):[ \t]*-\|".format(re.escape(key)),
+        r"\1: |-",
+        raw,
+        count=1,
+        flags=re.MULTILINE,
+    )
     indent = _block_indent(raw, key)
     marker = MARKERS[key]
     suffix = _trailing_newlines(raw)
@@ -241,7 +254,7 @@ def inject_translation(text, key, translation):
     start, end = _field_range(text, key)
     raw = text[start:end]
     value_indicator = raw.splitlines()[0].split(":", 1)[1].strip()
-    if value_indicator.startswith(("|", ">")):
+    if value_indicator.startswith(("|", ">")) or value_indicator == "-|":
         replacement = _update_block_field(raw, key, translation)
     else:
         current_value = extract_field_value(text, key)

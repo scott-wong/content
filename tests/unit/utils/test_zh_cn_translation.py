@@ -127,3 +127,28 @@ def test_pre_trailing_whitespace_is_normalized_in_chinese_block():
         zh.extract_field_value(translated, "description"), "description"
     )
     assert chinese == "<p>安装 example 软件包。</p>\n<pre>dnf install example</pre>"
+
+
+def test_minus_pipe_block_is_converted_to_standard_block_scalar():
+    source = """documentation_complete: true
+
+description: -|
+    English description.
+
+rationale: -|
+    English rationale.
+
+severity: medium
+"""
+    translated = zh.inject_translation(
+        source, "description", "<p>中文说明正文。</p>"
+    )
+    translated = zh.inject_translation(
+        translated, "rationale", "<p>中文理由正文。</p>"
+    )
+
+    assert "description: |-\n    English description." in translated
+    assert "rationale: |-\n    English rationale." in translated
+    assert zh._field_hash(zh.extract_field_value(translated, "description").split(
+        zh.MARKERS["description"])[0].rstrip("\n")
+    ) == zh._field_hash("English description.")
