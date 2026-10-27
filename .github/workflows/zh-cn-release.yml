@@ -2,6 +2,11 @@ name: zh-CN Release v0.1.82
 
 on:
   workflow_dispatch:
+    inputs:
+      artifact_run_id:
+        description: Successful zh-CN Full Content Validation run containing release assets
+        required: true
+        default: "40459988804"
 
 permissions:
   contents: write
@@ -11,81 +16,44 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-release:
-    name: Build and Publish v0.1.82
+  publish-release:
+    name: Publish v0.1.82
     runs-on: ubuntu-latest
-    timeout-minutes: 360
-    container:
-      image: registry.fedoraproject.org/fedora:latest
+    timeout-minutes: 60
     steps:
-      - name: Install Dependencies
-        run: >-
-          dnf install -y cmake ninja-build openscap-utils python3-pip python3-devel
-          gcc-c++ ansible-lint libxslt ansible python3-setuptools jq git
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
         with:
           fetch-depth: 0
-      - name: Install Python Dependencies
-        run: pip install -r requirements-base.txt -r test-requirements.txt
-      - name: Configure
-        run: cmake -G Ninja ..
-        working-directory: ./build
-      - name: Build All Products
-        run: ninja -j$(nproc) all
-        working-directory: ./build
-      - name: Build Release Archives
-        run: ninja -j$(nproc) zipfile
-        working-directory: ./build
-      - name: Run Unit Tests
-        run: ctest -j$(nproc) --output-on-failure -E linkchecker
-        working-directory: ./build
-      - name: Verify Chinese DataStream Metadata
+      - name: Set Git Safe Directory
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+      - name: Download Validated Build
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ inputs.artifact_run_id }}
+        run: gh run download "$RUN_ID" -n zh-cn-validation -D release-assets
+      - name: Verify Release Assets
         run: |
-          python3 - <<'PY'
-          import json
-          import xml.etree.ElementTree as ET
-
-          path = "build/ssg-ubuntu2404-ds.xml"
-          root = ET.parse(path).getroot()
-          namespace = "{http://checklists.nist.gov/xccdf/1.2}"
-          rules = list(root.iter(namespace + "Rule"))
-          descriptions = 0
-          rationales = 0
-          for rule in rules:
-              description = rule.find(namespace + "description")
-              rationale = rule.find(namespace + "rationale")
-              if description is not None and "中文说明" in "".join(description.itertext()):
-                  descriptions += 1
-              if rationale is not None and "中文理由" in "".join(rationale.itertext()):
-                  rationales += 1
-          summary = {
-              "product": "ubuntu2404",
-              "content_version": "0.1.82",
-              "rules": len(rules),
-              "chinese_descriptions": descriptions,
-              "chinese_rationales": rationales,
-          }
-          with open("zh-cn-validation.json", "w", encoding="utf-8") as stream:
-              json.dump(summary, stream, ensure_ascii=False, indent=2)
-              stream.write("\n")
-          print(json.dumps(summary, ensure_ascii=False))
-          if not rules or not descriptions or not rationales:
-              raise SystemExit("Chinese metadata was not found in the Ubuntu DataStream")
-          PY
-          grep -q '>0.1.82<' build/ssg-ubuntu2404-ds.xml
-      - name: Prepare Release Metadata
-        run: |
+          find release-assets -type f -maxdepth 4 -print
+          test -f release-assets/build/zipfile/scap-security-guide-0.1.82.zip
+          test -f release-assets/build/zipfile/scap-security-guide-0.1.82.tar.gz
+          test -f release-assets/build/ssg-ubuntu2404-ds.xml
+          test -f release-assets/zh-cn-validation.json
+          grep -q '>0.1.82<' release-assets/build/ssg-ubuntu2404-ds.xml
+          cd release-assets
           sha256sum \
             build/zipfile/scap-security-guide-0.1.82.zip \
             build/zipfile/scap-security-guide-0.1.82.tar.gz \
             build/ssg-ubuntu2404-ds.xml \
             zh-cn-validation.json > SHA256SUMS
+      - name: Prepare Release Notes
+        run: |
           cat > release-notes.md <<'MD'
           ## ComplianceAsCode Content 0.1.82 简体中文版
 
           - 版本号与上游最新 Release `v0.1.82` 对齐。
           - 内容基线：`ComplianceAsCode/content` `master@e4083bb6e9b61bb7aed4981ec12c8e53dda84c4d`。
+          - 内容提交：`4c6606bd10`。
           - 覆盖 2,566 个生产规则，共 5,132 个 Description/Rationale 字段。
           - 英文原文保留在前，简体中文追加在后；命令、路径、宏参数和代码保持原样。
           - 已通过全产品构建、ctest、Gate、Gate Fedora、Gate Thin DS、Ruff 和 Ubuntu 24.04 DataStream 中文校验。
@@ -107,22 +75,23 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          RELEASE_COMMIT=4c6606bd10
           if gh release view v0.1.82 >/dev/null 2>&1; then
             gh release delete v0.1.82 --yes --cleanup-tag
           fi
           git config user.name "scott-wong"
           git config user.email "scott-wong@users.noreply.github.com"
-          git tag -fa v0.1.82 "$GITHUB_SHA" -m "ComplianceAsCode Content 0.1.82 Simplified Chinese"
+          git tag -fa v0.1.82 "$RELEASE_COMMIT" -m "ComplianceAsCode Content 0.1.82 Simplified Chinese"
           git push origin refs/tags/v0.1.82 --force
           gh release create v0.1.82 \
-            build/zipfile/scap-security-guide-0.1.82.zip \
-            build/zipfile/scap-security-guide-0.1.82.zip.sha512 \
-            build/zipfile/scap-security-guide-0.1.82.tar.gz \
-            build/zipfile/scap-security-guide-0.1.82.tar.gz.sha512 \
-            build/ssg-ubuntu2404-ds.xml \
-            zh-cn-validation.json \
+            release-assets/build/zipfile/scap-security-guide-0.1.82.zip \
+            release-assets/build/zipfile/scap-security-guide-0.1.82.zip.sha512 \
+            release-assets/build/zipfile/scap-security-guide-0.1.82.tar.gz \
+            release-assets/build/zipfile/scap-security-guide-0.1.82.tar.gz.sha512 \
+            release-assets/build/ssg-ubuntu2404-ds.xml \
+            release-assets/zh-cn-validation.json \
+            release-assets/SHA256SUMS \
             translations/zh-CN/coverage.json \
-            SHA256SUMS \
             --title "Content 0.1.82 简体中文版" \
             --notes-file release-notes.md \
             --latest
