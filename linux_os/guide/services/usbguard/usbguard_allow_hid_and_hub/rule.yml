@@ -10,10 +10,16 @@ description: |-
     <tt>allow with-interface match-all { 03:*:* 09:00:* }</tt>
     to <tt>/etc/usbguard/rules.conf</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要允许 USBGuard 守护进程授权同时具有人机接口设备和集线器能力的 USB 设备，请将以下行添加到 <tt>/etc/usbguard/rules.conf</tt>：<tt>allow with-interface match-all { 03:*:* 09:00:* }</tt>
+
 rationale: |-
     Without allowing Human Interface Devices, it might not be possible
     to interact with the system. Without allowing hubs, it might not be possible to use any
     USB devices on the system.
+
+    <p><strong>中文理由：</strong></p>
+    如果不允许人机接口设备，可能无法与系统交互。如果不允许集线器，可能无法在系统上使用任何 USB 设备。
 
 warnings:
     - general: |-

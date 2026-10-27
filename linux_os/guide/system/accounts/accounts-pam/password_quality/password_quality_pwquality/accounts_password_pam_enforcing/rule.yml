@@ -17,6 +17,17 @@ description: |-
     If the value of "enforcing" is not "1" or the line is commented out,
     this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    验证操作系统使用“pwquality”强制执行密码复杂性规则。
+
+    通过运行以下命令验证操作系统正在强制执行 pwquality 模块：
+    <pre>
+    $ grep -i enforcing {{{ pwquality_path }}}
+    enforcing = 1
+    </pre>
+
+    如果“enforcing”的值不是“1”或该行被注释掉，则属于发现问题。
+
 rationale: |-
     Use of a complex password helps to increase the time and resources
     required to compromise the password. Password complexity, or strength,
@@ -24,6 +35,9 @@ rationale: |-
     guessing and brute-force attacks. Using enforcing=1 ensures "pwquality"
     enforces complex password construction configuration and has the ability
     to limit brute-force attacks on the system.
+
+    <p><strong>中文理由：</strong></p>
+    使用复杂密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。使用 enforcing=1 可确保“pwquality”强制执行复杂密码构造配置，并能够限制对系统的暴力破解攻击。
 
 severity: medium
 

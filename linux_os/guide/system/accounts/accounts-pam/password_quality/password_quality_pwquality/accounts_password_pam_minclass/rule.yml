@@ -21,6 +21,16 @@ description: |-
     to require {{{ xccdf_value("var_password_pam_minclass") }}}
     differing categories of characters when changing passwords.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_pwquality</tt> 模块的 <tt>minclass</tt> 参数控制密码在被视为有效前必须存在的不同字符类别（或类型）要求。例如，将该值设置为三 (3) 时，任何密码必须包含至少三个不同类别的字符才能通过。默认值为零 (0)，表示不要求任何字符类别。可用类别共四种：
+    <pre>
+    * Upper-case characters
+    * Lower-case characters
+    * Digits
+    * Special characters (for example, punctuation)
+    </pre>
+    修改 <tt>{{{ pwquality_path }}}</tt> 中的 <tt>minclass</tt> 条目，以要求更改密码时使用 {{{ xccdf_value("var_password_pam_minclass") }}} 个不同字符类别。
+
 rationale: |-
     Use of a complex password helps to increase the time and resources required to compromise the password.
     Password complexity, or strength, is a measure of the effectiveness of a password in resisting attempts
@@ -32,6 +42,9 @@ rationale: |-
     <br /><br />
     Requiring a minimum number of character categories makes password guessing attacks more difficult
     by ensuring a larger search space.
+
+    <p><strong>中文理由：</strong></p>
+    使用复杂密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。<br /><br />密码复杂性是决定破解密码所需时间的多个因素之一。密码越复杂，破解前需要测试的可能组合就越多。<br /><br />要求至少使用一定数量的字符类别可扩大搜索空间，从而使密码猜测攻击更加困难。
 
 severity: medium
 

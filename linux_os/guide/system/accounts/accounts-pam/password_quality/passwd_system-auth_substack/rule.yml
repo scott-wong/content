@@ -8,10 +8,17 @@ description: |-
     when changing passwords. Look for the following line in <tt>/etc/pam.d/passwd</tt>:
     <pre>password substack system-auth</pre>
 
+    <p><strong>中文说明：</strong></p>
+    验证 PAM 配置为在更改密码时使用 <tt>/etc/pam.d/system-auth</tt>。在 <tt>/etc/pam.d/passwd</tt> 中查找以下行：
+    <pre>password substack system-auth</pre>
+
 rationale: |-
     Including system-auth from the passwd module ensures that the user must pass through
     the PAM configuration for system authentication as found in /etc/pam.d/system-auth
     when changing passwords.
+
+    <p><strong>中文理由：</strong></p>
+    在 passwd 模块中包含 system-auth 可确保用户在更改密码时必须经过 <tt>/etc/pam.d/system-auth</tt> 中定义的系统身份验证 PAM 配置。
 
 severity: medium
 

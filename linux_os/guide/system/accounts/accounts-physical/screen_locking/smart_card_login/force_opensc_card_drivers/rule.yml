@@ -15,12 +15,21 @@ description: |-
     and change it to:
     <pre>force_card_driver = {{{ xccdf_value("var_smartcard_drivers") }}};</pre>
 
+    <p><strong>中文说明：</strong></p>
+    OpenSC 智能卡中间件可自动检测智能卡驱动；但是，通过强制使用组织所用的智能卡驱动，除非另有指定，opensc 将不再自动检测或使用其他驱动。这有助于防止用户使用未经授权的智能卡。此配置档的默认智能卡驱动为 <tt>{{{ xccdf_value("var_smartcard_drivers") }}}</tt>。要强制使用 OpenSC 驱动，请编辑 <tt>/etc/opensc.conf</tt>。查找类似以下的行：
+    <pre># force_card_driver = customcos;</pre>
+    并将其更改为：
+    <pre>force_card_driver = {{{ xccdf_value("var_smartcard_drivers") }}};</pre>
+
 rationale: |-
     Smart card login provides two-factor authentication stronger than
     that provided by a username and password combination. Smart cards leverage PKI
     (public key infrastructure) in order to provide and verify credentials.
     Forcing the smart card driver in use by your organization helps to prevent
     users from using unauthorized smart cards.
+
+    <p><strong>中文理由：</strong></p>
+    会话超时锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。操作系统不应依赖用户在离开前手动锁定操作系统会话，而应能够识别用户会话何时空闲并采取措施启动会话锁。<br /><br /><tt>tmux</tt> 软件包允许实现和配置会话锁。
 
 severity: medium
 

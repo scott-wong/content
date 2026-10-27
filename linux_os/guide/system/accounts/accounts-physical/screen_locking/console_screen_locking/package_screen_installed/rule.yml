@@ -11,6 +11,14 @@ description: |-
     The console can now be locked with the following key combination:
     <pre>ctrl+a x</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要启用控制台屏幕锁定，请安装 <tt>screen</tt> 软件包。
+    请使用适当的软件包管理工具安装 <tt>screen</tt> 软件包。
+    指示用户使用以下命令启动新的终端会话：
+    <pre>$ screen</pre>
+    现在可使用以下组合键锁定控制台：
+    <pre>ctrl+a x</pre>
+
 rationale: |-
     A session time-out lock is a temporary action taken when a user stops work and moves away from the immediate
     physical vicinity of the information system but does not logout because of the temporary nature of the absence.
@@ -19,6 +27,9 @@ rationale: |-
     session lock.
     <br /><br />
     The <tt>screen</tt> package allows for a session lock to be implemented and configured.
+
+    <p><strong>中文理由：</strong></p>
+    在无活动一段时间后锁定会话，可限制会话无人值守时的潜在暴露。
 
 severity: medium
 

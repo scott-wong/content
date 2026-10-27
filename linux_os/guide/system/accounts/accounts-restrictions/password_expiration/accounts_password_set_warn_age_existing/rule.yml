@@ -9,10 +9,18 @@ description: |-
     <pre>$ sudo chage --warndays {{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}} <i>USER</i></pre>
     This profile requirement is <tt>{{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要配置在密码到期前多少天向用户发出警告，请运行以下命令：
+    <pre>$ sudo chage --warndays {{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}} <i>USER</i></pre>
+    此配置档要求为 <tt>{{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}}</tt>。
+
 rationale: |-
     Providing an advance warning that a password will be expiring gives users
     time to think of a secure password. Users caught unaware may choose a simple
     password or write it down where it may be discovered.
+
+    <p><strong>中文理由：</strong></p>
+    提前警告用户密码即将到期，可使用户有时间考虑设置安全密码。未意识到密码即将到期的用户可能选择简单密码，或将其记录在可能被发现的位置。
 
 severity: medium
 

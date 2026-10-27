@@ -10,6 +10,9 @@ description: |-
     length credit for each lowercase character. Modify the <tt>lcredit</tt> setting in
     <tt>{{{ pwquality_path }}}</tt> to require the use of a lowercase character in passwords.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_pwquality</tt> 模块的 <tt>lcredit</tt> 参数控制密码中小写字母的使用要求。设置为负数时，任何密码都必须包含该数量的小写字母。设置为正数时，pam_pwquality 会为每个小写字母提供 +1 的额外长度额度。修改 <tt>{{{ pwquality_path }}}</tt> 中的 <tt>lcredit</tt> 设置，以要求密码使用小写字母。
+
 rationale: |-
     Use of a complex password helps to increase the time and resources required
     to compromise the password. Password complexity, or strength, is a measure of
@@ -21,6 +24,9 @@ rationale: |-
     possible combinations that need to be tested before the password is compromised.
     Requiring a minimum number of lowercase characters makes password guessing attacks
     more difficult by ensuring a larger search space.
+
+    <p><strong>中文理由：</strong></p>
+    使用复杂密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。<br /><br />密码复杂性是决定破解密码所需时间的多个因素之一。密码越复杂，破解前需要测试的可能组合就越多。<br />要求至少使用一定数量的小写字母可扩大搜索空间，从而使密码猜测攻击更加困难。
 
 severity: medium
 

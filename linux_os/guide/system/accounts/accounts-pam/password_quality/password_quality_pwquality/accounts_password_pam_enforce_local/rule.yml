@@ -10,11 +10,17 @@ description: |-
     setting in <tt>{{{ pwquality_path }}}</tt> to require password complexity enforcement
     for only local user accounts.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_pwquality</tt> 模块的 <tt>local_users_only</tt> 参数控制 pam_pwquality 仅对本地用户账户强制执行密码复杂性，并忽略集中式用户账户管理的密码复杂性配置。在 <tt>{{{ pwquality_path }}}</tt> 中启用 <tt>local_users_only</tt> 设置，以仅对本地用户账户强制执行密码复杂性要求。
+
 rationale: |-
     The operating system must provide automated mechanisms for supporting account management
     functions. Enterprise environments make application account management challenging and
     complex. A manual process for account management functions adds the risk of a potential
     oversight or other error.
+
+    <p><strong>中文理由：</strong></p>
+    操作系统必须提供支持账户管理功能的自动化机制。企业环境使应用程序账户管理变得具有挑战性且复杂。账户管理功能的人工流程会增加潜在疏漏或其他错误的风险。
 
 severity: medium
 

@@ -7,9 +7,15 @@ description: |-
     The USBGuard service should be enabled.
     {{{ describe_service_enable(service="usbguard") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应启用 USBGuard 服务。应启用 <tt>usbguard</tt> 服务。
+
 rationale: |-
     The <tt>usbguard</tt> service must be running in order to
     enforce the USB device authorization policy for all USB devices.
+
+    <p><strong>中文理由：</strong></p>
+    必须运行 <tt>usbguard</tt> 服务，才能对所有 USB 设备强制执行 USB 设备授权策略。
 
 severity: medium
 

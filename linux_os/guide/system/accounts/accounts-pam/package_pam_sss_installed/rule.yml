@@ -5,9 +5,15 @@ title: 'Install pam-sss Package'
 description: |-
     {{{ describe_package_install(package="libpam-sss") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>libpam-sss</tt> 软件包。
+
 rationale: |-
     libpam-sss has pam module for the SSSD
     (System Security Services Daemon).
+
+    <p><strong>中文理由：</strong></p>
+    libpam-sss 包含 SSSD（System Security Services Daemon）的 PAM 模块。
 
 severity: medium
 

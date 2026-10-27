@@ -14,10 +14,19 @@ description: |-
     By default, the <tt>debug-shell</tt> SystemD service is already disabled.
     {{{ describe_service_disable(service="debug-shell") }}}
 
+    <p><strong>中文说明：</strong></p>
+    SystemD 的 <tt>debug-shell</tt> 服务旨在使用各种 <tt>systemctl</tt> 命令诊断与 SystemD 相关的启动问题。启用该服务并重启系统后，可在 <tt>tty9</tt> 上使用 root shell，按 <tt>CTRL-ALT-F9</tt> 即可访问。<tt>debug-shell</tt> 服务只应用于 SystemD 相关问题，其他情况下应禁用。
+    <br /><br />
+    默认情况下，<tt>debug-shell</tt> SystemD 服务已禁用。
+    要禁用 <tt>debug-shell</tt> 服务，请运行 <tt>sudo systemctl disable --now debug-shell</tt>。
+
 rationale: |-
     This prevents attackers with physical access from trivially bypassing security
     on the machine through valid troubleshooting configurations and gaining root
     access when the system is rebooted.
+
+    <p><strong>中文理由：</strong></p>
+    如果要使用智能卡进行多因素身份验证，必须安装 pcsc-lite 软件包。
 
 severity: medium
 

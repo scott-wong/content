@@ -10,10 +10,17 @@ description: |-
     a file under <tt>/etc/security/limits.d/</tt>:
     <pre>* hard maxlogins {{{ xccdf_value("var_accounts_max_concurrent_login_sessions") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    限制允许的用户数和每用户会话数，可降低与拒绝服务攻击相关的风险。此设置针对单个账户的并发会话，不处理单个用户通过多个账户建立的并发会话。要设置每用户的并发会话数，请在 <tt>/etc/security/limits.conf</tt> 或 <tt>/etc/security/limits.d/</tt> 下的文件中添加以下行：
+    <pre>* hard maxlogins {{{ xccdf_value("var_accounts_max_concurrent_login_sessions") }}}</pre>
+
 rationale: |-
     Limiting simultaneous user logins can insulate the system from denial of service
     problems caused by excessive logins. Automated login processes operating improperly or
     maliciously may result in an exceptional number of simultaneous login sessions.
+
+    <p><strong>中文理由：</strong></p>
+    限制同时登录的用户数可使系统免受过多登录导致的拒绝服务问题影响。运行不当或具有恶意的自动化登录进程可能造成异常数量的同时登录会话。
 
 severity: low
 

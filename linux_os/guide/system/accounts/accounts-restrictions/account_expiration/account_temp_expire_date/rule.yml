@@ -16,12 +16,20 @@ description: |-
     configured to automatically terminate these types of accounts after a
     period of 72 hours.
 
+    <p><strong>中文说明：</strong></p>
+    临时账户是在需要短期账户时，作为正常账户激活流程的一部分建立的。如果需要临时账户，请将系统配置为在记录的时间段后终止这些账户。对于每个临时账户，请运行以下命令为其设置过期日期，并适当替换 <tt><i>USER</i></tt> 和 <tt><i>YYYY-MM-DD</i></tt>：
+    <pre>$ sudo chage -E <i>YYYY-MM-DD USER</i></pre>
+    <tt><i>YYYY-MM-DD</i></tt> 表示该账户的记录过期日期。对于美国政府系统，操作系统必须配置为在 72 小时后自动终止此类账户。
+
 rationale: |-
     If temporary user accounts remain active when no longer needed or for
     an excessive period, these accounts may be used to gain unauthorized access.
     To mitigate this risk, automated termination of all temporary accounts
     must be set upon account creation.
     <br />
+
+    <p><strong>中文理由：</strong></p>
+    如果未配置撤销数据的本地缓存，可能允许已不再获得授权的用户（证书已吊销的用户）访问系统。
 
 severity: medium
 

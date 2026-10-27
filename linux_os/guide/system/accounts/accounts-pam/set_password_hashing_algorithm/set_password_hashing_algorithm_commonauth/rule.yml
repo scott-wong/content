@@ -19,6 +19,13 @@ description: |-
     hashes for the new authentications will be generated using the SHA-512
     algorithm. This is the default.
 
+    <p><strong>中文说明：</strong></p>
+    PAM 系统服务可配置为仅存储密码的加密表示。在 <tt>/etc/pam.d/common-auth</tt> 中，文件的 <tt>auth</tt> 部分控制更改密码期间执行哪些 PAM 模块。将 <tt>auth</tt> 部分中的 <tt>pam_unix.so</tt> 模块设置为包含 <tt>sha512</tt> 参数，如下所示：
+    <br />
+    <pre>auth   required    pam_unix.so sha512 <i>other arguments...</i></pre>
+    <br />
+    这有助于确保本地用户更改身份验证方法时，新身份验证将使用 SHA-512 算法生成哈希。这是默认设置。
+
 rationale: |-
     Unapproved mechanisms used for authentication to the cryptographic module
     are not verified and therefore cannot be relied on to provide
@@ -28,6 +35,9 @@ rationale: |-
     Additionally, the <tt>crypt_style</tt> configuration option ensures the use
     of a strong hashing algorithm that makes password cracking attacks more
     difficult.
+
+    <p><strong>中文理由：</strong></p>
+    用于向加密模块进行身份验证的未经批准的机制不会经过验证，因此不能依靠其提供机密性或完整性，数据可能被泄露。此设置确保用户和组账户管理工具仅存储密码的加密表示。此外，<tt>crypt_style</tt> 配置选项可确保使用强哈希算法，使密码破解攻击更加困难。
 
 severity: medium
 

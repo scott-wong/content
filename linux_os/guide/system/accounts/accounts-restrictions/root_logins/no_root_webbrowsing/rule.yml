@@ -7,10 +7,16 @@ description: |-
     Enforce policy requiring administrative accounts use web browsers only for
     local service administration.
 
+    <p><strong>中文说明：</strong></p>
+    强制实施策略，要求管理账户仅将 Web 浏览器用于本地服务管理。
+
 rationale: |-
     If a browser vulnerability is exploited while running with administrative privileges,
     the entire system could be compromised. Specific exceptions for local service
     administration should be documented in site-defined policy.
+
+    <p><strong>中文理由：</strong></p>
+    如果以管理权限运行的浏览器漏洞遭到利用，整个系统可能被攻陷。本地服务管理的具体例外情况应在站点定义的策略中记录。
 
 severity: unknown
 

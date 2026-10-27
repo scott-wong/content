@@ -11,10 +11,18 @@ description: |-
     By default, single-user mode is protected by requiring a password and is set
     in <tt>/usr/lib/systemd/system/rescue.service</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    单用户模式旨在作为系统恢复方法，通过在启动时提供引导选项，为单个用户提供 root 访问权限。
+    <br /><br />
+    默认情况下，单用户模式通过要求密码进行保护，并在 <tt>/usr/lib/systemd/system/rescue.service</tt> 中设置。
+
 rationale: |-
     This prevents attackers with physical access from trivially bypassing security
     on the machine and gaining root access. Such accesses are further prevented
     by configuring the bootloader password.
+
+    <p><strong>中文理由：</strong></p>
+    在较短时间内终止空闲会话，可缩短未经授权人员接管控制台或控制台端口上无人值守管理会话的机会窗口。
 
 severity: medium
 

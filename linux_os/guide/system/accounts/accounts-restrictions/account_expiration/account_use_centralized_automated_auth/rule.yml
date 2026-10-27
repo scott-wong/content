@@ -9,6 +9,9 @@ description: |-
     one based on Identity Management tools such as Active Directory, Kerberos,
     Directory Server, etc.
 
+    <p><strong>中文说明：</strong></p>
+    实施自动化用户账户管理系统，以最大限度降低有意或无意错误的风险。该系统应与现有企业用户管理系统集成，例如基于 Active Directory、Kerberos、Directory Server 等身份管理工具的系统。
+
 rationale: |-
     A comprehensive account management process that includes automation helps to
     ensure the accounts designated as requiring attention are consistently and
@@ -16,6 +19,9 @@ rationale: |-
     challenging and complex. A user management process requiring administrators to
     manually address account management functions adds risk of potential
     oversight.
+
+    <p><strong>中文理由：</strong></p>
+    使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />pcsc-lite 和 MuscleCard 框架的守护进程程序是 pcscd。它是协调与连接到系统的智能卡读卡器、智能卡和加密令牌通信的资源管理器。
 
 severity: medium
 

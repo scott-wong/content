@@ -2,12 +2,19 @@ documentation_complete: true
 
 title: 'All GIDs referenced in /etc/passwd must be defined in /etc/group'
 
-description: 'Add a group to the system for each GID referenced without a corresponding group.'
+description: |-
+    Add a group to the system for each GID referenced without a corresponding group.
+
+    <p><strong>中文说明：</strong></p>
+    为每个被引用但没有对应组的 GID 在系统中添加组。
 
 rationale: |-
     If a user is assigned the Group Identifier (GID) of a group not existing on the system, and a group
     with the Group Identifier (GID) is subsequently created, the user may have unintended rights to
     any files associated with the group.
+
+    <p><strong>中文理由：</strong></p>
+    如果为用户分配了系统中不存在的组的组标识符（GID），随后又创建了具有该 GID 的组，则用户可能对该组关联的任何文件拥有意外权限。
 
 severity: low
 

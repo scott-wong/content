@@ -9,7 +9,18 @@ description: |-
     <pre>$ sudo getent passwd | awk -F: '{ print $1}' | uniq -d</pre>
     If a username is returned, change or delete the username.
 
-rationale: 'Unique usernames allow for accountability on the system.'
+    <p><strong>中文说明：</strong></p>
+    确保系统上的账户具有唯一名称。
+
+    要确保所有账户具有唯一名称，请运行以下命令：
+    <pre>$ sudo getent passwd | awk -F: '{ print $1}' | uniq -d</pre>
+    如果返回用户名，请更改或删除该用户名。
+
+rationale: |-
+    Unique usernames allow for accountability on the system.
+
+    <p><strong>中文理由：</strong></p>
+    智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）提供并验证凭据。<br /><br />使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。
 
 severity: medium
 

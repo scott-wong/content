@@ -19,11 +19,24 @@ description: |-
     in <tt>/etc/pam.d/system-auth</tt> and <tt>/etc/pam.d/password-auth</tt> files.
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>remember</tt> 选项将每个用户最近 n 个密码存储在 <tt>/etc/security/opasswd</tt> 中，强制实施密码历史记录并防止用户重复使用相同密码。但是，该功能依赖安全性较低的 MD5 密码哈希算法。应改用 <tt>pam_pwhistory</tt> 模块。该模块也会将最近 n 个密码存储在 <tt>/etc/security/opasswd</tt> 中，并使用 pam_unix 模块中配置的密码哈希算法（例如 yescrypt 或 SHA512），从而提供更高的安全性。
+    {{% if 'ubuntu' in product or 'debian' in product %}}
+    <br/><br/>
+    在基于 Debian 的系统中，应从 <tt>/etc/pam.d/common-*</tt> 文件的 PAM 配置中移除 <tt>remember</tt> 选项。
+    {{% else %}}
+    <br/><br/>
+    应从 <tt>/etc/pam.d/system-auth</tt> 和 <tt>/etc/pam.d/password-auth</tt> 文件的 PAM 配置中移除 <tt>remember</tt> 选项。
+    {{% endif %}}
+
 rationale: |-
     Removing the <tt>remember</tt> argument ensures the use of a stronger password hashing algorithm.
     A more robust hash algorithm increases the difficulty for attackers to crack stored
     passwords in <tt>/etc/security/opasswd</tt>, thereby improving system security and
     protecting user credentials.
+
+    <p><strong>中文理由：</strong></p>
+    移除 <tt>remember</tt> 参数可确保使用更强的密码哈希算法。更稳健的哈希算法会增大攻击者破解 <tt>/etc/security/opasswd</tt> 中存储密码的难度，从而改善系统安全并保护用户凭据。
 
 severity: medium
 

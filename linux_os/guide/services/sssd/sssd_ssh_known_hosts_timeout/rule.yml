@@ -13,9 +13,18 @@ description: |-
     ssh_known_hosts_timeout = {{{ xccdf_value("var_sssd_ssh_known_hosts_timeout") }}}
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    SSSD 应配置为在 <tt>{{{ xccdf_value("var_sssd_ssh_known_hosts_timeout") }}}</tt> 秒后使已知 SSH 主机的密钥过期。要将 SSSD 配置为处理已知 SSH 主机，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[ssh]</tt> 节中将 <tt>ssh_known_hosts_timeout</tt> 设置为 <tt>{{{ xccdf_value("var_sssd_ssh_known_hosts_timeout") }}}</tt>。例如：
+    <pre>[ssh]
+    ssh_known_hosts_timeout = {{{ xccdf_value("var_sssd_ssh_known_hosts_timeout") }}}
+    </pre>
+
 rationale: |-
     If cached authentication information is out-of-date, the validity of the
     authentication information may be questionable.
+
+    <p><strong>中文理由：</strong></p>
+    如果缓存的身份验证信息已过时，则身份验证信息的有效性可能存疑。
 
 severity: medium
 

@@ -8,10 +8,16 @@ description: |-
     password provided by a previously stacked PAM module during password
     changes, rather than prompting the user again.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>use_authtok</tt> 选项确保 pam_pwhistory 模块在密码更改期间使用先前堆叠的 PAM 模块提供的新密码，而不是再次提示用户。
+
 rationale: |-
     The <tt>use_authtok</tt> option allows multiple PAM modules to validate the new
     password before it is accepted, ensuring it meets all security requirements
     without requiring the user to re-enter it multiple times.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>use_authtok</tt> 选项允许多个 PAM 模块在接受新密码前对其进行验证，确保其满足所有安全要求，而无需用户多次重新输入。
 
 identifiers:
     cce@rhel8: CCE-90463-1

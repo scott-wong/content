@@ -5,12 +5,18 @@ title: 'Install pam Package'
 description: |-
     {{{ describe_package_install(package="pam") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>pam</tt> 软件包。
+
 rationale: |-
     The <tt>pam</tt> package provides Pluggable Authentication Modules (PAM) which
     is a system for authenticating users. PAM provides a flexible and centralized
     way to manage authentication methods for applications and services. Ensuring
     the latest version of pam is installed helps maintain system security by
     providing the latest security fixes and features.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>pam</tt> 软件包提供 Pluggable Authentication Modules（PAM），这是一种用于对用户进行身份验证的系统。PAM 提供灵活且集中的方式，用于管理应用程序和服务的身份验证方法。确保安装最新版本的 pam 可通过提供最新安全修复和功能来维护系统安全。
 
 severity: medium
 

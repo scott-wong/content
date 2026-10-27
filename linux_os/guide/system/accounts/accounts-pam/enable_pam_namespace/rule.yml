@@ -7,6 +7,10 @@ description: |-
   To setup a private namespace add the following line to <tt>/etc/pam.d/login</tt>:
   <pre>session    required     pam_namespace.so</pre>
 
+  <p><strong>中文说明：</strong></p>
+  要设置私有命名空间，请将以下行添加到 <tt>/etc/pam.d/login</tt>：
+  <pre>session    required     pam_namespace.so</pre>
+
 
 rationale: |-
   The pam_namespace PAM module sets up a private namespace for a
@@ -14,6 +18,9 @@ rationale: |-
   provides a different instance of itself based on user name, or when using
   SELinux, user name, security context or both. The polyinstatied directories
   can be used to dedicate separate temporary directories to each account.
+
+  <p><strong>中文理由：</strong></p>
+  pam_namespace PAM 模块使用多实例化目录为会话设置私有命名空间。多实例化目录会根据用户名，或在使用 SELinux 时根据用户名、安全上下文或二者提供不同的自身实例。多实例化目录可用于为每个账户分配单独的临时目录。
 
 severity: low
 

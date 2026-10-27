@@ -8,12 +8,18 @@ description: |-
     automatic session locking. It should be started from
     <tt>/etc/bashrc</tt> or drop-in files within <tt>/etc/profile.d/</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    使用 <tt>tmux</tt> 终端复用器实现自动会话锁定。应从 <tt>/etc/bashrc</tt> 或 <tt>/etc/profile.d/</tt> 中的 drop-in 文件启动。
+
 rationale: |-
     Unlike <tt>bash</tt> itself, the <tt>tmux</tt> terminal multiplexer
     provides a mechanism to lock sessions after period of inactivity.
     A session lock is a temporary action taken when a user stops work and moves away from the
     immediate physical vicinity of the information system but does not want to
     log out because of the temporary nature of the absence.
+
+    <p><strong>中文理由：</strong></p>
+    这可防止具有物理访问权限的攻击者轻易绕过机器安全并获得 root 访问权限。配置引导加载程序密码可进一步防止此类访问。
 
 
 severity: medium

@@ -5,9 +5,15 @@ title: 'Ensure all users last password change date is in the past'
 description: |-
     All users should have a password change date in the past.
 
+    <p><strong>中文说明：</strong></p>
+    所有用户的密码更改日期都应早于当前日期。
+
 rationale: |-
     If a user recorded password change date is in the future then they could
     bypass any set password expiration.
+
+    <p><strong>中文理由：</strong></p>
+    如果用户的密码更改日期记录为未来日期，则用户可以绕过任何已设置的密码到期限制。
 
 severity: medium
 

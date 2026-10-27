@@ -14,6 +14,11 @@ description: |-
 
     {{{ describe_package_install(package=package) }}}
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 操作系统必须安装 vlock 以允许会话锁定。
+
+    请使用适当的软件包管理工具安装 <tt>{{{ package }}}</tt> 软件包。
+
 rationale: |-
     A session lock is a temporary action taken when a user stops work and
     moves away from the immediate physical vicinity of the information
@@ -27,6 +32,9 @@ rationale: |-
     once invoked, the session lock must remain in place until the user
     reauthenticates. No other activity aside from reauthentication must
     unlock the system.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>tmux</tt> 软件包允许实现和配置会话锁。但是，会话锁由外部命令实现。<tt>tmux</tt> 默认配置不包含有效的会话锁。
 
 severity: medium
 

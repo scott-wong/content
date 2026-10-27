@@ -14,9 +14,18 @@ description: |-
     other than <tt>root</tt> has a login shell, disable it with the command:
     <pre>$ sudo usermod -s /sbin/nologin <i>account</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    有些账户不与系统的人类用户关联，而是用于执行某些管理功能。如果攻击者能够登录这些账户，也不应授予其 shell 访问权限。
+    <br/><br/>
+    每个本地账户的登录 shell 存储在 <tt>/etc/passwd</tt> 每行的最后一个字段中。系统账户是指用户 ID 小于 <tt>{{{ uid_min }}}</tt> 的用户账户。用户 ID 存储在第三个字段中。如果除 <tt>root</tt> 之外的任何系统账户具有登录 shell，请使用以下命令将其禁用：
+    <pre>$ sudo usermod -s /sbin/nologin <i>account</i></pre>
+
 rationale: |-
     Ensuring shells are not given to system accounts upon login makes it more difficult for
     attackers to make use of system accounts.
+
+    <p><strong>中文理由：</strong></p>
+    确保系统账户登录时不分配 shell，可使攻击者更难利用系统账户。
 
 severity: medium
 

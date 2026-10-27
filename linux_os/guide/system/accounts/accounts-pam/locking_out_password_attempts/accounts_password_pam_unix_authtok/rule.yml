@@ -9,8 +9,14 @@ description: |-
     When password changing enforce the module to set the new password to the one
     provided by a previously stacked password module
 
+    <p><strong>中文说明：</strong></p>
+    更改密码时，强制模块将新密码设置为先前堆叠的密码模块提供的密码。
+
 rationale: |-
     Require use_authtok in pam_unix.so configuration
+
+    <p><strong>中文理由：</strong></p>
+    在 pam_unix.so 配置中要求使用 use_authtok。
 
 severity: medium
 

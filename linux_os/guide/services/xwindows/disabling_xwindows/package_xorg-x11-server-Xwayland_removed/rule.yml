@@ -5,12 +5,18 @@ title: "Remove the X Windows Xwayland Package"
 description: |-
     {{{ describe_package_remove("xorg-x11-server-Xwayland") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应移除 <tt>xorg-x11-server-Xwayland</tt> 软件包。
+
 rationale: |-
     Unnecessary service packages must not be installed to decrease the attack
     surface of the system. X Windows has a long history of security
     vulnerabilities and should not be installed unless approved and documented.
     Unless your organization specifically requires graphical login access via
     X Windows, remove it to reduce the potential attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    不得安装不必要的服务软件包，以减少系统攻击面。X Windows 有长期的安全漏洞历史，除非经过批准并记录在案，否则不应安装。除非组织明确要求通过 X Windows 进行图形登录，否则应移除以减少潜在攻击面。
 
 severity: medium
 

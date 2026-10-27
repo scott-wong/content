@@ -9,10 +9,19 @@ description: |-
   Then, add the following entry to <tt>/etc/security/namespace.conf</tt>:
   <pre>/tmp     /tmp/tmp-inst/            level      root,adm</pre>
 
+  <p><strong>中文说明：</strong></p>
+  要配置 polyinstantiated /tmp 目录，请先创建用于容纳 polyinstantiation 子目录的父目录。使用以下命令：
+  <pre>$ sudo mkdir --mode 000 /tmp/tmp-inst</pre>
+  然后，将以下条目添加到 <tt>/etc/security/namespace.conf</tt>：
+  <pre>/tmp     /tmp/tmp-inst/            level      root,adm</pre>
+
 rationale: |-
   Polyinstantiation of temporary directories is a proactive security measure
   which reduces chances of attacks that are made possible by /tmp
   directories being world-writable.
+
+  <p><strong>中文理由：</strong></p>
+  临时目录的 polyinstantiation 是一项主动安全措施，可降低 /tmp 目录全局可写所导致的攻击可能性。
 
 severity: low
 

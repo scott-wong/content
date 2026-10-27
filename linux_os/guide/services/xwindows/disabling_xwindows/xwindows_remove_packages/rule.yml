@@ -13,9 +13,21 @@ description: |-
     mode. To do so, run the following command:
     <pre>sudo {{{ pkg_manager }}} remove {{{ xwindows_packages | join(' ') }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    通过移除以下软件包，系统将不再安装 X Windows。
+    {{%- for xwindows_package in xwindows_packages %}}
+     <tt>{{{ xwindows_package }}}</tt>
+    {{%- endfor %}}
+
+    如果未安装 X Windows，系统无法启动到图形用户模式。这可防止系统意外或恶意启动到 <tt>graphical.target</tt> 模式。为此，请运行以下命令：
+    <pre>sudo {{{ pkg_manager }}} remove {{{ xwindows_packages | join(' ') }}}</pre>
+
 rationale: |-
     Unnecessary service packages must not be installed to decrease the attack surface of the system.
     X windows has a long history of security vulnerabilities and should not be installed unless approved and documented.
+
+    <p><strong>中文理由：</strong></p>
+    不得安装不必要的服务软件包，以减少系统攻击面。X Windows 有长期的安全漏洞历史，除非经过批准并记录在案，否则不应安装。
 
 severity: medium
 

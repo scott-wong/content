@@ -7,10 +7,16 @@ description: |-
     This rule configures the system to lock out the <tt>root</tt> account after a number of
     incorrect login attempts using <tt>pam_tally2.so</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    本规则配置系统在使用 <tt>pam_tally2.so</tt> 多次错误登录后锁定 <tt>root</tt> 账户。
+
 rationale: |-
     By limiting the number of failed logon attempts, the risk of unauthorized system access via
     user password guessing, also known as brute-forcing, is reduced. Limits are imposed by locking
     the account.
+
+    <p><strong>中文理由：</strong></p>
+    通过限制失败的登录尝试次数，可降低未经授权人员通过猜测用户密码（即暴力破解）访问系统的风险。锁定账户可实施该限制。
 
 severity: medium
 

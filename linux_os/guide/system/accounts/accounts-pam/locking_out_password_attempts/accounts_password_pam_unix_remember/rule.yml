@@ -13,9 +13,15 @@ description: |-
     Do not allow users to reuse recent passwords. This can be accomplished by using the
     <tt>remember</tt> option for the <tt>pam_unix</tt> or <tt>pam_pwhistory</tt> PAM modules.
 
+    <p><strong>中文说明：</strong></p>
+    不允许用户重复使用近期密码。可通过为 <tt>pam_unix</tt> 或 <tt>pam_pwhistory</tt> PAM 模块使用 <tt>remember</tt> 选项来实现。
+
 rationale: |-
     Preventing reuse of previous passwords helps ensure that a compromised password is not
     reused by a user.
+
+    <p><strong>中文理由：</strong></p>
+    防止重复使用以前的密码有助于确保用户不会重复使用已泄露的密码。
 
 severity: medium
 

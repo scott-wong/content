@@ -20,10 +20,26 @@ description: |-
     To configure the tally directory, add the following line to <tt>/etc/security/faillock.conf</tt>:
     <pre>dir = {{{ xccdf_value("var_accounts_passwords_pam_faillock_dir") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    此规则确保使用 <tt>pam_faillock.so</tt> 对系统的账户锁定在系统重启后保持。摘自 "pam_faillock" 手册页：
+    <pre>Note that the default directory that "pam_faillock" uses is usually cleared on system
+    boot so the access will be re-enabled after system reboot. If that is undesirable, a different
+    tally directory must be set with the "dir" option.</pre>
+
+    pam_faillock.so 模块需要在 pam 文件中添加多个条目。必须仔细定义这些条目才能按预期工作。为避免手动编辑这些文件时出错，建议根据操作系统版本使用适当的工具，例如 <tt>authselect</tt> 或 <tt>authconfig</tt>。
+
+    所选配置档要求目录为 <tt>{{{ xccdf_value("var_accounts_passwords_pam_faillock_dir") }}}</tt>。
+
+    要配置计数目录，请将以下行添加到 <tt>/etc/security/faillock.conf</tt>：
+    <pre>dir = {{{ xccdf_value("var_accounts_passwords_pam_faillock_dir") }}}</pre>
+
 rationale: |-
     Locking out user accounts after a number of incorrect attempts prevents direct password
     guessing attacks. In combination with the <tt>silent</tt> option, user enumeration attacks
     are also mitigated.
+
+    <p><strong>中文理由：</strong></p>
+    在多次错误尝试后锁定用户账户可防止直接密码猜测攻击。结合 <tt>silent</tt> 选项，还可缓解用户枚举攻击。
 
 severity: medium
 

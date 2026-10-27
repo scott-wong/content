@@ -11,9 +11,19 @@ description: |-
     <br /><br />
     <pre>CREATE_HOME yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    创建时，应为所有本地交互式用户账户分配主目录。
+    <br /><br />
+    通过以下方式将 <tt>{{{ login_defs_path }}}</tt> 中的 <tt>CREATE_HOME</tt> 参数设置为 <tt>yes</tt>，配置操作系统为所有新的本地交互式用户分配主目录：
+    <br /><br />
+    <pre>CREATE_HOME yes</pre>
+
 rationale: |-
     If local interactive users are not assigned a valid home directory, there is no place
     for the storage and control of files they should own.
+
+    <p><strong>中文理由：</strong></p>
+    如果未为本地交互式用户分配有效的主目录，则没有位置存储和控制其应拥有的文件。
 
 severity: medium
 

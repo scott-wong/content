@@ -9,6 +9,10 @@ description: |-
     <tt>/etc/pam_pkcs11/pam_pkcs11.conf</tt> to include <tt>ca</tt> like so:
     <pre>cert_policy = ca, ocsp_on, signature;</pre>
 
+    <p><strong>中文说明：</strong></p>
+    将操作系统配置为对 PKI 身份验证执行证书状态检查。将 <tt>/etc/pam_pkcs11/pam_pkcs11.conf</tt> 中的所有 <tt>cert_policy</tt> 行修改为包含 <tt>ca</tt>，如下所示：
+    <pre>cert_policy = ca, ocsp_on, signature;</pre>
+
 rationale: |-
     Using an authentication device, such as a CAC or token that is separate from
     the information system, ensures that even if the information system is
@@ -19,6 +23,9 @@ rationale: |-
     information systems gaining access include, for example, hardware tokens
     providing time-based or challenge-response authenticators and smart cards
     or similar secure authentication devices issued by an organization or identity provider.
+
+    <p><strong>中文理由：</strong></p>
+    会话锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。<br /><br />会话锁在能够确定会话活动的时点实施。<br /><br />无论在何处确定和实施会话锁，一旦调用，会话锁必须保持有效，直到用户重新进行身份验证。除重新身份验证外，任何其他活动都不得解锁系统。
 
 severity: medium
 

@@ -10,10 +10,17 @@ description: |-
     command:
     <pre>$ sudo pkcs11-switch opensc</pre>
 
+    <p><strong>中文说明：</strong></p>
+    应在 NSS 数据库中配置使用 <tt>opensc</tt> 模块，而不是 <tt>Coolkey PKCS#11</tt> 模块。要将 NSS 数据库配置为使用 <tt>opensc</tt> 模块，请运行以下命令：
+    <pre>$ sudo pkcs11-switch opensc</pre>
+
 rationale: |-
     Smart card login provides two-factor authentication stronger than
     that provided by a username and password combination. Smart cards leverage PKI
     (public key infrastructure) in order to provide and verify credentials.
+
+    <p><strong>中文理由：</strong></p>
+    会话超时锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。操作系统不应依赖用户在离开前手动锁定操作系统会话，而应能够识别用户会话何时空闲并采取措施启动会话锁。<br /><br /><tt>screen</tt> 软件包允许实现和配置会话锁。
 
 severity: medium
 

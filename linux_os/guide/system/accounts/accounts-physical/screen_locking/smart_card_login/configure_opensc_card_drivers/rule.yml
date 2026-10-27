@@ -19,12 +19,25 @@ description: |-
     }
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    OpenSC 智能卡工具可自动检测智能卡驱动；但是，设置组织使用的智能卡驱动有助于防止用户使用未经授权的智能卡。此配置档的默认智能卡驱动为 <tt>{{{ xccdf_value("var_smartcard_drivers") }}}</tt>。要配置 OpenSC 驱动，请编辑 <tt>/etc/opensc.conf</tt>，并在文件的 <tt>app default</tt> 块中添加以下行，使其如下所示：
+
+    <pre>
+    app default {
+       ...
+       card_drivers = {{{ xccdf_value("var_smartcard_drivers") }}};
+    }
+    </pre>
+
 rationale: |-
     Smart card login provides two-factor authentication stronger than
     that provided by a username and password combination. Smart cards leverage PKI
     (public key infrastructure) in order to provide and verify credentials.
     Configuring the smart card driver in use by your organization helps to prevent
     users from using unauthorized smart cards.
+
+    <p><strong>中文理由：</strong></p>
+    不将 <tt>tmux</tt> 列入允许的 shell 可防止以用户身份运行的恶意程序通过禁用屏幕锁来降低安全性。
 
 severity: medium
 

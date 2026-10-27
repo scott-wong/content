@@ -27,9 +27,29 @@ description: |-
     When entering a warning banner that spans several lines, remember
     to begin and end the string with <tt>'</tt> and use <tt>\n</tt> for new lines.
 
+    <p><strong>中文说明：</strong></p>
+    在默认图形环境中，可通过将 <tt>banner-message-text</tt> 设置为 <tt>'<i>APPROVED_BANNER</i>'</tt>（其中 <i>APPROVED_BANNER</i> 是适用于你的环境的已批准横幅），在 GNOME Display Manager 登录屏幕中配置登录警告横幅文本。
+    <br /><br />
+    要启用，请将 <tt>banner-message-text</tt> 添加到
+    {{% if 'ubuntu' not in product %}}
+    <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt>。例如：
+    <pre>[org/gnome/login-screen]
+    banner-message-text='<i>APPROVED_BANNER</i>'</pre>
+    添加设置后，请将锁定项添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt> 以防止用户修改。例如：
+    <pre>/org/gnome/login-screen/banner-message-text</pre>
+    {{% else %}}
+    <tt>/etc/gdm3/greeter.dconf-defaults</tt>。例如：
+    <pre>[org/gnome/login-screen]
+    banner-message-text='<i>APPROVED_BANNER</i>'</pre>
+    {{% endif %}}
+    设置完成后，请运行 <tt>dconf update</tt>。输入跨多行的警告横幅时，请记住以 <tt>'</tt> 开始和结束字符串，并使用 <tt>\n</tt> 表示换行。
+
 rationale: |-
     An appropriate warning message reinforces policy awareness during the logon
     process and facilitates possible legal action against attackers.
+
+    <p><strong>中文理由：</strong></p>
+    在登录过程中显示适当的警告消息可强化策略意识，并有助于对攻击者采取法律行动。
 
 severity: medium
 

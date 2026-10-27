@@ -19,11 +19,28 @@ description: |-
     policy is more restrictive. The profile requirement is a maximum of <tt>retry={{{xccdf_value("var_password_pam_retry") }}}</tt> prompts
     per session.
 
+    <p><strong>中文说明：</strong></p>
+    要配置每个会话允许的重试提示次数：
+    {{% if product in ['ol8', 'ol9'] or 'rhel' in product or product in ['sle15', 'sle16'] %}}
+    编辑 <tt>{{{ pwquality_path }}}</tt> 以包含
+    {{% else %}}
+    编辑 <tt>pam_pwquality.so</tt> 语句，位置如下：
+    {{% if 'ubuntu' not in product and 'debian' not in product %}}
+    <tt>/etc/pam.d/system-auth</tt>，使其显示
+    {{% else %}}
+    <tt>/etc/pam.d/common-password</tt>，使其显示
+    {{% endif %}}
+    {{% endif %}}
+    <tt>retry={{{xccdf_value("var_password_pam_retry") }}}</tt>；如果站点策略更严格，可使用更低的值。配置档要求每个会话最多允许 <tt>retry={{{xccdf_value("var_password_pam_retry") }}}</tt> 次提示。
+
 rationale: |-
     Setting the password retry prompts that are permitted on a per-session basis to a low value
     requires some software, such as SSH, to re-connect. This can slow down and
     draw additional attention to some types of password-guessing attacks. Note that this
     is different from account lockout, which is provided by the pam_faillock module.
+
+    <p><strong>中文理由：</strong></p>
+    将每个会话允许的密码重试提示次数设置为较低值，会要求某些软件（例如 SSH）重新连接。这可减慢某些类型的密码猜测攻击，并使其更易引起注意。请注意，这与 pam_faillock 模块提供的账户锁定不同。
 
 severity: medium
 

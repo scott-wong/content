@@ -7,10 +7,16 @@ description: |-
     unauthorized access. Accounts with non-standard shells (those not defined in
     <tt>/etc/shells</tt>) should be locked using <tt>usermod -L</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    用于非交互目的的账户应被锁定，以防止未授权访问。使用非标准 shell（未在 <tt>/etc/shells</tt> 中定义）的账户应使用 <tt>usermod -L</tt> 锁定。
+
 rationale: |-
     Locking non-interactive accounts improves security by preventing potential
     misuse. While many systems configure these accounts with invalid strings,
     setting the shell field to <tt>nologin</tt> is also suggested
+
+    <p><strong>中文理由：</strong></p>
+    锁定非交互账户可防止潜在误用，从而提高安全性。尽管许多系统使用无效字符串配置这些账户，也建议将 shell 字段设置为 <tt>nologin</tt>。
 
 severity: medium
 

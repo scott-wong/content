@@ -14,9 +14,19 @@ description: |-
     <pre>Removed symlink /etc/systemd/system/default.target.
     Created symlink from /etc/systemd/system/default.target to /usr/lib/systemd/system/multi-user.target.</pre>
 
+    <p><strong>中文说明：</strong></p>
+    不需要图形用户界面的系统应默认仅启动到 <tt>multi-user.target</tt> 模式。这可防止系统意外启动到 <tt>graphical.target</tt> 模式。将系统默认目标设置为 <tt>multi-user.target</tt> 可防止图形环境自动启动。为此，请运行：
+    <pre>$ systemctl set-default multi-user.target</pre>
+    应看到以下输出：
+    <pre>Removed symlink /etc/systemd/system/default.target.
+    Created symlink from /etc/systemd/system/default.target to /usr/lib/systemd/system/multi-user.target.</pre>
+
 rationale: |-
     Services that are not required for system and application processes
     must not be active to decrease the attack surface of the system.
+
+    <p><strong>中文理由：</strong></p>
+    系统和应用进程不需要的服务不得处于活动状态，以减少系统攻击面。
 
 severity: medium
 

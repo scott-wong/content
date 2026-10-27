@@ -10,9 +10,15 @@ description: |-
     <tt>yes</tt>, <tt>true</tt>, or <tt>on</tt> value to the
     <tt>systemd.confirm_spawn</tt> kernel argument.
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 系统支持可用于阻止服务启动的 "交互式引导" 选项。在 {{{ full_name }}} 系统上，可通过向 <tt>systemd.confirm_spawn</tt> 内核参数提供 <tt>1</tt>、<tt>yes</tt>、<tt>true</tt> 或 <tt>on</tt> 值来启用交互式引导。
+
 rationale: |-
     Using interactive boot, the console user could disable auditing, firewalls,
     or other services, weakening system security.
+
+    <p><strong>中文理由：</strong></p>
+    使用交互式引导时，控制台用户可禁用审计、防火墙或其他服务，从而削弱系统安全。
 
 severity: medium
 

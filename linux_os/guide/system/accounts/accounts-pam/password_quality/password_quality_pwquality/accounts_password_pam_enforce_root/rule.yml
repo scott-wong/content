@@ -9,6 +9,9 @@ description: |-
     setting in <tt>{{{ pwquality_path }}}</tt> to require the <tt>root</tt> user
     to use complex passwords.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_pwquality</tt> 模块的 <tt>enforce_for_root</tt> 参数控制是否对 root 用户强制执行密码复杂性。在 <tt>{{{ pwquality_path }}}</tt> 中启用 <tt>enforce_for_root</tt> 设置，以要求 <tt>root</tt> 用户使用复杂密码。
+
 rationale: |-
     Use of a complex password helps to increase the time and resources required to compromise
     the password. Password complexity, or strength, is a measure of the effectiveness of a
@@ -17,6 +20,9 @@ rationale: |-
     Password complexity is one factor of several that determines how long it takes to crack a
     password. The more complex the password, the greater the number of possible combinations
     that need to be tested before the password is compromised.
+
+    <p><strong>中文理由：</strong></p>
+    使用复杂密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。<br /><br />密码复杂性是决定破解密码所需时间的多个因素之一。密码越复杂，破解前需要测试的可能组合就越多。
 
 severity: medium
 

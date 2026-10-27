@@ -15,12 +15,22 @@ description: |-
     {{{ describe_package_install(package="libpam-pwquality") }}}
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{% if 'ubuntu' not in product and 'debian' not in product %}}
+    应安装 <tt>libpwquality</tt> 软件包。
+    {{% else %}}
+    应安装 <tt>libpam-pwquality</tt> 软件包。
+    {{% endif %}}
+
 rationale: |-
     Use of a complex password helps to increase the time and resources required
     to compromise the password. Password complexity, or strength, is a measure
     of the effectiveness of a password in resisting attempts at guessing and
     brute-force attacks. "pwquality" enforces complex password construction
     configuration and has the ability to limit brute-force attacks on the system.
+
+    <p><strong>中文理由：</strong></p>
+    使用复杂密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。“pwquality”会强制执行复杂密码构造配置，并能够限制对系统的暴力破解攻击。
 
 severity: medium
 

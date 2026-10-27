@@ -12,10 +12,19 @@ description: |-
     This rule ensures every initialization file related to an interactive user
     is group-owned by an interactive user.
 
+    <p><strong>中文说明：</strong></p>
+    将交互式用户文件的组所有者更改为该用户在 <pre>/etc/passwd</pre> 中的组。要更改本地交互式用户主目录的组所有者，请使用以下命令：
+    <pre>$ sudo chgrp <i>USER_GROUP</i> /home/<i>USER</i>/.<i>INIT_FILE</i></pre>
+
+    此规则确保与交互式用户相关的每个初始化文件都由交互式用户作为组所有者拥有。
+
 rationale: |-
     Local initialization files for interactive users are used to configure the
     user's shell environment upon logon. Malicious modification of these files could
     compromise accounts upon logon.
+
+    <p><strong>中文理由：</strong></p>
+    交互式用户的本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时攻陷账户。
 
 severity: medium
 

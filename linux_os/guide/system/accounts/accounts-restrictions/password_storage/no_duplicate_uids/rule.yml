@@ -9,9 +9,15 @@ description: |-
     and change the UID field. Users must be assigned unique UIDs for
     accountability and to ensure appropriate access protections.
 
+    <p><strong>中文说明：</strong></p>
+    虽然 useradd 程序不允许创建重复的用户 ID（UID），但管理员可以手动编辑 /etc/passwd 文件并更改 UID 字段。必须为用户分配唯一 UID，以确保问责并保证适当的访问保护。
+
 rationale: |-
     Users must be assigned unique UIDs for accountability and to ensure
     appropriate access protections.
+
+    <p><strong>中文理由：</strong></p>
+    必须为用户分配唯一 UID，以确保问责并保证适当的访问保护。
 
 severity: medium
 

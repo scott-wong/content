@@ -9,8 +9,14 @@ description: |-
     with error. Make sure it is configured with a value that is no more than
     {{{ xccdf_value("var_password_pam_retry") }}}. For example, <tt>retry=1</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_cracklib</tt> 模块的 <tt>retry</tt> 参数控制在返回错误前提示用户输入密码的最大次数。确保其配置值不超过 {{{ xccdf_value("var_password_pam_retry") }}}。例如 <tt>retry=1</tt>。
+
 rationale: |-
     To reduce opportunities for successful guesses and brute-force attacks.
+
+    <p><strong>中文理由：</strong></p>
+    减少成功猜测和暴力破解攻击的机会。
 
 severity: medium
 

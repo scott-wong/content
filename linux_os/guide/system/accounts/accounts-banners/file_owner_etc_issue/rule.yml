@@ -6,12 +6,18 @@ title: 'Verify ownership of System Login Banner'
 description: |-
     {{{ describe_file_owner(file="/etc/issue", owner="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/issue</tt> 文件的所有者为 <tt>root</tt>。
+
 rationale: |-
     Display of a standardized and approved use notification before granting
     access to the operating system ensures privacy and security notification
     verbiage used is consistent with applicable federal laws, Executive Orders,
     directives, policies, regulations, standards, and guidance.<br />
     Proper ownership will ensure that only root user can modify the banner.
+
+    <p><strong>中文理由：</strong></p>
+    在授予操作系统访问权限前显示标准化且经批准的使用通知，可确保所用的隐私和安全通知措辞符合适用的联邦法律、行政命令、指令、政策、法规、标准和指南。<br />正确的文件所有者可确保只有 root 用户可以修改该横幅。
 
 severity: medium
 

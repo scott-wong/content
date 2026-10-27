@@ -11,6 +11,11 @@ description: |-
     environments.
     The profile requirement is <tt>{{{ xccdf_value("var_accounts_minimum_age_login_defs") }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要为新建账户指定密码最短使用期限，请编辑文件 <tt>{{{ login_defs_path }}}</tt> 并添加或更正以下行：
+    <pre>PASS_MIN_DAYS {{{ xccdf_value("var_accounts_minimum_age_login_defs") }}}</pre>
+    在许多环境中，1 天被视为足够。配置档要求为 <tt>{{{ xccdf_value("var_accounts_minimum_age_login_defs") }}}</tt>。
+
 rationale: |-
     Enforcing a minimum password lifetime helps to prevent repeated password
     changes to defeat the password reuse or history enforcement requirement. If
@@ -20,6 +25,11 @@ rationale: |-
     <br /><br />
     Setting the minimum password age protects against users cycling back to a
     favorite password after satisfying the password reuse requirement.
+
+    <p><strong>中文理由：</strong></p>
+    强制设置密码最短使用期限有助于防止用户反复更改密码，从而规避密码重用或历史记录要求。如果允许用户立即并持续更改密码，则用户可在短时间内反复更改密码，从而规避组织关于密码重用的策略。
+    <br /><br />
+    设置密码最短使用期限可防止用户在满足密码重用要求后又循环使用自己偏好的密码。
 
 severity: medium
 

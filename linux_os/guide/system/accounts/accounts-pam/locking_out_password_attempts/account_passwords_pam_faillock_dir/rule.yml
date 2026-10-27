@@ -5,9 +5,15 @@ title: 'Account Lockouts Must Persist'
 description: |-
     By setting a `dir` in the faillock configuration account lockouts will persist across reboots.
 
+    <p><strong>中文说明：</strong></p>
+    在 faillock 配置中设置 <tt>dir</tt> 可使账户锁定状态在重启后保持。
+
 rationale: |
     Having lockouts persist across reboots ensures that account is only unlocked by an administrator.
     If the lockouts did not persist across reboots an attack could simply reboot the system to continue brute force attacks against the accounts on the system.
+
+    <p><strong>中文理由：</strong></p>
+    使锁定状态在重启后保持可确保账户只能由管理员解锁。如果锁定状态无法在重启后保持，攻击者只需重启系统即可继续对系统账户进行暴力破解攻击。
 
 severity: medium
 

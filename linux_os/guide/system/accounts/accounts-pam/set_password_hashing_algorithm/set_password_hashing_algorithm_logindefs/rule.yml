@@ -7,6 +7,10 @@ description: |-
     {{{ xccdf_value("var_password_hashing_algorithm") }}} as the hashing algorithm:
     <pre>ENCRYPT_METHOD {{{ xccdf_value("var_password_hashing_algorithm") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    在 <tt>{{{ login_defs_path }}}</tt> 中添加或更新以下行，以确保系统使用 {{{ xccdf_value("var_password_hashing_algorithm") }}} 作为哈希算法：
+    <pre>ENCRYPT_METHOD {{{ xccdf_value("var_password_hashing_algorithm") }}}</pre>
+
 rationale: |-
     Passwords need to be protected at all times, and encryption is the standard method for
     protecting passwords. If passwords are not encrypted, they can be plainly read
@@ -14,6 +18,9 @@ rationale: |-
     are no more protected than if they are kept in plain text.
     <br /><br />
     Using a stronger hashing algorithm makes password cracking attacks more difficult.
+
+    <p><strong>中文理由：</strong></p>
+    密码必须始终受到保护，加密是保护密码的标准方法。如果密码未加密，就可以明文读取并容易被泄露。使用弱算法加密的密码并不比明文保存更安全。<br /><br />使用更强的哈希算法可使密码破解攻击更加困难。
 
 severity: medium
 

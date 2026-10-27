@@ -5,9 +5,15 @@ title: 'Configure the Use of the pam_faillock.so Module in the /etc/pam.d/passwo
 description: |-
     The pam_faillock.so module must be loaded in preauth in /etc/pam.d/password-auth.
 
+    <p><strong>中文说明：</strong></p>
+    必须在 /etc/pam.d/password-auth 的 preauth 中加载 pam_faillock.so 模块。
+
 rationale: |-
     If the pam_faillock.so module is not loaded the system will not correctly lockout accounts to prevent
     password guessing attacks.
+
+    <p><strong>中文理由：</strong></p>
+    如果未加载 pam_faillock.so 模块，系统将无法正确锁定账户以防止密码猜测攻击。
 
 severity: medium
 

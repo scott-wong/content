@@ -6,9 +6,15 @@ title: 'Configure SSSD to run as user sssd'
 description: |-
     SSSD processes should be configured to run as user sssd, not root.
 
+    <p><strong>中文说明：</strong></p>
+    应将 SSSD 进程配置为以 <tt>sssd</tt> 用户身份运行，而不是 <tt>root</tt>。
+
 rationale: |-
     To minimize privileges of SSSD processes, they are configured to
     run as non-root user.
+
+    <p><strong>中文理由：</strong></p>
+    为尽量减少 SSSD 进程的权限，已将其配置为以非 root 用户身份运行。
 
 severity: medium
 

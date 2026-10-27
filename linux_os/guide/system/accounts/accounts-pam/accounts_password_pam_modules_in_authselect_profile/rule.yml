@@ -11,10 +11,18 @@ description: |-
     The default profiles include: <tt>local</tt>, <tt>sssd</tt>, and <tt>winbind</tt>. These profiles can be customized
     to follow site specific requirements.
 
+    <p><strong>中文说明：</strong></p>
+    活动 authselect 配置档必须在 <tt>system-auth</tt> 和 <tt>password-auth</tt> 文件中包含所需的 PAM 模块：<tt>pam_pwquality.so</tt>、<tt>pam_pwhistory.so</tt>、<tt>pam_faillock.so</tt> 和 <tt>pam_unix.so</tt>。
+
+    可通过复制并自定义某个默认配置档来创建自定义 authselect 配置档。默认配置档包括 <tt>local</tt>、<tt>sssd</tt> 和 <tt>winbind</tt>。可自定义这些配置档以满足站点特定要求。
+
 rationale: |-
     A custom profile is required to customize many of the PAM options.
     Modifications made to a default profile may be overwritten during an update.
     When you deploy a profile, the profile is applied to every user logging into the given host.
+
+    <p><strong>中文理由：</strong></p>
+    自定义许多 PAM 选项需要使用自定义配置档。对默认配置档所做的修改可能在更新期间被覆盖。部署配置档后，该配置档将应用于登录该主机的每个用户。
 
 severity: medium
 

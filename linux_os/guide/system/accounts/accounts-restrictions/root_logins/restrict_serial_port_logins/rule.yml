@@ -8,10 +8,18 @@ description: |-
     <pre>ttyS0
     ttyS1</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要限制串行端口上的 root 登录，请确保 <tt>/etc/securetty</tt> 中不出现以下形式的行：
+    <pre>ttyS0
+    ttyS1</pre>
+
 rationale: |-
     Preventing direct root login to serial port interfaces
     helps ensure accountability for actions taken on the systems
     using the root account.
+
+    <p><strong>中文理由：</strong></p>
+    阻止直接通过串行端口接口进行 root 登录，有助于确保对使用 root 账户在系统上执行的操作进行问责。
 
 severity: medium
 

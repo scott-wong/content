@@ -8,6 +8,10 @@ description: |-
     algorithm for password hashing:
     <pre>crypt_style = {{{ xccdf_value("var_password_hashing_algorithm_pam") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    在 <tt>/etc/libuser.conf</tt> 的 <tt>[defaults]</tt> 部分添加或更正以下行，以确保系统使用 {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} 算法进行密码哈希：
+    <pre>crypt_style = {{{ xccdf_value("var_password_hashing_algorithm_pam") }}}</pre>
+
 rationale: |-
     Passwords need to be protected at all times, and encryption is the standard method for
     protecting passwords. If passwords are not encrypted, they can be plainly read
@@ -18,6 +22,9 @@ rationale: |-
     only encrypted representations of passwords. Additionally, the <tt>crypt_style</tt>
     configuration option in <tt>/etc/libuser.conf</tt> ensures the use of a strong hashing
     algorithm that makes password cracking attacks more difficult.
+
+    <p><strong>中文理由：</strong></p>
+    密码必须始终受到保护，加密是保护密码的标准方法。如果密码未加密，就可以明文读取并容易被泄露。使用弱算法加密的密码并不比明文保存更安全。<br /><br />此设置确保用户和组账户管理工具仅存储密码的加密表示。此外，<tt>/etc/libuser.conf</tt> 中的 <tt>crypt_style</tt> 配置选项可确保使用强哈希算法，使密码破解攻击更加困难。
 
 severity: medium
 

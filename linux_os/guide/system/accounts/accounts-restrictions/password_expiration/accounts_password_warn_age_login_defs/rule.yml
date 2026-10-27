@@ -10,9 +10,17 @@ description: |-
     <pre>PASS_WARN_AGE {{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}}</pre>
     The profile requirement is <tt>{{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要指定在密码到期前多少天向用户发出警告，请编辑文件 <tt>{{{ login_defs_path }}}</tt> 并添加或更正以下行：
+    <pre>PASS_WARN_AGE {{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}}</pre>
+    配置档要求为 <tt>{{{ xccdf_value("var_accounts_password_warn_age_login_defs") }}}</tt>。
+
 rationale: |-
     Setting the password warning age enables users to
     make the change at a practical time.
+
+    <p><strong>中文理由：</strong></p>
+    设置密码警告天数可使用户在合适的时间更改密码。
 
 severity: medium
 

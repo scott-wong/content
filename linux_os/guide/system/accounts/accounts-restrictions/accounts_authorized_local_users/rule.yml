@@ -16,11 +16,18 @@ description: |-
     To remove unauthorized system accounts, use the following command:
     <pre>$ sudo userdel <i>unauthorized_user</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    企业应用程序通常独占使用服务器或虚拟机。除默认操作系统用户外，只应存在已安装软件组和应用程序所需、并获授权的本地用户。可在 refine 值变量 <tt>var_accounts_authorized_local_users_regex</tt> 中自定义授权用户列表。用户列表使用 OVAL 正则表达式。请配置系统，使所有账户都被分配给活动系统账户、应用程序账户或用户账户。移除不支持经批准系统活动或允许普通用户执行管理级操作的账户。要移除未授权系统账户，请使用以下命令：
+    <pre>$ sudo userdel <i>unauthorized_user</i></pre>
+
 rationale: |-
     Accounts providing no operational purpose provide additional opportunities for
     system compromise. Unnecessary accounts include user accounts for individuals not
     requiring access to the system and application accounts for applications not installed
     on the system.
+
+    <p><strong>中文理由：</strong></p>
+    不承担任何运行用途的账户会为系统攻陷提供更多机会。不必要的账户包括不需要访问系统的个人用户账户，以及系统未安装的应用程序账户。
 
 severity: medium
 

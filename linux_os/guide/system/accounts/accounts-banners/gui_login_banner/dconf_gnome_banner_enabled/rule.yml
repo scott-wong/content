@@ -19,6 +19,16 @@ description: |-
     After the settings have been set, run <tt>dconf update</tt>.
     The banner text must also be set.
 
+    <p><strong>中文说明：</strong></p>
+    在默认图形环境中，可通过将 <tt>banner-message-enable</tt> 设置为 <tt>true</tt>，在 GNOME Display Manager 的登录屏幕上显示登录警告横幅。
+    <br /><br />
+    要启用，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或编辑 <tt>banner-message-enable</tt>。例如：
+    <pre>[org/gnome/login-screen]
+    banner-message-enable=true</pre>
+    添加设置后，请将锁定项添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt> 以防止用户修改。例如：
+    <pre>/org/gnome/login-screen/banner-message-enable</pre>
+    设置完成后，请运行 <tt>dconf update</tt>。还必须设置横幅文本。
+
 rationale: |-
     Display of a standardized and approved use notification before granting access to the operating system
     ensures privacy and security notification verbiage used is consistent with applicable federal laws,
@@ -26,6 +36,11 @@ rationale: |-
     <br /><br />
     For U.S. Government systems, system use notifications are required only for access via login interfaces
     with human users and are not required when such human interfaces do not exist.
+
+    <p><strong>中文理由：</strong></p>
+    在授予操作系统访问权限前显示标准化且经批准的使用通知，可确保所用的隐私和安全通知措辞符合适用的联邦法律、行政命令、指令、政策、法规、标准和指南。
+    <br /><br />
+    对于美国政府系统，系统使用通知仅在对人类用户的登录界面访问时需要；当此类人工界面不存在时不需要。
 
 severity: medium
 

@@ -10,9 +10,15 @@ description: |-
     parameter in the faillock configuration). It stores the failure records into per-user files in
     the tally directory.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_faillock.so</tt> 模块会在指定时间间隔内维护每个用户的失败身份验证尝试列表，并在连续失败身份验证次数超过配置数量时锁定账户（由 faillock 配置中的 <tt>deny</tt> 参数定义）。它会将失败记录存储到计数目录中的每用户文件中。
+
 rationale: |-
     Locking out user IDs after n unsuccessful consecutive login attempts mitigates brute
     force password attacks against your systems.
+
+    <p><strong>中文理由：</strong></p>
+    在连续 n 次登录失败后锁定用户 ID 可缓解针对系统的暴力密码攻击。
 
 severity: medium
 

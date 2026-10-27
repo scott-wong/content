@@ -11,10 +11,17 @@ description: |-
     or <tt>crl_offline</tt> like so:
     <pre>cert_policy = ca,signature,ocsp_on,crl_auto;</pre>
 
+    <p><strong>中文说明：</strong></p>
+    将基于 PKI 的身份验证配置为在无法通过网络远程获取撤销数据时使用本地撤销数据。将 <tt>/etc/pam_pkcs11/pam_pkcs11.conf</tt> 中的所有 <tt>cert_policy</tt> 行修改为包含 <tt>crl_auto</tt> 或 <tt>crl_offline</tt>，如下所示：
+    <pre>cert_policy = ca,signature,ocsp_on,crl_auto;</pre>
+
 rationale: |-
      Without configuring a local cache of revocation data, there is the
      potential to allow access to users who are no longer authorized
      (users with revoked certificates).
+
+     <p><strong>中文理由：</strong></p>
+     智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）提供并验证凭据。强制使用组织所用的智能卡驱动有助于防止用户使用未经授权的智能卡。
 
 severity: medium
 

@@ -12,12 +12,20 @@ description: |-
     Otherwise assign a UID greater than "{{{ uid_min }}}" that has not already been
     assigned.
 
+    <p><strong>中文说明：</strong></p>
+    如果除 root 外的任何账户的 UID 为 0，应调查此错误配置，并移除、锁定这些非 root 账户或更改其 UID。
+    <br />
+    如果账户与系统命令或应用程序关联，应将其 UID 更改为大于 "0" 且小于 "{{{ uid_min }}}" 的数值。否则，应分配一个大于 "{{{ uid_min }}}" 且尚未分配的 UID。
+
 rationale: |-
     An account has root authority if it has a UID of 0. Multiple accounts
     with a UID of 0 afford more opportunity for potential intruders to
     guess a password for a privileged account. Proper configuration of
     sudo is recommended to afford multiple system administrators
     access to root privileges in an accountable manner.
+
+    <p><strong>中文理由：</strong></p>
+    如果账户的 UID 为 0，则该账户具有 root 权限。多个 UID 为 0 的账户会使潜在入侵者有更多机会猜测特权账户的密码。建议正确配置 sudo，以可问责的方式为多名系统管理员提供 root 权限访问。
 
 severity: high
 

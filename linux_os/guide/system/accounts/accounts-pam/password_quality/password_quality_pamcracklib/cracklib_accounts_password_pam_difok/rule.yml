@@ -13,11 +13,18 @@ description: |-
     Make sure the <tt>difok</tt> parameter for the pam_cracklib module is
     configured to greater than or equal to <tt>{{{ xccdf_value("var_password_pam_difok") }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_cracklib</tt> 模块的 <tt>difok</tt> 参数控制密码更改期间使用的不同字符要求。更改字符数是指相对于当前密码中位置总数所需更改的数量。换句话说，两个密码中可以有相同字符，但相同字符的位置必须不同。
+    确保 <tt>pam_cracklib</tt> 模块的 <tt>difok</tt> 参数配置为大于或等于 <tt>{{{ xccdf_value("var_password_pam_difok") }}}</tt>。
+
 rationale: |-
     Requiring a minimum number of different characters during password changes
     ensures that newly changed passwords should not resemble previously
     compromised ones. Note that passwords which are changed on compromised
     systems will still be compromised, however.
+
+    <p><strong>中文理由：</strong></p>
+    在密码更改期间要求至少不同数量的字符，可确保新更改的密码不应与先前已泄露的密码相似。但请注意，在已失陷系统上更改的密码仍会被视为已泄露。
 
 severity: medium
 

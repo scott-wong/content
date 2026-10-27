@@ -3,9 +3,17 @@ documentation_complete: true
 
 title: 'Ensure All Groups on the System Have Unique Group Names'
 
-description: 'Change the group name or delete groups, so each has a unique name.'
+description: |-
+    Change the group name or delete groups, so each has a unique name.
 
-rationale: 'To assure accountability and prevent unauthenticated access, groups must be identified uniquely to prevent potential misuse and compromise of the system.'
+    <p><strong>中文说明：</strong></p>
+    更改组名或删除组，使每个组具有唯一的名称。
+
+rationale: |-
+    To assure accountability and prevent unauthenticated access, groups must be identified uniquely to prevent potential misuse and compromise of the system.
+
+    <p><strong>中文理由：</strong></p>
+    为确保问责并防止未通过身份验证的访问，必须唯一标识组，以防止系统被误用和攻陷。
 
 severity: medium
 

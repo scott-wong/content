@@ -28,11 +28,19 @@ description: |-
     <pre>session     {{{ control }}}    {{{ pam_lastlog }}} showfailed</pre>
     And make sure that the <tt>silent</tt> option is not set for this specific line.
 
+    <p><strong>中文说明：</strong></p>
+    要将系统配置为使用 <tt>pam_lastlog</tt> 向用户通知上次登录/访问，请添加或修正 <tt>{{{ pam_lastlog_path }}}</tt> 中的 <tt>pam_lastlog</tt> 设置，使其包含 <tt>showfailed</tt> 选项，例如：
+    <pre>session     {{{ control }}}    {{{ pam_lastlog }}} showfailed</pre>
+    并确保此特定行未设置 <tt>silent</tt> 选项。
+
 rationale: |-
     Users need to be aware of activity that occurs regarding their account. Providing users with
     information regarding the number of unsuccessful attempts that were made to login to their
     account allows the user to determine if any unauthorized activity has occurred and gives them
     an opportunity to notify administrators.
+
+    <p><strong>中文理由：</strong></p>
+    用户需要了解其账户发生的活动。向用户提供有关其账户登录失败尝试次数的信息，可使用户判断是否发生了未经授权的活动，并有机会通知管理员。
 
 severity: low
 

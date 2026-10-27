@@ -12,9 +12,15 @@ description: |-
     Add <tt>ucredit=-1</tt> after pam_cracklib.so to require use of an upper
     case character in passwords.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>pam_cracklib</tt> 模块的 <tt>ucredit=</tt> 参数控制密码中大写字母的使用要求。设置为负数时，任何密码都必须包含该数量的大写字母。设置为正数时，pam_cracklib 会为每个大写字母提供 +1 的额外长度额度。在 pam_cracklib.so 之后添加 <tt>ucredit=-1</tt>，以要求密码使用大写字母。
+
 rationale: |-
     Requiring a minimum number of uppercase characters makes password guessing
     attacks more difficult by ensuring a larger search space.
+
+    <p><strong>中文理由：</strong></p>
+    要求至少使用一定数量的大写字母可扩大搜索空间，从而使密码猜测攻击更加困难。
 
 severity: medium
 

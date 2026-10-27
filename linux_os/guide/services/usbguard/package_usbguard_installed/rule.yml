@@ -30,10 +30,44 @@ description: |-
     {{{ machineconfig_description_footer() | indent(4) }}}
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{% if product != "rhcos4" %}}
+    应安装 <tt>usbguard</tt> 软件包。
+    {{% else %}}
+    可使用以下清单安装 <tt>usbguard</tt> 软件包：
+    <pre>
+    ---
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+    metadata:
+      labels:
+        machineconfiguration.openshift.io/role: master
+      name: 75-master-usbguard-install
+    spec:
+      config:
+        ignition:
+          version: 3.1.0
+      extensions:
+        - usbguard
+    </pre>
+    <p>
+    这将在所有标记为 "master" 角色的节点上安装 <tt>usbguard</tt> 软件包。
+    </p>
+    <p>
+    请注意，需要对每个 <tt>MachineConfigPool</tt> 执行此操作。
+    </p>
+    <p>
+    有关如何使用 Machine Config Operator 配置节点的更多信息，请参阅 <a href="https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html">相关文档</a>。
+    </p>
+    {{% endif %}}
+
 rationale: |-
     <tt>usbguard</tt> is a software framework that helps to protect
     against rogue USB devices by implementing basic whitelisting/blacklisting
     capabilities based on USB device attributes.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>usbguard</tt> 是一种软件框架，通过基于 USB 设备属性实施基本白名单/黑名单能力，帮助防范恶意 USB 设备。
 
 severity: medium
 

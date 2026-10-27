@@ -11,7 +11,16 @@ description: |-
     In the file <tt>/etc/pam.d/common-password</tt>, make sure the parameters
     <tt>enforce_for_root</tt> is present.
 
-rationale: 'Preventing reuse of previous passwords helps ensure that a compromised password is not reused by a user.'
+    <p><strong>中文说明：</strong></p>
+    不允许 <tt>root</tt> 重复使用近期密码。可通过为 <tt>pam_pwhistory</tt> PAM 模块使用 <tt>enforce_for_root</tt> 选项来实现。
+    <br /><br />
+    在 <tt>/etc/pam.d/common-password</tt> 文件中，确保存在 <tt>enforce_for_root</tt> 参数。
+
+rationale: |-
+    Preventing reuse of previous passwords helps ensure that a compromised password is not reused by a user.
+
+    <p><strong>中文理由：</strong></p>
+    防止重复使用以前的密码有助于确保用户不会重复使用已泄露的密码。
 
 severity: medium
 

@@ -29,9 +29,30 @@ description: |-
     {{{ xccdf_value("var_password_pam_remember") }}}
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    不允许用户重复使用近期密码。可通过为 <tt>pam_pwhistory</tt> PAM 模块使用 <tt>remember</tt> 选项来实现。
+    <br/><br/>
+    {{% if product in ["ol7"] %}}
+    在 <tt>/etc/pam.d/system-auth</tt> 文件中，确保存在 <tt>remember</tt> 参数，并且其值等于或大于 {{{ xccdf_value("var_password_pam_remember") }}}
+    <br/><br/>
+    例如：
+    <pre>password {{{ xccdf_value("var_password_pam_remember_control_flag") }}} pam_pwhistory.so use_authtok remember={{{ xccdf_value("var_password_pam_remember") }}}</pre>
+    {{% else %}}
+    在具有较新版本 <tt>authselect</tt> 的系统上，可通过 authselect 功能启用 <tt>pam_pwhistory</tt> PAM 模块：
+    <pre>authselect enable-feature with-pwhistory</pre>
+    否则，应使用 authselect 自定义配置档启用。
+
+    较新系统还具有 <tt>{{{ pwhistory_path }}}</tt> 文件，用于设置 <tt>pam_pwhistory</tt> 模块选项。只要存在此文件，就应使用它。否则，可在 PAM 文件中设置 <tt>pam_pwhistory</tt> 模块选项。
+    <br/><br/>
+    <tt>remember</tt> 选项的值必须等于或大于 {{{ xccdf_value("var_password_pam_remember") }}}
+    {{% endif %}}
+
 rationale: |-
     Preventing reuse of previous passwords helps ensure that a compromised password is not
     reused by a user.
+
+    <p><strong>中文理由：</strong></p>
+    防止重复使用以前的密码有助于确保用户不会重复使用已泄露的密码。
 
 severity: medium
 

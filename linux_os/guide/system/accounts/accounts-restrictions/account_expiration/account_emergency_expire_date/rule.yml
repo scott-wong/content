@@ -17,12 +17,20 @@ description: |-
     configured to automatically terminate these types of accounts after a
     period of 72 hours.
 
+    <p><strong>中文说明：</strong></p>
+    应急账户是为应对需要快速激活账户的危机情况而建立的特权账户。如果需要应急账户，请将系统配置为在记录的时间段后终止这些账户。对于每个应急账户，请运行以下命令为其设置过期日期，并适当替换 <tt><i>ACCOUNT_NAME</i></tt> 和 <tt><i>YYYY-MM-DD</i></tt>：
+    <pre>$ sudo chage -E <i>YYYY-MM-DD ACCOUNT_NAME</i></pre>
+    <tt><i>YYYY-MM-DD</i></tt> 表示该账户的记录过期日期。对于美国政府系统，操作系统必须配置为在 72 小时后自动终止此类账户。
+
 rationale: |-
     If emergency user accounts remain active when no longer needed or for
     an excessive period, these accounts may be used to gain unauthorized access.
     To mitigate this risk, automated termination of all emergency accounts
     must be set upon account creation.
     <br />
+
+    <p><strong>中文理由：</strong></p>
+    使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。
 
 severity: medium
 

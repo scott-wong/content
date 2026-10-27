@@ -19,6 +19,17 @@ description: |-
 
     If <tt>Password expires</tt> or <tt>Account expires</tt> is set to anything other than <tt>never</tt>, this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    应急账户是为应对需要快速激活账户的危机情况而建立的特权账户。因此，应急账户激活可能绕过正常的账户授权流程。如果这些账户被自动禁用，紧急情况下的系统维护可能无法进行，从而对系统可用性产生不利影响。
+
+    使用以下命令检查应急管理员账户的密码或账户是否过期：
+
+    <pre># sudo chage -l [Emergency_Administrator]
+
+    Password expires:never</pre>
+
+    如果 <tt>Password expires</tt> 或 <tt>Account expires</tt> 设置为 <tt>never</tt> 以外的任何值，则判定为不符合项。
+
 
 rationale: |-
     Emergency accounts are different from infrequently used accounts (i.e.,
@@ -34,6 +45,9 @@ rationale: |-
     To address access requirements the SUSE operating system can be integrated
     with enterprise-level authentication/access mechanisms that meet or exceed
     access control policy requirements.
+
+    <p><strong>中文理由：</strong></p>
+    使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。
 
 severity: medium
 

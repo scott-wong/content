@@ -7,9 +7,15 @@ description: |-
     Enable the <tt>enforce_for_root</tt> setting in <tt>/etc/security/pwhistory.conf</tt>
     to require the <tt>root</tt> user to use a password that has not been used recently.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>enforce_for_root</tt> 选项会对 <tt>root</tt> 用户强制执行密码历史记录。请在 <tt>/etc/security/pwhistory.conf</tt> 中启用 <tt>enforce_for_root</tt> 设置，以要求 <tt>root</tt> 用户使用近期未使用过的密码。
+
 rationale: |-
     Requiring users not to reuse their passwords make it less likely that an attacker will be
     able to guess the password or use a compromised password.
+
+    <p><strong>中文理由：</strong></p>
+    要求用户不要重复使用密码，可降低攻击者猜中密码或使用已泄露密码的可能性。
 
 identifiers:
     cce@rhel8: CCE-86734-1

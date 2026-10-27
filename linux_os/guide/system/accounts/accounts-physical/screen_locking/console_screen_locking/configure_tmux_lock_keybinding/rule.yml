@@ -11,10 +11,19 @@ description: |-
     The console can now be locked with the following key combination:
     <pre>Ctrl+b Shift+x</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要为 <tt>tmux</tt> 终端复用器中的屏幕锁定设置键绑定，必须将 <tt>session-lock</tt> 命令绑定到某个键。请将以下行添加到 <tt>/etc/tmux.conf</tt>：
+    <pre>bind X lock-session</pre>。
+    现在可使用以下组合键锁定控制台：
+    <pre>Ctrl+b Shift+x</pre>
+
 rationale: |-
     The <tt>tmux</tt> package allows for a session lock to be implemented and configured.
     However, the session lock is implemented by an external command. The <tt>tmux</tt>
     default configuration does not contain an effective session lock.
+
+    <p><strong>中文理由：</strong></p>
+    与 <tt>bash</tt> 本身不同，<tt>tmux</tt> 终端复用器提供在无活动一段时间后锁定会话的机制。会话锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。
 
 severity: low
 

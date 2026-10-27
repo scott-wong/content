@@ -5,8 +5,14 @@ title: 'Account Lockouts Must Be Logged'
 description: |-
     PAM faillock locks an account due to excessive password failures, this event must be logged.
 
-rationale:
+    <p><strong>中文说明：</strong></p>
+    PAM faillock 因密码失败次数过多而锁定账户时，必须记录此事件。
+
+rationale: |-
     Without auditing of these events it may be harder or impossible to identify what an attacker did after an attack.
+
+    <p><strong>中文理由：</strong></p>
+    如果不审计这些事件，可能更难或无法确定攻击者在攻击后做了什么。
 
 severity: medium
 

@@ -12,9 +12,17 @@ description: |-
     Therefore, this rule will report a finding for home directories like <tt>/users</tt>,
     <tt>/tmp</tt> or <tt>/</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    为当前未分配主目录的所有交互式用户分配主目录。
+
+    此规则检查主目录是否正确定义在至少具有一个父文件夹的文件夹中，例如 "/home/user" 或 "/remote/users/user" 中的 "user"。因此，对于 <tt>/users</tt>、<tt>/tmp</tt> 或 <tt>/</tt> 等主目录，此规则将报告发现项。
+
 rationale: |-
     If local interactive users are not assigned a valid home directory, there is no
     place for the storage and control of files they should own.
+
+    <p><strong>中文理由：</strong></p>
+    如果未为本地交互式用户分配有效的主目录，则没有位置存储和控制其应拥有的文件。
 
 severity: medium
 

@@ -6,12 +6,19 @@ description: |-
     Configure the root account to enforce a {{{ xccdf_value("var_accounts_maximum_age_root") }}}-day maximum password lifetime restriction by running the following command:
     <pre>$ sudo chage -M {{{ xccdf_value("var_accounts_maximum_age_root") }}} root</pre>
 
+    <p><strong>中文说明：</strong></p>
+    配置 root 账户强制执行 {{{ xccdf_value("var_accounts_maximum_age_root") }}} 天的最长密码生存期限制：请运行以下命令：
+    <pre>$ sudo chage -M {{{ xccdf_value("var_accounts_maximum_age_root") }}} root</pre>
+
 rationale: |-
     Any password, no matter how complex, can eventually be cracked. Therefore,
     passwords need to be changed periodically. If the operating system does
     not limit the lifetime of passwords and force users to change their
     passwords, there is the risk that the operating system passwords could be
     compromised.
+
+    <p><strong>中文理由：</strong></p>
+    任何密码无论多么复杂，最终都可能被破解。因此需要定期更改密码。如果操作系统不限制密码生存期并强制用户更改密码，操作系统密码可能遭到泄露。
 
 severity: medium
 

@@ -11,6 +11,11 @@ description: |-
     creating using a method that forces a user to change their password upon
     their next login.
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 操作系统登录的临时密码必须要求立即更改为永久密码。
+
+    验证是否存在相应策略，确保创建用户时使用的方法强制用户在下次登录时更改密码。
+
 
 rationale: |-
     Without providing this capability, an account may be created without a
@@ -22,6 +27,9 @@ rationale: |-
     administrators to create temporary passwords for user accounts that allow
     the users to log on, yet force them to change the password once they have
     successfully authenticated.
+
+    <p><strong>中文理由：</strong></p>
+    这可防止具有物理访问权限的攻击者通过有效的故障排查配置轻易绕过机器安全，并在系统重启时获得 root 访问权限。
 
 severity: medium
 

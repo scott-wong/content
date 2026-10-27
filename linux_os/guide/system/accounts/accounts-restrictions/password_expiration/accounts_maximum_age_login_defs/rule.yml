@@ -9,6 +9,11 @@ description: |-
     <pre>PASS_MAX_DAYS {{{ xccdf_value("var_accounts_maximum_age_login_defs") }}}</pre>
     The profile requirement is <tt>{{{ xccdf_value("var_accounts_maximum_age_login_defs") }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要为新建账户指定密码最长使用期限，请编辑文件 <tt>{{{ login_defs_path }}}</tt> 并添加或更正以下行：
+    <pre>PASS_MAX_DAYS {{{ xccdf_value("var_accounts_maximum_age_login_defs") }}}</pre>
+    配置档要求为 <tt>{{{ xccdf_value("var_accounts_maximum_age_login_defs") }}}</tt>。
+
 rationale: |-
     Any password, no matter how complex, can eventually be cracked. Therefore, passwords
     need to be changed periodically. If the operating system does not limit the lifetime
@@ -19,6 +24,11 @@ rationale: |-
     periodically change their passwords. Requiring shorter password lifetimes
     increases the risk of users writing down the password in a convenient
     location subject to physical compromise.
+
+    <p><strong>中文理由：</strong></p>
+    任何密码无论多么复杂，最终都可能被破解。因此需要定期更改密码。如果操作系统不限制密码生存期并强制用户更改密码，操作系统密码可能遭到泄露。
+    <br /><br />
+    设置密码最长使用期限可确保用户定期更改密码。将密码生存期设置得过短会增加用户将密码记录在便于取用且可能遭受物理泄露的位置的风险。
 
 severity: medium
 
