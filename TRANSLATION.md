@@ -3,6 +3,9 @@
 本仓库是 [ComplianceAsCode/content](https://github.com/ComplianceAsCode/content)
 的社区简体中文本地化 fork。它不是上游官方译本。
 
+当前状态：2,566 个生产规则、5,132 个 Description/Rationale 字段已完成简体中文
+覆盖，并通过英文基线、代码块、非目标字段和 XHTML 完整性校验。
+
 ## 基线
 
 - 上游仓库：`ComplianceAsCode/content`
@@ -55,6 +58,15 @@ python3 utils/zh_cn_translation.py report \
 
 英文原文哈希基线保存在 `translations/zh-CN/baseline.tsv`。如果上游英文内容
 发生变化，校验会失败，必须重新审核中文后再更新基线。
+
+全产品构建通过 GitHub Actions 手动触发：
+
+```bash
+gh workflow run zh-cn-validation.yml --ref zh-cn
+```
+
+该工作流构建全部产品、运行单元测试、验证 Ubuntu 24.04 DataStream 中的中文
+Description/Rationale，并上传 DataStream 与校验摘要。
 
 ## 上游同步
 

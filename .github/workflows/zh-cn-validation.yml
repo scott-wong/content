@@ -1,0 +1,77 @@
+name: zh-CN Full Content Validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zh-cn-full-validation
+  cancel-in-progress: false
+
+jobs:
+  full-product-build:
+    name: Build All Products
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    container:
+      image: registry.fedoraproject.org/fedora:latest
+    steps:
+      - name: Install Dependencies
+        run: >-
+          dnf install -y cmake ninja-build openscap-utils python3-pip python3-devel
+          gcc-c++ ansible-lint libxslt ansible python3-setuptools jq
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v4
+      - name: Install Python Dependencies
+        run: pip install -r requirements-base.txt -r test-requirements.txt
+      - name: Configure
+        run: cmake -G Ninja ..
+        working-directory: ./build
+      - name: Build All Products
+        run: ninja -j$(nproc) all
+        working-directory: ./build
+      - name: Run Unit Tests
+        run: ctest -j$(nproc) --output-on-failure -E linkchecker
+        working-directory: ./build
+      - name: Verify Chinese DataStream Metadata
+        run: |
+          python3 - <<'PY'
+          import json
+          import xml.etree.ElementTree as ET
+
+          path = "build/ssg-ubuntu2404-ds.xml"
+          root = ET.parse(path).getroot()
+          namespace = "{http://checklists.nist.gov/xccdf/1.2}"
+          rules = list(root.iter(namespace + "Rule"))
+          descriptions = 0
+          rationales = 0
+          for rule in rules:
+              description = rule.find(namespace + "description")
+              rationale = rule.find(namespace + "rationale")
+              if description is not None and "中文说明" in "".join(description.itertext()):
+                  descriptions += 1
+              if rationale is not None and "中文理由" in "".join(rationale.itertext()):
+                  rationales += 1
+          summary = {
+              "product": "ubuntu2404",
+              "rules": len(rules),
+              "chinese_descriptions": descriptions,
+              "chinese_rationales": rationales,
+          }
+          with open("zh-cn-validation.json", "w", encoding="utf-8") as stream:
+              json.dump(summary, stream, ensure_ascii=False, indent=2)
+              stream.write("\n")
+          print(json.dumps(summary, ensure_ascii=False))
+          if not rules or not descriptions or not rationales:
+              raise SystemExit("Chinese metadata was not found in the Ubuntu DataStream")
+          PY
+      - name: Upload Validation Artifacts
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v4
+        with:
+          name: zh-cn-validation
+          retention-days: 30
+          path: |
+            build/ssg-ubuntu2404-ds.xml
+            zh-cn-validation.json
