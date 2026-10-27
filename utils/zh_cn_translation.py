@@ -90,6 +90,19 @@ def _find_closing_quote(text, start, quote):
     return None
 
 
+def _include_trailing_blank_lines(text, end):
+    while end < len(text):
+        line_end = text.find("\n", end)
+        if line_end == -1:
+            line_end = len(text)
+        else:
+            line_end += 1
+        if text[end:line_end].strip():
+            break
+        end = line_end
+    return end
+
+
 def _field_range(text, key):
     match = _find_key_line(text, key)
     value_start = match.start(1)
@@ -110,14 +123,14 @@ def _field_range(text, key):
             raise TranslationError("unterminated quoted scalar in {!r}".format(key))
         end_of_line = text.find("\n", quote_end)
         end = len(text) if end_of_line == -1 else end_of_line + 1
-        return line_start, end
+        return line_start, _include_trailing_blank_lines(text, end)
 
     if stripped.startswith(("|", ">")):
         content_start = line_end
     elif not stripped:
         content_start = line_end
     else:
-        return line_start, line_end
+        return line_start, _include_trailing_blank_lines(text, line_end)
 
     end = len(text)
     for offset, line in _iter_lines_with_offsets(text[content_start:]):
