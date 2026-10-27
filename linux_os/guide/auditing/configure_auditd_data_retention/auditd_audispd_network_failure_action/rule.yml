@@ -15,9 +15,17 @@ description: |-
     determined.
     This profile configures the <i>action</i> to be <tt>{{{ xccdf_value("var_audispd_network_failure_action") }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    配置操作系统在向远程系统发送审计记录出错时采取的操作。编辑文件 <tt>{{{ audisp_conf_path }}}/audisp-remote.conf</tt>。添加或修改以下行，并适当替换 <i>ACTION</i>：
+    <pre>network_failure_action = <i>ACTION</i></pre>
+    将该值设为 <tt>single</tt>，使系统切换到单用户模式以进行纠正。可接受的值还包括 <tt>syslog</tt> 和 <tt>halt</tt>。对于某些系统，可用性需求优先于记录所有操作的需求，应确定不同的设置。此配置档将 <i>action</i> 配置为 <tt>{{{ xccdf_value("var_audispd_network_failure_action") }}}</tt>。
+
 rationale: |-
     Taking appropriate action when there is an error sending audit records to a
     remote system will minimize the possibility of losing audit records.
+
+    <p><strong>中文理由：</strong></p>
+    在向远程系统发送审计记录出错时采取适当的操作，可将丢失审计记录的可能性降至最低。
 
 severity: medium
 

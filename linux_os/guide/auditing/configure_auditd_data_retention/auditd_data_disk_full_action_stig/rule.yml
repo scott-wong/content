@@ -15,9 +15,17 @@ description: |-
     determined. Details regarding all possible values for <i>ACTION</i> are described in the
     <tt>auditd.conf</tt> man page.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>auditd</tt> 服务可以配置为在磁盘空间不足但尚未完全耗尽时采取操作。编辑文件 <tt>/etc/audit/auditd.conf</tt>。添加或修改以下行，并适当替换 <i>ACTION</i>：
+    <pre>disk_full_action = <i>ACTION</i></pre>
+    将该值设为 <tt>single</tt>，使系统切换到单用户模式以进行纠正。可接受的值还包括 <tt>syslog</tt>、<tt>single</tt> 和 <tt>halt</tt>。对于某些系统，可用性需求优先于记录所有操作的需求，应确定不同的设置。有关 <i>ACTION</i> 所有可能值的详细信息，请参见 <tt>auditd.conf</tt> 手册页。
+
 rationale: |-
     Taking appropriate action in case of a filled audit storage volume will minimize
     the possibility of losing audit records.
+
+    <p><strong>中文理由：</strong></p>
+    在审计存储卷已满时采取适当的操作，可将丢失审计记录的可能性降至最低。
 
 severity: medium
 

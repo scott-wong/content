@@ -6,10 +6,16 @@ title: 'Record Events that Modify User/Group Information - /etc/security/opasswd
 description: |-
     {{{ describe_audit_rules_watch("/etc/security/opasswd", "audit_rules_usergroup_modification") }}}
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将监视 <tt>/etc/security/opasswd</tt> 且审计键为 <tt>audit_rules_usergroup_modification</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将相应规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+
 rationale: |-
     In addition to auditing new user and group accounts, these watches
     will alert the system administrator(s) to any modifications. Any unexpected
     users, groups, or modifications should be investigated for legitimacy.
+
+    <p><strong>中文理由：</strong></p>
+    除审计新用户和组账户外，这些监视项还会提醒系统管理员任何修改。任何意外用户、组或修改都应调查其合法性。
 
 severity: medium
 

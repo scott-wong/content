@@ -28,6 +28,28 @@ description: |-
     If both the "b32" and "b64" audit rules for "SUID" files are not defined, this is a finding.
     If both the "b32" and "b64" audit rules for "SGID" files are not defined, this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    验证系统在执行特权函数时是否生成审计记录。
+
+    如果 audit 使用 <tt>auditctl</tt> 工具加载规则，请运行以下命令：
+    <pre>$ sudo grep execve /etc/audit/audit.rules</pre>
+    如果 audit 使用 <tt>augenrules</tt> 工具加载规则，请运行以下命令：
+    <pre>$ sudo grep -r execve /etc/audit/rules.d</pre>
+
+    {{% if product in ["ol8"] %}}
+    <pre>-a always,exit -F arch=b32 -S execve -C uid!=euid -k setuid</pre>
+    <pre>-a always,exit -F arch=b64 -S execve -C uid!=euid -k setuid</pre>
+    <pre>-a always,exit -F arch=b32 -S execve -C gid!=egid -k setgid</pre>
+    <pre>-a always,exit -F arch=b64 -S execve -C gid!=egid -k setgid</pre>
+    {{% else %}}
+    <pre>-a always,exit -F arch=b32 -S execve -C uid!=euid -F euid=0 -k setuid</pre>
+    <pre>-a always,exit -F arch=b64 -S execve -C uid!=euid -F euid=0 -k setuid</pre>
+    <pre>-a always,exit -F arch=b32 -S execve -C gid!=egid -F egid=0 -k setgid</pre>
+    <pre>-a always,exit -F arch=b64 -S execve -C gid!=egid -F egid=0 -k setgid</pre>
+    {{% endif %}}
+
+    如果尚未为 SUID 文件同时定义 b32 和 b64 审计规则，则判定为不符合项。如果尚未为 SGID 文件同时定义 b32 和 b64 审计规则，则判定为不符合项。
+
 rationale: |-
     Misuse of privileged functions, either intentionally or unintentionally by
     authorized users, or by unauthorized external entities that have
@@ -35,6 +57,9 @@ rationale: |-
     and can have significant adverse impacts on organizations. Auditing the use
     of privileged functions is one way to detect such misuse and identify the
     risk from insider threats and the advanced persistent threat.
+
+    <p><strong>中文理由：</strong></p>
+    滥用特权函数，无论是授权用户有意或无意，还是已入侵信息系统账户的未经授权外部实体，都是严重且持续存在的问题，可能对组织造成重大不利影响。审计特权函数的使用是检测此类滥用并识别内部威胁和高级持续性威胁风险的一种方式。
 
 severity: medium
 

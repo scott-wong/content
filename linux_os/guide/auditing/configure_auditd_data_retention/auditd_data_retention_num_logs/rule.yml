@@ -11,10 +11,18 @@ description: |-
     Set the value to 5 for general-purpose systems.
     Note that values less than 2 result in no log rotation.
 
+    <p><strong>中文说明：</strong></p>
+    确定 <tt>auditd</tt> 在轮转日志时应保留多少日志文件。编辑文件 <tt>/etc/audit/auditd.conf</tt>。添加或修改以下行，并用 {{{ xccdf_value("var_auditd_num_logs") }}} 的正确值替换 <i>NUMLOGS</i>：
+    <pre>num_logs = <i>NUMLOGS</i></pre>
+    对于通用系统，请将该值设为 5。请注意，小于 2 的值不会导致日志轮转。
+
 rationale: |-
     The total storage for audit log files must be large enough to retain
     log information over the period required. This is a function of the maximum log
     file size and the number of logs retained.
+
+    <p><strong>中文理由：</strong></p>
+    审计日志文件的总存储空间必须足够大，以在所需期间内保留日志信息。这取决于最大日志文件大小和保留的日志数量。
 
 severity: medium
 

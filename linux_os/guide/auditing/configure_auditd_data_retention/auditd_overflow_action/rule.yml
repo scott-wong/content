@@ -13,10 +13,16 @@ description: |-
     To setup an overflow action edit <tt>{{{ auditd_conf_path }}}</tt>. Set <tt>overflow_action</tt>
     to one of the following values: <tt>syslog</tt>, <tt>single</tt>, <tt>halt</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    审计系统应设置在内部事件队列已满时采取的操作。要设置溢出操作，请编辑 <tt>{{{ auditd_conf_path }}}</tt>。将 <tt>overflow_action</tt> 设为以下值之一：<tt>syslog</tt>、<tt>single</tt>、<tt>halt</tt>。
+
 
 rationale: |-
     The audit system should have an action setup in the event the internal event queue becomes full
     so that no data is lost.
+
+    <p><strong>中文理由：</strong></p>
+    审计系统应设置内部事件队列已满时采取的操作，以确保不丢失任何数据。
 
 severity: medium
 

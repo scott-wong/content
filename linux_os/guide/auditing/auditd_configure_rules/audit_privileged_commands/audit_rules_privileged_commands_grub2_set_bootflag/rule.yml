@@ -5,6 +5,9 @@ title: 'Ensure auditd Collects Information on the Use of Privileged Commands - g
 description: |-
     {{{ describe_arpc("/usr/sbin/grub2-set-bootflag") }}}
 
+    <p><strong>中文说明：</strong></p>
+    审计系统至少应收集所有用户和 root 对特权命令 <tt>/usr/sbin/grub2-set-bootflag</tt> 的执行情况。如果 <tt>auditd</tt> 使用 <tt>augenrules</tt>（默认），请将记录该命令路径并使用 <tt>key=privileged</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件；如果使用 <tt>auditctl</tt>，请将规则添加到 <tt>/etc/audit/audit.rules</tt>。
+
 rationale: |-
     Misuse of privileged functions, either intentionally or unintentionally by
     authorized users, or by unauthorized external entities that have compromised system accounts,
@@ -16,6 +19,9 @@ rationale: |-
     which attempt to subvert their normal role of providing some necessary but
     limited capability. As such, motivation exists to monitor these programs for
     unusual activity.
+
+    <p><strong>中文理由：</strong></p>
+    无论是授权用户有意或无意滥用特权功能，还是已入侵系统账户的未授权外部实体滥用特权功能，都是严重且持续存在的风险，可能对组织造成重大不利影响。审计特权功能的使用是检测此类滥用并识别内部人员及高级持续性威胁风险的一种方法。<br /><br />特权程序容易受到权限提升攻击，此类攻击试图颠覆其提供某些必要但有限能力的正常职责。因此，有必要监控这些程序的异常活动。
 
 severity: medium
 

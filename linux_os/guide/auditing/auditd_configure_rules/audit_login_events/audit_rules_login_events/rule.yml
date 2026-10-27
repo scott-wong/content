@@ -21,9 +21,22 @@ description: |-
     -w {{{ xccdf_value("var_accounts_passwords_pam_faillock_dir") }}} -p wa -k logins
     -w /var/log/lastlog -p wa -k logins</pre>
 
+    <p><strong>中文说明：</strong></p>
+    审计系统已经收集所有用户和 root 的登录信息。如果 <tt>auditd</tt> 守护进程配置为在启动期间使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以监控对存储登录事件相关文件尝试进行的手动编辑：
+    <pre>-w /var/log/tallylog -p wa -k logins
+    -w {{{ xccdf_value("var_accounts_passwords_pam_faillock_dir") }}} -p wa -k logins
+    -w /var/log/lastlog -p wa -k logins</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在启动期间使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，以监控对存储登录事件相关文件尝试进行的手动编辑：
+    <pre>-w /var/log/tallylog -p wa -k logins
+    -w {{{ xccdf_value("var_accounts_passwords_pam_faillock_dir") }}} -p wa -k logins
+    -w /var/log/lastlog -p wa -k logins</pre>
+
 rationale: |-
     Manual editing of these files may indicate nefarious activity, such
     as an attacker attempting to remove evidence of an intrusion.
+
+    <p><strong>中文理由：</strong></p>
+    手动编辑这些文件可能表明存在恶意活动，例如攻击者试图删除入侵证据。
 
 severity: medium
 

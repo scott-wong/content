@@ -22,11 +22,21 @@ description: |-
     <tt>.rules</tt> file may contain an <tt>-e</tt> directive that would
     override it.
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以使 auditd 配置不可变：
+    <pre>-e 2</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，以使 auditd 配置不可变：
+    <pre>-e 2</pre>
+    使用此设置后，更改任何审计规则都需要重启。<tt>augenrules</tt> 和 <tt>auditctl</tt> 仅认可它们处理的最后一条 <tt>-e</tt> 指令，且 <tt>auditctl</tt> 拒绝加载 <tt>-e 2</tt> 之后的任何指令。因此，<tt>-e 2</tt> 行必须是文件的最后一条非注释行，且其他 <tt>.rules</tt> 文件不得包含会覆盖它的 <tt>-e</tt> 指令。
+
 rationale: |-
     Making the audit configuration immutable prevents accidental as
     well as malicious modification of the audit rules, although it may be
     problematic if legitimate changes are needed during system
     operation.
+
+    <p><strong>中文理由：</strong></p>
+    使审计配置不可变可以防止对审计规则的意外修改和恶意修改，尽管在系统运行期间需要合法更改时可能会造成困难。
 
 severity: medium
 

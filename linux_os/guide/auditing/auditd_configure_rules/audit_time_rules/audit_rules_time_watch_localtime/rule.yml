@@ -5,11 +5,17 @@ title: 'Record Attempts to Alter the localtime File'
 description: |-
     {{{ describe_audit_rules_watch("/etc/localtime", "audit_time_rules") }}}
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将监视 <tt>/etc/localtime</tt> 且审计键为 <tt>audit_time_rules</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将相应规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+
 rationale: |-
     Arbitrary changes to the system time can be used to obfuscate
     nefarious activities in log files, as well as to confuse network services that
     are highly dependent upon an accurate system time (such as sshd). All changes
     to the system time should be audited.
+
+    <p><strong>中文理由：</strong></p>
+    对系统时间的任意更改可用于混淆日志文件中的恶意活动，并可能干扰高度依赖准确系统时间的网络服务（例如 sshd）。应审计对系统时间的所有更改。
 
 severity: medium
 

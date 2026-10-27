@@ -15,6 +15,15 @@ description: |-
 
     {{{ describe_audit_rules_watch("/var/log/sudo.log", "maintenance") }}}
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 操作系统必须为特权活动、非本地维护、诊断会话及其他系统级访问生成审计记录。
+
+    验证操作系统是否审计非本地维护和诊断会话期间执行的活动。运行以下命令：
+    <pre>$ sudo auditctl -l | grep sudo.log
+    -w /var/log/sudo.log -p wa -k maintenance</pre>
+
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将监视 <tt>/var/log/sudo.log</tt> 且审计键为 <tt>maintenance</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将相应规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+
 rationale: |-
     If events associated with nonlocal administrative access or diagnostic
     sessions are not logged, a major tool for assessing and investigating
@@ -35,6 +44,9 @@ rationale: |-
     part of the system, for example, the software implementing "ping,"
     "ls," "ipconfig," or the hardware and software implementing the
     monitoring port of an Ethernet switch.
+
+    <p><strong>中文理由：</strong></p>
+    如果与非本地管理访问或诊断会话相关的事件未被记录，就会缺少用于评估和调查攻击的重要工具。本要求涉及组织信息系统中专门用于诊断和修复操作的维护工具相关的审计问题。非本地维护和诊断活动是指个人通过网络（外部网络，例如 Internet，或内部网络）进行通信所执行的活动。本地维护和诊断活动是指个人亲自位于信息系统或信息系统组件处且不通过网络连接通信所执行的活动。本要求适用于硬件/软件诊断测试设备或工具。本要求不涵盖可能支持信息系统维护但属于系统组成部分的硬件/软件组件，例如实现 "ping"、"ls"、"ipconfig" 的软件，或实现以太网交换机监控端口的硬件和软件。
 
 severity: medium
 

@@ -9,11 +9,17 @@ description: |-
     BLS (Boot Loader Specification) entries ('options' line) for the Linux
     operating system in <tt>/boot/loader/entries/*.conf</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    为确保所有进程（包括在审计守护进程之前启动的进程）都能被审计，请将参数 <tt>audit=1</tt> 添加到 <tt>/boot/loader/entries/*.conf</tt> 中 Linux 操作系统的所有 BLS（Boot Loader Specification）条目（<tt>options</tt> 行）。
+
 rationale: |-
     Each process on the system carries an "auditable" flag which indicates whether
     its activities can be audited. Although <tt>auditd</tt> takes care of enabling
     this for all processes which launch after it does, adding the kernel argument
     ensures it is set for every process during boot.
+
+    <p><strong>中文理由：</strong></p>
+    系统中的每个进程都带有 <tt>auditable</tt> 标志，用于指示其活动是否可被审计。尽管 <tt>auditd</tt> 会为在其之后启动的所有进程启用此标志，但添加内核参数可确保在引导期间为每个进程设置该标志。
 
 severity: medium
 

@@ -33,9 +33,31 @@ description: |-
     -a always,exit -F arch=b64 -S unlinkat -F auid>={{{ uid_min }}} -F auid!=-1 -k perm_mod</pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{% if product not in ["sle12", "sle15"] %}}
+    审计系统应收集所有用户和 root 对文件删除失败的尝试。如果 <tt>auditd</tt> 守护进程配置为在启动期间使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。
+
+    如果 <tt>auditd</tt> 守护进程配置为在启动期间使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+    <pre>-a always,exit -F arch=b32 -S unlinkat -F exit=-EACCES -F auid&gt;={{{ auid }}} -F auid!=unset -F key=unsuccessful-delete
+    -a always,exit -F arch=b32 -S unlinkat -F exit=-EPERM -F auid&gt;={{{ auid }}} -F auid!=unset -F key=unsuccessful-delete</pre>
+
+    如果系统为 64 位，还应添加以下行：
+    <pre>
+    -a always,exit -F arch=b64 -S unlinkat -F exit=-EACCES -F auid&gt;={{{ auid }}} -F auid!=unset -F key=unsuccessful-delete
+    -a always,exit -F arch=b64 -S unlinkat -F exit=-EPERM -F auid&gt;={{{ auid }}} -F auid!=unset -F key=unsuccessful-delete</pre>
+    {{% else %}}
+    操作系统必须为 <tt>unlinkat</tt> 系统调用的所有使用生成审计记录。如果未生成符合组织安全和任务需求的审计记录，将难以确定、关联和调查与事件相关的情况，或识别事件责任人。审计记录可由信息系统内的各种组件生成（例如模块或策略过滤器）。请将以下行添加或更新到 <tt>/etc/audit/rules.d/audit.rules</tt>，以配置操作系统为 <tt>unlinkat</tt> 系统调用的所有使用生成审计记录：
+    <pre>
+    -a always,exit -F arch=b32 -S unlinkat -F auid>={{{ uid_min }}} -F auid!=-1 -k perm_mod
+    -a always,exit -F arch=b64 -S unlinkat -F auid>={{{ uid_min }}} -F auid!=-1 -k perm_mod</pre>
+    {{% endif %}}
+
 rationale: |-
     Unsuccessful attempts to delete files could be an indicator of malicious activity on a system. Auditing
     these events could serve as evidence of potential system compromise.
+
+    <p><strong>中文理由：</strong></p>
+    尝试删除文件失败可能表明系统上存在恶意活动。审计这些事件可以作为系统可能已失陷的证据。
 
 severity: medium
 

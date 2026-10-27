@@ -13,6 +13,13 @@ description: |-
     setuid / setgid programs using the following command:
     <pre>$ sudo find <i>PARTITION</i> -xdev -perm /6000 -type f 2&gt;/dev/null</pre>
 
+    <p><strong>中文说明：</strong></p>
+    审计系统应收集所有用户对特权命令使用情况的信息。这些命令启用了 suid 或 sgid 位，在未使用 noexec 和 nosuid 选项挂载的本地块设备分区中尤其危险。因此，应首先使用以下命令识别这些分区：
+    <pre>findmnt -n -l -k -it $(awk '/nodev/ { print $2 }' /proc/filesystems | paste -sd,) | grep -Pv "noexec|nosuid"</pre>
+
+    对于前一个命令列出的所有分区，必须使用以下命令搜索 setuid/setgid 程序：
+    <pre>$ sudo find <i>PARTITION</i> -xdev -perm /6000 -type f 2&gt;/dev/null</pre>
+
 {{% if product in ["fedora", "rhel10"] %}}
     For each setuid / setgid program identified by the previous command, an audit rule must be
     present in the appropriate place using the following line structure, setting ARCH to either b32 for 32-bit
@@ -43,6 +50,9 @@ rationale: |-
     Privileged programs are subject to escalation-of-privilege attacks, which attempt to subvert
     their normal role of providing some necessary but limited capability. As such, motivation
     exists to monitor these programs for unusual activity.
+
+    <p><strong>中文理由：</strong></p>
+    无论是授权用户有意或无意滥用特权功能，还是已入侵系统账户的未授权外部实体滥用特权功能，都是严重且持续存在的风险，可能对组织造成重大不利影响。审计特权功能的使用是检测此类滥用并识别内部人员及高级持续性威胁风险的一种方法。<br /><br />特权程序容易受到权限提升攻击，此类攻击试图颠覆其提供某些必要但有限能力的正常职责。因此，有必要监控这些程序的异常活动。
 
 severity: medium
 

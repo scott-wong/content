@@ -23,8 +23,22 @@ description: |-
 
     Note: This rule uses a special set of Audit rules to comply with OSPP 4.2.1. You may reuse this rule in different profiles. If you decide to do so, it is recommended that you inspect contents of the file closely and make sure that they are aligned with your needs.
 
+    <p><strong>中文说明：</strong></p>
+    确保对文件创建成功的尝试进行审计。
+
+    以下规则按上述说明配置审计：
+    <pre>{{{ file_contents_audit_create_success |indent }}}</pre>
+
+    通过运行以下命令将新的 Audit 规则加载到内核：
+    <pre>augenrules --load</pre>
+
+    注意：此规则使用一组特殊的 Audit 规则，以符合 OSPP 4.2.1。可以在不同配置档中复用此规则。如果决定这样做，建议仔细检查文件内容，确保其符合需求。
+
 rationale: |-
     Auditing of successful attempts to create a file helps in investigation of actions which happened on the system.
+
+    <p><strong>中文理由：</strong></p>
+    审计成功创建文件的尝试有助于调查系统上发生的操作。
 
 severity: medium
 

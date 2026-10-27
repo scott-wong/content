@@ -18,6 +18,18 @@ description: |-
     system activity and records. Audit tools include custom queries and report
     generators
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 操作系统的审计工具必须配置正确的文件所有者，以防止未授权访问。
+
+    运行以下命令进行验证：
+    <pre>$ stat -c "%n %U" {{{ audit_binaries | join(" ")}}}
+    {{% for binary in audit_binaries %}}
+    {{{ binary }}} root
+    {{% endfor %}}
+    </pre>
+
+    查看和操作审计信息系统活动及记录需要审计工具。审计工具包括自定义查询和报告生成器。
+
 rationale: |-
     Protecting audit information also includes identifying and protecting the
     tools used to view and manipulate log data. Therefore, protecting audit
@@ -27,6 +39,11 @@ rationale: |-
     will leverage user permissions and roles identifying the user accessing the
     tools and the corresponding rights the user enjoys to make access decisions
     regarding the access to audit tools.
+
+    <p><strong>中文理由：</strong></p>
+    保护审计信息还包括识别并保护用于查看和操作日志数据的工具。因此，必须保护审计工具，以防止对审计信息进行未授权操作。
+
+    提供审计信息接口工具的操作系统会利用用户权限和角色来识别访问工具的用户及其拥有的相应权利，从而对审计工具的访问做出决策。
 
 severity: medium
 

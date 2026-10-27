@@ -21,8 +21,22 @@ description: |-
 
     Note: This rule uses a special set of Audit rules to comply with OSPP 4.2.1. You may reuse this rule in different profiles. If you decide to do so, it is recommended that you inspect contents of the file closely and make sure that they are aligned with your needs.
 
+    <p><strong>中文说明：</strong></p>
+    确保对文件删除失败的尝试进行审计。
+
+    以下规则按上述说明配置审计：
+    <pre>{{{ file_contents_audit_delete_failed|indent }}}</pre>
+
+    通过运行以下命令将新的 Audit 规则加载到内核：
+    <pre>augenrules --load</pre>
+
+    注意：此规则使用一组特殊的 Audit 规则，以符合 OSPP 4.2.1。可以在不同配置档中复用此规则。如果决定这样做，建议仔细检查文件内容，确保其符合需求。
+
 rationale: |-
     Unsuccessful attempts to delete a file might be signs of malicious activities. Auditing of such events help in monitoring and investigating of such activities.
+
+    <p><strong>中文理由：</strong></p>
+    未成功删除文件的尝试可能是恶意活动的迹象。审计此类事件有助于监控和调查此类活动。
 
 severity: medium
 

@@ -8,9 +8,15 @@ description: |-
     events to disk, set <tt>log_format</tt> to <tt>ENRICHED</tt>
     in <tt>/etc/audit/auditd.conf</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要将 Audit 守护进程配置为在将事件写入磁盘前解析所有 uid、gid、系统调用、体系结构和套接字地址信息，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>log_format</tt> 设为 <tt>ENRICHED</tt>。
+
 rationale: |-
     If option <tt>log_format</tt> isn't set to <tt>ENRICHED</tt>, the
     audit records will be stored in a format exactly as the kernel sends them.
+
+    <p><strong>中文理由：</strong></p>
+    如果选项 <tt>log_format</tt> 未设为 <tt>ENRICHED</tt>，审计记录将完全按照内核发送的格式存储。
 
 severity: low
 

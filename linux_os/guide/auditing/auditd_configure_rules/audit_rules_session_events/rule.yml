@@ -20,9 +20,22 @@ description: |-
     -w /var/log/btmp -p wa -k session
     -w /var/log/wtmp -p wa -k session</pre>
 
+    <p><strong>中文说明：</strong></p>
+    审计系统已为所有用户和 root 收集进程信息。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以监视对存储此类进程信息相关文件的尝试手动编辑：
+    <pre>-w /var/run/utmp -p wa -k session
+    -w /var/log/btmp -p wa -k session
+    -w /var/log/wtmp -p wa -k session</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，以监视对存储此类进程信息相关文件的尝试手动编辑：
+    <pre>-w /var/run/utmp -p wa -k session
+    -w /var/log/btmp -p wa -k session
+    -w /var/log/wtmp -p wa -k session</pre>
+
 rationale: |-
     Manual editing of these files may indicate nefarious activity, such
     as an attacker attempting to remove evidence of an intrusion.
+
+    <p><strong>中文理由：</strong></p>
+    手动编辑这些文件可能表明恶意活动，例如攻击者试图删除入侵证据。
 
 severity: medium
 

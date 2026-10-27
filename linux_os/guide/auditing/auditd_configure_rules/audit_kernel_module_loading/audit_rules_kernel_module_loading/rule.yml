@@ -17,10 +17,23 @@ description: |-
     If the <tt>auditd</tt> daemon is configured to use the <tt>auditctl</tt> utility,
     add the lines to file <tt>/etc/audit/audit.rules</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要捕获内核模块加载和卸载事件，请使用以下行，并将 ARCH 设置为 b32（32 位系统），或在 64 位系统中同时提供 b32 和 b64 两行：
+    <pre>
+    -a always,exit -F arch=<i>ARCH</i> -S init_module,finit_module,delete_module {{% if 'ol' in families or 'rhel' in product %}}-F auid>=1000 -F auid!=unset {{% endif %}}-F key=modules
+    </pre>
+
+    添加这些行的位置取决于 <tt>auditd</tt> 守护进程的配置方式。如果配置为使用 <tt>augenrules</tt> 程序（默认），请将这些行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。
+
+    如果 <tt>auditd</tt> 守护进程配置为使用 <tt>auditctl</tt> 工具，请将这些行添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+
 rationale: |-
     The addition/removal of kernel modules can be used to alter the behavior of
     the kernel and potentially introduce malicious code into kernel space. It is important
     to have an audit trail of modules that have been introduced into the kernel.
+
+    <p><strong>中文理由：</strong></p>
+    添加或移除内核模块可用于改变内核行为，并可能将恶意代码引入内核空间。必须保留已引入内核的模块的审计轨迹。
 
 severity: medium
 

@@ -7,9 +7,15 @@ description: |-
     <tt>local_events</tt> to <tt>yes</tt> in <tt>/etc/audit/auditd.conf</tt>.
     This is the default setting.
 
+    <p><strong>中文说明：</strong></p>
+    要将 Audit 守护进程配置为在 Audit 日志中包含本地事件，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>local_events</tt> 设为 <tt>yes</tt>。这是默认设置。
+
 rationale: |-
     If option <tt>local_events</tt> isn't set to <tt>yes</tt> only events from
     network will be aggregated.
+
+    <p><strong>中文理由：</strong></p>
+    如果选项 <tt>local_events</tt> 未设为 <tt>yes</tt>，则只会汇总来自网络的事件。
 
 severity: medium
 

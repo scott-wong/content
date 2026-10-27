@@ -6,6 +6,9 @@ title: 'Configure audispd Plugin To Send Logs To Remote Server'
 description: |-
     Configure the audispd plugin to off-load audit records onto a different
     system or media from the system being audited.
+
+    <p><strong>中文说明：</strong></p>
+    配置 audispd 插件，将审计记录卸载到与被审计系统不同的系统或介质。
 {{% if 'ubuntu' in product %}}
     First, set the <tt>active</tt> option in
     <pre>/etc/audisp/plugins.d/au-remote.conf</pre>
@@ -19,6 +22,9 @@ rationale: |-
     Information stored in one location is vulnerable to accidental or incidental
     deletion or alteration.Off-loading is a common process in information systems
     with limited audit storage capacity.
+
+    <p><strong>中文理由：</strong></p>
+    存储在一个位置的信息容易遭受意外或附带删除或更改。卸载是审计存储容量有限的信息系统中的常见过程。
 
 severity: medium
 

@@ -11,9 +11,17 @@ description: |-
     Set this value to {{{ xccdf_value("var_auditd_admin_space_left_percentage") }}}
     to cause the system to perform an action.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>auditd</tt> 服务可以配置为在磁盘空间不足但尚未完全耗尽时采取操作。编辑文件 <tt>/etc/audit/auditd.conf</tt>。添加或修改以下行，并适当替换 <i>PERCENTAGE</i>：
+    <pre>admin_space_left = <i>PERCENTAGE</i>%</pre>
+    将该值设为 {{{ xccdf_value("var_auditd_admin_space_left_percentage") }}}，使系统执行操作。
+
 rationale: |-
     Notifying administrators of an impending disk space problem may allow them to
     take corrective action prior to any disruption.
+
+    <p><strong>中文理由：</strong></p>
+    通知管理员磁盘空间即将出现问题，可使他们在发生任何中断之前采取纠正措施。
 
 severity: medium
 

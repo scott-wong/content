@@ -17,11 +17,28 @@ description: |-
 
     <pre>$ sudo augenrules --load</pre>
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 必须审计由 cron 以 root 或任何特权用户身份调用的任何脚本或可执行文件。
+
+    将以下审计规则添加或更新到 "/etc/audit/rules.d/audit.rules"：
+
+    <pre>-a always,exit -F arch=b64 -S execve -F subj_type=crond_t -F euid=0 -k cron_exec</pre>
+    <pre>-a always,exit -F arch=b32 -S execve -F subj_type=crond_t -F euid=0 -k cron_exec</pre>
+    <pre>-a always,exit -F arch=b64 -S execve -F subj_type=crond_t -F auid&gt;={{{ uid_min }}} -F auid!=unset -k cron_exec</pre>
+    <pre>-a always,exit -F arch=b32 -S execve -F subj_type=crond_t -F auid&gt;={{{ uid_min }}} -F auid!=unset -k cron_exec</pre>
+
+    要立即将规则加载到内核，请使用以下命令：
+
+    <pre>$ sudo augenrules --load</pre>
+
 rationale: |-
     Any script or executable called by cron as root or by any privileged user
     must be owned by that user. It must also have the permissions 755 or more
     restrictive and should have no extended rights that allow any nonprivileged
     user to modify the script or executable.
+
+    <p><strong>中文理由：</strong></p>
+    由 cron 以 root 或任何特权用户身份调用的任何脚本或可执行文件都必须归该用户所有。它还必须具有 755 或更严格的权限，并且不应具有允许任何非特权用户修改该脚本或可执行文件的扩展权限。
 
 severity: medium
 

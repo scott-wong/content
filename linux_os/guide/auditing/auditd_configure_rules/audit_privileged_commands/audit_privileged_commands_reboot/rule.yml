@@ -11,8 +11,14 @@ title: 'Ensure auditd Collects Information on the Use of Privileged Commands - r
 description: |-
     {{{ describe_arpc(path + "/reboot") }}}
 
-rationale:
+    <p><strong>中文说明：</strong></p>
+    审计系统至少应收集所有用户和 root 对特权命令 <tt>{{{ path }}}/reboot</tt> 的执行情况。应根据 <tt>auditd</tt> 的配置，将包含该命令路径和 <tt>key=privileged</tt> 的审计规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件，或添加到 <tt>/etc/audit/audit.rules</tt>。
+
+rationale: |-
     Misuse of the reboot command may cause availability issues for the system.
+
+    <p><strong>中文理由：</strong></p>
+    滥用 reboot 命令可能导致系统可用性问题。
 
 severity: medium
 

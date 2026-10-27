@@ -7,6 +7,9 @@ description: |-
     Configure the operating system to audit the execution of the partition
     management program "fdisk".
 
+    <p><strong>中文说明：</strong></p>
+    将操作系统配置为审计分区管理程序 <tt>fdisk</tt> 的执行。
+
 rationale: |-
     Without generating audit records that are specific to the security
     and mission needs of the organization, it would be difficult to
@@ -14,6 +17,9 @@ rationale: |-
     incident or identify those responsible for one.
     Audit records can be generated from various components within the
     information system (e.g., module or policy filter).
+
+    <p><strong>中文理由：</strong></p>
+    如果未生成符合组织安全和任务需求的审计记录，将难以确定、关联和调查与事件相关的情况，或识别事件责任人。审计记录可由信息系统内的各种组件生成（例如模块或策略过滤器）。
 
 severity: medium
 

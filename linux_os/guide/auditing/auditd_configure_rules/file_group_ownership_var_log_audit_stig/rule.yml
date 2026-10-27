@@ -30,9 +30,33 @@ description: |-
     of existing files:
     <pre>$ sudo systemctl kill auditd -s SIGHUP</pre>
 
+    <p><strong>中文说明：</strong></p>
+    所有审计日志的所属组必须为 root 用户。
+
+    使用以下命令确定审计日志的存储位置：
+    <pre>$ sudo grep -iw log_file /etc/audit/auditd.conf
+    log_file = /var/log/audit/audit.log</pre>
+
+    使用包含审计日志的目录路径，通过以下命令确定审计日志文件是否由 "root" 组所有：
+    <pre>$ sudo stat -c "%n %G" /var/log/audit/*
+    /var/log/audit/audit.log root</pre>
+    如果审计日志文件由 "root" 以外的组所有，则判定为不符合项。
+
+    要修复该问题，请将审计日志目录及其底层文件的所属组配置为 "root"。
+
+    将审计配置文件的 "log_group" 参数设置为 "root"，以便创建新日志文件时正确设置其所属组：
+    <pre>$ sudo sed -i '/^log_group/D' /etc/audit/auditd.conf
+    $ sudo sed -i /^log_file/a'log_group = root' /etc/audit/auditd.conf</pre>
+
+    最后，通知审计守护进程重新加载配置文件，以更新现有文件的所属组：
+    <pre>$ sudo systemctl kill auditd -s SIGHUP</pre>
+
 rationale: |-
     Unauthorized disclosure of audit records can reveal system and configuration data to
     attackers, thus compromising its confidentiality.
+
+    <p><strong>中文理由：</strong></p>
+    未经授权披露审计记录可能向攻击者泄露系统和配置数据，从而损害其机密性。
 
 severity: medium
 

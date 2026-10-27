@@ -32,7 +32,32 @@ description: |-
     <pre>$ sudo chmod 0700 audit_log_directory</pre>
     Replace <tt><i>audit_log_directory</i></tt> with the correct audit log directory path.
 
-rationale: 'If users can write to audit logs, audit trails can be modified or destroyed.'
+    <p><strong>中文说明：</strong></p>
+    首先使用以下命令确定审计日志的存储位置，以验证审计日志目录的权限模式是否为 "0750" 或更严格：
+    <pre>$ sudo grep -iw log_file /etc/audit/auditd.conf
+    log_file = /var/log/audit/audit.log</pre>
+    默认情况下，审计日志目录为 <tt>/var/log/audit</tt>。
+    <br />
+    通过设置正确的权限模式，保护审计日志目录免受未经授权的读取访问。
+    <br />
+    适当的目录权限取决于 <tt>/etc/audit/auditd.conf</tt> 中的 <tt>log_group</tt> 设置：
+    <br />
+    <ul>
+    <li>如果 <tt>log_group</tt> 设置为 <tt>root</tt> 或未设置，目录模式应为 <tt>0700</tt>。这仅允许 root 访问，是最安全的配置。</li>
+    <li>如果 <tt>log_group</tt> 设置为 <tt>root</tt> 以外的组，目录模式应为 <tt>0750</tt>。这是必要的，因为当 <tt>log_group</tt> 设置为非 root 组时，审计日志文件通常配置为模式 <tt>0640</tt>（允许组读取访问）。组成员要访问这些文件，需要对目录具有执行权限才能遍历该目录。<tt>0750</tt> 模式允许 root 完全访问、指定组读取和执行访问，同时阻止其他用户访问该目录。</li>
+    </ul>
+    <br />
+    如果 <tt>log_group</tt> 设置为 <tt>root</tt> 以外的组，请使用以下命令更改审计日志目录的模式：
+    <pre>$ sudo chmod 0750 audit_log_directory</pre>
+    否则，请使用以下命令更改审计日志目录的模式：
+    <pre>$ sudo chmod 0700 audit_log_directory</pre>
+    将 <tt><i>audit_log_directory</i></tt> 替换为正确的审计日志目录路径。
+
+rationale: |-
+    If users can write to audit logs, audit trails can be modified or destroyed.
+
+    <p><strong>中文理由：</strong></p>
+    如果用户可以写入审计日志，则审计追踪可能被修改或销毁。
 
 severity: medium
 

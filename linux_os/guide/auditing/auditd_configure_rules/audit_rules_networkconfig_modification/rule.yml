@@ -38,10 +38,34 @@ description: |-
     -w /etc/sysconfig/network -p wa -k audit_rules_networkconfig_modification</pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：
+    <pre>-a always,exit -F arch=ARCH -S sethostname,setdomainname -F key=audit_rules_networkconfig_modification
+    -w /etc/issue -p wa -k audit_rules_networkconfig_modification
+    -w /etc/issue.net -p wa -k audit_rules_networkconfig_modification
+    -w /etc/hosts -p wa -k audit_rules_networkconfig_modification
+    {{% if product in ['ubuntu2404'] %}}
+    -w /etc/netplan/ -p wa -k audit_rules_networkconfig_modification
+    {{% endif %}}
+    {{% if 'ubuntu' in product or 'debian' in product -%}}
+    -w /etc/networks -p wa -k audit_rules_networkconfig_modification
+    -w /etc/network/ -p wa -k audit_rules_networkconfig_modification</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：
+    <pre>-a always,exit -F arch=ARCH -S sethostname,setdomainname -F key=audit_rules_networkconfig_modification
+    -w /etc/issue -p wa -k audit_rules_networkconfig_modification
+    -w /etc/issue.net -p wa -k audit_rules_networkconfig_modification
+    -w /etc/hosts -p wa -k audit_rules_networkconfig_modification
+    {{% if 'ubuntu' in product or 'debian' in product -%}}
+    -w /etc/networks -p wa -k audit_rules_networkconfig_modification
+    -w /etc/network/ -p wa -k audit_rules_networkconfig_modification</pre>
+
 rationale: |-
     The network environment should not be modified by anything other
     than administrator action. Any change to network parameters should be
     audited.
+
+    <p><strong>中文理由：</strong></p>
+    网络环境不应由管理员操作以外的任何内容修改。网络参数的任何更改都应被审计。
 
 severity: medium
 

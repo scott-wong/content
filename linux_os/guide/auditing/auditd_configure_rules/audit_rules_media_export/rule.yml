@@ -18,11 +18,20 @@ description: |-
     system is 64-bit:
     <pre>-a always,exit -F arch=ARCH -S mount -F auid&gt;={{{ auid }}} -F auid!=unset -F key=export</pre>
 
+    <p><strong>中文说明：</strong></p>
+    至少，审计系统应收集所有用户和 root 的介质导出事件。如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：
+    <pre>-a always,exit -F arch=ARCH -S mount -F auid&gt;={{{ auid }}} -F auid!=unset -F key=export</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：
+    <pre>-a always,exit -F arch=ARCH -S mount -F auid&gt;={{{ auid }}} -F auid!=unset -F key=export</pre>
+
 rationale: |-
     The unauthorized exportation of data to external media could result in an information leak
     where classified information, Privacy Act information, and intellectual property could be lost. An audit
     trail should be created each time a filesystem is mounted to help identify and guard against information
     loss.
+
+    <p><strong>中文理由：</strong></p>
+    未经授权将数据导出到外部介质可能导致信息泄露，造成机密信息、隐私法案信息和知识产权丢失。每次挂载文件系统时都应创建审计跟踪，以帮助识别和防范信息丢失。
 
 severity: medium
 

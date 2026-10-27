@@ -27,8 +27,20 @@ description: |-
     Load new Audit rules into kernel by running:
     <pre>augenrules --load</pre>
 
+    <p><strong>中文说明：</strong></p>
+    执行 Audit 系统的基本配置。确保清除所有先前定义的规则，审计系统配置为处理事件的突发峰值，并且在发生故障时将消息定向到系统日志。
+
+    以下规则按上述说明配置审计：
+    <pre>{{{ file_contents_audit_base_config|indent }}}</pre>
+
+    通过运行以下命令将新的 Audit 规则加载到内核：
+    <pre>augenrules --load</pre>
+
 rationale: |-
     Without basic configurations, audit may not perform as expected. It may not be able to correctly handle events under stressful conditions, or log events in case of failure.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有基本配置，审计可能无法按预期工作。它可能无法在压力条件下正确处理事件，或在发生故障时记录事件。
 
 severity: medium
 

@@ -11,11 +11,18 @@ description: |-
     Restart the <tt>auditd</tt> service to apply configuration changes:
     <pre>$ sudo service auditd restart</pre>
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>audispd</tt> 审计事件多路复用器的 <tt>audisp-remote</tt> 插件使用的类型正确。检查 <tt>{{{ audisp_conf_path }}}/plugins.d/au-remote.conf</tt> 中的 <tt>type</tt> 指令是否为 <tt>always</tt>。重启 <tt>auditd</tt> 服务以应用配置更改：
+    <pre>$ sudo service auditd restart</pre>
+
 rationale: |-
     The auditd service does not include the ability to send audit
     records to a centralized server for management directly. It does, however,
     include a plug-in for audit event multiplexor (audispd) to pass audit records
     to a remote server.
+
+    <p><strong>中文理由：</strong></p>
+    auditd 服务本身不具备将审计记录直接发送到集中管理服务器的能力。不过，它包含审计事件多路复用器（audispd）插件，可将审计记录传递给远程服务器。
 
 severity: medium
 

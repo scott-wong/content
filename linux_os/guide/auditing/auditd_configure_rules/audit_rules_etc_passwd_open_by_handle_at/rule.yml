@@ -17,9 +17,21 @@ description: |-
     If the system is 64 bit then also add the following line:
     <pre>-a always,exit -F arch=b64 -S open_by_handle_at -F a2&amp;03 -F path=/etc/passwd -F auid>={{{ auid }}} -F auid!=unset -F key=modify</pre>
 
+    <p><strong>中文说明：</strong></p>
+    审计系统应收集所有用户和 root 对 <tt>/etc/passwd</tt> 文件的写入事件。
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+    <pre>-a always,exit -F arch=b32 -S open_by_handle_at -F a2&amp;03 -F path=/etc/passwd -F auid>={{{ auid }}} -F auid!=unset -F key=modify</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件：
+    <pre>-a always,exit -F arch=b32 -S open_by_handle_at -F a2&amp;03 -F path=/etc/passwd -F auid>={{{ auid }}} -F auid!=unset -F key=modify</pre>
+    如果系统为 64 位，则还应添加以下行：
+    <pre>-a always,exit -F arch=b64 -S open_by_handle_at -F a2&amp;03 -F path=/etc/passwd -F auid>={{{ auid }}} -F auid!=unset -F key=modify</pre>
+
 rationale: |-
     Creation of users through direct edition of /etc/passwd could be an indicator of malicious activity on a system.
     Auditing these events could serve as evidence of potential system compromise.
+
+    <p><strong>中文理由：</strong></p>
+    通过直接编辑 <tt>/etc/passwd</tt> 创建用户可能是系统上恶意活动的迹象。审计这些事件可作为潜在系统失陷的证据。
 
 severity: medium
 

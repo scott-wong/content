@@ -12,10 +12,18 @@ description: |-
     Larger values, of course,
     support retention of even more audit data.
 
+    <p><strong>中文说明：</strong></p>
+    确定每个日志文件中应保留的审计数据量（以 MB 为单位）。编辑文件 <tt>/etc/audit/auditd.conf</tt>。添加或修改以下行，并用 {{{ xccdf_value("var_auditd_max_log_file") }}} 的正确值替换 <i>STOREMB</i>：
+    <pre>max_log_file = <i>STOREMB</i></pre>
+    对于通用系统，请将该值设为 <tt>6</tt>（MB）或更高。较大的值当然可以支持保留更多审计数据。
+
 rationale: |-
     The total storage for audit log files must be large enough to retain
     log information over the period required. This is a function of the maximum
     log file size and the number of logs retained.
+
+    <p><strong>中文理由：</strong></p>
+    审计日志文件的总存储空间必须足够大，以在所需期间内保留日志信息。这取决于最大日志文件大小和保留的日志数量。
 
 severity: medium
 

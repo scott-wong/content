@@ -14,6 +14,12 @@ description: |-
     bottom of the <tt>/etc/audit/audit.rules</tt> file:
     <pre>-f {{{ xccdf_value("var_audit_failure_mode") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件末尾：
+    <pre>-f {{{ xccdf_value("var_audit_failure_mode") }}}</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件末尾：
+    <pre>-f {{{ xccdf_value("var_audit_failure_mode") }}}</pre>
+
 rationale: |-
     It is critical for the appropriate personnel to be aware if a system
     is at risk of failing to process audit logs as required. Without this
@@ -23,6 +29,9 @@ rationale: |-
     Audit processing failures include software/hardware errors, failures in the
     audit capturing mechanisms, and audit storage capacity being reached or
     exceeded.
+
+    <p><strong>中文理由：</strong></p>
+    相关人员必须了解系统是否面临无法按要求处理审计日志的风险。如果没有此类通知，安全人员可能无法察觉审计能力即将发生故障，系统运行可能受到不利影响。<br /><br />审计处理故障包括软件/硬件错误、审计捕获机制故障以及审计存储容量达到或超过上限。
 
 severity: medium
 

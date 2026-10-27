@@ -6,6 +6,10 @@ description: |-
     All audit configuration files must be owned by group root.
     <pre>chown :root /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</pre>
 
+    <p><strong>中文说明：</strong></p>
+    所有审计配置文件的所属组必须为 root。
+    <pre>chown :root /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</pre>
+
 rationale: |-
     Without the capability to restrict which roles and individuals can
     select which events are audited, unauthorized personnel may be able
@@ -14,6 +18,9 @@ rationale: |-
     overwhelming the audit log. Misconfigured audits may also make it more
     difficult to establish, correlate, and investigate the events relating
     to an incident or identify those responsible for one.
+
+    <p><strong>中文理由：</strong></p>
+    如果无法限制哪些角色和个人可以选择要审计的事件，未经授权人员可能阻止对关键事件的审计。配置错误的审计可能因审计日志过载而降低系统性能。配置错误的审计还可能使建立、关联和调查与事件相关的事件或确定责任人变得更加困难。
 
 severity: medium
 

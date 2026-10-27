@@ -7,10 +7,26 @@ description: |-
     Note that monitoring /var/lib/selinux/ will generate a significant burst of audit events
     during both selinux-policy* package upgrade and policy rebuild.
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请根据构建配置中的 <tt>audit_watches_style</tt> 将以下任一种形式的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+
+    现代形式：
+    <tt>-a always,exit -F arch=b32 -F dir=/var/lib/selinux/ -F perm=wa -F key=MAC-policy</tt>
+    <tt>-a always,exit -F arch=b64 -F dir=/var/lib/selinux/ -F perm=wa -F key=MAC-policy</tt>
+
+    传统形式：
+    <tt>-w /var/lib/selinux/ -p wa -k MAC-policy</tt>
+
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将同样的规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+    注意，监控 <tt>/var/lib/selinux/</tt> 会在 selinux-policy* 软件包升级和策略重建期间产生大量审计事件。
+
 rationale: |-
     The system's mandatory access policy (SELinux) should not be
     arbitrarily changed by anything other than administrator action. All changes to
     MAC policy should be audited.
+
+    <p><strong>中文理由：</strong></p>
+    系统的强制访问策略（SELinux）不应由管理员操作以外的任何内容任意更改。MAC 策略的所有更改都应被审计。
 
 severity: medium
 

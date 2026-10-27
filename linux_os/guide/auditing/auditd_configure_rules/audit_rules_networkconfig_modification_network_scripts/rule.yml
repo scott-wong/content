@@ -5,10 +5,25 @@ title: 'Record Events that Modify the System''s Network Environment - /etc/sysco
 description: |-
     {{{ describe_audit_rules_watch("/etc/sysconfig/network-scripts", "system-locale") }}}
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请根据构建配置中的 <tt>audit_watches_style</tt> 将以下任一种形式的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+
+    现代形式：
+    <tt>-a always,exit -F arch=b32 -F path=/etc/sysconfig/network-scripts -F perm=wa -F key=system-locale</tt>
+    <tt>-a always,exit -F arch=b64 -F path=/etc/sysconfig/network-scripts -F perm=wa -F key=system-locale</tt>
+
+    传统形式：
+    <tt>-w /etc/sysconfig/network-scripts -p wa -k system-locale</tt>
+
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将同样的规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+
 rationale: |-
     The network environment should not be modified by anything other
     than administrator action. Any change to network parameters should be
     audited.
+
+    <p><strong>中文理由：</strong></p>
+    网络环境不应由管理员操作以外的任何内容修改。网络参数的任何更改都应被审计。
 
 severity: medium
 

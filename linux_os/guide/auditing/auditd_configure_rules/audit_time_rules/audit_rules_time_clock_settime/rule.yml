@@ -22,11 +22,26 @@ description: |-
     desired, but is not required. See an example of multiple combined syscalls:
     <pre>-a always,exit -F arch=b64 -S adjtimex,settimeofday -F key=audit_time_rules</pre>
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+    <pre>-a always,exit -F arch=b32 -S clock_settime -F a0=0x0 -F key=time-change</pre>
+    如果系统为 64 位，则还应添加以下行：
+    <pre>-a always,exit -F arch=b64 -S clock_settime -F a0=0x0 -F key=time-change</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件：
+    <pre>-a always,exit -F arch=b32 -S clock_settime -F a0=0x0 -F key=time-change</pre>
+    如果系统为 64 位，则还应添加以下行：
+    <pre>-a always,exit -F arch=b64 -S clock_settime -F a0=0x0 -F key=time-change</pre>
+    <tt>-k</tt> 选项允许以字符串形式指定键，以便通过 <tt>ausearch</tt> 和 <tt>aureport</tt> 获得更好的报告能力。如需节省空间，可在同一行定义多个系统调用，但并非必需。多个组合系统调用示例如下：
+    <pre>-a always,exit -F arch=b64 -S adjtimex,settimeofday -F key=audit_time_rules</pre>
+
 rationale: |-
     Arbitrary changes to the system time can be used to obfuscate
     nefarious activities in log files, as well as to confuse network services that
     are highly dependent upon an accurate system time (such as sshd). All changes
     to the system time should be audited.
+
+    <p><strong>中文理由：</strong></p>
+    对系统时间的任意更改可用于混淆日志文件中的恶意活动，并可能干扰高度依赖准确系统时间的网络服务（例如 sshd）。应审计对系统时间的所有更改。
 
 severity: medium
 

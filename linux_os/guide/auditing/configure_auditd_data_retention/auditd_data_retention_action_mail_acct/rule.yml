@@ -9,9 +9,16 @@ description: |-
     via email for those situations:
     <pre>action_mail_acct = {{{ xccdf_value("var_auditd_action_mail_acct") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>auditd</tt> 服务可以配置为在特定情况下向指定账户发送电子邮件。在 <tt>/etc/audit/auditd.conf</tt> 中添加或更正以下行，以确保管理员在这些情况下通过电子邮件收到通知：
+    <pre>action_mail_acct = {{{ xccdf_value("var_auditd_action_mail_acct") }}}</pre>
+
 rationale: |-
     Email sent to the root account is typically aliased to the
     administrators of the system, who can take appropriate action.
+
+    <p><strong>中文理由：</strong></p>
+    发送到 root 账户的电子邮件通常会转发给系统管理员，以便他们采取适当的操作。
 
 severity: medium
 

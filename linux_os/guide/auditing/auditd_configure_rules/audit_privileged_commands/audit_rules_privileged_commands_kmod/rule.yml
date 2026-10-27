@@ -5,6 +5,9 @@ title: 'Ensure auditd Collects Information on the Use of Privileged Commands - k
 description: |-
     {{{ describe_arpc("/usr/bin/kmod") }}}
 
+    <p><strong>中文说明：</strong></p>
+    审计系统至少应收集所有用户和 root 对特权命令 <tt>/usr/bin/kmod</tt> 的执行情况。如果 <tt>auditd</tt> 使用 <tt>augenrules</tt>（默认），请将记录该命令路径并使用 <tt>key=privileged</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件；如果使用 <tt>auditctl</tt>，请将规则添加到 <tt>/etc/audit/audit.rules</tt>。
+
 rationale: |-
     Without generating audit records that are specific to the security and
     mission needs of the organization, it would be difficult to establish,
@@ -13,6 +16,9 @@ rationale: |-
 
     Audit records can be generated from various components within the
     information system (e.g., module or policy filter).
+
+    <p><strong>中文理由：</strong></p>
+    如果未生成符合组织安全和任务需求的审计记录，将难以确定、关联和调查与事件相关的情况，或识别事件责任人。审计记录可由信息系统内的各种组件生成（例如模块或策略过滤器）。
 
 severity: medium
 

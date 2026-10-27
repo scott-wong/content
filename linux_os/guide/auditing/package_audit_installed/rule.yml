@@ -2,9 +2,17 @@ documentation_complete: true
 
 title: 'Ensure the audit Subsystem is Installed'
 
-description: 'The audit package should be installed.'
+description: |-
+    The audit package should be installed.
 
-rationale: 'The auditd service is an access monitoring and accounting daemon, watching system calls to audit any access, in comparison with potential local access control policy such as SELinux policy.'
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>audit</tt> 软件包。
+
+rationale: |-
+    The auditd service is an access monitoring and accounting daemon, watching system calls to audit any access, in comparison with potential local access control policy such as SELinux policy.
+
+    <p><strong>中文理由：</strong></p>
+    auditd 服务是一种访问监控和记账守护进程，会监视系统调用，以便对照 SELinux 策略等潜在的本地访问控制策略来审计任何访问。
 
 severity: medium
 

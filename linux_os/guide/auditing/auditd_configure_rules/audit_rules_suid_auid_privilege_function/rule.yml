@@ -19,6 +19,17 @@ description: |-
 
     If both the "b32" and "b64" audit rules for "SUID" files are not defined, this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    验证当操作以其他用户身份运行时系统是否会生成审计记录。sudo 为用户提供临时提升的权限，使其可作为超级用户或其他用户执行操作。
+
+    如果 audit 使用 <tt>auditctl</tt> 工具加载规则，请运行以下命令：
+    <pre>$ sudo grep execve /etc/audit/audit.rules</pre>
+    如果 audit 使用 <tt>augenrules</tt> 工具加载规则，请运行以下命令：
+    <pre>$ sudo grep -r execve /etc/audit/rules.d</pre>
+    <pre>-a always,exit -F arch=b32 -S execve -C euid!=uid -F auid!=unset -k user_emulation</pre>
+    <pre>-a always,exit -F arch=b64  S execve -C euid!=uid -F auid!=unset -k user_emulation</pre>
+    如果尚未为 SUID 文件同时定义 b32 和 b64 审计规则，则判定为不符合项。
+
 rationale: |-
     Creating an audit log of users with temporary elevated privileges and the
     operation(s) they performed is essential to reporting. Administrators will
@@ -31,6 +42,9 @@ rationale: |-
     and can have significant adverse impacts on organizations. Auditing the use
     of privileged functions is one way to detect such misuse and identify the
     risk from insider threats and the advanced persistent threat.
+
+    <p><strong>中文理由：</strong></p>
+    创建记录临时提升权限用户及其执行操作的审计日志，对于报告至关重要。管理员会希望将写入审计追踪的事件与写入 sudo 日志文件的记录相关联，以验证是否执行了未经授权的命令。滥用特权函数，无论是授权用户有意或无意，还是已入侵信息系统账户的未经授权外部实体，都是严重且持续存在的问题，可能对组织造成重大不利影响。审计特权函数的使用是检测此类滥用并识别内部威胁和高级持续性威胁风险的一种方式。
 
 severity: medium
 

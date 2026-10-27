@@ -28,10 +28,29 @@ description: |-
     <pre>$ sudo df -h /var/log/audit/
     /dev/sda2 24G 10.4G 13.6G 43% /var/log/audit</pre>
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 操作系统必须在审计记录未立即发送到中央审计记录存储设施时，分配至少可存储一周审计记录的容量。
+
+    捕获一周审计记录所需的分区大小取决于系统活动水平和可用存储总容量。
+    {{% if product not in ['ubuntu2204', 'ubuntu2404'] %}}
+    正常情况下，10.0 GB 的审计记录存储空间足够使用。
+    {{% endif %}}
+
+    使用以下命令确定审计记录写入哪个分区：
+    <pre>$ sudo grep log_file /etc/audit/auditd.conf
+    log_file = /var/log/audit/audit.log</pre>
+
+    使用以下命令检查写入审计记录的分区大小：
+    <pre>$ sudo df -h /var/log/audit/
+    /dev/sda2 24G 10.4G 13.6G 43% /var/log/audit</pre>
+
 rationale: |-
     Information stored in one location is vulnerable to accidental or incidental
     deletion or alteration. Off-loading is a common process in information
     systems with limited audit storage capacity.
+
+    <p><strong>中文理由：</strong></p>
+    存储在一个位置的信息容易遭受意外或附带删除或更改。卸载是审计存储容量有限的信息系统中的常见过程。
 
 severity: medium
 

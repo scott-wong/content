@@ -11,7 +11,19 @@ description: |-
     if the audit log files have a mode of "600" or less by using the following command:
     <pre>$ sudo stat -c "%n %a" /var/log/audit/*</pre>
 
-rationale: 'If users can write to audit logs, audit trails can be modified or destroyed.'
+    <p><strong>中文说明：</strong></p>
+    使用以下命令确定审计日志的存储位置：
+    <pre>$ sudo grep -iw log_file /etc/audit/auditd.conf
+    log_file = /var/log/audit/audit.log</pre>
+
+    使用包含审计日志的目录路径，通过以下命令确定审计日志文件的权限模式是否为 "600" 或更严格：
+    <pre>$ sudo stat -c "%n %a" /var/log/audit/*</pre>
+
+rationale: |-
+    If users can write to audit logs, audit trails can be modified or destroyed.
+
+    <p><strong>中文理由：</strong></p>
+    如果用户可以写入审计日志，则审计追踪可能被修改或销毁。
 
 severity: medium
 
