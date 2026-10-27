@@ -9,7 +9,14 @@ description: |-
     or modification of the file.
     {{{ describe_file_owner(file=grub2_uefi_boot_path ~ "/grub.cfg", owner="root") }}}
 
-rationale: 'Only root should be able to modify important boot parameters.'
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>{{{ grub2_uefi_boot_path }}}/grub.cfg</tt> 的文件所有者应为 <tt>root</tt>，以防止文件被破坏或修改。
+
+rationale: |-
+    Only root should be able to modify important boot parameters.
+
+    <p><strong>中文理由：</strong></p>
+    只有 root 才应能够修改重要启动参数。
 
 severity: medium
 

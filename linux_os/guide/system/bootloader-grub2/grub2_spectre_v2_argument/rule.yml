@@ -16,9 +16,22 @@ description: |-
     GRUB 2 command line for the Linux operating system.
     {{{ describe_grub2_argument("spectre_v2=on") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    Spectre V2 是一种间接分支投毒攻击，可导致数据泄露。Spectre V2 漏洞利用会诱骗间接分支预测器执行攻击者所选未来间接分支中的代码，即使权限级别不同。
+
+    自 Linux 内核 4.15 起，可使用以下命令检查 Spectre V2 缓解状态：
+    <tt>cat /sys/devices/system/cpu/vulnerabilities/spectre_v2</tt>
+
+    请通过将参数 <tt>spectre_v2=on</tt> 添加到 Linux 操作系统的默认 GRUB 2 命令行来强制执行 Spectre V2 缓解措施。
+
+    为确保新安装的内核将 <tt>spectre_v2=on</tt> 作为内核命令行参数，请按产品要求将 <tt>spectre_v2=on</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+
 rationale: |-
     The Spectre V2 vulnerability allows an attacker to read memory that he should not have
     access to.
+
+    <p><strong>中文理由：</strong></p>
+    Spectre V2 漏洞允许攻击者读取其不应访问的内存。
 
 severity: high
 

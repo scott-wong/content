@@ -10,10 +10,18 @@ description: |-
     <pre>$ModLoad imudp
     $UDPServerRun 514</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>rsyslog</tt> 守护进程不应接受远程消息，除非系统充当日志服务器。如果系统需要充当集中式日志服务器，请将以下行添加到 <tt>/etc/rsyslog.conf</tt>，以启用通过 UDP 接收消息：
+    <pre>$ModLoad imudp
+    $UDPServerRun 514</pre>
+
 rationale: |-
     Many devices, such as switches, routers, and other Unix-like systems, may only support
     the traditional syslog transmission over UDP. If the system must act as a log server,
     this enables it to receive their messages as well.
+
+    <p><strong>中文理由：</strong></p>
+    交换机、路由器和其他类 Unix 系统等许多设备可能仅支持通过 UDP 进行传统 syslog 传输。如果系统必须充当日志服务器，这可使其也能接收这些设备的消息。
 
 severity: unknown
 

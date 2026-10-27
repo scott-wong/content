@@ -10,12 +10,22 @@ description: |-
     </pre>
     If any output returned is not owned by "root", this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    验证 "journalctl" 命令的文件所属组为 "root"，使用以下命令：
+    <pre>
+    $ sudo find /usr/bin/journalctl -exec stat -c "%n %G" {} \;
+    </pre>
+    如果返回的任何输出显示文件所属组不是 "root"，则构成发现项。
+
 rationale: |-
     Only authorized personnel should be aware of errors and the details of the errors.
     Error messages are an indicator of an organization's operational state or can
     identify the operating system or platform. Additionally, personally identifiable
     information (PII) and operational information must not be revealed through error
     messages to unauthorized personnel or their designated representatives.
+
+    <p><strong>中文理由：</strong></p>
+    只有经过授权的人员才应了解错误及其详细信息。错误消息可表明组织的运行状态，也可能标识操作系统或平台。此外，不得通过错误消息向未授权人员或其指定代表泄露个人身份信息（PII）和运行信息。
 
 severity: medium
 

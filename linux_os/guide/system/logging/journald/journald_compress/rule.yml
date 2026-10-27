@@ -5,10 +5,14 @@ title: Ensure journald is configured to compress large log files
 description: |-
     The journald system can compress large log files to avoid fill the system disk.
 
-rationale:
-    Log files that are not properly compressed run the risk of growing so large
-    that they fill up the log partition. Valuable logging information could be lost
-    if the log partition becomes full.
+    <p><strong>中文说明：</strong></p>
+    journald 系统可以压缩大型日志文件，以避免填满系统磁盘。
+
+rationale: |-
+    Log files that are not properly compressed run the risk of growing so large that they fill up the log partition. Valuable logging information could be lost if the log partition becomes full.
+
+    <p><strong>中文理由：</strong></p>
+    未正确压缩的日志文件可能增长到填满日志分区。如果日志分区已满，宝贵的日志信息可能丢失。
 
 severity: medium
 

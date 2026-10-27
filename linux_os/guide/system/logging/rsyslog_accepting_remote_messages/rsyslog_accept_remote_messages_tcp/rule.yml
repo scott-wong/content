@@ -10,9 +10,17 @@ description: |-
     <pre>$ModLoad imtcp
     $InputTCPServerRun 514</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>rsyslog</tt> 守护进程不应接受远程消息，除非系统充当日志服务器。如果系统需要充当集中式日志服务器，请将以下行添加到 <tt>/etc/rsyslog.conf</tt>，以启用通过 TCP 接收消息：
+    <pre>$ModLoad imtcp
+    $InputTCPServerRun 514</pre>
+
 rationale: |-
     If the system needs to act as a log server, this ensures that it can receive
     messages over a reliable TCP connection.
+
+    <p><strong>中文理由：</strong></p>
+    如果系统需要充当日志服务器，这可确保其能够通过可靠的 TCP 连接接收消息。
 
 severity: unknown
 

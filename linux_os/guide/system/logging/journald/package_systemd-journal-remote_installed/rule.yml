@@ -8,10 +8,16 @@ description: |-
     log events it gathers to a remote log host or to receive messages
     from remote hosts, thus enabling centralised log management.
 
+    <p><strong>中文说明：</strong></p>
+    Journald（通过 systemd-journal-remote）支持将其收集的日志事件发送到远程日志主机，或从远程主机接收消息，从而实现集中式日志管理。
+
 rationale: |-
     Storing log data on a remote host protects log integrity from local
     attacks. If an attacker gains root access on the local system, they
     could tamper with or remove log data that is stored on the local system.
+
+    <p><strong>中文理由：</strong></p>
+    将日志数据存储在远程主机上可保护日志完整性，防止本地攻击。如果攻击者在本地系统上获得 root 访问权限，他们可能篡改或删除存储在本地系统上的日志数据。
 
 severity: medium
 

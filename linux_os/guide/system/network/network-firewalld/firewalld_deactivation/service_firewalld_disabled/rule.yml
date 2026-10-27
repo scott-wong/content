@@ -11,9 +11,15 @@ description: |-
     permanent configuration options.
     {{{ describe_service_disable(service="firewalld") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用并停止 <tt>firewalld</tt> 服务。
+
 rationale: |-
     Running Firewalld along other service with the same functionality may lead to conflict
     and unexpected results.
+
+    <p><strong>中文理由：</strong></p>
+    将 Firewalld 与其他具有相同功能的服务一起运行可能导致冲突和意外结果。
 
 severity: medium
 

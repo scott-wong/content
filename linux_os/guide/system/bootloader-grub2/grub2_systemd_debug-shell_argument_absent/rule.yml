@@ -17,11 +17,22 @@ description: |-
 
     {{{ describe_grub2_argument_absent("systemd.debug-shell")  | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    systemd 的 <tt>debug-shell</tt> 服务用于通过各种 <tt>systemctl</tt> 命令诊断与 systemd 相关的启动问题。启用并重启系统后，root shell 将在 <tt>tty9</tt> 上可用，可通过按 <tt>CTRL-ALT-F9</tt> 访问。该服务只应用于 systemd 相关问题，其他情况下应禁用。<br /><br />
+    默认情况下，<tt>debug-shell</tt> systemd 服务已禁用。
+
+    确保未通过 <tt>systemd.debug-shel=1</tt> 启动参数选项启用 debug-shell。
+
+    检查 <tt>/etc/default/grub</tt> 中的 <tt>GRUB_CMDLINE_LINUX="..."</tt> 行不包含 <tt>systemd.debug-shell</tt>。要更新已安装内核的命令行，请运行 <tt>grubby --update-kernel=ALL --remove-args="systemd.debug-shell"</tt>。如果系统作为可引导容器镜像分发，请从 <tt>/usr/lib/bootc/kargs.d</tt> 中的所有文件移除 <tt>systemd.debug-shell</tt>。
+
 
 rationale: |-
     This prevents attackers with physical access from trivially bypassing security
     on the machine through valid troubleshooting configurations and gaining root
     access when the system is rebooted.
+
+    <p><strong>中文理由：</strong></p>
+    这可以防止具有物理访问权限的攻击者利用有效的故障排查配置轻易绕过机器安全措施，并在系统重启后获得 root 访问权限。
 
 severity: medium
 

@@ -7,8 +7,16 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_SECURITY", "y") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    此选项允许选择将不同的安全模块配置到内核中。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_SECURITY</tt> 的配置值，请运行 <tt>grep CONFIG_SECURITY /boot/config-*</tt>。对于每个已安装的内核，应返回值为 <tt>y</tt> 的行。
+
 rationale: |-
     This is enables kernel security primitives required by the LSM framework.
+
+    <p><strong>中文理由：</strong></p>
+    这启用了 LSM 框架所需的内核安全原语。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

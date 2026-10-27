@@ -10,8 +10,17 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_COMPAT_VDSO", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    某些有缺陷的 glibc 版本（2.3.3）在遇到未映射到其段表中指定地址的 32 位 vDSO 时会崩溃。将 <tt>CONFIG_COMPAT_VDSO</tt> 设置为 <tt>y</tt> 会关闭 32 位 VDSO，并绕过该 glibc 缺陷。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_COMPAT_VDSO</tt> 的配置值，请运行：
+    <tt>grep CONFIG_COMPAT_VDSO /boot/config-*</tt>
+    值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或没有行。
+
 rationale: |-
     Enabling VDSO compatibility hurts performance and disables ASLR.
+
+    <p><strong>中文理由：</strong></p>
+    启用 VDSO 兼容性会损害性能并禁用 ASLR。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

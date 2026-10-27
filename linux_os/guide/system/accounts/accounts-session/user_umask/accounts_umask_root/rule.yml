@@ -8,10 +8,17 @@ description: |-
     or <tt>/root/.profile</tt> to read as follows:
     <pre>umask 0027</pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保 root 用户的 Bash shell umask 设置正确，请在 <tt>/root/.bashrc</tt> 或 <tt>/root/.profile</tt> 中添加或修正 <tt>umask</tt> 设置，使其如下所示：
+    <pre>umask 0027</pre>
+
 rationale: |-
     The umask value influences the permissions assigned to files when they are created.
     A misconfigured umask value could result in files with excessive permissions that can be read or
     written to by unauthorized users.
+
+    <p><strong>中文理由：</strong></p>
+    umask 值会影响创建文件时分配的权限。配置错误的 umask 值可能导致文件权限过多，使未授权用户能够读取或写入这些文件。
 
 severity: medium
 

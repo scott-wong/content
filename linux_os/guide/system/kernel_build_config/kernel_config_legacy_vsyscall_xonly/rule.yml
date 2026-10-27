@@ -10,8 +10,16 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_LEGACY_VSYSCALL_XONLY", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    内核会捕获并模拟进入固定 vsyscall 地址映射的调用，且不允许读取。此配置从 Linux 5.3 起可用。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_LEGACY_VSYSCALL_XONLY</tt> 的配置值，请运行 <tt>grep CONFIG_LEGACY_VSYSCALL_XONLY /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。
+
 rationale: |-
     Disabling this mitigates certain uses of the vsyscall area as an ASLR-bypassing buffer.
+
+    <p><strong>中文理由：</strong></p>
+    禁用此功能可缓解将 vsyscall 区域用作绕过 ASLR 的缓冲区的一些用法。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

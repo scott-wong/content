@@ -11,9 +11,15 @@ description: |-
     permanent configuration options.
     {{{ describe_package_remove(package="firewalld") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应移除 <tt>firewalld</tt> 软件包。
+
 rationale: |-
     Running both <b>nftables.service</b> and <b>firewalld.service</b> may lead to conflict and
     unexpected results.
+
+    <p><strong>中文理由：</strong></p>
+    同时运行 <b>nftables.service</b> 和 <b>firewalld.service</b> 可能导致冲突和意外结果。
 
 severity: medium
 

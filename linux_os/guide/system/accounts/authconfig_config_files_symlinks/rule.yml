@@ -13,10 +13,16 @@ description: |-
     files and not overwrite them, while writing its own settings to the original configuration
     files.
 
+    <p><strong>中文说明：</strong></p>
+    必须将 {{{ full_name }}} 配置为防止 authconfig 工具覆盖自定义身份验证配置设置。可通过创建新的本地配置文件，并创建新的或移动现有符号链接到这些文件来避免此问题。authconfig 工具将识别本地配置文件而不覆盖它们，同时将其自身设置写入原始配置文件。
+
 rationale: |-
     When using the authconfig utility to modify authentication configuration settings,
     the "system-auth" and "password-auth" files and any custom settings that they may
     contain are overwritten.
+
+    <p><strong>中文理由：</strong></p>
+    使用 authconfig 工具修改身份验证配置设置时，会覆盖 system-auth 和 password-auth 文件以及其中可能包含的任何自定义设置。
 
 severity: medium
 

@@ -14,8 +14,18 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_GCC_PLUGIN_STRUCTLEAK", "y") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    尽管内核在构建时会对任何遗漏的栈变量初始化启用警告，但对于通过引用传递给另一个函数的任何内容，该警告会被静默，因为偶尔会错误地假定该函数会完成初始化。由于这经常导致可利用缺陷，此插件可根据所选覆盖级别识别并零初始化此类变量。
+    此配置从内核 4.11 开始可用，但如果发行版回移该功能，也可能可用。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_GCC_PLUGIN_STRUCTLEAK</tt> 的配置值，请运行：
+    <tt>grep CONFIG_GCC_PLUGIN_STRUCTLEAK /boot/config-*</tt>
+    对于每个已安装内核，应返回一行包含值“y”的配置。
+
 rationale: |-
     Initializing structures from userspace can prevent some classes of information exposure.
+
+    <p><strong>中文理由：</strong></p>
+    初始化来自用户空间的结构体可以防止某些类型的信息泄露。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

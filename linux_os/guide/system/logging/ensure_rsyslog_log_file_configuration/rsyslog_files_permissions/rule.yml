@@ -14,10 +14,19 @@ description: |-
     command to correct this:
     <pre>$ sudo chmod 640 <i>LOGFILE</i></pre>"
 
+    <p><strong>中文说明：</strong></p>
+    <tt>rsyslog</tt> 写入的所有日志文件的文件权限应设置为 640 或更严格。这些日志文件由 <tt>/etc/rsyslog.conf</tt> 中每条 Rule 行的第二部分确定，通常都位于 <tt>/var/log</tt>。对于 <tt>/etc/rsyslog.conf</tt> 中引用的每个日志文件 <i>LOGFILE</i>，请运行以下命令检查其权限：
+    <pre>$ ls -l <i>LOGFILE</i></pre>
+    如果权限不是 640 或更严格，请运行以下命令进行更正：
+    <pre>$ sudo chmod 640 <i>LOGFILE</i></pre>
+
 rationale: |-
     Log files can contain valuable information regarding system
     configuration. If the system log files are not protected unauthorized
     users could change the logged data, eliminating their forensic value.
+
+    <p><strong>中文理由：</strong></p>
+    日志文件可能包含有关系统配置的重要信息。如果系统日志文件未受保护，未经授权用户可能更改记录的数据，从而消除其取证价值。
 
 severity: medium
 

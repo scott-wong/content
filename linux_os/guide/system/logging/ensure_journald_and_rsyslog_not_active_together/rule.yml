@@ -13,12 +13,22 @@ description: |-
     The command should return exactly one <tt>active</tt> service. Both services
     should not be active at the same time, and at least one must be active.
 
+    <p><strong>中文说明：</strong></p>
+    确保恰好有一个日志系统处于活动状态。同时运行 rsyslog 和 systemd-journald 可能导致日志重复、资源争用和配置冲突。两个服务都不运行意味着没有进行日志记录，这也是违规情况。
+    <pre>
+    systemctl is-active rsyslog systemd-journald
+    </pre>
+    该命令应仅返回一个 <tt>active</tt> 服务。两个服务不应同时处于活动状态，并且至少有一个必须处于活动状态。
+
 rationale: |-
     Running multiple logging systems concurrently can cause conflicts, resource
     contention, and inconsistent logging behavior. Systems should use either
     rsyslog or systemd-journald, but not both simultaneously. This ensures
     predictable logging behavior and prevents potential issues with log
     duplication or loss.
+
+    <p><strong>中文理由：</strong></p>
+    同时运行多个日志系统可能导致冲突、资源争用和日志行为不一致。系统应使用 rsyslog 或 systemd-journald 之一，而不是同时使用两者。这可确保日志行为可预测，并防止日志重复或丢失的潜在问题。
 
 severity: medium
 

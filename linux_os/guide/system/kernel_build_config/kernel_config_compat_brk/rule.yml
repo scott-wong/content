@@ -11,8 +11,18 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_COMPAT_BRK", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    启用与 <tt>brk()</tt> 的兼容性可允许旧版二进制程序运行（例如链接到 libc5 的程序）。但这种兼容性以无法随机化堆位置（ASLR）为代价。
+    除非系统需要运行旧版二进制程序，否则请将 <tt>CONFIG_COMPAT_BRK</tt> 设置为 <tt>"n"</tt>。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_COMPAT_BRK</tt> 的配置值，请运行：
+    <tt>grep CONFIG_COMPAT_BRK /boot/config-*</tt>
+    值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或没有行。
+
 rationale: |-
     Enabling compatibility with brk() disables support for ASLR.
+
+    <p><strong>中文理由：</strong></p>
+    启用与 brk() 的兼容性会禁用 ASLR 支持。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

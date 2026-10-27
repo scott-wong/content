@@ -8,9 +8,15 @@ description: |-
     Note: Changing firewall settings while connected over network can result in 
     being locked out of the system.
 
+    <p><strong>中文说明：</strong></p>
+    防火墙区域定义网络连接或接口的信任级别。注意：通过网络连接时更改防火墙设置可能导致无法再登录系统。
+
 rationale: |-
     A network interface not assigned to the appropriate zone can allow unexpected or
     undesired network traffic to be accepted on the interface.
+
+    <p><strong>中文理由：</strong></p>
+    未分配到适当区域的网络接口可能允许在接口上接受意外或不期望的网络流量。
 
 severity: medium
 

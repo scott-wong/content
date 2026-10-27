@@ -14,6 +14,17 @@ description: |-
     '{{{ describe_file_group_owner(file="/var/log/journal/.*/system.journal", group="systemd-journal") }}}'
     {{%- endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{%- if 'ubuntu' in product %}}
+    验证 /run/log/journal 和 /var/log/journal 文件由 "systemd-journal" 作为组所有者拥有，使用以下命令：
+    <pre>
+    $ sudo find /run/log/journal /var/log/journal  -type f -exec stat -c "%n %G" {} \;
+    </pre>
+    如果返回的任何输出显示文件所属组不是 "systemd-journal"，则构成发现项。
+    {{%- else %}}
+    文件 <tt>/var/log/journal/.*/system.journal</tt> 的文件所属组必须为 <tt>systemd-journal</tt>。
+    {{%- endif %}}
+
 rationale: |-
     {{%- if 'ubuntu' in product %}}
     Only authorized personnel should be aware of errors and the details of the errors.
@@ -23,6 +34,13 @@ rationale: |-
     messages to unauthorized personnel or their designated representatives.
     {{%- else %}}
     RHCOS must protect system journal file from any type of unauthorized access by setting file group ownership.
+    {{%- endif %}}
+
+    <p><strong>中文理由：</strong></p>
+    {{%- if 'ubuntu' in product %}}
+    只有经过授权的人员才应了解错误及其详细信息。错误消息可表明组织的运行状态，也可能标识操作系统或平台。此外，不得通过错误消息向未授权人员或其指定代表泄露个人身份信息（PII）和运行信息。
+    {{%- else %}}
+    RHCOS 必须通过设置文件所属组来保护系统 journal 文件，防止任何类型的未授权访问。
     {{%- endif %}}
 
 identifiers:

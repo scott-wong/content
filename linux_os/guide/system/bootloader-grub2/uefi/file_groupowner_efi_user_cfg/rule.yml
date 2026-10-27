@@ -8,10 +8,16 @@ description: |-
     <tt>root</tt> group to prevent reading or modification of the file.
     {{{ describe_file_group_owner(file=grub2_uefi_boot_path ~ "/user.cfg", group="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>{{{ grub2_uefi_boot_path }}}/user.cfg</tt> 的文件所属组应为 <tt>root</tt>，以防止读取或修改该文件。
+
 rationale: |-
     The <tt>root</tt> group is a highly-privileged group. Furthermore, the group-owner of this
     file should not have any access privileges anyway. Non-root users who read the boot parameters
     may be able to identify weaknesses in security upon boot and be able to exploit them.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>root</tt> 组是高权限组。此外，该文件的组所有者本来就不应具有任何访问权限。读取启动参数的非 root 用户可能识别启动时的安全弱点并加以利用。
 
 severity: medium
 

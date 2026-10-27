@@ -8,9 +8,15 @@ description: |-
     Zones can be utilized to a deny-all, allow-by-exception approach.
     The default "drop" zone will drop all incoming network packets unless it is explicitly allowed by the configuration file or is related to an outgoing network connection.
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 集成了 "firewalld" 守护进程，它支持多种不同配置。其中一种配置是区域（zone）。可利用区域实现默认拒绝、按例外允许的方法。默认 "drop" 区域将丢弃所有传入网络数据包，除非配置文件明确允许该数据包，或该数据包与传出网络连接相关。
+
 rationale: |-
     Failure to restrict network connectivity only to authorized systems permits inbound connections from malicious systems.
     It also permits outbound connections that may facilitate exfiltration of data.
+
+    <p><strong>中文理由：</strong></p>
+    未能将网络连接限制为仅授权系统，会允许来自恶意系统的入站连接。这还会允许可能有助于数据外传的出站连接。
 
 severity: medium
 

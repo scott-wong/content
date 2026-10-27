@@ -11,10 +11,19 @@ description: |-
     udp()
     network()</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>syslog-ng</tt> 守护进程不应接受远程消息，除非系统充当日志服务器。为确保其未在网络接口上监听，请验证 <tt>syslog-ng</tt> 配置文件中以下任何源驱动调用均未以未注释形式出现：
+    <pre>tcp()
+    udp()
+    network()</pre>
+
 rationale: |-
     Any process which receives messages from the network incurs some risk of
     receiving malicious messages. This risk can be eliminated for syslog-ng by
     configuring it not to listen on the network.
+
+    <p><strong>中文理由：</strong></p>
+    任何从网络接收消息的进程都面临接收恶意消息的风险。通过将 syslog-ng 配置为不在网络上监听，可以消除此风险。
 
 severity: medium
 

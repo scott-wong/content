@@ -6,9 +6,15 @@ title: 'Verify Permissions on lastlog Command'
 description: |-
     {{{ describe_file_permissions(file="/usr/bin/lastlog", perms="0750") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/usr/bin/lastlog</tt> 文件的权限为 <tt>0750</tt> 或更严格。
+
 rationale: |-
     Unauthorized disclosure of the contents of the /var/log/lastlog file can reveal system data to
     attackers, thus compromising its confidentiality.
+
+    <p><strong>中文理由：</strong></p>
+    未经授权披露 <tt>/var/log/lastlog</tt> 文件内容可能向攻击者泄露系统数据，从而损害其机密性。
 
 severity: medium
 

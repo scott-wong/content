@@ -8,9 +8,15 @@ description: |-
     destruction or modification of the file.
     {{{ describe_file_group_owner(file=grub2_uefi_boot_path, group="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>{{{ grub2_uefi_boot_path }}}</tt> 中的文件应归 <tt>root</tt> 组所有，以防文件被破坏或修改。确保这些文件的所属组为 <tt>root</tt>。
+
 rationale: |-
     The <tt>root</tt> group is a highly-privileged group. Furthermore, the group-owner of this
     file should not have any access privileges anyway.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>root</tt> 组是高度特权的组。此外，此文件的所属组本来就不应具有任何访问权限。
 
 severity: medium
 

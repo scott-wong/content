@@ -13,12 +13,20 @@ description: |-
     is configured as a boot parameter.
     {{{ describe_grub2_argument("random.trust_cpu=on") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    可通过两种方式确保 Linux 内核信任 CPU 硬件随机数生成器。如果该选项在内核编译期间配置，例如 <tt>CONFIG_RANDOM_TRUST_CPU</tt> 设置为 <tt>Y</tt>，请确保它未被启动参数覆盖。不得存在启动参数 <tt>random.trust_cpu=off</tt>。如果未编译启用该选项，请确保将 <tt>random.trust_cpu=on</tt> 配置为启动参数。
+
+    为确保新安装的内核将 <tt>random.trust_cpu=on</tt> 作为内核命令行参数，请按产品要求将 <tt>random.trust_cpu=on</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+
 rationale: |-
     The Linux kernel offers an option which signifies if the kernel should trust
     data provided by CPU hardware random number generator. Hardware random
     number generators can provide random data very quickly and are used to generate random cryptographic keys. They can
     be useful during boot time when other means of getting random data can be
     slow because there is not yet enough entropy in the system.
+
+    <p><strong>中文理由：</strong></p>
+    Linux 内核提供了一个选项，用于指示内核是否应信任 CPU 硬件随机数生成器提供的数据。硬件随机数生成器可以非常快速地提供随机数据，并用于生成随机加密密钥。在启动期间，当其他获取随机数据的方式可能因系统中尚无足够熵而变慢时，它们可能很有用。
 
 severity: medium
 

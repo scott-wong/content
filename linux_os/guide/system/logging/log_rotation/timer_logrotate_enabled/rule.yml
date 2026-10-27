@@ -6,10 +6,16 @@ title: 'Enable logrotate Timer'
 description: |-
     {{{ describe_timer_enable(timer="logrotate") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应启用并启动 <tt>logrotate</tt> 计时器。
+
 rationale: |-
     Log files that are not properly rotated run the risk of growing so large
     that they fill up the /var/log partition. Valuable logging information could be lost
     if the /var/log partition becomes full.
+
+    <p><strong>中文理由：</strong></p>
+    未正确轮转的日志文件可能增长到填满 /var/log 分区。如果 /var/log 分区已满，宝贵的日志信息可能丢失。
 
 severity: medium
 

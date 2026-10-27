@@ -8,10 +8,16 @@ description: |-
     check that no boot entry in <tt>/boot/loader/entries/*.conf</tt> has <tt>selinux=0</tt>
     included in its options.<br />
 
+    <p><strong>中文说明：</strong></p>
+    为确保 SELinux 在启动时不被禁用，请检查 <tt>/boot/loader/entries/*.conf</tt> 中没有启动条目在其选项中包含 <tt>selinux=0</tt>。
+
 rationale: |-
     Disabling a major host protection feature, such as SELinux, at boot time prevents
     it from confining system services at boot time.  Further, it increases
     the chances that it will remain off during system operation.
+
+    <p><strong>中文理由：</strong></p>
+    在启动时禁用 SELinux 等主要主机保护功能会使其无法在启动时限制系统服务，还会增加系统运行期间该功能持续关闭的可能性。
 
 severity: medium
 

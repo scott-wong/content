@@ -10,8 +10,16 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_X86_VSYSCALL_EMULATION", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    禁用此选项大致相当于使用 vsyscall=none 引导，但还会在程序尝试使用 vsyscall 时禁用有帮助的警告。将此选项设置为 N 后，违规程序只会因 0xffffffffff600?00 形式的地址而发生段错误。此配置从 Linux 3.19 起可用。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_X86_VSYSCALL_EMULATION</tt> 的配置值，请运行 <tt>grep CONFIG_X86_VSYSCALL_EMULATION /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。
+
 rationale: |-
     The vsyscall table is no longer required and is a potential source of ROP gadgets.
+
+    <p><strong>中文理由：</strong></p>
+    vsyscall 表已不再需要，并且是 ROP gadget 的潜在来源。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

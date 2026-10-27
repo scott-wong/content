@@ -8,6 +8,11 @@ description: |-
     <tt>page_alloc.shuffle=1</tt> argument to the default GRUB 2 command line.
     {{{ describe_grub2_argument("page_alloc.shuffle=1") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    要启用内核中的页分配器随机化，请将 <tt>page_alloc.shuffle=1</tt> 参数添加到默认 GRUB 2 命令行。
+
+    为确保新安装的内核将 <tt>page_alloc.shuffle=1</tt> 作为内核命令行参数，请按产品要求将 <tt>page_alloc.shuffle=1</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+
 rationale: |-
     The <tt>CONFIG_SHUFFLE_PAGE_ALLOCATOR</tt> config option is primarily
     focused on improving the average utilization of a direct-mapped
@@ -19,6 +24,9 @@ rationale: |-
     memory ouf of that node. The <tt>page_alloc.shuffle=1</tt> kernel command
     line parameter then forces this functionality irrespectively of memory cache
     architecture.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>CONFIG_SHUFFLE_PAGE_ALLOCATOR</tt> 配置选项主要旨在提高直接映射内存侧缓存的平均利用率。除性能影响外，它还可降低页分配的可预测性，特别是在恶意行为者可使系统崩溃并利用刚重启后的页分配顺序知识，或者可控制热插拔内存节点（如 NUMA 节点）与该节点上分配内存的应用之间时序的情况下。<tt>page_alloc.shuffle=1</tt> 内核命令行参数会不受内存缓存架构影响地强制启用此功能。
 
 severity: medium
 

@@ -17,11 +17,21 @@ description: |-
         daemon.*                                       /var/log/messages
     </code>
 
+    <p><strong>中文说明：</strong></p>
+    必须实施远程访问方法日志记录，以帮助识别网络攻击，并确保对远程访问策略的持续合规性得到审计和维护。远程访问方法的一个示例是从外部非组织控制的网络使用远程桌面协议（RDP）。{{% if 'ubuntu' in product %}}<tt>/etc/rsyslog.d/50-default.conf</tt>{{% else %}}<tt>/etc/rsyslog.conf</tt> 或 <tt>/etc/rsyslog.d/*.conf</tt>{{% endif %}} 文件应包含对以下选择器的匹配：<tt>auth.*</tt>、<tt>authpriv.*</tt> 和 <tt>daemon.*</tt>。如果没有，请使用以下内容作为示例配置：
+    <code>
+        auth.*;authpriv.*                              /var/log/secure
+        daemon.*                                       /var/log/messages
+    </code>
+
 rationale: |-
     Logging remote access methods can be used to trace the decrease the risks
     associated with remote user access management. It can also be used to spot
     cyber attacks and ensure ongoing compliance with organizational policies
     surrounding the use of remote access methods.
+
+    <p><strong>中文理由：</strong></p>
+    记录远程访问方法可用于追踪并降低与远程用户访问管理相关的风险。它还可用于发现网络攻击，并确保持续符合组织关于远程访问方法使用的策略。
 
 severity: medium
 

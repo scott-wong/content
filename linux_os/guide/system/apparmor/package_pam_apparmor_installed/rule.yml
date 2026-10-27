@@ -6,9 +6,15 @@ title: 'Install the pam_apparmor Package'
 description: |-
     {{{ describe_package_install(package="pam_apparmor") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>pam_apparmor</tt> 软件包。
+
 rationale: |-
     Protection of system integrity using AppArmor depends on this package being
     installed.
+
+    <p><strong>中文理由：</strong></p>
+    使用 AppArmor 保护系统完整性取决于是否安装此软件包。
 
 severity: medium
 

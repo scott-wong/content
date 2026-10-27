@@ -5,9 +5,15 @@ title: 'Ensure AppArmor is installed'
 description: |-
     AppArmor provide Mandatory Access Controls.
 
+    <p><strong>中文说明：</strong></p>
+    AppArmor 提供强制访问控制。
+
 rationale: |-
     Without a Mandatory Access Control system installed only the default
     Discretionary Access Control system will be available.
+
+    <p><strong>中文理由：</strong></p>
+    如果未安装强制访问控制系统，则只能使用默认的自主访问控制系统。
 
 severity: medium
 

@@ -7,9 +7,17 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_PROC_KCORE", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    提供活动内核的虚拟 ELF 核心文件。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_PROC_KCORE</tt> 的配置值，请运行 <tt>grep CONFIG_PROC_KCORE /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。
+
 rationale: |-
     This feature exposes the memory to the userspace and can assist an attacker in discovering
     attack vectors.
+
+    <p><strong>中文理由：</strong></p>
+    此功能向用户空间暴露内存，并可能帮助攻击者发现攻击途径。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

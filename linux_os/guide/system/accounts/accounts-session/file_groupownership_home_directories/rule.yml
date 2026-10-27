@@ -17,11 +17,22 @@ description: |-
     and a valid interactive shell (not <tt>/sbin/nologin</tt>, <tt>/usr/sbin/nologin</tt>,
     <tt>/bin/false</tt>, or <tt>/usr/bin/false</tt>).
 
+    <p><strong>中文说明：</strong></p>
+    将交互用户主目录的所属组更改为 <tt>getent passwd</tt> 中找到的组。要更改交互用户主目录的所属组，请使用以下命令：
+    <pre>$ sudo chgrp <i>USER_GROUP</i> /home/<i>USER</i></pre>
+
+    此规则确保每个交互用户的主目录由该用户的主组所属，并且交互用户仅是一个主目录的所属组。
+
+    交互用户是指 UID 大于或等于 {{{ uid_min }}} 且具有有效交互式 shell（不是 <tt>/sbin/nologin</tt>、<tt>/usr/sbin/nologin</tt>、<tt>/bin/false</tt> 或 <tt>/usr/bin/false</tt>）的用户。
+
 rationale: |-
     If the Group Identifier (GID) of a local interactive users home directory is
     not the same as the primary GID of the user, this would allow unauthorized
     access to the users files, and users that share the same group may not be
     able to access files that they legitimately should.
+
+    <p><strong>中文理由：</strong></p>
+    如果本地交互用户主目录的组标识符（GID）与该用户的主 GID 不一致，可能导致对用户文件的未授权访问，而同一组的用户也可能无法访问其合法应访问的文件。
 
 severity: medium
 

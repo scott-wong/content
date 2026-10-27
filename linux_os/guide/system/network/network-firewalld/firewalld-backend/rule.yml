@@ -6,9 +6,15 @@ title: 'Configure Firewalld to Use the Nftables Backend'
 description: |-
     Firewalld can be configured with many backends, such as nftables.
 
+    <p><strong>中文说明：</strong></p>
+    Firewalld 可配置多种后端，例如 nftables。
+
 rationale: |-
     Nftables is modern kernel module for controlling network connections coming into a system.
     Utilizing the limit statement in "nftables" can help to mitigate DoS attacks.
+
+    <p><strong>中文理由：</strong></p>
+    Nftables 是用于控制进入系统网络连接的现代内核模块。利用 "nftables" 中的 limit 语句可帮助缓解 DoS 攻击。
 
 severity: medium
 

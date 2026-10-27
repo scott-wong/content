@@ -20,11 +20,25 @@ description: |-
     <tt>grub.cfg</tt> file by running:
     <pre>grub2-mkconfig -o {{{ grub2_uefi_boot_path }}}/grub.cfg</pre>
 
+    <p><strong>中文说明：</strong></p>
+    grub2 引导加载程序应启用超级用户账户和密码保护，以保护启动时设置。<br /><br />
+    由于明文密码存在安全风险，请运行以下命令为密码生成哈希：<pre># grub2-mkpasswd-pbkdf2</pre>
+    出现提示时，输入所选密码。<br /><br />
+    使用输出中的哈希，按以下内容修改 <tt>/etc/grub.d/40_custom</tt> 文件：
+    <pre>set superusers="root"
+    password_pbkdf2 boot grub.pbkdf2.sha512.VeryLongString
+    </pre>
+    添加超级用户密码后，请运行以下命令更新 <tt>grub.cfg</tt> 文件：
+    <pre>grub2-mkconfig -o {{{ grub2_uefi_boot_path }}}/grub.cfg</pre>
+
 rationale: |-
     Password protection on the boot loader configuration ensures
     users with physical access cannot trivially alter
     important bootloader settings. These include which kernel to use,
     and whether to enter single-user mode.
+
+    <p><strong>中文理由：</strong></p>
+    对引导加载程序配置实施密码保护可确保具有物理访问权限的用户无法轻易更改重要引导设置，包括使用哪个内核以及是否进入单用户模式。
 
 severity: high
 

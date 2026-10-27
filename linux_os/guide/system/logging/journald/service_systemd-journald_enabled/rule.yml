@@ -7,8 +7,14 @@ description: |-
     systemd.
     {{{ describe_service_enable(service="systemd-journald") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>systemd-journald</tt> 服务是 systemd 的重要组件。应启用并启动 <tt>systemd-journald</tt> 服务。
+
 rationale: |-
     In the event of a system failure, {{{ full_name }}} must preserve any information necessary to determine cause of failure and any information necessary to return to operations with least disruption to system processes.
+
+    <p><strong>中文理由：</strong></p>
+    如果系统发生故障，{{{ full_name }}} 必须保留确定故障原因所需的所有信息，以及以对系统进程干扰最小的方式恢复运行所需的所有信息。
 
 severity: medium
 

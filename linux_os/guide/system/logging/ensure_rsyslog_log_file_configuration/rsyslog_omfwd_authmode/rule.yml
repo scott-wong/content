@@ -28,6 +28,21 @@ description: |-
       streamdriver.permittedpeer="{{{ xccdf_value("rsyslog_remote_loghost_address") }}}"
     )</pre>
 
+    <p><strong>中文说明：</strong></p>
+    Rsyslog 是提供消息日志记录支持的系统实用程序。它同时支持 Internet 和 Unix 域套接字，因此可支持本地和远程日志记录。将此实用程序与 <tt>gnutls</tt> 配合使用，可创建安全加密和卸载审计的方法。当此实用程序与 omfwd 模块配合使用时，可使用 <tt>ossl</tt> 网络流驱动，该驱动利用 OpenSSL 库的 Transport Layer Security（TLS）功能安全加密和卸载审计。
+    <br /><br />
+    必须在每条 <tt>omfwd</tt> 操作规则中设置 <tt>streamdriver.authmode="x509/name"</tt>（或 <tt>tls.authmode="x509/name"</tt>）参数，以验证远程日志服务器并防止中间人攻击。此外，应使用预期服务器名称配置 <tt>streamdriver.permittedpeer</tt>（或 <tt>tls.permittedpeer</tt>）参数。
+    <br /><br />
+    <tt>/etc/rsyslog.d/99-forwarding.conf</tt> 中的示例配置：
+    <pre>action(
+      type="omfwd"
+      target="{{{ xccdf_value("rsyslog_remote_loghost_address") }}}"
+      protocol="tcp"
+      port="6514"
+      streamdriver.authmode="x509/name"
+      streamdriver.permittedpeer="{{{ xccdf_value("rsyslog_remote_loghost_address") }}}"
+    )</pre>
+
 rationale: |-
     Information stored in one location is vulnerable to accidental or
     incidental deletion or alteration.
@@ -38,6 +53,9 @@ rationale: |-
     Without authenticating the remote logging server, rsyslog may
     transmit audit records to an untrusted destination, leaving
     them vulnerable to interception or man-in-the-middle attacks.
+
+    <p><strong>中文理由：</strong></p>
+    存储在一个位置的信息容易遭受意外或附带删除或更改。<br /><br />卸载是审计存储容量有限的信息系统中的常见过程。<br /><br />如果不验证远程日志服务器，rsyslog 可能将审计记录传输到不受信任的目标，使其容易遭截获或中间人攻击。
 
 severity: medium
 

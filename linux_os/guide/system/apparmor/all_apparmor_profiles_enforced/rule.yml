@@ -16,11 +16,25 @@ description: |-
     Any unconfined processes may need to have a profile created or activated
     for them and then be restarted.
 
+    <p><strong>中文说明：</strong></p>
+    AppArmor 配置档定义应用可访问的资源。要将所有配置档设置为 enforce 模式，请运行以下命令：
+    <pre>$ sudo aa-enforce /etc/apparmor.d/*</pre>
+    要列出未受限进程，请运行以下命令：
+    {{% if 'ubuntu' in product or 'debian' in product %}}
+    <pre>$ sudo apparmor_status | grep processes</pre>
+    {{% else %}}
+    <pre>$ sudo aa-unconfined</pre>
+    {{% endif %}}
+    任何未受限进程可能需要为其创建或激活配置档，然后重新启动。
+
 rationale: |-
     Security configuration requirements vary from site to site. Some sites may
     mandate a policy that is stricter than the default policy, which is perfectly
     acceptable. This recommendation is intended to ensure that any policies that
     exist on the system are activated.
+
+    <p><strong>中文理由：</strong></p>
+    安全配置要求因站点而异。某些站点可能要求比默认策略更严格的策略，这完全可以接受。此建议旨在确保系统上存在的任何策略均已激活。
 
 severity: medium
 

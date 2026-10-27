@@ -6,10 +6,16 @@ title: 'Verify firewalld Enabled'
 description: |-
     {{{ describe_service_enable(service="firewalld") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应启用并启动 <tt>firewalld</tt> 服务。
+
 rationale: |-
     Access control methods provide the ability to enhance system security posture
     by restricting services and known good IP addresses and address ranges. This
     prevents connections from unknown hosts and protocols.
+
+    <p><strong>中文理由：</strong></p>
+    访问控制方法可通过限制服务和已知正常的 IP 地址及地址范围，增强系统安全状态。这可阻止来自未知主机和协议的连接。
 
 severity: medium
 

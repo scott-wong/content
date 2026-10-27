@@ -8,9 +8,18 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_DEBUG_NOTIFIERS", "y") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    启用此项可开启通知器调用链的健全性检查。这最有助于内核开发者确保模块正确地从通知器链中注销。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_DEBUG_NOTIFIERS</tt> 的配置值，请运行：
+    <tt>grep CONFIG_DEBUG_NOTIFIERS /boot/config-*</tt>
+    对于每个已安装内核，应返回一行包含值“y”的配置。
+
 rationale: |-
     This provides validation of notifier chains, it checks whether the notifiers are from the
     kernel or a module that is still loaded prior to being invoked.
+
+    <p><strong>中文理由：</strong></p>
+    这会验证通知器链，检查通知器在调用前是否来自内核或仍已加载的模块。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

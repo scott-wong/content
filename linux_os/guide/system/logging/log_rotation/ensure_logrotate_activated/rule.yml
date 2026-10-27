@@ -10,10 +10,18 @@ description: |-
     <pre># rotate log files <i>frequency</i>
     daily</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>logrotate</tt> 实用程序可用于自动轮转日志文件。轮转频率在 <tt>/etc/logrotate.conf</tt> 中指定，该配置会触发 cron 任务或计时器。要将 logrotate 配置为每日运行，请在 <tt>/etc/logrotate.conf</tt> 中添加或更正以下行：
+    <pre># rotate log files <i>frequency</i>
+    daily</pre>
+
 rationale: |-
     Log files that are not properly rotated run the risk of growing so large
     that they fill up the /var/log partition. Valuable logging information could be lost
     if the /var/log partition becomes full.
+
+    <p><strong>中文理由：</strong></p>
+    未正确轮转的日志文件可能增长到填满 /var/log 分区。如果 /var/log 分区已满，宝贵的日志信息可能丢失。
 
 severity: medium
 

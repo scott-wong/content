@@ -12,9 +12,18 @@ description: |-
     This rule ensures every file or directory under the home directory related
     to an interactive user is group-owned by an interactive user.
 
+    <p><strong>中文说明：</strong></p>
+    将本地交互用户文件和目录的所属组更改为该交互用户所属的组。要更改本地交互用户文件和目录的所属组，请使用以下命令：
+    <pre>$ sudo chgrp <i>USER_GROUP</i> /home/<i>USER</i>/<i>FILE_DIR</i></pre>
+
+    此规则确保交互用户主目录下的每个文件或目录的所属组均为该交互用户所属的组。
+
 rationale: |-
     If a local interactive users files are group-owned by a group of which the
     user is not a member, unintended users may be able to access them.
+
+    <p><strong>中文理由：</strong></p>
+    如果本地交互用户文件的所属组不是该用户所属的组，非预期用户可能能够访问这些文件。
 
 severity: medium
 

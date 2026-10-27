@@ -10,12 +10,22 @@ description: |-
     </pre>
     If any output returned is not owned by "systemd-journal", this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    使用以下命令验证 /run/log/journal 和 /var/log/journal 目录的所属组为 "systemd-journal"：
+    <pre>
+    $ sudo find /run/log/journal /var/log/journal  -type d -exec stat -c "%n %G" {} \;
+    </pre>
+    如果返回的任何输出不是由 "systemd-journal" 所有，则判定为不符合项。
+
 rationale: |-
     Only authorized personnel should be aware of errors and the details of the errors.
     Error messages are an indicator of an organization's operational state or can identify
     the operating system or platform. Additionally, personally identifiable information
     (PII) and operational information must not be revealed through error messages to
     unauthorized personnel or their designated representatives.
+
+    <p><strong>中文理由：</strong></p>
+    只有授权人员才应了解错误及其详细信息。错误消息可指示组织的运行状态，或可识别操作系统或平台。此外，不得通过错误消息向未经授权人员或其指定代表泄露个人可识别信息（PII）和运行信息。
 
 severity: medium
 

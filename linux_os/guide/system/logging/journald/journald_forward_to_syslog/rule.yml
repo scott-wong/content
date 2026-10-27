@@ -7,10 +7,14 @@ description: |-
     Data from journald may be stored in volatile memory or persisted locally.
     Utilities exist to accept remote export of journald logs.
 
-rationale:
-    Storing log data on a remote host protects log integrity from local attacks. If an attacker
-    gains root access on the local system, they could tamper with or remove log data that is
-    stored on the local system.
+    <p><strong>中文说明：</strong></p>
+    journald 中的数据可存储在易失性内存中，也可持久保存在本地。存在可用于远程导出 journald 日志的实用程序。
+
+rationale: |-
+    Storing log data on a remote host protects log integrity from local attacks. If an attacker gains root access on the local system, they could tamper with or remove log data that is stored on the local system.
+
+    <p><strong>中文理由：</strong></p>
+    将日志数据存储在远程主机上可保护日志完整性，防止本地攻击。如果攻击者在本地系统上获得 root 访问权限，他们可能篡改或删除存储在本地系统上的日志数据。
 
 severity: medium
 

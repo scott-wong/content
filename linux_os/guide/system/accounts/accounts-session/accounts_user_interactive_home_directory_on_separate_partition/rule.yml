@@ -8,6 +8,9 @@ description: |-
     user's home directory resides directly on the root file system, a failure
     of that file system or a user filling it up could impact system operation.
 
+    <p><strong>中文说明：</strong></p>
+    所有交互用户主目录必须位于与根（<tt>/</tt>）分区分离的文件系统分区上。如果任何交互用户的主目录直接位于根文件系统上，该文件系统故障或用户将其填满可能影响系统运行。
+
 rationale: |-
     Ensuring that interactive user home directories are on a separate
     partition from the root file system prevents users from filling the root
@@ -15,6 +18,9 @@ rationale: |-
     It also allows administrators to apply more restrictive mount options
     such as <tt>noexec</tt>, <tt>nosuid</tt>, and <tt>nodev</tt> to the
     partition containing user home directories.
+
+    <p><strong>中文理由：</strong></p>
+    确保交互用户主目录位于与根文件系统分离的分区上，可防止用户填满根分区，从而避免系统不稳定或拒绝服务。这还允许管理员对包含用户主目录的分区应用更严格的挂载选项，例如 <tt>noexec</tt>、<tt>nosuid</tt> 和 <tt>nodev</tt>。
 
 severity: medium
 

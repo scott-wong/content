@@ -16,10 +16,23 @@ description: |-
     following command:
     <tt>cat /sys/devices/system/cpu/vulnerabilities/l1tf</tt>
 
+    <p><strong>中文说明：</strong></p>
+    L1 Terminal Fault（L1TF）是一种硬件漏洞，允许非特权推测访问在页表项不存在时仍存于 Level 1 数据缓存中的数据。
+
+    请通过将参数 <tt>l1tf={{{ xccdf_value("var_l1tf_options") }}}</tt> 添加到 Linux 操作系统的默认 GRUB 2 命令行来选择适当的缓解措施。
+
+    为确保新安装的内核将 <tt>l1tf={{{ xccdf_value("var_l1tf_options") }}}</tt> 作为内核命令行参数，请按产品要求将 <tt>l1tf={{{ xccdf_value("var_l1tf_options") }}}</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+
+    自 Linux 内核 4.19 起，可使用以下命令检查 L1TF 漏洞状态：
+    <tt>cat /sys/devices/system/cpu/vulnerabilities/l1tf</tt>
+
 rationale: |-
     The L1TF vulnerability allows an attacker to bypass memory access security controls imposed
     by the system or hypervisor. The L1TF vulnerability allows read access to any physical memory
     location that is cached in the L1 Data Cache.
+
+    <p><strong>中文理由：</strong></p>
+    L1TF 漏洞允许攻击者绕过系统或虚拟机监控程序施加的内存访问安全控制。L1TF 漏洞允许读取缓存在 L1 数据缓存中的任意物理内存位置。
 
 warnings:
     - performance: Enabling L1TF mitigations may impact performance of the system.

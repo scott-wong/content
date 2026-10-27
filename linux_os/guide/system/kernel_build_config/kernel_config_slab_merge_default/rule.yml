@@ -12,12 +12,20 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_SLAB_MERGE_DEFAULT", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    为减少内核内存碎片，当 slab 缓存具有相同大小及其他特性时可将其合并。这存在内核堆溢出覆盖合并缓存中对象（并更容易控制缓存布局）的风险，使攻击者更容易利用此类堆攻击。此配置从 Linux 4.13 起可用。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_SLAB_MERGE_DEFAULT</tt> 的配置值，请运行 <tt>grep CONFIG_SLAB_MERGE_DEFAULT /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。
+
 rationale: |-
     Disabling the merge of slabs of similar sizes prevents the kernel from
     merging a seemingly useless but vulnerable slab with a useful and valuable slab.
     This increase the risk that a heap overflow could overwrite objects from merged caches,
     with unmerged caches the heap overflow would only affect the objects in the same cache.
     Overall, this reduces the kernel attack surface area by isolating slabs from each other.
+
+    <p><strong>中文理由：</strong></p>
+    禁用类似大小 slab 的合并，可防止内核将看似无用但有漏洞的 slab 与有用且有价值的 slab 合并。这可降低堆溢出覆盖合并缓存中对象的可能性；未合并缓存时，堆溢出只会影响同一缓存中的对象。总体而言，这通过将 slab 相互隔离来减小内核攻击面。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

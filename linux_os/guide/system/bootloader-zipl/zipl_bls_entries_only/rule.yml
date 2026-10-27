@@ -7,9 +7,15 @@ description: |-
     Ensure that zIPL boot entries fully adheres to Boot Loader Specification (BLS)
     by checking that <tt>/etc/zipl.conf</tt> doesn't contain <tt>image = </tt>.
 
+    <p><strong>中文说明：</strong></p>
+    通过检查 <tt>/etc/zipl.conf</tt> 不包含 <tt>image = </tt>，确保 zIPL 启动条目完全遵循 Boot Loader Specification（BLS）。
+
 rationale: |-
     {{{ full_name }}} adheres to Boot Loader Specification (BLS) and is the preferred method of
     configuration.
+
+    <p><strong>中文理由：</strong></p>
+    {{{ full_name }}} 遵循 Boot Loader Specification（BLS），这是首选的配置方法。
 
 severity: medium
 

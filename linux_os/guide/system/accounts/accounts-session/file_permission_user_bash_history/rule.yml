@@ -7,9 +7,16 @@ description: |-
     following command:
     <pre>$ sudo chmod 0600 /home/<i>USER</i>/.bash_history</pre>
 
+    <p><strong>中文说明：</strong></p>
+    使用以下命令将 bash 历史文件的模式设置为 <tt>0600</tt>：
+    <pre>$ sudo chmod 0600 /home/<i>USER</i>/.bash_history</pre>
+
 rationale: |-
     Incorrect permissions may enable malicious users to recover
     other users' command history.
+
+    <p><strong>中文理由：</strong></p>
+    不正确的权限可能使恶意用户恢复其他用户的命令历史记录。
 
 severity: medium
 

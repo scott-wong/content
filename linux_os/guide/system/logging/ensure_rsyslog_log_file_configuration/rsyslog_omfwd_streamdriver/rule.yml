@@ -25,6 +25,21 @@ description: |-
       tls="on"
     )</pre>
 
+    <p><strong>中文说明：</strong></p>
+    Rsyslog 是提供消息日志记录支持的系统实用程序。它同时支持 Internet 和 Unix 域套接字，因此可支持本地和远程日志记录。将此实用程序与 <tt>gnutls</tt> 配合使用，可创建安全加密和卸载审计的方法。当此实用程序与 omfwd 模块配合使用时，可使用 <tt>ossl</tt> 网络流驱动，该驱动利用 OpenSSL 库的 Transport Layer Security（TLS）功能安全加密和卸载审计。
+    <br /><br />
+    必须在每条 <tt>omfwd</tt> 操作规则中显式将 <tt>streamdriver</tt> 参数设置为 <tt>gtls</tt>（GnuTLS）或 <tt>ossl</tt>（OpenSSL）。在 FIPS 模式下运行的环境需要使用 <tt>ossl</tt> 驱动。
+    <br /><br />
+    <tt>/etc/rsyslog.d/99-forwarding.conf</tt> 中的示例配置：
+    <pre>action(
+      type="omfwd"
+      streamdriver="ossl"
+      target="logserver.example.com"
+      protocol="tcp"
+      port="6514"
+      tls="on"
+    )</pre>
+
 rationale: |-
     Information stored in one location is vulnerable to accidental or
     incidental deletion or alteration.
@@ -35,6 +50,9 @@ rationale: |-
     Without an explicitly defined TLS stream driver in the omfwd action,
     rsyslog may not properly encrypt audit records during off-loading,
     leaving them vulnerable to interception.
+
+    <p><strong>中文理由：</strong></p>
+    存储在一个位置的信息容易遭受意外或附带删除或更改。<br /><br />卸载是审计存储容量有限的信息系统中的常见过程。<br /><br />如果未在 omfwd 操作中明确指定 TLS 流驱动，rsyslog 在卸载期间可能无法正确加密审计记录，使其容易遭截获。
 
 severity: medium
 

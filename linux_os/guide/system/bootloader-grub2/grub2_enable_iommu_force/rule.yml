@@ -7,9 +7,17 @@ description: |-
         of the system critical units such as the memory.
     {{{ describe_grub2_argument("iommu=force") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    在支持 VT-d 的 x86 架构上，IOMMU 管理硬件设备与内存等系统关键单元之间的访问控制策略。
+
+    为确保新安装的内核将 <tt>iommu=force</tt> 作为内核命令行参数，请按产品要求将 <tt>iommu=force</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+
 rationale: |-
     On x86 architectures, activating the I/OMMU prevents the system from arbitrary accesses potentially made by
         hardware devices.
+
+    <p><strong>中文理由：</strong></p>
+    在 x86 架构上，启用 I/OMMU 可防止硬件设备进行潜在的任意访问。
 
 severity: unknown
 

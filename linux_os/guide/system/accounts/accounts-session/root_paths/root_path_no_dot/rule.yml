@@ -13,9 +13,19 @@ description: |-
     PATH=/bin::/sbin</pre>
     These empty elements have the same effect as a single <tt>.</tt> character.
 
+    <p><strong>中文说明：</strong></p>
+    确保 root 的 PATH 中没有任何目录等于单个 <tt>.</tt> 字符，也不包含会导致相对路径遍历的实例，例如 <tt>..</tt> 或以不包含斜杠（<tt>/</tt>）字符的路径开头。还要确保 PATH 中没有“空”元素，例如：
+    <pre>PATH=:/bin
+    PATH=/bin:
+    PATH=/bin::/sbin</pre>
+    这些空元素与单个 <tt>.</tt> 字符效果相同。
+
 rationale: |-
     Including these entries increases the risk that root could
     execute code from an untrusted location.
+
+    <p><strong>中文理由：</strong></p>
+    包含这些条目会增加 root 从不信任位置执行代码的风险。
 
 severity: unknown
 

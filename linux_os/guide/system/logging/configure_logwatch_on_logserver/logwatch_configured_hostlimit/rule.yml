@@ -10,7 +10,13 @@ description: |-
     the one on which it is running.
     <pre> HostLimit = no </pre>
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    在中央日志服务器上，希望 Logwatch 汇总所有 syslog 条目，包括并非源自日志服务器本身的条目。<tt>HostLimit</tt> 设置指示 Logwatch 报告所有主机，而不仅是其运行所在的主机。
+    <pre> HostLimit = no</pre>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    在中央日志服务器上汇总所有主机的 syslog 条目，可使管理员在一个位置审查整个环境的日志并发现跨主机事件。
 
 severity: unknown
 

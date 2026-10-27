@@ -10,10 +10,20 @@ description: |-
     </pre>
     If any output returned has a permission set greater than "2750", this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    验证 /run/log/journal 和 /var/log/journal 目录的权限设置为 "2750" 或更严格，使用以下命令：
+    <pre>
+    $ sudo find /run/log/journal /var/log/journal  -type d -exec stat -c "%n %a" {} \;
+    </pre>
+    如果返回的任何输出显示权限比 "2750" 更宽松，则构成发现项。
+
 rationale: |-
     Any operating system providing too much information in error messages risks
     compromising the data and security of the structure, and content of error messages
     needs to be carefully considered by the organization.
+
+    <p><strong>中文理由：</strong></p>
+    在错误消息中提供过多信息的任何操作系统都可能危及数据以及错误消息结构和内容的安全性，组织必须审慎考虑错误消息的内容。
 
 severity: medium
 

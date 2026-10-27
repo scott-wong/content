@@ -10,9 +10,16 @@ description: |-
     media which should not exist in the lines:
     <pre>set root='hd0,msdos1'</pre>
 
+    <p><strong>中文说明：</strong></p>
+    系统不得允许将可移动介质用作引导加载程序。请移除从可移动介质启动系统的其他方法。<tt>usb0</tt>、<tt>cd</tt>、<tt>fd0</tt> 等是可移动介质的示例，它们不应出现在以下行中：
+    <pre>set root='hd0,msdos1'</pre>
+
 rationale: |-
     Malicious users with removable boot media can gain access to a system
     configured to use removable media as the boot loader.
+
+    <p><strong>中文理由：</strong></p>
+    拥有可移动启动介质的恶意用户可能获得对配置为使用可移动介质作为引导加载程序的系统的访问权限。
 
 severity: medium
 

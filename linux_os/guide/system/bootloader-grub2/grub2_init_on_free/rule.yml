@@ -5,10 +5,16 @@ title: 'The system must booted with init_on_free=1'
 description: |-
     Setting <tt>init_on_free=1</tt> on boot guarantees that pages and heap objects are initialized right after they're freed, so it won't be possible to access stale data by using a dangling pointer.
 
+    <p><strong>中文说明：</strong></p>
+    在启动时设置 <tt>init_on_free=1</tt> 可确保页和堆对象在释放后立即初始化，因此无法通过悬空指针访问陈旧数据。
+
 
 rationale: |-
     <tt>init_on_free</tt> is a Linux kernel boot parameter that enhances security by initializing memory regions when they are freed, preventing data leakage.
     This process ensures that stale data in freed memory cannot be accessed by malicious programs.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>init_on_free</tt> 是 Linux 内核启动参数，可在释放内存区域时对其进行初始化，从而增强安全性并防止数据泄露。此过程确保恶意程序无法访问已释放内存中的陈旧数据。
 
 severity: medium
 

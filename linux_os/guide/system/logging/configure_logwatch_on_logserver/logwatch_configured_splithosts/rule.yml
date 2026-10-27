@@ -10,7 +10,13 @@ description: |-
     and that information is almost always necessary
     <pre> SplitHosts = yes </pre>
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    如果设置了 <tt>SplitHosts</tt>，Logwatch 将按主机名分隔条目。这会使报告更长，但显著提高可用性。如果未设置，则 Logwatch 不会报告生成给定日志条目的主机，而该信息几乎总是必需的。
+    <pre> SplitHosts = yes</pre>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    按主机名分隔日志条目可保留事件来源，使报告更便于调查和问责。
 
 severity: unknown
 

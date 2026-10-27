@@ -14,8 +14,18 @@ description: |-
     If the system architecture is x86_64, the value should be 65536.
     If the system architecture is aarch64, the value should be 32768.
 
+    <p><strong>中文说明：</strong></p>
+    这是低端虚拟内存中应防止用户空间分配的部分。此配置从内核 3.14 开始可用，但如果发行版回移该功能，也可能可用。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_DEFAULT_MMAP_MIN_ADDR</tt> 的配置值，请运行：
+    <tt>grep CONFIG_DEFAULT_MMAP_MIN_ADDR /boot/config-*</tt>
+    对于每个已安装内核，应返回一行包含值的配置。如果系统架构为 x86_64，该值应为 65536；如果系统架构为 aarch64，该值应为 32768。
+
 rationale: |-
     Keeping a user from writing to low pages can help reduce the impact of kernel NULL pointer bugs.
+
+    <p><strong>中文理由：</strong></p>
+    防止用户写入低端页面有助于降低内核空指针缺陷的影响。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

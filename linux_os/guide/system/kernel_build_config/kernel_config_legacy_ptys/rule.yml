@@ -8,8 +8,16 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_LEGACY_PTYS", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    禁用用于伪终端主设备的传统 Linux BSD 风格终端名称 /dev/ptyxx，以及用于从设备的 /dev/ttyxx，仅使用现代 ptys（devpts）接口。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_LEGACY_PTYS</tt> 的配置值，请运行 <tt>grep CONFIG_LEGACY_PTYS /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。
+
 rationale: |-
     The legacy scheme has a number of security problems.
+
+    <p><strong>中文理由：</strong></p>
+    传统方案存在若干安全问题。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

@@ -13,10 +13,19 @@ description: |-
     owned by an interactive user. It also ensures that interactive users are
     owners of one and only one home directory.
 
+    <p><strong>中文说明：</strong></p>
+    将交互用户主目录的所有者更改为正确所有者。要更改交互用户主目录的所有者，请使用以下命令：
+    <pre>$ sudo chown <i>USER</i> /home/<i>USER</i></pre>
+
+    此规则确保每个交互用户的主目录均由交互用户拥有，并确保交互用户仅是一个主目录的所有者。
+
 rationale: |-
     If a local interactive user does not own their home directory, unauthorized
     users could access or modify the user's files, and the users may not be able to
     access their own files.
+
+    <p><strong>中文理由：</strong></p>
+    如果本地交互用户不拥有其主目录，未授权用户可能访问或修改该用户的文件，而该用户可能无法访问自己的文件。
 
 severity: medium
 

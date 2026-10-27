@@ -9,9 +9,15 @@ description: |-
     GRUB 2 command line for the Linux operating system.
     {{{ describe_grub2_argument("vsyscall=none") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    要禁用虚拟系统调用，请将参数 <tt>vsyscall=none</tt> 添加到 Linux 操作系统的默认 GRUB 2 命令行。确保将该参数添加到 <tt>/etc/default/grub</tt> 的默认 Grub2 命令行中；配置后，更新已安装内核的命令行。
+
 rationale: |-
     Virtual Syscalls provide an opportunity of attack for a user who has control
     of the return instruction pointer.
+
+    <p><strong>中文理由：</strong></p>
+    虚拟系统调用为能够控制返回指令指针的用户提供了攻击机会。
 
 severity: medium
 

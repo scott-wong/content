@@ -10,9 +10,18 @@ description: |-
     <pre>echo 'global(DefaultNetstreamDriverCAFile="{{{ rsyslog_cafile }}}")' >> /etc/rsyslog.conf</pre>
     Replace the <tt>{{{ rsyslog_cafile }}}</tt> in the above command with the path to the file with CA certificate generated for the purpose of remote logging.
 
+    <p><strong>中文说明：</strong></p>
+    使用传输层安全（TLS）配置 <tt>rsyslog</tt> 向远程服务器记录日志时，请在 <tt>/etc/rsyslog.conf</tt> 中为 <tt>DefaultNetstreamDriverCAFile</tt> 全局选项设置正确的 CA 证书路径，例如使用以下命令：
+    <pre>echo 'global(DefaultNetstreamDriverCAFile="{{{ rsyslog_cafile }}}")' >> /etc/rsyslog.conf</pre>
+    将上述命令中的 <tt>{{{ rsyslog_cafile }}}</tt> 替换为远程日志记录所生成 CA 证书文件的路径。
+
 rationale: |-
     The CA certificate needs to be set or <tt>rsyslog.service</tt>
     fails to start with
+    <pre>error: ca certificate is not set, cannot continue</pre>
+
+    <p><strong>中文理由：</strong></p>
+    必须设置 CA 证书，否则 <tt>rsyslog.service</tt> 将无法启动，并显示：
     <pre>error: ca certificate is not set, cannot continue</pre>
 
 severity: medium

@@ -15,6 +15,17 @@ description: |-
     {{{ describe_file_permissions(file="/var/log/journal/.*/system.journal", perms="0640") }}}
     {{%- endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{%- if 'ubuntu' in product %}}
+    验证 /run/log/journal 和 /var/log/journal 目录中的所有文件权限设置为 "640" 或更严格，使用以下命令：
+    <pre>
+    $ sudo find /run/log/journal /var/log/journal  -type f -exec stat -c "%n %a" {} \;
+    </pre>
+    如果返回的任何输出显示权限比 "640" 更宽松，则构成发现项。
+    {{%- else %}}
+    文件 <tt>/var/log/journal/.*/system.journal</tt> 的文件权限必须为 <tt>0640</tt>。
+    {{%- endif %}}
+
 rationale: |-
     {{%- if 'ubuntu' in product %}}
     Any operating system providing too much information in error messages risks
@@ -22,6 +33,13 @@ rationale: |-
     needs to be carefully considered by the organization.
     {{%- else %}}
     RHCOS must protect system  journal file from any type of unauthorized access by setting file permissions.
+    {{%- endif %}}
+
+    <p><strong>中文理由：</strong></p>
+    {{%- if 'ubuntu' in product %}}
+    在错误消息中提供过多信息的任何操作系统都可能危及数据以及错误消息结构和内容的安全性，组织必须审慎考虑错误消息的内容。
+    {{%- else %}}
+    RHCOS 必须通过设置文件权限来保护系统 journal 文件，防止任何类型的未授权访问。
     {{%- endif %}}
 
 identifiers:

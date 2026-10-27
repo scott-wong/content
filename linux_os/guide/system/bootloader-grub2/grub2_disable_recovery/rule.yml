@@ -10,9 +10,16 @@ description: |-
     also required to change the runtime configuration, run:
     <pre>$ sudo {{{ grub_command("update") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    {{{ full_name }}} 系统支持可用于阻止启动服务的 "recovery boot" 选项。应将 <tt>/etc/default/grub</tt> 中的 <tt>GRUB_DISABLE_RECOVERY</tt> 配置选项设置为 <tt>true</tt>，以禁用生成恢复模式菜单项。还需要更改运行时配置，请运行：
+    <pre>$ sudo {{{ grub_command("update") }}}</pre>
+
 rationale: |-
     Using recovery boot, the console user could disable auditing, firewalls,
     or other services, weakening system security.
+
+    <p><strong>中文理由：</strong></p>
+    使用恢复启动时，控制台用户可能禁用审计、防火墙或其他服务，从而削弱系统安全性。
 
 severity: medium
 

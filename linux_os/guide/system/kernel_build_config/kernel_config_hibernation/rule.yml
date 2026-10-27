@@ -9,8 +9,17 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_HIBERNATION", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    启用挂起到磁盘（STD）功能，用户界面中通常称为“休眠”。STD 会为系统创建检查点并关闭电源，然后在重启时恢复该检查点。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_HIBERNATION</tt> 的配置值，请运行：
+    <tt>grep CONFIG_HIBERNATION /boot/config-*</tt>
+    值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或没有行。
+
 rationale: |-
     Suspending to disk allows one to replace the running kernel.
+
+    <p><strong>中文理由：</strong></p>
+    挂起到磁盘允许替换正在运行的内核。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

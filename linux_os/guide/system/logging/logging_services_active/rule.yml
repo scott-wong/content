@@ -9,9 +9,19 @@ description: |-
     </pre>
     The command should return at least one <tt>active</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    确保某个日志系统处于活动状态且正在使用。
+    <pre>
+    systemctl is-active rsyslog syslog-ng systemd-journald
+    </pre>
+    该命令应至少返回一个 <tt>active</tt>。
+
 rationale: |-
     The system should have one active logging service to avoid conflicts
     and ensure consistency.
+
+    <p><strong>中文理由：</strong></p>
+    系统应有一个活动日志服务，以避免冲突并确保一致性。
 
 severity: medium
 

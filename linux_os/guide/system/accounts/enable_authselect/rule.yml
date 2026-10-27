@@ -7,6 +7,9 @@ description: |-
     Configure user authentication setup to use the <tt>authselect</tt> tool.
     If authselect profile is selected, the rule will enable the {{{ xccdf_value("var_authselect_profile") }}} profile.
 
+    <p><strong>中文说明：</strong></p>
+    将用户身份验证设置配置为使用 <tt>authselect</tt> 工具。如果选择了 authselect 配置档，则该规则将启用 {{{ xccdf_value("var_authselect_profile") }}} 配置档。
+
 rationale: |-
     Authselect is a successor to authconfig.
     It is a tool to select system authentication and identity sources from a list of supported
@@ -14,6 +17,11 @@ rationale: |-
 
     That way, it avoids potential breakage of configuration, as it ships several tested profiles
     that are well tested and supported to solve different use-cases.
+
+    <p><strong>中文理由：</strong></p>
+    Authselect 是 authconfig 的后继工具。它可从受支持的配置档列表中选择系统身份验证和身份来源，而不是让管理员手动构建 PAM 堆栈。
+
+    这样可避免潜在的配置损坏，因为它提供多个经过充分测试并受支持的配置档，以满足不同用例。
 
 severity: medium
 

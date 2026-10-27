@@ -11,10 +11,19 @@ description: |-
     These scripts are also valid files to set umask value. Therefore, they should also be
     considered during the check and properly remediated, if necessary.
 
+    <p><strong>中文说明：</strong></p>
+    为确保由 <tt>/etc/profile</tt> 控制的默认 umask 设置正确，请在 <tt>/etc/profile</tt> 中添加或修正 <tt>umask</tt> 设置，使其如下所示：
+    <pre>umask {{{ xccdf_value("var_accounts_user_umask") }}}</pre>
+
+    请注意，<tt>/etc/profile</tt> 还会读取 <tt>/etc/profile.d</tt> 目录中的脚本。这些脚本也是设置 umask 值的有效文件。因此，在检查时也应考虑这些脚本，并在必要时对其进行正确修复。
+
 rationale: |-
     The umask value influences the permissions assigned to files when they are created.
     A misconfigured umask value could result in files with excessive permissions that can be read or
     written to by unauthorized users.
+
+    <p><strong>中文理由：</strong></p>
+    umask 值会影响创建文件时分配的权限。配置错误的 umask 值可能导致文件权限过多，使未授权用户能够读取或写入这些文件。
 
 severity: medium
 

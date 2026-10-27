@@ -9,8 +9,16 @@ description: |-
 
     {{{ describe_kernel_build_config("CONFIG_KEXEC", "n") | indent(4) }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>kexec</tt> 是一个系统调用，能够关闭当前内核并启动另一个内核。它类似重启，但不依赖系统固件。与重启一样，可通过它启动任何内核，而不仅是 Linux。
+
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_KEXEC</tt> 的配置值，请运行 <tt>grep CONFIG_KEXEC /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。
+
 rationale: |-
     Prohibits the execution of a new kernel image after reboot.
+
+    <p><strong>中文理由：</strong></p>
+    禁止在重启后执行新的内核映像。
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}
