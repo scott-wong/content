@@ -29,10 +29,10 @@ description: |-
     {{%- endif %}}
 
     <p><strong>中文说明：</strong></p>
-    grub2 引导加载程序应启用超级用户账户和密码保护，以保护启动时设置。<br /><br />
+    <p>grub2 引导加载程序应启用超级用户账户和密码保护，以保护启动时设置。<br /><br />
     为获得最大保护，请选择名称唯一的受密码保护超级用户账户，并修改 <tt>/etc/grub.d/01_users</tt> 配置文件以反映账户名称更改。<br /><br />
     不要为 grub2 超级用户账户使用 root、admin 或 administrator 等常见管理员账户名。<br /><br />
-    将超级用户更改为其他用户名（默认为 'root'）。
+    将超级用户更改为其他用户名（默认为 'root'）。</p>
     <pre>$ sed -i 's/\(set superusers=\).*/\1"&lt;unique user ID&gt;"/g' /etc/grub.d/01_users</pre>
     上述行后必须跟以下行：
     <pre>export superusers</pre>
@@ -48,7 +48,7 @@ rationale: |-
     Having a non-default grub superuser username makes password-guessing attacks less effective.
 
     <p><strong>中文理由：</strong></p>
-    使用非默认的 grub 超级用户名可降低密码猜测攻击的有效性。
+    <p>使用非默认的 grub 超级用户名可降低密码猜测攻击的有效性。</p>
 
 severity: high
 

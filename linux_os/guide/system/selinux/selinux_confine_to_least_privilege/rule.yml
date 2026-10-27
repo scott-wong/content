@@ -13,7 +13,7 @@ description: |-
     <pre>$ sudo semanage -m user_u -R user_r</pre>
 
     <p><strong>中文说明：</strong></p>
-    将操作系统配置为将 SELinux 用户限制在符合最小权限的角色。使用以下命令将 "staff_u" SELinux 用户映射到 "staff_r" 和 "sysadm_r" 角色：
+    <p>将操作系统配置为将 SELinux 用户限制在符合最小权限的角色。使用以下命令将 "staff_u" SELinux 用户映射到 "staff_r" 和 "sysadm_r" 角色：</p>
     <pre>$ sudo semanage user -m staff_u -R staff_r -R sysadm_r</pre>
     <br /><br />
     使用以下命令将 "user_u" SELinux 用户映射到 "user_r" 角色：
@@ -32,9 +32,9 @@ rationale: |-
     of privileged functions that require protection from non-privileged users.
 
     <p><strong>中文理由：</strong></p>
-    防止非特权用户执行特权功能，可降低未授权个人或进程获得不必要的信息或权限的风险。
+    <p>防止非特权用户执行特权功能，可降低未授权个人或进程获得不必要的信息或权限的风险。
     <br /><br />
-    特权功能包括建立账户、执行系统完整性检查或管理加密密钥管理活动等。非特权用户是指不具备适当授权的个人。规避入侵检测和防御机制或恶意代码保护机制，就是需要防止非特权用户执行的特权功能示例。
+    特权功能包括建立账户、执行系统完整性检查或管理加密密钥管理活动等。非特权用户是指不具备适当授权的个人。规避入侵检测和防御机制或恶意代码保护机制，就是需要防止非特权用户执行的特权功能示例。</p>
 
 severity: medium
 

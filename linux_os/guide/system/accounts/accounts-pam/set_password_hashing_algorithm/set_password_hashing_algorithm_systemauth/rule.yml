@@ -29,11 +29,11 @@ description: |-
     {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} algorithm.
 
     <p><strong>中文说明：</strong></p>
-    可配置 PAM 系统服务，使其仅存储密码的加密表示。在 "{{{ pam_passwd_file_path }}}" 中，文件的 <tt>password</tt> 部分控制密码更改期间执行哪些 PAM 模块。
+    <p>可配置 PAM 系统服务，使其仅存储密码的加密表示。在 "{{{ pam_passwd_file_path }}}" 中，文件的 <tt>password</tt> 部分控制密码更改期间执行哪些 PAM 模块。
 
     将 <tt>password</tt> 部分中的 <tt>pam_unix.so</tt> 模块设置为包含选项 <tt>{{{ xccdf_value("var_password_hashing_algorithm_pam") }}}</tt>，并且不包含其他哈希算法，如下所示：
     <br />
-    {{% if 'sle' in product or 'slmicro' in product %}}
+    {{% if 'sle' in product or 'slmicro' in product %}}</p>
     <pre>password    required    pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></pre>
     {{% elif 'ubuntu' in product or 'debian' in product %}}
     <pre>password    [success=1 default=ignore]   pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></pre>
@@ -55,7 +55,7 @@ rationale: |-
     algorithm that makes password cracking attacks more difficult.
 
     <p><strong>中文理由：</strong></p>
-    密码必须始终受到保护，而加密是保护密码的标准方法。如果密码未加密，它们可被明文读取并轻易泄露。使用弱算法加密的密码并不比明文存储更受保护。<br /><br />此设置确保用户和组账户管理实用程序配置为仅存储密码的加密表示。此外，<tt>/etc/libuser.conf</tt> 中的 <tt>crypt_style</tt> 配置选项确保使用强哈希算法，使密码破解攻击更加困难。
+    <p>密码必须始终受到保护，而加密是保护密码的标准方法。如果密码未加密，它们可被明文读取并轻易泄露。使用弱算法加密的密码并不比明文存储更受保护。<br /><br />此设置确保用户和组账户管理实用程序配置为仅存储密码的加密表示。此外，<tt>/etc/libuser.conf</tt> 中的 <tt>crypt_style</tt> 配置选项确保使用强哈希算法，使密码破解攻击更加困难。</p>
 
 severity: medium
 

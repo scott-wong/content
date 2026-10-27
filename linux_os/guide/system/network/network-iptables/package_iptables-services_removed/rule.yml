@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_remove(package="iptables-services") }}}
 
     <p><strong>中文说明：</strong></p>
-    应移除 <tt>iptables-services</tt> 软件包。
+    <p>应移除 <tt>iptables-services</tt> 软件包。</p>
 
 rationale: |-
     <tt>iptables-services</tt> provides the services iptables and ip6tables that have been split
@@ -17,7 +17,7 @@ rationale: |-
     firewalld is used.
 
     <p><strong>中文理由：</strong></p>
-    <tt>iptables-services</tt> 提供 iptables 和 ip6tables 服务，这些服务已从基础软件包中拆分出来，因为它们默认不再处于活动状态。这些服务在系统启动期间加载 iptables 规则，也允许在运行时重新加载 iptables 规则。这些 iptables 服务与 firewalld 冲突，因此如果使用 firewalld，应移除它们。
+    <p><tt>iptables-services</tt> 提供 iptables 和 ip6tables 服务，这些服务已从基础软件包中拆分出来，因为它们默认不再处于活动状态。这些服务在系统启动期间加载 iptables 规则，也允许在运行时重新加载 iptables 规则。这些 iptables 服务与 firewalld 冲突，因此如果使用 firewalld，应移除它们。</p>
 
 severity: medium
 

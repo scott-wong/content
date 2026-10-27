@@ -15,7 +15,7 @@ rationale: |-
     Offloading is a common process in information systems with limited audit storage capacity
 
     <p><strong>中文理由：</strong></p>
-    存储在一个位置的信息容易遭受意外或偶然的删除或更改。对于审计存储容量有限的系统，卸载是常见做法。
+    <p>存储在一个位置的信息容易遭受意外或偶然的删除或更改。对于审计存储容量有限的系统，卸载是常见做法。</p>
 
 severity: medium
 

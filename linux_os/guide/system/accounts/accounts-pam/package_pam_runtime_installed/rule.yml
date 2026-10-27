@@ -6,14 +6,14 @@ description: |-
     {{{ describe_package_install(package="libpam-runtime") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>libpam-runtime</tt> 软件包。
+    <p>应安装 <tt>libpam-runtime</tt> 软件包。</p>
 
 rationale: |-
     libpam-runtime contains configuration that is needed
     by other rules when configuring PAM options.
 
     <p><strong>中文理由：</strong></p>
-    libpam-runtime 包含配置 PAM 选项时其他规则所需的配置。
+    <p>libpam-runtime 包含配置 PAM 选项时其他规则所需的配置。</p>
 
 severity: medium
 

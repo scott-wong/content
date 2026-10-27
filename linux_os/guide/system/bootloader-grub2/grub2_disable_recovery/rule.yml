@@ -19,7 +19,7 @@ rationale: |-
     or other services, weakening system security.
 
     <p><strong>中文理由：</strong></p>
-    使用恢复启动时，控制台用户可能禁用审计、防火墙或其他服务，从而削弱系统安全性。
+    <p>使用恢复启动时，控制台用户可能禁用审计、防火墙或其他服务，从而削弱系统安全性。</p>
 
 severity: medium
 

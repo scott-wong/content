@@ -9,7 +9,7 @@ description: |-
     {{{ describe_file_owner(file=grub2_boot_path ~ "/user.cfg", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>{{{ grub2_boot_path }}}/user.cfg</tt> 的文件所有者应为 <tt>root</tt>，以防止读取或修改该文件。
+    <p>文件 <tt>{{{ grub2_boot_path }}}/user.cfg</tt> 的文件所有者应为 <tt>root</tt>，以防止读取或修改该文件。</p>
 
 rationale: |-
     Only root should be able to modify important boot parameters. Also, non-root users who read
@@ -17,7 +17,7 @@ rationale: |-
     exploit them.
 
     <p><strong>中文理由：</strong></p>
-    只有 root 才应能够修改重要启动参数。读取启动参数的非 root 用户还可能识别启动时的安全弱点并加以利用。
+    <p>只有 root 才应能够修改重要启动参数。读取启动参数的非 root 用户还可能识别启动时的安全弱点并加以利用。</p>
 
 severity: medium
 

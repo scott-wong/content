@@ -16,16 +16,16 @@ description: |-
     and modify <tt>/etc/default/grub</tt> if necessary.
 
     <p><strong>中文说明：</strong></p>
-    使用 64 位 x86 内核软件包的系统无需安装 kernel-PAE 软件包，因为 64 位 x86 内核已包含此支持。但是，如果系统为 32 位且如上一节所述支持 PAE 和 NX 功能，则应安装 kernel-PAE 软件包以启用 XD 或 NX 支持。
+    <p>使用 64 位 x86 内核软件包的系统无需安装 kernel-PAE 软件包，因为 64 位 x86 内核已包含此支持。但是，如果系统为 32 位且如上一节所述支持 PAE 和 NX 功能，则应安装 kernel-PAE 软件包以启用 XD 或 NX 支持。
     应安装 <tt>kernel-PAE</tt> 软件包。
-    安装过程还应配置引导加载程序在启动时加载新内核。重启后验证这一点，必要时修改 <tt>/etc/default/grub</tt>。
+    安装过程还应配置引导加载程序在启动时加载新内核。重启后验证这一点，必要时修改 <tt>/etc/default/grub</tt>。</p>
 
 rationale: |-
     On 32-bit systems that support the XD or NX bit, the vendor-supplied
     PAE kernel is required to enable either Execute Disable (XD) or No Execute (NX) support.
 
     <p><strong>中文理由：</strong></p>
-    在支持 XD 或 NX 位的 32 位系统上，需要供应商提供的 PAE 内核才能启用 Execute Disable（XD）或 No Execute（NX）支持。
+    <p>在支持 XD 或 NX 位的 32 位系统上，需要供应商提供的 PAE 内核才能启用 Execute Disable（XD）或 No Execute（NX）支持。</p>
 
 severity: unknown
 

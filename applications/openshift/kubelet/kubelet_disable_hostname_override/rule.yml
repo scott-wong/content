@@ -20,14 +20,14 @@ description: |-
     associate kubelet logs with the appropriate node.
 
     <p><strong>中文说明：</strong></p>
-    通常，OpenShift 允许 kubelet 从云提供商本身或节点主机名获取主机名。这可确保部署所分配的 PKI 使用适当的值、保持有效，并在集群整个生命周期内持续正常工作。此过程不使用 IP 地址，因此安全分析人员可以更轻松地将 kubelet 日志与相应节点关联。
+    <p>通常，OpenShift 允许 kubelet 从云提供商本身或节点主机名获取主机名。这可确保部署所分配的 PKI 使用适当的值、保持有效，并在集群整个生命周期内持续正常工作。此过程不使用 IP 地址，因此安全分析人员可以更轻松地将 kubelet 日志与相应节点关联。</p>
 rationale: |-
     Allowing hostnames to be overridden creates issues around resolving nodes
     in addition to TLS configuration, certificate validation, and log correlation
     and validation.
 
     <p><strong>中文理由：</strong></p>
-    允许覆盖主机名会在节点解析以及 TLS 配置、证书验证、日志关联和验证方面引发问题。
+    <p>允许覆盖主机名会在节点解析以及 TLS 配置、证书验证、日志关联和验证方面引发问题。</p>
 {{%- if product == "ocp4"  %}}
     However, in some cases explicit overriding this parameter is
     necessary to ensure that the appropriate node name stays as it is in case of

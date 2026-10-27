@@ -13,9 +13,9 @@ description: |-
     <tt>/etc/exports</tt> contains the option <tt>insecure</tt>.
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，服务器 NFS 实现要求所有客户端请求均来自小于 1024 的端口。如果组织能够控制连接到其网络的系统，并且在边界防火墙禁止 NFS 请求，这可为防范未授权用户的恶意请求提供一定保护。因此，不应更改默认设置。
+    <p>默认情况下，服务器 NFS 实现要求所有客户端请求均来自小于 1024 的端口。如果组织能够控制连接到其网络的系统，并且在边界防火墙禁止 NFS 请求，这可为防范未授权用户的恶意请求提供一定保护。因此，不应更改默认设置。
     <br /><br />
-    为确保未更改默认设置，请确保 <tt>/etc/exports</tt> 中没有任何行包含 <tt>insecure</tt> 选项。
+    为确保未更改默认设置，请确保 <tt>/etc/exports</tt> 中没有任何行包含 <tt>insecure</tt> 选项。</p>
 
 rationale: |-
     Allowing client requests to be made from ports higher than 1024 could allow a unprivileged
@@ -23,7 +23,7 @@ rationale: |-
     attacker could gain access to data on the NFS server.
 
     <p><strong>中文理由：</strong></p>
-    允许客户端请求来自高于 1024 的端口可能使未授权用户发起 NFS 连接。如果未授权用户账户已失陷，攻击者可能访问 NFS 服务器上的数据。
+    <p>允许客户端请求来自高于 1024 的端口可能使未授权用户发起 NFS 连接。如果未授权用户账户已失陷，攻击者可能访问 NFS 服务器上的数据。</p>
 
 severity: unknown
 

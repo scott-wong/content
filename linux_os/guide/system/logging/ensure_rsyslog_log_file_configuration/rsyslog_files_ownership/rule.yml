@@ -36,7 +36,7 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>rsyslog</tt> 写入的所有日志文件的所有者应为
+    <p><tt>rsyslog</tt> 写入的所有日志文件的所有者应为
     {{% if product in ['ubuntu2204', 'ubuntu2404'] %}}
     <tt>syslog</tt>。
     {{% elif 'debian' in product or 'ubuntu' in product %}}
@@ -44,7 +44,7 @@ description: |-
     {{% else %}}
     <tt>root</tt>。
     {{% endif %}}
-    这些日志文件由 <tt>/etc/rsyslog.conf</tt> 中每条 Rule 行的第二部分确定，通常都位于 <tt>/var/log</tt>。对于 <tt>/etc/rsyslog.conf</tt> 中引用的每个日志文件 <i>LOGFILE</i>，请运行以下命令检查其所有者：
+    这些日志文件由 <tt>/etc/rsyslog.conf</tt> 中每条 Rule 行的第二部分确定，通常都位于 <tt>/var/log</tt>。对于 <tt>/etc/rsyslog.conf</tt> 中引用的每个日志文件 <i>LOGFILE</i>，请运行以下命令检查其所有者：</p>
     <pre>$ ls -l <i>LOGFILE</i></pre>
     如果所有者不是
     {{% if product in ['ubuntu2204','ubuntu2404'] %}}
@@ -69,7 +69,7 @@ rationale: |-
     protected from unauthorized access.
 
     <p><strong>中文理由：</strong></p>
-    rsyslog 生成的日志文件包含有关系统配置、用户身份验证及其他此类信息的重要数据。应保护日志文件免遭未经授权访问。
+    <p>rsyslog 生成的日志文件包含有关系统配置、用户身份验证及其他此类信息的重要数据。应保护日志文件免遭未经授权访问。</p>
 
 severity: medium
 

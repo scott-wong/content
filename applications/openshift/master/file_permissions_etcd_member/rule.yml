@@ -7,7 +7,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/kubernetes/manifests/etcd-pod.yaml", perms="0600") }}}
 
     <p><strong>中文说明：</strong></p>
-    要正确设置 <tt>/etc/kubernetes/manifests/etcd-pod.yaml</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/manifests/etcd-pod.yaml</tt>。
+    <p>要正确设置 <tt>/etc/kubernetes/manifests/etcd-pod.yaml</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/manifests/etcd-pod.yaml</tt>。</p>
 
 rationale: |-
     The etcd pod specification file controls various parameters that
@@ -18,7 +18,7 @@ rationale: |-
     writable by only the administrators on the system.
 
     <p><strong>中文理由：</strong></p>
-    etcd pod 规范文件控制用于设置主节点上 etcd 服务行为的各种参数。etcd 是 Kubernetes 用于持久存储其所有 REST API 对象的高可用键值存储。应限制该文件的权限以保持文件完整性。该文件应仅允许系统管理员写入。
+    <p>etcd pod 规范文件控制用于设置主节点上 etcd 服务行为的各种参数。etcd 是 Kubernetes 用于持久存储其所有 REST API 对象的高可用键值存储。应限制该文件的权限以保持文件完整性。该文件应仅允许系统管理员写入。</p>
 
 severity: medium
 

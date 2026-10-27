@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="mozilla_plugin_use_gps") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>mozilla_plugin_use_gps</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mozilla_plugin_use_gps</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mozilla_plugin_use_gps off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>mozilla_plugin_use_gps</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mozilla_plugin_use_gps</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mozilla_plugin_use_gps off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 Mozilla 插件访问 GPS 定位能力，降低位置信息暴露的风险。
+    <p>禁用后，可防止 Mozilla 插件访问 GPS 定位能力，降低位置信息暴露的风险。</p>
 
 severity: medium
 

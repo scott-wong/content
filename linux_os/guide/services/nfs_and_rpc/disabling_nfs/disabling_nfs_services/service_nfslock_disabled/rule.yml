@@ -11,12 +11,12 @@ description: |-
     {{{ describe_service_disable(service="nfslock") }}}
 
     <p><strong>中文说明：</strong></p>
-    网络文件系统锁（nfslock）服务会启动所需的远程过程调用（RPC）进程，使客户端能够在服务器上锁定文件。如果本地系统未配置为挂载 NFS 文件系统，则应禁用此服务。应禁用 <tt>nfslock</tt> 服务。
+    <p>网络文件系统锁（nfslock）服务会启动所需的远程过程调用（RPC）进程，使客户端能够在服务器上锁定文件。如果本地系统未配置为挂载 NFS 文件系统，则应禁用此服务。应禁用 <tt>nfslock</tt> 服务。</p>
 
 rationale: |-
 
     <p><strong>中文理由：</strong></p>
-    如果本地系统未配置挂载 NFS 文件系统，nfslock 及相关 RPC 锁定进程并非必需。禁用这些服务可减少不必要的 RPC 暴露和攻击面。
+    <p>如果本地系统未配置挂载 NFS 文件系统，nfslock 及相关 RPC 锁定进程并非必需。禁用这些服务可减少不必要的 RPC 暴露和攻击面。</p>
 
 severity: unknown
 

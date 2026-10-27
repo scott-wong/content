@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_group_owner(file="/etc/group-", group="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>/etc/group-</tt> 的所属组正确设置为 <tt>root</tt>，请运行 <tt>sudo chgrp root /etc/group-</tt>。
+    <p>要将 <tt>/etc/group-</tt> 的所属组正确设置为 <tt>root</tt>，请运行 <tt>sudo chgrp root /etc/group-</tt>。</p>
 
 rationale: |-
     The <tt>/etc/group-</tt> file is a backup file of <tt>/etc/group</tt>, and as such,
@@ -14,7 +14,7 @@ rationale: |-
     Protection of this file is important for system security.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/group-</tt> 文件是 <tt>/etc/group</tt> 的备份文件，因此包含有关系统上已配置组的信息。保护该文件对系统安全很重要。
+    <p><tt>/etc/group-</tt> 文件是 <tt>/etc/group</tt> 的备份文件，因此包含有关系统上已配置组的信息。保护该文件对系统安全很重要。</p>
 
 severity: medium
 

@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/audit/audit.rules", perms="0640") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/audit/audit.rules</tt> 的权限必须为 <tt>0640</tt>。
+    <p>文件 <tt>/etc/audit/audit.rules</tt> 的权限必须为 <tt>0640</tt>。</p>
 
 rationale: |-
     Without the capability to restrict the roles and individuals that can select which events
@@ -17,7 +17,7 @@ rationale: |-
     those responsible for one.
 
     <p><strong>中文理由：</strong></p>
-    如果无法限制可选择审计哪些事件的角色和个人，未授权人员可能阻止对关键事件的审计。配置不当的审计可能因审计日志过载而降低系统性能。配置不当的审计还可能使建立、关联和调查与事件相关的事件或识别事件责任人变得更加困难。
+    <p>如果无法限制可选择审计哪些事件的角色和个人，未授权人员可能阻止对关键事件的审计。配置不当的审计可能因审计日志过载而降低系统性能。配置不当的审计还可能使建立、关联和调查与事件相关的事件或识别事件责任人变得更加困难。</p>
 
 severity: medium
 

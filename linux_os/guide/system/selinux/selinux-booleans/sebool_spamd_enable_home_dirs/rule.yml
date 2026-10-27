@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_enable(sebool="spamd_enable_home_dirs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>spamd_enable_home_dirs</tt> 处于启用状态。如果该设置为禁用状态，应将其启用。
-    应启用 SELinux 布尔值 <tt>spamd_enable_home_dirs</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>spamd_enable_home_dirs</tt> 处于启用状态。如果该设置为禁用状态，应将其启用。
+    应启用 SELinux 布尔值 <tt>spamd_enable_home_dirs</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用此布尔值可允许 spamd 访问用户主目录，以支持垃圾邮件过滤，同时 SELinux 继续限制其他访问。
+    <p>启用此布尔值可允许 spamd 访问用户主目录，以支持垃圾邮件过滤，同时 SELinux 继续限制其他访问。</p>
 
 severity: medium
 

@@ -10,14 +10,14 @@ description: |-
     devices.
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，启用 USBGuard 时会阻止访问所有 USB 设备；如果系统使用 USB 鼠标或键盘，这可能导致系统无法访问。为避免此情况，必须基于当前连接的 USB 设备生成初始策略配置。
+    <p>默认情况下，启用 USBGuard 时会阻止访问所有 USB 设备；如果系统使用 USB 鼠标或键盘，这可能导致系统无法访问。为避免此情况，必须基于当前连接的 USB 设备生成初始策略配置。</p>
 
 rationale: |-
     The <tt>usbguard</tt> must be configured to allow connected USB devices to work
     properly, avoiding the system to become inaccessible.
 
     <p><strong>中文理由：</strong></p>
-    必须配置 <tt>usbguard</tt> 以允许已连接的 USB 设备正常工作，避免系统变得不可访问。
+    <p>必须配置 <tt>usbguard</tt> 以允许已连接的 USB 设备正常工作，避免系统变得不可访问。</p>
 
 severity: medium
 

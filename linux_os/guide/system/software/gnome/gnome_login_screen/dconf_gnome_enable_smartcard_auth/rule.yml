@@ -19,9 +19,9 @@ description: |-
     After the settings have been set, run <tt>dconf update</tt>.
 
     <p><strong>中文说明：</strong></p>
-    在默认图形环境中，可以通过将 <tt>enable-smartcard-authentication</tt> 设置为 <tt>true</tt> 来在登录屏幕上启用智能卡身份验证。
+    <p>在默认图形环境中，可以通过将 <tt>enable-smartcard-authentication</tt> 设置为 <tt>true</tt> 来在登录屏幕上启用智能卡身份验证。
     <br /><br />
-    要启用该功能，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或编辑 <tt>enable-smartcard-authentication</tt>。例如：
+    要启用该功能，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或编辑 <tt>enable-smartcard-authentication</tt>。例如：</p>
     <pre>[org/gnome/login-screen]
     enable-smartcard-authentication=true</pre>
     添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
@@ -34,7 +34,7 @@ rationale: |-
     (public key infrastructure) in order to provide and verify credentials.
 
     <p><strong>中文理由：</strong></p>
-    智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）来提供和验证凭据。
+    <p>智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）来提供和验证凭据。</p>
 
 severity: medium
 

@@ -7,7 +7,7 @@ description: |-
     Users must not be allowed to access the shell programs.
 
     <p><strong>中文说明：</strong></p>
-    不得允许用户访问 shell 程序。
+    <p>不得允许用户访问 shell 程序。</p>
 
 rationale: |-
     Shell programs might execute shell escapes and could then perform
@@ -18,7 +18,7 @@ rationale: |-
     unauthorized.
 
     <p><strong>中文理由：</strong></p>
-    shell 程序可能执行 shell 转义，进而执行未授权活动，损害 Web 服务器的安全状态。shell 是作为用户与操作系统之间基本接口的程序。在 Web 服务器环境中，有些 shell 会带来安全风险，有些 shell 则属于未经授权的 shell。
+    <p>shell 程序可能执行 shell 转义，进而执行未授权活动，损害 Web 服务器的安全状态。shell 是作为用户与操作系统之间基本接口的程序。在 Web 服务器环境中，有些 shell 会带来安全风险，有些 shell 则属于未经授权的 shell。</p>
 
 severity: medium
 

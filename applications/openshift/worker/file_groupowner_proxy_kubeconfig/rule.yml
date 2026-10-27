@@ -17,7 +17,7 @@ description: |-
   mounted from the <tt>sdn-config</tt> ConfigMap.
 
   <p><strong>中文说明：</strong></p>
-  为确保 Kubernetes ConfigMap 以正确的所有权挂载到 sdn daemonset Pod 中，请确保 <tt>sdn-config</tt> ConfigMap 使用 ConfigMap 挂载到 <tt>/config</tt> 挂载点，并确保 <tt>sdn</tt> 容器通过 <tt>--proxy-config</tt> 命令行选项指向该配置。运行：
+  <p>为确保 Kubernetes ConfigMap 以正确的所有权挂载到 sdn daemonset Pod 中，请确保 <tt>sdn-config</tt> ConfigMap 使用 ConfigMap 挂载到 <tt>/config</tt> 挂载点，并确保 <tt>sdn</tt> 容器通过 <tt>--proxy-config</tt> 命令行选项指向该配置。运行：</p>
   <pre> oc get -nopenshift-sdn ds sdn -ojson | jq -r '.spec.template.spec.containers[] | select(.name == "sdn")'</pre>
   并确保 <tt>--proxy-config</tt> 参数指向 <tt>/config/kube-proxy-config.yaml</tt>，且 <tt>config</tt> 挂载点由 <tt>sdn-config</tt> ConfigMap 挂载。
 
@@ -31,9 +31,9 @@ rationale: |-
   file permissions are appropriate for the container taking it into use.
 
   <p><strong>中文理由：</strong></p>
-  kube-proxy 的 kubeconfig 文件为 kube-proxy 服务提供权限。代理 kubeconfig 文件包含有关系统上配置的 OpenShift 集群的管理配置的信息。保护此文件对 OpenShift 安全至关重要。
+  <p>kube-proxy 的 kubeconfig 文件为 kube-proxy 服务提供权限。代理 kubeconfig 文件包含有关系统上配置的 OpenShift 集群的管理配置的信息。保护此文件对 OpenShift 安全至关重要。
 
-  该文件通过 ConfigMap 挂载提供，因此 kubelet 本身会确保文件权限适合使用该文件的容器。
+  该文件通过 ConfigMap 挂载提供，因此 kubelet 本身会确保文件权限适合使用该文件的容器。</p>
 
 severity: medium
 

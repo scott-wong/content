@@ -9,7 +9,7 @@ description: |-
     {{{ describe_package_install(package="iptables-nft") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>iptables-nft</tt> 软件包。
+    <p>应安装 <tt>iptables-nft</tt> 软件包。</p>
 
 rationale: |-
     <tt>iptables-nft</tt> controls the Linux kernel network packet filtering
@@ -17,7 +17,7 @@ rationale: |-
     masquerading, etc.
 
     <p><strong>中文理由：</strong></p>
-    <tt>iptables-nft</tt> 控制 Linux 内核网络数据包过滤代码。<tt>iptables-nft</tt> 允许系统操作员设置防火墙和 IP 伪装等。
+    <p><tt>iptables-nft</tt> 控制 Linux 内核网络数据包过滤代码。<tt>iptables-nft</tt> 允许系统操作员设置防火墙和 IP 伪装等。</p>
 
 severity: medium
 

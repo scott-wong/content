@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.default.accept_redirects", value="0") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>net.ipv4.conf.default.accept_redirects</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.accept_redirects=0</tt>；要持久化，请将 <tt>net.ipv4.conf.default.accept_redirects = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>net.ipv4.conf.default.accept_redirects</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.accept_redirects=0</tt>；要持久化，请将 <tt>net.ipv4.conf.default.accept_redirects = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     ICMP redirect messages are used by routers to inform hosts that a more
@@ -18,7 +18,7 @@ rationale: |-
     be disabled unless absolutely required.
 
     <p><strong>中文理由：</strong></p>
-    ICMP 重定向消息由路由器用于通知主机存在到达特定目标的更直接路由。这些消息会修改主机的路由表且未经身份验证。非法 ICMP 重定向消息可能导致中间人攻击。<br />IPv4 协议的这一功能几乎没有正当用途。除非绝对必要，否则应禁用。
+    <p>ICMP 重定向消息由路由器用于通知主机存在到达特定目标的更直接路由。这些消息会修改主机的路由表且未经身份验证。非法 ICMP 重定向消息可能导致中间人攻击。<br />IPv4 协议的这一功能几乎没有正当用途。除非绝对必要，否则应禁用。</p>
 
 severity: medium
 

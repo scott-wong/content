@@ -12,15 +12,15 @@ description: |-
   [1]https://docs.openshift.com/container-platform/latest/observability/logging/logging-6.0/log6x-about.html
 
   <p><strong>中文说明：</strong></p>
-  OpenShift Logging Operator 能够聚合 OpenShift Container Platform 集群中的所有日志，例如节点系统审计日志、应用程序容器日志和基础设施日志。OpenShift Logging 会聚合整个 OpenShift 集群中的这些日志，并将其存储在默认日志存储中。[1]
+  <p>OpenShift Logging Operator 能够聚合 OpenShift Container Platform 集群中的所有日志，例如节点系统审计日志、应用程序容器日志和基础设施日志。OpenShift Logging 会聚合整个 OpenShift 集群中的这些日志，并将其存储在默认日志存储中。[1]
 
-  [1]https://docs.openshift.com/container-platform/latest/observability/logging/logging-6.0/log6x-about.html
+  [1]https://docs.openshift.com/container-platform/latest/observability/logging/logging-6.0/log6x-about.html</p>
 
 rationale: |-
   OpenShift Logging Operator is able to collect, aggregate, and manage logs.
 
   <p><strong>中文理由：</strong></p>
-  OpenShift Logging Operator 能够收集、聚合和管理日志。
+  <p>OpenShift Logging Operator 能够收集、聚合和管理日志。</p>
 
 identifiers:
   cce@ocp4: CCE-85918-1

@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="tor_bind_all_unreserved_ports") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>tor_bind_all_unreserved_ports</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>tor_bind_all_unreserved_ports</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P tor_bind_all_unreserved_ports off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>tor_bind_all_unreserved_ports</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>tor_bind_all_unreserved_ports</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P tor_bind_all_unreserved_ports off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 Tor 绑定所有未保留端口会扩大其监听和网络暴露范围。
+    <p>允许 Tor 绑定所有未保留端口会扩大其监听和网络暴露范围。</p>
 
 severity: medium
 

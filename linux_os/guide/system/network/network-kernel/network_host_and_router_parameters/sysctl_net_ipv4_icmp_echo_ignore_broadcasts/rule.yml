@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv4.icmp_echo_ignore_broadcasts", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>net.ipv4.icmp_echo_ignore_broadcasts</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1</tt>；要持久化，请将 <tt>net.ipv4.icmp_echo_ignore_broadcasts = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>net.ipv4.icmp_echo_ignore_broadcasts</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.icmp_echo_ignore_broadcasts=1</tt>；要持久化，请将 <tt>net.ipv4.icmp_echo_ignore_broadcasts = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     Responding to broadcast (ICMP) echoes facilitates network mapping
@@ -17,7 +17,7 @@ rationale: |-
     addresses makes the system slightly more difficult to enumerate on the network.
 
     <p><strong>中文理由：</strong></p>
-    响应广播 ICMP 回显有助于网络映射，并为放大攻击提供途径。<br />忽略发送到广播或多播地址的 ICMP 回显请求（ping）可使系统在网络上更难以被枚举。
+    <p>响应广播 ICMP 回显有助于网络映射，并为放大攻击提供途径。<br />忽略发送到广播或多播地址的 ICMP 回显请求（ping）可使系统在网络上更难以被枚举。</p>
 
 severity: medium
 

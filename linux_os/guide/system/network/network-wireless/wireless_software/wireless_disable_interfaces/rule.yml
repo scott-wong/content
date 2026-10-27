@@ -24,10 +24,10 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    停用无线网络接口应能阻止正常使用无线功能。
+    <p>停用无线网络接口应能阻止正常使用无线功能。
     <br /><br />
     {{% if product in ["sle12", "sle15", "slmicro5"] %}}
-    通过为系统中的每个活动 <tt>&lt;WIFI-INTERFACE&gt;</tt> 执行以下命令，将系统配置为禁用无线网络接口：
+    通过为系统中的每个活动 <tt>&lt;WIFI-INTERFACE&gt;</tt> 执行以下命令，将系统配置为禁用无线网络接口：</p>
     <pre>$ sudo wicked ifdown &lt;WIFI-INTERFACE&gt;</pre>
     还要从 <tt>/etc/wicked/ifconfig/&lt;WIFI-INTERFACE&gt;.xml</tt> 删除每个 Wi-Fi 适配器的配置文件，以防止将来建立连接。
     {{% elif 'ubuntu' in product %}}
@@ -48,7 +48,7 @@ rationale: |-
     service to valid network resources.
 
     <p><strong>中文理由：</strong></p>
-    使用无线网络可能向组织网络引入多种攻击途径。恶意关联和自组网等常见攻击途径会使攻击者能够伪造无线接入点（AP），让经过验证的系统连接到恶意 AP，并使攻击者能够监控和记录网络流量。这些恶意 AP 还可用于创建中间人攻击，或被用于对合法网络资源发起拒绝服务攻击。
+    <p>使用无线网络可能向组织网络引入多种攻击途径。恶意关联和自组网等常见攻击途径会使攻击者能够伪造无线接入点（AP），让经过验证的系统连接到恶意 AP，并使攻击者能够监控和记录网络流量。这些恶意 AP 还可用于创建中间人攻击，或被用于对合法网络资源发起拒绝服务攻击。</p>
 
 severity: medium
 

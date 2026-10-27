@@ -43,7 +43,7 @@ rationale: |-
   users to obtain unauthorized access to resources.
 
   <p><strong>中文理由：</strong></p>
-  软件包中的漏洞可能被黑客或恶意用户利用，以获取对资源的未授权访问。
+  <p>软件包中的漏洞可能被黑客或恶意用户利用，以获取对资源的未授权访问。</p>
 
 references:
   nist: CM-6(b)

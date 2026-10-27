@@ -8,14 +8,14 @@ description: |-
     what permissions will be applied to these newly created files.
 
     <p><strong>中文说明：</strong></p>
-    syslog-ng 将创建系统上尚不存在的日志文件。全局 <tt>options</tt> 块中的 <tt>perm()</tt> 选项控制将应用于这些新建文件的权限。
+    <p>syslog-ng 将创建系统上尚不存在的日志文件。全局 <tt>options</tt> 块中的 <tt>perm()</tt> 选项控制将应用于这些新建文件的权限。</p>
 
 rationale: |-
     It is important to ensure that log files have the correct permissions
     to ensure that sensitive data is archived and protected.
 
     <p><strong>中文理由：</strong></p>
-    必须确保日志文件具有正确权限，以保证敏感数据得到归档和保护。
+    <p>必须确保日志文件具有正确权限，以保证敏感数据得到归档和保护。</p>
 
 severity: medium
 

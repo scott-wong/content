@@ -11,7 +11,7 @@ description: |-
     run of ({{{ xccdf_value("var_password_pam_maxrepeat") }}} + 1) or more identical characters.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_pwquality</tt> 模块的 <tt>maxrepeat</tt> 参数控制连续重复字符的要求。设置为正数时，将拒绝包含超过该数量连续字符的密码。修改 <tt>{{{ pwquality_path }}}</tt> 中的 <tt>maxrepeat</tt> 设置，使其等于 {{{ xccdf_value("var_password_pam_maxrepeat") }}}，以防止出现 ({{{ xccdf_value("var_password_pam_maxrepeat") }}} + 1) 个或更多相同字符。
+    <p><tt>pam_pwquality</tt> 模块的 <tt>maxrepeat</tt> 参数控制连续重复字符的要求。设置为正数时，将拒绝包含超过该数量连续字符的密码。修改 <tt>{{{ pwquality_path }}}</tt> 中的 <tt>maxrepeat</tt> 设置，使其等于 {{{ xccdf_value("var_password_pam_maxrepeat") }}}，以防止出现 ({{{ xccdf_value("var_password_pam_maxrepeat") }}} + 1) 个或更多相同字符。</p>
 
 rationale: |-
     Use of a complex password helps to increase the time and resources required to compromise the password.
@@ -25,7 +25,7 @@ rationale: |-
     Passwords with excessive repeating characters may be more vulnerable to password-guessing attacks.
 
     <p><strong>中文理由：</strong></p>
-    使用复杂密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。<br /><br />密码复杂性是决定破解密码所需时间的多个因素之一。密码越复杂，破解前需要测试的可能组合就越多。<br /><br />包含过多重复字符的密码可能更容易受到密码猜测攻击。
+    <p>使用复杂密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。<br /><br />密码复杂性是决定破解密码所需时间的多个因素之一。密码越复杂，破解前需要测试的可能组合就越多。<br /><br />包含过多重复字符的密码可能更容易受到密码猜测攻击。</p>
 
 severity: medium
 

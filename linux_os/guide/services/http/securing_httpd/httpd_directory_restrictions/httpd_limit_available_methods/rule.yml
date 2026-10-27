@@ -20,9 +20,9 @@ description: |-
     &lt;/Directory&gt;</pre>
 
     <p><strong>中文说明：</strong></p>
-    Web 服务器方法在 RFC 2616 第 9 节中定义（<a href="http://www.ietf.org/rfc/rfc2616.txt">http://www.ietf.org/rfc/rfc2616.txt</a>）。如果 Web 服务器不需要实现所有可用方法，则应禁用这些方法。
+    <p>Web 服务器方法在 RFC 2616 第 9 节中定义（<a href="http://www.ietf.org/rfc/rfc2616.txt">http://www.ietf.org/rfc/rfc2616.txt</a>）。如果 Web 服务器不需要实现所有可用方法，则应禁用这些方法。
     <br /><br />
-    注意：<tt>GET</tt> 和 <tt>POST</tt> 是最常用的方法，其他大多数方法仅限于 WebDAV 协议。
+    注意：<tt>GET</tt> 和 <tt>POST</tt> 是最常用的方法，其他大多数方法仅限于 WebDAV 协议。</p>
     <pre>&lt;Directory /var/www/html&gt;
     # ...
        # Only allow specific methods (this command is case-sensitive!)
@@ -37,7 +37,7 @@ rationale: |-
     by limiting the capabilities allowed by the web server.
 
     <p><strong>中文理由：</strong></p>
-    尽量减少 Web 客户端可用的方法数量，可限制 Web 服务器允许的能力，从而降低风险。
+    <p>尽量减少 Web 客户端可用的方法数量，可限制 Web 服务器允许的能力，从而降低风险。</p>
 
 severity: unknown
 

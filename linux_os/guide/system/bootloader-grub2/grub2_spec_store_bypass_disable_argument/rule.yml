@@ -20,7 +20,7 @@ description: |-
     {{{ describe_grub2_argument("spec_store_bypass_disable=" + xccdf_value("var_spec_store_bypass_disable_options")) | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    某些 CPU 容易受到针对业内常见性能优化 Speculative Store Bypass（SSB）的攻击。
+    <p>某些 CPU 容易受到针对业内常见性能优化 Speculative Store Bypass（SSB）的攻击。
 
     在此类情况下，推测执行期间后续加载并不总能观察到对同一内存位置的近期存储。不过，此类存储不太可能发生，因此可在特定推测执行窗口结束、指令引退之前检测到。
 
@@ -29,7 +29,7 @@ description: |-
 
     请通过将参数 <tt>spec_store_bypass_disable={{{ xccdf_value("var_spec_store_bypass_disable_options") }}}</tt> 添加到 Linux 操作系统的默认 GRUB 2 命令行来选择适当的 SSB 状态。
 
-    为确保新安装的内核将 <tt>spec_store_bypass_disable={{{ xccdf_value("var_spec_store_bypass_disable_options") }}}</tt> 作为内核命令行参数，请按产品要求将 <tt>spec_store_bypass_disable={{{ xccdf_value("var_spec_store_bypass_disable_options") }}}</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+    为确保新安装的内核将 <tt>spec_store_bypass_disable={{{ xccdf_value("var_spec_store_bypass_disable_options") }}}</tt> 作为内核命令行参数，请按产品要求将 <tt>spec_store_bypass_disable={{{ xccdf_value("var_spec_store_bypass_disable_options") }}}</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。</p>
 
 rationale: |-
     In vulnerable processors, the speculatively forwarded store can be used in a cache side channel
@@ -37,7 +37,7 @@ rationale: |-
     for example inside the sandboxed code.
 
     <p><strong>中文理由：</strong></p>
-    在存在漏洞的处理器上，推测转发的存储可用于缓存侧信道攻击。例如，读取攻击者无法直接访问的内存，例如沙箱代码内部的内存。
+    <p>在存在漏洞的处理器上，推测转发的存储可用于缓存侧信道攻击。例如，读取攻击者无法直接访问的内存，例如沙箱代码内部的内存。</p>
 
 warnings:
     - performance: Disabling Speculative Store Bypass may impact performance of the system.

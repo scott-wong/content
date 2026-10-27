@@ -6,7 +6,7 @@ description: |-
     Local system users should not have a <tt>.rhost</tt> file in their home directory.
 
     <p><strong>中文说明：</strong></p>
-    本地系统用户的主目录中不应存在 <tt>.rhost</tt> 文件。
+    <p>本地系统用户的主目录中不应存在 <tt>.rhost</tt> 文件。</p>
 
 rationale: |-
     User configuration files with excessive or incorrect access may enable malicious users
@@ -18,7 +18,7 @@ rationale: |-
     without supplying a password).
 
     <p><strong>中文理由：</strong></p>
-    访问权限过多或不正确的用户配置文件可能使恶意用户窃取或修改其他用户的数据，或获得其他用户的系统权限。<tt>.rhost</tt> 文件为 rcp、rlogin、rsh 命令及 rcmd() 函数提供“远程身份验证”数据库。这些文件绕过标准的基于密码的用户身份验证机制。它们指定被视为受信任的远程主机和用户，即允许在不提供密码的情况下访问本地系统。
+    <p>访问权限过多或不正确的用户配置文件可能使恶意用户窃取或修改其他用户的数据，或获得其他用户的系统权限。<tt>.rhost</tt> 文件为 rcp、rlogin、rsh 命令及 rcmd() 函数提供“远程身份验证”数据库。这些文件绕过标准的基于密码的用户身份验证机制。它们指定被视为受信任的远程主机和用户，即允许在不提供密码的情况下访问本地系统。</p>
 
 severity: medium
 

@@ -10,7 +10,7 @@ description: |-
     layer 2 (ARP spoofing, man-in-the-middle).
 
     <p><strong>中文说明：</strong></p>
-    Bridge 类型的 NetworkAttachmentDefinition 必须在其 CNI 配置中设置 <tt>macspoofchk: true</tt>，以便网桥丢弃源 MAC 地址与分配给接口的地址不一致的帧。否则，已失陷的客户机可在二层冒充其他工作负载或基础设施（ARP 欺骗、中间人攻击）。
+    <p>Bridge 类型的 NetworkAttachmentDefinition 必须在其 CNI 配置中设置 <tt>macspoofchk: true</tt>，以便网桥丢弃源 MAC 地址与分配给接口的地址不一致的帧。否则，已失陷的客户机可在二层冒充其他工作负载或基础设施（ARP 欺骗、中间人攻击）。</p>
 
 rationale: |-
     Layer-2 identity is the basis for switching decisions on secondary
@@ -18,7 +18,7 @@ rationale: |-
     redirect other workloads' traffic on the same segment.
 
     <p><strong>中文理由：</strong></p>
-    二层身份是辅助网络上交换决策的基础。能够伪造 MAC 地址的客户机可以截获或重定向同一网段中其他工作负载的流量。
+    <p>二层身份是辅助网络上交换决策的基础。能够伪造 MAC 地址的客户机可以截获或重定向同一网段中其他工作负载的流量。</p>
 
 severity: medium
 

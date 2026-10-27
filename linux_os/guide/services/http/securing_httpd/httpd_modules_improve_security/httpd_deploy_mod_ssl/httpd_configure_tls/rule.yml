@@ -12,7 +12,7 @@ description: |-
     <pre>SSLEngine on</pre>
 
     <p><strong>中文说明：</strong></p>
-    在 <tt>/etc/httpd/conf.modules.d/ssl.conf</tt> 中进行以下设置，以禁用旧版 SSL 和 TLS 版本并启用最新的 TLS 加密：
+    <p>在 <tt>/etc/httpd/conf.modules.d/ssl.conf</tt> 中进行以下设置，以禁用旧版 SSL 和 TLS 版本并启用最新的 TLS 加密：</p>
     <pre>SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1</pre>
     确保同时按以下方式在 <tt>/etc/httpd/conf.modules.d/ssl.conf</tt> 中将 <tt>SSLEngine</tt> 设置为 <tt>on</tt>：
     <pre>SSLEngine on</pre>
@@ -26,7 +26,7 @@ rationale: |-
     must be disabled.
 
     <p><strong>中文理由：</strong></p>
-    传输层安全（TLS）加密是专用 Web 服务器的必需安全设置。加密私有信息对于确保数据机密性至关重要。如果私有信息未加密，可能被未授权方截获并轻易读取。Web 服务器必须使用经 FIPS 140-2 批准的 TLS 版本，并且必须禁用所有未经 FIPS 批准的 SSL 版本。
+    <p>传输层安全（TLS）加密是专用 Web 服务器的必需安全设置。加密私有信息对于确保数据机密性至关重要。如果私有信息未加密，可能被未授权方截获并轻易读取。Web 服务器必须使用经 FIPS 140-2 批准的 TLS 版本，并且必须禁用所有未经 FIPS 批准的 SSL 版本。</p>
 
 severity: medium
 

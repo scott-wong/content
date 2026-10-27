@@ -10,7 +10,7 @@ description: |-
     postmaster: root</pre>
 
     <p><strong>中文说明：</strong></p>
-    验证在审计处理失败时管理员会收到通知。检查 "/etc/aliases" 文件是否为 "root" 定义了值。
+    <p>验证在审计处理失败时管理员会收到通知。检查 "/etc/aliases" 文件是否为 "root" 定义了值。</p>
     <pre>$ sudo grep "postmaster:\s*root$" /etc/aliases
 
     postmaster: root</pre>
@@ -25,9 +25,9 @@ rationale: |-
     mechanisms, and audit storage capacity being reached or exceeded.
 
     <p><strong>中文理由：</strong></p>
-    如果系统面临无法按需处理审计日志的风险，相关人员必须知晓。如果没有此通知，安全人员可能无法察觉审计能力即将发生故障，系统运行可能受到不利影响。
+    <p>如果系统面临无法按需处理审计日志的风险，相关人员必须知晓。如果没有此通知，安全人员可能无法察觉审计能力即将发生故障，系统运行可能受到不利影响。
 
-    审计处理失败包括软件/硬件错误、审计捕获机制故障，以及审计存储容量达到或超过上限。
+    审计处理失败包括软件/硬件错误、审计捕获机制故障，以及审计存储容量达到或超过上限。</p>
 
 severity: medium
 

@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_group_owner(file=sshd_sysconfig_file, group="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>{{{ sshd_sysconfig_file }}}</tt> 的所属组正确设置为 <tt>root</tt>，请运行 <tt>sudo chgrp root {{{ sshd_sysconfig_file }}}</tt>。
+    <p>要将 <tt>{{{ sshd_sysconfig_file }}}</tt> 的所属组正确设置为 <tt>root</tt>，请运行 <tt>sudo chgrp root {{{ sshd_sysconfig_file }}}</tt>。</p>
 
 rationale: |-
     The <tt>/etc/sysconfig/sshd</tt> file contains configuration options for the SSH daemon.
@@ -14,7 +14,7 @@ rationale: |-
     group to prevent unauthorized changes.
 
     <p><strong>中文理由：</strong></p>
-    如果操作系统允许任何用户更改软件库，则这些更改可能在未经过稳健变更管理流程所需的适当测试和批准的情况下实施。<br /><br />本要求适用于具有可访问且可配置软件库的操作系统，例如解释型语言。软件库还包括以提升权限执行的程序。仅允许有资格且获授权的个人访问信息系统组件以启动更改，包括升级和修改。
+    <p>如果操作系统允许任何用户更改软件库，则这些更改可能在未经过稳健变更管理流程所需的适当测试和批准的情况下实施。<br /><br />本要求适用于具有可访问且可配置软件库的操作系统，例如解释型语言。软件库还包括以提升权限执行的程序。仅允许有资格且获授权的个人访问信息系统组件以启动更改，包括升级和修改。</p>
 
 severity: medium
 

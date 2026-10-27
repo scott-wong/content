@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="use_fusefs_home_dirs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>use_fusefs_home_dirs</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>use_fusefs_home_dirs</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P use_fusefs_home_dirs off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>use_fusefs_home_dirs</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>use_fusefs_home_dirs</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P use_fusefs_home_dirs off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许在主目录中使用 FUSE 文件系统会扩大用户可控文件系统在内核中的暴露范围。
+    <p>允许在主目录中使用 FUSE 文件系统会扩大用户可控文件系统在内核中的暴露范围。</p>
 
 severity: medium
 

@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="xdm_sysadm_login") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>xdm_sysadm_login</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>xdm_sysadm_login</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xdm_sysadm_login off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>xdm_sysadm_login</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>xdm_sysadm_login</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xdm_sysadm_login off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 XDM 通过 sysadm 登录会扩大图形登录的特权访问路径。
+    <p>允许 XDM 通过 sysadm 登录会扩大图形登录的特权访问路径。</p>
 
 severity: medium
 

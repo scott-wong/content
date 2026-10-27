@@ -7,14 +7,14 @@ description: |-
     {{{ describe_service_disable("rsyncd") }}}
 
     <p><strong>中文说明：</strong></p>
-    应禁用 <tt>rsyncd</tt> 服务。
+    <p>应禁用 <tt>rsyncd</tt> 服务。</p>
 
 rationale: |-
     The rsyncd service presents a security risk as it uses unencrypted protocols for
     communication.
 
     <p><strong>中文理由：</strong></p>
-    rsyncd 服务存在安全风险，因为它使用未加密的协议进行通信。
+    <p>rsyncd 服务存在安全风险，因为它使用未加密的协议进行通信。</p>
 
 severity: medium
 

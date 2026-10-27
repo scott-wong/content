@@ -10,14 +10,14 @@ description: |-
     the owner of the directory.
 
     <p><strong>中文说明：</strong></p>
-    用户主目录是为特定用户定义的空间，用于设置本地环境变量并存储个人文件。由于用户对其主目录中存储的文件负责，因此该用户必须是目录的所有者。
+    <p>用户主目录是为特定用户定义的空间，用于设置本地环境变量并存储个人文件。由于用户对其主目录中存储的文件负责，因此该用户必须是目录的所有者。</p>
 
 rationale: |-
     Since the user is accountable for files stored in the user home directory,
     the user must be the owner of the directory.
 
     <p><strong>中文理由：</strong></p>
-    由于用户对其主目录中存储的文件负责，因此该用户必须是目录的所有者。
+    <p>由于用户对其主目录中存储的文件负责，因此该用户必须是目录的所有者。</p>
 
 severity: medium
 

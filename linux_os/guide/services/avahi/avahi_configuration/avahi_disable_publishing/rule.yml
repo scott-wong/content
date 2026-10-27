@@ -8,14 +8,14 @@ description: |-
     <pre>disable-publishing=yes</pre>
 
     <p><strong>中文说明：</strong></p>
-    要阻止 Avahi 发布其记录，请编辑 <tt>/etc/avahi/avahi-daemon.conf</tt>，并确保 <tt>[publish]</tt> 节中出现以下行：
+    <p>要阻止 Avahi 发布其记录，请编辑 <tt>/etc/avahi/avahi-daemon.conf</tt>，并确保 <tt>[publish]</tt> 节中出现以下行：</p>
     <pre>disable-publishing=yes</pre>
 
 rationale: |-
     This helps ensure that no record will be published by Avahi.
 
     <p><strong>中文理由：</strong></p>
-    这有助于确保 Avahi 不发布任何记录。
+    <p>这有助于确保 Avahi 不发布任何记录。</p>
 
 severity: low
 

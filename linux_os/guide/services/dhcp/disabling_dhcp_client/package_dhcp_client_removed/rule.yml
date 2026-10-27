@@ -9,8 +9,8 @@ description: |-
     {{{ describe_package_remove(package="dhcp-client") }}}
 
     <p><strong>中文说明：</strong></p>
-    如果系统无需充当 DHCP 客户端，则可卸载 dhcp-client 软件包。
-    请使用适当的软件包管理工具移除 <tt>dhcp-client</tt> 软件包。
+    <p>如果系统无需充当 DHCP 客户端，则可卸载 dhcp-client 软件包。
+    请使用适当的软件包管理工具移除 <tt>dhcp-client</tt> 软件包。</p>
 
 rationale: |-
     Removing the DHCP client is necessary when the system works
@@ -18,7 +18,7 @@ rationale: |-
     the system has/will have a static IP address assigned.
 
     <p><strong>中文理由：</strong></p>
-    当系统工作或将要在静态网络环境中工作时，必须移除 DHCP 客户端。在这种情况下，系统已分配或将分配静态 IP 地址。
+    <p>当系统工作或将要在静态网络环境中工作时，必须移除 DHCP 客户端。在这种情况下，系统已分配或将分配静态 IP 地址。</p>
 
 severity: medium
 

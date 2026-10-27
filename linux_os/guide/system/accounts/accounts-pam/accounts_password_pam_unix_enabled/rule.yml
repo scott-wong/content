@@ -23,17 +23,17 @@ description: |-
     service if their official password is blank.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_unix</tt> 是标准 Unix 身份验证模块。它使用系统库中的标准调用检索和设置账户信息并执行身份验证。通常从 <tt>/etc/passwd</tt> 获取这些信息；如果启用了 shadow，也会从 <tt>/etc/shadow</tt> 文件获取。
+    <p><tt>pam_unix</tt> 是标准 Unix 身份验证模块。它使用系统库中的标准调用检索和设置账户信息并执行身份验证。通常从 <tt>/etc/passwd</tt> 获取这些信息；如果启用了 shadow，也会从 <tt>/etc/shadow</tt> 文件获取。
     <br /><br />
     账户组件根据以下 shadow 元素确定用户账户和密码的状态：<tt>expire、last_change、max_change、min_change、warn_change</tt>。对于后者，它可以建议用户更改密码，或者通过 <tt>PAM_AUTHTOKEN_REQD</tt> 返回，延迟向用户提供服务，直到用户设置新密码。上述条目在 shadow(5) 手册页中有说明。如果用户记录不包含其中一个或多个条目，则不会执行相应的 shadow 检查。
     <br /><br />
-    身份验证组件负责检查用户凭据（密码）。此模块的默认操作是在用户的正式密码为空时不允许该用户访问服务。
+    身份验证组件负责检查用户凭据（密码）。此模块的默认操作是在用户的正式密码为空时不允许该用户访问服务。</p>
 
 rationale: |-
     The system should only provide access after performing authentication of a user.
 
     <p><strong>中文理由：</strong></p>
-    系统应仅在完成用户身份验证后提供访问权限。
+    <p>系统应仅在完成用户身份验证后提供访问权限。</p>
 
 identifiers:
     cce@rhel8: CCE-87083-2

@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="logging_syslogd_use_tty") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>logging_syslogd_use_tty</tt> 处于启用状态。如果此设置已禁用，应启用，因为它允许 <tt>syslog</tt> 读写终端。要启用 <tt>logging_syslogd_use_tty</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P logging_syslogd_use_tty on</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>logging_syslogd_use_tty</tt> 处于启用状态。如果此设置已禁用，应启用，因为它允许 <tt>syslog</tt> 读写终端。要启用 <tt>logging_syslogd_use_tty</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P logging_syslogd_use_tty on</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用后，可允许 syslog 读写终端，这是控制台日志和诊断所需的，同时仍由 SELinux 域策略限制。
+    <p>启用后，可允许 syslog 读写终端，这是控制台日志和诊断所需的，同时仍由 SELinux 域策略限制。</p>
 
 severity: medium
 

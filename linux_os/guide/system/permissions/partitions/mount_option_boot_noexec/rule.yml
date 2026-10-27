@@ -9,7 +9,7 @@ description: |-
     {{{ describe_mount(option="noexec", part="/boot") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/boot</tt> 使用 <tt>noexec</tt> 挂载选项。
+    <p>确保 <tt>/boot</tt> 使用 <tt>noexec</tt> 挂载选项。</p>
 
 rationale: |-
     The <tt>/boot</tt> partition contains the kernel and the bootloader. No
@@ -17,7 +17,7 @@ rationale: |-
     finishes.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/boot</tt> 分区包含内核和引导加载程序。引导过程完成后，不应从该分区执行任何二进制文件。
+    <p><tt>/boot</tt> 分区包含内核和引导加载程序。引导过程完成后，不应从该分区执行任何二进制文件。</p>
 
 {{{ complete_ocil_entry_mount_option("/boot", "noexec") }}}
 

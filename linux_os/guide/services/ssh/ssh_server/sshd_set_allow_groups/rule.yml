@@ -8,7 +8,7 @@ description: |-
     <pre>AllowGroups {{{ xccdf_value("var_sshd_allow_groups") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    <tt>AllowGroups</tt> 参数限制哪些用户组可通过 SSH 登录。要配置该参数，请编辑 <tt>/etc/ssh/sshd_config</tt>：
+    <p><tt>AllowGroups</tt> 参数限制哪些用户组可通过 SSH 登录。要配置该参数，请编辑 <tt>/etc/ssh/sshd_config</tt>：</p>
     <pre>AllowGroups {{{ xccdf_value("var_sshd_allow_groups") }}}</pre>
 
 rationale: |-
@@ -16,7 +16,7 @@ rationale: |-
     ensuring only authorized users can connect remotely.
 
     <p><strong>中文理由：</strong></p>
-    将 SSH 访问限制到特定组，可通过确保只有经过授权的用户才能远程连接来减少攻击面。
+    <p>将 SSH 访问限制到特定组，可通过确保只有经过授权的用户才能远程连接来减少攻击面。</p>
 
 severity: medium
 

@@ -12,7 +12,7 @@ description: |-
     is owned by an interactive user.
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令将交互式用户初始化文件的所有者设置为主要所有者：
+    <p>使用以下命令将交互式用户初始化文件的所有者设置为主要所有者：</p>
     <pre>$ sudo chown <i>USER</i> /home/<i>USER</i>/.*</pre>
 
     此规则确保与交互式用户相关的每个初始化文件都由交互式用户拥有。
@@ -23,7 +23,7 @@ rationale: |-
     logon.
 
     <p><strong>中文理由：</strong></p>
-    本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时攻陷账户。
+    <p>本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时攻陷账户。</p>
 
 severity: medium
 

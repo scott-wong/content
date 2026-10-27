@@ -7,7 +7,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/kube-scheduler-pod.yaml", perms="0600") }}}
 
     <p><strong>中文说明：</strong></p>
-    要正确设置 <tt>/etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/kube-scheduler-pod.yaml</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/kube-scheduler-pod.yaml</tt>。
+    <p>要正确设置 <tt>/etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/kube-scheduler-pod.yaml</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-scheduler-pod-*/kube-scheduler-pod.yaml</tt>。</p>
 
 rationale: |-
     If the Kubernetes specification file is writable by a group-owner or the
@@ -16,7 +16,7 @@ rationale: |-
     critical for OpenShift security.
 
     <p><strong>中文理由：</strong></p>
-    如果 Kubernetes 规范文件可由文件所属组或其他用户写入，其遭入侵的风险会增加。该文件包含系统中配置的 Kubernetes Scheduler 服务的配置。保护该文件对 OpenShift 安全至关重要。
+    <p>如果 Kubernetes 规范文件可由文件所属组或其他用户写入，其遭入侵的风险会增加。该文件包含系统中配置的 Kubernetes Scheduler 服务的配置。保护该文件对 OpenShift 安全至关重要。</p>
 
 severity: medium
 

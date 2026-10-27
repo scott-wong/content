@@ -11,9 +11,9 @@ description: |-
     <pre>IgnoreUserKnownHosts yes</pre>
 
     <p><strong>中文说明：</strong></p>
-    如果存在远程系统公钥缓存，SSH 可允许系统用户连接到这些系统。应禁用此功能。
+    <p>如果存在远程系统公钥缓存，SSH 可允许系统用户连接到这些系统。应禁用此功能。
     <br /><br />
-    要确保禁用此行为，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    要确保禁用此行为，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：</p>
     <pre>IgnoreUserKnownHosts yes</pre>
 
 rationale: |-
@@ -22,7 +22,7 @@ rationale: |-
     in the event of misconfiguration elsewhere.
 
     <p><strong>中文理由：</strong></p>
-    为 SSH 守护进程配置此设置可进一步确保远程 SSH 登录需要密码，即使其他位置存在配置错误也是如此。
+    <p>为 SSH 守护进程配置此设置可进一步确保远程 SSH 登录需要密码，即使其他位置存在配置错误也是如此。</p>
 
 severity: medium
 

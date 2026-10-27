@@ -8,7 +8,7 @@ description: |-
     Authentication Modules (PAM) configuration on package changes.
 
     <p><strong>中文说明：</strong></p>
-    验证 SUSE 操作系统已配置为在软件包变更时不覆盖 Pluggable Authentication Modules（PAM）配置。
+    <p>验证 SUSE 操作系统已配置为在软件包变更时不覆盖 Pluggable Authentication Modules（PAM）配置。</p>
 
 
 rationale: |-
@@ -19,7 +19,7 @@ rationale: |-
     configuration by the system administrator and thus impact system security.
 
     <p><strong>中文理由：</strong></p>
-    <tt>pam-config</tt> 是一个命令行实用程序，可在系统中安装、更新或删除软件包时自动生成系统 PAM 配置。<tt>pam-config</tt> 会删除其不了解的 PAM 模块和参数配置。这可能使系统管理员配置的 PAM 配置失效，从而影响系统安全。
+    <p><tt>pam-config</tt> 是一个命令行实用程序，可在系统中安装、更新或删除软件包时自动生成系统 PAM 配置。<tt>pam-config</tt> 会删除其不了解的 PAM 模块和参数配置。这可能使系统管理员配置的 PAM 配置失效，从而影响系统安全。</p>
 
 severity: medium
 

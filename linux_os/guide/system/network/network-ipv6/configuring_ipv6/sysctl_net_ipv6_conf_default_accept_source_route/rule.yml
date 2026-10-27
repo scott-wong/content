@@ -7,9 +7,9 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.default.accept_source_route", value="0") }}}
 
     <p><strong>中文说明：</strong></p>
-    要设置内核参数 <tt>net.ipv6.conf.default.accept_source_route</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv6.conf.default.accept_source_route=0</tt>
+    <p>要设置内核参数 <tt>net.ipv6.conf.default.accept_source_route</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv6.conf.default.accept_source_route=0</tt>
 
-    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv6.conf.default.accept_source_route = 0</tt>
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv6.conf.default.accept_source_route = 0</tt></p>
 
 rationale: |-
     Source-routed packets allow the source of the packet to suggest routers
@@ -22,9 +22,9 @@ rationale: |-
     uses. It should be disabled unless it is absolutely required.
 
     <p><strong>中文理由：</strong></p>
-    源路由数据包允许数据包源建议路由器沿不同于路由器配置的路径转发该数据包，这可用于绕过网络安全措施。此要求仅适用于源路由流量的转发，例如启用 IPv6 转发且系统充当路由器时。
+    <p>源路由数据包允许数据包源建议路由器沿不同于路由器配置的路径转发该数据包，这可用于绕过网络安全措施。此要求仅适用于源路由流量的转发，例如启用 IPv6 转发且系统充当路由器时。
 
-    在 IPv6 协议中接受源路由数据包几乎没有合法用途。除非绝对必要，否则应禁用此功能。
+    在 IPv6 协议中接受源路由数据包几乎没有合法用途。除非绝对必要，否则应禁用此功能。</p>
 
 severity: medium
 

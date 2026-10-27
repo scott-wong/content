@@ -16,9 +16,9 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    SSSD 的内存缓存应配置为在 <tt>{{{ xccdf_value("var_sssd_memcache_timeout") }}}</tt> 秒后使记录过期。要将 SSSD 配置为使内存缓存过期，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[nss]</tt> 节中将 <tt>memcache_timeout</tt> 设置为 <tt>{{{ xccdf_value("var_sssd_memcache_timeout") }}}</tt>。
+    <p>SSSD 的内存缓存应配置为在 <tt>{{{ xccdf_value("var_sssd_memcache_timeout") }}}</tt> 秒后使记录过期。要将 SSSD 配置为使内存缓存过期，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[nss]</tt> 节中将 <tt>memcache_timeout</tt> 设置为 <tt>{{{ xccdf_value("var_sssd_memcache_timeout") }}}</tt>。
 
-    例如：
+    例如：</p>
     <pre>[nss]
     memcache_timeout = {{{ xccdf_value("var_sssd_memcache_timeout") }}}
     </pre>
@@ -28,7 +28,7 @@ rationale: |-
     authentication information may be questionable.
 
     <p><strong>中文理由：</strong></p>
-    如果缓存的身份验证信息已过时，则身份验证信息的有效性可能存疑。
+    <p>如果缓存的身份验证信息已过时，则身份验证信息的有效性可能存疑。</p>
 
 severity: medium
 

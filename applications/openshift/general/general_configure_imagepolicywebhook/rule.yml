@@ -13,15 +13,15 @@ description: |-
     {{{ weblink(link="https://docs.openshift.com/container-platform/4.4/openshift_images/image-configuration.html") }}}
 
     <p><strong>中文说明：</strong></p>
-    OpenShift 管理员可以控制哪些镜像可被导入、标记并在集群中运行。为此有两种机制：(1) 允许的注册表（Allowed Registries），允许管理员将镜像来源限制为已知外部注册表；(2) ImagePolicy 准入插件，允许管理员指定可在 OpenShift 集群中运行的具体镜像。
+    <p>OpenShift 管理员可以控制哪些镜像可被导入、标记并在集群中运行。为此有两种机制：(1) 允许的注册表（Allowed Registries），允许管理员将镜像来源限制为已知外部注册表；(2) ImagePolicy 准入插件，允许管理员指定可在 OpenShift 集群中运行的具体镜像。
 
-    请按照 OpenShift 文档的 Image Policy 章节配置镜像策略：<a href="https://docs.openshift.com/container-platform/4.4/openshift_images/image-configuration.html">OpenShift 文档</a>
+    请按照 OpenShift 文档的 Image Policy 章节配置镜像策略：<a href="https://docs.openshift.com/container-platform/4.4/openshift_images/image-configuration.html">OpenShift 文档</a></p>
 
 rationale: |-
     Image Policy ensures that only approved container images are allowed to be ran on the OpenShift platform.
 
     <p><strong>中文理由：</strong></p>
-    镜像策略确保只有经过批准的容器镜像才可在 OpenShift 平台上运行。
+    <p>镜像策略确保只有经过批准的容器镜像才可在 OpenShift 平台上运行。</p>
 
 severity: medium
 

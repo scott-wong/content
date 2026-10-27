@@ -24,9 +24,9 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    <tt>rsyslog</tt> 守护进程不应接受远程消息，除非系统充当日志服务器。为确保其未在网络接口上监听，请确保 <tt>rsyslog</tt> 配置文件中<i>不</i>存在以下任何行。
+    <p><tt>rsyslog</tt> 守护进程不应接受远程消息，除非系统充当日志服务器。为确保其未在网络接口上监听，请确保 <tt>rsyslog</tt> 配置文件中<i>不</i>存在以下任何行。
 
-    如果使用旧版语法：
+    如果使用旧版语法：</p>
     <pre>$ModLoad imtcp
     $InputTCPServerRun <i>port</i>
     $ModLoad imudp
@@ -47,7 +47,7 @@ rationale: |-
     network.
 
     <p><strong>中文理由：</strong></p>
-    任何从网络接收消息的进程都面临接收恶意消息的风险。通过将 rsyslog 配置为不在网络上监听，可以消除此风险。
+    <p>任何从网络接收消息的进程都面临接收恶意消息的风险。通过将 rsyslog 配置为不在网络上监听，可以消除此风险。</p>
 
 severity: medium
 

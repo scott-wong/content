@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="kdumpgui_run_bootloader") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>kdumpgui_run_bootloader</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>kdumpgui_run_bootloader</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P kdumpgui_run_bootloader off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>kdumpgui_run_bootloader</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>kdumpgui_run_bootloader</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P kdumpgui_run_bootloader off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 kdumpgui 调用引导加载程序管理工具，减少通过图形化崩溃转储工具更改引导配置的风险。
+    <p>禁用后，可防止 kdumpgui 调用引导加载程序管理工具，减少通过图形化崩溃转储工具更改引导配置的风险。</p>
 
 severity: medium
 

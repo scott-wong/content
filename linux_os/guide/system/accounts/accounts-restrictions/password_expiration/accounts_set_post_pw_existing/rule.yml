@@ -9,7 +9,7 @@ description: |-
     <pre>$ sudo chage --inactive 30 USER</pre>
 
     <p><strong>中文说明：</strong></p>
-    配置已超过指定期限未活动的用户账户，使其自动被禁用：请运行以下命令：
+    <p>配置已超过指定期限未活动的用户账户，使其自动被禁用：请运行以下命令：</p>
     <pre>$ sudo chage --inactive 30 USER</pre>
 
 rationale: |-
@@ -17,7 +17,7 @@ rationale: |-
     notice failed login attempts or other anomalies.
 
     <p><strong>中文理由：</strong></p>
-    不活动的账户会对系统安全构成威胁，因为用户不会登录，也无法发现失败的登录尝试或其他异常。
+    <p>不活动的账户会对系统安全构成威胁，因为用户不会登录，也无法发现失败的登录尝试或其他异常。</p>
 
 severity: medium
 

@@ -18,7 +18,7 @@ description: |-
     <tt>/etc/audit/audit.rules</tt> file.
 
     <p><strong>中文说明：</strong></p>
-    审计系统应收集读取审计日志目录的访问事件。以下审计规则将确保收集对审计日志目录的访问。对于 32 位系统，将 ARCH 设置为 b32；如果系统为 64 位，则应分别为 b32 和 b64 设置两行。
+    <p>审计系统应收集读取审计日志目录的访问事件。以下审计规则将确保收集对审计日志目录的访问。对于 32 位系统，将 ARCH 设置为 b32；如果系统为 64 位，则应分别为 b32 和 b64 设置两行。</p>
     <pre>-a always,exit -F arch=ARCH -F dir=/var/log/audit/ -F perm=r -F auid>={{{ auid }}} -F auid!=unset -F key=access-audit-trail</pre>
     如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将该规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将该规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
 
@@ -27,7 +27,7 @@ rationale: |-
     Auditing these events could serve as evidence of potential system compromise.'
 
     <p><strong>中文理由：</strong></p>
-    应记录读取日志的尝试；对审计日志文件的可疑访问可能是系统上恶意活动的迹象。审计这些事件可作为系统可能遭到入侵的证据。
+    <p>应记录读取日志的尝试；对审计日志文件的可疑访问可能是系统上恶意活动的迹象。审计这些事件可作为系统可能遭到入侵的证据。</p>
 
 severity: medium
 

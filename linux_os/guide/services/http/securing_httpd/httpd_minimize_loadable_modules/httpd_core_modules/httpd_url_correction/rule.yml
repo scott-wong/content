@@ -10,7 +10,7 @@ description: |-
     This functionality weakens server security by making site enumeration easier.
 
     <p><strong>中文说明：</strong></p>
-    <tt>speling</tt> 模块尝试在原本失败的请求中允许一处拼写错误，从而找到匹配的文档。如果不需要此功能，请注释掉该模块：
+    <p><tt>speling</tt> 模块尝试在原本失败的请求中允许一处拼写错误，从而找到匹配的文档。如果不需要此功能，请注释掉该模块：</p>
     <pre>#LoadModule speling_module modules/mod_speling.so</pre>
     此功能会使站点枚举更加容易，从而削弱服务器安全性。
 
@@ -19,7 +19,7 @@ rationale: |-
     by limiting the capabilities allowed by the web server.
 
     <p><strong>中文理由：</strong></p>
-    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
+    <p>尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。</p>
 
 severity: unknown
 

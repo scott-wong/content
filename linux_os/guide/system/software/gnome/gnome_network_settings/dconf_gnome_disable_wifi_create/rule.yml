@@ -18,7 +18,7 @@ description: |-
     After the settings have been set, run <tt>dconf update</tt>.
 
     <p><strong>中文说明：</strong></p>
-    <tt>GNOME</tt> 允许用户通过 <tt>NetworkManager</tt> 小程序创建 ad-hoc 无线连接。应通过在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中添加或设置 <tt>disable-wifi-create</tt> 为 <tt>true</tt> 来禁用无线连接。例如：
+    <p><tt>GNOME</tt> 允许用户通过 <tt>NetworkManager</tt> 小程序创建 ad-hoc 无线连接。应通过在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中添加或设置 <tt>disable-wifi-create</tt> 为 <tt>true</tt> 来禁用无线连接。例如：</p>
     <pre>[org/gnome/nm-applet]
     disable-wifi-create=true
     </pre>
@@ -31,7 +31,7 @@ rationale: |-
     users on a given system as it could open the system to backdoor attacks.
 
     <p><strong>中文理由：</strong></p>
-    不应允许普通用户在给定系统上配置无线网络连接，因为这可能使系统面临后门攻击。
+    <p>不应允许普通用户在给定系统上配置无线网络连接，因为这可能使系统面临后门攻击。</p>
 
 severity: medium
 

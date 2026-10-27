@@ -6,14 +6,14 @@ description: |-
     {{{ describe_package_remove(package="ufw") }}}
 
     <p><strong>中文说明：</strong></p>
-    应删除 <tt>ufw</tt> 软件包。
+    <p>应删除 <tt>ufw</tt> 软件包。</p>
 
 rationale: |-
     Running <tt>iptables.persistent</tt> with <tt>ufw</tt> enabled may lead
     to conflict and unexpected results.
 
     <p><strong>中文理由：</strong></p>
-    在启用 <tt>ufw</tt> 的情况下运行 <tt>iptables.persistent</tt> 可能导致冲突和意外结果。
+    <p>在启用 <tt>ufw</tt> 的情况下运行 <tt>iptables.persistent</tt> 可能导致冲突和意外结果。</p>
 
 severity: medium
 

@@ -16,10 +16,10 @@ description: |-
     should prevent users from being able to assign themselves empty passwords.
 
     <p><strong>中文说明：</strong></p>
-    禁止使用空密码进行 SSH 登录。默认 SSH 配置禁用空密码登录。如果未设置 <tt>PermitEmptyPasswords</tt>，则使用适当配置。
+    <p>禁止使用空密码进行 SSH 登录。默认 SSH 配置禁用空密码登录。如果未设置 <tt>PermitEmptyPasswords</tt>，则使用适当配置。
     <br />
     要显式禁止空密码账户进行 SSH 登录，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
-    <br />
+    <br /></p>
     <pre>PermitEmptyPasswords no</pre>
     应立即禁用任何使用空密码的账户，并且 PAM 配置应防止用户为自己分配空密码。
 
@@ -29,7 +29,7 @@ rationale: |-
     misconfiguration elsewhere.
 
     <p><strong>中文理由：</strong></p>
-    为 SSH 守护进程配置此设置可提供额外保证：即使其他位置存在错误配置，通过 SSH 远程登录也需要密码。
+    <p>为 SSH 守护进程配置此设置可提供额外保证：即使其他位置存在错误配置，通过 SSH 远程登录也需要密码。</p>
 
 severity: high
 

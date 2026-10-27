@@ -12,7 +12,7 @@ description: |-
     <pre>$ rm ~/.rhosts</pre>
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/hosts.equiv</tt> 和 <tt>~/.rhosts</tt>（在每个用户的主目录中）列出使用 rshd 守护进程时本地系统信任的远程主机和用户。要删除这些文件，请运行以下命令从任意位置删除它们：
+    <p>文件 <tt>/etc/hosts.equiv</tt> 和 <tt>~/.rhosts</tt>（在每个用户的主目录中）列出使用 rshd 守护进程时本地系统信任的远程主机和用户。要删除这些文件，请运行以下命令从任意位置删除它们：</p>
     <pre>$ sudo rm /etc/hosts.equiv</pre>
     <pre>$ rm ~/.rhosts</pre>
 
@@ -22,7 +22,7 @@ rationale: |-
     the R-services, they can allow unauthenticated access to a system.
 
     <p><strong>中文理由：</strong></p>
-    仅当 PAM 允许 <tt>.rhosts</tt> 支持时，此操作才有意义。信任文件虽方便，但与 R-services 一起使用时，可能允许未经身份验证访问系统。
+    <p>仅当 PAM 允许 <tt>.rhosts</tt> 支持时，此操作才有意义。信任文件虽方便，但与 R-services 一起使用时，可能允许未经身份验证访问系统。</p>
 
 severity: high
 

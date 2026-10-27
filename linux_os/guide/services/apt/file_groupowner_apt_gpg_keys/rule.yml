@@ -6,14 +6,14 @@ description: |-
     {{{ describe_file_group_owner(file="/usr/share/keyrings/*.gpg and /etc/apt/trusted.gpg.d/*.gpg", group="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/usr/share/keyrings/*.gpg</tt> 和 <tt>/etc/apt/trusted.gpg.d/*.gpg</tt> 文件的所属组为 <tt>root</tt>。
+    <p>确保 <tt>/usr/share/keyrings/*.gpg</tt> 和 <tt>/etc/apt/trusted.gpg.d/*.gpg</tt> 文件的所属组为 <tt>root</tt>。</p>
 
 rationale: |-
     APT GPG key files should be group-owned by root to prevent unauthorized
     modification of package trust anchors.
 
     <p><strong>中文理由：</strong></p>
-    APT GPG 密钥文件应由 <tt>root</tt> 所属，以防止未经授权修改软件包信任锚。
+    <p>APT GPG 密钥文件应由 <tt>root</tt> 所属，以防止未经授权修改软件包信任锚。</p>
 
 severity: medium
 

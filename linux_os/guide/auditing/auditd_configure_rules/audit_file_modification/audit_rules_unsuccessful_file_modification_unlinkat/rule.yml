@@ -57,7 +57,7 @@ rationale: |-
     these events could serve as evidence of potential system compromise.
 
     <p><strong>中文理由：</strong></p>
-    尝试删除文件失败可能表明系统上存在恶意活动。审计这些事件可以作为系统可能已失陷的证据。
+    <p>尝试删除文件失败可能表明系统上存在恶意活动。审计这些事件可以作为系统可能已失陷的证据。</p>
 
 severity: medium
 

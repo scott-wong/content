@@ -15,7 +15,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    要设置 root 用户初始化文件 <tt>/root/.bash_profile</tt> 的模式，请确保 <tt>/etc/tmpfiles.d/</tt> 下以 <tt>.conf</tt> 结尾的文件包含以下行。
+    <p>要设置 root 用户初始化文件 <tt>/root/.bash_profile</tt> 的模式，请确保 <tt>/etc/tmpfiles.d/</tt> 下以 <tt>.conf</tt> 结尾的文件包含以下行。</p>
     <pre>
         C /root/.bash_logout   600 root root - /usr/share/rootfiles/.bash_logout
         C /root/.bash_profile  600 root root - /usr/share/rootfiles/.bash_profile
@@ -30,7 +30,7 @@ rationale: |-
     logon.
 
     <p><strong>中文理由：</strong></p>
-    本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时使账户失陷。
+    <p>本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时使账户失陷。</p>
 
 identifiers:
     cce@rhel8: CCE-86473-6

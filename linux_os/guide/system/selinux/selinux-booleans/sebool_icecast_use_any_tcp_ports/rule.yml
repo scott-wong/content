@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="icecast_use_any_tcp_ports") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>icecast_use_any_tcp_ports</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>icecast_use_any_tcp_ports</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P icecast_use_any_tcp_ports off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>icecast_use_any_tcp_ports</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>icecast_use_any_tcp_ports</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P icecast_use_any_tcp_ports off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可阻止 Icecast 绑定任意 TCP 端口，使其仅使用已批准端口并减少网络暴露。
+    <p>禁用后，可阻止 Icecast 绑定任意 TCP 端口，使其仅使用已批准端口并减少网络暴露。</p>
 
 severity: medium
 

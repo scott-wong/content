@@ -11,7 +11,7 @@ description: |-
     <pre>flush = {{{ xccdf_value("var_auditd_flush") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    <tt>auditd</tt> 服务可以配置为将审计事件数据同步写入磁盘。在 <tt>/etc/audit/auditd.conf</tt> 中添加或更正以下行，以确保审计事件数据与磁盘上的日志文件完全同步：
+    <p><tt>auditd</tt> 服务可以配置为将审计事件数据同步写入磁盘。在 <tt>/etc/audit/auditd.conf</tt> 中添加或更正以下行，以确保审计事件数据与磁盘上的日志文件完全同步：</p>
     <pre>flush = {{{ xccdf_value("var_auditd_flush") }}}</pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     synchronized with the log files on the disk.
 
     <p><strong>中文理由：</strong></p>
-    审计数据应同步写入磁盘，以确保日志完整性。这些参数可确保所有审计事件数据与磁盘上的日志文件完全同步。
+    <p>审计数据应同步写入磁盘，以确保日志完整性。这些参数可确保所有审计事件数据与磁盘上的日志文件完全同步。</p>
 
 severity: medium
 

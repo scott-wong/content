@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="polipo_session_bind_all_unreserved_ports") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>polipo_session_bind_all_unreserved_ports</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>polipo_session_bind_all_unreserved_ports</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>polipo_session_bind_all_unreserved_ports</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>polipo_session_bind_all_unreserved_ports</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    应限制 Polipo 会话绑定所有未保留端口的能力，以减少暴露的网络服务并降低攻击面。
+    <p>应限制 Polipo 会话绑定所有未保留端口的能力，以减少暴露的网络服务并降低攻击面。</p>
 
 severity: medium
 

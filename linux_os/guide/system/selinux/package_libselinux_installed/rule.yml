@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_install(package="libselinux") }}}
 
     <p><strong>中文说明：</strong></p>
-    请使用适当的软件包管理工具安装 <tt>libselinux</tt> 软件包。
+    <p>请使用适当的软件包管理工具安装 <tt>libselinux</tt> 软件包。</p>
 
 rationale: |-
     Security-enhanced Linux is a feature of the Linux kernel and a number of utilities
@@ -16,7 +16,7 @@ rationale: |-
     The <tt>libselinux</tt> package contains the core library of the Security-enhanced Linux system.
 
     <p><strong>中文理由：</strong></p>
-    Security-enhanced Linux 是 Linux 内核的一项功能，并包含一组具有增强安全功能的实用程序，旨在为 Linux 添加强制访问控制。<tt>libselinux</tt> 软件包包含 Security-enhanced Linux 系统的核心库。
+    <p>Security-enhanced Linux 是 Linux 内核的一项功能，并包含一组具有增强安全功能的实用程序，旨在为 Linux 添加强制访问控制。<tt>libselinux</tt> 软件包包含 Security-enhanced Linux 系统的核心库。</p>
 
 severity: high
 

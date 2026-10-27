@@ -9,7 +9,7 @@ description: |-
     {{{ describe_mount(option="noexec", part="/var/log/audit") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/var/log/audit</tt> 使用 <tt>noexec</tt> 挂载选项。
+    <p>确保 <tt>/var/log/audit</tt> 使用 <tt>noexec</tt> 挂载选项。</p>
 
 rationale: |-
     Allowing users to execute binaries from directories containing audit log files
@@ -17,7 +17,7 @@ rationale: |-
     can expose the system to potential compromise.
 
     <p><strong>中文理由：</strong></p>
-    允许用户从包含审计日志文件的目录（如 <tt>/var/log/audit</tt>）执行二进制文件在正常操作中绝不应成为必要，且可能使系统面临潜在的失陷风险。
+    <p>允许用户从包含审计日志文件的目录（如 <tt>/var/log/audit</tt>）执行二进制文件在正常操作中绝不应成为必要，且可能使系统面临潜在的失陷风险。</p>
 
 {{{ complete_ocil_entry_mount_option("/var/log/audit", "noexec") }}}
 

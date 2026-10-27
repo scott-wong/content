@@ -11,14 +11,14 @@ description: |-
     {{{ describe_mount(option="noexec", part="any removable media partitions") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保任何可移动介质分区使用 <tt>noexec</tt> 挂载选项。
+    <p>确保任何可移动介质分区使用 <tt>noexec</tt> 挂载选项。</p>
 
 rationale: |-
     Allowing users to execute binaries from removable media such as USB keys exposes
     the system to potential compromise.
 
     <p><strong>中文理由：</strong></p>
-    允许用户从 USB 密钥等可移动介质执行二进制文件会使系统面临潜在的失陷风险。
+    <p>允许用户从 USB 密钥等可移动介质执行二进制文件会使系统面临潜在的失陷风险。</p>
 
 severity: medium
 

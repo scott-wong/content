@@ -24,8 +24,7 @@ description: |-
     </pre>
 
   <p><strong>中文说明：</strong></p>
-  确保 Kubelet 配置为仅使用强密码套件。要为 Kubelet 设置密码套件，请按以下方式为每个 <tt>MachineConfigPool</tt> 创建新的 <tt>KubeletConfig</tt> 对象或修改现有对象：
-
+  <p>确保 Kubelet 配置为仅使用强密码套件。要为 Kubelet 设置密码套件，请按以下方式为每个 <tt>MachineConfigPool</tt> 创建新的 <tt>KubeletConfig</tt> 对象或修改现有对象：</p>
   <pre>
     apiVersion: machineconfiguration.openshift.io/v1
     kind: KubeletConfig
@@ -37,7 +36,7 @@ description: |-
                 pools.operator.machineconfiguration.openshift.io/$pool_name: ""
         kubeletConfig:
           tlsMinVersion: VersionTLS12
-    </pre>
+  </pre>
 
 rationale: |-
   Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to
@@ -46,7 +45,7 @@ rationale: |-
   and validated.
 
   <p><strong>中文理由：</strong></p>
-  使用薄弱或未经测试的加密算法会削弱利用加密保护数据的目的。系统必须实现符合联邦政府批准的更高标准的加密模块，因为这可确保这些模块已经过测试和验证。
+  <p>使用薄弱或未经测试的加密算法会削弱利用加密保护数据的目的。系统必须实现符合联邦政府批准的更高标准的加密模块，因为这可确保这些模块已经过测试和验证。</p>
 
 
 identifiers:

@@ -12,9 +12,9 @@ description: |-
     unless the sequence constitutes only a small portion of the overall password.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pwquality maxsequence</tt> 设置定义新密码中连续字符序列的最大允许长度。此类序列例如 123 或 abc。如果该值设置为 0，则关闭此检查。
+    <p><tt>pwquality maxsequence</tt> 设置定义新密码中连续字符序列的最大允许长度。此类序列例如 123 或 abc。如果该值设置为 0，则关闭此检查。
     <br /><br />
-    注意：主要由此类序列组成的密码不太可能满足简单性标准，除非该序列仅占整个密码的一小部分。
+    注意：主要由此类序列组成的密码不太可能满足简单性标准，除非该序列仅占整个密码的一小部分。</p>
 
 rationale: |-
     Use of a strong password helps to increase the time and resources required to
@@ -26,7 +26,7 @@ rationale: |-
     tested before successfully compromising the password.
 
     <p><strong>中文理由：</strong></p>
-    使用强密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。<br /><br />密码复杂性是决定破解所需时长的重要因素。密码越复杂，成功破解前需要测试的潜在组合就越多。
+    <p>使用强密码可增加破解密码所需的时间和资源。密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。<br /><br />密码复杂性是决定破解所需时长的重要因素。密码越复杂，成功破解前需要测试的潜在组合就越多。</p>
 
 severity: medium
 

@@ -11,7 +11,7 @@ description: |-
     should use passthrough; any use must be reviewed.
 
     <p><strong>中文说明：</strong></p>
-    将主机设备（GPU、PCI 或 USB 设备）直通给虚拟机会使客户机直接访问主机硬件，从而绕过 Hypervisor 的隔离。与攻击虚拟化接口相比，具有设备直通能力的已失陷客户机可通过设备（DMA、固件）更轻易地攻击主机。仅应允许明确批准的工作负载使用直通；任何使用都必须经过审查。
+    <p>将主机设备（GPU、PCI 或 USB 设备）直通给虚拟机会使客户机直接访问主机硬件，从而绕过 Hypervisor 的隔离。与攻击虚拟化接口相比，具有设备直通能力的已失陷客户机可通过设备（DMA、固件）更轻易地攻击主机。仅应允许明确批准的工作负载使用直通；任何使用都必须经过审查。</p>
 
 rationale: |-
     Every '.spec.template.spec.domain.devices.gpus' or
@@ -20,7 +20,7 @@ rationale: |-
     the isolation boundary that virtualization provides.
 
     <p><strong>中文理由：</strong></p>
-    VirtualMachine 上每个 <tt>.spec.template.spec.domain.devices.gpus</tt> 或 <tt>.spec.template.spec.domain.devices.hostDevices</tt> 条目都会扩大客户机对主机硬件的访问范围，并削弱虚拟化提供的隔离边界。
+    <p>VirtualMachine 上每个 <tt>.spec.template.spec.domain.devices.gpus</tt> 或 <tt>.spec.template.spec.domain.devices.hostDevices</tt> 条目都会扩大客户机对主机硬件的访问范围，并削弱虚拟化提供的隔离边界。</p>
 
 severity: medium
 

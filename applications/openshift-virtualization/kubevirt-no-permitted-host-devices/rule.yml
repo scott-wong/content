@@ -13,9 +13,9 @@ description: |-
     virtualization workloads.
 
     <p><strong>中文说明：</strong></p>
-    除非工作负载执行绝对必需，否则不应允许虚拟化工作负载使用主机设备。允许使用主机设备会提供对主机硬件的直接访问，可能引入包括未经授权访问敏感硬件资源、潜在权限提升以及绕过虚拟化安全边界在内的安全风险。
+    <p>除非工作负载执行绝对必需，否则不应允许虚拟化工作负载使用主机设备。允许使用主机设备会提供对主机硬件的直接访问，可能引入包括未经授权访问敏感硬件资源、潜在权限提升以及绕过虚拟化安全边界在内的安全风险。
 
-    默认情况下，不应信任或允许任何主机设备供虚拟化工作负载使用。
+    默认情况下，不应信任或允许任何主机设备供虚拟化工作负载使用。</p>
 
 rationale: |-
     The <tt>.spec.permittedHostDevices</tt> field in the <tt>kubevirt-hyperconverged</tt>
@@ -27,7 +27,7 @@ rationale: |-
     explicitly required, no host devices should be permitted.
 
     <p><strong>中文理由：</strong></p>
-    <tt>kubevirt-hyperconverged</tt> 资源中的 <tt>.spec.permittedHostDevices</tt> 字段控制虚拟化工作负载可使用哪些主机设备。允许使用主机设备会使虚拟机绕过虚拟化边界并直接访问主机硬件，从而带来重大安全风险。这可能导致未经授权访问敏感硬件资源、产生权限提升机会，以及潜在的主机系统失陷。除非明确需要，否则不得允许任何主机设备。
+    <p><tt>kubevirt-hyperconverged</tt> 资源中的 <tt>.spec.permittedHostDevices</tt> 字段控制虚拟化工作负载可使用哪些主机设备。允许使用主机设备会使虚拟机绕过虚拟化边界并直接访问主机硬件，从而带来重大安全风险。这可能导致未经授权访问敏感硬件资源、产生权限提升机会，以及潜在的主机系统失陷。除非明确需要，否则不得允许任何主机设备。</p>
 
 severity: medium
 

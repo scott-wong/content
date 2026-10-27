@@ -15,7 +15,7 @@ description: |-
   <pre>oc describe flowschema catch-all</pre>
 
   <p><strong>中文说明：</strong></p>
-  使用 <tt>APIPriorityAndFairness</tt> 功能可提供细粒度方式来控制 Kubernetes API Server 在过载情况下的行为。应提供众所周知的 FlowSchema <tt>catch-all</tt>，以确保每个请求都得到某种分类。默认情况下，<tt>catch-all</tt> 优先级级别仅允许一个并发份额，并且不对请求排队。要检查所有 <tt>FlowSchema</tt> 对象，请运行：
+  <p>使用 <tt>APIPriorityAndFairness</tt> 功能可提供细粒度方式来控制 Kubernetes API Server 在过载情况下的行为。应提供众所周知的 FlowSchema <tt>catch-all</tt>，以确保每个请求都得到某种分类。默认情况下，<tt>catch-all</tt> 优先级级别仅允许一个并发份额，并且不对请求排队。要检查所有 <tt>FlowSchema</tt> 对象，请运行：</p>
   <pre>oc get flowschema</pre>
   要检查众所周知的 <tt>catch-all</tt> 对象，请运行以下命令：
   <pre>oc describe flowschema catch-all</pre>
@@ -29,7 +29,7 @@ rationale: |-
   of events that the API Server will accept.
 
   <p><strong>中文理由：</strong></p>
-  <tt>FlowSchema</tt> API 对象会对 API Server 在给定时间片内接受的事件数量实施限制。在大型多租户集群中，可能有很小比例的租户行为不当，却会对集群整体性能产生重大影响。建议限制 API Server 接受事件的速率。
+  <p><tt>FlowSchema</tt> API 对象会对 API Server 在给定时间片内接受的事件数量实施限制。在大型多租户集群中，可能有很小比例的租户行为不当，却会对集群整体性能产生重大影响。建议限制 API Server 接受事件的速率。</p>
 
 identifiers:
   cce@ocp4: CCE-84002-5

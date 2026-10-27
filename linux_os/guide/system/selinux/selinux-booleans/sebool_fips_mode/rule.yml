@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="fips_mode") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>fips_mode</tt> 为 enabled。这允许所有 SELinux 域在 <tt>fips_mode</tt> 中执行。如果禁用了此设置，则应将其启用。要启用 <tt>fips_mode</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P fips_mode on</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>fips_mode</tt> 为 enabled。这允许所有 SELinux 域在 <tt>fips_mode</tt> 中执行。如果禁用了此设置，则应将其启用。要启用 <tt>fips_mode</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P fips_mode on</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用 fips_mode 可使所有 SELinux 域在 FIPS 模式下运行，从而符合 FIPS 要求的密码学行为。
+    <p>启用 fips_mode 可使所有 SELinux 域在 FIPS 模式下运行，从而符合 FIPS 要求的密码学行为。</p>
 
 severity: medium
 

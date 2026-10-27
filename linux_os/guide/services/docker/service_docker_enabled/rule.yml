@@ -9,8 +9,8 @@ description: |-
     {{{ describe_service_enable(service="docker") }}}
 
     <p><strong>中文说明：</strong></p>
-    通常需要 docker 服务来创建容器。
-    要启用 <tt>docker</tt> 服务，请运行 <tt>sudo systemctl enable --now docker</tt>。
+    <p>通常需要 docker 服务来创建容器。
+    要启用 <tt>docker</tt> 服务，请运行 <tt>sudo systemctl enable --now docker</tt>。</p>
 
 rationale: |-
     To be able to find any problems with misconfiguration of
@@ -18,7 +18,7 @@ rationale: |-
     has to be enabled.
 
     <p><strong>中文理由：</strong></p>
-    要发现 docker 守护进程和运行中的容器配置错误带来的任何问题，必须启用 docker 服务。
+    <p>要发现 docker 守护进程和运行中的容器配置错误带来的任何问题，必须启用 docker 服务。</p>
 
 severity: medium
 

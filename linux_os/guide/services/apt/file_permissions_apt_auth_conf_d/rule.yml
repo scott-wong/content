@@ -6,14 +6,14 @@ description: |-
     {{{ describe_file_permissions(file="/etc/apt/auth.conf.d/*.conf", perms="0640") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/apt/auth.conf.d/*.conf</tt> 文件的权限为 <tt>0640</tt> 或更严格。
+    <p>确保 <tt>/etc/apt/auth.conf.d/*.conf</tt> 文件的权限为 <tt>0640</tt> 或更严格。</p>
 
 rationale: |-
     Files in /etc/apt/auth.conf.d may contain credentials for private
     repositories or proxies and should not be readable by unauthorized users.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/apt/auth.conf.d</tt> 中的文件可能包含私有仓库或代理的凭据，不应被未授权用户读取。
+    <p><tt>/etc/apt/auth.conf.d</tt> 中的文件可能包含私有仓库或代理的凭据，不应被未授权用户读取。</p>
 
 severity: medium
 

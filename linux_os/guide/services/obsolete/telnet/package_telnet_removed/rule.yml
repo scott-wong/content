@@ -8,7 +8,7 @@ description: |-
     the telnet protocol.
 
     <p><strong>中文说明：</strong></p>
-    telnet 客户端允许用户通过 telnet 协议与其他系统建立连接。
+    <p>telnet 客户端允许用户通过 telnet 协议与其他系统建立连接。</p>
 
 rationale: |-
     The <tt>telnet</tt> protocol is insecure and unencrypted. The use
@@ -17,7 +17,7 @@ rationale: |-
     encrypted session and stronger security and is included in {{{ full_name }}}.
 
     <p><strong>中文理由：</strong></p>
-    <tt>telnet</tt> 协议不安全且未加密。使用未加密的传输介质可能允许未授权用户窃取凭据。<tt>ssh</tt> 软件包提供加密会话和更强的安全性，并包含在 {{{ full_name }}} 中。
+    <p><tt>telnet</tt> 协议不安全且未加密。使用未加密的传输介质可能允许未授权用户窃取凭据。<tt>ssh</tt> 软件包提供加密会话和更强的安全性，并包含在 {{{ full_name }}} 中。</p>
 
 severity: low
 

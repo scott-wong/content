@@ -22,17 +22,17 @@ description: |-
               text="described in the documentation") }}}
 
   <p><strong>中文说明：</strong></p>
-  可以通过自定义登录模板配置法律声明。
+  <p>可以通过自定义登录模板配置法律声明。
   <br/>
 
-  这可通过 OAuth 对象实现：创建自定义登录页面，将其存储在 Kubernetes Secret 中，并在相应字段中引用该 Secret，具体方法见<a href="https://docs.openshift.com/container-platform/4.7/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console">相关文档</a>。
+  这可通过 OAuth 对象实现：创建自定义登录页面，将其存储在 Kubernetes Secret 中，并在相应字段中引用该 Secret，具体方法见<a href="https://docs.openshift.com/container-platform/4.7/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console">相关文档</a>。</p>
 
 rationale: |-
   Displays to users organization-defined system use notification message or banner before granting
   access to the system that provides privacy and security notices consistent with applicable federal laws.
 
   <p><strong>中文理由：</strong></p>
-  在授予系统访问权限前，向用户显示组织定义的系统使用通知消息或横幅，以提供符合适用联邦法律的隐私和安全声明。
+  <p>在授予系统访问权限前，向用户显示组织定义的系统使用通知消息或横幅，以提供符合适用联邦法律的隐私和安全声明。</p>
 
 identifiers:
   cce@ocp4: CCE-84198-1

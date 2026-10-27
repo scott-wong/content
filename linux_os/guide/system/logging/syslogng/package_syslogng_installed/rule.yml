@@ -7,14 +7,14 @@ description: |-
     {{{ describe_package_install(package="syslog-ng-core") }}}
 
     <p><strong>中文说明：</strong></p>
-    可安装 syslog-ng 来替代 rsyslog。应安装 <tt>syslog-ng-core</tt> 软件包。
+    <p>可安装 syslog-ng 来替代 rsyslog。应安装 <tt>syslog-ng-core</tt> 软件包。</p>
 
 rationale: |-
     The syslog-ng-core package provides the syslog-ng daemon, which provides
     system logging services.
 
     <p><strong>中文理由：</strong></p>
-    syslog-ng-core 软件包提供 syslog-ng 守护进程，该守护进程提供系统日志记录服务。
+    <p>syslog-ng-core 软件包提供 syslog-ng 守护进程，该守护进程提供系统日志记录服务。</p>
 
 severity: medium
 

@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="vm.mmap_min_addr", value="65536") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>vm.mmap_min_addr</tt> 设置为 <tt>65536</tt>。要在运行时应用，请运行 <tt>sysctl -w vm.mmap_min_addr=65536</tt>；要持久化，请将 <tt>vm.mmap_min_addr = 65536</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>vm.mmap_min_addr</tt> 设置为 <tt>65536</tt>。要在运行时应用，请运行 <tt>sysctl -w vm.mmap_min_addr=65536</tt>；要持久化，请将 <tt>vm.mmap_min_addr = 65536</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     The <tt>vm.mmap_min_addr</tt> parameter specifies the minimum virtual
@@ -16,7 +16,7 @@ rationale: |-
     heightened risk of kernel null pointer dereference defects.
 
     <p><strong>中文理由：</strong></p>
-    <tt>vm.mmap_min_addr</tt> 参数指定进程可映射的最小虚拟地址。允许进程映射低端虚拟内存可能产生安全影响，例如增加内核空指针解引用缺陷的风险。
+    <p><tt>vm.mmap_min_addr</tt> 参数指定进程可映射的最小虚拟地址。允许进程映射低端虚拟内存可能产生安全影响，例如增加内核空指针解引用缺陷的风险。</p>
 
 severity: medium
 

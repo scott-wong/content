@@ -9,7 +9,7 @@ description: |-
     assets.
 
     <p><strong>中文说明：</strong></p>
-    必须将公共 Web 服务器资源与位于 DMZ 之后的私有资源隔离，以保护私有资产。
+    <p>必须将公共 Web 服务器资源与位于 DMZ 之后的私有资源隔离，以保护私有资产。</p>
 
 rationale: |-
     When folders, drives, or other resources are directly shared between the
@@ -23,9 +23,9 @@ rationale: |-
     network.
 
     <p><strong>中文理由：</strong></p>
-    当文件夹、驱动器或其他资源在公共 Web 服务器和私有服务器之间直接共享时，数据和资源隔离的目的可能受到破坏。
+    <p>当文件夹、驱动器或其他资源在公共 Web 服务器和私有服务器之间直接共享时，数据和资源隔离的目的可能受到破坏。
 
-    除适用的 DMZ 分段策略要求将入站流量从外部网络隔离到内部网络外，打印机、文件和文件夹/目录等资源不得在公共 Web 服务器与内部网络中的资产之间共享。
+    除适用的 DMZ 分段策略要求将入站流量从外部网络隔离到内部网络外，打印机、文件和文件夹/目录等资源不得在公共 Web 服务器与内部网络中的资产之间共享。</p>
 
 severity: medium
 

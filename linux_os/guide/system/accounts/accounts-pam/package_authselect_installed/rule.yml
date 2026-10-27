@@ -6,7 +6,7 @@ description: |-
     {{{ describe_package_install(package="authselect") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>authselect</tt> 软件包。
+    <p>应安装 <tt>authselect</tt> 软件包。</p>
 
 rationale: |-
     The <tt>authselect</tt> package provides a tool to select system authentication and
@@ -17,7 +17,7 @@ rationale: |-
     maintain system security by providing the latest security fixes and features.
 
     <p><strong>中文理由：</strong></p>
-    <tt>authselect</tt> 软件包提供一种工具，可从受支持的配置档列表中选择系统身份验证和身份来源，而不必让管理员手动构建 PAM 堆栈。Authselect 是 authconfig 的后继产品，通过提供多个经过充分测试并受支持的配置档，帮助避免配置损坏。确保安装最新版本的 authselect 可通过提供最新安全修复和功能来维护系统安全。
+    <p><tt>authselect</tt> 软件包提供一种工具，可从受支持的配置档列表中选择系统身份验证和身份来源，而不必让管理员手动构建 PAM 堆栈。Authselect 是 authconfig 的后继产品，通过提供多个经过充分测试并受支持的配置档，帮助避免配置损坏。确保安装最新版本的 authselect 可通过提供最新安全修复和功能来维护系统安全。</p>
 
 severity: medium
 

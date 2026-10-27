@@ -10,14 +10,14 @@ description: |-
     {{{ describe_sebool_disable(sebool="selinuxuser_execstack") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>selinuxuser_execstack</tt> 处于启用状态。应禁用该设置。
-    应禁用 SELinux 布尔值 <tt>selinuxuser_execstack</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>selinuxuser_execstack</tt> 处于启用状态。应禁用该设置。
+    应禁用 SELinux 布尔值 <tt>selinuxuser_execstack</tt>。</p>
 
 rationale: |-
     Disabling code execution from the stack blocks buffer overflow attacks.
 
     <p><strong>中文理由：</strong></p>
-    禁用此布尔值可防止非受限可执行文件创建可执行栈，降低栈溢出漏洞利用风险。
+    <p>禁用此布尔值可防止非受限可执行文件创建可执行栈，降低栈溢出漏洞利用风险。</p>
 
 severity: medium
 

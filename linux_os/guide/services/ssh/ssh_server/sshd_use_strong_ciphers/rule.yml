@@ -12,7 +12,7 @@ description: |-
     The man page <tt>sshd_config(5)</tt> contains a list of supported ciphers.
 
     <p><strong>中文说明：</strong></p>
-    将密码套件限制为强算法。计数器（CTR）模式也优于密码块链接（CBC）模式。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示这些密码套件：
+    <p>将密码套件限制为强算法。计数器（CTR）模式也优于密码块链接（CBC）模式。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示这些密码套件：</p>
     <pre>Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr</pre>
     <tt>sshd_config(5)</tt> 手册页包含支持的密码套件列表。
 
@@ -25,7 +25,7 @@ rationale: |-
     types of attacks and these algorithms are now recommended for standard use.
 
     <p><strong>中文理由：</strong></p>
-    根据各机构开展的研究，SSH 传输协议（如 RFC 4253 所述）的对称部分存在安全弱点，允许从使用密码块链接（CBC）方法加密的密文块中恢复最多 32 位明文。基于该研究，设计了新的计数器模式算法（如 RFC4344 所述），这些算法不易受到此类攻击，目前建议将其用于标准用途。
+    <p>根据各机构开展的研究，SSH 传输协议（如 RFC 4253 所述）的对称部分存在安全弱点，允许从使用密码块链接（CBC）方法加密的密文块中恢复最多 32 位明文。基于该研究，设计了新的计数器模式算法（如 RFC4344 所述），这些算法不易受到此类攻击，目前建议将其用于标准用途。</p>
 
 severity: medium
 

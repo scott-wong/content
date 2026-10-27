@@ -26,7 +26,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    为确保 API Server 使用其自身的密钥对，请在主节点上的 <tt>openshift-kube-controller-manager</tt> configmap 中，将 <tt>masterCA</tt> 参数设置为服务账户的公钥文件：
+    <p>为确保 API Server 使用其自身的密钥对，请在主节点上的 <tt>openshift-kube-controller-manager</tt> configmap 中，将 <tt>masterCA</tt> 参数设置为服务账户的公钥文件：</p>
     <pre>
     "extendedArguments": {
     ...
@@ -43,7 +43,7 @@ rationale: |-
     certificates are validated.
 
     <p><strong>中文理由：</strong></p>
-    服务账户使用由私有 RSA 密钥签名的令牌向 API 进行身份验证。身份验证层使用匹配的公钥 RSA 密钥验证签名。配置证书颁发机构文件可确保验证 API Server 的签名证书。
+    <p>服务账户使用由私有 RSA 密钥签名的令牌向 API 进行身份验证。身份验证层使用匹配的公钥 RSA 密钥验证签名。配置证书颁发机构文件可确保验证 API Server 的签名证书。</p>
 
 identifiers:
   cce@ocp4: CCE-84244-3

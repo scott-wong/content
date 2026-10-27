@@ -14,8 +14,7 @@ description: |-
     is commented out, or is missing, this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    将 MAC 限制为 FIPS 批准的哈希算法。<tt>{{{ sshc_main_config }}}</tt> 中的以下行演示了 FIPS 批准 MAC 的用法：
-
+    <p>将 MAC 限制为 FIPS 批准的哈希算法。<tt>{{{ sshc_main_config }}}</tt> 中的以下行演示了 FIPS 批准 MAC 的用法：</p>
     <pre>MACs {{{ xccdf_value("ssh_approved_macs") }}}</pre>
     如果该行未按确切顺序包含这些 MAC、被注释掉或缺失，则判定为不符合项。
 
@@ -24,7 +23,7 @@ rationale: |-
     functions. The only hash algorithms meeting this requirement is SHA2.
 
     <p><strong>中文理由：</strong></p>
-    DoD 信息系统必须使用 FIPS 批准的加密哈希函数。满足此要求的唯一哈希算法是 SHA2。
+    <p>DoD 信息系统必须使用 FIPS 批准的加密哈希函数。满足此要求的唯一哈希算法是 SHA2。</p>
 
 severity: medium
 

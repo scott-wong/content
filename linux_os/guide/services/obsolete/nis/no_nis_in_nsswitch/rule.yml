@@ -11,13 +11,13 @@ description: |-
     to get information from NIS servers.
 
     <p><strong>中文说明：</strong></p>
-    每次调用从系统数据库（例如密码或组数据库）检索数据的函数时，都由 GNU C 库中的 Name Service Switch 实现处理。提供的各种服务由独立模块实现，每个模块通常差异很大。其中一个模块是 <tt>nis</tt> 模块，它允许从 NIS 服务器获取信息。
+    <p>每次调用从系统数据库（例如密码或组数据库）检索数据的函数时，都由 GNU C 库中的 Name Service Switch 实现处理。提供的各种服务由独立模块实现，每个模块通常差异很大。其中一个模块是 <tt>nis</tt> 模块，它允许从 NIS 服务器获取信息。</p>
 
 rationale: |-
     NIS service is insecure and should not be used.
 
     <p><strong>中文理由：</strong></p>
-    NIS 服务不安全，不应使用。
+    <p>NIS 服务不安全，不应使用。</p>
 
 severity: medium
 

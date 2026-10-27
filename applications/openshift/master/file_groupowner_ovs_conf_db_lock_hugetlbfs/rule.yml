@@ -9,7 +9,7 @@ description: |-
     {{{ describe_file_group_owner(file="/etc/openvswitch/.conf.db.~lock~", group="hugetlbfs") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/openvswitch/.conf.db.~lock~</tt> 的文件所属组为 <tt>hugetlbfs</tt>。
+    <p>确保 <tt>/etc/openvswitch/.conf.db.~lock~</tt> 的文件所属组为 <tt>hugetlbfs</tt>。</p>
 
 rationale: |-
     CNI (Container Network Interface) files consist of a specification and libraries for
@@ -18,7 +18,7 @@ rationale: |-
     the networking configuration potentially adding a rogue network connection.
 
     <p><strong>中文理由：</strong></p>
-    CNI（Container Network Interface）文件包括用于编写插件以配置 Linux 容器网络接口的规范和库，以及多个受支持的插件。允许对这些文件进行可写访问可能使攻击者修改网络配置，并可能添加恶意网络连接。
+    <p>CNI（Container Network Interface）文件包括用于编写插件以配置 Linux 容器网络接口的规范和库，以及多个受支持的插件。允许对这些文件进行可写访问可能使攻击者修改网络配置，并可能添加恶意网络连接。</p>
 
 severity: medium
 

@@ -9,7 +9,7 @@ description: |-
     other.
 
     <p><strong>中文说明：</strong></p>
-    对于 root 的 PATH 中的每个元素，运行：
+    <p>对于 root 的 PATH 中的每个元素，运行：</p>
     <pre># ls -ld <i>DIR</i></pre>
     并确保组和其他用户的写入权限已禁用。
 
@@ -19,7 +19,7 @@ rationale: |-
     and potentially malicious code.
 
     <p><strong>中文理由：</strong></p>
-    此类条目会增加 root 执行未授权用户提供代码以及潜在恶意代码的风险。
+    <p>此类条目会增加 root 执行未授权用户提供代码以及潜在恶意代码的风险。</p>
 
 severity: medium
 

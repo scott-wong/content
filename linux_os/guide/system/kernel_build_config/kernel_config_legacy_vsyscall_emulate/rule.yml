@@ -10,16 +10,16 @@ description: |-
     {{{ describe_kernel_build_config("CONFIG_LEGACY_VSYSCALL_EMULATE", "n") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    内核会捕获并模拟进入固定 vsyscall 地址映射的调用。此配置从 Linux 5.3 起可用，但发行版若进行回移植也可能提供。
+    <p>内核会捕获并模拟进入固定 vsyscall 地址映射的调用。此配置从 Linux 5.3 起可用，但发行版若进行回移植也可能提供。
 
-    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_LEGACY_VSYSCALL_EMULATE</tt> 的配置值，请运行 <tt>grep CONFIG_LEGACY_VSYSCALL_EMULATE /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_LEGACY_VSYSCALL_EMULATE</tt> 的配置值，请运行 <tt>grep CONFIG_LEGACY_VSYSCALL_EMULATE /boot/config-*</tt>。值为 'n' 的配置不会在文件中显式设置，因此应返回注释行或无行。</p>
 
 rationale: |-
     The mapping is non-executable, but it still contains known contents, which could be
     used in certain rare security vulnerability exploits.
 
     <p><strong>中文理由：</strong></p>
-    该映射不可执行，但仍包含已知内容，这些内容可能在某些罕见的安全漏洞利用中被使用。
+    <p>该映射不可执行，但仍包含已知内容，这些内容可能在某些罕见的安全漏洞利用中被使用。</p>
 
 
 warnings:

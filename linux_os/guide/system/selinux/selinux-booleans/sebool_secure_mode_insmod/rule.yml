@@ -9,11 +9,12 @@ description: |-
     <br/>{{{ describe_sebool_var(sebool="secure_mode_insmod") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>secure_mode_insmod</tt> 处于禁用状态。应将该设置配置为 {{{ xccdf_value("var_secure_mode_insmod") }}}。应将该 SELinux 布尔值设置为 {{{ xccdf_value("var_secure_mode_insmod") }}}。
+    <p>默认情况下，SELinux 布尔值 <tt>secure_mode_insmod</tt> 处于禁用状态。应将该设置配置为 {{{ xccdf_value("var_secure_mode_insmod") }}}。应将该 SELinux 布尔值设置为 {{{ xccdf_value("var_secure_mode_insmod") }}}。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    限制模块插入可降低未授权内核模块加载的风险，但必须与运维需求平衡；应按本地策略设置此布尔值。
+    <p>限制模块插入可降低未授权内核模块加载的风险，但必须与运维需求平衡；应按本地策略设置此布尔值。</p>
 
 
 severity: medium

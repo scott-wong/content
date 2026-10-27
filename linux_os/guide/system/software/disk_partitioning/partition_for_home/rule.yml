@@ -10,7 +10,7 @@ description: |-
     mountpoint can instead be configured later.
 
     <p><strong>中文说明：</strong></p>
-    如果用户主目录存储在本地，请在安装时为 <tt>/home</tt> 创建单独分区（或稍后使用 LVM 迁移）。如果 <tt>/home</tt> 将从 NFS 服务器等其他系统挂载，则安装时无需创建单独分区，可以在稍后配置挂载点。
+    <p>如果用户主目录存储在本地，请在安装时为 <tt>/home</tt> 创建单独分区（或稍后使用 LVM 迁移）。如果 <tt>/home</tt> 将从 NFS 服务器等其他系统挂载，则安装时无需创建单独分区，可以在稍后配置挂载点。</p>
 
 rationale: |-
     Ensuring that <tt>/home</tt> is mounted on its own partition enables the
@@ -18,7 +18,7 @@ rationale: |-
     users cannot trivially fill partitions used for log or audit data storage.
 
     <p><strong>中文理由：</strong></p>
-    确保 <tt>/home</tt> 挂载在其自身的分区上，可以设置更严格的挂载选项，并有助于确保用户无法轻易填满用于日志或审计数据存储的分区。
+    <p>确保 <tt>/home</tt> 挂载在其自身的分区上，可以设置更严格的挂载选项，并有助于确保用户无法轻易填满用于日志或审计数据存储的分区。</p>
 
 severity: low
 

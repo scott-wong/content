@@ -10,14 +10,14 @@ description: |-
     {{{ describe_package_install(package="docker") }}}
 
     <p><strong>中文说明：</strong></p>
-    docker 软件包提供创建容器所需的软件。容器是利用内核资源隔离功能的自给自足、自包含应用。
-    请使用适当的软件包管理工具安装 <tt>docker</tt> 软件包。
+    <p>docker 软件包提供创建容器所需的软件。容器是利用内核资源隔离功能的自给自足、自包含应用。
+    请使用适当的软件包管理工具安装 <tt>docker</tt> 软件包。</p>
 
 rationale: |-
     To be able to run the docker service, the docker package has to be installed.
 
     <p><strong>中文理由：</strong></p>
-    要能够运行 docker 服务，必须安装 docker 软件包。
+    <p>要能够运行 docker 服务，必须安装 docker 软件包。</p>
 
 severity: medium
 

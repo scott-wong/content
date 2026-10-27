@@ -9,14 +9,14 @@ description: |-
     {{{ describe_audit_rules_watch("/var/log/lastlog", "logins") }}}
 
     <p><strong>中文说明：</strong></p>
-    审计系统已经收集所有用户和 root 的登录信息。应使用键 <tt>logins</tt> 监控 <tt>/var/log/lastlog</tt> 的写入和属性更改。如果 <tt>auditd</tt> 使用 <tt>augenrules</tt>（默认），请将相应规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件；如果使用 <tt>auditctl</tt>，请将规则添加到 <tt>/etc/audit/audit.rules</tt>。
+    <p>审计系统已经收集所有用户和 root 的登录信息。应使用键 <tt>logins</tt> 监控 <tt>/var/log/lastlog</tt> 的写入和属性更改。如果 <tt>auditd</tt> 使用 <tt>augenrules</tt>（默认），请将相应规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件；如果使用 <tt>auditctl</tt>，请将规则添加到 <tt>/etc/audit/audit.rules</tt>。</p>
 
 rationale: |-
     Manual editing of these files may indicate nefarious activity, such
     as an attacker attempting to remove evidence of an intrusion.
 
     <p><strong>中文理由：</strong></p>
-    手动编辑这些文件可能表明存在恶意活动，例如攻击者试图删除入侵证据。
+    <p>手动编辑这些文件可能表明存在恶意活动，例如攻击者试图删除入侵证据。</p>
 
 severity: medium
 

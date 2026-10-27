@@ -24,7 +24,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    要在 Kubernetes API Server 上启用审计，必须设置审计日志路径。编辑 <tt>openshift-kube-apiserver</tt> configmap，并将 <tt>audit-log-path</tt> 设置为适合写入审计日志的路径和文件。例如：
+    <p>要在 Kubernetes API Server 上启用审计，必须设置审计日志路径。编辑 <tt>openshift-kube-apiserver</tt> configmap，并将 <tt>audit-log-path</tt> 设置为适合写入审计日志的路径和文件。例如：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -39,7 +39,7 @@ rationale: |-
     system components.
 
     <p><strong>中文理由：</strong></p>
-    Kubernetes API Server 的审计默认未启用。对 API Server 进行审计可提供与安全相关的按时间顺序记录，记载用户、管理员或其他系统组件影响系统的活动序列。
+    <p>Kubernetes API Server 的审计默认未启用。对 API Server 进行审计可提供与安全相关的按时间顺序记录，记载用户、管理员或其他系统组件影响系统的活动序列。</p>
 
 identifiers:
   cce@ocp4: CCE-84020-7

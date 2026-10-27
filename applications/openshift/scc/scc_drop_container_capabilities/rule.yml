@@ -11,7 +11,7 @@ description: |-
     <tt>requiredDropCapabilities</tt>.
 
     <p><strong>中文说明：</strong></p>
-    容器不应启用超出所需的能力，因为这会为恶意使用提供可乘之机。要禁用这些能力，相应的 Security Context Constraints（SCC）应在 <tt>requiredDropCapabilities</tt> 中将所有能力设置为 <tt>*</tt>，或列出要移除的能力。
+    <p>容器不应启用超出所需的能力，因为这会为恶意使用提供可乘之机。要禁用这些能力，相应的 Security Context Constraints（SCC）应在 <tt>requiredDropCapabilities</tt> 中将所有能力设置为 <tt>*</tt>，或列出要移除的能力。</p>
 
 rationale: |-
     By default, containers run with a default set of capabilities as assigned
@@ -21,7 +21,7 @@ rationale: |-
     allow for malicious containers or attackers.
 
     <p><strong>中文理由：</strong></p>
-    默认情况下，容器使用 Container Runtime 分配的默认能力集运行，其中可能包含危险或高特权能力。除非对容器运行软件绝对关键，否则应移除能力；不需要的额外能力会为恶意容器或攻击者提供可乘之机。
+    <p>默认情况下，容器使用 Container Runtime 分配的默认能力集运行，其中可能包含危险或高特权能力。除非对容器运行软件绝对关键，否则应移除能力；不需要的额外能力会为恶意容器或攻击者提供可乘之机。</p>
 
 severity: medium
 

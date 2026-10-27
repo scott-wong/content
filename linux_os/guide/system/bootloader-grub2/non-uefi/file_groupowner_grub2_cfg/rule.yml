@@ -10,14 +10,14 @@ description: |-
     {{{ describe_file_group_owner(file=grub2_boot_path ~ "/grub.cfg", group="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>{{{ grub2_boot_path }}}/grub.cfg</tt> 的文件所属组应为 <tt>root</tt>，以防止文件被破坏或修改。
+    <p>文件 <tt>{{{ grub2_boot_path }}}/grub.cfg</tt> 的文件所属组应为 <tt>root</tt>，以防止文件被破坏或修改。</p>
 
 rationale: |-
     The <tt>root</tt> group is a highly-privileged group. Furthermore, the group-owner of this
     file should not have any access privileges anyway.
 
     <p><strong>中文理由：</strong></p>
-    <tt>root</tt> 组是高权限组。此外，该文件的组所有者本来就不应具有任何访问权限。
+    <p><tt>root</tt> 组是高权限组。此外，该文件的组所有者本来就不应具有任何访问权限。</p>
 
 severity: medium
 

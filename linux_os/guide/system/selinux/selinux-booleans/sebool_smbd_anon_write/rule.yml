@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="smbd_anon_write") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>smbd_anon_write</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>smbd_anon_write</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>smbd_anon_write</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>smbd_anon_write</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用此布尔值可防止 Samba 匿名写入，保护文件完整性和数据机密性。
+    <p>禁用此布尔值可防止 Samba 匿名写入，保护文件完整性和数据机密性。</p>
 
 severity: medium
 

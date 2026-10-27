@@ -7,13 +7,13 @@ description: |-
     The audit-audispd-plugins package should be installed.
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>audit-audispd-plugins</tt> 软件包。
+    <p>应安装 <tt>audit-audispd-plugins</tt> 软件包。</p>
 
 rationale: |-
     Information stored in one location is vulnerable to accidental or incidental deletion or alteration. Off-loading is a common process in information systems with limited audit storage capacity.
 
     <p><strong>中文理由：</strong></p>
-    存储在一个位置的信息容易遭受意外或偶然的删除或更改。对于审计存储容量有限的信息系统，卸载是常见做法。
+    <p>存储在一个位置的信息容易遭受意外或偶然的删除或更改。对于审计存储容量有限的信息系统，卸载是常见做法。</p>
 
 severity: medium
 

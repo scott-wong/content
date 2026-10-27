@@ -11,13 +11,13 @@ description: |-
   security personnel are notified about the alerts on compliance status.
 
   <p><strong>中文说明：</strong></p>
-  OpenShift 平台为管理员提供 Compliance Operator，用于监控集群的合规状态，并向其提供差距概览及修复方法。本控制项确保为 Compliance Operator 启用适当的通知告警，使系统管理员和安全人员能够收到有关合规状态告警的通知。
+  <p>OpenShift 平台为管理员提供 Compliance Operator，用于监控集群的合规状态，并向其提供差距概览及修复方法。本控制项确保为 Compliance Operator 启用适当的通知告警，使系统管理员和安全人员能够收到有关合规状态告警的通知。</p>
 rationale: |-
   Compliance alert enables OpenShift administrators to be informed on the system
   compliance status
 
   <p><strong>中文理由：</strong></p>
-  合规告警使 OpenShift 管理员能够了解系统合规状态。
+  <p>合规告警使 OpenShift 管理员能够了解系统合规状态。</p>
 
 
 identifiers:

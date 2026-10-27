@@ -7,12 +7,12 @@ description: |-
     This rule verify that Suggests dependencies are disabled.
 
     <p><strong>中文说明：</strong></p>
-    Debian 打包规范允许声明三个级别的依赖关系：强依赖（Requires）以及两个级别的弱依赖（Recommends 和 Suggests）。此规则验证 Suggests 依赖已禁用。
+    <p>Debian 打包规范允许声明三个级别的依赖关系：强依赖（Requires）以及两个级别的弱依赖（Recommends 和 Suggests）。此规则验证 Suggests 依赖已禁用。</p>
 
 rationale: |-
     Unless the system explicitely requires the capability provided by a weak dependency, it is recommended that the weak dependency is not installed to reduce the attack surface
 
     <p><strong>中文理由：</strong></p>
-    除非系统明确需要某个弱依赖提供的能力，否则建议不要安装该弱依赖，以减少攻击面。
+    <p>除非系统明确需要某个弱依赖提供的能力，否则建议不要安装该弱依赖，以减少攻击面。</p>
 
 severity: unknown

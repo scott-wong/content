@@ -24,7 +24,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    要在审计日志达到最大大小时进行轮转，请编辑 <tt>openshift-kube-apiserver</tt> configmap，并将 <tt>audit-log-maxsize</tt> 参数设置为以 MB 为单位的适当大小。例如，将其设置为 100 MB：
+    <p>要在审计日志达到最大大小时进行轮转，请编辑 <tt>openshift-kube-apiserver</tt> configmap，并将 <tt>audit-log-maxsize</tt> 参数设置为以 MB 为单位的适当大小。例如，将其设置为 100 MB：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -40,7 +40,7 @@ rationale: |-
     available for use in analysis.
 
     <p><strong>中文理由：</strong></p>
-    OpenShift 会自动轮转日志文件。保留旧日志文件可确保 OpenShift 运维人员有足够的日志数据可用于开展调查或关联分析。如果将文件大小设置为 100 MB，并将保留的旧日志文件数设置为 10，则进行分析时约有 1 GB 的日志数据可用。
+    <p>OpenShift 会自动轮转日志文件。保留旧日志文件可确保 OpenShift 运维人员有足够的日志数据可用于开展调查或关联分析。如果将文件大小设置为 100 MB，并将保留的旧日志文件数设置为 10，则进行分析时约有 1 GB 的日志数据可用。</p>
 
 identifiers:
   cce@ocp4: CCE-83607-2

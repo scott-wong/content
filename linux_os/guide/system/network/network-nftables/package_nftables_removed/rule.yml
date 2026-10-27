@@ -9,14 +9,14 @@ description: |-
     {{{ describe_package_remove(package="nftables") }}}
 
     <p><strong>中文说明：</strong></p>
-    nftables 是 Linux 内核的子系统，用于对网络数据包、数据报和帧进行过滤和分类，是 iptables 的后继产品。
-    应删除 <tt>nftables</tt> 软件包。
+    <p>nftables 是 Linux 内核的子系统，用于对网络数据包、数据报和帧进行过滤和分类，是 iptables 的后继产品。
+    应删除 <tt>nftables</tt> 软件包。</p>
 
 rationale: |-
     Running both <tt>firewalld</tt> and <tt>nftables</tt> may lead to conflict.
 
     <p><strong>中文理由：</strong></p>
-    同时运行 <tt>firewalld</tt> 和 <tt>nftables</tt> 可能导致冲突。
+    <p>同时运行 <tt>firewalld</tt> 和 <tt>nftables</tt> 可能导致冲突。</p>
 
 severity: medium
 

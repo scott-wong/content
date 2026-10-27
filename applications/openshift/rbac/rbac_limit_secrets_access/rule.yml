@@ -13,7 +13,7 @@ description: |-
     access to unauthorized users to secret objects in the cluster.
 
     <p><strong>中文说明：</strong></p>
-    Kubernetes API 存储 Secret，其中可能包括用于 Kubernetes API 的 Service Account 令牌或集群中工作负载使用的凭据。对这些 Secret 的访问应限制在尽可能小的用户组中，以降低权限提升风险。要限制用户访问 Secret，请移除未授权用户对集群中 Secret 对象的 <tt>get</tt>、<tt>list</tt> 和 <tt>watch</tt> 访问权限。
+    <p>Kubernetes API 存储 Secret，其中可能包括用于 Kubernetes API 的 Service Account 令牌或集群中工作负载使用的凭据。对这些 Secret 的访问应限制在尽可能小的用户组中，以降低权限提升风险。要限制用户访问 Secret，请移除未授权用户对集群中 Secret 对象的 <tt>get</tt>、<tt>list</tt> 和 <tt>watch</tt> 访问权限。</p>
 
 rationale: |-
     Inappropriate access to secrets stored within the Kubernetes
@@ -22,7 +22,7 @@ rationale: |-
     are stored as secrets.
 
     <p><strong>中文理由：</strong></p>
-    不当访问 Kubernetes 集群中存储的 Secret 可能使攻击者获得对 Kubernetes 集群或凭据以 Secret 形式存储的外部资源的额外访问权限。
+    <p>不当访问 Kubernetes 集群中存储的 Secret 可能使攻击者获得对 Kubernetes 集群或凭据以 Secret 形式存储的外部资源的额外访问权限。</p>
 
 severity: medium
 

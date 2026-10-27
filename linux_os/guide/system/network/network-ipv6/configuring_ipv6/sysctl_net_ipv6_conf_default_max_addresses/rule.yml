@@ -7,16 +7,16 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.default.max_addresses", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    要设置内核参数 <tt>net.ipv6.conf.default.max_addresses</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv6.conf.default.max_addresses=1</tt>
+    <p>要设置内核参数 <tt>net.ipv6.conf.default.max_addresses</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv6.conf.default.max_addresses=1</tt>
 
-    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv6.conf.default.max_addresses = 1</tt>
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv6.conf.default.max_addresses = 1</tt></p>
 
 rationale: >-
     The number of global unicast IPv6 addresses for each interface should be
     limited exactly to the number of statically configured addresses.
 
     <p><strong>中文理由：</strong></p>
-    每个接口的全局单播 IPv6 地址数量应严格限制为静态配置地址的数量。
+    <p>每个接口的全局单播 IPv6 地址数量应严格限制为静态配置地址的数量。</p>
 
 severity: unknown
 

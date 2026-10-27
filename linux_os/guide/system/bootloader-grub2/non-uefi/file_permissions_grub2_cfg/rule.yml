@@ -8,14 +8,14 @@ description: |-
     {{{ describe_file_permissions(file=grub2_boot_path ~ "/grub.cfg", perms="600") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>{{{ grub2_boot_path }}}/grub.cfg</tt> 的文件权限应设置为 600。
+    <p><tt>{{{ grub2_boot_path }}}/grub.cfg</tt> 的文件权限应设置为 600。</p>
 
 rationale: |-
     Proper permissions ensure that only the root user can modify important boot
     parameters.
 
     <p><strong>中文理由：</strong></p>
-    正确权限确保只有 root 用户能够修改重要启动参数。
+    <p>正确权限确保只有 root 用户能够修改重要启动参数。</p>
 
 severity: medium
 

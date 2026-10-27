@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="irssi_use_full_network") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>irssi_use_full_network</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>irssi_use_full_network</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P irssi_use_full_network off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>irssi_use_full_network</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>irssi_use_full_network</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P irssi_use_full_network off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可限制 irssi 的完整网络访问能力，减少 IRC 客户端发起非预期连接的风险。
+    <p>禁用后，可限制 irssi 的完整网络访问能力，减少 IRC 客户端发起非预期连接的风险。</p>
 
 severity: medium
 

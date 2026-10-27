@@ -12,7 +12,7 @@ description: |-
     have been changed, this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    验证 <tt>{{{ full_name }}}</tt> 的配置确保 cron 配置文件和目录的权限未被修改为偏离厂商默认值。使用以下命令检查 cronie 和 crontabs 软件包的验证状态：
+    <p>验证 <tt>{{{ full_name }}}</tt> 的配置确保 cron 配置文件和目录的权限未被修改为偏离厂商默认值。使用以下命令检查 cronie 和 crontabs 软件包的验证状态：</p>
     <pre>$ sudo rpm --verify cronie crontabs</pre>
     如果命令返回任何表明文件权限已更改的输出，则属于发现问题。
 
@@ -23,7 +23,7 @@ rationale: |-
     actions, including potentially escalating privileges.
 
     <p><strong>中文理由：</strong></p>
-    如果 cron 配置文件或目录的权限被修改为偏离操作系统默认值，个人可能插入执行未经授权操作的未经授权 cron 作业，包括可能提升权限。
+    <p>如果 cron 配置文件或目录的权限被修改为偏离操作系统默认值，个人可能插入执行未经授权操作的未经授权 cron 作业，包括可能提升权限。</p>
 
 severity: medium
 

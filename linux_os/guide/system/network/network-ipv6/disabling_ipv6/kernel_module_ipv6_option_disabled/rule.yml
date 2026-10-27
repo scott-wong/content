@@ -12,7 +12,7 @@ description: |-
     depend on it), while disabling support for the IPv6 protocol.
 
     <p><strong>中文说明：</strong></p>
-    要防止 IPv6 内核模块（<tt>ipv6</tt>）绑定到 IPv6 网络栈，请将以下行添加到 <tt>/etc/modprobe.d/disabled.conf</tt>（或 <tt>/etc/modprobe.d</tt> 中的另一个文件）：
+    <p>要防止 IPv6 内核模块（<tt>ipv6</tt>）绑定到 IPv6 网络栈，请将以下行添加到 <tt>/etc/modprobe.d/disabled.conf</tt>（或 <tt>/etc/modprobe.d</tt> 中的另一个文件）：</p>
     <pre>options ipv6 disable=1</pre>
     这允许 IPv6 模块加载（从而满足其他依赖它的模块），同时禁用对 IPv6 协议的支持。
 
@@ -21,7 +21,7 @@ rationale: |-
     the vulnerability to exploitation.
 
     <p><strong>中文理由：</strong></p>
-    任何不必要的网络协议栈（包括 IPv6）都应禁用，以减少被利用的漏洞。
+    <p>任何不必要的网络协议栈（包括 IPv6）都应禁用，以减少被利用的漏洞。</p>
 
 severity: medium
 

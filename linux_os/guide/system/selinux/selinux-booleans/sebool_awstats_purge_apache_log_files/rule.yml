@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="awstats_purge_apache_log_files") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>awstats_purge_apache_log_files</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>awstats_purge_apache_log_files</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P awstats_purge_apache_log_files off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>awstats_purge_apache_log_files</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>awstats_purge_apache_log_files</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P awstats_purge_apache_log_files off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 AWStats 清除 Apache 日志文件可能导致审计证据丢失；除非经过明确批准，否则应保持禁用。
+    <p>允许 AWStats 清除 Apache 日志文件可能导致审计证据丢失；除非经过明确批准，否则应保持禁用。</p>
 
 severity: medium
 

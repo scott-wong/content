@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="xend_run_qemu") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>xend_run_qemu</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>xend_run_qemu</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xend_run_qemu on</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>xend_run_qemu</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>xend_run_qemu</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xend_run_qemu on</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用 xend_run_qemu 可确保 Xen 管理组件能够按预期运行 QEMU。
+    <p>启用 xend_run_qemu 可确保 Xen 管理组件能够按预期运行 QEMU。</p>
 
 severity: medium
 

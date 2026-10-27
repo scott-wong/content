@@ -13,7 +13,8 @@ description: |-
     is group-owned by an interactive user.
 
     <p><strong>中文说明：</strong></p>
-    将交互式用户文件的组所有者更改为该用户在 <pre>/etc/passwd</pre> 中的组。要更改本地交互式用户主目录的组所有者，请使用以下命令：
+    <p>将交互式用户文件的组所有者更改为该用户在</p>
+    <pre>/etc/passwd</pre> 中的组。要更改本地交互式用户主目录的组所有者，请使用以下命令：
     <pre>$ sudo chgrp <i>USER_GROUP</i> /home/<i>USER</i>/.<i>INIT_FILE</i></pre>
 
     此规则确保与交互式用户相关的每个初始化文件都由交互式用户作为组所有者拥有。
@@ -24,7 +25,7 @@ rationale: |-
     compromise accounts upon logon.
 
     <p><strong>中文理由：</strong></p>
-    交互式用户的本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时攻陷账户。
+    <p>交互式用户的本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时攻陷账户。</p>
 
 severity: medium
 

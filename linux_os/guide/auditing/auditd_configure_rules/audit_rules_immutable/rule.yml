@@ -23,7 +23,7 @@ description: |-
     override it.
 
     <p><strong>中文说明：</strong></p>
-    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以使 auditd 配置不可变：
+    <p>如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以使 auditd 配置不可变：</p>
     <pre>-e 2</pre>
     如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，以使 auditd 配置不可变：
     <pre>-e 2</pre>
@@ -36,7 +36,7 @@ rationale: |-
     operation.
 
     <p><strong>中文理由：</strong></p>
-    使审计配置不可变可以防止对审计规则的意外修改和恶意修改，尽管在系统运行期间需要合法更改时可能会造成困难。
+    <p>使审计配置不可变可以防止对审计规则的意外修改和恶意修改，尽管在系统运行期间需要合法更改时可能会造成困难。</p>
 
 severity: medium
 

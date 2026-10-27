@@ -21,11 +21,11 @@ description: |-
     <pre>firewall-cmd --reload</pre>
 
     <p><strong>中文说明：</strong></p>
-    将 <tt>firewalld</tt> 配置为将环回流量限制到 <tt>lo</tt> 接口。
+    <p>将 <tt>firewalld</tt> 配置为将环回流量限制到 <tt>lo</tt> 接口。
 
     必须通过将 <tt>lo</tt> 接口分配到 <tt>firewalld</tt> 的 <tt>trusted</tt> 区域来信任环回流量。但是，作为防欺骗措施，必须将环回流量限制到环回接口。
 
-    要将 <tt>firewalld</tt> 配置为将环回流量限制到 <tt>lo</tt> 接口，请运行以下命令：
+    要将 <tt>firewalld</tt> 配置为将环回流量限制到 <tt>lo</tt> 接口，请运行以下命令：</p>
     <pre>
     sudo firewall-cmd --permanent --zone=trusted --add-rich-rule='rule family=ipv4 source address="127.0.0.1" destination not address="127.0.0.1" drop'
     sudo firewall-cmd --permanent --zone=trusted --add-rich-rule='rule family=ipv6 source address="::1" destination not address="::1" drop'
@@ -41,7 +41,7 @@ rationale: |-
     anti-spoofing measure.
 
     <p><strong>中文理由：</strong></p>
-    环回流量在计算机上的进程之间生成，通常对系统运行至关重要。环回接口是唯一应出现环回网络流量的位置；作为防欺骗措施，所有其他接口都应忽略此网络上的流量。
+    <p>环回流量在计算机上的进程之间生成，通常对系统运行至关重要。环回接口是唯一应出现环回网络流量的位置；作为防欺骗措施，所有其他接口都应忽略此网络上的流量。</p>
 
 severity: medium
 

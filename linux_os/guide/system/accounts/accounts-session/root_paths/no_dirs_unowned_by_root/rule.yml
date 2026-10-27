@@ -8,7 +8,7 @@ description: |-
     and ensure that the directory is owned by the root user.
 
     <p><strong>中文说明：</strong></p>
-    对于 root 的 PATH 中的每个元素，运行：
+    <p>对于 root 的 PATH 中的每个元素，运行：</p>
     <pre># ls -ld <i>DIR</i></pre>
     并确保该目录的所有者为 root 用户。
 
@@ -18,7 +18,7 @@ rationale: |-
     potentially leading to privilege escalation or execution of malicious code.
 
     <p><strong>中文理由：</strong></p>
-    root 的 PATH 中不属于 root 的目录可能允许未授权用户操纵 root 的执行环境，从而可能导致权限提升或执行恶意代码。
+    <p>root 的 PATH 中不属于 root 的目录可能允许未授权用户操纵 root 的执行环境，从而可能导致权限提升或执行恶意代码。</p>
 
 identifiers:
     cce@rhel9: CCE-86470-2

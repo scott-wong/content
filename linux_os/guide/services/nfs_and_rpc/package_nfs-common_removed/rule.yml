@@ -6,7 +6,7 @@ description: |-
     {{{ describe_package_remove(package="nfs-common") }}}
 
     <p><strong>中文说明：</strong></p>
-    应移除 <tt>nfs-common</tt> 软件包。
+    <p>应移除 <tt>nfs-common</tt> 软件包。</p>
 
 rationale: |-
     If the system does not export NFS shares or act as an NFS client, it is
@@ -14,7 +14,7 @@ rationale: |-
     surface.
 
     <p><strong>中文理由：</strong></p>
-    如果系统不导出 NFS 共享，也不充当 NFS 客户端，建议移除此服务，以减少远程攻击面。
+    <p>如果系统不导出 NFS 共享，也不充当 NFS 客户端，建议移除此服务，以减少远程攻击面。</p>
 
 severity: low
 

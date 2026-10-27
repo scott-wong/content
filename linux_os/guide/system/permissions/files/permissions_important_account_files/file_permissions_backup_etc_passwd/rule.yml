@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/passwd-", perms="0644") }}}
 
     <p><strong>中文说明：</strong></p>
-    要正确设置 <tt>/etc/passwd-</tt> 的权限，请运行 <tt>sudo chmod 0644 /etc/passwd-</tt>。
+    <p>要正确设置 <tt>/etc/passwd-</tt> 的权限，请运行 <tt>sudo chmod 0644 /etc/passwd-</tt>。</p>
 
 rationale: |-
     The <tt>/etc/passwd-</tt> file is a backup file of <tt>/etc/passwd</tt>, and as such,
@@ -14,7 +14,7 @@ rationale: |-
     Protection of this file is critical for system security.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/passwd-</tt> 文件是 <tt>/etc/passwd</tt> 的备份文件，因此包含有关系统上已配置用户的信息。保护该文件对系统安全至关重要。
+    <p><tt>/etc/passwd-</tt> 文件是 <tt>/etc/passwd</tt> 的备份文件，因此包含有关系统上已配置用户的信息。保护该文件对系统安全至关重要。</p>
 
 severity: medium
 

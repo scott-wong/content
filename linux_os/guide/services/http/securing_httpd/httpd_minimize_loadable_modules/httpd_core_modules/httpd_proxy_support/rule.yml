@@ -15,7 +15,7 @@ description: |-
     <tt>mod status</tt> be enabled.
 
     <p><strong>中文说明：</strong></p>
-    <tt>proxy</tt> 模块提供代理支持，使 <tt>httpd</tt> 能够转发请求并充当其他服务器的网关。如果不需要其功能，请注释掉该模块：
+    <p><tt>proxy</tt> 模块提供代理支持，使 <tt>httpd</tt> 能够转发请求并充当其他服务器的网关。如果不需要其功能，请注释掉该模块：</p>
     <pre>#LoadModule proxy_module modules/mod_proxy.so</pre>
 
     如果需要代理支持，请加载 <tt>mod_proxy</tt> 以及适当的代理协议处理模块（<tt>mod_proxy_http</tt>、<tt>mod_proxy_ftp</tt> 或 <tt>mod_proxy_connect</tt> 之一）。此外，在启用代理之前，请确保服务器安全，因为开放代理服务器会带来安全风险。<tt>mod_proxy_balancer</tt> 支持负载均衡，但要求启用 <tt>mod_status</tt>。
@@ -25,7 +25,7 @@ rationale: |-
     by limiting the capabilities allowed by the web server.
 
     <p><strong>中文理由：</strong></p>
-    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
+    <p>尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。</p>
 
 severity: unknown
 

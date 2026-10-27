@@ -27,7 +27,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    为确保 OpenShift 不接受基于令牌的身份验证，请遵循 OpenShift 文档并配置其他身份验证机制。然后，编辑 API Server Pod 规范文件。编辑 <tt>openshift-kube-apiserver</tt> configmap 并删除 <tt>token-auth-file</tt> 参数：
+    <p>为确保 OpenShift 不接受基于令牌的身份验证，请遵循 OpenShift 文档并配置其他身份验证机制。然后，编辑 API Server Pod 规范文件。编辑 <tt>openshift-kube-apiserver</tt> configmap 并删除 <tt>token-auth-file</tt> 参数：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -44,7 +44,7 @@ rationale: |-
     API Server.
 
     <p><strong>中文理由：</strong></p>
-    基于令牌的身份验证使用静态令牌对 API Server 请求进行身份验证。这些令牌以明文形式存储在 API Server 上的文件中，且在不重启 API Server 的情况下无法撤销或轮换。
+    <p>基于令牌的身份验证使用静态令牌对 API Server 请求进行身份验证。这些令牌以明文形式存储在 API Server 上的文件中，且在不重启 API Server 的情况下无法撤销或轮换。</p>
 
 identifiers:
   cce@ocp4: CCE-83481-2

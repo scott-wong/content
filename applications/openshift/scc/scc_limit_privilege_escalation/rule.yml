@@ -11,7 +11,7 @@ description: |-
     should set <tt>allowPrivilegeEscalation</tt> to <tt>false</tt>.
 
     <p><strong>中文说明：</strong></p>
-    应限制容器仅具有运行所需权限，并且不应允许其提升权限。为防止容器提升权限，相应的 Security Context Constraints（SCC）应将 <tt>allowPrivilegeEscalation</tt> 设置为 <tt>false</tt>。
+    <p>应限制容器仅具有运行所需权限，并且不应允许其提升权限。为防止容器提升权限，相应的 Security Context Constraints（SCC）应将 <tt>allowPrivilegeEscalation</tt> 设置为 <tt>false</tt>。</p>
 
 rationale: |-
     Privileged containers have access to more of the Linux Kernel
@@ -20,7 +20,7 @@ rationale: |-
     and host.
 
     <p><strong>中文理由：</strong></p>
-    特权容器可访问更多 Linux 内核能力和设备。如果特权容器失陷，攻击者将获得对容器和主机的完全访问权限。
+    <p>特权容器可访问更多 Linux 内核能力和设备。如果特权容器失陷，攻击者将获得对容器和主机的完全访问权限。</p>
 
 severity: medium
 

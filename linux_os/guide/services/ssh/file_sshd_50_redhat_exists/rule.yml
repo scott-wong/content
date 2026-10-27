@@ -8,14 +8,14 @@ description: |-
     settings to secure SSH.
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>{{{ sshd_redhat_drop_in_file }}}</tt> 必须存在，因为它包含用于保护 SSH 的重要设置。
+    <p>文件 <tt>{{{ sshd_redhat_drop_in_file }}}</tt> 必须存在，因为它包含用于保护 SSH 的重要设置。</p>
 
 
 rationale: |-
     The file must exist to configure SSH correctly.
 
     <p><strong>中文理由：</strong></p>
-    文件必须存在才能正确配置 SSH。
+    <p>文件必须存在才能正确配置 SSH。</p>
 
 identifiers:
     cce@rhel9: CCE-88599-6

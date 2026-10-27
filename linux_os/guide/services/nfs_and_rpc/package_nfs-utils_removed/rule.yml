@@ -13,7 +13,7 @@ description: |-
     {{{ describe_package_remove(package=package) }}}
 
     <p><strong>中文说明：</strong></p>
-    应移除 <tt>{{{ package }}}</tt> 软件包。
+    <p>应移除 <tt>{{{ package }}}</tt> 软件包。</p>
 
 rationale: |-
     <tt>{{{ package }}}</tt> provides a daemon for the kernel NFS server and related tools. This
@@ -23,7 +23,7 @@ rationale: |-
     that host.
 
     <p><strong>中文理由：</strong></p>
-    <tt>{{{ package }}}</tt> 提供内核 NFS 服务器守护进程及相关工具。此软件包还包含 <tt>showmount</tt> 程序。<tt>showmount</tt> 会查询远程主机上的挂载守护进程，以获取该远程主机上网络文件系统（NFS）服务器的信息。例如，<tt>showmount</tt> 可以显示已挂载到该主机上的客户端。
+    <p><tt>{{{ package }}}</tt> 提供内核 NFS 服务器守护进程及相关工具。此软件包还包含 <tt>showmount</tt> 程序。<tt>showmount</tt> 会查询远程主机上的挂载守护进程，以获取该远程主机上网络文件系统（NFS）服务器的信息。例如，<tt>showmount</tt> 可以显示已挂载到该主机上的客户端。</p>
 
 severity: low
 

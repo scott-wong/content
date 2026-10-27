@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="logwatch_can_network_connect_mail") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>logwatch_can_network_connect_mail</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>logwatch_can_network_connect_mail</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P logwatch_can_network_connect_mail off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>logwatch_can_network_connect_mail</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>logwatch_can_network_connect_mail</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P logwatch_can_network_connect_mail off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 logwatch 连接邮件服务器，减少日志分析工具通过网络外发信息的能力。
+    <p>禁用后，可防止 logwatch 连接邮件服务器，减少日志分析工具通过网络外发信息的能力。</p>
 
 severity: medium
 

@@ -20,7 +20,7 @@ description: |-
     for them and then be restarted.
 
     <p><strong>中文说明：</strong></p>
-    AppArmor 配置档定义应用可访问的资源。要将所有配置档设置为 <tt>enforce</tt> 或 <tt>complain</tt> 模式，请运行以下命令将所有配置档设置为 <tt>enforce</tt> 模式：
+    <p>AppArmor 配置档定义应用可访问的资源。要将所有配置档设置为 <tt>enforce</tt> 或 <tt>complain</tt> 模式，请运行以下命令将所有配置档设置为 <tt>enforce</tt> 模式：</p>
     <pre>$ sudo aa-enforce /etc/apparmor.d/*</pre>
     运行以下命令将所有配置档设置为 <tt>complain</tt> 模式：
     <pre>$ sudo aa-complain /etc/apparmor.d/*</pre>
@@ -39,7 +39,7 @@ rationale: |-
     exist on the system are activated.
 
     <p><strong>中文理由：</strong></p>
-    安全配置要求因站点而异。某些站点可能要求比默认策略更严格的策略，这完全可以接受。此建议旨在确保系统上存在的任何策略均已激活。
+    <p>安全配置要求因站点而异。某些站点可能要求比默认策略更严格的策略，这完全可以接受。此建议旨在确保系统上存在的任何策略均已激活。</p>
 
 severity: medium
 

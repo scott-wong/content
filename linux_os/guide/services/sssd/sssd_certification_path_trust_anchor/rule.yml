@@ -7,14 +7,14 @@ description: |-
     Enable certification trust path for SSSD to an accepted trust anchor.
 
     <p><strong>中文说明：</strong></p>
-    为 SSSD 启用到可接受信任锚的证书信任路径。
+    <p>为 SSSD 启用到可接受信任锚的证书信任路径。</p>
 
 rationale: |-
     Without path validation, an informed trust decision by the relying party cannot be made when 
     presented with any certificate not already explicitly trusted.
 
     <p><strong>中文理由：</strong></p>
-    如果没有路径验证，当向依赖方出示任何尚未明确受信任的证书时，依赖方无法做出知情的信任决策。
+    <p>如果没有路径验证，当向依赖方出示任何尚未明确受信任的证书时，依赖方无法做出知情的信任决策。</p>
 
 severity: medium
 

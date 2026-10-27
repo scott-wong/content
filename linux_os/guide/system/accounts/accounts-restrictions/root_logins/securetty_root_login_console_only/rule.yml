@@ -11,7 +11,7 @@ description: |-
     vc/4</pre>
 
     <p><strong>中文说明：</strong></p>
-    要限制通过（已弃用的）虚拟控制台设备进行 root 登录，请确保 <tt>/etc/securetty</tt> 中不出现以下形式的行：
+    <p>要限制通过（已弃用的）虚拟控制台设备进行 root 登录，请确保 <tt>/etc/securetty</tt> 中不出现以下形式的行：</p>
     <pre>vc/1
     vc/2
     vc/3
@@ -23,7 +23,7 @@ rationale: |-
     using the root account.
 
     <p><strong>中文理由：</strong></p>
-    阻止直接通过虚拟控制台设备进行 root 登录，有助于确保对使用 root 账户在系统上执行的操作进行问责。
+    <p>阻止直接通过虚拟控制台设备进行 root 登录，有助于确保对使用 root 账户在系统上执行的操作进行问责。</p>
 
 severity: medium
 

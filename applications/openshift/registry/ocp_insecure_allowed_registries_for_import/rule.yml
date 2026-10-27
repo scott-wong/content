@@ -22,8 +22,8 @@ description: |-
                 text="the relevant documentation") }}}.
 
     <p><strong>中文说明：</strong></p>
-    配置 <tt>allowedRegistriesForImport</tt> 限制普通用户可从中导入镜像的容器镜像仓库。该配置列出可信任其包含有效镜像的镜像仓库，并且除非另有配置，否则假定配置的镜像位置是安全的。仅允许安全镜像仓库很重要，以避免中间人攻击，因为不安全的镜像导入请求可被冒充，并可能导致获取恶意内容。
-    使用以下命令列出所有配置为 <tt>insecure</tt> 设为 <tt>true</tt> 的允许导入镜像仓库：
+    <p>配置 <tt>allowedRegistriesForImport</tt> 限制普通用户可从中导入镜像的容器镜像仓库。该配置列出可信任其包含有效镜像的镜像仓库，并且除非另有配置，否则假定配置的镜像位置是安全的。仅允许安全镜像仓库很重要，以避免中间人攻击，因为不安全的镜像导入请求可被冒充，并可能导致获取恶意内容。
+    使用以下命令列出所有配置为 <tt>insecure</tt> 设为 <tt>true</tt> 的允许导入镜像仓库：</p>
     <pre>oc get image.config.openshift.io/cluster -o json | jq '.spec | (.allowedRegistriesForImport[])? | select(.insecure==true)'</pre>
     使用以下命令移除或编辑列出的 <tt>insecure</tt> 设为 <tt>true</tt> 的镜像仓库：
     <pre>oc edit image.config.openshift.io/cluster</pre>
@@ -34,7 +34,7 @@ rationale: |-
     Configured list of allowed registries for import should be from the secure source.
 
     <p><strong>中文理由：</strong></p>
-    配置的允许导入镜像仓库列表应来自安全来源。
+    <p>配置的允许导入镜像仓库列表应来自安全来源。</p>
 
 severity: medium
 

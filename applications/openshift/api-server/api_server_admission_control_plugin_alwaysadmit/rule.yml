@@ -17,14 +17,14 @@ description: |-
     contain the AlwaysAdmit plugin.
 
     <p><strong>中文说明：</strong></p>
-    为确保 OpenShift 仅响应准入控制插件明确允许的请求，请检查 <code>config</code> ConfigMap 对象不包含 AlwaysAdmit 插件。
+    <p>为确保 OpenShift 仅响应准入控制插件明确允许的请求，请检查 <code>config</code> ConfigMap 对象不包含 AlwaysAdmit 插件。</p>
 
 rationale: |-
     Enabling the admission control plugin <tt>AlwaysAdmit</tt> allows all
     requests and does not provide any filtering.
 
     <p><strong>中文理由：</strong></p>
-    启用准入控制插件 <tt>AlwaysAdmit</tt> 会允许所有请求，不提供任何过滤。
+    <p>启用准入控制插件 <tt>AlwaysAdmit</tt> 会允许所有请求，不提供任何过滤。</p>
 
 identifiers:
   cce@ocp4: CCE-84148-6

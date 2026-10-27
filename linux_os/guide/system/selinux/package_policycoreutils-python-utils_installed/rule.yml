@@ -7,14 +7,14 @@ description: |-
     {{{ describe_package_install(package="policycoreutils-python-utils") }}}
 
     <p><strong>中文说明：</strong></p>
-    请使用适当的软件包管理工具安装 <tt>policycoreutils-python-utils</tt> 软件包。
+    <p>请使用适当的软件包管理工具安装 <tt>policycoreutils-python-utils</tt> 软件包。</p>
 
 rationale: |-
     This package is required to operate and manage an SELinux environment and its policies.
     It provides utilities such as semanage, audit2allow, audit2why, chcat and sandbox.
 
     <p><strong>中文理由：</strong></p>
-    此软件包是运行和管理 SELinux 环境及其策略所必需的。它提供 semanage、audit2allow、audit2why、chcat 和 sandbox 等实用程序。
+    <p>此软件包是运行和管理 SELinux 环境及其策略所必需的。它提供 semanage、audit2allow、audit2why、chcat 和 sandbox 等实用程序。</p>
 
 severity: medium
 

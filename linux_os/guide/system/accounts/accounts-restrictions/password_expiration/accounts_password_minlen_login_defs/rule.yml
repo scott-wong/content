@@ -15,7 +15,7 @@ description: |-
     information about enforcing password quality requirements.
 
     <p><strong>中文说明：</strong></p>
-    要为新建账户指定密码长度要求，请编辑文件 <tt>{{{ login_defs_path }}}</tt> 并添加或更正以下行：
+    <p>要为新建账户指定密码长度要求，请编辑文件 <tt>{{{ login_defs_path }}}</tt> 并添加或更正以下行：</p>
     <pre>PASS_MIN_LEN {{{ xccdf_value("var_accounts_password_minlen_login_defs") }}}</pre>
     <br /><br />
     配置档要求为 <tt>{{{ xccdf_value("var_accounts_password_minlen_login_defs") }}}</tt>。如果某个程序在更改密码时查询 <tt>{{{ login_defs_path }}}</tt> 并同时使用另一个 PAM 模块（例如 <tt>pam_pwquality</tt>），则必须满足其中最严格的要求。有关强制执行密码质量要求的更多信息，请参见 PAM 部分。
@@ -28,7 +28,7 @@ rationale: |-
     behavior that may result.
 
     <p><strong>中文理由：</strong></p>
-    要求设置密码最小长度可确保扩大搜索空间，使密码破解攻击更加困难。但是，对于任何严格的要求，都必须谨慎权衡其安全收益与可能导致的可用性问题、支持成本或适得其反的行为。
+    <p>要求设置密码最小长度可确保扩大搜索空间，使密码破解攻击更加困难。但是，对于任何严格的要求，都必须谨慎权衡其安全收益与可能导致的可用性问题、支持成本或适得其反的行为。</p>
 
 severity: medium
 

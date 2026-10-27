@@ -18,7 +18,7 @@ description: |-
   minimize the cluster's attack surface.
 
   <p><strong>中文说明：</strong></p>
-  默认情况下，运行在 10251/TCP 端口上的 Scheduler API 服务用于提供健康状态和指标信息，并且无需身份验证或加密即可访问。因此，应仅将其绑定到 localhost 接口，以尽量减小集群的攻击面。
+  <p>默认情况下，运行在 10251/TCP 端口上的 Scheduler API 服务用于提供健康状态和指标信息，并且无需身份验证或加密即可访问。因此，应仅将其绑定到 localhost 接口，以尽量减小集群的攻击面。</p>
 
 rationale: |-
   In OpenShift 4, The Kubernetes Scheduler operator manages and updates the
@@ -29,7 +29,7 @@ rationale: |-
   components that monitor the kubelet health.
 
   <p><strong>中文理由：</strong></p>
-  在 OpenShift 4 中，Kubernetes Scheduler Operator 负责管理和更新部署在 OpenShift 之上的 Kubernetes Scheduler。默认情况下，该 Operator 通过 metrics service 公开指标。指标从 Kubernetes Scheduler Operator 收集。剖析数据会发送到 healthzPort，即 localhost healthz 端点的端口。更改此值可能会中断监控 kubelet 健康状况的组件。
+  <p>在 OpenShift 4 中，Kubernetes Scheduler Operator 负责管理和更新部署在 OpenShift 之上的 Kubernetes Scheduler。默认情况下，该 Operator 通过 metrics service 公开指标。指标从 Kubernetes Scheduler Operator 收集。剖析数据会发送到 healthzPort，即 localhost healthz 端点的端口。更改此值可能会中断监控 kubelet 健康状况的组件。</p>
 
 severity: medium
 

@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file=sshd_sysconfig_file, perms="0640") }}}
 
     <p><strong>中文说明：</strong></p>
-    要正确设置 <tt>{{{ sshd_sysconfig_file }}}</tt> 的权限，请运行 <tt>sudo chmod 0640 {{{ sshd_sysconfig_file }}}</tt>。
+    <p>要正确设置 <tt>{{{ sshd_sysconfig_file }}}</tt> 的权限，请运行 <tt>sudo chmod 0640 {{{ sshd_sysconfig_file }}}</tt>。</p>
 
 rationale: |-
     The <tt>/etc/sysconfig/sshd</tt> file contains configuration options for the SSH daemon.
@@ -14,7 +14,7 @@ rationale: |-
     or more restrictive to prevent unauthorized access and modifications.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/sysconfig/sshd</tt> 文件包含 SSH 守护进程的配置选项。保护该文件对系统安全很重要。该文件应具有 0640 或更严格的模式，以防止未经授权的访问和修改。
+    <p><tt>/etc/sysconfig/sshd</tt> 文件包含 SSH 守护进程的配置选项。保护该文件对系统安全很重要。该文件应具有 0640 或更严格的模式，以防止未经授权的访问和修改。</p>
 
 severity: medium
 

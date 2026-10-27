@@ -16,12 +16,12 @@ description: |-
 
     Ask the System Administrator for the site or program PPSM Component Local
     Services Assessment (Component Local Services Assessment (CLSA). Verify the
-    services allowed by the firewall match the PPSM CLSA. 
+    services allowed by the firewall match the PPSM CLSA.
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>SuSEfirewall2</tt> 软件包并启用 <tt>SuSEfirewall2</tt> 服务。
+    <p>应安装 <tt>SuSEfirewall2</tt> 软件包并启用 <tt>SuSEfirewall2</tt> 服务。
 
-    通过运行以下命令检查防火墙配置中是否存在任何不必要或禁止的功能、端口、协议和/或服务：
+    通过运行以下命令检查防火墙配置中是否存在任何不必要或禁止的功能、端口、协议和/或服务：</p>
     <pre># grep ^FW_ /etc/sysconfig/SuSEfirewall2
     FW_SERVICES_ACCEPT_EXT="0/0,tcp,22,,hitcount=3,blockseconds=60,recentname=ssh"</pre>
 
@@ -47,9 +47,9 @@ rationale: |-
     official business or address authorized quality-of-life issues.
 
     <p><strong>中文理由：</strong></p>
-    为防止设备未经授权连接、信息未经授权传输或未经授权隧道传输（即在数据类型中嵌入其他数据类型），组织必须禁用或限制信息系统中未使用或不必要的物理和逻辑端口/协议。
+    <p>为防止设备未经授权连接、信息未经授权传输或未经授权隧道传输（即在数据类型中嵌入其他数据类型），组织必须禁用或限制信息系统中未使用或不必要的物理和逻辑端口/协议。
 
-    SUSE 操作系统可提供多种功能和服务。默认提供的某些功能和服务可能并非支持组织基本运营所必需。此外，有时从一个组件提供多个服务很方便（例如 VPN 和 IPS），但与限制每个组件提供的服务相比，这会增加风险。为支持最小功能原则，SUSE 操作系统必须支持组织要求，仅提供必要能力，并将端口、协议和/或服务的使用限制为执行公务或处理经授权生活质量问题所必需、经授权和批准的项目。
+    SUSE 操作系统可提供多种功能和服务。默认提供的某些功能和服务可能并非支持组织基本运营所必需。此外，有时从一个组件提供多个服务很方便（例如 VPN 和 IPS），但与限制每个组件提供的服务相比，这会增加风险。为支持最小功能原则，SUSE 操作系统必须支持组织要求，仅提供必要能力，并将端口、协议和/或服务的使用限制为执行公务或处理经授权生活质量问题所必需、经授权和批准的项目。</p>
 
 severity: medium
 

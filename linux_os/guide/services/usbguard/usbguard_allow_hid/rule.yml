@@ -11,14 +11,14 @@ description: |-
     to <tt>/etc/usbguard/rules.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要允许 USBGuard 守护进程授权人机接口设备（键盘、鼠标），请将以下行添加到 <tt>/etc/usbguard/rules.conf</tt>：<tt>allow with-interface match-all { 03:*:* }</tt>
+    <p>要允许 USBGuard 守护进程授权人机接口设备（键盘、鼠标），请将以下行添加到 <tt>/etc/usbguard/rules.conf</tt>：<tt>allow with-interface match-all { 03:*:* }</tt></p>
 
 rationale: |-
     Without allowing Human Interface Devices, it might not be possible
     to interact with the system.
 
     <p><strong>中文理由：</strong></p>
-    如果不允许人机接口设备，可能无法与系统交互。
+    <p>如果不允许人机接口设备，可能无法与系统交互。</p>
 
 warnings:
     - general: |-

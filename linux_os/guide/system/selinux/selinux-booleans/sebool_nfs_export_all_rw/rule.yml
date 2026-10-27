@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="nfs_export_all_rw") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>nfs_export_all_rw</tt> 处于启用状态。如果此设置已禁用，应启用，因为它允许 NFS 导出读写挂载。要启用 <tt>nfs_export_all_rw</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P nfs_export_all_rw on</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>nfs_export_all_rw</tt> 处于启用状态。如果此设置已禁用，应启用，因为它允许 NFS 导出读写挂载。要启用 <tt>nfs_export_all_rw</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P nfs_export_all_rw on</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用后，可允许 NFS 导出读写挂载，这是支持读写 NFS 共享所需的策略，具体导出范围仍应由 <tt>/etc/exports</tt> 限制。
+    <p>启用后，可允许 NFS 导出读写挂载，这是支持读写 NFS 共享所需的策略，具体导出范围仍应由 <tt>/etc/exports</tt> 限制。</p>
 
 severity: medium
 

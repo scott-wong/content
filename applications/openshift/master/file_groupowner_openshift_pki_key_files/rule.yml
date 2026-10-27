@@ -7,7 +7,7 @@ description: |-
   {{{ describe_file_group_owner(file="/etc/kubernetes/static-pod-resources/*/*/*/*.key", group="root") }}}
 
   <p><strong>中文说明：</strong></p>
-  确保 <tt>/etc/kubernetes/static-pod-resources/*/*/*/*.key</tt> 的文件所属组为 <tt>root</tt>。
+  <p>确保 <tt>/etc/kubernetes/static-pod-resources/*/*/*/*.key</tt> 的文件所属组为 <tt>root</tt>。</p>
 
 rationale: |-
   OpenShift makes use of a number of certificates as part of its operation.
@@ -16,7 +16,7 @@ rationale: |-
   The directory and files should be owned by root:root.
 
   <p><strong>中文理由：</strong></p>
-  OpenShift 在运行过程中使用多个证书。应验证包含 PKI 信息的目录以及该目录中所有文件的所有权，以维护其完整性。目录和文件应由 root:root 拥有。
+  <p>OpenShift 在运行过程中使用多个证书。应验证包含 PKI 信息的目录以及该目录中所有文件的所有权，以维护其完整性。目录和文件应由 root:root 拥有。</p>
 
 identifiers:
   cce@ocp4: CCE-84172-6

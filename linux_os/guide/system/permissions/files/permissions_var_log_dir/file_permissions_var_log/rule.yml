@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/var/log", perms="0755") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/var/log</tt> 的权限必须为 <tt>0755</tt>。
+    <p>文件 <tt>/var/log</tt> 的权限必须为 <tt>0755</tt>。</p>
 
 rationale: |-
     The <tt>/var/log</tt> directory contains files with logs of error
@@ -14,7 +14,7 @@ rationale: |-
     personnel.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/var/log</tt> 目录包含系统错误消息日志文件，只应由经过授权的人员访问。
+    <p><tt>/var/log</tt> 目录包含系统错误消息日志文件，只应由经过授权的人员访问。</p>
 
 severity: medium
 

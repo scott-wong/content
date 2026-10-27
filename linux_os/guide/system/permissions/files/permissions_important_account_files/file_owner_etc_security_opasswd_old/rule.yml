@@ -6,14 +6,14 @@ description: |-
     {{{ describe_file_owner(file="/etc/security/opasswd.old", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>/etc/security/opasswd.old</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/security/opasswd.old</tt>。
+    <p>要将 <tt>/etc/security/opasswd.old</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/security/opasswd.old</tt>。</p>
 
 rationale: |-
     The <tt>/etc/security/opasswd.old</tt> file stores backups of old passwords to prevent
     password reuse. Protection of this file is critical for system security.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/security/opasswd.old</tt> 文件存储旧密码的备份以防止密码重用。保护该文件对系统安全至关重要。
+    <p><tt>/etc/security/opasswd.old</tt> 文件存储旧密码的备份以防止密码重用。保护该文件对系统安全至关重要。</p>
 
 severity: medium
 

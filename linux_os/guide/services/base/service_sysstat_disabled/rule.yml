@@ -10,18 +10,18 @@ description: |-
     {{{ describe_service_disable(service="sysstat") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>sysstat</tt> 服务将各种 I/O 和 CPU 性能统计信息重置为零，以便在启动时从全新状态开始计数。
-    应禁用 <tt>sysstat</tt> 服务。
+    <p><tt>sysstat</tt> 服务将各种 I/O 和 CPU 性能统计信息重置为零，以便在启动时从全新状态开始计数。
+    应禁用 <tt>sysstat</tt> 服务。</p>
 
 rationale: |-
     By default the <tt>sysstat</tt> service runs a program at
     boot to reset performance statistics. This data can be retrieved using programs such as
     <tt>sar</tt> and <tt>sadc</tt>. While the <tt>sysstat</tt> service may provide useful
     insight into system operation, through the lens of providing only essential system services,
-    this service should be disabled. 
+    this service should be disabled.
 
     <p><strong>中文理由：</strong></p>
-    默认情况下，<tt>sysstat</tt> 服务在启动时运行程序以重置性能统计信息。可使用 <tt>sar</tt> 和 <tt>sadc</tt> 等程序检索这些数据。虽然 <tt>sysstat</tt> 服务可以提供有关系统运行的有用信息，但从仅提供必要系统服务的角度来看，应禁用此服务。
+    <p>默认情况下，<tt>sysstat</tt> 服务在启动时运行程序以重置性能统计信息。可使用 <tt>sar</tt> 和 <tt>sadc</tt> 等程序检索这些数据。虽然 <tt>sysstat</tt> 服务可以提供有关系统运行的有用信息，但从仅提供必要系统服务的角度来看，应禁用此服务。</p>
 
 severity: low
 

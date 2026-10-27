@@ -9,9 +9,9 @@ description: |-
     {{{ describe_grub2_argument("init_on_alloc=1") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    要将内核配置为在分配内存前将其清零，请将 <tt>init_on_alloc=1</tt> 参数添加到默认 GRUB 2 命令行。
+    <p>要将内核配置为在分配内存前将其清零，请将 <tt>init_on_alloc=1</tt> 参数添加到默认 GRUB 2 命令行。
 
-    为确保新安装的内核将 <tt>init_on_alloc=1</tt> 作为内核命令行参数，请按产品要求将 <tt>init_on_alloc=1</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+    为确保新安装的内核将 <tt>init_on_alloc=1</tt> 作为内核命令行参数，请按产品要求将 <tt>init_on_alloc=1</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。</p>
 
 rationale: |-
     When the kernel configuration option <tt>init_on_alloc</tt> is enabled,
@@ -20,7 +20,7 @@ rationale: |-
     preventing data leaks.
 
     <p><strong>中文理由：</strong></p>
-    启用内核配置选项 <tt>init_on_alloc</tt> 后，所有页分配器和 slab 分配器内存在分配时都会被清零，从而消除多种“未初始化堆内存”缺陷，有效防止数据泄露。
+    <p>启用内核配置选项 <tt>init_on_alloc</tt> 后，所有页分配器和 slab 分配器内存在分配时都会被清零，从而消除多种“未初始化堆内存”缺陷，有效防止数据泄露。</p>
 
 severity: medium
 

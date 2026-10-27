@@ -12,14 +12,14 @@ description: |-
     unscheduled interruption.
 
     <p><strong>中文说明：</strong></p>
-    通常，会为 Web 服务器建立服务账户。这是因为不应使用特权账户，而且服务器设计为长时间不间断运行。SA 或 Web 管理员需要具有 Web 服务器的密码访问权限，以便在发生紧急情况时重启服务，因为 Web 服务器不应在非计划中断后自动重启。
+    <p>通常，会为 Web 服务器建立服务账户。这是因为不应使用特权账户，而且服务器设计为长时间不间断运行。SA 或 Web 管理员需要具有 Web 服务器的密码访问权限，以便在发生紧急情况时重启服务，因为 Web 服务器不应在非计划中断后自动重启。</p>
 
 rationale: |-
     If the password is not entrusted to an SA or web manager the ability to
     ensure the availability of the web server is compromised.
 
     <p><strong>中文理由：</strong></p>
-    如果未将密码委托给 SA 或 Web 管理员，则确保 Web 服务器可用性的能力将受到损害。
+    <p>如果未将密码委托给 SA 或 Web 管理员，则确保 Web 服务器可用性的能力将受到损害。</p>
 
 severity: medium
 

@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="httpd_enable_homedirs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>httpd_enable_homedirs</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P httpd_enable_homedirs off</tt> 将其禁用。
+    <p>默认情况下，SELinux 布尔值 <tt>httpd_enable_homedirs</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P httpd_enable_homedirs off</tt> 将其禁用。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用此布尔值会允许 Web 服务器访问用户主目录，增加敏感数据泄露风险。
+    <p>启用此布尔值会允许 Web 服务器访问用户主目录，增加敏感数据泄露风险。</p>
 
 severity: medium
 

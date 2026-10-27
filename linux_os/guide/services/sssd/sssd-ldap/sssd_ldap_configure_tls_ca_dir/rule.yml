@@ -11,7 +11,8 @@ description: |-
     <pre>ldap_tls_cacertdir /path/to/tls/cacert</pre>
 
     <p><strong>中文说明：</strong></p>
-    配置 SSSD 实施加密，以保护 LDAP 远程访问会话的完整性。将 <pre>ldap_tls_cacertdir</pre> 选项（位于 <pre>/etc/sssd/sssd.conf</pre> 中）设置为用于对等身份验证的 X.509 证书路径。
+    <p>配置 SSSD 实施加密，以保护 LDAP 远程访问会话的完整性。将</p>
+    <pre>ldap_tls_cacertdir</pre> 选项（位于 <pre>/etc/sssd/sssd.conf</pre> 中）设置为用于对等身份验证的 X.509 证书路径。
     <pre>ldap_tls_cacertdir /path/to/tls/cacert</pre>
 
 rationale: |-
@@ -25,9 +26,9 @@ rationale: |-
     used to generate the hash.
 
     <p><strong>中文理由：</strong></p>
-    如果没有密码学完整性保护，未授权用户可在不被发现的情况下更改信息。
+    <p>如果没有密码学完整性保护，未授权用户可在不被发现的情况下更改信息。
     <br /><br />
-    用于保护信息完整性的密码学机制包括使用非对称密码学的签名哈希函数等，该机制允许分发公钥以验证哈希信息，同时保持生成哈希所用密钥的机密性。
+    用于保护信息完整性的密码学机制包括使用非对称密码学的签名哈希函数等，该机制允许分发公钥以验证哈希信息，同时保持生成哈希所用密钥的机密性。</p>
 
 severity: medium
 

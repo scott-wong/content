@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="mcelog_foreground") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>mcelog_foreground</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mcelog_foreground</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mcelog_foreground off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>mcelog_foreground</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mcelog_foreground</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mcelog_foreground off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 mcelog 以前台模式运行，降低与终端会话交互和输出意外暴露的风险。
+    <p>禁用后，可防止 mcelog 以前台模式运行，降低与终端会话交互和输出意外暴露的风险。</p>
 
 severity: medium
 

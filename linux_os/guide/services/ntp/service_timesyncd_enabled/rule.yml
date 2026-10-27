@@ -7,7 +7,7 @@ description: |-
     {{{ describe_service_enable(service="systemd_timesyncd") }}}
 
     <p><strong>中文说明：</strong></p>
-    应启用 <tt>systemd_timesyncd</tt> 服务。
+    <p>应启用 <tt>systemd_timesyncd</tt> 服务。</p>
 
 rationale: |-
     Enabling the <tt>systemd_timesyncd</tt> service ensures that this host
@@ -21,7 +21,7 @@ rationale: |-
     {{{ weblink(link="https://help.ubuntu.com/lts/serverguide/NTP.html.en") }}}.
 
     <p><strong>中文理由：</strong></p>
-    启用 <tt>systemd_timesyncd</tt> 服务可确保此主机使用 NTP 协议从 NTP 服务器获取时间数据。时间同步对于 Kerberos 等身份验证服务至关重要，对于维护准确的日志和审计可能的安全泄露也很重要。<br /><br />有关 Ubuntu 网络时间协议的更多信息，请参阅 <a href="https://help.ubuntu.com/lts/serverguide/NTP.html.en">Ubuntu NTP 指南</a>。
+    <p>启用 <tt>systemd_timesyncd</tt> 服务可确保此主机使用 NTP 协议从 NTP 服务器获取时间数据。时间同步对于 Kerberos 等身份验证服务至关重要，对于维护准确的日志和审计可能的安全泄露也很重要。<br /><br />有关 Ubuntu 网络时间协议的更多信息，请参阅 <a href="https://help.ubuntu.com/lts/serverguide/NTP.html.en">Ubuntu NTP 指南</a>。</p>
 
 severity: high
 

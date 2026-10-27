@@ -10,9 +10,9 @@ description: |-
     {{{ describe_grub2_argument("pti=on") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    要启用内核页表隔离，请将参数 <tt>pti=on</tt> 添加到 Linux 操作系统的默认 GRUB 2 命令行。
+    <p>要启用内核页表隔离，请将参数 <tt>pti=on</tt> 添加到 Linux 操作系统的默认 GRUB 2 命令行。
 
-    为确保新安装的内核将 <tt>pti=on</tt> 作为内核命令行参数，请按产品要求将 <tt>pti=on</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+    为确保新安装的内核将 <tt>pti=on</tt> 作为内核命令行参数，请按产品要求将 <tt>pti=on</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。</p>
 
 rationale: |-
     Kernel page-table isolation is a kernel feature that mitigates
@@ -21,7 +21,7 @@ rationale: |-
     randomization (KASLR).
 
     <p><strong>中文理由：</strong></p>
-    内核页表隔离是一项内核功能，可缓解 Meltdown 安全漏洞，并增强内核抵御绕过内核地址空间布局随机化（KASLR）尝试的能力。
+    <p>内核页表隔离是一项内核功能，可缓解 Meltdown 安全漏洞，并增强内核抵御绕过内核地址空间布局随机化（KASLR）尝试的能力。</p>
 
 severity: low
 

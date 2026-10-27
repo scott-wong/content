@@ -29,7 +29,7 @@ rationale: |-
   that an account compromise would have.
 
   <p><strong>中文理由：</strong></p>
-  通过定义 RBAC 角色，可以限制授予 Service Account 的权限，从而减小账户被攻陷时的影响范围。
+  <p>通过定义 RBAC 角色，可以限制授予 Service Account 的权限，从而减小账户被攻陷时的影响范围。</p>
 
 identifiers:
   cce@ocp4: CCE-86588-1

@@ -10,7 +10,7 @@ description: |-
     are a part of pseudo file systems such as <tt>sysfs</tt> or <tt>procfs</tt>.
 
     <p><strong>中文说明：</strong></p>
-    发现文件的全局（其他用户）写访问权限时，通常最好将其移除。但是，进行更改前请查阅特定应用的文档。此外，请监控反复出现的全局可写文件，因为它们可能是应用或用户账户配置错误的迹象。最后，这适用于真实文件，不适用于 <tt>sysfs</tt> 或 <tt>procfs</tt> 等伪文件系统中的虚拟文件。
+    <p>发现文件的全局（其他用户）写访问权限时，通常最好将其移除。但是，进行更改前请查阅特定应用的文档。此外，请监控反复出现的全局可写文件，因为它们可能是应用或用户账户配置错误的迹象。最后，这适用于真实文件，不适用于 <tt>sysfs</tt> 或 <tt>procfs</tt> 等伪文件系统中的虚拟文件。</p>
 
 rationale: |-
     Data in world-writable files can be modified by any user on the system. In almost all
@@ -18,7 +18,7 @@ rationale: |-
     support whatever legitimate access is needed without the risk caused by world-writable files.
 
     <p><strong>中文理由：</strong></p>
-    全局可写文件中的数据可被系统上的任何用户修改。几乎在所有情况下，都可通过用户和组权限的组合配置文件，以满足所需的任何合法访问，同时避免全局可写文件带来的风险。
+    <p>全局可写文件中的数据可被系统上的任何用户修改。几乎在所有情况下，都可通过用户和组权限的组合配置文件，以满足所需的任何合法访问，同时避免全局可写文件带来的风险。</p>
 
 severity: medium
 

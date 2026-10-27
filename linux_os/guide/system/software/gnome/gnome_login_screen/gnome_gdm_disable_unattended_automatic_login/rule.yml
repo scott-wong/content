@@ -14,7 +14,7 @@ description: |-
     DISPLAYMANAGER_PASSWORD_LESS_LOGIN="no"</pre>
 
     <p><strong>中文说明：</strong></p>
-    GNOME 显示管理器（GDM）可以允许用户无需交互或凭据自动登录，即无人值守登录。应始终要求用户向其获授权使用的系统进行身份验证。要禁用用户自动登录系统的能力，请在 <tt>/etc/sysconfig/displaymanager</tt> 中设置 <tt>DISPLAYMANAGER_AUTOLOGIN=""</tt> 或 <tt>DISPLAYMANAGER_PASSWORD_LESS_LOGIN="no"</tt>。例如：
+    <p>GNOME 显示管理器（GDM）可以允许用户无需交互或凭据自动登录，即无人值守登录。应始终要求用户向其获授权使用的系统进行身份验证。要禁用用户自动登录系统的能力，请在 <tt>/etc/sysconfig/displaymanager</tt> 中设置 <tt>DISPLAYMANAGER_AUTOLOGIN=""</tt> 或 <tt>DISPLAYMANAGER_PASSWORD_LESS_LOGIN="no"</tt>。例如：</p>
     <pre>DISPLAYMANAGER_AUTOLOGIN=""
     DISPLAYMANAGER_PASSWORD_LESS_LOGIN="no"</pre>
 
@@ -23,7 +23,7 @@ rationale: |-
     system security.
 
     <p><strong>中文理由：</strong></p>
-    未能将系统访问限制为已通过身份验证的用户，会对操作系统安全产生负面影响。
+    <p>未能将系统访问限制为已通过身份验证的用户，会对操作系统安全产生负面影响。</p>
 
 severity: high
 

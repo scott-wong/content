@@ -14,7 +14,7 @@ description: |-
     supplied data should be encoded to prevent cross-site scripting vulnerabilities.
 
     <p><strong>中文说明：</strong></p>
-    Server Side Includes 提供了一种通过插入服务器端代码动态生成网页的方法。但是，该技术已被弃用，并会带来重大安全问题。如果不需要此功能，请注释掉相关模块：
+    <p>Server Side Includes 提供了一种通过插入服务器端代码动态生成网页的方法。但是，该技术已被弃用，并会带来重大安全问题。如果不需要此功能，请注释掉相关模块：</p>
     <pre>#LoadModule include_module modules/mod_include.so</pre>
     如果确实需要使用 Server Side Includes，应使用 <tt>IncludesNoExec</tt> 选项启用，以防止任意代码执行。此外，应对用户提供的数据进行编码，以防止跨站脚本漏洞。
 
@@ -23,7 +23,7 @@ rationale: |-
     by limiting the capabilities allowed by the web server.
 
     <p><strong>中文理由：</strong></p>
-    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
+    <p>尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。</p>
 
 severity: unknown
 

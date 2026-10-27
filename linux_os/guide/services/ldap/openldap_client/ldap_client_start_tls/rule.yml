@@ -16,9 +16,9 @@ description: |-
     <pre>$ sudo grep -i ssl /etc/pam_ldap.conf</pre>
 
     <p><strong>中文说明：</strong></p>
-    此检查验证已实施加密，以保护远程 LDAP 身份验证会话的完整性。
+    <p>此检查验证已实施加密，以保护远程 LDAP 身份验证会话的完整性。
     <br /><br />
-    要确定是否使用 LDAP 进行身份验证，请运行以下命令：
+    要确定是否使用 LDAP 进行身份验证，请运行以下命令：</p>
     <pre>$ sudo grep -i useldapauth /etc/sysconfig/authconfig</pre>
     <br /><br />
     如果 <tt>USELDAPAUTH=yes</tt>，则正在使用 LDAP。要检查 LDAP 是否配置为使用 TLS，请运行以下命令：
@@ -31,7 +31,7 @@ rationale: |-
     to start_tls rather than doing LDAP over SSL.
 
     <p><strong>中文理由：</strong></p>
-    如果没有加密完整性保护，未授权用户可以更改信息而不被发现。ssl 指令指定是否使用 TLS；如果未指定，默认不使用。应将其设置为 start_tls，而不是通过 SSL 运行 LDAP。
+    <p>如果没有加密完整性保护，未授权用户可以更改信息而不被发现。ssl 指令指定是否使用 TLS；如果未指定，默认不使用。应将其设置为 start_tls，而不是通过 SSL 运行 LDAP。</p>
 
 severity: medium
 

@@ -12,8 +12,8 @@ description: |-
     {{{ describe_service_disable(service="atd") }}}
 
     <p><strong>中文说明：</strong></p>
-    可使用 <tt>at</tt> 和 <tt>batch</tt> 命令计划仅执行一次的任务。这样可像 cron 一样延迟执行，但不会重复执行。守护进程 <tt>atd</tt> 跟踪通过 <tt>at</tt> 和 <tt>batch</tt> 计划的任务，并在指定时间执行这些任务。
-    要禁用 <tt>atd</tt> 服务，请运行 <tt>sudo systemctl disable --now atd</tt>。
+    <p>可使用 <tt>at</tt> 和 <tt>batch</tt> 命令计划仅执行一次的任务。这样可像 cron 一样延迟执行，但不会重复执行。守护进程 <tt>atd</tt> 跟踪通过 <tt>at</tt> 和 <tt>batch</tt> 计划的任务，并在指定时间执行这些任务。
+    要禁用 <tt>atd</tt> 服务，请运行 <tt>sudo systemctl disable --now atd</tt>。</p>
 
 rationale: |-
     The <tt>atd</tt> service could be used by an unsophisticated insider to carry
@@ -22,7 +22,7 @@ rationale: |-
     <tt>batch</tt> is not common.
 
     <p><strong>中文理由：</strong></p>
-    经验不足的内部人员可能利用 <tt>atd</tt> 服务在正常登录会话之外执行活动，从而使问责更加复杂。此外，使用 <tt>at</tt> 或 <tt>batch</tt> 计划任务的需求并不常见。
+    <p>经验不足的内部人员可能利用 <tt>atd</tt> 服务在正常登录会话之外执行活动，从而使问责更加复杂。此外，使用 <tt>at</tt> 或 <tt>batch</tt> 计划任务的需求并不常见。</p>
 
 severity: medium
 

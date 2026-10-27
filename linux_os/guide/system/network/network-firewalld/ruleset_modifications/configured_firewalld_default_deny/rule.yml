@@ -16,7 +16,7 @@ rationale: |-
     It also permits outbound connections that may facilitate exfiltration of data.
 
     <p><strong>中文理由：</strong></p>
-    未能将网络连接限制为仅授权系统，会允许来自恶意系统的入站连接。这还会允许可能有助于数据外传的出站连接。
+    <p>未能将网络连接限制为仅授权系统，会允许来自恶意系统的入站连接。这还会允许可能有助于数据外传的出站连接。</p>
 
 severity: medium
 

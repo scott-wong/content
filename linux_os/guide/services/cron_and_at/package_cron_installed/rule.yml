@@ -12,13 +12,13 @@ description: |-
     The Cron service should be installed.
 
     <p><strong>中文说明：</strong></p>
-    应安装 Cron 服务。
+    <p>应安装 Cron 服务。</p>
 
 rationale: |-
     The cron service allow periodic job execution, needed for almost all administrative tasks and services (software update, log rotating, etc.). Access to cron service should be restricted to administrative accounts only.
 
     <p><strong>中文理由：</strong></p>
-    cron 服务允许定期执行作业，是几乎所有管理任务和服务（软件更新、日志轮转等）所必需的。对 cron 服务的访问应仅限管理账户。
+    <p>cron 服务允许定期执行作业，是几乎所有管理任务和服务（软件更新、日志轮转等）所必需的。对 cron 服务的访问应仅限管理账户。</p>
 
 severity: medium
 

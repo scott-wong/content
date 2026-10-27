@@ -7,7 +7,7 @@ description: |-
     The <tt>.forward</tt> file specifies an email address to forward the user's mail to.
 
     <p><strong>中文说明：</strong></p>
-    <tt>.forward</tt> 文件指定用于转发用户邮件的电子邮件地址。
+    <p><tt>.forward</tt> 文件指定用于转发用户邮件的电子邮件地址。</p>
 
 rationale: |-
     Use of the <tt>.forward</tt> file poses a security risk in that sensitive data may
@@ -16,7 +16,7 @@ rationale: |-
     unintended actions.
 
     <p><strong>中文理由：</strong></p>
-    使用 <tt>.forward</tt> 文件会带来安全风险，因为敏感数据可能被无意中传输到组织外部。.forward 文件还存在风险，因为它可用于执行可能产生意外操作的命令。
+    <p>使用 <tt>.forward</tt> 文件会带来安全风险，因为敏感数据可能被无意中传输到组织外部。.forward 文件还存在风险，因为它可用于执行可能产生意外操作的命令。</p>
 
 severity: medium
 

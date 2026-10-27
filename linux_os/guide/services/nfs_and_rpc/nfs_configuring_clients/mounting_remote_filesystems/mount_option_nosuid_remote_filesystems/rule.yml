@@ -7,14 +7,14 @@ description: |-
     {{{ describe_mount(option="nosuid", part="any NFS mounts") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保所有 NFS 挂载均使用 <tt>nosuid</tt> 选项。
+    <p>确保所有 NFS 挂载均使用 <tt>nosuid</tt> 选项。</p>
 
 rationale: |-
     NFS mounts should not present suid binaries to users. Only vendor-supplied suid executables
     should be installed to their default location on the local filesystem.
 
     <p><strong>中文理由：</strong></p>
-    NFS 挂载不应向用户提供 suid 二进制文件。仅应将供应商提供的 suid 可执行文件安装到本地文件系统上的默认位置。
+    <p>NFS 挂载不应向用户提供 suid 二进制文件。仅应将供应商提供的 suid 可执行文件安装到本地文件系统上的默认位置。</p>
 
 severity: medium
 

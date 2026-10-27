@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="abrt_handle_event") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>abrt_handle_event</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>abrt_handle_event</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P abrt_handle_event off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>abrt_handle_event</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>abrt_handle_event</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P abrt_handle_event off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 ABRT 处理其他域的事件会扩大缺陷报告工具的 SELinux 权限。
+    <p>允许 ABRT 处理其他域的事件会扩大缺陷报告工具的 SELinux 权限。</p>
 
 severity: medium
 

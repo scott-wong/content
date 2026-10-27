@@ -10,15 +10,15 @@ description: |-
     {{{ describe_package_remove(package="setroubleshoot-server") }}}
 
     <p><strong>中文说明：</strong></p>
-    SETroubleshoot 服务向桌面用户通知 SELinux 拒绝事件。该服务提供有关配置错误、未经授权的入侵及其他潜在错误的信息。
-    请使用适当的软件包管理工具移除 <tt>setroubleshoot-server</tt> 软件包。
+    <p>SETroubleshoot 服务向桌面用户通知 SELinux 拒绝事件。该服务提供有关配置错误、未经授权的入侵及其他潜在错误的信息。
+    请使用适当的软件包管理工具移除 <tt>setroubleshoot-server</tt> 软件包。</p>
 
 rationale: |-
     The SETroubleshoot service is an unnecessary daemon to have
     running on a server.
 
     <p><strong>中文理由：</strong></p>
-    SETroubleshoot 服务是在服务器上运行的非必要守护进程。
+    <p>SETroubleshoot 服务是在服务器上运行的非必要守护进程。</p>
 
 severity: low
 

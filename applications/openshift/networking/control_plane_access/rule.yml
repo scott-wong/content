@@ -8,7 +8,7 @@ description: |-
   plane to only an allowlist of authorized IPs.
 
   <p><strong>中文说明：</strong></p>
-  启用 Endpoint Private Access，以将集群控制平面的访问限制为仅允许授权 IP 的允许列表。
+  <p>启用 Endpoint Private Access，以将集群控制平面的访问限制为仅允许授权 IP 的允许列表。</p>
 
 rationale: |-
   Authorized networks are a way of specifying a restricted range of IP
@@ -36,8 +36,7 @@ rationale: |-
   </ul>
 
   <p><strong>中文理由：</strong></p>
-  授权网络是一种指定允许访问集群控制平面的受限 IP 地址范围的方式。Kubernetes Engine 同时使用传输层安全（TLS）和身份验证，提供从公共互联网对集群控制平面的安全访问。这样可以从任意位置管理集群；但可能希望进一步将访问限制为受控的一组 IP 地址。可通过指定授权网络来设置该限制。将访问限制到授权网络可为容器集群提供额外的安全优势，包括：
-
+  <p>授权网络是一种指定允许访问集群控制平面的受限 IP 地址范围的方式。Kubernetes Engine 同时使用传输层安全（TLS）和身份验证，提供从公共互联网对集群控制平面的安全访问。这样可以从任意位置管理集群；但可能希望进一步将访问限制为受控的一组 IP 地址。可通过指定授权网络来设置该限制。将访问限制到授权网络可为容器集群提供额外的安全优势，包括：</p>
   <ul>
   <li>更好地防御外部攻击：授权网络通过将外部访问限制为指定的特定地址集（例如来自本地网络的地址），提供额外的一层安全保护。这有助于在集群的身份验证或授权机制存在漏洞时保护集群访问。</li>
   <li>更好地防御内部攻击：授权网络有助于保护集群，防止公司本地环境中的 master 证书意外泄露。即便泄露的证书从 Amazon EC2 外部以及授权 IP 范围之外（例如公司外部地址）使用，仍会被拒绝访问。</li>

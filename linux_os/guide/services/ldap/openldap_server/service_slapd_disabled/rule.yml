@@ -7,14 +7,14 @@ description: |-
     provides a method for looking up information from a central database.
 
     <p><strong>中文说明：</strong></p>
-    轻量级目录访问协议（LDAP）是一种从中央数据库查找信息的服务。如果系统不需要充当 LDAP 服务器，应禁用 <tt>slapd</tt> 服务。
+    <p>轻量级目录访问协议（LDAP）是一种从中央数据库查找信息的服务。如果系统不需要充当 LDAP 服务器，应禁用 <tt>slapd</tt> 服务。</p>
 
 rationale: |-
     If the system will not need to act as an LDAP server, it is recommended
     that the software be disabled to reduce the potential attack surface.
 
     <p><strong>中文理由：</strong></p>
-    如果系统不需要充当 LDAP 服务器，建议禁用该服务，以减少潜在攻击面。
+    <p>如果系统不需要充当 LDAP 服务器，建议禁用该服务，以减少潜在攻击面。</p>
 
 severity: medium
 

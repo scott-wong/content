@@ -6,14 +6,14 @@ description: |-
     {{{ describe_file_permissions(file="/usr/share/keyrings/*.gpg and /etc/apt/trusted.gpg.d/*.gpg", perms="0644") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/usr/share/keyrings/*.gpg</tt> 和 <tt>/etc/apt/trusted.gpg.d/*.gpg</tt> 文件的权限为 <tt>0644</tt> 或更严格。
+    <p>确保 <tt>/usr/share/keyrings/*.gpg</tt> 和 <tt>/etc/apt/trusted.gpg.d/*.gpg</tt> 文件的权限为 <tt>0644</tt> 或更严格。</p>
 
 rationale: |-
     APT GPG key files are used to verify package authenticity. Restricting their
     permissions prevents unauthorized modification while keeping them readable by APT.
 
     <p><strong>中文理由：</strong></p>
-    APT GPG 密钥文件用于验证软件包真实性。限制其权限可防止未经授权的修改，同时保持 APT 可读取这些文件。
+    <p>APT GPG 密钥文件用于验证软件包真实性。限制其权限可防止未经授权的修改，同时保持 APT 可读取这些文件。</p>
 
 severity: medium
 

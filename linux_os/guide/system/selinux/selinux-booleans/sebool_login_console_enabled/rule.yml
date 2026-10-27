@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="login_console_enabled") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>login_console_enabled</tt> 处于启用状态。如果此设置已禁用，应启用，因为它允许从 <tt>/dev/console</tt> 登录到控制台会话。要启用 <tt>login_console_enabled</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P login_console_enabled on</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>login_console_enabled</tt> 处于启用状态。如果此设置已禁用，应启用，因为它允许从 <tt>/dev/console</tt> 登录到控制台会话。要启用 <tt>login_console_enabled</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P login_console_enabled on</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用后，可允许从 <tt>/dev/console</tt> 登录控制台会话，维持本地管理恢复能力，同时仍受 SELinux 约束。
+    <p>启用后，可允许从 <tt>/dev/console</tt> 登录控制台会话，维持本地管理恢复能力，同时仍受 SELinux 约束。</p>
 
 severity: medium
 

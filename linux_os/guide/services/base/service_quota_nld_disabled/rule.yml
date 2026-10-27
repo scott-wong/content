@@ -12,8 +12,8 @@ description: |-
     {{{ describe_service_disable(service="quota_nld") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>quota_nld</tt> 服务向磁盘空间配额违规的用户提供通知。它通过 netlink socket 监听内核对磁盘配额违规的通知，并使用 D-Bus 或向用户最后访问的终端发送消息来通知相应用户。
-    应禁用 <tt>quota_nld</tt> 服务。
+    <p><tt>quota_nld</tt> 服务向磁盘空间配额违规的用户提供通知。它通过 netlink socket 监听内核对磁盘配额违规的通知，并使用 D-Bus 或向用户最后访问的终端发送消息来通知相应用户。
+    应禁用 <tt>quota_nld</tt> 服务。</p>
 
 rationale: |-
     If disk quotas are enforced on the local system, then the
@@ -23,7 +23,7 @@ rationale: |-
     service.
 
     <p><strong>中文理由：</strong></p>
-    如果本地系统强制执行磁盘配额，则 <tt>quota_nld</tt> 服务可能提供有用功能，应保持启用。但是，如果不使用磁盘配额，或不需要向用户通知磁盘配额违规，则无需运行此服务。
+    <p>如果本地系统强制执行磁盘配额，则 <tt>quota_nld</tt> 服务可能提供有用功能，应保持启用。但是，如果不使用磁盘配额，或不需要向用户通知磁盘配额违规，则无需运行此服务。</p>
 
 severity: low
 

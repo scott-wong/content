@@ -15,7 +15,7 @@ description: >-
     depending on the OS version.
 
     <p><strong>中文说明：</strong></p>
-    此规则将系统配置为使用 <tt>pam_faillock.so</tt> 将 <tt>root</tt> 账户纳入账户锁定策略。系统必须在 <tt>{{{ pam_faillock_conf_path }}}</tt> 中启用 <tt>even_deny_root</tt> 选项，或将 <tt>root_unlock_time</tt> 设置为 <tt>{{{ xccdf_value("var_accounts_passwords_pam_faillock_root_unlock_time") }}}</tt> 秒或更大。pam_faillock.so 模块需要在 pam 文件中添加多个条目。必须仔细定义这些条目才能按预期工作。为避免手动编辑这些文件时出错，建议根据操作系统版本使用适当的工具，例如 <tt>authselect</tt> 或 <tt>authconfig</tt>。
+    <p>此规则将系统配置为使用 <tt>pam_faillock.so</tt> 将 <tt>root</tt> 账户纳入账户锁定策略。系统必须在 <tt>{{{ pam_faillock_conf_path }}}</tt> 中启用 <tt>even_deny_root</tt> 选项，或将 <tt>root_unlock_time</tt> 设置为 <tt>{{{ xccdf_value("var_accounts_passwords_pam_faillock_root_unlock_time") }}}</tt> 秒或更大。pam_faillock.so 模块需要在 pam 文件中添加多个条目。必须仔细定义这些条目才能按预期工作。为避免手动编辑这些文件时出错，建议根据操作系统版本使用适当的工具，例如 <tt>authselect</tt> 或 <tt>authconfig</tt>。</p>
 
 rationale: >-
     By limiting the number of failed logon attempts, the risk of unauthorized system access via
@@ -23,7 +23,7 @@ rationale: >-
     the account.
 
     <p><strong>中文理由：</strong></p>
-    通过限制失败登录尝试次数，可降低未经授权用户通过猜测用户密码（也称为暴力破解）访问系统的风险。限制通过锁定账户来实施。
+    <p>通过限制失败登录尝试次数，可降低未经授权用户通过猜测用户密码（也称为暴力破解）访问系统的风险。限制通过锁定账户来实施。</p>
 
 severity: medium
 

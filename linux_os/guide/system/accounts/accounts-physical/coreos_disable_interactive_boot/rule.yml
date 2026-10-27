@@ -18,7 +18,7 @@ rationale: |-
     or other services, weakening system security.
 
     <p><strong>中文理由：</strong></p>
-    使用交互式引导时，控制台用户可禁用审计、防火墙或其他服务，从而削弱系统安全。
+    <p>使用交互式引导时，控制台用户可禁用审计、防火墙或其他服务，从而削弱系统安全。</p>
 
 severity: medium
 

@@ -28,7 +28,7 @@ rationale: |-
   logs in order to ensure the confidentiality, integrity and authenticity of the logs.
 
   <p><strong>中文理由：</strong></p>
-  必须确保任何已配置的输出均使用 TLS 协议接收日志，以保证日志的机密性、完整性和真实性。
+  <p>必须确保任何已配置的输出均使用 TLS 协议接收日志，以保证日志的机密性、完整性和真实性。</p>
 
 references:
   nerc-cip: CIP-003-8 R5.2,CIP-004-6 R3.3,CIP-007-3 R6.5

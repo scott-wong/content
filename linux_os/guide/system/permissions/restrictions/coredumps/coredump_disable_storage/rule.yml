@@ -9,7 +9,7 @@ description: |-
     can be set to <tt>none</tt> to disable storing core dumps permanently.
 
     <p><strong>中文说明：</strong></p>
-    <tt>/etc/systemd/coredump.conf</tt> 的 <tt>[Coredump]</tt> 部分或 <tt>/etc/systemd/coredump.conf.d/*.conf</tt> 中的 drop-in 文件可将 <tt>Storage</tt> 选项设置为 <tt>none</tt>，以永久禁用核心转储存储。
+    <p><tt>/etc/systemd/coredump.conf</tt> 的 <tt>[Coredump]</tt> 部分或 <tt>/etc/systemd/coredump.conf.d/*.conf</tt> 中的 drop-in 文件可将 <tt>Storage</tt> 选项设置为 <tt>none</tt>，以永久禁用核心转储存储。</p>
 
 rationale: |-
     A core dump includes a memory image taken at the time the operating system
@@ -21,7 +21,7 @@ rationale: |-
     should be reviewed through local needs and policy.
 
     <p><strong>中文理由：</strong></p>
-    核心转储包含操作系统终止应用程序时的内存映像。该内存映像可能包含敏感数据，通常仅对尝试调试问题的开发者或系统运维人员有用。建议不要在 production 系统上启用核心转储，但可能存在需要启用高级调试的运营要求。在这种情况下临时启用核心转储应根据本地需求和策略进行审查。
+    <p>核心转储包含操作系统终止应用程序时的内存映像。该内存映像可能包含敏感数据，通常仅对尝试调试问题的开发者或系统运维人员有用。建议不要在 production 系统上启用核心转储，但可能存在需要启用高级调试的运营要求。在这种情况下临时启用核心转储应根据本地需求和策略进行审查。</p>
 
 severity: medium
 

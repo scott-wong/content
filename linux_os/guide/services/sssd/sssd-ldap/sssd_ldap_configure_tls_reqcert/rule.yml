@@ -10,14 +10,15 @@ description: |-
     to <tt>demand</tt>.
 
     <p><strong>中文说明：</strong></p>
-    配置 SSSD 要求服务器提供有效证书，以保护 LDAP 远程访问会话的完整性：将 <pre>ldap_tls_reqcert</pre> 选项（位于 <pre>/etc/sssd/sssd.conf</pre> 中）设置为 <tt>demand</tt>。
+    <p>配置 SSSD 要求服务器提供有效证书，以保护 LDAP 远程访问会话的完整性：将</p>
+    <pre>ldap_tls_reqcert</pre> 选项（位于 <pre>/etc/sssd/sssd.conf</pre> 中）设置为 <tt>demand</tt>。
 
 rationale: |-
     Without a valid certificate presented to the LDAP client backend, the identity of a
     server can be forged compromising LDAP remote access sessions.
 
     <p><strong>中文理由：</strong></p>
-    如果 LDAP 客户端后端未收到有效证书，服务器身份可能被伪造，从而破坏 LDAP 远程访问会话。
+    <p>如果 LDAP 客户端后端未收到有效证书，服务器身份可能被伪造，从而破坏 LDAP 远程访问会话。</p>
 
 severity: medium
 

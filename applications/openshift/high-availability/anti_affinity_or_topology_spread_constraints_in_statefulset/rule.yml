@@ -18,11 +18,11 @@ description: |-
     those names in all namespaces.
 
     <p><strong>中文说明：</strong></p>
-    使用 Pod 拓扑分布约束和反亲和性规则将 Kubernetes Pod 分布到不同节点和可用区，可通过均衡工作负载、减少单点故障并确保合规和数据保护，增强高可用性、容错能力、性能和安全性。
+    <p>使用 Pod 拓扑分布约束和反亲和性规则将 Kubernetes Pod 分布到不同节点和可用区，可通过均衡工作负载、减少单点故障并确保合规和数据保护，增强高可用性、容错能力、性能和安全性。
 
     有些 StatefulSet 不需要高可用性，也无需跨节点分布。为减少误报，此规则仅检查副本数大于 1 的 StatefulSet。对于只有一个副本的 StatefulSet，反亲和性规则和拓扑分布约束均无实际价值。
 
-    若要从该规则中排除其他 StatefulSet，可为 StatefulSet 名称创建正则表达式 <tt>var_statefulsets_without_high_availability</tt>。这将忽略所有命名空间中与该表达式匹配的 StatefulSet。
+    若要从该规则中排除其他 StatefulSet，可为 StatefulSet 名称创建正则表达式 <tt>var_statefulsets_without_high_availability</tt>。这将忽略所有命名空间中与该表达式匹配的 StatefulSet。</p>
 
 rationale: |-
     Distributing Kubernetes pods across nodes and availability zones using pod topology spread
@@ -32,7 +32,7 @@ rationale: |-
     downtime, as workloads are balanced and resources are efficiently utilized.
 
     <p><strong>中文理由：</strong></p>
-    使用 Pod 拓扑分布约束和反亲和性规则将 Kubernetes Pod 分布到不同节点和可用区，对于增强高可用性、容错能力和安全性至关重要。此方法可均衡工作负载并高效利用资源，确保单个节点或可用区发生故障时不会导致应用程序完全停机。
+    <p>使用 Pod 拓扑分布约束和反亲和性规则将 Kubernetes Pod 分布到不同节点和可用区，对于增强高可用性、容错能力和安全性至关重要。此方法可均衡工作负载并高效利用资源，确保单个节点或可用区发生故障时不会导致应用程序完全停机。</p>
 
 identifiers:
     cce@ocp4: CCE-89908-8

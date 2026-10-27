@@ -17,7 +17,7 @@ description: |-
     {{{ describe_file_permissions(file="/var/lib/kubelet/kubeconfig", perms=octal_perms) }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/var/lib/kubelet/kubeconfig</tt> 的权限为 <tt>{{{ octal_perms }}}</tt> 或更严格。
+    <p>确保 <tt>/var/lib/kubelet/kubeconfig</tt> 的权限为 <tt>{{{ octal_perms }}}</tt> 或更严格。</p>
 
 rationale: |-
     If the worker kubeconfig file is writable by a group-owner or the
@@ -26,7 +26,7 @@ rationale: |-
     critical for OpenShift security.
 
     <p><strong>中文理由：</strong></p>
-    如果 worker kubeconfig 文件可被文件所属组或其他任何用户写入，其失陷风险会增加。该文件包含系统上配置的 OpenShift 集群管理配置。保护此文件对 OpenShift 安全至关重要。
+    <p>如果 worker kubeconfig 文件可被文件所属组或其他任何用户写入，其失陷风险会增加。该文件包含系统上配置的 OpenShift 集群管理配置。保护此文件对 OpenShift 安全至关重要。</p>
 
 severity: medium
 

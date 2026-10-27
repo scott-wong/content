@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_remove(package="tcpd") }}}
 
     <p><strong>中文说明：</strong></p>
-    应删除 <tt>tcpd</tt> 软件包。
+    <p>应删除 <tt>tcpd</tt> 软件包。</p>
 
 rationale: |-
     Administrators can use TCP wrapper library and daemon for host
@@ -21,7 +21,7 @@ rationale: |-
     measure in addition.
 
     <p><strong>中文理由：</strong></p>
-    管理员可以使用 TCP wrapper 库和守护进程对网络服务实施主机控制。在这些实现中，<tt>xinetd</tt> 运行 <tt>tcpd</tt> 程序，该程序首先查看传入连接以及 <tt>/etc/hosts.allow</tt> 和 <tt>/etc/hosts.deny</tt> 文件中的访问控制列表。删除 <tt>xinetd</tt> 软件包可降低 xinetd 服务被意外（或故意）激活的风险。删除 <tt>tcpd</tt> 软件包将进一步支持此保护措施。
+    <p>管理员可以使用 TCP wrapper 库和守护进程对网络服务实施主机控制。在这些实现中，<tt>xinetd</tt> 运行 <tt>tcpd</tt> 程序，该程序首先查看传入连接以及 <tt>/etc/hosts.allow</tt> 和 <tt>/etc/hosts.deny</tt> 文件中的访问控制列表。删除 <tt>xinetd</tt> 软件包可降低 xinetd 服务被意外（或故意）激活的风险。删除 <tt>tcpd</tt> 软件包将进一步支持此保护措施。</p>
 
 severity: low
 

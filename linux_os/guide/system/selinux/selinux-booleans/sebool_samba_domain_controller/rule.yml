@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="samba_domain_controller") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>samba_domain_controller</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>samba_domain_controller</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>samba_domain_controller</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>samba_domain_controller</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    仅在主机需要充当 Samba 域控制器时启用此布尔值；否则应禁用，以减少网络服务攻击面。
+    <p>仅在主机需要充当 Samba 域控制器时启用此布尔值；否则应禁用，以减少网络服务攻击面。</p>
 
 severity: medium
 

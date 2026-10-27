@@ -14,7 +14,7 @@ description: |-
     be <tt>0077</tt>.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_umask.so</tt> 模块会为通过 PAM 打开的每个会话设置文件模式创建掩码。请将以下行添加到 <tt>/etc/pam.d/postlogin</tt> 顶部：
+    <p><tt>pam_umask.so</tt> 模块会为通过 PAM 打开的每个会话设置文件模式创建掩码。请将以下行添加到 <tt>/etc/pam.d/postlogin</tt> 顶部：</p>
     <pre>session     optional     pam_umask.so silent umask=0077</pre>
 
     省略 <tt>umask</tt> 参数时，该模块使用 <tt>/etc/login.defs</tt> 中的 <tt>UMASK</tt> 值。如果设置了该参数，则必须为 <tt>0077</tt>。
@@ -26,7 +26,7 @@ rationale: |-
     source the shell initialization files.
 
     <p><strong>中文理由：</strong></p>
-    设置最严格的默认权限可确保创建新文件时只有所有者能够读取和修改它们。通过 PAM 强制执行 umask 可覆盖所有会话类型，包括不加载 shell 初始化文件的会话。
+    <p>设置最严格的默认权限可确保创建新文件时只有所有者能够读取和修改它们。通过 PAM 强制执行 umask 可覆盖所有会话类型，包括不加载 shell 初始化文件的会话。</p>
 
 severity: medium
 

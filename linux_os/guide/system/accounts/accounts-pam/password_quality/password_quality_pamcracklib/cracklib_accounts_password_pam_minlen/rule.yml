@@ -9,7 +9,7 @@ description: |-
      to set minimum password length requirements.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_cracklib</tt> 模块的 <tt>minlen</tt> 参数控制密码所需的最小字符数。添加 <tt>minlen={{{ xccdf_value("var_password_pam_minlen") }}}</tt>，以设置最小密码长度要求。
+    <p><tt>pam_cracklib</tt> 模块的 <tt>minlen</tt> 参数控制密码所需的最小字符数。添加 <tt>minlen={{{ xccdf_value("var_password_pam_minlen") }}}</tt>，以设置最小密码长度要求。</p>
 
 rationale: |-
     Password length is one factor of several that helps to determine
@@ -18,7 +18,7 @@ rationale: |-
     required to compromise the password.
 
     <p><strong>中文理由：</strong></p>
-    密码长度是决定密码强度及破解时间的多个因素之一。密码中使用更多字符有助于以指数方式增加破解密码所需的时间和/或资源。
+    <p>密码长度是决定密码强度及破解时间的多个因素之一。密码中使用更多字符有助于以指数方式增加破解密码所需的时间和/或资源。</p>
 
 severity: medium
 

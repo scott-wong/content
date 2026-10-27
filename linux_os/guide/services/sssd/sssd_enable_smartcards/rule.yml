@@ -24,7 +24,7 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    应将 SSSD 配置为使用智能卡对系统访问进行身份验证。要在 SSSD 中启用智能卡，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[pam]</tt> 节下将 <tt>pam_cert_auth</tt> 设置为 <tt>True</tt>。例如：
+    <p>应将 SSSD 配置为使用智能卡对系统访问进行身份验证。要在 SSSD 中启用智能卡，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[pam]</tt> 节下将 <tt>pam_cert_auth</tt> 设置为 <tt>True</tt>。例如：</p>
     <pre>[pam]
     pam_cert_auth = True
     </pre>
@@ -51,9 +51,9 @@ rationale: |-
     or similar secure authentication devices issued by an organization or identity provider.
 
     <p><strong>中文理由：</strong></p>
-    使用独立于信息系统的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。
+    <p>使用独立于信息系统的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。
     <br /><br />
-    需要独立于获取访问权的信息系统的多因素身份验证（MFA）解决方案包括提供基于时间或质询响应认证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。
+    需要独立于获取访问权的信息系统的多因素身份验证（MFA）解决方案包括提供基于时间或质询响应认证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。</p>
 
 severity: medium
 

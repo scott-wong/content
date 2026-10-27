@@ -17,7 +17,7 @@ description: |-
      image registry is unreachable.
 
      <p><strong>中文说明：</strong></p>
-     <tt>AlwaysPullImages</tt> 准入控制插件应禁用，因为当镜像仓库不可达时，它可能为控制平面组件引入新的故障模式。
+     <p><tt>AlwaysPullImages</tt> 准入控制插件应禁用，因为当镜像仓库不可达时，它可能为控制平面组件引入新的故障模式。</p>
 
 rationale: |-
      Setting admission control policy to AlwaysPullImages forces every new pod
@@ -43,11 +43,11 @@ rationale: |-
      <tt>imagePullPolicy</tt>.
 
      <p><strong>中文理由：</strong></p>
-     将准入控制策略设置为 AlwaysPullImages 会强制每个新 Pod 每次拉取所需镜像。在多租户集群中，用户可以确信其私有镜像只能被具有拉取凭据的人员使用。如果没有此准入控制策略，一旦镜像已被拉取到节点，任何用户的任何 Pod 都只需知道镜像名称即可使用该镜像，而不会对镜像所有权进行任何授权检查。启用此插件后，启动容器前始终会拉取镜像，这意味着需要有效凭据。
+     <p>将准入控制策略设置为 AlwaysPullImages 会强制每个新 Pod 每次拉取所需镜像。在多租户集群中，用户可以确信其私有镜像只能被具有拉取凭据的人员使用。如果没有此准入控制策略，一旦镜像已被拉取到节点，任何用户的任何 Pod 都只需知道镜像名称即可使用该镜像，而不会对镜像所有权进行任何授权检查。启用此插件后，启动容器前始终会拉取镜像，这意味着需要有效凭据。
 
      然而，启用此准入插件可能引入新的集群故障模式。OpenShift 4 主节点和基础设施组件以 Pod 形式部署。启用此功能可能导致在无法联系镜像仓库时，重新部署的基础设施 Pod（例如 oauth-server）因拉取当前已存在于节点上的镜像失败而无法启动。我们使用 PullIfNotPresent，以便镜像仓库访问中断不会阻止 Pod 启动。如果变为 PullAlways，则镜像仓库访问中断可能导致关键基础设施组件故障。
 
-     可使用 <tt>imagePullPolicy</tt> 按容器管理拉取策略。
+     可使用 <tt>imagePullPolicy</tt> 按容器管理拉取策略。</p>
 
 
 severity: high

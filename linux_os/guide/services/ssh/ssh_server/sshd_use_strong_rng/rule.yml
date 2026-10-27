@@ -13,7 +13,7 @@ description: |-
     <pre>SSH_USE_STRONG_RNG=32</pre>
 
     <p><strong>中文说明：</strong></p>
-    要将 SSH 服务器设置为使用高质量来源的熵，请编辑 <tt>{{{ sshd_sysconfig }}}</tt> 文件。<tt>SSH_USE_STRONG_RNG</tt> 配置值决定使用多少字节的熵，因此请确保该文件包含以下行：
+    <p>要将 SSH 服务器设置为使用高质量来源的熵，请编辑 <tt>{{{ sshd_sysconfig }}}</tt> 文件。<tt>SSH_USE_STRONG_RNG</tt> 配置值决定使用多少字节的熵，因此请确保该文件包含以下行：</p>
     <pre>SSH_USE_STRONG_RNG=32</pre>
 
 rationale: |-

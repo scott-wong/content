@@ -11,7 +11,7 @@ description: |-
     to an interactive user is not group or world accessible
 
     <p><strong>中文说明：</strong></p>
-    虽然系统管理员可以为用户的 .netrc 文件设置安全权限，但用户可以轻易覆盖这些权限。此规则确保交互用户主目录下的每个 .netrc 文件或目录不可被组或其他用户访问。
+    <p>虽然系统管理员可以为用户的 .netrc 文件设置安全权限，但用户可以轻易覆盖这些权限。此规则确保交互用户主目录下的每个 .netrc 文件或目录不可被组或其他用户访问。</p>
 
 rationale: |-
     .netrc files may contain unencrypted passwords that may be used to attack other systems.
@@ -19,7 +19,7 @@ rationale: |-
           system, secure permissions must be applied.
 
     <p><strong>中文理由：</strong></p>
-    .netrc 文件可能包含可用于攻击其他系统的未加密密码。注意：建议完全移除 .netrc 文件；如果系统确实需要某些 .netrc 文件，则必须应用安全权限。
+    <p>.netrc 文件可能包含可用于攻击其他系统的未加密密码。注意：建议完全移除 .netrc 文件；如果系统确实需要某些 .netrc 文件，则必须应用安全权限。</p>
 
 severity: medium
 

@@ -9,7 +9,7 @@ description: |-
     <tt>/etc/shells</tt>.
 
     <p><strong>中文说明：</strong></p>
-    使用 <tt>tmux</tt> 终端复用器实现自动会话锁定。不应将其列入 <tt>/etc/shells</tt>。
+    <p>使用 <tt>tmux</tt> 终端复用器实现自动会话锁定。不应将其列入 <tt>/etc/shells</tt>。</p>
 
 rationale: |-
     Not listing <tt>tmux</tt> among permitted shells
@@ -17,7 +17,7 @@ rationale: |-
     from lowering security by disabling the screen lock.
 
     <p><strong>中文理由：</strong></p>
-    与 <tt>bash</tt> 本身不同，<tt>tmux</tt> 终端复用器提供在无活动一段时间后锁定会话的机制。会话锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。
+    <p>与 <tt>bash</tt> 本身不同，<tt>tmux</tt> 终端复用器提供在无活动一段时间后锁定会话的机制。会话锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。</p>
 
 severity: low
 

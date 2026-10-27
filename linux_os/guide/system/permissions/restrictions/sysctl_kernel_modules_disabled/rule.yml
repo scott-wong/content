@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.modules_disabled", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>kernel.modules_disabled</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.modules_disabled=1</tt>；要持久化，请将 <tt>kernel.modules_disabled = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>kernel.modules_disabled</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.modules_disabled=1</tt>；要持久化，请将 <tt>kernel.modules_disabled = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     Malicious kernel modules can have a significant impact on system security and
@@ -17,7 +17,7 @@ rationale: |-
     setting this option.
 
     <p><strong>中文理由：</strong></p>
-    恶意内核模块可能对系统安全性和可用性产生重大影响。禁用内核模块加载可防止这一威胁。请注意，设置此选项后，不重启系统就无法还原。在设置此选项之前，请确保所有必需的内核模块均已加载。
+    <p>恶意内核模块可能对系统安全性和可用性产生重大影响。禁用内核模块加载可防止这一威胁。请注意，设置此选项后，不重启系统就无法还原。在设置此选项之前，请确保所有必需的内核模块均已加载。</p>
 
 severity: medium
 

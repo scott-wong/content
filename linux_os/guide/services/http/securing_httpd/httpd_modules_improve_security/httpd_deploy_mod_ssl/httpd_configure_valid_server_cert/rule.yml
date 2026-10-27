@@ -8,7 +8,7 @@ description: |-
     For DoD, this is a DoD server certificate issued by the DoD CA.
 
     <p><strong>中文说明：</strong></p>
-    将网站配置为使用组织定义的有效证书。对于 DoD，这是由 DoD CA 签发的 DoD 服务器证书。
+    <p>将网站配置为使用组织定义的有效证书。对于 DoD，这是由 DoD CA 签发的 DoD 服务器证书。</p>
 
 rationale: |-
     This check verifies that DoD is a hosted web site's CA. The certificate is
@@ -21,7 +21,7 @@ rationale: |-
     using a certificate is, therefore, compromised.
 
     <p><strong>中文理由：</strong></p>
-    此检查验证 DoD 是否为所托管网站的 CA。该证书实际上是由 DoD 签发、供受审查组织使用的服务器证书。此证书用于向用户验证网站的真实性。如果证书不属于该服务器（Certificate belongs to）、证书不是由 DoD 签发（Certificate was issued by），或当前日期不在有效日期范围内（Certificate is valid from），则无法保证该证书的使用有效。因此，使用证书的整个目的将受到损害。
+    <p>此检查验证 DoD 是否为所托管网站的 CA。该证书实际上是由 DoD 签发、供受审查组织使用的服务器证书。此证书用于向用户验证网站的真实性。如果证书不属于该服务器（Certificate belongs to）、证书不是由 DoD 签发（Certificate was issued by），或当前日期不在有效日期范围内（Certificate is valid from），则无法保证该证书的使用有效。因此，使用证书的整个目的将受到损害。</p>
 
 severity: medium
 

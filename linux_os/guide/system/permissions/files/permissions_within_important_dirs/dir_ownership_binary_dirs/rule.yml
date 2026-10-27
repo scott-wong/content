@@ -31,7 +31,7 @@ rationale: |-
     execution of these programs cannot be co-opted.
 
     <p><strong>中文理由：</strong></p>
-    系统二进制文件由特权用户和系统服务执行，必须设置严格权限，以确保这些程序的执行不能被劫持或滥用。
+    <p>系统二进制文件由特权用户和系统服务执行，必须设置严格权限，以确保这些程序的执行不能被劫持或滥用。</p>
 
 severity: medium
 

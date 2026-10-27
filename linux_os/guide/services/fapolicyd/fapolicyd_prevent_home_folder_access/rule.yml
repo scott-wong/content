@@ -6,7 +6,7 @@ description: |-
     fapolicyd needs be configured so that users cannot give access to their home folders to other users.
 
     <p><strong>中文说明：</strong></p>
-    必须配置 fapolicyd，使用户无法将其主文件夹的访问权限授予其他用户。
+    <p>必须配置 fapolicyd，使用户无法将其主文件夹的访问权限授予其他用户。</p>
 
 rationale: |-
     Users' home directories/folders may contain information of a sensitive nature.
@@ -15,7 +15,7 @@ rationale: |-
     Confining users to their home directory will minimize the risk of sharing information.
 
     <p><strong>中文理由：</strong></p>
-    用户的主目录/文件夹可能包含敏感性质的信息。非特权用户应通过共享资源与系统管理员（SA）协调任何信息共享。fapolicyd 可将用户限制在其主目录中，不允许用户在各自主目录之外进行任何更改。将用户限制在其主目录中可最大限度降低信息共享风险。
+    <p>用户的主目录/文件夹可能包含敏感性质的信息。非特权用户应通过共享资源与系统管理员（SA）协调任何信息共享。fapolicyd 可将用户限制在其主目录中，不允许用户在各自主目录之外进行任何更改。将用户限制在其主目录中可最大限度降低信息共享风险。</p>
 
 severity: medium
 

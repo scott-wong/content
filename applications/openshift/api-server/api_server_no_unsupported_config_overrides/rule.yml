@@ -11,7 +11,7 @@ description: |-
   cluster API server configurations.
 
   <p><strong>中文说明：</strong></p>
-  OpenShift API Server 不应使用可能危及集群安全性和稳定性的不受支持配置覆盖。此规则检查集群 API Server 配置中不存在不受支持的配置覆盖。
+  <p>OpenShift API Server 不应使用可能危及集群安全性和稳定性的不受支持配置覆盖。此规则检查集群 API Server 配置中不存在不受支持的配置覆盖。</p>
 
 rationale: |-
   Unsupported configuration overrides can introduce security vulnerabilities,
@@ -20,7 +20,7 @@ rationale: |-
   security posture or introduce instability.
 
   <p><strong>中文理由：</strong></p>
-  不受支持的配置覆盖可能引入安全漏洞、性能问题和意外行为。它们绕过标准配置机制，并可能削弱集群安全态势或引入不稳定性。
+  <p>不受支持的配置覆盖可能引入安全漏洞、性能问题和意外行为。它们绕过标准配置机制，并可能削弱集群安全态势或引入不稳定性。</p>
 
 severity: medium
 

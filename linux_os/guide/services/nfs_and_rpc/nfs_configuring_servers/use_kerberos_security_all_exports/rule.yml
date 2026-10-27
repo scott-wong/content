@@ -9,7 +9,7 @@ description: |-
     add <tt>sec=krb5:krb5i:krb5p</tt> to each export in <tt>/etc/exports</tt>.
 
     <p><strong>中文说明：</strong></p>
-    在所有导出的挂载上使用 Kerberos 可防止恶意客户端或用户冒充系统用户。要对 NFS 服务器进行用户加密身份验证，请将 <tt>sec=krb5:krb5i:krb5p</tt> 添加到 <tt>/etc/exports</tt> 中的每个导出项。
+    <p>在所有导出的挂载上使用 Kerberos 可防止恶意客户端或用户冒充系统用户。要对 NFS 服务器进行用户加密身份验证，请将 <tt>sec=krb5:krb5i:krb5p</tt> 添加到 <tt>/etc/exports</tt> 中的每个导出项。</p>
 
 rationale: |-
     When an NFS server is configured to use AUTH_SYS a selected userid and groupid are used to handle
@@ -18,7 +18,7 @@ rationale: |-
     systems to more securely authenticate the remote mount request.
 
     <p><strong>中文理由：</strong></p>
-    当 NFS 服务器配置为使用 AUTH_SYS 时，会使用选定的 userid 和 groupid 处理来自远程用户的请求。userid 和 groupid 可能因错误或恶意行为而被错误设置。AUTH_GSS 身份验证方法使用服务器和客户端系统上的证书，更安全地对远程挂载请求进行身份验证。
+    <p>当 NFS 服务器配置为使用 AUTH_SYS 时，会使用选定的 userid 和 groupid 处理来自远程用户的请求。userid 和 groupid 可能因错误或恶意行为而被错误设置。AUTH_GSS 身份验证方法使用服务器和客户端系统上的证书，更安全地对远程挂载请求进行身份验证。</p>
 
 severity: medium
 

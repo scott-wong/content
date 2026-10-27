@@ -71,7 +71,7 @@ rationale: |-
     allow for malicious containers or attackers.
 
     <p><strong>中文理由：</strong></p>
-    默认情况下，容器使用 Container Runtime 分配的默认能力集运行，其中可能包含危险或高特权能力。除非对容器运行软件绝对关键，否则应移除能力；不需要的额外能力会为恶意容器或攻击者提供可乘之机。
+    <p>默认情况下，容器使用 Container Runtime 分配的默认能力集运行，其中可能包含危险或高特权能力。除非对容器运行软件绝对关键，否则应移除能力；不需要的额外能力会为恶意容器或攻击者提供可乘之机。</p>
 
 {{% set jqfilter = '[.items[] | select(.metadata.name | test("{{.var_sccs_with_allowed_capabilities_regex}}"; "") | not) | select(.allowedCapabilities != null) | .metadata.name]' %}}
 

@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="unconfined_chrome_sandbox_transition") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>unconfined_chrome_sandbox_transition</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>unconfined_chrome_sandbox_transition</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P unconfined_chrome_sandbox_transition on</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>unconfined_chrome_sandbox_transition</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>unconfined_chrome_sandbox_transition</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P unconfined_chrome_sandbox_transition on</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用 Chrome 沙箱域转换可确保浏览器沙箱组件进入正确的 SELinux 域。
+    <p>启用 Chrome 沙箱域转换可确保浏览器沙箱组件进入正确的 SELinux 域。</p>
 
 severity: medium
 

@@ -35,10 +35,10 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    此要求仅适用于与设备功能特定相关或具有组织用户概念的组件（例如 VPN、代理功能）。不适用于仅为配置设备本身（管理）而进行的身份验证。
+    <p>此要求仅适用于与设备功能特定相关或具有组织用户概念的组件（例如 VPN、代理功能）。不适用于仅为配置设备本身（管理）而进行的身份验证。
 
     {{% if 'ubuntu' in product %}}
-    在 <tt>/etc/pam.d/common-auth</tt> 中添加或更新以下行，并将其放在任何包含 <tt>pam_unix.so</tt> 的行之前：
+    在 <tt>/etc/pam.d/common-auth</tt> 中添加或更新以下行，并将其放在任何包含 <tt>pam_unix.so</tt> 的行之前：</p>
     <pre>auth    [success=2 default=ignore] pam_pkcs11.so</pre>
     {{% else %}}
     使用以下命令检查 <tt>etc/pam.d/common-auth</tt> 文件中是否配置了 <tt>pam_pkcs11.so</tt> 选项：
@@ -75,7 +75,7 @@ rationale: |-
     or similar secure authentication devices issued by an organization or identity provider.
 
     <p><strong>中文理由：</strong></p>
-    使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。
+    <p>使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。</p>
 
 severity: medium
 

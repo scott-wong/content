@@ -7,7 +7,7 @@ description: |-
     Use network policies to isolate traffic in your cluster network.
 
     <p><strong>中文说明：</strong></p>
-    使用 Network Policy 隔离集群网络中的流量。
+    <p>使用 Network Policy 隔离集群网络中的流量。</p>
 
 rationale: |-
     Running different applications on the same Kubernetes cluster creates a risk of one
@@ -18,7 +18,7 @@ rationale: |-
     traffic will be allowed into and out of the pods in that namespace.
 
     <p><strong>中文理由：</strong></p>
-    在同一 Kubernetes 集群上运行不同应用程序会带来一个风险：某个应用程序被攻陷后可能攻击相邻应用程序。网络分段对于确保容器只能与其应该通信的对象通信至关重要。在给定命名空间中引入 Network Policy 后，该策略不允许的所有流量都会被拒绝。但是，如果命名空间中没有任何 Network Policy，则该命名空间中 Pod 的所有进出流量都将被允许。
+    <p>在同一 Kubernetes 集群上运行不同应用程序会带来一个风险：某个应用程序被攻陷后可能攻击相邻应用程序。网络分段对于确保容器只能与其应该通信的对象通信至关重要。在给定命名空间中引入 Network Policy 后，该策略不允许的所有流量都会被拒绝。但是，如果命名空间中没有任何 Network Policy，则该命名空间中 Pod 的所有进出流量都将被允许。</p>
 
 severity: high
 

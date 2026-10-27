@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="use_nfs_home_dirs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>use_nfs_home_dirs</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>use_nfs_home_dirs</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P use_nfs_home_dirs off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>use_nfs_home_dirs</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>use_nfs_home_dirs</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P use_nfs_home_dirs off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许将 NFS 用于用户主目录会扩大远程文件系统访问范围，并可能暴露主目录数据。
+    <p>允许将 NFS 用于用户主目录会扩大远程文件系统访问范围，并可能暴露主目录数据。</p>
 
 severity: medium
 

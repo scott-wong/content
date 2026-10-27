@@ -8,8 +8,8 @@ description: |-
     {{{ describe_service_enable(service="nftables") }}}
 
     <p><strong>中文说明：</strong></p>
-    nftables 服务允许在启动期间或启动 nftables 服务时加载 nftables 规则集。
-    应启用 <tt>nftables</tt> 服务。
+    <p>nftables 服务允许在启动期间或启动 nftables 服务时加载 nftables 规则集。
+    应启用 <tt>nftables</tt> 服务。</p>
 
 rationale: |-
     The nftables service restores the nftables rules from the rules files referenced
@@ -17,7 +17,7 @@ rationale: |-
     the nftables service
 
     <p><strong>中文理由：</strong></p>
-    nftables 服务会在启动或启动 nftables 服务期间，从 <tt>/etc/sysconfig/nftables.conf</tt> 文件引用的规则文件中恢复 nftables 规则。
+    <p>nftables 服务会在启动或启动 nftables 服务期间，从 <tt>/etc/sysconfig/nftables.conf</tt> 文件引用的规则文件中恢复 nftables 规则。</p>
 
 severity: medium
 

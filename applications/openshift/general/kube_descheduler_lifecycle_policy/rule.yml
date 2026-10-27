@@ -7,14 +7,14 @@ description: |-
     No pod should run for more than 24 hours. The availability of the applications in the pod should be ensured.
 
     <p><strong>中文说明：</strong></p>
-    如果外部影响风险升高且保护需求极高，应定期停止并重新启动 Pod。
-    任何 Pod 的运行时间都不应超过 24 小时。应确保 Pod 中应用的可用性。
+    <p>如果外部影响风险升高且保护需求极高，应定期停止并重新启动 Pod。
+    任何 Pod 的运行时间都不应超过 24 小时。应确保 Pod 中应用的可用性。</p>
 
 rationale: |-
     If there is an increased risk of external influences and a very high need for protection, pods should be stopped and restarted regularly.
 
     <p><strong>中文理由：</strong></p>
-    如果外部影响风险升高且保护需求极高，应定期停止并重新启动 Pod。
+    <p>如果外部影响风险升高且保护需求极高，应定期停止并重新启动 Pod。</p>
 
 identifiers: {}
 

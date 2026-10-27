@@ -15,7 +15,7 @@ description: |-
     the example output.
 
     <p><strong>中文说明：</strong></p>
-    通过以下命令检查账户无活动值，验证账户标识符（个人、组、角色和设备）在无活动 {{{ xccdf_value("var_account_disable_inactivity") }}} 天或更短时间内被禁用：
+    <p>通过以下命令检查账户无活动值，验证账户标识符（个人、组、角色和设备）在无活动 {{{ xccdf_value("var_account_disable_inactivity") }}} 天或更短时间内被禁用：</p>
     <pre>grep 'inactive\|pam_unix' /etc/pam.d/password-auth | grep -w auth
 
     auth required pam_lastlog.so inactive=35
@@ -28,7 +28,7 @@ rationale: |-
     accounts will not notice if unauthorized access to their user account has been obtained.
 
     <p><strong>中文理由：</strong></p>
-    使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。
+    <p>使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。</p>
 
 severity: medium
 

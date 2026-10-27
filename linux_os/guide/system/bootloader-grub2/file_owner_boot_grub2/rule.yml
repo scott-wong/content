@@ -9,13 +9,13 @@ description: |-
     {{{ describe_file_owner(file=grub2_uefi_boot_path, owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>{{{ grub2_uefi_boot_path }}}</tt> 中的文件应由 <tt>root</tt> 用户拥有，以防文件被破坏或修改。确保这些文件的所有者为 <tt>root</tt>。
+    <p><tt>{{{ grub2_uefi_boot_path }}}</tt> 中的文件应由 <tt>root</tt> 用户拥有，以防文件被破坏或修改。确保这些文件的所有者为 <tt>root</tt>。</p>
 
 rationale: |-
     To prevent unauthorized access and modifications to boot configuration.
 
     <p><strong>中文理由：</strong></p>
-    防止未经授权访问和修改引导配置。
+    <p>防止未经授权访问和修改引导配置。</p>
 
 severity: medium
 

@@ -10,14 +10,14 @@ description: |-
     objects in the cluster.
 
     <p><strong>中文说明：</strong></p>
-    在命名空间中创建 Pod 的能力可能带来多种权限提升机会。在适用的情况下，请移除对集群中 <tt>pod</tt> 对象的 <tt>create</tt> 访问权限。
+    <p>在命名空间中创建 Pod 的能力可能带来多种权限提升机会。在适用的情况下，请移除对集群中 <tt>pod</tt> 对象的 <tt>create</tt> 访问权限。</p>
 
 rationale: |-
     The ability to create pods in a cluster opens up the cluster
     for privilege escalation.
 
     <p><strong>中文理由：</strong></p>
-    在集群中创建 Pod 的能力会为集群带来权限提升风险。
+    <p>在集群中创建 Pod 的能力会为集群带来权限提升风险。</p>
 
 severity: medium
 

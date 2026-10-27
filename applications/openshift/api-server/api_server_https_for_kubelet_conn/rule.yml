@@ -17,7 +17,7 @@ description: |-
     omitted from the argument list.
 
     <p><strong>中文说明：</strong></p>
-    kube-apiserver 默认确保与 kubelet 之间使用 HTTPS。apiserver 标志 “--kubelet-https” 已弃用，应设置为 “true” 或从参数列表中省略。
+    <p>kube-apiserver 默认确保与 kubelet 之间使用 HTTPS。apiserver 标志 “--kubelet-https” 已弃用，应设置为 “true” 或从参数列表中省略。</p>
 
 rationale: |-
     Connections from the kube-apiserver to kubelets could potentially carry
@@ -26,7 +26,7 @@ rationale: |-
     kubelets.
 
     <p><strong>中文理由：</strong></p>
-    从 kube-apiserver 到 kubelet 的连接可能传输密钥等敏感数据。因此，apiserver 与 kubelet 之间的任何通信都必须使用传输加密。
+    <p>从 kube-apiserver 到 kubelet 的连接可能传输密钥等敏感数据。因此，apiserver 与 kubelet 之间的任何通信都必须使用传输加密。</p>
 
 severity: medium
 

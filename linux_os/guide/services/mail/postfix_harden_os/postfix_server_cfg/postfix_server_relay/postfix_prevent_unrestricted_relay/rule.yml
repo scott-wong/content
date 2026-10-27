@@ -8,7 +8,8 @@ description: |-
     <pre>$ sudo postconf -e 'smtpd_client_restrictions = permit_mynetworks,reject'</pre>
 
     <p><strong>中文说明：</strong></p>
-    修改 <pre>/etc/postfix/main.cf</pre> 文件，使用以下命令将客户端连接限制到本地网络：
+    <p>修改</p>
+    <pre>/etc/postfix/main.cf</pre> 文件，使用以下命令将客户端连接限制到本地网络：
     <pre>$ sudo postconf -e 'smtpd_client_restrictions = permit_mynetworks,reject'</pre>
 
 rationale: |-
@@ -17,7 +18,7 @@ rationale: |-
     activity.
 
     <p><strong>中文理由：</strong></p>
-    如果允许不受限制的邮件中继，未授权发送方可能利用此主机作为邮件中继，以发送垃圾邮件或执行其他未经授权的活动。
+    <p>如果允许不受限制的邮件中继，未授权发送方可能利用此主机作为邮件中继，以发送垃圾邮件或执行其他未经授权的活动。</p>
 
 platform: package[postfix]
 

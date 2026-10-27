@@ -12,8 +12,8 @@ description: |-
     {{{ describe_service_disable(service="saslauthd") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>saslauthd</tt> 服务代表 SASL 库处理明文身份验证请求。该服务将所有需要超级用户权限的 SASL 身份验证代码隔离到单个进程中，还可用于为不理解基于 SASL 身份验证的客户端提供代理身份验证服务。
-    应禁用 <tt>saslauthd</tt> 服务。
+    <p><tt>saslauthd</tt> 服务代表 SASL 库处理明文身份验证请求。该服务将所有需要超级用户权限的 SASL 身份验证代码隔离到单个进程中，还可用于为不理解基于 SASL 身份验证的客户端提供代理身份验证服务。
+    应禁用 <tt>saslauthd</tt> 服务。</p>
 
 rationale: |-
     The <tt>saslauthd</tt> service provides essential functionality for
@@ -22,7 +22,7 @@ rationale: |-
     consulted, it is not necessary and should be disabled.
 
     <p><strong>中文理由：</strong></p>
-    <tt>saslauthd</tt> 服务为某些目录环境（例如使用 Kerberos 和 LDAP 的环境）提供执行身份验证所必需的功能。但在其他仅查阅本地文件的环境中，它不必要，应禁用。
+    <p><tt>saslauthd</tt> 服务为某些目录环境（例如使用 Kerberos 和 LDAP 的环境）提供执行身份验证所必需的功能。但在其他仅查阅本地文件的环境中，它不必要，应禁用。</p>
 
 severity: low
 

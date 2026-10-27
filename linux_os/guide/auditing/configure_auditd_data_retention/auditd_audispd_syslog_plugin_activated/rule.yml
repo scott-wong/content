@@ -10,7 +10,7 @@ description: |-
     <pre>$ sudo service auditd restart</pre>
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>auditd</tt> 服务配置为使用 <tt>audispd</tt> 审计事件多路复用器的 <tt>syslog</tt> 插件，请将 <tt>{{{ audisp_conf_path }}}/plugins.d/syslog.conf</tt> 中的 <tt>active</tt> 行设为 <tt>yes</tt>。重启 <tt>auditd</tt> 服务：
+    <p>要将 <tt>auditd</tt> 服务配置为使用 <tt>audispd</tt> 审计事件多路复用器的 <tt>syslog</tt> 插件，请将 <tt>{{{ audisp_conf_path }}}/plugins.d/syslog.conf</tt> 中的 <tt>active</tt> 行设为 <tt>yes</tt>。重启 <tt>auditd</tt> 服务：</p>
     <pre>$ sudo service auditd restart</pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     to the local syslog server.
 
     <p><strong>中文理由：</strong></p>
-    auditd 服务本身不具备将审计记录直接发送到集中管理服务器的能力。不过，它包含审计事件多路复用器（audispd）插件，可将审计记录传递给本地 syslog 服务器。
+    <p>auditd 服务本身不具备将审计记录直接发送到集中管理服务器的能力。不过，它包含审计事件多路复用器（audispd）插件，可将审计记录传递给本地 syslog 服务器。</p>
 
 severity: medium
 

@@ -8,14 +8,14 @@ description: |-
     {{{ describe_package_install(package="samba-common") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>samba-common</tt> 软件包。
-    请使用适当的软件包管理工具安装 <tt>samba-common</tt> 软件包。
+    <p>应安装 <tt>samba-common</tt> 软件包。
+    请使用适当的软件包管理工具安装 <tt>samba-common</tt> 软件包。</p>
 
 rationale: |-
     If the samba-common package is not installed, samba cannot be configured.
 
     <p><strong>中文理由：</strong></p>
-    如果未安装 samba-common 软件包，就无法配置 Samba。
+    <p>如果未安装 samba-common 软件包，就无法配置 Samba。</p>
 
 severity: medium
 

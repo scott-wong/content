@@ -19,19 +19,19 @@ description: |-
               text="the documentation") }}}
 
   <p><strong>中文说明：</strong></p>
-  OpenShift 能够审计 API Server 请求。审计提供与安全相关的按时间顺序记录，记载个人用户、管理员或系统其他组件影响系统的活动序列。审计在 API Server 级别工作，记录发往服务器的所有请求。
+  <p>OpenShift 能够审计 API Server 请求。审计提供与安全相关的按时间顺序记录，记载个人用户、管理员或系统其他组件影响系统的活动序列。审计在 API Server 级别工作，记录发往服务器的所有请求。
 
   验证审计日志已启用：检查 API Server 审计日志配置未设置为 `None`，该值会显式禁用该功能。
 
   有关如何配置审计配置档的更多信息，请访问
-  <a href="https://docs.openshift.com/container-platform/latest/security/audit-log-policy-config.html">文档</a>。
+  <a href="https://docs.openshift.com/container-platform/latest/security/audit-log-policy-config.html">文档</a>。</p>
 
 rationale: |-
   Logging is an important detective control for all systems, to detect potential
   unauthorised access.
 
   <p><strong>中文理由：</strong></p>
-  日志记录是所有系统的重要检测控制，用于发现潜在的未经授权访问。
+  <p>日志记录是所有系统的重要检测控制，用于发现潜在的未经授权访问。</p>
 
 identifiers:
   cce@ocp4: CCE-90619-8

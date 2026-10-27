@@ -13,17 +13,16 @@ description: |-
     <pre>-a task,never</pre>
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，{{{ full_name }}} 会附带一条出于性能原因禁用系统调用审计的审计规则。
+    <p>默认情况下，{{{ full_name }}} 会附带一条出于性能原因禁用系统调用审计的审计规则。
 
-    要确保系统调用审计正常工作，必须从 <tt>/etc/audit/rules.d/audit.rules</tt> 和 <tt>/etc/audit/audit.rules</tt> 中删除以下行：
-
+    要确保系统调用审计正常工作，必须从 <tt>/etc/audit/rules.d/audit.rules</tt> 和 <tt>/etc/audit/audit.rules</tt> 中删除以下行：</p>
     <pre>-a task,never</pre>
 
 rationale: |-
     Audit rules for syscalls do not take effect unless this line is removed.
 
     <p><strong>中文理由：</strong></p>
-    除非删除此行，否则系统调用审计规则不会生效。
+    <p>除非删除此行，否则系统调用审计规则不会生效。</p>
 
 severity: medium
 

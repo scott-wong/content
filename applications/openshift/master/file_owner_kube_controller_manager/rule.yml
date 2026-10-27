@@ -7,7 +7,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml</tt>。
+    <p>要将 <tt>/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/kube-controller-manager-pod.yaml</tt>。</p>
 
 rationale: |-
     The Kubernetes specification file contains information about the configuration of the
@@ -15,7 +15,7 @@ rationale: |-
     critical for OpenShift security.
 
     <p><strong>中文理由：</strong></p>
-    Kubernetes 规范文件包含有关系统中配置的 Kubernetes Controller Manager Server 的配置信息。保护该文件对 OpenShift 安全至关重要。
+    <p>Kubernetes 规范文件包含有关系统中配置的 Kubernetes Controller Manager Server 的配置信息。保护该文件对 OpenShift 安全至关重要。</p>
 
 severity: medium
 

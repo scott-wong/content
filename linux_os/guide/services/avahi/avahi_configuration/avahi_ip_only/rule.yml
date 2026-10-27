@@ -11,14 +11,15 @@ description: |-
     <pre>use-ipv4=no</pre>
 
     <p><strong>中文说明：</strong></p>
-    如果仅使用 IPv4，请编辑 <tt>/etc/avahi/avahi-daemon.conf</tt>，并确保 <tt>[server]</tt> 节存在以下行：
+    <p>如果仅使用 IPv4，请编辑 <tt>/etc/avahi/avahi-daemon.conf</tt>，并确保 <tt>[server]</tt> 节存在以下行：</p>
     <pre>use-ipv6=no</pre>
     同样，如果仅使用 IPv6，请使用以下行禁用 IPv4 套接字：
     <pre>use-ipv4=no</pre>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    仅启用实际使用的 IP 协议族可减少 Avahi 监听的地址和协议范围，避免在不需要的网络上暴露 mDNS 服务。
+    <p>仅启用实际使用的 IP 协议族可减少 Avahi 监听的地址和协议范围，避免在不需要的网络上暴露 mDNS 服务。</p>
 
 severity: low
 

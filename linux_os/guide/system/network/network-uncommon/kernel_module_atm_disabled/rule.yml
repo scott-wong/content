@@ -10,15 +10,15 @@ description: |-
     {{{ describe_module_disable(module="atm") }}}
 
     <p><strong>中文说明：</strong></p>
-    Asynchronous Transfer Mode（ATM）是一种基于虚电路和虚路径的协议，工作在网络层、数据链路层和物理层。
-    应禁用内核模块 <tt>atm</tt>。
+    <p>Asynchronous Transfer Mode（ATM）是一种基于虚电路和虚路径的协议，工作在网络层、数据链路层和物理层。
+    应禁用内核模块 <tt>atm</tt>。</p>
 
 rationale: |-
     Disabling ATM protects the system against exploitation of any
     flaws in its implementation.
 
     <p><strong>中文理由：</strong></p>
-    禁用该内核模块可防止攻击者利用其实现中的缺陷。
+    <p>禁用该内核模块可防止攻击者利用其实现中的缺陷。</p>
 
 severity: medium
 

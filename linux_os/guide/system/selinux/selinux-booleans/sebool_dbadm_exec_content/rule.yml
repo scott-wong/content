@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="dbadm_exec_content") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>dbadm_exec_content</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>dbadm_exec_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P dbadm_exec_content on</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>dbadm_exec_content</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>dbadm_exec_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P dbadm_exec_content on</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    数据库管理员通常需要执行内容处理工具；禁用此布尔值可能妨碍其完成管理任务。
+    <p>数据库管理员通常需要执行内容处理工具；禁用此布尔值可能妨碍其完成管理任务。</p>
 
 severity: medium
 

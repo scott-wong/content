@@ -8,7 +8,7 @@ description: |-
     system or media from the system being audited.
 
     <p><strong>中文说明：</strong></p>
-    配置 audispd 插件，将审计记录卸载到与被审计系统不同的系统或介质。
+    <p>配置 audispd 插件，将审计记录卸载到与被审计系统不同的系统或介质。</p>
 {{% if 'ubuntu' in product %}}
     First, set the <tt>active</tt> option in
     <pre>/etc/audisp/plugins.d/au-remote.conf</pre>
@@ -24,7 +24,7 @@ rationale: |-
     with limited audit storage capacity.
 
     <p><strong>中文理由：</strong></p>
-    存储在一个位置的信息容易遭受意外或附带删除或更改。卸载是审计存储容量有限的信息系统中的常见过程。
+    <p>存储在一个位置的信息容易遭受意外或附带删除或更改。卸载是审计存储容量有限的信息系统中的常见过程。</p>
 
 severity: medium
 

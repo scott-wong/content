@@ -8,7 +8,7 @@ description: |-
     and ensure that the entry is a directory.
 
     <p><strong>中文说明：</strong></p>
-    对于 root 的 PATH 中的每个元素，运行：
+    <p>对于 root 的 PATH 中的每个元素，运行：</p>
     <pre># ls -ld <i>DIR</i></pre>
     并确保该条目是目录。
 
@@ -18,7 +18,7 @@ rationale: |-
     root's path are directories helps maintain a secure environment for root.
 
     <p><strong>中文理由：</strong></p>
-    root 的 PATH 中不是目录的位置可能导致意外行为，例如从非预期位置执行脚本。确保 root 的 PATH 中所有位置都是目录，有助于为 root 维护安全环境。
+    <p>root 的 PATH 中不是目录的位置可能导致意外行为，例如从非预期位置执行脚本。确保 root 的 PATH 中所有位置都是目录，有助于为 root 维护安全环境。</p>
 
 identifiers:
     cce@rhel9: CCE-86472-8

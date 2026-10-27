@@ -6,14 +6,14 @@ description: |-
     {{{ describe_service_disable(service="smb") }}}
 
     <p><strong>中文说明：</strong></p>
-    要禁用 <tt>smb</tt> 服务，请运行 <tt>sudo systemctl disable --now smb</tt>。
+    <p>要禁用 <tt>smb</tt> 服务，请运行 <tt>sudo systemctl disable --now smb</tt>。</p>
 
 rationale: |-
     Running a Samba server provides a network-based avenue of attack, and
     should be disabled if not needed.
 
     <p><strong>中文理由：</strong></p>
-    运行 Samba 服务器会提供基于网络的攻击途径，如果不需要，应将其禁用。
+    <p>运行 Samba 服务器会提供基于网络的攻击途径，如果不需要，应将其禁用。</p>
 
 severity: low
 

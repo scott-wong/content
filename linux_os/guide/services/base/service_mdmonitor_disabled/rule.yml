@@ -9,15 +9,15 @@ description: |-
     {{{ describe_service_disable(service="mdmonitor") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>mdmonitor</tt> 服务用于监控软件 RAID 阵列；硬件 RAID 设置不使用此服务。
-    应禁用 <tt>mdmonitor</tt> 服务。
+    <p><tt>mdmonitor</tt> 服务用于监控软件 RAID 阵列；硬件 RAID 设置不使用此服务。
+    应禁用 <tt>mdmonitor</tt> 服务。</p>
 
 rationale: |-
     If software RAID monitoring is not required,
     there is no need to run this service.
 
     <p><strong>中文理由：</strong></p>
-    如果不需要软件 RAID 监控，则无需运行此服务。
+    <p>如果不需要软件 RAID 监控，则无需运行此服务。</p>
 
 severity: low
 

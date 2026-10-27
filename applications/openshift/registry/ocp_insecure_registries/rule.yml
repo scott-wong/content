@@ -17,8 +17,8 @@ description: |-
                 text="the relevant documentation") }}}.
 
     <p><strong>中文说明：</strong></p>
-    配置 <tt>registrySources.insecureRegistries</tt> 决定 OpenShift 容器运行时可为构建和 Pod 访问的不安全镜像仓库。此配置设置用于在不进行 TLS 验证的情况下访问已配置的镜像仓库，可能导致安全泄露，应避免使用。
-    使用以下命令移除任何已配置的 insecureRegistries：
+    <p>配置 <tt>registrySources.insecureRegistries</tt> 决定 OpenShift 容器运行时可为构建和 Pod 访问的不安全镜像仓库。此配置设置用于在不进行 TLS 验证的情况下访问已配置的镜像仓库，可能导致安全泄露，应避免使用。
+    使用以下命令移除任何已配置的 insecureRegistries：</p>
     <pre>oc patch image.config.openshift.io cluster --type=json -p "[{'op': 'remove', 'path': '/spec/registrySources/insecureRegistries'}]"</pre>
 
     有关更多信息，请参阅<a href="https://docs.openshift.com/container-platform/latest/openshift_images/image-configuration.html">相关文档</a>。
@@ -28,7 +28,7 @@ rationale: |-
     OpenShift container runtime accessing registries which cannot be validated.
 
     <p><strong>中文理由：</strong></p>
-    不应配置不安全的镜像仓库，从而限制 OpenShift 容器运行时访问无法验证的镜像仓库的可能性。
+    <p>不应配置不安全的镜像仓库，从而限制 OpenShift 容器运行时访问无法验证的镜像仓库的可能性。</p>
 
 severity: medium
 

@@ -18,14 +18,14 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    使用 <tt>pam_faillock.so</tt> 时，<tt>fail_interval</tt> 指令配置系统在指定时间段内多次错误登录后锁定账户。
+    <p>使用 <tt>pam_faillock.so</tt> 时，<tt>fail_interval</tt> 指令配置系统在指定时间段内多次错误登录后锁定账户。
 
     确保 <tt>/etc/security/faillock.conf</tt> 文件包含以下条目：
     <tt>fail_interval = &lt;interval-in-seconds&gt;</tt>，其中 <tt>interval-in-seconds</tt> 为 <tt>{{{ xccdf_value("var_accounts_passwords_pam_faillock_fail_interval") }}}</tt> 或更大值。
 
     {{% if 'ubuntu' not in product and 'debian' not in product %}}
     为避免手动编辑这些文件时出错，建议根据操作系统版本使用适当工具，例如 <tt>authselect</tt> 或 <tt>authconfig</tt>。
-    {{% endif %}}
+    {{% endif %}}</p>
 
 rationale: |-
     By limiting the number of failed logon attempts the risk of unauthorized system
@@ -33,7 +33,7 @@ rationale: |-
     Limits are imposed by locking the account.
 
     <p><strong>中文理由：</strong></p>
-    通过限制失败的登录尝试次数，可降低未经授权人员通过猜测用户密码（即暴力破解）访问系统的风险。锁定账户可实施该限制。
+    <p>通过限制失败的登录尝试次数，可降低未经授权人员通过猜测用户密码（即暴力破解）访问系统的风险。锁定账户可实施该限制。</p>
 
 severity: medium
 

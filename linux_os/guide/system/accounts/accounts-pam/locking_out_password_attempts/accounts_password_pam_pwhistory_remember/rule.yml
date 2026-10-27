@@ -15,9 +15,9 @@ description: |-
     The profile requirement is {{{ xccdf_value("var_password_pam_remember") }}} passwords.
 
     <p><strong>中文说明：</strong></p>
-    不允许用户重复使用近期密码。可通过为 <tt>pam_pwhistory</tt> PAM 模块使用 <tt>remember</tt> 选项来实现。
+    <p>不允许用户重复使用近期密码。可通过为 <tt>pam_pwhistory</tt> PAM 模块使用 <tt>remember</tt> 选项来实现。
     <br /><br />
-    在 <tt>/etc/pam.d/common-password</tt> 文件中，确保存在 <tt>remember</tt> 和 <tt>use_authtok</tt> 参数，并且 <tt>remember</tt> 参数的值等于或大于 {{{ xccdf_value("var_password_pam_remember") }}}。例如：
+    在 <tt>/etc/pam.d/common-password</tt> 文件中，确保存在 <tt>remember</tt> 和 <tt>use_authtok</tt> 参数，并且 <tt>remember</tt> 参数的值等于或大于 {{{ xccdf_value("var_password_pam_remember") }}}。例如：</p>
     <pre>password requisite pam_pwhistory.so <i>...existing_options...</i> remember={{{ xccdf_value("var_password_pam_remember") }}} use_authtok</pre>
     配置档要求为 {{{ xccdf_value("var_password_pam_remember") }}} 个密码。
 
@@ -25,7 +25,7 @@ rationale: |-
     Preventing reuse of previous passwords helps ensure that a compromised password is not reused by a user.
 
     <p><strong>中文理由：</strong></p>
-    防止重复使用以前的密码有助于确保用户不会重复使用已泄露的密码。
+    <p>防止重复使用以前的密码有助于确保用户不会重复使用已泄露的密码。</p>
 
 severity: medium
 

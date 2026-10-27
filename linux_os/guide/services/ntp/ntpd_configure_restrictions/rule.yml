@@ -15,7 +15,7 @@ description: |-
     This recommendation only applies if ntp is in use on the system.
 
     <p><strong>中文说明：</strong></p>
-    ntpd 是实现 Network Time Protocol（NTP）的守护进程。它旨在跨多种系统同步系统时钟，并使用高度准确的源。有关 NTP 的更多信息，请参阅 <a href="http://www.ntp.org">NTP 项目网站</a>。ntp 可配置为客户端和/或服务器。为确保 ntpd 实施正确的服务器限制，请确保 <tt>/etc/ntpd.conf</tt> 文件中存在以下行：
+    <p>ntpd 是实现 Network Time Protocol（NTP）的守护进程。它旨在跨多种系统同步系统时钟，并使用高度准确的源。有关 NTP 的更多信息，请参阅 <a href="http://www.ntp.org">NTP 项目网站</a>。ntp 可配置为客户端和/或服务器。为确保 ntpd 实施正确的服务器限制，请确保 <tt>/etc/ntpd.conf</tt> 文件中存在以下行：</p>
     <pre>restrict -4 default kod nomodify notrap nopeer noquery</pre>
     <pre>restrict -6 default kod nomodify notrap nopeer noquery</pre>
     此建议仅在系统使用 ntp 时适用。
@@ -25,7 +25,7 @@ rationale: |-
     is working properly.
 
     <p><strong>中文理由：</strong></p>
-    如果系统使用 ntp，则正确配置对于确保时间同步正常工作至关重要。
+    <p>如果系统使用 ntp，则正确配置对于确保时间同步正常工作至关重要。</p>
 
 severity: medium
 

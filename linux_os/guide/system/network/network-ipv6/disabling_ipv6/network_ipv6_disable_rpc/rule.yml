@@ -13,13 +13,14 @@ description: |-
     tcp6       tpi_cots_ord  v     inet6    tcp     -       -</pre>
 
     <p><strong>中文说明：</strong></p>
-    用于 NFSv4 的 RPC 服务默认会尝试加载 <tt>udp6</tt> 和 <tt>tcp6</tt> 的传输模块，即使已在 <tt>/etc/modprobe.d</tt> 中禁用 IPv6。为防止 <tt>rpc.mountd</tt> 等 RPC 服务尝试启动 IPv6 网络侦听器，请在 <tt>/etc/netconfig</tt> 中删除或注释以下两行：
+    <p>用于 NFSv4 的 RPC 服务默认会尝试加载 <tt>udp6</tt> 和 <tt>tcp6</tt> 的传输模块，即使已在 <tt>/etc/modprobe.d</tt> 中禁用 IPv6。为防止 <tt>rpc.mountd</tt> 等 RPC 服务尝试启动 IPv6 网络侦听器，请在 <tt>/etc/netconfig</tt> 中删除或注释以下两行：</p>
     <pre>udp6       tpi_clts      v     inet6    udp     -       -
     tcp6       tpi_cots_ord  v     inet6    tcp     -       -</pre>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    移除 IPv6 RPC 传输项可防止即使系统已禁用 IPv6 后，NFS RPC 服务仍尝试绑定或侦听 IPv6 网络，从而减少不必要的网络暴露。
+    <p>移除 IPv6 RPC 传输项可防止即使系统已禁用 IPv6 后，NFS RPC 服务仍尝试绑定或侦听 IPv6 网络，从而减少不必要的网络暴露。</p>
 
 severity: unknown
 

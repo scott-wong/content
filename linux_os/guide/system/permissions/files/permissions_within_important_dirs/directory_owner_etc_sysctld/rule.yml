@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/sysctl.d", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保目录 <tt>/etc/sysctl.d</tt> 的所有者为 <tt>root</tt>。
+    <p>确保目录 <tt>/etc/sysctl.d</tt> 的所有者为 <tt>root</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/sysctl.d directory by the root user is important
@@ -15,7 +15,7 @@ rationale: |-
     ensures exclusive control of the kernel configuration.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/sysctl.d</tt> 目录由 <tt>root</tt> 用户拥有非常重要，因为此目录存放内核配置。保护此目录对系统安全至关重要。将所有权分配给 root 可确保对内核配置的独占控制。
+    <p><tt>/etc/sysctl.d</tt> 目录由 <tt>root</tt> 用户拥有非常重要，因为此目录存放内核配置。保护此目录对系统安全至关重要。将所有权分配给 root 可确保对内核配置的独占控制。</p>
 
 severity: medium
 

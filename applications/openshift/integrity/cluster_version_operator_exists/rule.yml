@@ -12,17 +12,17 @@ description: |-
   [1] https://github.com/openshift/machine-config-operator/blob/master/docs/OSUpgrades.md#questions-and-answers
 
   <p><strong>中文说明：</strong></p>
-  OpenShift 平台的完整性首先由 Cluster Version Operator 保障。Cluster Version Operator 默认会在应用发行版镜像前使用 GPG 验证其完整性。[1]
+  <p>OpenShift 平台的完整性首先由 Cluster Version Operator 保障。Cluster Version Operator 默认会在应用发行版镜像前使用 GPG 验证其完整性。[1]
   此规则检查系统中是否已部署 Cluster Version Operator 且其是否可用。
 
-  [1] https://github.com/openshift/machine-config-operator/blob/master/docs/OSUpgrades.md#questions-and-answers
+  [1] https://github.com/openshift/machine-config-operator/blob/master/docs/OSUpgrades.md#questions-and-answers</p>
 
 rationale: |-
   Integrity check prevent a malicious actor from using a unauthorized system image, hence it will ensure the
   image has not been tampered with, or corrupted.
 
   <p><strong>中文理由：</strong></p>
-  完整性检查可防止恶意行为者使用未经授权的系统镜像，从而确保镜像未被篡改或损坏。
+  <p>完整性检查可防止恶意行为者使用未经授权的系统镜像，从而确保镜像未被篡改或损坏。</p>
 
 identifiers:
   cce@ocp4: CCE-90670-1

@@ -13,16 +13,16 @@ description: |-
     password is passed to subsequent modules to be set as the new authentication token.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_pwquality.so</tt> 模块通过根据系统词典和一组用于检测弱密码选择的规则评估用户创建的密码，确保密码质量。该模块最初源自 pam_cracklib 模块，并与 pam_cracklib 的选项向后兼容。
+    <p><tt>pam_pwquality.so</tt> 模块通过根据系统词典和一组用于检测弱密码选择的规则评估用户创建的密码，确保密码质量。该模块最初源自 pam_cracklib 模块，并与 pam_cracklib 的选项向后兼容。
     <br /><br />
-    该模块的处理流程包括提示用户输入密码、检查密码强度，如果满足条件，则再次要求用户确认密码。如果两次输入一致，密码将传递给后续模块，以设置为新的身份验证令牌。
+    该模块的处理流程包括提示用户输入密码、检查密码强度，如果满足条件，则再次要求用户确认密码。如果两次输入一致，密码将传递给后续模块，以设置为新的身份验证令牌。</p>
 
 rationale: |-
     Strong passwords significantly increase the time and effort required for unauthorized access, 
     increasing overall system security.
 
     <p><strong>中文理由：</strong></p>
-    强密码可显著增加未经授权访问所需的时间和精力，从而提高系统整体安全性。
+    <p>强密码可显著增加未经授权访问所需的时间和精力，从而提高系统整体安全性。</p>
 
 severity: medium
 

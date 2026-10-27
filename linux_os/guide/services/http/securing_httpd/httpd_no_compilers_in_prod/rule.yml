@@ -9,14 +9,14 @@ description: |-
     Horses or viruses.
 
     <p><strong>中文说明：</strong></p>
-    生产服务器上存在编译器，会便于恶意用户创建自定义程序版本以及安装特洛伊木马或病毒。
+    <p>生产服务器上存在编译器，会便于恶意用户创建自定义程序版本以及安装特洛伊木马或病毒。</p>
 
 rationale: |-
     An attacker's code could be uploaded and compiled on the server
     under attack.
 
     <p><strong>中文理由：</strong></p>
-    攻击者的代码可能被上载到受攻击的服务器并在该服务器上编译。
+    <p>攻击者的代码可能被上载到受攻击的服务器并在该服务器上编译。</p>
 
 severity: medium
 

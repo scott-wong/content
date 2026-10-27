@@ -11,7 +11,7 @@ description: |-
     <pre>auth required pam_faildelay.so delay={{{ xccdf_value("var_password_pam_delay") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    要将系统配置为在登录失败尝试后引入延迟，请添加或修正 <tt>/etc/pam.d/common-auth</tt> 中的 <tt>pam_faildelay</tt> 设置，确保其 <tt>delay</tt> 参数至少为 {{{ xccdf_value("var_password_pam_delay") }}} 或更大。例如：
+    <p>要将系统配置为在登录失败尝试后引入延迟，请添加或修正 <tt>/etc/pam.d/common-auth</tt> 中的 <tt>pam_faildelay</tt> 设置，确保其 <tt>delay</tt> 参数至少为 {{{ xccdf_value("var_password_pam_delay") }}} 或更大。例如：</p>
     <pre>auth required pam_faildelay.so delay={{{ xccdf_value("var_password_pam_delay") }}}</pre>
 
 rationale: |-
@@ -19,7 +19,7 @@ rationale: |-
     the chances that an unauthorized user may gain access to an account.
 
     <p><strong>中文理由：</strong></p>
-    限制特定时间间隔内的登录尝试次数可降低未授权用户获得账户访问权限的可能性。
+    <p>限制特定时间间隔内的登录尝试次数可降低未授权用户获得账户访问权限的可能性。</p>
 
 severity: medium
 

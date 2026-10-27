@@ -7,13 +7,13 @@ description: |-
     by <code>root</code> user.
 
     <p><strong>中文说明：</strong></p>
-    SSH 服务器私钥（匹配 <code>/etc/ssh/*_key</code> 通配符的文件）的所有者必须为 <code>root</code> 用户。
+    <p>SSH 服务器私钥（匹配 <code>/etc/ssh/*_key</code> 通配符的文件）的所有者必须为 <code>root</code> 用户。</p>
 
 rationale: |-
     If an unauthorized user obtains the private SSH host key file, the host could be impersonated.
 
     <p><strong>中文理由：</strong></p>
-    如果未经授权的用户获得私有 SSH 主机密钥文件，主机可能被冒充。
+    <p>如果未经授权的用户获得私有 SSH 主机密钥文件，主机可能被冒充。</p>
 
 severity: medium
 

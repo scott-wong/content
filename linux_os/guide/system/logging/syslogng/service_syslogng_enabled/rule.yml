@@ -8,14 +8,14 @@ description: |-
     {{{ describe_service_enable(service="syslog-ng") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>syslog-ng</tt> 服务（替代 rsyslog）默认在 Debian 上提供 syslog 风格日志记录。应启用并启动 <tt>syslog-ng</tt> 服务。
+    <p><tt>syslog-ng</tt> 服务（替代 rsyslog）默认在 Debian 上提供 syslog 风格日志记录。应启用并启动 <tt>syslog-ng</tt> 服务。</p>
 
 rationale: |-
     The <tt>syslog-ng</tt> service must be running in order to provide
     logging services, which are essential to system administration.
 
     <p><strong>中文理由：</strong></p>
-    必须运行 <tt>syslog-ng</tt> 服务才能提供日志记录服务，而这些服务对系统管理至关重要。
+    <p>必须运行 <tt>syslog-ng</tt> 服务才能提供日志记录服务，而这些服务对系统管理至关重要。</p>
 
 severity: medium
 

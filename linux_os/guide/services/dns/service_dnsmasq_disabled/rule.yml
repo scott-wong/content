@@ -6,7 +6,7 @@ description: |-
     {{{ describe_service_disable(service="dnsmasq") }}}
 
     <p><strong>中文说明：</strong></p>
-    要禁用 <tt>dnsmasq</tt> 服务，请运行 <tt>sudo systemctl disable --now dnsmasq</tt>。
+    <p>要禁用 <tt>dnsmasq</tt> 服务，请运行 <tt>sudo systemctl disable --now dnsmasq</tt>。</p>
 
 rationale: |-
     Unless a system is specifically designated to act as a DNS
@@ -14,7 +14,7 @@ rationale: |-
     that the package be removed to reduce the potential attack surface.
 
     <p><strong>中文理由：</strong></p>
-    除非系统被明确指定用作 DNS 缓存、DNS 转发和/或 DHCP 服务器，否则建议移除该软件包以减少潜在攻击面。
+    <p>除非系统被明确指定用作 DNS 缓存、DNS 转发和/或 DHCP 服务器，否则建议移除该软件包以减少潜在攻击面。</p>
 
 severity: medium
 

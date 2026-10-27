@@ -35,7 +35,7 @@ rationale: |-
     or other services, weakening system security.
 
     <p><strong>中文理由：</strong></p>
-    本地登录用户在控制台按下 Ctrl-Alt-Del 时可重启系统。如果误按，例如在混合操作系统环境中可能发生，这可能导致系统意外重启，带来短期可用性损失风险。
+    <p>本地登录用户在控制台按下 Ctrl-Alt-Del 时可重启系统。如果误按，例如在混合操作系统环境中可能发生，这可能导致系统意外重启，带来短期可用性损失风险。</p>
 
 severity: medium
 

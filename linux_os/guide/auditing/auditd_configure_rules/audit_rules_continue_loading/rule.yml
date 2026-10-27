@@ -7,7 +7,7 @@ description: |-
   code will not be success if any rule fails to load.
 
   <p><strong>中文说明：</strong></p>
-  设置 <tt>-c</tt> 标志，使 <tt>auditctl</tt> 在遇到错误时仍会继续加载规则。如果任何规则加载失败，退出码将不会表示成功。
+  <p>设置 <tt>-c</tt> 标志，使 <tt>auditctl</tt> 在遇到错误时仍会继续加载规则。如果任何规则加载失败，退出码将不会表示成功。</p>
 
 rationale: |-
   The default behaviour of <tt>auditctl</tt> is to stop loading any further rules if it encounters an
@@ -16,7 +16,7 @@ rationale: |-
   loaded and active rather than a subset
 
   <p><strong>中文理由：</strong></p>
-  <tt>auditctl</tt> 的默认行为是，一旦在规则中遇到错误（例如文件监视器引用不存在的文件），就停止加载后续规则。这可能导致 <tt>auditd</tt> 在没有有效规则的情况下运行。最好加载并启用所有有效规则，而不是只加载一个子集。
+  <p><tt>auditctl</tt> 的默认行为是，一旦在规则中遇到错误（例如文件监视器引用不存在的文件），就停止加载后续规则。这可能导致 <tt>auditd</tt> 在没有有效规则的情况下运行。最好加载并启用所有有效规则，而不是只加载一个子集。</p>
 
 severity: medium
 

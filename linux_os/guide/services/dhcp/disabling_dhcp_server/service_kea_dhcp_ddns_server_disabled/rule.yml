@@ -8,8 +8,8 @@ description: |-
     {{{ describe_service_disable(service="kea-dhcp-ddns-server") }}}
 
     <p><strong>中文说明：</strong></p>
-    任何无需充当 DHCP 动态 DNS 更新服务器的系统都应禁用 <tt>kea-dhcp-ddns-server</tt> 服务。
-    要禁用 <tt>kea-dhcp-ddns-server</tt> 服务，请运行 <tt>sudo systemctl disable --now kea-dhcp-ddns-server</tt>。
+    <p>任何无需充当 DHCP 动态 DNS 更新服务器的系统都应禁用 <tt>kea-dhcp-ddns-server</tt> 服务。
+    要禁用 <tt>kea-dhcp-ddns-server</tt> 服务，请运行 <tt>sudo systemctl disable --now kea-dhcp-ddns-server</tt>。</p>
 
 rationale: |-
     Unmanaged or unintentionally activated DHCP servers may provide faulty information
@@ -17,7 +17,7 @@ rationale: |-
     DHCP server if there is one.
 
     <p><strong>中文理由：</strong></p>
-    未受管理或意外激活的 DHCP 服务器可能向客户端提供错误信息，从而干扰合法站点 DHCP 服务器（如果存在）的运行。
+    <p>未受管理或意外激活的 DHCP 服务器可能向客户端提供错误信息，从而干扰合法站点 DHCP 服务器（如果存在）的运行。</p>
 
 severity: medium
 

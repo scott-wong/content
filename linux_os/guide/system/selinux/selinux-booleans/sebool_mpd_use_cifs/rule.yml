@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="mpd_use_cifs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>mpd_use_cifs</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mpd_use_cifs</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mpd_use_cifs off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>mpd_use_cifs</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mpd_use_cifs</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mpd_use_cifs off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 MPD 访问 CIFS/SMB 挂载，减少音乐播放服务跨共享访问数据的风险。
+    <p>禁用后，可防止 MPD 访问 CIFS/SMB 挂载，减少音乐播放服务跨共享访问数据的风险。</p>
 
 severity: medium
 

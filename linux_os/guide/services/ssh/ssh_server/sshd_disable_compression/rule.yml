@@ -12,7 +12,7 @@ description: |-
     <pre>Compression {{{ xccdf_value("var_sshd_disable_compression") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    压缩对于长距离慢速网络连接很有用，但可能导致本地 LAN 上的性能问题。如果必须使用压缩，应仅在用户通过身份验证后启用；否则应禁用。要禁用压缩或将压缩延迟到用户成功通过身份验证之后，请在 <tt>/etc/ssh/sshd_config</tt> 文件中添加或更正以下行：
+    <p>压缩对于长距离慢速网络连接很有用，但可能导致本地 LAN 上的性能问题。如果必须使用压缩，应仅在用户通过身份验证后启用；否则应禁用。要禁用压缩或将压缩延迟到用户成功通过身份验证之后，请在 <tt>/etc/ssh/sshd_config</tt> 文件中添加或更正以下行：</p>
     <pre>Compression {{{ xccdf_value("var_sshd_disable_compression") }}}</pre>
 
 rationale: |-
@@ -21,7 +21,7 @@ rationale: |-
     system from an unauthenticated connection, potentially with root privileges.
 
     <p><strong>中文理由：</strong></p>
-    如果在身份验证之前允许 SSH 连接使用压缩，压缩软件中的漏洞可能导致未经身份验证的连接攻陷系统，且可能获得 root 权限。
+    <p>如果在身份验证之前允许 SSH 连接使用压缩，压缩软件中的漏洞可能导致未经身份验证的连接攻陷系统，且可能获得 root 权限。</p>
 
 severity: medium
 

@@ -7,14 +7,14 @@ description: |-
     three control plane nodes are required.
 
     <p><strong>中文说明：</strong></p>
-    为确保 OpenShift 控制平面在单个 master 节点发生故障时仍可访问，需要三个控制平面节点。
+    <p>为确保 OpenShift 控制平面在单个 master 节点发生故障时仍可访问，需要三个控制平面节点。</p>
 
 rationale: |-
     A high available OpenShift control plane requires three control plane nodes. This allows etcd 
     to have a functional quorum state, when a single control plane node is unavailable.
 
     <p><strong>中文理由：</strong></p>
-    高可用的 OpenShift 控制平面需要三个控制平面节点。这样，当单个控制平面节点不可用时，etcd 仍可保持正常工作的法定人数状态。
+    <p>高可用的 OpenShift 控制平面需要三个控制平面节点。这样，当单个控制平面节点不可用时，etcd 仍可保持正常工作的法定人数状态。</p>
 
 identifiers:
     cce@ocp4: CCE-87551-8

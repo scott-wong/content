@@ -12,7 +12,7 @@ description: |-
     {{{ describe_mount(option="nodev", part="any removable media partitions") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保任何可移动介质分区使用 <tt>nodev</tt> 挂载选项。
+    <p>确保任何可移动介质分区使用 <tt>nodev</tt> 挂载选项。</p>
 
 rationale: |-
     The only legitimate location for device files is the <tt>/dev</tt> directory
@@ -21,7 +21,7 @@ rationale: |-
     filesystems.
 
     <p><strong>中文理由：</strong></p>
-    设备文件的唯一合法位置是根分区上的 <tt>/dev</tt> 目录。chroot 环境属于例外，不建议在包含其根文件系统的分区上设置 <tt>nodev</tt>。
+    <p>设备文件的唯一合法位置是根分区上的 <tt>/dev</tt> 目录。chroot 环境属于例外，不建议在包含其根文件系统的分区上设置 <tt>nodev</tt>。</p>
 
 severity: medium
 

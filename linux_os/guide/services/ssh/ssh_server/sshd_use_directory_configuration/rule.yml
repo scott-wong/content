@@ -9,14 +9,14 @@ description: |-
     to several files in the <tt>/etc/ssh/sshd_config.d</tt> directory.
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/ssh/sshd_config</tt> 文件中包含 <tt>Include /etc/ssh/sshd_config.d/*.conf</tt> 行。理想情况下，该文件中不应包含任何活动配置指令，而应将服务配置分发到 <tt>/etc/ssh/sshd_config.d</tt> 目录中的多个文件。
+    <p>确保 <tt>/etc/ssh/sshd_config</tt> 文件中包含 <tt>Include /etc/ssh/sshd_config.d/*.conf</tt> 行。理想情况下，该文件中不应包含任何活动配置指令，而应将服务配置分发到 <tt>/etc/ssh/sshd_config.d</tt> 目录中的多个文件。</p>
 
 rationale: |-
     This form of distributed configuration is considered as a good practice, and as other sshd rules assume that directives in files in the <tt>/etc/ssh/sshd_config.d</tt> config directory are effective, there has to be a rule that ensures this.
     Aside from that, having multiple configuration files makes the SSH Server configuration changes easier to partition according to the reason that they were introduced, and therefore it should help to perform merges of hardening updates.
 
     <p><strong>中文理由：</strong></p>
-    这种分布式配置形式被视为良好实践；由于其他 sshd 规则假定 <tt>/etc/ssh/sshd_config.d</tt> 配置目录中的指令会生效，因此必须有一条规则确保这一点。除此之外，多个配置文件使 SSH 服务器配置更改更容易按引入原因进行划分，因此应有助于执行加固更新的合并。
+    <p>这种分布式配置形式被视为良好实践；由于其他 sshd 规则假定 <tt>/etc/ssh/sshd_config.d</tt> 配置目录中的指令会生效，因此必须有一条规则确保这一点。除此之外，多个配置文件使 SSH 服务器配置更改更容易按引入原因进行划分，因此应有助于执行加固更新的合并。</p>
 
 severity: medium
 

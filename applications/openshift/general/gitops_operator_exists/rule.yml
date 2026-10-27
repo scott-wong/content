@@ -14,16 +14,16 @@ description: |-
   the target clusters.
 
   <p><strong>中文说明：</strong></p>
-  Red Hat OpenShift GitOps 是一个基于 Argo CD 的声明式持续交付平台。它使团队能够采用 GitOps 原则管理集群配置，并在混合多集群 Kubernetes 环境中自动实现安全且可重复的应用交付。
+  <p>Red Hat OpenShift GitOps 是一个基于 Argo CD 的声明式持续交付平台。它使团队能够采用 GitOps 原则管理集群配置，并在混合多集群 Kubernetes 环境中自动实现安全且可重复的应用交付。
 
-  遵循 GitOps 和基础设施即代码原则，可将集群和应用配置存储在 Git 仓库中，并使用 Git 工作流将其推广到目标集群。
+  遵循 GitOps 和基础设施即代码原则，可将集群和应用配置存储在 Git 仓库中，并使用 Git 工作流将其推广到目标集群。</p>
 
 
 rationale: |-
   GitOps provides a mean to track system configuration changes
 
   <p><strong>中文理由：</strong></p>
-  GitOps 提供了一种跟踪系统配置变更的方法。
+  <p>GitOps 提供了一种跟踪系统配置变更的方法。</p>
 
 identifiers:
   cce@ocp4: CCE-86134-4

@@ -9,7 +9,7 @@ description: |-
     <pre>$ sudo rm /[path]/[to]/[file]/shosts.equiv</pre>
 
     <p><strong>中文说明：</strong></p>
-    <tt>shosts.equiv</tt> 文件列出本地系统信任的远程主机和用户。要删除这些文件，请运行以下命令从任意位置删除它们：
+    <p><tt>shosts.equiv</tt> 文件列出本地系统信任的远程主机和用户。要删除这些文件，请运行以下命令从任意位置删除它们：</p>
     <pre>$ sudo rm /[path]/[to]/[file]/shosts.equiv</pre>
 
 rationale: |-
@@ -19,7 +19,7 @@ rationale: |-
     or for the use of two-factor authentication.
 
     <p><strong>中文理由：</strong></p>
-    <tt>shosts.equiv</tt> 文件用于配置通过 SSH 对系统进行基于主机的身份验证。基于主机的身份验证不足以防止对系统的未经授权访问，因为它不要求对连接请求进行交互式身份识别和身份验证，也不要求使用双因素身份验证。
+    <p><tt>shosts.equiv</tt> 文件用于配置通过 SSH 对系统进行基于主机的身份验证。基于主机的身份验证不足以防止对系统的未经授权访问，因为它不要求对连接请求进行交互式身份识别和身份验证，也不要求使用双因素身份验证。</p>
 
 severity: high
 

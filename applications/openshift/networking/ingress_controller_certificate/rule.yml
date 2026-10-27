@@ -7,7 +7,7 @@ description: |-
   Check that the default Ingress certificate has been replaced.
 
   <p><strong>中文说明：</strong></p>
-  检查默认 Ingress 证书是否已被替换。
+  <p>检查默认 Ingress 证书是否已被替换。</p>
 
 rationale: |-
   OpenShift auto-generates several PKIs to serve TLS on different
@@ -25,11 +25,11 @@ rationale: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/latest/security/certificates/replacing-default-ingress-certificate.html") }}}
 
   <p><strong>中文理由：</strong></p>
-  OpenShift 会自动生成多个 PKI，用于在系统的不同端点提供 TLS。可以并且有必要配置自定义 PKI，使外部客户端能够信任这些端点。
+  <p>OpenShift 会自动生成多个 PKI，用于在系统的不同端点提供 TLS。可以并且有必要配置自定义 PKI，使外部客户端能够信任这些端点。
 
   Ingress Operator 是负责启用对 OpenShift Container Platform 集群服务外部访问的组件。上述 Operator 会创建内部 CA，并签发对 <tt>.apps</tt> 子域下应用程序有效的通配符证书。Web 控制台和 CLI 也使用该证书。由于需要使用来自受信任提供程序的证书，因此需要替换该证书和密钥。
 
-  https://docs.openshift.com/container-platform/latest/security/certificates/replacing-default-ingress-certificate.html
+  https://docs.openshift.com/container-platform/latest/security/certificates/replacing-default-ingress-certificate.html</p>
 
 severity: medium
 

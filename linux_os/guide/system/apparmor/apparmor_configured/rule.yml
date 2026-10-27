@@ -10,7 +10,7 @@ description: |-
     {{{ describe_service_enable(service="apparmor") }}}
 
     <p><strong>中文说明：</strong></p>
-    验证 AppArmor 工具配置为控制白名单应用和用户主目录访问控制。<br/><br/>应启用 <tt>apparmor</tt> 服务。
+    <p>验证 AppArmor 工具配置为控制白名单应用和用户主目录访问控制。<br/><br/>应启用 <tt>apparmor</tt> 服务。</p>
 
 
 rationale: |-
@@ -36,7 +36,7 @@ rationale: |-
     their home directory will minimize the risk of sharing information.
 
     <p><strong>中文理由：</strong></p>
-    使用白名单可提供一种配置管理方法，仅允许执行经授权的软件。仅使用经授权的软件可通过限制潜在漏洞数量来降低风险。<br/><br/>
+    <p>使用白名单可提供一种配置管理方法，仅允许执行经授权的软件。仅使用经授权的软件可通过限制潜在漏洞数量来降低风险。<br/><br/>
 
     组织必须识别经授权的软件程序，并将每个经授权的程序添加到 "pam_apparmor" 例外策略中，以允许执行经授权的软件。用于识别组织信息系统上获准执行的软件程序的过程通常称为白名单。<br/><br/>
 
@@ -44,7 +44,7 @@ rationale: |-
 
     用户主目录或文件夹可能包含敏感信息。非特权用户应通过共享资源与系统管理员（SA）协调任何信息共享。<br/><br/>
 
-    AppArmor 可将用户限制在其主目录内，不允许用户在自身主目录之外进行任何更改。将用户限制在其主目录内可最大限度降低信息共享风险。
+    AppArmor 可将用户限制在其主目录内，不允许用户在自身主目录之外进行任何更改。将用户限制在其主目录内可最大限度降低信息共享风险。</p>
 
 severity: medium
 

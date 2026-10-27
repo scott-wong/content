@@ -8,7 +8,7 @@ description: |-
     entries from a network information service (NIS) should be directly inserted.
 
     <p><strong>中文说明：</strong></p>
-    <tt>/etc/shadow</tt> 文件中的 <tt>+</tt> 字符标记了应直接插入网络信息服务（NIS）条目的位置。
+    <p><tt>/etc/shadow</tt> 文件中的 <tt>+</tt> 字符标记了应直接插入网络信息服务（NIS）条目的位置。</p>
 
 rationale: |-
     Using this method to include entries into <tt>/etc/shadow</tt> is considered legacy
@@ -16,7 +16,7 @@ rationale: |-
     to gain access to the system.
 
     <p><strong>中文理由：</strong></p>
-    使用此方法向 <tt>/etc/shadow</tt> 中包含条目被视为遗留做法，应避免使用。这些条目可能为攻击者提供获取系统访问权限的途径。
+    <p>使用此方法向 <tt>/etc/shadow</tt> 中包含条目被视为遗留做法，应避免使用。这些条目可能为攻击者提供获取系统访问权限的途径。</p>
 
 severity: medium
 

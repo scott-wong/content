@@ -15,13 +15,14 @@ description: |-
     applied.
 
     <p><strong>中文说明：</strong></p>
-    要向 IPv6 地址的自动生成引入随机性，请在 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 中添加或修正以下行：
+    <p>要向 IPv6 地址的自动生成引入随机性，请在 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 中添加或修正以下行：</p>
     <pre>IPV6_PRIVACY=rfc3041</pre>
     自动生成的 IPv6 地址基于底层硬件（例如以太网）地址，因此可能通过流量在其生命周期内跟踪某件硬件。如果系统的 IP 地址不应轻易泄露其硬件地址，应应用此设置。
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    隐私扩展通过引入随机化地址来降低基于硬件地址的长期跟踪风险，并减少通过 IPv6 流量关联设备的可能性。
+    <p>隐私扩展通过引入随机化地址来降低基于硬件地址的长期跟踪风险，并减少通过 IPv6 流量关联设备的可能性。</p>
 
 severity: unknown
 

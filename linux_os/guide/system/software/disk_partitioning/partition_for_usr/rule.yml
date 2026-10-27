@@ -8,7 +8,7 @@ description: |-
     partition.
 
     <p><strong>中文说明：</strong></p>
-    建议将 <tt>/usr</tt> 目录放在单独的分区上。
+    <p>建议将 <tt>/usr</tt> 目录放在单独的分区上。</p>
 
 rationale: |-
     The <tt>/usr</tt> partition contains system software, utilities and files.
@@ -16,7 +16,7 @@ rationale: |-
     restrictions through mount options.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/usr</tt> 分区包含系统软件、实用程序和文件。将其放在单独分区上可以限制其大小，并通过挂载选项应用限制。
+    <p><tt>/usr</tt> 分区包含系统软件、实用程序和文件。将其放在单独分区上可以限制其大小，并通过挂载选项应用限制。</p>
 
 severity: medium
 

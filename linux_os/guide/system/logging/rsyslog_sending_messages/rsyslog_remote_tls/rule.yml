@@ -14,7 +14,7 @@ description: |-
     Replace the <tt>&lt;remote system></tt> in the above command with an IP address or a host name of the remote logging server.
 
     <p><strong>中文说明：</strong></p>
-    配置 <tt>rsyslog</tt> 为远程服务器日志记录使用传输层安全（TLS）支持，在 <tt>/etc/rsyslog.conf</tt> 中通过 action 配置转发输出模块。可使用以下命令：
+    <p>配置 <tt>rsyslog</tt> 为远程服务器日志记录使用传输层安全（TLS）支持，在 <tt>/etc/rsyslog.conf</tt> 中通过 action 配置转发输出模块。可使用以下命令：</p>
     <pre>echo 'action(type="omfwd" protocol="tcp" Target="&lt;remote system>" port="6514"
         StreamDriver="gtls" StreamDriverMode="1" StreamDriverAuthMode="x509/name" streamdriver.CheckExtendedKeyPurpose="on")' >> /etc/rsyslog.conf
     </pre>
@@ -25,7 +25,7 @@ rationale: |-
     remote logging server needs to be authenticated and encrypted.
 
     <p><strong>中文理由：</strong></p>
-    为保护所记录的数据，与远程日志服务器的连接需要进行身份验证和加密。
+    <p>为保护所记录的数据，与远程日志服务器的连接需要进行身份验证和加密。</p>
 
 severity: medium
 

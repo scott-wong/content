@@ -16,9 +16,9 @@ description: |-
     should tailor the profile to exclude this rule.
 
     <p><strong>中文说明：</strong></p>
-    OpenShift Virtualization 支持 jsonpatch 注解（<tt>kubevirt.kubevirt.io/jsonpatch</tt>、<tt>containerizeddataimporter.kubevirt.io/jsonpatch</tt>、<tt>networkaddonsconfigs.kubevirt.io/jsonpatch</tt> 和 <tt>ssp.kubevirt.io/jsonpatch</tt>），这些注解会直接修补操作对象自定义资源，从而绕过受支持的 HyperConverged API 范围。此类修补不受支持且不会经过验证，可能会在无人察觉的情况下禁用安全相关设置，并在升级后继续存在。
+    <p>OpenShift Virtualization 支持 jsonpatch 注解（<tt>kubevirt.kubevirt.io/jsonpatch</tt>、<tt>containerizeddataimporter.kubevirt.io/jsonpatch</tt>、<tt>networkaddonsconfigs.kubevirt.io/jsonpatch</tt> 和 <tt>ssp.kubevirt.io/jsonpatch</tt>），这些注解会直接修补操作对象自定义资源，从而绕过受支持的 HyperConverged API 范围。此类修补不受支持且不会经过验证，可能会在无人察觉的情况下禁用安全相关设置，并在升级后继续存在。
 
-    对于经授权且已记录 jsonpatch 使用需求的环境，应调整配置档以排除此规则。
+    对于经授权且已记录 jsonpatch 使用需求的环境，应调整配置档以排除此规则。</p>
 
 rationale: |-
     Direct patches to the KubeVirt, CDI, network-addons or SSP operands
@@ -27,7 +27,7 @@ rationale: |-
     weaken the virtualization platform's security posture.
 
     <p><strong>中文理由：</strong></p>
-    直接对 KubeVirt、CDI、network-addons 或 SSP 操作对象进行修补，会绕过 HyperConverged Operator 提供的配置控制和验证，造成未记录的配置漂移，并可能削弱虚拟化平台的安全态势。
+    <p>直接对 KubeVirt、CDI、network-addons 或 SSP 操作对象进行修补，会绕过 HyperConverged Operator 提供的配置控制和验证，造成未记录的配置漂移，并可能削弱虚拟化平台的安全态势。</p>
 
 severity: medium
 

@@ -24,8 +24,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    未通过身份验证或未获授权的用户不应对 OpenShift 节点具有访问权限。Kubelet 应设置为仅允许 Webhook 授权。为确保 Kubelet 要求授权，请验证 <tt>{{{ kubeletconf_path }}}</tt> 中的 <tt>authorization</tt> 已配置为 <tt>Webhook</tt>：
-
+    <p>未通过身份验证或未获授权的用户不应对 OpenShift 节点具有访问权限。Kubelet 应设置为仅允许 Webhook 授权。为确保 Kubelet 要求授权，请验证 <tt>{{{ kubeletconf_path }}}</tt> 中的 <tt>authorization</tt> 已配置为 <tt>Webhook</tt>：</p>
     <pre>
     authorization:
       mode: Webhook
@@ -37,7 +36,7 @@ rationale: |-
     unauthenticated/unauthorized users have no access to OpenShift nodes.
 
     <p><strong>中文理由：</strong></p>
-    正确配置授权有助于确保未通过身份验证或未获授权的用户无法访问 OpenShift 节点。
+    <p>正确配置授权有助于确保未通过身份验证或未获授权的用户无法访问 OpenShift 节点。</p>
 
 identifiers:
   cce@ocp4: CCE-83593-4

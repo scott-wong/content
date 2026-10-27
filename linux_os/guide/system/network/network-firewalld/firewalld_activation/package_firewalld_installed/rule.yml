@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_install(package="firewalld") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>firewalld</tt> 软件包。
+    <p>应安装 <tt>firewalld</tt> 软件包。</p>
 
 rationale: |-
     "Firewalld" provides an easy and effective way to block/limit remote access to the system via ports, services, and protocols.
@@ -20,11 +20,11 @@ rationale: |-
     Automated control of remote access sessions allows organizations to ensure ongoing compliance with remote access policies by enforcing connection rules of remote access applications on a variety of information system components (e.g., servers, workstations, notebook computers, smartphones, and tablets)."
 
     <p><strong>中文理由：</strong></p>
-    "Firewalld" 提供了一种简单有效的方法，可通过端口、服务和协议阻止或限制对系统的远程访问。
+    <p>"Firewalld" 提供了一种简单有效的方法，可通过端口、服务和协议阻止或限制对系统的远程访问。
 
     远程访问服务（例如提供对网络设备和信息系统远程访问的服务）如果缺乏自动控制能力，会增加风险，并使远程用户访问管理变得困难。远程访问是指授权用户（或信息系统）通过组织外部控制的网络访问非公开信息系统。远程访问方法包括拨号、宽带和无线等。
 
-    {{{ full_name }}} 功能（例如 SSH）必须能够在审计发现未授权活动时采取强制措施。远程访问会话的自动控制使组织能够通过对各种信息系统组件（例如服务器、工作站、笔记本电脑、智能手机和平板电脑）上的远程访问应用程序实施连接规则，确保持续符合远程访问策略。
+    {{{ full_name }}} 功能（例如 SSH）必须能够在审计发现未授权活动时采取强制措施。远程访问会话的自动控制使组织能够通过对各种信息系统组件（例如服务器、工作站、笔记本电脑、智能手机和平板电脑）上的远程访问应用程序实施连接规则，确保持续符合远程访问策略。</p>
 
 severity: medium
 

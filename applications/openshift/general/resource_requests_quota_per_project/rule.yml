@@ -33,14 +33,13 @@ description: |-
   </p>
 
   <p><strong>中文说明：</strong></p>
-  启用资源请求和限制有两种方式。可创建以下任一对象：
+  <p>启用资源请求和限制有两种方式。可创建以下任一对象：
 
   由 ClusterResourceQuota 对象定义的多项目配额允许多个项目共享配额。每个所选项目中使用的资源会汇总，并使用该汇总值限制所有所选项目的资源总量。
 
   由 ResourceQuota 对象定义的资源配额提供约束，限制每个项目的总体资源消耗。它可以按类型限制项目中可创建的对象数量，还可限制项目中资源可能消耗的计算资源和存储总量。
 
-  必须确保集群中使用 ClusterResourceQuota，或者每个命名空间使用 ResourceQuota。
-
+  必须确保集群中使用 ClusterResourceQuota，或者每个命名空间使用 ResourceQuota。</p>
   <p>
   如需配置 ClusterResourceQuota，请按照<a href="https://docs.openshift.com/container-platform/4.9/applications/quotas/quotas-setting-across-multiple-projects.html">相关文档</a>中的说明操作。
   </p>
@@ -57,7 +56,7 @@ rationale: |-
   allocating enough resources for the application to function properly.
 
   <p><strong>中文理由：</strong></p>
-  资源配额提供约束，限制每个项目的总体资源消耗，有助于防止资源饥饿。部署应用程序时，需要根据内存和 CPU 消耗情况进行调整，分配足够的资源以确保应用程序正常运行。
+  <p>资源配额提供约束，限制每个项目的总体资源消耗，有助于防止资源饥饿。部署应用程序时，需要根据内存和 CPU 消耗情况进行调整，分配足够的资源以确保应用程序正常运行。</p>
 
 severity: medium
 

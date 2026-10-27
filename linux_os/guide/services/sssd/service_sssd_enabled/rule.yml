@@ -8,11 +8,12 @@ description: |-
     {{{ describe_service_enable(service="sssd") }}}
 
     <p><strong>中文说明：</strong></p>
-    应启用 SSSD 服务。可通过 <tt>sudo systemctl enable sssd.service</tt> 启用该服务。
+    <p>应启用 SSSD 服务。可通过 <tt>sudo systemctl enable sssd.service</tt> 启用该服务。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    必须启用 SSSD 服务，才能使用远程目录进行身份验证，并确保系统能够访问集中管理的账户、身份和身份验证策略。
+    <p>必须启用 SSSD 服务，才能使用远程目录进行身份验证，并确保系统能够访问集中管理的账户、身份和身份验证策略。</p>
 
 severity: medium
 

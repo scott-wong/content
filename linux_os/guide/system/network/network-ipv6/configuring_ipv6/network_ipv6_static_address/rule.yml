@@ -13,13 +13,14 @@ description: |-
     reserved for documentation purposes, as defined by RFC3849.
 
     <p><strong>中文说明：</strong></p>
-    要手动为接口分配 IPv6 地址，请编辑 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 文件。添加或修正以下行（替换为正确的 IPv6 地址）：
+    <p>要手动为接口分配 IPv6 地址，请编辑 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 文件。添加或修正以下行（替换为正确的 IPv6 地址）：</p>
     <pre>IPV6ADDR=2001:0DB8::ABCD/64</pre>
     手动分配 IP 地址优于从路由器或网络接受地址。此处示例地址是保留用于文档目的的 IPv6 地址，由 RFC3849 定义。
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    手动配置静态 IPv6 地址可确保地址分配可控且可预测，避免依赖未经授权的路由器或自动配置，并降低地址冲突或意外配置的风险。
+    <p>手动配置静态 IPv6 地址可确保地址分配可控且可预测，避免依赖未经授权的路由器或自动配置，并降低地址冲突或意外配置的风险。</p>
 
 severity: unknown
 

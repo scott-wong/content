@@ -15,10 +15,9 @@ description: |-
     use_mappers = pwent</pre>
 
     <p><strong>中文说明：</strong></p>
-    操作系统必须将经过身份验证的身份映射到用于 PKI 身份验证的用户或组账户。
+    <p>操作系统必须将经过身份验证的身份映射到用于 PKI 身份验证的用户或组账户。
 
-    使用以下命令验证 <tt>/etc/pam_pkcs11/pam_pkcs11.conf</tt> 文件中的 <tt>use_mappers</tt> 是否设置为 <tt>pwent</tt>：
-
+    使用以下命令验证 <tt>/etc/pam_pkcs11/pam_pkcs11.conf</tt> 文件中的 <tt>use_mappers</tt> 是否设置为 <tt>pwent</tt>：</p>
     <pre>$ grep ^use_mappers /etc/pam_pkcs11/pam_pkcs11.conf
 
     use_mappers = pwent</pre>
@@ -29,7 +28,7 @@ rationale: |-
     not be available for forensic analysis.
 
     <p><strong>中文理由：</strong></p>
-    如果要使用智能卡进行多因素身份验证，必须安装 pcsc-lite-ccid 软件包。
+    <p>如果要使用智能卡进行多因素身份验证，必须安装 pcsc-lite-ccid 软件包。</p>
 
 severity: low
 

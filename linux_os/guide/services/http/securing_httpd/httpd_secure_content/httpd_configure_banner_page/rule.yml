@@ -8,7 +8,7 @@ description: |-
     user access.
 
     <p><strong>中文说明：</strong></p>
-    当用户访问需要身份验证时，为每个网站配置登录横幅。
+    <p>当用户访问需要身份验证时，为每个网站配置登录横幅。</p>
 
 rationale: |-
     A consent banner will be in place to make prospective entrants aware that the
@@ -24,7 +24,7 @@ rationale: |-
     confirm the information provided from interviewing the web staff.
 
     <p><strong>中文理由：</strong></p>
-    应设置同意横幅，使即将进入网站的人员了解其即将访问的是 DoD 网站，其活动会受到监控。DoDI 8500.01 文件确立了 DoD 信息系统的使用政策，要求使用标准 Notice and Consent Banner，并在用户协议中包含标准文本。该横幅要求适用于具有安全和访问控制的网站。这些网站属于受限网站，不向公众开放。如果网站使用时不要求身份验证/授权，则无需显示该横幅。可手动检查文档根目录中是否存在横幅页面文件（例如 banner.html），或通过浏览器导航到网站，以确认从 Web 人员访谈中获得的信息。
+    <p>应设置同意横幅，使即将进入网站的人员了解其即将访问的是 DoD 网站，其活动会受到监控。DoDI 8500.01 文件确立了 DoD 信息系统的使用政策，要求使用标准 Notice and Consent Banner，并在用户协议中包含标准文本。该横幅要求适用于具有安全和访问控制的网站。这些网站属于受限网站，不向公众开放。如果网站使用时不要求身份验证/授权，则无需显示该横幅。可手动检查文档根目录中是否存在横幅页面文件（例如 banner.html），或通过浏览器导航到网站，以确认从 Web 人员访谈中获得的信息。</p>
 
 severity: low
 

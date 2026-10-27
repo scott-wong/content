@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/ipsec.d", perms="0700") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>/etc/ipsec.d</tt> 目录的权限必须为 <tt>0700</tt>。
+    <p><tt>/etc/ipsec.d</tt> 目录的权限必须为 <tt>0700</tt>。</p>
 
 rationale: |-
     Setting correct permissions on the /etc/ipsec.d directory is important
@@ -15,7 +15,7 @@ rationale: |-
     ensures exclusive control of the Libreswan configuration.
 
     <p><strong>中文理由：</strong></p>
-    为 <tt>/etc/ipsec.d</tt> 设置正确权限至关重要，因为该路径承载 Libreswan 配置。保护此路径对系统安全至关重要。限制权限可确保对 Libreswan 配置的独占控制。
+    <p>为 <tt>/etc/ipsec.d</tt> 设置正确权限至关重要，因为该路径承载 Libreswan 配置。保护此路径对系统安全至关重要。限制权限可确保对 Libreswan 配置的独占控制。</p>
 
 severity: medium
 

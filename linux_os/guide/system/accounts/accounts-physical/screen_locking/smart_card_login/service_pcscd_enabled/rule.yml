@@ -7,7 +7,7 @@ description: |-
     {{{ describe_service_enable(service="pcscd") }}}
 
     <p><strong>中文说明：</strong></p>
-    要启用 <tt>pcscd</tt> 服务，请运行 <tt>sudo systemctl enable --now pcscd</tt>。
+    <p>要启用 <tt>pcscd</tt> 服务，请运行 <tt>sudo systemctl enable --now pcscd</tt>。</p>
 
 rationale: |-
     Using an authentication device, such as a CAC or token that is separate from
@@ -21,7 +21,7 @@ rationale: |-
     or similar secure authentication devices issued by an organization or identity provider.
 
     <p><strong>中文理由：</strong></p>
-    会话锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。<br /><br />会话锁在能够确定会话活动的时点实施。<br /><br />无论在何处确定和实施会话锁，一旦调用，会话锁必须保持有效，直到用户重新进行身份验证。除重新身份验证外，任何其他活动都不得解锁系统。
+    <p>会话锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。<br /><br />会话锁在能够确定会话活动的时点实施。<br /><br />无论在何处确定和实施会话锁，一旦调用，会话锁必须保持有效，直到用户重新进行身份验证。除重新身份验证外，任何其他活动都不得解锁系统。</p>
 
 severity: medium
 

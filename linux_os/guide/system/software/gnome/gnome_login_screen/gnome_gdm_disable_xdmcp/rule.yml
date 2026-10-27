@@ -19,7 +19,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    XDMCP 是未加密协议，因此会带来安全风险。要禁用 Gnome 中的 XDMCP 支持，请在 <tt>{{{ gdm_conf_path }}}</tt> 的 <tt>[xdmcp]</tt> 配置节中将 <code>Enable</code> 设置为 <code>false</code>。例如：
+    <p>XDMCP 是未加密协议，因此会带来安全风险。要禁用 Gnome 中的 XDMCP 支持，请在 <tt>{{{ gdm_conf_path }}}</tt> 的 <tt>[xdmcp]</tt> 配置节中将 <code>Enable</code> 设置为 <code>false</code>。例如：</p>
     <pre>
     [xdmcp]
     Enable=false
@@ -33,7 +33,7 @@ rationale: |-
     and keystrokes will traversing over the network in clear text.
 
     <p><strong>中文理由：</strong></p>
-    XDMCP 通过 Gnome 显示管理器（GDM）提供未加密的远程访问，无法保证用户密码或远程会话的机密性和完整性。如果特权用户使用 XDMCP 登录，键击和 XEvents 会以明文遍历网络，其特权用户密码可能遭到泄露。
+    <p>XDMCP 通过 Gnome 显示管理器（GDM）提供未加密的远程访问，无法保证用户密码或远程会话的机密性和完整性。如果特权用户使用 XDMCP 登录，键击和 XEvents 会以明文遍历网络，其特权用户密码可能遭到泄露。</p>
 
 severity: high
 

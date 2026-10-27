@@ -7,7 +7,7 @@ description: |-
     issue during boot or by manual selection from the bootloader.
 
     <p><strong>中文说明：</strong></p>
-    单用户模式用于在系统引导期间检测到问题或从引导加载程序手动选择时进行恢复。
+    <p>单用户模式用于在系统引导期间检测到问题或从引导加载程序手动选择时进行恢复。</p>
 
 rationale: |-
     Requiring authentication in single user mode prevents an unauthorized
@@ -15,7 +15,7 @@ rationale: |-
     without credentials.
 
     <p><strong>中文理由：</strong></p>
-    在单用户模式中要求身份验证，可防止未授权用户将系统重启到单用户模式，从而在无凭据的情况下获得 root 权限。
+    <p>在单用户模式中要求身份验证，可防止未授权用户将系统重启到单用户模式，从而在无凭据的情况下获得 root 权限。</p>
 
 severity: medium
 

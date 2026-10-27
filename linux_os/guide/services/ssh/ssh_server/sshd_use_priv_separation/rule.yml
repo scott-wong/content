@@ -9,7 +9,7 @@ description: |-
     <pre>UsePrivilegeSeparation {{{ xccdf_value("var_sshd_priv_separation") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    启用后，SSH 将创建一个非特权子进程，该进程具有已通过身份验证用户的权限。要在 SSH 中启用权限分离，请在 <tt>/etc/ssh/sshd_config</tt> 文件中添加或更正以下行：
+    <p>启用后，SSH 将创建一个非特权子进程，该进程具有已通过身份验证用户的权限。要在 SSH 中启用权限分离，请在 <tt>/etc/ssh/sshd_config</tt> 文件中添加或更正以下行：</p>
     <pre>UsePrivilegeSeparation {{{ xccdf_value("var_sshd_priv_separation") }}}</pre>
 
 rationale: |-
@@ -18,7 +18,7 @@ rationale: |-
     the unprivileged section.
 
     <p><strong>中文理由：</strong></p>
-    SSH 守护进程权限分离会使 SSH 进程在不需要时放弃 root 权限，从而降低非特权部分中软件漏洞的影响。
+    <p>SSH 守护进程权限分离会使 SSH 进程在不需要时放弃 root 权限，从而降低非特权部分中软件漏洞的影响。</p>
 
 severity: medium
 

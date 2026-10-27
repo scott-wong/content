@@ -8,7 +8,7 @@ description: |-
   segregate workloads.
 
   <p><strong>中文说明：</strong></p>
-  使用 Network Policy 限制集群内 Pod 之间的流量，并隔离工作负载。
+  <p>使用 Network Policy 限制集群内 Pod 之间的流量，并隔离工作负载。</p>
 
 rationale: |-
   By default, all pod to pod traffic within a cluster is allowed. Network
@@ -25,9 +25,9 @@ rationale: |-
   Network Policy enforcement through the use of Calico.
 
   <p><strong>中文理由：</strong></p>
-  默认情况下，集群内所有 Pod 之间的流量都被允许。Network Policy 会创建 Pod 级防火墙，可用于限制源之间的流量。通过使用标签选择 Pod 的 Network Policy，可以限制该 Pod 的流量。一旦命名空间中存在选择特定 Pod 的 Network Policy，该 Pod 就会拒绝任何 Network Policy 未允许的连接。命名空间中未被任何 Network Policy 选择的其他 Pod 仍会接受所有流量。
+  <p>默认情况下，集群内所有 Pod 之间的流量都被允许。Network Policy 会创建 Pod 级防火墙，可用于限制源之间的流量。通过使用标签选择 Pod 的 Network Policy，可以限制该 Pod 的流量。一旦命名空间中存在选择特定 Pod 的 Network Policy，该 Pod 就会拒绝任何 Network Policy 未允许的连接。命名空间中未被任何 Network Policy 选择的其他 Pod 仍会接受所有流量。
 
-  Network Policy 通过 Kubernetes Network Policy API 管理，并由网络插件强制执行；如果仅创建资源而没有兼容的网络插件来实现该策略，则不会产生任何效果。EKS 通过 Calico 支持 Network Policy 强制执行。
+  Network Policy 通过 Kubernetes Network Policy API 管理，并由网络插件强制执行；如果仅创建资源而没有兼容的网络插件来实现该策略，则不会产生任何效果。EKS 通过 Calico 支持 Network Policy 强制执行。</p>
 
 severity: unknown
 

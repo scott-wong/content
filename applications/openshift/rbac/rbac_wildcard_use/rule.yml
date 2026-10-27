@@ -12,7 +12,7 @@ description: |-
     vulnerable state to privilege abuse.
 
     <p><strong>中文说明：</strong></p>
-    Kubernetes Cluster Role 和 Local Role 根据对象集合以及可对这些对象执行的操作来提供资源访问权限。可以使用通配符 <tt>*</tt> 匹配所有项目来设置其中任一角色。这违反了最小权限原则，会使集群更容易遭受权限滥用。
+    <p>Kubernetes Cluster Role 和 Local Role 根据对象集合以及可对这些对象执行的操作来提供资源访问权限。可以使用通配符 <tt>*</tt> 匹配所有项目来设置其中任一角色。这违反了最小权限原则，会使集群更容易遭受权限滥用。</p>
 
 rationale: |-
     The principle of least privilege recommends that users are
@@ -21,7 +21,7 @@ rationale: |-
     excessive rights to the Kubernetes API.
 
     <p><strong>中文理由：</strong></p>
-    最小权限原则建议仅向用户提供其角色所需的访问权限，而不授予任何额外权限。使用通配符授予权限可能会赋予 Kubernetes API 过多权限。
+    <p>最小权限原则建议仅向用户提供其角色所需的访问权限，而不授予任何额外权限。使用通配符授予权限可能会赋予 Kubernetes API 过多权限。</p>
 
 severity: medium
 

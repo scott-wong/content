@@ -10,14 +10,14 @@ description: |-
     or equal to 900 in <tt>/etc/tmux.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要在 <tt>tmux</tt> 终端复用器中启用无活动一段时间后的控制台屏幕锁定，必须将 <tt>/etc/tmux.conf</tt> 中的 <tt>lock-after-time</tt> 选项设置为大于 0 且小于或等于 900 的值。
+    <p>要在 <tt>tmux</tt> 终端复用器中启用无活动一段时间后的控制台屏幕锁定，必须将 <tt>/etc/tmux.conf</tt> 中的 <tt>lock-after-time</tt> 选项设置为大于 0 且小于或等于 900 的值。</p>
 
 rationale: |-
     Locking the session after a period of inactivity limits the
     potential exposure if the session is left unattended.
 
     <p><strong>中文理由：</strong></p>
-    这可防止具有物理访问权限的攻击者轻易绕过机器安全并获得 root 访问权限。配置引导加载程序密码可进一步防止此类访问。
+    <p>这可防止具有物理访问权限的攻击者轻易绕过机器安全并获得 root 访问权限。配置引导加载程序密码可进一步防止此类访问。</p>
 
 severity: medium
 

@@ -102,7 +102,7 @@ rationale: |-
   to assess a situation and do appropriate root cause analysis in such incidents.
 
   <p><strong>中文理由：</strong></p>
-  当写入审计日志出现错误时，该特定 API Server 实例将不会记录安全事件。安全事件响应团队会使用这些审计日志及其他工件来确定安全泄露或事件的影响。没有这些日志，就很难评估情况并在此类事件中开展适当的根本原因分析。
+  <p>当写入审计日志出现错误时，该特定 API Server 实例将不会记录安全事件。安全事件响应团队会使用这些审计日志及其他工件来确定安全泄露或事件的影响。没有这些日志，就很难评估情况并在此类事件中开展适当的根本原因分析。</p>
 
 references:
   nerc-cip: CIP-003-8 R5.1.1,CIP-003-8 R5.3,CIP-004-6 R2.3,CIP-007-3 R5.1,CIP-007-3 R5.1.1,CIP-007-3 R5.1.2

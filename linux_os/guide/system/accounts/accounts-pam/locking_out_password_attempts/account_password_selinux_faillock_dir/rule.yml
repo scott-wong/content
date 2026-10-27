@@ -8,14 +8,14 @@ description: |-
     records is stored. The configured directory must have the correct SELinux context.
 
     <p><strong>中文说明：</strong></p>
-    PAM pam_faillock.so 模块中的 <tt>dir</tt> 配置选项定义锁定记录的存储位置。所配置的目录必须具有正确的 SELinux 上下文。
+    <p>PAM pam_faillock.so 模块中的 <tt>dir</tt> 配置选项定义锁定记录的存储位置。所配置的目录必须具有正确的 SELinux 上下文。</p>
 
 rationale: |-
     Not having the correct SELinux context on the pam_faillock.so records directory may lead to
     unauthorized access to the directory.
 
     <p><strong>中文理由：</strong></p>
-    如果 pam_faillock.so 记录目录没有正确的 SELinux 上下文，可能导致对该目录的未经授权访问。
+    <p>如果 pam_faillock.so 记录目录没有正确的 SELinux 上下文，可能导致对该目录的未经授权访问。</p>
 
 severity: medium
 

@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="ssh_chroot_rw_homedirs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>ssh_chroot_rw_homedirs</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>ssh_chroot_rw_homedirs</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>ssh_chroot_rw_homedirs</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>ssh_chroot_rw_homedirs</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用此布尔值可防止 chroot SSH 用户写入主目录，降低数据篡改风险。
+    <p>禁用此布尔值可防止 chroot SSH 用户写入主目录，降低数据篡改风险。</p>
 
 severity: medium
 

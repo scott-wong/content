@@ -16,9 +16,9 @@ description: |-
     It should produce no output in a well-configured system.
 
     <p><strong>中文说明：</strong></p>
-    用于与重要系统资源通信的设备文件应标记正确的 SELinux 类型。如果任何设备文件带有 SELinux 类型 <tt>device_t</tt> 或 <tt>unlabeled_t</tt>，请报告缺陷，以便更正策略。请提供有关该设备是什么以及哪些程序使用该设备的信息。
+    <p>用于与重要系统资源通信的设备文件应标记正确的 SELinux 类型。如果任何设备文件带有 SELinux 类型 <tt>device_t</tt> 或 <tt>unlabeled_t</tt>，请报告缺陷，以便更正策略。请提供有关该设备是什么以及哪些程序使用该设备的信息。
     <br /><br />
-    要检查标记错误的设备文件，请运行以下命令：
+    要检查标记错误的设备文件，请运行以下命令：</p>
     <pre>$ sudo find /dev -context *:device_t:* \( -type c -o -type b \) -printf "%p %Z\n"</pre>
     <pre>$ sudo find /dev -context *:unlabeled_t:* \( -type c -o -type b \) -printf "%p %Z\n"</pre>
     在配置良好的系统中，这些命令不应产生任何输出。
@@ -29,7 +29,7 @@ rationale: |-
     device file.
 
     <p><strong>中文理由：</strong></p>
-    如果设备文件带有 SELinux 类型 <tt>device_t</tt> 或 <tt>unlabeled_t</tt>，则 SELinux 无法正确限制对该设备文件的访问。
+    <p>如果设备文件带有 SELinux 类型 <tt>device_t</tt> 或 <tt>unlabeled_t</tt>，则 SELinux 无法正确限制对该设备文件的访问。</p>
 
 severity: medium
 

@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="mock_enable_homedirs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>mock_enable_homedirs</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mock_enable_homedirs</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mock_enable_homedirs off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>mock_enable_homedirs</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mock_enable_homedirs</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mock_enable_homedirs off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 mock 访问用户主目录，减少构建环境读取用户个人文件的风险。
+    <p>禁用后，可防止 mock 访问用户主目录，减少构建环境读取用户个人文件的风险。</p>
 
 severity: medium
 

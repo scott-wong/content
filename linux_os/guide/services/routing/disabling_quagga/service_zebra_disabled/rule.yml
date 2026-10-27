@@ -7,7 +7,7 @@ description: |-
     {{{ describe_service_disable(service="zebra") }}}
 
     <p><strong>中文说明：</strong></p>
-    要禁用 <tt>zebra</tt> 服务，请运行 <tt>sudo systemctl disable --now zebra</tt>。
+    <p>要禁用 <tt>zebra</tt> 服务，请运行 <tt>sudo systemctl disable --now zebra</tt>。</p>
 
 rationale: |-
     Routing protocol daemons are typically used on routers to exchange network
@@ -16,7 +16,7 @@ rationale: |-
     the network.
 
     <p><strong>中文理由：</strong></p>
-    路由协议守护进程通常用于路由器，以与其他路由器交换网络拓扑信息。如果在不需要时使用路由守护进程，系统网络信息可能会不必要地通过网络传输。
+    <p>路由协议守护进程通常用于路由器，以与其他路由器交换网络拓扑信息。如果在不需要时使用路由守护进程，系统网络信息可能会不必要地通过网络传输。</p>
 
 severity: medium
 

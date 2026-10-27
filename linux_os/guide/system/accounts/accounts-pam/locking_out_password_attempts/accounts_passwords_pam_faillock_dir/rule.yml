@@ -21,7 +21,7 @@ description: |-
     <pre>dir = {{{ xccdf_value("var_accounts_passwords_pam_faillock_dir") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    此规则确保使用 <tt>pam_faillock.so</tt> 对系统的账户锁定在系统重启后保持。摘自 "pam_faillock" 手册页：
+    <p>此规则确保使用 <tt>pam_faillock.so</tt> 对系统的账户锁定在系统重启后保持。摘自 "pam_faillock" 手册页：</p>
     <pre>Note that the default directory that "pam_faillock" uses is usually cleared on system
     boot so the access will be re-enabled after system reboot. If that is undesirable, a different
     tally directory must be set with the "dir" option.</pre>
@@ -39,7 +39,7 @@ rationale: |-
     are also mitigated.
 
     <p><strong>中文理由：</strong></p>
-    在多次错误尝试后锁定用户账户可防止直接密码猜测攻击。结合 <tt>silent</tt> 选项，还可缓解用户枚举攻击。
+    <p>在多次错误尝试后锁定用户账户可防止直接密码猜测攻击。结合 <tt>silent</tt> 选项，还可缓解用户枚举攻击。</p>
 
 severity: medium
 

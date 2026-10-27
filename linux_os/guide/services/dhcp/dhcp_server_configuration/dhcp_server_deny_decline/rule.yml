@@ -9,7 +9,8 @@ description: |-
     messages, if possible: <pre>deny declines;</pre>
 
     <p><strong>中文说明：</strong></p>
-    如果可能，请编辑 <tt>/etc/dhcp/dhcpd.conf</tt> 并添加或更正以下全局选项，以防止 DHCP 服务器响应 DHCPDECLINE 消息：<pre>deny declines;</pre>
+    <p>如果可能，请编辑 <tt>/etc/dhcp/dhcpd.conf</tt> 并添加或更正以下全局选项，以防止 DHCP 服务器响应 DHCPDECLINE 消息：</p>
+    <pre>deny declines;</pre>
 
 rationale: |-
     The DHCPDECLINE message can be sent by a DHCP client to indicate
@@ -19,7 +20,7 @@ rationale: |-
     allocations.
 
     <p><strong>中文理由：</strong></p>
-    DHCP 客户端可发送 DHCPDECLINE 消息，以表示其认为服务器提供的租约无效。恶意客户端可通过发送大量 DHCPDECLINE 消息耗尽 DHCP 服务器的 IP 地址池，导致 DHCP 服务器忘记旧的地址分配。
+    <p>DHCP 客户端可发送 DHCPDECLINE 消息，以表示其认为服务器提供的租约无效。恶意客户端可通过发送大量 DHCPDECLINE 消息耗尽 DHCP 服务器的 IP 地址池，导致 DHCP 服务器忘记旧的地址分配。</p>
 
 severity: unknown
 

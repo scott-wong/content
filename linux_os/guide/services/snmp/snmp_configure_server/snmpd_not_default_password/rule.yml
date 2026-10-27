@@ -11,9 +11,9 @@ description: |-
     <pre>$ sudo systemctl restart snmpd</pre>
 
     <p><strong>中文说明：</strong></p>
-    编辑 <tt>/etc/snmp/snmpd.conf</tt>，删除或更改默认 community strings <tt>public</tt> 和 <tt>private</tt>。
+    <p>编辑 <tt>/etc/snmp/snmpd.conf</tt>，删除或更改默认 community strings <tt>public</tt> 和 <tt>private</tt>。
     此配置档将新的只读 community string 配置为 <tt>{{{ xccdf_value("var_snmpd_ro_string") }}}</tt>，并将读写 community string 配置为 <tt>{{{ sub_var_value("var_snmpd_rw_string") }}}</tt>。
-    更改默认 community strings 后，重启 SNMP 服务：
+    更改默认 community strings 后，重启 SNMP 服务：</p>
     <pre>$ sudo systemctl restart snmpd</pre>
 
 rationale: |-
@@ -24,7 +24,7 @@ rationale: |-
     network(s).
 
     <p><strong>中文理由：</strong></p>
-    无论是否处于活动状态，都必须更改默认的简单网络管理协议（SNMP）community strings 以维护安全。如果服务使用默认身份验证器运行，任何人都可以收集有关系统和网络的数据，并利用这些信息潜在地破坏系统和网络的完整性。
+    <p>无论是否处于活动状态，都必须更改默认的简单网络管理协议（SNMP）community strings 以维护安全。如果服务使用默认身份验证器运行，任何人都可以收集有关系统和网络的数据，并利用这些信息潜在地破坏系统和网络的完整性。</p>
 
 severity: high
 

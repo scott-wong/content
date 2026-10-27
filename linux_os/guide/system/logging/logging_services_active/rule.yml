@@ -10,7 +10,7 @@ description: |-
     The command should return at least one <tt>active</tt>.
 
     <p><strong>中文说明：</strong></p>
-    确保某个日志系统处于活动状态且正在使用。
+    <p>确保某个日志系统处于活动状态且正在使用。</p>
     <pre>
     systemctl is-active rsyslog syslog-ng systemd-journald
     </pre>
@@ -21,7 +21,7 @@ rationale: |-
     and ensure consistency.
 
     <p><strong>中文理由：</strong></p>
-    系统应有一个活动日志服务，以避免冲突并确保一致性。
+    <p>系统应有一个活动日志服务，以避免冲突并确保一致性。</p>
 
 severity: medium
 

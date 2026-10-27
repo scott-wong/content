@@ -13,16 +13,16 @@ description: |-
     {{{ describe_kernel_build_config("CONFIG_STACKPROTECTOR_STRONG", "y") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    此功能为比 CONFIG_STACKPROTECTOR 更多类型的易受攻击函数添加 canary 逻辑保护，但不会保护所有函数，以免严重影响性能。此配置从 Linux 4.18 起可用。此配置要求 GCC 4.9 或更高版本，或使用回移植了该功能的发行版 GCC（-fstack-protector-strong）。
+    <p>此功能为比 CONFIG_STACKPROTECTOR 更多类型的易受攻击函数添加 canary 逻辑保护，但不会保护所有函数，以免严重影响性能。此配置从 Linux 4.18 起可用。此配置要求 GCC 4.9 或更高版本，或使用回移植了该功能的发行版 GCC（-fstack-protector-strong）。
 
-    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_STACKPROTECTOR_STRONG</tt> 的配置值，请运行 <tt>grep CONFIG_STACKPROTECTOR_STRONG /boot/config-*</tt>。对于每个已安装的内核，应返回值为 <tt>y</tt> 的行。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_STACKPROTECTOR_STRONG</tt> 的配置值，请运行 <tt>grep CONFIG_STACKPROTECTOR_STRONG /boot/config-*</tt>。对于每个已安装的内核，应返回值为 <tt>y</tt> 的行。</p>
 
 rationale: |-
     This provides a mechanism that protects more vulnerable functions than CONFIG_STACKPROTECTOR,
     balancing between security and performance.
 
     <p><strong>中文理由：</strong></p>
-    这提供了比 CONFIG_STACKPROTECTOR 保护更多易受攻击函数的机制，并在安全与性能之间取得平衡。
+    <p>这提供了比 CONFIG_STACKPROTECTOR 保护更多易受攻击函数的机制，并在安全与性能之间取得平衡。</p>
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

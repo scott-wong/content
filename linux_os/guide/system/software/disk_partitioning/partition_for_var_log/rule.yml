@@ -7,7 +7,7 @@ description: |-
     {{{ partition_description(part="/var/log") }}}
 
     <p><strong>中文说明：</strong></p>
-    系统日志存储在 <tt>/var/log</tt> 目录中。确保在安装时为 <tt>/var/log</tt> 配置独立分区或逻辑卷，或使用 LVM 迁移。
+    <p>系统日志存储在 <tt>/var/log</tt> 目录中。确保在安装时为 <tt>/var/log</tt> 配置独立分区或逻辑卷，或使用 LVM 迁移。</p>
 
 rationale: |-
     Placing <tt>/var/log</tt> in its own partition
@@ -15,7 +15,7 @@ rationale: |-
     and other files in <tt>/var/</tt>.
 
     <p><strong>中文理由：</strong></p>
-    将 <tt>/var/log</tt> 放在独立分区上，可以更好地将日志文件与 <tt>/var/</tt> 中的其他文件隔离。
+    <p>将 <tt>/var/log</tt> 放在独立分区上，可以更好地将日志文件与 <tt>/var/</tt> 中的其他文件隔离。</p>
 
 severity: low
 

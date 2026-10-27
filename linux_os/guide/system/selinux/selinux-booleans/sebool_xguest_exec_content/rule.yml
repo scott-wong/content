@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="xguest_exec_content") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>xguest_exec_content</tt> 为 enabled。应禁用此设置，因为访客用户不应能够运行可执行文件。要禁用 <tt>xguest_exec_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xguest_exec_content off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>xguest_exec_content</tt> 为 enabled。应禁用此设置，因为访客用户不应能够运行可执行文件。要禁用 <tt>xguest_exec_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xguest_exec_content off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    访客用户不应能够运行可执行文件；禁用此布尔值可降低访客会话的代码执行风险。
+    <p>访客用户不应能够运行可执行文件；禁用此布尔值可降低访客会话的代码执行风险。</p>
 
 severity: medium
 

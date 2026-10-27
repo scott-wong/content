@@ -10,7 +10,7 @@ description: |-
     their approved subjects hold update access to CDI resources.
 
     <p><strong>中文说明：</strong></p>
-    由于授权主体集合因组织而异，此规则需要手动验证。组织可以创建使用 CEL 表达式的 compliance-operator CustomRule，通过评估 ClusterRoleBinding 和 Role，验证仅其批准的主体拥有对 CDI 资源的 update 访问权限。
+    <p>由于授权主体集合因组织而异，此规则需要手动验证。组织可以创建使用 CEL 表达式的 compliance-operator CustomRule，通过评估 ClusterRoleBinding 和 Role，验证仅其批准的主体拥有对 CDI 资源的 update 访问权限。</p>
 
 rationale: |-
     The CDI custom resource governs the data import pipeline for
@@ -23,7 +23,7 @@ rationale: |-
     administrators can alter CDI configuration.
 
     <p><strong>中文理由：</strong></p>
-    CDI 自定义资源管理 OpenShift Virtualization 中虚拟机磁盘镜像的数据导入流水线。修改此资源会改变上传代理设置、暂存空间分配和镜像导入行为。如果未授权主体能够更新 CDI CR，他们可能引入不安全的导入源、削弱传输安全或中断磁盘镜像供应工作流。限制 update 访问可确保只有经批准的管理员才能更改 CDI 配置。
+    <p>CDI 自定义资源管理 OpenShift Virtualization 中虚拟机磁盘镜像的数据导入流水线。修改此资源会改变上传代理设置、暂存空间分配和镜像导入行为。如果未授权主体能够更新 CDI CR，他们可能引入不安全的导入源、削弱传输安全或中断磁盘镜像供应工作流。限制 update 访问可确保只有经批准的管理员才能更改 CDI 配置。</p>
 
 severity: medium
 

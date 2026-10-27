@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv4.ip_local_port_range", value="32768 65535") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>net.ipv4.ip_local_port_range</tt> 设置为 <tt>32768 65535</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.ip_local_port_range=32768 65535</tt>；要持久化，请将 <tt>net.ipv4.ip_local_port_range = 32768 65535</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>net.ipv4.ip_local_port_range</tt> 设置为 <tt>32768 65535</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.ip_local_port_range=32768 65535</tt>；要持久化，请将 <tt>net.ipv4.ip_local_port_range = 32768 65535</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     This setting defines the local port range that is used by TCP and UDP to
@@ -15,7 +15,7 @@ rationale: |-
     local port number.
 
     <p><strong>中文理由：</strong></p>
-    此设置定义 TCP 和 UDP 用于选择本地端口的本地端口范围。第一个数字是起始本地端口号，第二个数字是结束本地端口号。
+    <p>此设置定义 TCP 和 UDP 用于选择本地端口的本地端口范围。第一个数字是起始本地端口号，第二个数字是结束本地端口号。</p>
 
 severity: medium
 

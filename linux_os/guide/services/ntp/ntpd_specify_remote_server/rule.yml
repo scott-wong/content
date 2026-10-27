@@ -12,7 +12,7 @@ description: |-
     data.
 
     <p><strong>中文说明：</strong></p>
-    要指定用于时间同步的远程 NTP 服务器，请编辑 <tt>/etc/ntp.conf</tt> 文件。添加或更正以下行，并将 <em>ntpserver</em> 替换为远程 NTP 服务器的 IP 地址或主机名：
+    <p>要指定用于时间同步的远程 NTP 服务器，请编辑 <tt>/etc/ntp.conf</tt> 文件。添加或更正以下行，并将 <em>ntpserver</em> 替换为远程 NTP 服务器的 IP 地址或主机名：</p>
     <pre>server <i>ntpserver</i></pre>
     这会指示 NTP 软件联系该远程服务器以获取时间数据。
 
@@ -22,7 +22,7 @@ rationale: |-
     real time events.
 
     <p><strong>中文理由：</strong></p>
-    与 NTP 服务器同步后，可以整合来自多个来源的系统日志，或将计算机事件与实时事件关联。
+    <p>与 NTP 服务器同步后，可以整合来自多个来源的系统日志，或将计算机事件与实时事件关联。</p>
 
 severity: medium
 

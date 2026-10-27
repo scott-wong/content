@@ -9,7 +9,7 @@ description: |-
     after pam_pwquality to set minimum password length requirements.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_pwquality</tt> 模块的 <tt>minlen</tt> 参数控制密码所需的最小字符数。在 pam_pwquality 之后添加 <tt>minlen={{{ xccdf_value("var_password_pam_minlen") }}}</tt>，以设置最小密码长度要求。
+    <p><tt>pam_pwquality</tt> 模块的 <tt>minlen</tt> 参数控制密码所需的最小字符数。在 pam_pwquality 之后添加 <tt>minlen={{{ xccdf_value("var_password_pam_minlen") }}}</tt>，以设置最小密码长度要求。</p>
 
 rationale: |-
     The shorter the password, the lower the number of possible combinations
@@ -23,7 +23,7 @@ rationale: |-
     compromise the password.
 
     <p><strong>中文理由：</strong></p>
-    密码越短，破解前需要测试的可能组合就越少。<br />密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。密码长度是决定密码强度及破解时间的多个因素之一。密码中使用更多字符有助于以指数方式增加破解密码所需的时间和/或资源。
+    <p>密码越短，破解前需要测试的可能组合就越少。<br />密码复杂性（或强度）衡量密码抵御猜测和暴力破解攻击的有效性。密码长度是决定密码强度及破解时间的多个因素之一。密码中使用更多字符有助于以指数方式增加破解密码所需的时间和/或资源。</p>
 
 severity: medium
 

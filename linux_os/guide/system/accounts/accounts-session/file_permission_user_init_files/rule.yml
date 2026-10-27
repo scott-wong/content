@@ -9,7 +9,7 @@ description: |-
     <pre>$ sudo chmod u-s,g-wxs,o= /home/<i>USER</i>/.<i>INIT_FILE</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令将用户初始化文件的模式设置为 <tt>0740</tt> 或更严格：
+    <p>使用以下命令将用户初始化文件的模式设置为 <tt>0740</tt> 或更严格：</p>
     <pre>$ sudo chmod u-s,g-wxs,o= /home/<i>USER</i>/.<i>INIT_FILE</i></pre>
 
 rationale: |-
@@ -18,7 +18,7 @@ rationale: |-
     logon.
 
     <p><strong>中文理由：</strong></p>
-    本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时使账户失陷。
+    <p>本地初始化文件用于在登录时配置用户的 shell 环境。恶意修改这些文件可能在登录时使账户失陷。</p>
 
 severity: medium
 

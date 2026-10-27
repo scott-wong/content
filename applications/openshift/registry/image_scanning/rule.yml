@@ -7,7 +7,7 @@ description: |-
   Scan images being deployed to Amazon EKS for vulnerabilities.
 
   <p><strong>中文说明：</strong></p>
-  扫描部署到 Amazon EKS 的镜像以发现漏洞。
+  <p>扫描部署到 Amazon EKS 的镜像以发现漏洞。</p>
 
 rationale: |-
   Vulnerabilities in software packages can be exploited by hackers or malicious
@@ -16,7 +16,7 @@ rationale: |-
   vulnerabilities.
 
   <p><strong>中文理由：</strong></p>
-  软件包中的漏洞可能被黑客或恶意用户利用，以获取对本地云资源的未授权访问。Amazon ECR 和其他第三方产品允许扫描镜像中的已知漏洞。
+  <p>软件包中的漏洞可能被黑客或恶意用户利用，以获取对本地云资源的未授权访问。Amazon ECR 和其他第三方产品允许扫描镜像中的已知漏洞。</p>
 
 severity: unknown
 

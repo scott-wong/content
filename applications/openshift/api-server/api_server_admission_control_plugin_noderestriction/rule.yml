@@ -18,7 +18,7 @@ description: |-
     <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '.data."config.yaml"' | jq '.apiServerArguments."enable-admission-plugins"'</pre>
 
     <p><strong>中文说明：</strong></p>
-    要限制 kubelet 可以修改的 <tt>Node</tt> 和 <tt>Pod</tt> 对象，请运行以下命令，确保 api-server 配置中启用了针对 kubelet 的 <tt>NodeRestriction</tt> 插件：
+    <p>要限制 kubelet 可以修改的 <tt>Node</tt> 和 <tt>Pod</tt> 对象，请运行以下命令，确保 api-server 配置中启用了针对 kubelet 的 <tt>NodeRestriction</tt> 插件：</p>
     <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '.data."config.yaml"' | jq '.apiServerArguments."enable-admission-plugins"'</pre>
 
 rationale: |-
@@ -29,7 +29,7 @@ rationale: |-
     that are bound to their node.
 
     <p><strong>中文理由：</strong></p>
-    使用 <tt>NodeRestriction</tt> 插件可确保 kubelet 仅能修改规定允许其修改的 <tt>Node</tt> 和 <tt>Pod</tt> 对象。此类 kubelet 仅允许修改其自身的 <tt>Node</tt> API 对象，并且只能修改绑定到其所在节点的 <tt>Pod</tt> API 对象。
+    <p>使用 <tt>NodeRestriction</tt> 插件可确保 kubelet 仅能修改规定允许其修改的 <tt>Node</tt> 和 <tt>Pod</tt> 对象。此类 kubelet 仅允许修改其自身的 <tt>Node</tt> API 对象，并且只能修改绑定到其所在节点的 <tt>Pod</tt> API 对象。</p>
 
 identifiers:
   cce@ocp4: CCE-83753-4

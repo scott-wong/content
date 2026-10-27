@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="varnishd_connect_any") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>varnishd_connect_any</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>varnishd_connect_any</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P varnishd_connect_any off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>varnishd_connect_any</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>varnishd_connect_any</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P varnishd_connect_any off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 varnishd 发起任意网络连接会扩大缓存服务的网络访问范围。
+    <p>允许 varnishd 发起任意网络连接会扩大缓存服务的网络访问范围。</p>
 
 severity: medium
 

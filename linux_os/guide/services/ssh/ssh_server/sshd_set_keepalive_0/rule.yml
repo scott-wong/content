@@ -18,16 +18,16 @@ description: |-
     {{{ sshd_config_file() }}}
 
     <p><strong>中文说明：</strong></p>
-    SSH 服务器在 SSH 会话期间最多发送 <tt>ClientAliveCountMax</tt> 条消息，并等待 SSH 客户端响应。<tt>ClientAliveInterval</tt> 选项配置每条 <tt>ClientAliveCountMax</tt> 消息后的超时。如果 SSH 服务器未收到客户端响应，则认为连接无响应并终止连接。
+    <p>SSH 服务器在 SSH 会话期间最多发送 <tt>ClientAliveCountMax</tt> 条消息，并等待 SSH 客户端响应。<tt>ClientAliveInterval</tt> 选项配置每条 <tt>ClientAliveCountMax</tt> 消息后的超时。如果 SSH 服务器未收到客户端响应，则认为连接无响应并终止连接。
 
-    要确保 SSH 超时在设置 <tt>ClientAliveInterval</tt> 时准确发生，请在 {{{ sshd_config_file() }}} 中将 <tt>ClientAliveCountMax</tt> 设置为 <tt>0</tt>。
+    要确保 SSH 超时在设置 <tt>ClientAliveInterval</tt> 时准确发生，请在 {{{ sshd_config_file() }}} 中将 <tt>ClientAliveCountMax</tt> 设置为 <tt>0</tt>。</p>
 
 rationale: |-
     This ensures a user login will be terminated as soon as the <tt>ClientAliveInterval</tt>
     is reached.
 
     <p><strong>中文理由：</strong></p>
-    这可确保一旦达到 <tt>ClientAliveInterval</tt>，用户登录就会被终止。
+    <p>这可确保一旦达到 <tt>ClientAliveInterval</tt>，用户登录就会被终止。</p>
 
 severity: medium
 

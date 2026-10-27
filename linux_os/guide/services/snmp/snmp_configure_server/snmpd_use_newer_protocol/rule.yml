@@ -9,7 +9,7 @@ description: |-
     <pre>$ sudo systemctl restart snmpd</pre>
 
     <p><strong>中文说明：</strong></p>
-    编辑 <tt>/etc/snmp/snmpd.conf</tt>，删除对 <tt>rocommunity</tt>、<tt>rwcommunity</tt> 或 <tt>com2sec</tt> 的所有引用。完成此操作后，重启 SNMP 服务：
+    <p>编辑 <tt>/etc/snmp/snmpd.conf</tt>，删除对 <tt>rocommunity</tt>、<tt>rwcommunity</tt> 或 <tt>com2sec</tt> 的所有引用。完成此操作后，重启 SNMP 服务：</p>
     <pre>$ sudo systemctl restart snmpd</pre>
 
 rationale: |-
@@ -17,7 +17,7 @@ rationale: |-
     unauthorized access to detailed system management information.
 
     <p><strong>中文理由：</strong></p>
-    早期版本的 SNMP 被认为不安全，因为它们可能允许未经授权访问详细的系统管理信息。
+    <p>早期版本的 SNMP 被认为不安全，因为它们可能允许未经授权访问详细的系统管理信息。</p>
 
 severity: medium
 

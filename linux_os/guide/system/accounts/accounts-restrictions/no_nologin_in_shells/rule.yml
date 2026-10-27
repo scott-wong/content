@@ -10,17 +10,17 @@ description: |-
     The command should return no output.
 
     <p><strong>中文说明：</strong></p>
-    <tt>/sbin/nologin</tt> shell 用于限制账户的登录访问，不应在 <tt>/etc/shells</tt> 中列为有效登录 shell。要验证 nologin 未列在 /etc/shells 中，请运行：
+    <p><tt>/sbin/nologin</tt> shell 用于限制账户的登录访问，不应在 <tt>/etc/shells</tt> 中列为有效登录 shell。要验证 nologin 未列在 /etc/shells 中，请运行：</p>
     <pre>$ grep nologin /etc/shells</pre>
     该命令不应返回任何输出。
 
 rationale: |-
     The <tt>/etc/shells</tt> is consulted by various programs to evaluate
     whether the user is somehow restricted. For example, the chsh utility will
-    consult the file to determine if the user is allowed to change their shell. 
+    consult the file to determine if the user is allowed to change their shell.
 
     <p><strong>中文理由：</strong></p>
-    各种程序会查询 <tt>/etc/shells</tt>，以判断用户是否在某种程度上受到限制。例如，chsh 实用程序会查询该文件，以确定是否允许用户更改其 shell。
+    <p>各种程序会查询 <tt>/etc/shells</tt>，以判断用户是否在某种程度上受到限制。例如，chsh 实用程序会查询该文件，以确定是否允许用户更改其 shell。</p>
 
 severity: medium
 

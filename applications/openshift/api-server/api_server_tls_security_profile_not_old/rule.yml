@@ -21,10 +21,11 @@ description: |-
                 text="the relevant documentation") }}}.
 
     <p><strong>中文说明：</strong></p>
-    <tt>tlsSecurityProfile</tt> 配置指定在建立与外部暴露服务器的连接时使用的 TLS 配置。尽管建立连接时使用安全传输模式，但所用协议未必始终足够强，无法避免传输中的数据被截获和操纵。应避免使用 TLS Security 的 Old 配置档，因为它支持易受攻击的协议、密码套件和算法，可能导致安全泄露。
+    <p><tt>tlsSecurityProfile</tt> 配置指定在建立与外部暴露服务器的连接时使用的 TLS 配置。尽管建立连接时使用安全传输模式，但所用协议未必始终足够强，无法避免传输中的数据被截获和操纵。应避免使用 TLS Security 的 Old 配置档，因为它支持易受攻击的协议、密码套件和算法，可能导致安全泄露。
 
     使用以下命令将 tlsSecurityProfile 从 Old 更新为 Intermediate：
-    {{% raw %}}<pre>oc patch apiservers.config.openshift.io cluster --type 'json' --patch '[{"op": "add", "path": "/spec/tlsSecurityProfile/intermediate", "value": {}}, {"op": "replace", "path": "/spec/tlsSecurityProfile/type", "value": "Intermediate"}, {"op": "remove", "path": "/spec/tlsSecurityProfile/old"}]'</pre>{{% endraw %}}
+    {{% raw %}}</p>
+    <pre>oc patch apiservers.config.openshift.io cluster --type 'json' --patch '[{"op": "add", "path": "/spec/tlsSecurityProfile/intermediate", "value": {}}, {"op": "replace", "path": "/spec/tlsSecurityProfile/type", "value": "Intermediate"}, {"op": "remove", "path": "/spec/tlsSecurityProfile/old"}]'</pre>{{% endraw %}}
 
     有关更多信息，请遵循
     OpenShift 文档：
@@ -38,7 +39,7 @@ rationale: |-
     transmission secure protocol, cipher and algorithms must be used.
 
     <p><strong>中文理由：</strong></p>
-    容器平台以及节点和组件之间通信的真实性和完整性必须得到保障。如果在数据传输过程中使用不安全的协议、密码套件或算法，数据可能被截获和操纵。为防止传输期间数据被操纵，必须使用安全的协议、密码套件和算法。
+    <p>容器平台以及节点和组件之间通信的真实性和完整性必须得到保障。如果在数据传输过程中使用不安全的协议、密码套件或算法，数据可能被截获和操纵。为防止传输期间数据被操纵，必须使用安全的协议、密码套件和算法。</p>
 
 severity: medium
 

@@ -13,9 +13,9 @@ description: |-
     <pre>$ sudo usermod -L <i>account</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    有些账户不与系统的人类用户关联，而是用于执行某些管理功能。攻击者不应能够登录这些账户。
+    <p>有些账户不与系统的人类用户关联，而是用于执行某些管理功能。攻击者不应能够登录这些账户。
     <br/><br/>
-    系统账户是指用户 ID 小于 <tt>{{{ uid_min }}}</tt> 的用户账户。如果除 <tt>root</tt>、<tt>halt</tt>、<tt>sync</tt>、<tt>shutdown</tt> 和 <tt>nfsnobody</tt> 之外的任何系统账户具有未锁定密码，请使用以下命令将其禁用：
+    系统账户是指用户 ID 小于 <tt>{{{ uid_min }}}</tt> 的用户账户。如果除 <tt>root</tt>、<tt>halt</tt>、<tt>sync</tt>、<tt>shutdown</tt> 和 <tt>nfsnobody</tt> 之外的任何系统账户具有未锁定密码，请使用以下命令将其禁用：</p>
     <pre>$ sudo usermod -L <i>account</i></pre>
 
 rationale: |-
@@ -23,7 +23,7 @@ rationale: |-
     to make use of them to compromise a system.
 
     <p><strong>中文理由：</strong></p>
-    禁用默认系统账户的身份验证，可使攻击者更难利用这些账户攻陷系统。
+    <p>禁用默认系统账户的身份验证，可使攻击者更难利用这些账户攻陷系统。</p>
 
 severity: medium
 

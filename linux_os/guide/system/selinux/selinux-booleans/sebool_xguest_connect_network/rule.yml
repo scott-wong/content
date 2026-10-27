@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="xguest_connect_network") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>xguest_connect_network</tt> 为 enabled。应禁用此设置，因为访客用户不应能够配置 <tt>NetworkManager</tt>。要禁用 <tt>xguest_connect_network</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xguest_connect_network off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>xguest_connect_network</tt> 为 enabled。应禁用此设置，因为访客用户不应能够配置 <tt>NetworkManager</tt>。要禁用 <tt>xguest_connect_network</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xguest_connect_network off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    访客用户不应能够配置 NetworkManager；禁用此布尔值可防止未经授权的网络配置。
+    <p>访客用户不应能够配置 NetworkManager；禁用此布尔值可防止未经授权的网络配置。</p>
 
 severity: medium
 

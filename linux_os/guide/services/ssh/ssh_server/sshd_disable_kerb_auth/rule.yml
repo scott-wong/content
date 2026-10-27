@@ -14,11 +14,11 @@ description: |-
     <pre>KerberosAuthentication no</pre>
 
     <p><strong>中文说明：</strong></p>
-    除非需要，SSH 不应允许 Kerberos 等额外或不必要的身份验证机制。
+    <p>除非需要，SSH 不应允许 Kerberos 等额外或不必要的身份验证机制。
     <br/>
     默认 SSH 配置禁止通过 Kerberos 进行身份验证。如果未设置 <tt>KerberosAuthentication</tt>，则使用适当配置。
     <br/>
-    要显式禁用 Kerberos 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    要显式禁用 Kerberos 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：</p>
     <pre>KerberosAuthentication no</pre>
 
 rationale: |-
@@ -28,7 +28,7 @@ rationale: |-
     Configuring these settings for the SSH daemon provides additional assurance that remote logon via SSH will not use unused methods of authentication, even in the event of misconfiguration elsewhere.
 
     <p><strong>中文理由：</strong></p>
-    SSH 的 Kerberos 身份验证通常使用 GSSAPI 实现。如果通过 SSH 启用 Kerberos，SSH 守护进程会提供访问系统 Kerberos 实现的方式。为 SSH 守护进程配置这些设置可提供额外保证：即使其他位置存在错误配置，通过 SSH 的远程登录也不会使用未使用的身份验证方法。
+    <p>SSH 的 Kerberos 身份验证通常使用 GSSAPI 实现。如果通过 SSH 启用 Kerberos，SSH 守护进程会提供访问系统 Kerberos 实现的方式。为 SSH 守护进程配置这些设置可提供额外保证：即使其他位置存在错误配置，通过 SSH 的远程登录也不会使用未使用的身份验证方法。</p>
 
 severity: medium
 

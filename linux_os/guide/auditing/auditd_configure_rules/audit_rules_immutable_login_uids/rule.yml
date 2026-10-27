@@ -20,8 +20,8 @@ description: |-
     <pre>--loginuid-immutable</pre>
 
     <p><strong>中文说明：</strong></p>
-    配置内核，使登录 UID 一经设置便不可修改。在此配置生效时更改登录 UID 需要特殊能力，未授权用户不具备这些能力。
-    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以使登录 UID 不可变：
+    <p>配置内核，使登录 UID 一经设置便不可修改。在此配置生效时更改登录 UID 需要特殊能力，未授权用户不具备这些能力。
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以使登录 UID 不可变：</p>
     <pre>--loginuid-immutable</pre>
     如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，以使登录 UID 不可变：
     <pre>--loginuid-immutable</pre>
@@ -31,7 +31,7 @@ rationale: |-
     make auditing complicated or impossible.
 
     <p><strong>中文理由：</strong></p>
-    如果未阻止修改登录 UID，非特权用户可以更改它们，从而使审计复杂化或无法进行。
+    <p>如果未阻止修改登录 UID，非特权用户可以更改它们，从而使审计复杂化或无法进行。</p>
 
 severity: medium
 

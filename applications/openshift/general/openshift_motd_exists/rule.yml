@@ -50,10 +50,9 @@ description: |-
   <tt>I've read &amp; consent to terms in IS user agreement.</tt>
 
   <p><strong>中文说明：</strong></p>
-  要配置 OpenShift 的 MOTD，请在 <tt>openshift</tt> 命名空间中创建一个名为 <tt>motd</tt> 的 <b>ConfigMap</b>。
+  <p>要配置 OpenShift 的 MOTD，请在 <tt>openshift</tt> 命名空间中创建一个名为 <tt>motd</tt> 的 <b>ConfigMap</b>。
 
-  该对象应如下所示：
-
+  该对象应如下所示：</p>
   <pre>
   ---
   apiVersion: v1
@@ -105,9 +104,9 @@ rationale: |-
   exist.
 
   <p><strong>中文理由：</strong></p>
-  在授予系统访问权限前显示标准化且经批准的使用通知，可确保所使用的隐私和安全通知措辞符合适用的联邦法律、行政命令、指令、策略、法规、标准和指南。
+  <p>在授予系统访问权限前显示标准化且经批准的使用通知，可确保所使用的隐私和安全通知措辞符合适用的联邦法律、行政命令、指令、策略、法规、标准和指南。
   <br /><br />
-  系统使用通知仅在通过面向人类用户的登录界面进行访问时需要；不存在此类人机界面时则不需要。
+  系统使用通知仅在通过面向人类用户的登录界面进行访问时需要；不存在此类人机界面时则不需要。</p>
 
 identifiers:
   cce@ocp4: CCE-84200-5

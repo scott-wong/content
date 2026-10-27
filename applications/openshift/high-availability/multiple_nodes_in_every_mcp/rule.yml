@@ -10,7 +10,7 @@ description: |-
     use cases to create additional MachineConfigPools for further isolation.
 
     <p><strong>中文说明：</strong></p>
-    为确保工作负载能够以高可用方式部署，每个节点 MachineConfigPool 应包含多个节点。这样，工作负载可以调度到多个节点，并且在一个 MachineConfigPool 中的某个节点不可用时仍保持可用。可存在不同的 MachineConfigPool，用于隔离控制平面、基础设施和应用工作负载。也可以存在其他用例，需要创建更多 MachineConfigPool 以实现进一步的隔离。
+    <p>为确保工作负载能够以高可用方式部署，每个节点 MachineConfigPool 应包含多个节点。这样，工作负载可以调度到多个节点，并且在一个 MachineConfigPool 中的某个节点不可用时仍保持可用。可存在不同的 MachineConfigPool，用于隔离控制平面、基础设施和应用工作负载。也可以存在其他用例，需要创建更多 MachineConfigPool 以实现进一步的隔离。</p>
 
 rationale: |-
     To ensure, that workloads are able to be provisioned highly available, every MachineConfigPool should
@@ -18,7 +18,7 @@ rationale: |-
     stay available in case one node of a MachineConfigPool is unavailable.
 
     <p><strong>中文理由：</strong></p>
-    为确保工作负载能够以高可用方式部署，每个 MachineConfigPool 应包含多个节点。这样，工作负载可以调度到多个节点，并且在一个 MachineConfigPool 中的某个节点不可用时仍保持可用。
+    <p>为确保工作负载能够以高可用方式部署，每个 MachineConfigPool 应包含多个节点。这样，工作负载可以调度到多个节点，并且在一个 MachineConfigPool 中的某个节点不可用时仍保持可用。</p>
 
 {{% set jqfilter = '[.items[] | select(.status.machineCount == 1 or .status.machineCount == 0) | .metadata.name]' %}}
 

@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.sysrq", value="0") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>kernel.sysrq</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.sysrq=0</tt>；要持久化，请将 <tt>kernel.sysrq = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>kernel.sysrq</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.sysrq=0</tt>；要持久化，请将 <tt>kernel.sysrq = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     The Magic SysRq key allows sending certain commands directly to the running
@@ -16,7 +16,7 @@ rationale: |-
     disturbing its availability.
 
     <p><strong>中文理由：</strong></p>
-    Magic SysRq 键允许向正在运行的内核直接发送某些命令。它可以转储各种系统和进程信息，可能泄露敏感信息，还可以重启或关闭机器，影响其可用性。
+    <p>Magic SysRq 键允许向正在运行的内核直接发送某些命令。它可以转储各种系统和进程信息，可能泄露敏感信息，还可以重启或关闭机器，影响其可用性。</p>
 
 severity: medium
 

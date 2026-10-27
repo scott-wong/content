@@ -13,7 +13,7 @@ description: |-
     <pre>umask <i>{{{ xccdf_value("var_umask_for_daemons") }}}</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/init.d/functions</tt> 包含启动时启动的大多数或所有守护进程的初始化参数。系统上的许多守护进程已在自己的初始化脚本中将 umask 单独限制为 <tt>077</tt>。默认情况下，umask 设置为 <tt>022</tt>，以防止创建组或其他用户可写的文件。要设置配置档期望的守护进程 umask，请编辑以下行：
+    <p>文件 <tt>/etc/init.d/functions</tt> 包含启动时启动的大多数或所有守护进程的初始化参数。系统上的许多守护进程已在自己的初始化脚本中将 umask 单独限制为 <tt>077</tt>。默认情况下，umask 设置为 <tt>022</tt>，以防止创建组或其他用户可写的文件。要设置配置档期望的守护进程 umask，请编辑以下行：</p>
     <pre>umask <i>{{{ xccdf_value("var_umask_for_daemons") }}}</i></pre>
 
 rationale: |-
@@ -22,7 +22,7 @@ rationale: |-
     being created with insecure permissions.
 
     <p><strong>中文理由：</strong></p>
-    umask 会影响进程在运行时创建的文件权限。不必要的宽松 umask 可能导致创建具有不安全权限的文件。
+    <p>umask 会影响进程在运行时创建的文件权限。不必要的宽松 umask 可能导致创建具有不安全权限的文件。</p>
 
 severity: unknown
 

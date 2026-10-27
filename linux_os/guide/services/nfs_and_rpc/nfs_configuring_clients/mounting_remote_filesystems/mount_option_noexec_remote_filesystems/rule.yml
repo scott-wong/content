@@ -7,7 +7,7 @@ description: |-
     {{{ describe_mount(option="noexec", part="any NFS mounts") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保所有 NFS 挂载均使用 <tt>noexec</tt> 选项。
+    <p>确保所有 NFS 挂载均使用 <tt>noexec</tt> 选项。</p>
 
 rationale: |-
     The noexec mount option causes the system not to execute binary files. This option must be used
@@ -16,7 +16,7 @@ rationale: |-
     administrative access.
 
     <p><strong>中文理由：</strong></p>
-    <tt>noexec</tt> 挂载选项使系统不执行二进制文件。对于不包含已批准二进制文件的任何文件系统，必须使用此选项，因为它们可能不兼容。从不信任的文件系统执行文件会增加未授权用户获得管理访问权限的机会。
+    <p><tt>noexec</tt> 挂载选项使系统不执行二进制文件。对于不包含已批准二进制文件的任何文件系统，必须使用此选项，因为它们可能不兼容。从不信任的文件系统执行文件会增加未授权用户获得管理访问权限的机会。</p>
 
 severity: medium
 

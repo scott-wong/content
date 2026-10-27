@@ -12,14 +12,14 @@ description: |-
     a digit in passwords.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_cracklib</tt> 模块的 <tt>dcredit</tt> 参数控制密码中数字的使用要求。设置为负数时，任何密码都必须包含该数量的数字。设置为正数时，pam_cracklib 会为每个数字提供 +1 的额外长度额度。在 pam_cracklib.so 之后添加 <tt>dcredit=-1</tt>，以要求密码使用数字。
+    <p><tt>pam_cracklib</tt> 模块的 <tt>dcredit</tt> 参数控制密码中数字的使用要求。设置为负数时，任何密码都必须包含该数量的数字。设置为正数时，pam_cracklib 会为每个数字提供 +1 的额外长度额度。在 pam_cracklib.so 之后添加 <tt>dcredit=-1</tt>，以要求密码使用数字。</p>
 
 rationale: |-
     Requiring digits makes password guessing attacks more difficult by ensuring
     a larger search space.
 
     <p><strong>中文理由：</strong></p>
-    要求使用数字可扩大搜索空间，从而使密码猜测攻击更加困难。
+    <p>要求使用数字可扩大搜索空间，从而使密码猜测攻击更加困难。</p>
 
 severity: medium
 

@@ -13,11 +13,11 @@ description: |-
     <pre>PrintLastLog yes</pre>
 
     <p><strong>中文说明：</strong></p>
-    确保 SSH 显示最后一次成功账户登录的日期和时间。
+    <p>确保 SSH 显示最后一次成功账户登录的日期和时间。
     <br/>
     默认 SSH 配置启用最后一次登录日期和时间的显示。如果未设置 <tt>PrintLastLog</tt>，则使用相应默认配置。
     <br/>
-    要在 SSH 中显式启用 LastLog，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    要在 SSH 中显式启用 LastLog，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：</p>
     <pre>PrintLastLog yes</pre>
 
 rationale: |-
@@ -25,7 +25,7 @@ rationale: |-
     recognition and reporting of unauthorized account use.
 
     <p><strong>中文理由：</strong></p>
-    向用户提供上次账户访问时间的反馈，有助于用户识别并报告未授权的账户使用。
+    <p>向用户提供上次账户访问时间的反馈，有助于用户识别并报告未授权的账户使用。</p>
 
 severity: medium
 

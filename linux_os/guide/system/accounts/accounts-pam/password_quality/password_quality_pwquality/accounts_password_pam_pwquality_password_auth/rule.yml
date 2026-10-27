@@ -15,19 +15,19 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    要在 password-auth 文件中启用 PAM 密码复杂性：
+    <p>要在 password-auth 文件中启用 PAM 密码复杂性：
     编辑 <tt>/etc/pam.d/password-auth</tt> 中的 <tt>password</tt> 部分，使其显示
     <tt>password    requisite                                    pam_pwquality.so</tt>。
     {{% if product in ["fedora", "rhel10"] %}}
     应使用 <tt>authselect</tt> 工具启用 <tt>pam_pwquality</tt> 模块。默认情况下，<tt>authselect</tt> 始终将 <tt>pam_pwquality local_users_only</tt> 配置为 <tt>local</tt>、<tt>sssd</tt> 和 <tt>winbind</tt> 配置档的一部分。无需启用其他 authselect 功能。
-    {{% endif %}}
+    {{% endif %}}</p>
 
 rationale: |-
     Enabling PAM password complexity permits to enforce strong passwords and consequently
     makes the system less prone to dictionary attacks.
 
     <p><strong>中文理由：</strong></p>
-    启用 PAM 密码复杂性可强制执行强密码，从而使系统更不易受到词典攻击。
+    <p>启用 PAM 密码复杂性可强制执行强密码，从而使系统更不易受到词典攻击。</p>
 
 severity: medium
 

@@ -25,7 +25,7 @@ description: |-
     -w /etc/security/opasswd -p wa -k audit_rules_usergroup_modification</pre>
 
     <p><strong>中文说明：</strong></p>
-    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以捕获修改账户的事件：
+    <p>如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，以捕获修改账户的事件：</p>
     <pre>-w /etc/group -p wa -k audit_rules_usergroup_modification
     -w /etc/passwd -p wa -k audit_rules_usergroup_modification
     -w /etc/gshadow -p wa -k audit_rules_usergroup_modification
@@ -45,7 +45,7 @@ rationale: |-
     users, groups, or modifications should be investigated for legitimacy.
 
     <p><strong>中文理由：</strong></p>
-    除审计新用户和组账户外，这些监视项还会提醒系统管理员任何修改。任何意外用户、组或修改都应调查其合法性。
+    <p>除审计新用户和组账户外，这些监视项还会提醒系统管理员任何修改。任何意外用户、组或修改都应调查其合法性。</p>
 
 severity: medium
 

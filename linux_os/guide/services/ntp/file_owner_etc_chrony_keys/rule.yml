@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/chrony.keys", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/chrony.keys</tt> 文件的所有者为 <tt>root</tt>。
+    <p>确保 <tt>/etc/chrony.keys</tt> 文件的所有者为 <tt>root</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/chrony.keys file by the chrony user is important
@@ -15,7 +15,7 @@ rationale: |-
     chrony ensures exclusive control of the chrony cryptographic keys.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/chrony.keys</tt> 文件由 <tt>root</tt> 拥有、所属组为 <tt>chrony</tt>，这一点非常重要，因为此文件存放 chrony 加密密钥。保护此文件对系统安全至关重要。将所有权分配给 <tt>root</tt> 并仅允许 <tt>chrony</tt> 组访问，可确保对 chrony 加密密钥的独占控制。
+    <p><tt>/etc/chrony.keys</tt> 文件由 <tt>root</tt> 拥有、所属组为 <tt>chrony</tt>，这一点非常重要，因为此文件存放 chrony 加密密钥。保护此文件对系统安全至关重要。将所有权分配给 <tt>root</tt> 并仅允许 <tt>chrony</tt> 组访问，可确保对 chrony 加密密钥的独占控制。</p>
 
 severity: medium
 

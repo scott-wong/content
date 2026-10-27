@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="cron_can_relabel") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>cron_can_relabel</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>cron_can_relabel</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cron_can_relabel off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>cron_can_relabel</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>cron_can_relabel</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cron_can_relabel off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 cron 重新标记文件可能使其更改 SELinux 标签并绕过基于标签的访问控制。
+    <p>允许 cron 重新标记文件可能使其更改 SELinux 标签并绕过基于标签的访问控制。</p>
 
 severity: medium
 

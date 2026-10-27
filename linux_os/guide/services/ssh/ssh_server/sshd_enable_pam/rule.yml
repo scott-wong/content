@@ -13,9 +13,9 @@ description: |-
     <pre>UsePAM yes</pre>
 
     <p><strong>中文说明：</strong></p>
-    UsePAM 启用可插拔身份验证模块接口。如果设置为“yes”，除对所有身份验证类型执行 PAM 账户和会话模块处理外，还将使用 ChallengeResponseAuthentication 和 PasswordAuthentication 启用 PAM 身份验证。
+    <p>UsePAM 启用可插拔身份验证模块接口。如果设置为“yes”，除对所有身份验证类型执行 PAM 账户和会话模块处理外，还将使用 ChallengeResponseAuthentication 和 PasswordAuthentication 启用 PAM 身份验证。
 
-    要启用 PAM 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    要启用 PAM 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：</p>
     <pre>UsePAM yes</pre>
 
 rationale: |-
@@ -25,7 +25,7 @@ rationale: |-
     on login or disallow access to the server.
 
     <p><strong>中文理由：</strong></p>
-    当 UsePAM 设置为 yes 时，PAM 会正确执行账户和会话类型处理。如果需要根据 IP、时间或账户的其他因素限制服务访问，这一点非常重要。此外，还可以确保用户在登录时继承特定环境变量，或禁止对服务器的访问。
+    <p>当 UsePAM 设置为 yes 时，PAM 会正确执行账户和会话类型处理。如果需要根据 IP、时间或账户的其他因素限制服务访问，这一点非常重要。此外，还可以确保用户在登录时继承特定环境变量，或禁止对服务器的访问。</p>
 
 severity: medium
 

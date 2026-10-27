@@ -15,7 +15,7 @@ description: |-
     -a always,exit -F arch=b64 -S renameat2 -F auid>={{{ uid_min }}} -F auid!=-1 -k perm_mod</pre>
 
     <p><strong>中文说明：</strong></p>
-    操作系统必须为 <tt>renameat2</tt> 系统调用的所有使用生成审计记录。如果未生成专门满足组织安全和使命需求的审计记录，将难以建立、关联和调查与事件相关的事件，或识别事件责任人。审计记录可由信息系统中的各种组件生成（例如模块或策略过滤器）。将以下行添加或更新到 <tt>/etc/audit/rules.d/audit.rules</tt>，以配置操作系统为 <tt>renameat2</tt> 系统调用的所有使用生成审计记录：
+    <p>操作系统必须为 <tt>renameat2</tt> 系统调用的所有使用生成审计记录。如果未生成专门满足组织安全和使命需求的审计记录，将难以建立、关联和调查与事件相关的事件，或识别事件责任人。审计记录可由信息系统中的各种组件生成（例如模块或策略过滤器）。将以下行添加或更新到 <tt>/etc/audit/rules.d/audit.rules</tt>，以配置操作系统为 <tt>renameat2</tt> 系统调用的所有使用生成审计记录：</p>
     <pre>
     -a always,exit -F arch=b32 -S renameat2 -F auid>={{{ uid_min }}} -F auid!=-1 -k perm_mod
     -a always,exit -F arch=b64 -S renameat2 -F auid>={{{ uid_min }}} -F auid!=-1 -k perm_mod</pre>
@@ -25,7 +25,7 @@ rationale: |-
     these events could serve as evidence of potential system compromise.
 
     <p><strong>中文理由：</strong></p>
-    未成功删除文件的尝试可能表明系统存在恶意活动。审计这些事件可作为系统可能遭到入侵的证据。
+    <p>未成功删除文件的尝试可能表明系统存在恶意活动。审计这些事件可作为系统可能遭到入侵的证据。</p>
 
 severity: medium
 

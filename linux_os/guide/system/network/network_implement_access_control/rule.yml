@@ -53,8 +53,7 @@ description: |-
     specific hosts, this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    要验证系统的访问控制程序配置为允许或拒绝特定主机访问系统，请使用以下命令检查 "firewalld" 是否处于活动状态：
-
+    <p>要验证系统的访问控制程序配置为允许或拒绝特定主机访问系统，请使用以下命令检查 "firewalld" 是否处于活动状态：</p>
     <pre># systemctl status firewalld
     firewalld.service - firewalld - dynamic firewall daemon
     Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled)
@@ -98,7 +97,7 @@ rationale: |-
     services may be accessible to unauthorized hosts.
 
     <p><strong>中文理由：</strong></p>
-    如果系统的访问控制程序未配置适当的规则来允许和拒绝访问系统网络资源，服务可能被未经授权的主机访问。
+    <p>如果系统的访问控制程序未配置适当的规则来允许和拒绝访问系统网络资源，服务可能被未经授权的主机访问。</p>
 
 severity: medium
 

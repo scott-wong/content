@@ -6,14 +6,14 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.default.shared_media", value=xccdf_value("sysctl_net_ipv4_conf_default_shared_media_value")) }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>net.ipv4.conf.default.shared_media</tt> 设置为 <tt>{{{ xccdf_value("sysctl_net_ipv4_conf_default_shared_media_value") }}}</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.shared_media={{{ xccdf_value("sysctl_net_ipv4_conf_default_shared_media_value") }}}</tt>；要持久化，请将 <tt>net.ipv4.conf.default.shared_media = {{{ xccdf_value("sysctl_net_ipv4_conf_default_shared_media_value") }}}</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>net.ipv4.conf.default.shared_media</tt> 设置为 <tt>{{{ xccdf_value("sysctl_net_ipv4_conf_default_shared_media_value") }}}</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.shared_media={{{ xccdf_value("sysctl_net_ipv4_conf_default_shared_media_value") }}}</tt>；要持久化，请将 <tt>net.ipv4.conf.default.shared_media = {{{ xccdf_value("sysctl_net_ipv4_conf_default_shared_media_value") }}}</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     This setting should be aligned with <tt>net.ipv4.conf.default.secure_redirects</tt> because it overrides it.
     If <tt>shared_media</tt> is enabled for an interface <tt>secure_redirects</tt> will be enabled too.
 
     <p><strong>中文理由：</strong></p>
-    此设置应与 <tt>net.ipv4.conf.default.secure_redirects</tt> 保持一致，因为它会覆盖后者。如果为接口启用了 <tt>shared_media</tt>，也会同时启用 <tt>secure_redirects</tt>。
+    <p>此设置应与 <tt>net.ipv4.conf.default.secure_redirects</tt> 保持一致，因为它会覆盖后者。如果为接口启用了 <tt>shared_media</tt>，也会同时启用 <tt>secure_redirects</tt>。</p>
 
 severity: medium
 

@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="samba_load_libgfapi") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>samba_load_libgfapi</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>samba_load_libgfapi</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>samba_load_libgfapi</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>samba_load_libgfapi</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    仅在 Samba 需要 GlusterFS 集成时启用此布尔值；否则应禁用，以减少额外文件系统访问面。
+    <p>仅在 Samba 需要 GlusterFS 集成时启用此布尔值；否则应禁用，以减少额外文件系统访问面。</p>
 
 severity: medium
 

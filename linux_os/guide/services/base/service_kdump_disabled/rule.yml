@@ -15,8 +15,8 @@ description: |-
     {{{ describe_service_disable(service=kdump_service) }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>{{{ kdump_service }}}</tt> 服务提供内核崩溃转储分析器。它使用 <tt>kexec</tt> 系统调用在系统崩溃后启动辅助内核（“捕获”内核），该内核可加载崩溃内核中的信息以供分析。
-    应禁用 <tt>{{{ kdump_service }}}</tt> 服务。
+    <p><tt>{{{ kdump_service }}}</tt> 服务提供内核崩溃转储分析器。它使用 <tt>kexec</tt> 系统调用在系统崩溃后启动辅助内核（“捕获”内核），该内核可加载崩溃内核中的信息以供分析。
+    应禁用 <tt>{{{ kdump_service }}}</tt> 服务。</p>
 
 rationale: |-
     Kernel core dumps may contain the full contents of system memory at the
@@ -26,7 +26,7 @@ rationale: |-
     development or testing, there is little need to run the kdump service.
 
     <p><strong>中文理由：</strong></p>
-    内核核心转储可能包含崩溃时系统内存的全部内容。内核核心转储会占用大量磁盘空间，并可能耗尽目标文件系统分区的可用空间，从而导致拒绝服务。除非系统用于内核开发或测试，否则几乎没有必要运行 kdump 服务。
+    <p>内核核心转储可能包含崩溃时系统内存的全部内容。内核核心转储会占用大量磁盘空间，并可能耗尽目标文件系统分区的可用空间，从而导致拒绝服务。除非系统用于内核开发或测试，否则几乎没有必要运行 kdump 服务。</p>
 
 severity: medium
 

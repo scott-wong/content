@@ -17,7 +17,7 @@ description: |-
     this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    验证操作系统是否要求将 shadow 密码套件配置为使用强加密哈希来加密交互式用户密码。使用以下命令检查交互式用户账户密码是否使用强密码哈希：
+    <p>验证操作系统是否要求将 shadow 密码套件配置为使用强加密哈希来加密交互式用户密码。使用以下命令检查交互式用户账户密码是否使用强密码哈希：</p>
     <pre>$ sudo cut -d: -f1,2 /etc/shadow
     nsauser:$6$kcOnRq/5$NUEYPuyL.wghQwWssXRcLRFiiru7f5JPV6GaJhNC2aK5F3PZpE/BCCtwrxRc/AInKMNX3CdMw11m9STiql12f/</pre>
     密码哈希 <tt>!</tt> 或 <tt>*</tt> 表示账户处于非活动状态且不可用于登录，因此不进行评估。如果任何交互式用户密码哈希不是以 <tt>$6</tt> 开头，则构成发现项。
@@ -28,7 +28,7 @@ rationale: |-
     (i.e., clear text) and easily compromised.
 
     <p><strong>中文理由：</strong></p>
-    密码必须始终受到保护，而加密是保护密码的标准方法。如果密码未加密，就可以明文读取并轻易遭到泄露。
+    <p>密码必须始终受到保护，而加密是保护密码的标准方法。如果密码未加密，就可以明文读取并轻易遭到泄露。</p>
 
 severity: medium
 

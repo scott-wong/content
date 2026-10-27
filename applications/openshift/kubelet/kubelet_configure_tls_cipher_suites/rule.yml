@@ -33,7 +33,7 @@ description: |-
   and var_kubelet_tls_cipher_suites have to be set
 
   <p><strong>中文说明：</strong></p>
-  确保 Kubelet 配置为仅使用强加密算法。要为 kubelet 设置密码套件，请为每个 <tt>MachineConfigPool</tt> 按以下示例创建新的或修改现有的 <tt>KubeletConfig</tt> 对象：
+  <p>确保 Kubelet 配置为仅使用强加密算法。要为 kubelet 设置密码套件，请为每个 <tt>MachineConfigPool</tt> 按以下示例创建新的或修改现有的 <tt>KubeletConfig</tt> 对象：</p>
   <pre>
     apiVersion: machineconfiguration.openshift.io/v1
     kind: KubeletConfig
@@ -63,7 +63,7 @@ rationale: |-
   concerns, weakening the protection provided.
 
   <p><strong>中文理由：</strong></p>
-  TLS 密码算法存在若干已知漏洞和弱点，这会降低其提供的保护。默认情况下，Kubernetes 支持多种 TLS 密码套件，其中包括一些存在安全问题的套件，从而削弱所提供的保护。
+  <p>TLS 密码算法存在若干已知漏洞和弱点，这会降低其提供的保护。默认情况下，Kubernetes 支持多种 TLS 密码套件，其中包括一些存在安全问题的套件，从而削弱所提供的保护。</p>
 
 severity: medium
 

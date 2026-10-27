@@ -11,7 +11,7 @@ description: |-
     {{{ partition_description(part="/var/log/kube-apiserver") }}}
 
     <p><strong>中文说明：</strong></p>
-    Kubernetes API server 审计日志存储在 <tt>/var/log/kube-apiserver</tt> 目录中。
+    <p>Kubernetes API server 审计日志存储在 <tt>/var/log/kube-apiserver</tt> 目录中。</p>
     <p>
     Red Hat CoreOS 的分区是第 1 天操作，之后无法更改。有关添加指定独立 <code>/var/log/kube-apiserver</code> 分区的 MachineConfig 清单，请遵循：
     <a href="https://docs.openshift.com/container-platform/latest/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-user-infra-machines-advanced_disk_installing-platform-agnostic">OpenShift Container Platform 文档</a>
@@ -32,7 +32,7 @@ rationale: |-
     of space.
 
     <p><strong>中文理由：</strong></p>
-    将 <tt>/var/log/kube-apiserver</tt> 放在独立分区上，可以更好地区分 Kubernetes API server 审计文件和其他日志文件，并有助于确保审计不会因分区空间耗尽而停止。
+    <p>将 <tt>/var/log/kube-apiserver</tt> 放在独立分区上，可以更好地区分 Kubernetes API server 审计文件和其他日志文件，并有助于确保审计不会因分区空间耗尽而停止。</p>
 
 severity: medium
 

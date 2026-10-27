@@ -11,7 +11,7 @@ description: |-
     <pre>install bluetooth /bin/true</pre>
 
     <p><strong>中文说明：</strong></p>
-    内核模块加载系统可配置为阻止加载 Bluetooth 模块。将以下内容添加到适当的 <tt>/etc/modprobe.d</tt> 配置文件，以阻止加载 Bluetooth 模块：
+    <p>内核模块加载系统可配置为阻止加载 Bluetooth 模块。将以下内容添加到适当的 <tt>/etc/modprobe.d</tt> 配置文件，以阻止加载 Bluetooth 模块：</p>
     <pre>install bluetooth /bin/true</pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     activation.
 
     <p><strong>中文理由：</strong></p>
-    如果必须禁用 Bluetooth 功能，阻止内核加载该内核模块可为防止其激活提供额外保障。
+    <p>如果必须禁用 Bluetooth 功能，阻止内核加载该内核模块可为防止其激活提供额外保障。</p>
 
 severity: medium
 

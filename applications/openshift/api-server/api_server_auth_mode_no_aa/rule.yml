@@ -15,13 +15,13 @@ description: |-
     Do not always authorize all requests.
 
     <p><strong>中文说明：</strong></p>
-    禁止始终授权所有请求。
+    <p>禁止始终授权所有请求。</p>
 
 rationale: |-
     The API Server, can be configured to allow all requests. This mode should not be used on any production cluster.
 
     <p><strong>中文理由：</strong></p>
-    API Server 可配置为允许所有请求。任何生产集群都不应使用此模式。
+    <p>API Server 可配置为允许所有请求。任何生产集群都不应使用此模式。</p>
 
 identifiers:
   cce@ocp4: CCE-84207-0

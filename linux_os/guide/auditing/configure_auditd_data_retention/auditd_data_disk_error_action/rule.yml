@@ -21,7 +21,7 @@ description: |-
     <tt>auditd.conf</tt> man page.
 
     <p><strong>中文说明：</strong></p>
-    <tt>auditd</tt> 服务可以配置为在发生磁盘错误时采取操作。编辑文件 <tt>/etc/audit/auditd.conf</tt>。添加或修改以下行，并适当替换 <i>ACTION</i>：
+    <p><tt>auditd</tt> 服务可以配置为在发生磁盘错误时采取操作。编辑文件 <tt>/etc/audit/auditd.conf</tt>。添加或修改以下行，并适当替换 <i>ACTION</i>：</p>
     <pre>disk_error_action = <i>ACTION</i></pre>
     将该值设为 <tt>single</tt>，使系统切换到单用户模式以进行纠正。可接受的值还包括
     {{% if product in ['ubuntu2404'] %}}
@@ -36,7 +36,7 @@ rationale: |-
     losing audit records.
 
     <p><strong>中文理由：</strong></p>
-    在发生磁盘错误时采取适当的操作，可将丢失审计记录的可能性降至最低。
+    <p>在发生磁盘错误时采取适当的操作，可将丢失审计记录的可能性降至最低。</p>
 
 severity: medium
 

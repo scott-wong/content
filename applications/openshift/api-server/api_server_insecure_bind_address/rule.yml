@@ -25,7 +25,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    OpenShift 不应绑定到非回环的不安全地址。编辑 <tt>openshift-kube-apiserver</tt> configmap，若存在 <tt>insecure-bind-address</tt> 则将其删除：
+    <p>OpenShift 不应绑定到非回环的不安全地址。编辑 <tt>openshift-kube-apiserver</tt> configmap，若存在 <tt>insecure-bind-address</tt> 则将其删除：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -42,7 +42,7 @@ rationale: |-
     binds and the traffic is generally not encrypted.
 
     <p><strong>中文理由：</strong></p>
-    如果 API Server 绑定到不安全地址，安装环境将容易遭受对主节点的未经身份验证和未加密访问。API Server 不会对不安全绑定执行身份验证检查，并且此类流量通常不加密。
+    <p>如果 API Server 绑定到不安全地址，安装环境将容易遭受对主节点的未经身份验证和未加密访问。API Server 不会对不安全绑定执行身份验证检查，并且此类流量通常不加密。</p>
 
 identifiers:
   cce@ocp4: CCE-83955-5

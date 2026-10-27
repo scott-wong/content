@@ -9,7 +9,7 @@ description: |-
     operating system in <tt>/boot/loader/entries/*.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要启用 SLUB/SLAB 对象毒化，请将参数 <tt>slub_debug=P</tt> 添加到 <tt>/boot/loader/entries/*.conf</tt> 中 Linux 操作系统的所有 BLS（Boot Loader Specification）条目的“options”行。
+    <p>要启用 SLUB/SLAB 对象毒化，请将参数 <tt>slub_debug=P</tt> 添加到 <tt>/boot/loader/entries/*.conf</tt> 中 Linux 操作系统的所有 BLS（Boot Loader Specification）条目的“options”行。</p>
 
 rationale: |-
     Poisoning writes an arbitrary value to freed objects, so any modification or
@@ -19,7 +19,7 @@ rationale: |-
     Also prevents leak of data and detection of corrupted memory.
 
     <p><strong>中文理由：</strong></p>
-    毒化会向已释放对象写入任意值，因此对释放后或初始化前对象的任何修改或引用都会被检测并阻止。这可以以很小的性能代价防止多种释放后使用漏洞，还可防止数据泄露并检测内存损坏。
+    <p>毒化会向已释放对象写入任意值，因此对释放后或初始化前对象的任何修改或引用都会被检测并阻止。这可以以很小的性能代价防止多种释放后使用漏洞，还可防止数据泄露并检测内存损坏。</p>
 
 severity: medium
 

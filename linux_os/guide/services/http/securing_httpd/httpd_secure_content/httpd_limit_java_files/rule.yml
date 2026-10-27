@@ -8,7 +8,7 @@ description: |-
     from the web server.
 
     <p><strong>中文说明：</strong></p>
-    <tt>.java</tt> 和 <tt>.jpp</tt> 文件不应存在，并应从 Web 服务器中移除。
+    <p><tt>.java</tt> 和 <tt>.jpp</tt> 文件不应存在，并应从 Web 服务器中移除。</p>
 
 rationale: |-
     From the source code in a .java or a .jpp file, the Java compiler produces a
@@ -20,7 +20,7 @@ rationale: |-
     via a browser configured to permit Java code.
 
     <p><strong>中文理由：</strong></p>
-    Java 编译器会根据 .java 或 .jpp 文件中的源代码生成扩展名为 .class 的二进制文件。因此，.java 或 .jpp 文件会泄露有关应用程序逻辑和服务器资源权限的敏感信息。相比之下，.class 文件由于旨在独立于机器，被称为字节码。字节码由 Java 虚拟机（JVM）或 Java 运行时环境（JRE）通过配置为允许 Java 代码的浏览器运行。
+    <p>Java 编译器会根据 .java 或 .jpp 文件中的源代码生成扩展名为 .class 的二进制文件。因此，.java 或 .jpp 文件会泄露有关应用程序逻辑和服务器资源权限的敏感信息。相比之下，.class 文件由于旨在独立于机器，被称为字节码。字节码由 Java 虚拟机（JVM）或 Java 运行时环境（JRE）通过配置为允许 Java 代码的浏览器运行。</p>
 
 severity: low
 

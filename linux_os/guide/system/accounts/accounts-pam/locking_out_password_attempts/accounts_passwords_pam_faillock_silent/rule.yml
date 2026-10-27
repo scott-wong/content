@@ -14,9 +14,9 @@ description: |-
     depending on the OS version.
 
     <p><strong>中文说明：</strong></p>
-    本规则确保系统在使用 <tt>pam_faillock.so</tt> 多次错误登录后，不向用户显示与登录信息有关的信息性消息。
+    <p>本规则确保系统在使用 <tt>pam_faillock.so</tt> 多次错误登录后，不向用户显示与登录信息有关的信息性消息。
 
-    <tt>pam_faillock.so</tt> 模块要求在 PAM 文件中配置多个条目。这些条目必须仔细定义才能按预期工作。为避免手动编辑这些文件时出错，建议根据操作系统版本使用适当工具，例如 <tt>authselect</tt> 或 <tt>authconfig</tt>。
+    <tt>pam_faillock.so</tt> 模块要求在 PAM 文件中配置多个条目。这些条目必须仔细定义才能按预期工作。为避免手动编辑这些文件时出错，建议根据操作系统版本使用适当工具，例如 <tt>authselect</tt> 或 <tt>authconfig</tt>。</p>
 
 rationale: |-
    The pam_faillock module without the silent option will leak information about the existence or
@@ -25,7 +25,7 @@ rationale: |-
    accounts allowing the adversary to infer that a particular account exists or not on the system.
 
    <p><strong>中文理由：</strong></p>
-   不带 silent 选项的 pam_faillock 模块会泄露系统中用户账户是否存在的信息，因为未知用户的失败尝试不会被记录。对于不存在的用户账户，永远不会显示用户账户被锁定的消息，这使对手能够推断特定账户在系统上是否存在。
+   <p>不带 silent 选项的 pam_faillock 模块会泄露系统中用户账户是否存在的信息，因为未知用户的失败尝试不会被记录。对于不存在的用户账户，永远不会显示用户账户被锁定的消息，这使对手能够推断特定账户在系统上是否存在。</p>
 
 severity: medium
 

@@ -16,19 +16,19 @@ description: |-
     {{{ describe_kernel_build_config("CONFIG_GCC_PLUGIN_STACKLEAK", "y") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    此选项使内核在从系统调用返回前擦除内核栈。这样会使栈保持为毒化值，从而缩短敏感栈内容的生命周期，并降低未初始化栈变量漏洞或信息泄露的可能性（它不覆盖同一系统调用期间达到此前函数相同栈深度的函数）。
+    <p>此选项使内核在从系统调用返回前擦除内核栈。这样会使栈保持为毒化值，从而缩短敏感栈内容的生命周期，并降低未初始化栈变量漏洞或信息泄露的可能性（它不覆盖同一系统调用期间达到此前函数相同栈深度的函数）。
 
     此配置从内核 4.20 开始可用，但如果发行版回移该功能，也可能可用。
     用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_GCC_PLUGIN_STACKLEAK</tt> 的配置值，请运行：
     <tt>grep CONFIG_GCC_PLUGIN_STACKLEAK /boot/config-*</tt>
-    对于每个已安装内核，应返回一行包含值“y”的配置。
+    对于每个已安装内核，应返回一行包含值“y”的配置。</p>
 
 rationale: |-
     This blocks most uninitialized stack variable attacks, with the performance impact being
     driven by the depth of the stack usage, rather than the function calling complexity.
 
     <p><strong>中文理由：</strong></p>
-    这可阻止大多数未初始化栈变量攻击，性能影响由栈使用深度决定，而不是函数调用复杂性。
+    <p>这可阻止大多数未初始化栈变量攻击，性能影响由栈使用深度决定，而不是函数调用复杂性。</p>
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

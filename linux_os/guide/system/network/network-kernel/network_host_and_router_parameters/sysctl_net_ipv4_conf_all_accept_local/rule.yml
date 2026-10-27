@@ -6,9 +6,9 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.all.accept_local", value="0") }}}
 
     <p><strong>中文说明：</strong></p>
-    要设置内核参数 <tt>net.ipv4.conf.all.accept_local</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv4.conf.all.accept_local=0</tt>
+    <p>要设置内核参数 <tt>net.ipv4.conf.all.accept_local</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv4.conf.all.accept_local=0</tt>
 
-    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv4.conf.all.accept_local = 0</tt>
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv4.conf.all.accept_local = 0</tt></p>
 
 rationale: |-
     Configure <tt>net.ipv4.conf.all.accept_local=0</tt> to consider as invalid the packets
@@ -17,7 +17,7 @@ rationale: |-
     local interfaces over the wire and have them accepted properly.
 
     <p><strong>中文理由：</strong></p>
-    将 <tt>net.ipv4.conf.all.accept_local</tt> 配置为 <tt>0</tt>，以将来自 127.0.0.0/8 地址块之外、源地址不属于该地址块的数据包视为无效。结合适当的路由，这可用于在网络上定向两个本地接口之间的数据包并使其被正确接受。
+    <p>将 <tt>net.ipv4.conf.all.accept_local</tt> 配置为 <tt>0</tt>，以将来自 127.0.0.0/8 地址块之外、源地址不属于该地址块的数据包视为无效。结合适当的路由，这可用于在网络上定向两个本地接口之间的数据包并使其被正确接受。</p>
 
 severity: medium
 

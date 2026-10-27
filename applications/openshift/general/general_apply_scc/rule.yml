@@ -7,7 +7,7 @@ description: |-
    Apply Security Context to your Pods and Containers
 
    <p><strong>中文说明：</strong></p>
-   为 Pod 和容器应用安全上下文。
+   <p>为 Pod 和容器应用安全上下文。</p>
 
 rationale: |-
    A security context defines the operating system security settings (uid, gid,
@@ -19,7 +19,7 @@ rationale: |-
    security context, and container level security context.
 
    <p><strong>中文理由：</strong></p>
-   安全上下文定义应用于容器的操作系统安全设置（uid、gid、capabilities、SELinux 角色等）。设计容器和 Pod 时，请确保为 Pod、容器和卷配置安全上下文。安全上下文是部署 YAML 中定义的属性，用于控制将分配给 Pod、容器或卷的安全参数。安全上下文分为两个层级：Pod 级安全上下文和容器级安全上下文。
+   <p>安全上下文定义应用于容器的操作系统安全设置（uid、gid、capabilities、SELinux 角色等）。设计容器和 Pod 时，请确保为 Pod、容器和卷配置安全上下文。安全上下文是部署 YAML 中定义的属性，用于控制将分配给 Pod、容器或卷的安全参数。安全上下文分为两个层级：Pod 级安全上下文和容器级安全上下文。</p>
 
 severity: medium
 

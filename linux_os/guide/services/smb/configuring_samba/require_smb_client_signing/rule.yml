@@ -13,7 +13,7 @@ description: |-
     only communicate with servers that support packet signing.
 
     <p><strong>中文说明：</strong></p>
-    要要求运行 <tt>smbclient</tt> 的 Samba 客户端使用数据包签名，请在 Samba 配置文件 <tt>/etc/samba/smb.conf</tt> 的 <tt>[global]</tt> 部分添加以下内容：
+    <p>要要求运行 <tt>smbclient</tt> 的 Samba 客户端使用数据包签名，请在 Samba 配置文件 <tt>/etc/samba/smb.conf</tt> 的 <tt>[global]</tt> 部分添加以下内容：</p>
     <pre>client signing = mandatory</pre>
     要求 <tt>smbclient</tt> 等 Samba 客户端使用数据包签名，可确保它们只能与支持数据包签名的服务器通信。
 
@@ -23,7 +23,7 @@ rationale: |-
     transit.
 
     <p><strong>中文理由：</strong></p>
-    数据包签名可防止在传输过程中修改 SMB 数据包的中间人攻击。
+    <p>数据包签名可防止在传输过程中修改 SMB 数据包的中间人攻击。</p>
 
 severity: unknown
 

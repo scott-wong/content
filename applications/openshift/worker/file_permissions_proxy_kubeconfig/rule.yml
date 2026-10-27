@@ -21,7 +21,7 @@ description: |-
   </pre>
 
   <p><strong>中文说明：</strong></p>
-  为确保 Kubernetes ConfigMap 以正确权限挂载到 sdn daemonset Pod 中，请确保 <tt>sdn-config</tt> ConfigMap 使用限制性权限挂载。检查 <tt>config</tt> VolumeMount 是否以权限 420 挂载 <tt>sdn-config</tt> ConfigMap：
+  <p>为确保 Kubernetes ConfigMap 以正确权限挂载到 sdn daemonset Pod 中，请确保 <tt>sdn-config</tt> ConfigMap 使用限制性权限挂载。检查 <tt>config</tt> VolumeMount 是否以权限 420 挂载 <tt>sdn-config</tt> ConfigMap：</p>
   <pre>
   {
   "configMap": {
@@ -44,9 +44,9 @@ rationale: |-
   ConfigMap mount.
 
   <p><strong>中文理由：</strong></p>
-  kube-proxy 的 kubeconfig 文件为 kube-proxy 服务提供权限。代理 kubeconfig 文件包含有关系统上配置的 OpenShift 集群的管理配置的信息。保护此文件对 OpenShift 安全至关重要。
+  <p>kube-proxy 的 kubeconfig 文件为 kube-proxy 服务提供权限。代理 kubeconfig 文件包含有关系统上配置的 OpenShift 集群的管理配置的信息。保护此文件对 OpenShift 安全至关重要。
 
-  该文件通过 ConfigMap 挂载提供，因此 kubelet 本身会确保文件权限适合使用该文件的容器。
+  该文件通过 ConfigMap 挂载提供，因此 kubelet 本身会确保文件权限适合使用该文件的容器。</p>
 
 severity: medium
 

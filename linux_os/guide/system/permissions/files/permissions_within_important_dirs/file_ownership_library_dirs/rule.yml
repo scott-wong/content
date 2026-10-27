@@ -23,7 +23,7 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    系统范围内共享库文件会在进程加载或运行时链接到可执行文件，默认存储在以下目录中：
+    <p>系统范围内共享库文件会在进程加载或运行时链接到可执行文件，默认存储在以下目录中：</p>
     <pre>/lib
     /lib64
     /usr/lib
@@ -44,7 +44,7 @@ rationale: |-
     runtime. Proper ownership is necessary to protect the integrity of the system.
 
     <p><strong>中文理由：</strong></p>
-    共享库目录中的文件会在运行时加载到进程（包括特权进程）或内核本身的地址空间中。正确设置所有权对保护系统完整性至关重要。
+    <p>共享库目录中的文件会在运行时加载到进程（包括特权进程）或内核本身的地址空间中。正确设置所有权对保护系统完整性至关重要。</p>
 
 severity: medium
 

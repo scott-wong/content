@@ -57,7 +57,7 @@ rationale: |-
     that has been left unattended.
 
     <p><strong>中文理由：</strong></p>
-    在较短时间内终止空闲会话，可缩短未经授权人员接管无人值守会话的机会窗口。
+    <p>在较短时间内终止空闲会话，可缩短未经授权人员接管无人值守会话的机会窗口。</p>
 
 references:
   nerc-cip: CIP-004-6 R2.2.3,CIP-007-3 R5.1,CIP-007-3 R5.2,CIP-007-3 R5.3.1,CIP-007-3 R5.3.2,CIP-007-3 R5.3.3

@@ -21,7 +21,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.unprivileged_bpf_disabled", value="2") }}}
 
     <p><strong>中文说明：</strong></p>
-    要防止非特权进程使用 <code>bpf()</code> 系统调用，必须将 <code>kernel.unprivileged_bpf_disabled</code> 内核参数设置为 <code>1</code> 或 <code>2</code>。
+    <p>要防止非特权进程使用 <code>bpf()</code> 系统调用，必须将 <code>kernel.unprivileged_bpf_disabled</code> 内核参数设置为 <code>1</code> 或 <code>2</code>。
 
     将 <code>1</code> 写入此条目将禁用非特权调用 <code>bpf()</code>；禁用后，在没有 <code>CAP_SYS_ADMIN</code> 或 <code>CAP_BPF</code> 的情况下调用 <code>bpf()</code> 将返回 <code>-EPERM</code>。设置为 <code>1</code> 后，无法从正在运行的内核中清除此设置。
 
@@ -29,14 +29,14 @@ description: |-
 
     将 <code>2</code> 写入此条目也会禁用非特权调用 <code>bpf()</code>，但管理员之后仍可根据需要写入 <code>0</code> 或 <code>1</code> 来更改此设置。
 
-    应将内核参数 <tt>kernel.unprivileged_bpf_disabled</tt> 设置为 <tt>2</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.unprivileged_bpf_disabled=2</tt>；要持久化，请将 <tt>kernel.unprivileged_bpf_disabled = 2</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    应将内核参数 <tt>kernel.unprivileged_bpf_disabled</tt> 设置为 <tt>2</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.unprivileged_bpf_disabled=2</tt>；要持久化，请将 <tt>kernel.unprivileged_bpf_disabled = 2</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     Loading and accessing the packet filters programs and maps using the bpf()
     syscall has the potential of revealing sensitive information about the kernel state.
 
     <p><strong>中文理由：</strong></p>
-    使用 bpf() 系统调用加载和访问数据包过滤器程序及映射可能泄露有关内核状态的敏感信息。
+    <p>使用 bpf() 系统调用加载和访问数据包过滤器程序及映射可能泄露有关内核状态的敏感信息。</p>
 
 severity: medium
 

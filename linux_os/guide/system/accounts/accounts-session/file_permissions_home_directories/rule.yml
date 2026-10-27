@@ -10,7 +10,7 @@ description: |-
     <pre>$ sudo chmod 0750 /home/<i>USER</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    将交互用户主目录的模式更改为 <tt>0750</tt>。要更改交互用户主目录的模式，请使用以下命令：
+    <p>将交互用户主目录的模式更改为 <tt>0750</tt>。要更改交互用户主目录的模式，请使用以下命令：</p>
     <pre>$ sudo chmod 0750 /home/<i>USER</i></pre>
 
 rationale: |-
@@ -18,7 +18,7 @@ rationale: |-
     unauthorized access to user files by other users.
 
     <p><strong>中文理由：</strong></p>
-    本地交互用户主目录上的过多权限可能允许其他用户未经授权访问用户文件。
+    <p>本地交互用户主目录上的过多权限可能允许其他用户未经授权访问用户文件。</p>
 
 severity: medium
 

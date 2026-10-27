@@ -27,7 +27,7 @@ rationale: |-
     activation.
 
     <p><strong>中文理由：</strong></p>
-    如果无需运行 SNMP 服务器软件，移除该软件包可防止其被激活。
+    <p>如果无需运行 SNMP 服务器软件，移除该软件包可防止其被激活。</p>
 
 severity: unknown
 

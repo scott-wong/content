@@ -11,8 +11,8 @@ description: |-
     {{{ describe_service_disable(service="rdisc") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>rdisc</tt> 服务实现 ICMP Internet Router Discovery Protocol（IRDP）的客户端，允许发现本地子网中的路由器。如果发现路由器，则使用相应的默认路由更新本地路由表。默认情况下，此守护进程处于禁用状态。
-    应禁用 <tt>rdisc</tt> 服务。
+    <p><tt>rdisc</tt> 服务实现 ICMP Internet Router Discovery Protocol（IRDP）的客户端，允许发现本地子网中的路由器。如果发现路由器，则使用相应的默认路由更新本地路由表。默认情况下，此守护进程处于禁用状态。
+    应禁用 <tt>rdisc</tt> 服务。</p>
 
 rationale: |-
     General-purpose systems typically have their network and routing
@@ -21,7 +21,7 @@ rationale: |-
     dynamic network configuration information.
 
     <p><strong>中文理由：</strong></p>
-    通用系统通常由系统管理员静态配置网络和路由信息。工作站或某些专用系统通常使用 DHCP（而不是 IRDP）获取动态网络配置信息。
+    <p>通用系统通常由系统管理员静态配置网络和路由信息。工作站或某些专用系统通常使用 DHCP（而不是 IRDP）获取动态网络配置信息。</p>
 
 severity: medium
 

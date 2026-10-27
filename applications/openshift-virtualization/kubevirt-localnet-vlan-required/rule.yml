@@ -11,7 +11,7 @@ description: |-
     networks should tailor the profile to exclude this rule for those objects.
 
     <p><strong>中文说明：</strong></p>
-    具有 OVN <tt>localnet</tt> 拓扑的 NetworkAttachmentDefinition 会将虚拟机流量桥接到物理提供商网络。此类网络附件必须在其 CNI 配置中声明 <tt>vlanID</tt>，以便流量在专用 VLAN 上分段，而不是进入未标记的提供商网段。对于有意使用未标记提供商网络的环境，应调整配置档以针对这些对象排除此规则。
+    <p>具有 OVN <tt>localnet</tt> 拓扑的 NetworkAttachmentDefinition 会将虚拟机流量桥接到物理提供商网络。此类网络附件必须在其 CNI 配置中声明 <tt>vlanID</tt>，以便流量在专用 VLAN 上分段，而不是进入未标记的提供商网段。对于有意使用未标记提供商网络的环境，应调整配置档以针对这些对象排除此规则。</p>
 
 rationale: |-
     Without VLAN segmentation, workloads attached to localnet networks
@@ -19,7 +19,7 @@ rationale: |-
     sniffing and spoofing between tenants and toward the infrastructure.
 
     <p><strong>中文理由：</strong></p>
-    如果没有 VLAN 分段，连接到 localnet 网络的工作负载将与其他流量共享广播域，从而可能在租户之间以及面向基础设施的方向实施横向移动、嗅探和欺骗。
+    <p>如果没有 VLAN 分段，连接到 localnet 网络的工作负载将与其他流量共享广播域，从而可能在租户之间以及面向基础设施的方向实施横向移动、嗅探和欺骗。</p>
 
 severity: medium
 

@@ -7,14 +7,14 @@ description: |-
     {{{ describe_package_install(package="sssd-ipa") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>sssd-ipa</tt> 软件包。
+    <p>应安装 <tt>sssd-ipa</tt> 软件包。</p>
 
 rationale: |-
     <tt>sssd-ipa</tt> provides the IPA back end that the SSSD can utilize to
     fetch identity data from and authenticate against an IPA server.
 
     <p><strong>中文理由：</strong></p>
-    <tt>sssd-ipa</tt> 提供 IPA 后端，SSSD 可利用该后端从 IPA 服务器获取身份数据并进行身份验证。
+    <p><tt>sssd-ipa</tt> 提供 IPA 后端，SSSD 可利用该后端从 IPA 服务器获取身份数据并进行身份验证。</p>
 
 severity: medium
 

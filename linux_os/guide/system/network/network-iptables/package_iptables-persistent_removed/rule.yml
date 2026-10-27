@@ -6,14 +6,14 @@ description: |-
     {{{ describe_package_remove(package="iptables-persistent") }}}
 
     <p><strong>中文说明：</strong></p>
-    应移除 <tt>iptables-persistent</tt> 软件包。
+    <p>应移除 <tt>iptables-persistent</tt> 软件包。</p>
 
 rationale: |-
     Running both <tt>ufw</tt> and the services included in the
     <tt>iptables-persistent</tt> package may lead to conflict.
 
     <p><strong>中文理由：</strong></p>
-    同时运行 <tt>ufw</tt> 和 <tt>iptables-persistent</tt> 软件包中包含的服务可能导致冲突。
+    <p>同时运行 <tt>ufw</tt> 和 <tt>iptables-persistent</tt> 软件包中包含的服务可能导致冲突。</p>
 
 severity: medium
 

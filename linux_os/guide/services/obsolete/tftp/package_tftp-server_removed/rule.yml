@@ -14,7 +14,7 @@ description: |-
     {{{ describe_package_remove(package=package) }}}
 
     <p><strong>中文说明：</strong></p>
-    应删除 <tt>{{{ package }}}</tt> 软件包。
+    <p>应删除 <tt>{{{ package }}}</tt> 软件包。</p>
 
 rationale: |-
     Removing the <tt>{{{ package }}}</tt> package decreases the risk of the accidental
@@ -26,7 +26,7 @@ rationale: |-
     access control rules established.
 
     <p><strong>中文理由：</strong></p>
-    删除 <tt>{{{ package }}}</tt> 软件包可降低 tftp 服务被意外（或故意）激活的风险。<br /><br />如果运营支持需要 TFTP（例如传输路由器配置），则其使用必须向 Information Systems Security Manager（ISSM）记录，仅限授权人员使用，并建立访问控制规则。
+    <p>删除 <tt>{{{ package }}}</tt> 软件包可降低 tftp 服务被意外（或故意）激活的风险。<br /><br />如果运营支持需要 TFTP（例如传输路由器配置），则其使用必须向 Information Systems Security Manager（ISSM）记录，仅限授权人员使用，并建立访问控制规则。</p>
 
 severity: high
 

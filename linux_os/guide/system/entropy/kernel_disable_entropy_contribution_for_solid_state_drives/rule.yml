@@ -7,7 +7,7 @@ description: |-
     <pre> # echo 0 &gt; /sys/block/DRIVE/queue/add_random</pre>
 
     <p><strong>中文说明：</strong></p>
-    对于系统上的每个固态驱动器，请运行：
+    <p>对于系统上的每个固态驱动器，请运行：</p>
     <pre> # echo 0 &gt; /sys/block/DRIVE/queue/add_random</pre>
 
 rationale: |-
@@ -17,6 +17,6 @@ rationale: |-
     I/O operation completion times are much more predictable for them.
 
     <p><strong>中文理由：</strong></p>
-    与传统包含旋转磁盘和/或移动读写头的机电式磁盘相比，固态存储设备（SSD）没有移动或机械组件。因此，其 I/O 操作完成时间可预测性高得多。
+    <p>与传统包含旋转磁盘和/或移动读写头的机电式磁盘相比，固态存储设备（SSD）没有移动或机械组件。因此，其 I/O 操作完成时间可预测性高得多。</p>
 
 severity: medium

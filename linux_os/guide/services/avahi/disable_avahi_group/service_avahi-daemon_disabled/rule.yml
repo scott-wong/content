@@ -7,7 +7,7 @@ description: |-
     {{{ describe_service_disable(service="avahi-daemon") }}}
 
     <p><strong>中文说明：</strong></p>
-    应禁用 <tt>avahi-daemon</tt> 服务。
+    <p>应禁用 <tt>avahi-daemon</tt> 服务。</p>
 
 rationale: |-
     Because the Avahi daemon service keeps an open network
@@ -16,7 +16,7 @@ rationale: |-
     can be trusted.
 
     <p><strong>中文理由：</strong></p>
-    由于 Avahi 守护进程服务保持开放的网络端口，因此容易受到网络攻击。其功能虽方便，但只有在本地网络可信任时才适用。
+    <p>由于 Avahi 守护进程服务保持开放的网络端口，因此容易受到网络攻击。其功能虽方便，但只有在本地网络可信任时才适用。</p>
 
 severity: medium
 

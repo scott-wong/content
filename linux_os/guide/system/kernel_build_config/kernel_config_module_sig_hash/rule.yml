@@ -9,15 +9,15 @@ description: |-
     {{{ describe_kernel_build_config("CONFIG_MODULE_SIG_HASH", xccdf_value("var_kernel_config_module_sig_hash")) | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    此选项配置内核使用 {{{ xccdf_value("var_kernel_config_module_sig_hash") }}} 作为哈希函数来构建和签名模块。
+    <p>此选项配置内核使用 {{{ xccdf_value("var_kernel_config_module_sig_hash") }}} 作为哈希函数来构建和签名模块。
 
-    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_MODULE_SIG_HASH</tt> 的配置值，请运行 <tt>grep CONFIG_MODULE_SIG_HASH /boot/config-*</tt>。对于每个已安装的内核，应返回值为 <tt>{{{ xccdf_value("var_kernel_config_module_sig_hash") }}}</tt> 的行。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_MODULE_SIG_HASH</tt> 的配置值，请运行 <tt>grep CONFIG_MODULE_SIG_HASH /boot/config-*</tt>。对于每个已安装的内核，应返回值为 <tt>{{{ xccdf_value("var_kernel_config_module_sig_hash") }}}</tt> 的行。</p>
 
 rationale: |-
     Use of strong hash function is important to secure the module against counterfeit signatures.
 
     <p><strong>中文理由：</strong></p>
-    使用强哈希函数对于保护模块免受伪造签名影响很重要。
+    <p>使用强哈希函数对于保护模块免受伪造签名影响很重要。</p>
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

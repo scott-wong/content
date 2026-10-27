@@ -25,7 +25,7 @@ rationale: |-
     This setting will cause the system greeting banner to be used for FTP connections as well.
 
     <p><strong>中文理由：</strong></p>
-    此设置会使 FTP 连接同样使用系统登录横幅。
+    <p>此设置会使 FTP 连接同样使用系统登录横幅。</p>
 
 severity: medium
 

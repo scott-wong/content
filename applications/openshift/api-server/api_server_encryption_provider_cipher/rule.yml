@@ -80,7 +80,7 @@ rationale: |-
     and <tt>aesgcm</tt> are the only types supported by OCP.
 
     <p><strong>中文理由：</strong></p>
-    etcd 是 OpenShift 部署使用的高可用键值存储，用于持久存储所有 REST API 对象。这些对象性质敏感，应进行静态加密以避免泄露。使用 etcd 加密时，确保使用适当的加密提供程序集合非常重要。目前，OCP 仅支持 <tt>aescbc</tt> 和 <tt>aesgcm</tt> 两种类型。
+    <p>etcd 是 OpenShift 部署使用的高可用键值存储，用于持久存储所有 REST API 对象。这些对象性质敏感，应进行静态加密以避免泄露。使用 etcd 加密时，确保使用适当的加密提供程序集合非常重要。目前，OCP 仅支持 <tt>aescbc</tt> 和 <tt>aesgcm</tt> 两种类型。</p>
 
 identifiers:
   cce@ocp4: CCE-83585-0

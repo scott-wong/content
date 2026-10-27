@@ -31,14 +31,13 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    审计系统应为所有用户和 root 收集详细的文件访问记录。<tt>openat</tt> 系统调用在以写操作方式调用并指定 <tt>O_TRUNC_WRITE</tt> 标志时可用于修改文件。
+    <p>审计系统应为所有用户和 root 收集详细的文件访问记录。<tt>openat</tt> 系统调用在以写操作方式调用并指定 <tt>O_TRUNC_WRITE</tt> 标志时可用于修改文件。
 
     以下审计规则将确保收集通过 <tt>openat</tt> 系统调用成功创建文件的尝试。
 
     如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。
 
-    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
-
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。</p>
     <pre>
     -a always,exit -F arch=b32 -S openat -F a2&amp;01003 -F success=1 -F auid>={{{ auid }}} -F auid!=unset -F key=successful-modification
     </pre>
@@ -53,7 +52,7 @@ rationale: |-
     these events could serve as evidence of potential system compromise.
 
     <p><strong>中文理由：</strong></p>
-    成功访问文件的尝试可能是系统上恶意活动的迹象。审计这些事件可作为系统可能遭到入侵的证据。
+    <p>成功访问文件的尝试可能是系统上恶意活动的迹象。审计这些事件可作为系统可能遭到入侵的证据。</p>
 
 severity: medium
 

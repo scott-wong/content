@@ -13,14 +13,14 @@ description: |-
   Custom Resource.
 
   <p><strong>中文说明：</strong></p>
-  <a href="https://docs.openshift.com/container-platform/latest/security/compliance_operator/co-overview.html">Compliance Operator</a> 会根据不同的合规基准扫描主机和平台（OCP）配置，以发现软件缺陷和配置不当。Compliance Operator 允许使用 <tt>ScanSetting</tt> 自定义资源定期调度其扫描。
+  <p><a href="https://docs.openshift.com/container-platform/latest/security/compliance_operator/co-overview.html">Compliance Operator</a> 会根据不同的合规基准扫描主机和平台（OCP）配置，以发现软件缺陷和配置不当。Compliance Operator 允许使用 <tt>ScanSetting</tt> 自定义资源定期调度其扫描。</p>
 
 rationale: |-
   Without periodical scanning and verification, security functions may
   not operate correctly and this failure may go unnoticed within the container platform.
 
   <p><strong>中文理由：</strong></p>
-  如果没有定期扫描和验证，安全功能可能无法正确运行，并且这种故障可能在容器平台中不被发现。
+  <p>如果没有定期扫描和验证，安全功能可能无法正确运行，并且这种故障可能在容器平台中不被发现。</p>
 
 identifiers:
   cce@ocp4: CCE-90762-6

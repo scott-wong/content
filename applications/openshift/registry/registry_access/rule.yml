@@ -8,14 +8,14 @@ description: |-
   only authorized personnel and service accounts.
 
   <p><strong>中文说明：</strong></p>
-  限制用户对 Amazon ECR 的访问，使构建镜像只能由授权人员和服务账户操作。
+  <p>限制用户对 Amazon ECR 的访问，使构建镜像只能由授权人员和服务账户操作。</p>
 
 rationale: |-
   Weak access control to Amazon ECR may allow malicious users to replace built
   images with vulnerable containers.
 
   <p><strong>中文理由：</strong></p>
-  对 Amazon ECR 的访问控制薄弱可能使恶意用户用易受攻击的容器替换构建镜像。
+  <p>对 Amazon ECR 的访问控制薄弱可能使恶意用户用易受攻击的容器替换构建镜像。</p>
 
 severity: unknown
 

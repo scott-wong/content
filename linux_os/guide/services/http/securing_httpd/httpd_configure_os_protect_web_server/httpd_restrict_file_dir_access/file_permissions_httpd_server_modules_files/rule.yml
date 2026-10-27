@@ -7,14 +7,14 @@ description: |-
     {{{ describe_file_permissions(file="/etc/http/conf.modules.d/*", perms="0640") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/http/conf.modules.d/*</tt> 的权限必须为 <tt>0640</tt>。可使用 <tt>sudo chmod 0640 /etc/http/conf.modules.d/*</tt> 设置该权限。
+    <p>文件 <tt>/etc/http/conf.modules.d/*</tt> 的权限必须为 <tt>0640</tt>。可使用 <tt>sudo chmod 0640 /etc/http/conf.modules.d/*</tt> 设置该权限。</p>
 
 rationale: |-
     Access to the web server's configuration files may allow an unauthorized user or attacker
     to access information about the web server or to alter the server's configuration files.
 
     <p><strong>中文理由：</strong></p>
-    访问 Web 服务器的配置文件可能使未授权用户或攻击者获取 Web 服务器信息，或更改服务器配置文件。
+    <p>访问 Web 服务器的配置文件可能使未授权用户或攻击者获取 Web 服务器信息，或更改服务器配置文件。</p>
 
 severity: unknown
 

@@ -18,15 +18,15 @@ description: |-
     a keep alive message.
 
     <p><strong>中文说明：</strong></p>
-    SSH 服务器在 SSH 会话期间最多发送 <tt>ClientAliveCountMax</tt> 条消息，并等待 SSH 客户端响应。<tt>ClientAliveInterval</tt> 选项配置每条 <tt>ClientAliveCountMax</tt> 消息后的超时。如果 SSH 服务器未收到客户端响应，则认为连接无响应并终止连接。
-    对于早于 v8.2 的 SSH，将 <tt>ClientAliveCountMax</tt> 设置为 <tt>0</tt> 会在设置 <tt>ClientAliveInterval</tt> 时准确触发超时。从 v8.2 开始，值 <tt>0</tt> 会完全禁用超时功能。如果该选项设置为大于 <tt>0</tt> 的数值，则在 <tt>ClientAliveInterval * ClientAliveCountMax</tt> 秒内未收到保活消息后，会话将被断开。
+    <p>SSH 服务器在 SSH 会话期间最多发送 <tt>ClientAliveCountMax</tt> 条消息，并等待 SSH 客户端响应。<tt>ClientAliveInterval</tt> 选项配置每条 <tt>ClientAliveCountMax</tt> 消息后的超时。如果 SSH 服务器未收到客户端响应，则认为连接无响应并终止连接。
+    对于早于 v8.2 的 SSH，将 <tt>ClientAliveCountMax</tt> 设置为 <tt>0</tt> 会在设置 <tt>ClientAliveInterval</tt> 时准确触发超时。从 v8.2 开始，值 <tt>0</tt> 会完全禁用超时功能。如果该选项设置为大于 <tt>0</tt> 的数值，则在 <tt>ClientAliveInterval * ClientAliveCountMax</tt> 秒内未收到保活消息后，会话将被断开。</p>
 
 rationale: |-
     This ensures a user login will be terminated as soon as the <tt>ClientAliveInterval</tt>
     is reached.
 
     <p><strong>中文理由：</strong></p>
-    这可确保一旦达到 <tt>ClientAliveInterval</tt>，用户登录就会被终止。
+    <p>这可确保一旦达到 <tt>ClientAliveInterval</tt>，用户登录就会被终止。</p>
 
 severity: medium
 

@@ -7,13 +7,13 @@ description: |-
     Change user IDs (UIDs), or delete accounts, so each has a unique name.
 
     <p><strong>中文说明：</strong></p>
-    更改用户 ID（UID）或删除账户，使每个账户具有唯一的 UID。
+    <p>更改用户 ID（UID）或删除账户，使每个账户具有唯一的 UID。</p>
 
 rationale: |-
     To assure accountability and prevent unauthenticated access, interactive users must be identified and authenticated to prevent potential misuse and compromise of the system.
 
     <p><strong>中文理由：</strong></p>
-    为确保问责并防止未通过身份验证的访问，必须识别并验证交互式用户，以防止系统被误用和攻陷。
+    <p>为确保问责并防止未通过身份验证的访问，必须识别并验证交互式用户，以防止系统被误用和攻陷。</p>
 
 severity: medium
 

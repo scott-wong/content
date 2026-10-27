@@ -16,7 +16,7 @@ description: |-
     <tt>{{{ package }}}</tt> is a client program that allows for connections to a <tt>{{{ package }}}</tt> server.
 
     <p><strong>中文说明：</strong></p>
-    Trivial File Transfer Protocol（TFTP）是一种简单的文件传输协议，通常用于在系统之间自动传输配置或引导文件。TFTP 不支持身份验证，容易遭到攻击。软件包 <tt>{{{ package }}}</tt> 是一个客户端程序，允许连接到 <tt>{{{ package }}}</tt> 服务器。
+    <p>Trivial File Transfer Protocol（TFTP）是一种简单的文件传输协议，通常用于在系统之间自动传输配置或引导文件。TFTP 不支持身份验证，容易遭到攻击。软件包 <tt>{{{ package }}}</tt> 是一个客户端程序，允许连接到 <tt>{{{ package }}}</tt> 服务器。</p>
 
 rationale: |-
     It is recommended that TFTP be removed, unless there is a specific need
@@ -24,7 +24,7 @@ rationale: |-
     the services.
 
     <p><strong>中文理由：</strong></p>
-    建议删除 TFTP，除非有特定需要（例如引导服务器）。在这种情况下，配置服务时应格外谨慎。
+    <p>建议删除 TFTP，除非有特定需要（例如引导服务器）。在这种情况下，配置服务时应格外谨慎。</p>
 
 severity: low
 

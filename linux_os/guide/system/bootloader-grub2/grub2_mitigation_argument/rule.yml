@@ -12,7 +12,7 @@ description: |-
     {{{ describe_grub2_argument_absent("mitigations=off") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    验证 Meltdown 缓解措施未禁用：
+    <p>验证 Meltdown 缓解措施未禁用：</p>
     <pre>$ sudo grubby --info=ALL | grep mitigations</pre>
 
     缓解措施不得设置为 "off"。
@@ -27,7 +27,7 @@ rationale: |-
     personal photos, emails, and instant messages; and business-critical documents.
 
     <p><strong>中文理由：</strong></p>
-    硬件漏洞允许程序窃取计算机当前正在处理的数据。虽然程序通常不被允许读取其他程序的数据，但恶意程序可利用 Meltdown 和 Spectre 获取其他运行中程序内存中的机密信息。这些信息可能包括密码管理器中存储的密码或浏览器中的密码、个人照片、电子邮件、即时消息，以及业务关键文档。
+    <p>硬件漏洞允许程序窃取计算机当前正在处理的数据。虽然程序通常不被允许读取其他程序的数据，但恶意程序可利用 Meltdown 和 Spectre 获取其他运行中程序内存中的机密信息。这些信息可能包括密码管理器中存储的密码或浏览器中的密码、个人照片、电子邮件、即时消息，以及业务关键文档。</p>
 
 severity: medium
 

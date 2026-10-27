@@ -7,15 +7,15 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.all.drop_gratuitous_arp", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    要设置内核参数 <tt>net.ipv4.conf.all.drop_gratuitous_arp</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv4.conf.all.drop_gratuitous_arp=1</tt>
+    <p>要设置内核参数 <tt>net.ipv4.conf.all.drop_gratuitous_arp</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv4.conf.all.drop_gratuitous_arp=1</tt>
 
-    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv4.conf.all.drop_gratuitous_arp = 1</tt>
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv4.conf.all.drop_gratuitous_arp = 1</tt></p>
 
 rationale: |-
     Drop Gratuitous ARP frames to prevent ARP poisoning.
 
     <p><strong>中文理由：</strong></p>
-    丢弃无偿 ARP 帧以防止 ARP 投毒。
+    <p>丢弃无偿 ARP 帧以防止 ARP 投毒。</p>
 
 warnings:
     - functionality: |-

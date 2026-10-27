@@ -12,7 +12,7 @@ description: |-
     workload.
 
     <p><strong>中文说明：</strong></p>
-    <tt>overcommitGuestOverhead</tt> 配置选项会在 virt-launcher Pod 内请求额外的虚拟机管理内存。过度分配功能用于提高节点上的虚拟机密度，前提是虚拟机不会请求其满载时所需的全部内存。但是，如果虚拟机使用其能够使用的全部内存，将导致 OpenShift Scheduler 终止该工作负载。
+    <p><tt>overcommitGuestOverhead</tt> 配置选项会在 virt-launcher Pod 内请求额外的虚拟机管理内存。过度分配功能用于提高节点上的虚拟机密度，前提是虚拟机不会请求其满载时所需的全部内存。但是，如果虚拟机使用其能够使用的全部内存，将导致 OpenShift Scheduler 终止该工作负载。</p>
 
 rationale: |-
     When the <tt>.spec.template.spec.domain.resources.overcommitGuestOverhead</tt> field is
@@ -22,7 +22,7 @@ rationale: |-
     and ensure workload stability, this setting should not be enabled.
 
     <p><strong>中文理由：</strong></p>
-    当 <tt>VirtualMachine</tt> 资源中的 <tt>.spec.template.spec.domain.resources.overcommitGuestOverhead</tt> 字段设为 <tt>true</tt> 时，允许虚拟机超额分配 KubeVirt 内存，这可能导致客户机崩溃并中断工作负载，造成功能故障。为防止内存相关故障并确保工作负载稳定性，不应启用此设置。
+    <p>当 <tt>VirtualMachine</tt> 资源中的 <tt>.spec.template.spec.domain.resources.overcommitGuestOverhead</tt> 字段设为 <tt>true</tt> 时，允许虚拟机超额分配 KubeVirt 内存，这可能导致客户机崩溃并中断工作负载，造成功能故障。为防止内存相关故障并确保工作负载稳定性，不应启用此设置。</p>
 
 severity: medium
 

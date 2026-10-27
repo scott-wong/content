@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="pppd_for_user") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>pppd_for_user</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>pppd_for_user</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>pppd_for_user</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>pppd_for_user</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用此布尔值可避免向普通用户授予 pppd 相关特权，并降低本地攻击面。
+    <p>禁用此布尔值可避免向普通用户授予 pppd 相关特权，并降低本地攻击面。</p>
 
 severity: medium
 

@@ -11,8 +11,8 @@ description: |-
     per session.
 
     <p><strong>中文说明：</strong></p>
-    要配置每个会话允许的重试提示次数：
-    编辑 <tt>{{{ pwquality_path }}}</tt>，添加 <tt>retry={{{xccdf_value("var_password_pam_retry") }}}</tt>；如果站点策略更严格，可使用更低的值。配置档要求每个会话最多允许 <tt>retry={{{xccdf_value("var_password_pam_retry") }}}</tt> 次提示。
+    <p>要配置每个会话允许的重试提示次数：
+    编辑 <tt>{{{ pwquality_path }}}</tt>，添加 <tt>retry={{{xccdf_value("var_password_pam_retry") }}}</tt>；如果站点策略更严格，可使用更低的值。配置档要求每个会话最多允许 <tt>retry={{{xccdf_value("var_password_pam_retry") }}}</tt> 次提示。</p>
 
 rationale: |-
     Setting the password retry prompts that are permitted on a per-session basis to a low value
@@ -21,7 +21,7 @@ rationale: |-
     is different from account lockout, which is provided by the pam_faillock module.
 
     <p><strong>中文理由：</strong></p>
-    将每个会话允许的密码重试提示次数设置为较低值，会要求某些软件（例如 SSH）重新连接。这可减慢某些类型的密码猜测攻击，并使其更易引起注意。请注意，这与 pam_faillock 模块提供的账户锁定不同。
+    <p>将每个会话允许的密码重试提示次数设置为较低值，会要求某些软件（例如 SSH）重新连接。这可减慢某些类型的密码猜测攻击，并使其更易引起注意。请注意，这与 pam_faillock 模块提供的账户锁定不同。</p>
 
 severity: medium
 

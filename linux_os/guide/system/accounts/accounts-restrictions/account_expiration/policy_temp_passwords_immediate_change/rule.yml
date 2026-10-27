@@ -29,7 +29,7 @@ rationale: |-
     successfully authenticated.
 
     <p><strong>中文理由：</strong></p>
-    这可防止具有物理访问权限的攻击者通过有效的故障排查配置轻易绕过机器安全，并在系统重启时获得 root 访问权限。
+    <p>这可防止具有物理访问权限的攻击者通过有效的故障排查配置轻易绕过机器安全，并在系统重启时获得 root 访问权限。</p>
 
 severity: medium
 

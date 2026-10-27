@@ -15,7 +15,7 @@ description: |-
     Then reboot the system.
 
     <p><strong>中文说明：</strong></p>
-    SELinux 状态应在系统引导时设置为 <tt>enforcing</tt> 或 <tt>permissive</tt>。在 <tt>/etc/selinux/config</tt> 文件中添加或更正以下行，以将系统配置为引导到 enforcing 或 permissive 模式：
+    <p>SELinux 状态应在系统引导时设置为 <tt>enforcing</tt> 或 <tt>permissive</tt>。在 <tt>/etc/selinux/config</tt> 文件中添加或更正以下行，以将系统配置为引导到 enforcing 或 permissive 模式：</p>
     <pre>SELINUX=enforcing</pre>
     或
     <pre>SELINUX=permissive</pre>
@@ -29,7 +29,7 @@ rationale: |-
     files, making it difficult to enable SELinux in the future.
 
     <p><strong>中文理由：</strong></p>
-    强烈不建议以禁用模式运行 SELinux。禁用模式会阻止在不重启系统的情况下强制执行 SELinux 控制。它还会避免为文件等持久对象设置标签，从而使将来启用 SELinux 更加困难。
+    <p>强烈不建议以禁用模式运行 SELinux。禁用模式会阻止在不重启系统的情况下强制执行 SELinux 控制。它还会避免为文件等持久对象设置标签，从而使将来启用 SELinux 更加困难。</p>
 
 severity: high
 

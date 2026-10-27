@@ -13,16 +13,16 @@ description: |-
     {{{ describe_grub2_argument_absent("nosmap") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    SMAP 用于防止内核态意外读写用户空间的内存页；自 Linux 内核 3.7 起默认启用，但可通过内核启动参数禁用。请确保 Supervisor Mode Access Prevention（SMAP）未通过 <tt>nosmap</tt> 启动参数禁用。
+    <p>SMAP 用于防止内核态意外读写用户空间的内存页；自 Linux 内核 3.7 起默认启用，但可通过内核启动参数禁用。请确保 Supervisor Mode Access Prevention（SMAP）未通过 <tt>nosmap</tt> 启动参数禁用。
 
-    检查 <tt>/etc/default/grub</tt> 中的 <tt>GRUB_CMDLINE_LINUX</tt> 行不包含 <tt>nosmap</tt>，并从已安装内核的命令行中移除该参数。
+    检查 <tt>/etc/default/grub</tt> 中的 <tt>GRUB_CMDLINE_LINUX</tt> 行不包含 <tt>nosmap</tt>，并从已安装内核的命令行中移除该参数。</p>
 
 rationale: |-
     Disabling SMAP can facilitate exploitation of vulnerabilities caused by unintended access and
     manipulation of data in the user space.
 
     <p><strong>中文理由：</strong></p>
-    禁用 SMAP 可能便于利用因非预期访问和操纵用户空间数据而导致的漏洞。
+    <p>禁用 SMAP 可能便于利用因非预期访问和操纵用户空间数据而导致的漏洞。</p>
 
 severity: medium
 

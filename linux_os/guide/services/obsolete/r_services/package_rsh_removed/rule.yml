@@ -31,12 +31,12 @@ rationale: |-
     the clients for <tt>rsh</tt>,<tt>rcp</tt>, and <tt>rlogin</tt>.
 
     <p><strong>中文理由：</strong></p>
-    这些旧版客户端存在大量安全风险，已被更安全的 SSH 软件包取代。即使已删除服务器，最好也确保删除客户端，以防止用户无意中尝试使用这些命令并因此泄露凭据。
+    <p>这些旧版客户端存在大量安全风险，已被更安全的 SSH 软件包取代。即使已删除服务器，最好也确保删除客户端，以防止用户无意中尝试使用这些命令并因此泄露凭据。
     {{% if 'ubuntu' not in product and 'debian' not in product %}}
     请注意，删除 <tt>rsh</tt> 软件包会删除 <tt>rsh</tt>、<tt>rcp</tt> 和 <tt>rlogin</tt> 的客户端。
     {{% else %}}
     请注意，删除 <tt>rsh-client</tt> 软件包会删除 <tt>rsh</tt>、<tt>rcp</tt> 和 <tt>rlogin</tt> 的客户端。
-    {{% endif %}}
+    {{% endif %}}</p>
 
 severity: unknown
 

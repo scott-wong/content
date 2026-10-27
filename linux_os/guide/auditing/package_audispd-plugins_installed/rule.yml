@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_install(package="audispd-plugins") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>audispd-plugins</tt> 软件包。
+    <p>应安装 <tt>audispd-plugins</tt> 软件包。</p>
 
 rationale: |-
     <tt>audispd-plugins</tt> provides plugins for the real-time interface to the
@@ -15,7 +15,7 @@ rationale: |-
     to remote machines or analyze events for suspicious behavior.
 
     <p><strong>中文理由：</strong></p>
-    <tt>audispd-plugins</tt> 为审计子系统 <tt>audispd</tt> 的实时接口提供插件。这些插件可以将事件转发到远程计算机，或分析事件以发现可疑行为。
+    <p><tt>audispd-plugins</tt> 为审计子系统 <tt>audispd</tt> 的实时接口提供插件。这些插件可以将事件转发到远程计算机，或分析事件以发现可疑行为。</p>
 
 severity: medium
 

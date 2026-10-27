@@ -10,7 +10,7 @@ description: |-
   to efficient scaling and traffic distribution.
 
   <p><strong>中文说明：</strong></p>
-  配置 Kubernetes 存活探针（liveness probe）和就绪探针（readiness probe）对于保障系统安全性与可靠性至关重要。这些探针会主动监控容器健康状况和就绪状态，并在实例无响应时触发重启或重新调度等自动操作，从而提高可靠性。它们还能主动发现问题，使问题得以及时解决，并有助于实现高效扩缩容和流量分配。
+  <p>配置 Kubernetes 存活探针（liveness probe）和就绪探针（readiness probe）对于保障系统安全性与可靠性至关重要。这些探针会主动监控容器健康状况和就绪状态，并在实例无响应时触发重启或重新调度等自动操作，从而提高可靠性。它们还能主动发现问题，使问题得以及时解决，并有助于实现高效扩缩容和流量分配。</p>
 
 rationale: |-
   Many applications running for long periods of time eventually transition to broken states, and
@@ -24,8 +24,8 @@ rationale: |-
   Services.
 
   <p><strong>中文理由：</strong></p>
-  许多长期运行的应用程序最终会进入故障状态，除非重启，否则无法恢复。Kubernetes 提供存活探针来检测并纠正此类情况。
-  有时应用程序会暂时无法处理流量，例如应用程序可能需要在启动期间加载大型数据或配置文件，或在启动后依赖外部服务。在这种情况下，既不应终止应用程序，也不应向它发送请求。Kubernetes 提供就绪探针来检测并缓解这些情况。如果 Pod 中的容器报告尚未就绪，该 Pod 将不会通过 Kubernetes Service 接收流量。
+  <p>许多长期运行的应用程序最终会进入故障状态，除非重启，否则无法恢复。Kubernetes 提供存活探针来检测并纠正此类情况。
+  有时应用程序会暂时无法处理流量，例如应用程序可能需要在启动期间加载大型数据或配置文件，或在启动后依赖外部服务。在这种情况下，既不应终止应用程序，也不应向它发送请求。Kubernetes 提供就绪探针来检测并缓解这些情况。如果 Pod 中的容器报告尚未就绪，该 Pod 将不会通过 Kubernetes Service 接收流量。</p>
 
 severity: medium
 

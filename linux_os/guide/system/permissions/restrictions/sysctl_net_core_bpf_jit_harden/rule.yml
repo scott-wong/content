@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.core.bpf_jit_harden", value="2") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>net.core.bpf_jit_harden</tt> 设置为 <tt>2</tt>。要在运行时应用，请运行 <tt>sysctl -w net.core.bpf_jit_harden=2</tt>；要持久化，请将 <tt>net.core.bpf_jit_harden = 2</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>net.core.bpf_jit_harden</tt> 设置为 <tt>2</tt>。要在运行时应用，请运行 <tt>sysctl -w net.core.bpf_jit_harden=2</tt>；要持久化，请将 <tt>net.core.bpf_jit_harden = 2</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     When hardened, the extended Berkeley Packet Filter just-in-time compiler
@@ -15,7 +15,7 @@ rationale: |-
     and will not expose the JIT addresses in <tt>/proc/kallsyms</tt>.
 
     <p><strong>中文理由：</strong></p>
-    强化后，扩展 Berkeley Packet Filter 即时编译器会随机化 BPF 程序及映射中的任何内核地址，并且不会在 <tt>/proc/kallsyms</tt> 中暴露 JIT 地址。
+    <p>强化后，扩展 Berkeley Packet Filter 即时编译器会随机化 BPF 程序及映射中的任何内核地址，并且不会在 <tt>/proc/kallsyms</tt> 中暴露 JIT 地址。</p>
 
 severity: medium
 

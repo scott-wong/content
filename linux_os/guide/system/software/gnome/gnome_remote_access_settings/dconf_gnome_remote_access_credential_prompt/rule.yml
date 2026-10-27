@@ -18,7 +18,7 @@ description: |-
     After the settings have been set, run <tt>dconf update</tt>.
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，<tt>GNOME</tt> 使用 <tt>Vino</tt> 进行远程访问时不要求凭据。要将系统配置为要求远程凭据，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>authentication-methods</tt> 为 <tt>['vnc']</tt>。例如：
+    <p>默认情况下，<tt>GNOME</tt> 使用 <tt>Vino</tt> 进行远程访问时不要求凭据。要将系统配置为要求远程凭据，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>authentication-methods</tt> 为 <tt>['vnc']</tt>。例如：</p>
     <pre>[org/gnome/Vino]
     authentication-methods=['vnc']
     </pre>
@@ -31,7 +31,7 @@ rationale: |-
     and nefarious users can access the system freely.
 
     <p><strong>中文理由：</strong></p>
-    远程访问要求提示输入用户名和密码。否则，未授权用户和恶意用户可自由访问系统。
+    <p>远程访问要求提示输入用户名和密码。否则，未授权用户和恶意用户可自由访问系统。</p>
 
 severity: medium
 

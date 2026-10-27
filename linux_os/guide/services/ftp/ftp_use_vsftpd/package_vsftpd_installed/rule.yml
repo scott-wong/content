@@ -8,8 +8,8 @@ description: |-
     {{{ describe_package_install(package="vsftpd") }}}
 
     <p><strong>中文说明：</strong></p>
-    如果该系统必须作为 FTP 服务器运行，请通过标准渠道安装 <tt>vsftpd</tt> 软件包。
-    请使用适当的软件包管理工具安装 <tt>vsftpd</tt> 软件包。
+    <p>如果该系统必须作为 FTP 服务器运行，请通过标准渠道安装 <tt>vsftpd</tt> 软件包。
+    请使用适当的软件包管理工具安装 <tt>vsftpd</tt> 软件包。</p>
 
 rationale: |-
     After Red Hat Enterprise Linux 2.1, Red Hat switched from distributing <tt>wu-ftpd</tt> with
@@ -17,7 +17,7 @@ rationale: |-
     and for consistency with future Red Hat releases, the use of <tt>vsftpd</tt> is recommended.
 
     <p><strong>中文理由：</strong></p>
-    在 Red Hat Enterprise Linux 2.1 之后，Red Hat 从随 Red Hat Enterprise Linux 分发 <tt>wu-ftpd</tt> 改为分发 <tt>vsftpd</tt>。出于安全考虑以及与未来 Red Hat 发行版保持一致，建议使用 <tt>vsftpd</tt>。
+    <p>在 Red Hat Enterprise Linux 2.1 之后，Red Hat 从随 Red Hat Enterprise Linux 分发 <tt>wu-ftpd</tt> 改为分发 <tt>vsftpd</tt>。出于安全考虑以及与未来 Red Hat 发行版保持一致，建议使用 <tt>vsftpd</tt>。</p>
 
 severity: low
 

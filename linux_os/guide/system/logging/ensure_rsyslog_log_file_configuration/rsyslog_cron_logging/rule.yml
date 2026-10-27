@@ -14,8 +14,8 @@ description: |-
     <pre>cron.* action(type="omfile" file="/var/log/cron")</pre>
 
     <p><strong>中文说明：</strong></p>
-    必须实施 cron 日志记录，以发现入侵或追踪 cron 作业状态。如果 <tt>cron</tt> 未向 <tt>rsyslog</tt> 记录日志，可通过将以下内容添加到 <tt>/etc/rsyslog.conf</tt> 的 <i>RULES</i> 部分来实施：
-    如果使用旧式语法：
+    <p>必须实施 cron 日志记录，以发现入侵或追踪 cron 作业状态。如果 <tt>cron</tt> 未向 <tt>rsyslog</tt> 记录日志，可通过将以下内容添加到 <tt>/etc/rsyslog.conf</tt> 的 <i>RULES</i> 部分来实施：
+    如果使用旧式语法：</p>
     <pre>cron.*                                                  /var/log/cron</pre>
     如果使用现代语法（RainerScript）：
     <pre>cron.* action(type="omfile" file="/var/log/cron")</pre>
@@ -26,7 +26,7 @@ rationale: |-
     facility by unauthorized and malicious users.
 
     <p><strong>中文理由：</strong></p>
-    cron 日志可用于追踪 cron 作业执行成功或失败，还可用于发现未经授权和恶意用户对 cron 功能的使用。
+    <p>cron 日志可用于追踪 cron 作业执行成功或失败，还可用于发现未经授权和恶意用户对 cron 功能的使用。</p>
 
 severity: medium
 

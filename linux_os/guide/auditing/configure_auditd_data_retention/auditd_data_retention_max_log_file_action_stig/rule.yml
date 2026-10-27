@@ -20,7 +20,7 @@ description: |-
     occurs. This is the default. The setting is case-insensitive.
 
     <p><strong>中文说明：</strong></p>
-    日志达到最大大小时默认采取的操作是轮转日志文件并丢弃最旧的日志。要配置 <tt>auditd</tt> 采取的操作，请在 <tt>/etc/audit/auditd.conf</tt> 中添加或更正以下行：
+    <p>日志达到最大大小时默认采取的操作是轮转日志文件并丢弃最旧的日志。要配置 <tt>auditd</tt> 采取的操作，请在 <tt>/etc/audit/auditd.conf</tt> 中添加或更正以下行：</p>
     <pre>max_log_file_action = <i>ACTION</i></pre>
     <i>ACTION</i> 的可能值在 <tt>auditd.conf</tt> 手册页中说明，包括：
     <ul>
@@ -40,7 +40,7 @@ rationale: |-
     <tt>keep_logs</tt> can be employed.
 
     <p><strong>中文理由：</strong></p>
-    自动轮转日志（将其设置为 <tt>rotate</tt>）可最大限度降低系统因日志数据过多而意外耗尽磁盘空间的可能性。但是，对于绝不能丢弃日志数据或使用外部进程传输日志并回收空间的系统，可以使用 <tt>keep_logs</tt>。
+    <p>自动轮转日志（将其设置为 <tt>rotate</tt>）可最大限度降低系统因日志数据过多而意外耗尽磁盘空间的可能性。但是，对于绝不能丢弃日志数据或使用外部进程传输日志并回收空间的系统，可以使用 <tt>keep_logs</tt>。</p>
 
 severity: medium
 

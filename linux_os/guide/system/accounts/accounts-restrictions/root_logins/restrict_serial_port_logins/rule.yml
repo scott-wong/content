@@ -9,7 +9,7 @@ description: |-
     ttyS1</pre>
 
     <p><strong>中文说明：</strong></p>
-    要限制串行端口上的 root 登录，请确保 <tt>/etc/securetty</tt> 中不出现以下形式的行：
+    <p>要限制串行端口上的 root 登录，请确保 <tt>/etc/securetty</tt> 中不出现以下形式的行：</p>
     <pre>ttyS0
     ttyS1</pre>
 
@@ -19,7 +19,7 @@ rationale: |-
     using the root account.
 
     <p><strong>中文理由：</strong></p>
-    阻止直接通过串行端口接口进行 root 登录，有助于确保对使用 root 账户在系统上执行的操作进行问责。
+    <p>阻止直接通过串行端口接口进行 root 登录，有助于确保对使用 root 账户在系统上执行的操作进行问责。</p>
 
 severity: medium
 

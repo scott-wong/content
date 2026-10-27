@@ -11,7 +11,7 @@ description: |-
     <pre>:FORWARD DROP [0:0]</pre>
 
     <p><strong>中文说明：</strong></p>
-    要将处理从一个接口转发到另一个接口的数据包的内置 FORWARD 链默认策略设置为 DROP（而不是 ACCEPT），请在 <tt>/etc/sysconfig/iptables</tt> 中添加或修正以下行：
+    <p>要将处理从一个接口转发到另一个接口的数据包的内置 FORWARD 链默认策略设置为 DROP（而不是 ACCEPT），请在 <tt>/etc/sysconfig/iptables</tt> 中添加或修正以下行：</p>
     <pre>:FORWARD DROP [0:0]</pre>
 
 rationale: |-
@@ -22,7 +22,7 @@ rationale: |-
     accepted.
 
     <p><strong>中文理由：</strong></p>
-    在 <tt>iptables</tt> 中，只有在检查表中所有适用规则并寻找匹配项后才会应用默认策略。将默认策略设置为 <tt>DROP</tt> 可实施适当的防火墙设计，即任何未明确允许的数据包都不应被接受。
+    <p>在 <tt>iptables</tt> 中，只有在检查表中所有适用规则并寻找匹配项后才会应用默认策略。将默认策略设置为 <tt>DROP</tt> 可实施适当的防火墙设计，即任何未明确允许的数据包都不应被接受。</p>
 
 severity: medium
 

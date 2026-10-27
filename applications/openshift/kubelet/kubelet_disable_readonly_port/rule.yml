@@ -25,7 +25,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    要禁用只读端口，请编辑 kubelet 配置。编辑 <tt>openshift-kube-apiserver</tt> ConfigMap，并将 <tt>kubelet-read-only-port</tt> 参数设置为 0：
+    <p>要禁用只读端口，请编辑 kubelet 配置。编辑 <tt>openshift-kube-apiserver</tt> ConfigMap，并将 <tt>kubelet-read-only-port</tt> 参数设置为 0：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -42,7 +42,7 @@ rationale: |-
     system.
 
     <p><strong>中文理由：</strong></p>
-    OpenShift 通过将只读端口 kubelet 标志设置为 <tt>0</tt>，在所有节点上禁用只读端口（<tt>10255</tt>）。这可确保只有经过身份验证的连接才能接收有关 OpenShift 系统的信息。
+    <p>OpenShift 通过将只读端口 kubelet 标志设置为 <tt>0</tt>，在所有节点上禁用只读端口（<tt>10255</tt>）。这可确保只有经过身份验证的连接才能接收有关 OpenShift 系统的信息。</p>
 
 severity: medium
 

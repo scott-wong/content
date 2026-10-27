@@ -19,11 +19,11 @@ description: |-
     <pre># sysctl --system</pre>
 
     <p><strong>中文说明：</strong></p>
-    确保系统配置为限制对传入 TCP 数据包发送重复确认的最大速率，这些数据包属于现有连接但因以下任一原因而无效：
+    <p>确保系统配置为限制对传入 TCP 数据包发送重复确认的最大速率，这些数据包属于现有连接但因以下任一原因而无效：
 
     (a) 序列号超出窗口，(b) 确认号超出窗口，或
     (c) PAWS（Protection Against Wrapped Sequence numbers）检查失败
-    此措施可防止或限制针对系统的 DoS 攻击影响。通过将以下行添加到 <tt>/etc/sysctl.conf</tt> 或 <tt>/etc/sysctl.d/</tt> 目录中的配置文件（或修改该行以使用所需值），将系统配置为实施速率限制措施：
+    此措施可防止或限制针对系统的 DoS 攻击影响。通过将以下行添加到 <tt>/etc/sysctl.conf</tt> 或 <tt>/etc/sysctl.d/</tt> 目录中的配置文件（或修改该行以使用所需值），将系统配置为实施速率限制措施：</p>
     <pre>net.ipv4.tcp_invalid_ratelimit = {{{ xccdf_value("sysctl_net_ipv4_tcp_invalid_ratelimit_value") }}}</pre>
     运行以下命令使更改生效：
     <pre># sysctl --system</pre>
@@ -40,7 +40,7 @@ rationale: |-
     duplicate acknowledgments for invalid segments.
 
     <p><strong>中文理由：</strong></p>
-    拒绝服务（DoS）是指合法用户无法使用资源的情况。发生这种情况时，组织要么无法完成任务，要么必须以降级容量运行。<br /><br />这有助于缓解简单的“ack loop” DoS 攻击：有缺陷或恶意的中间盒或中间人可以改写 TCP 头部字段，使每个端点都认为另一端在发送无效 TCP 数据段，从而使双方持续发送无休止的重复确认。
+    <p>拒绝服务（DoS）是指合法用户无法使用资源的情况。发生这种情况时，组织要么无法完成任务，要么必须以降级容量运行。<br /><br />这有助于缓解简单的“ack loop” DoS 攻击：有缺陷或恶意的中间盒或中间人可以改写 TCP 头部字段，使每个端点都认为另一端在发送无效 TCP 数据段，从而使双方持续发送无休止的重复确认。</p>
 
 severity: medium
 

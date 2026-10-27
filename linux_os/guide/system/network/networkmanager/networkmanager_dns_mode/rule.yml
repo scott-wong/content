@@ -7,13 +7,13 @@ description: |-
     The DNS processing mode in NetworkManager describes how DNS is processed on the system. Depending the mode some changes the system's DNS may not be respected.
 
     <p><strong>中文说明：</strong></p>
-    NetworkManager 中的 DNS 处理模式描述系统如何处理 DNS。根据模式不同，对系统 DNS 的某些更改可能不会被遵循。
+    <p>NetworkManager 中的 DNS 处理模式描述系统如何处理 DNS。根据模式不同，对系统 DNS 的某些更改可能不会被遵循。</p>
 
 rationale: |-
     To ensure that DNS resolver settings are respected, a DNS mode in NetworkManager must be configured.
 
     <p><strong>中文理由：</strong></p>
-    为确保 DNS 解析器设置得到遵循，必须配置 NetworkManager 中的 DNS 模式。
+    <p>为确保 DNS 解析器设置得到遵循，必须配置 NetworkManager 中的 DNS 模式。</p>
 
 severity: medium
 

@@ -10,15 +10,15 @@ description: |-
     {{{ describe_package_remove(package="mcstrans") }}}
 
     <p><strong>中文说明：</strong></p>
-    守护进程 <tt>mcstransd</tt> 向请求信息的客户端进程提供类别标签信息。标签转换定义在 <tt>/etc/selinux/targeted/setrans.conf</tt> 中。
-    请使用适当的软件包管理工具移除 <tt>mcstrans</tt> 软件包。
+    <p>守护进程 <tt>mcstransd</tt> 向请求信息的客户端进程提供类别标签信息。标签转换定义在 <tt>/etc/selinux/targeted/setrans.conf</tt> 中。
+    请使用适当的软件包管理工具移除 <tt>mcstrans</tt> 软件包。</p>
 
 rationale: |-
     Since this service is not used very often, disable it to reduce the
     amount of potentially vulnerable code running on the system.
 
     <p><strong>中文理由：</strong></p>
-    由于此服务不常使用，应移除以减少系统上运行的潜在易受攻击代码。
+    <p>由于此服务不常使用，应移除以减少系统上运行的潜在易受攻击代码。</p>
 
 severity: low
 

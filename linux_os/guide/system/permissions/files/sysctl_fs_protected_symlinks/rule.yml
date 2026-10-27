@@ -6,9 +6,9 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="fs.protected_symlinks", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    要设置内核参数 <tt>fs.protected_symlinks</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w fs.protected_symlinks=1</tt>
+    <p>要设置内核参数 <tt>fs.protected_symlinks</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w fs.protected_symlinks=1</tt>
 
-    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>fs.protected_symlinks = 1</tt>
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>fs.protected_symlinks = 1</tt></p>
 
 rationale: |-
     By enabling this kernel parameter, symbolic links are permitted to be followed
@@ -19,7 +19,7 @@ rationale: |-
     <tt>open()</tt> or <tt>creat()</tt>.
 
     <p><strong>中文理由：</strong></p>
-    启用此内核参数后，只有在粘性全局可写目录之外，或链接的 UID 与跟随者匹配，或目录所有者与符号链接所有者匹配时，才允许跟随符号链接。禁止此类符号链接有助于缓解特权程序访问不安全文件系统所导致的漏洞，避免利用 <tt>open()</tt> 或 <tt>creat()</tt> 不安全使用方式的攻击途径。
+    <p>启用此内核参数后，只有在粘性全局可写目录之外，或链接的 UID 与跟随者匹配，或目录所有者与符号链接所有者匹配时，才允许跟随符号链接。禁止此类符号链接有助于缓解特权程序访问不安全文件系统所导致的漏洞，避免利用 <tt>open()</tt> 或 <tt>creat()</tt> 不安全使用方式的攻击途径。</p>
 
 severity: medium
 

@@ -7,14 +7,14 @@ description: |-
     group-owned by <code>root</code> group.
 
     <p><strong>中文说明：</strong></p>
-    SSH 服务器公钥（匹配 <code>/etc/ssh/*.pub</code> 通配符的文件）的所属组必须为 <code>root</code>。
+    <p>SSH 服务器公钥（匹配 <code>/etc/ssh/*.pub</code> 通配符的文件）的所属组必须为 <code>root</code>。</p>
 
 rationale: |-
     If a public host key file is modified by an unauthorized user, the SSH service
     may be compromised.
 
     <p><strong>中文理由：</strong></p>
-    如果公钥主机密钥文件被未经授权的用户修改，SSH 服务可能受到破坏。
+    <p>如果公钥主机密钥文件被未经授权的用户修改，SSH 服务可能受到破坏。</p>
 
 severity: medium
 

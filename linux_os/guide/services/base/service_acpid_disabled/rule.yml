@@ -10,8 +10,8 @@ description: |-
     {{{ describe_service_disable(service="acpid") }}}
 
     <p><strong>中文说明：</strong></p>
-    Advanced Configuration and Power Interface Daemon（<tt>acpid</tt>）将 ACPI 事件（例如按下电源/重置按钮）分发给用户空间程序。
-    应禁用 <tt>acpid</tt> 服务。
+    <p>Advanced Configuration and Power Interface Daemon（<tt>acpid</tt>）将 ACPI 事件（例如按下电源/重置按钮）分发给用户空间程序。
+    应禁用 <tt>acpid</tt> 服务。</p>
 
 rationale: |-
     ACPI support is highly desirable for systems in some network roles,
@@ -20,7 +20,7 @@ rationale: |-
     it is appropriate.
 
     <p><strong>中文理由：</strong></p>
-    对于笔记本电脑或台式机等某些网络角色，ACPI 支持非常必要。对于服务器等其他系统，ACPI 可能允许意外或容易实现的拒绝服务情况，因此适合禁用。
+    <p>对于笔记本电脑或台式机等某些网络角色，ACPI 支持非常必要。对于服务器等其他系统，ACPI 可能允许意外或容易实现的拒绝服务情况，因此适合禁用。</p>
 
 severity: medium
 

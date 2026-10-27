@@ -9,7 +9,7 @@ description: |-
     <pre>SSLVerifyClient require</pre>
 
     <p><strong>中文说明：</strong></p>
-    应通过以下方式在 <tt>/etc/httpd/conf/httpd.conf</tt> 中进行设置，将 <tt>SSLVerifyClient</tt> 配置为 <tt>require</tt>：
+    <p>应通过以下方式在 <tt>/etc/httpd/conf/httpd.conf</tt> 中进行设置，将 <tt>SSLVerifyClient</tt> 配置为 <tt>require</tt>：</p>
     <pre>SSLVerifyClient require</pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     decisions.
 
     <p><strong>中文理由：</strong></p>
-    要求身份验证的网站必须使用 PKI 作为 Web 用户身份验证机制。位于 Web 服务器之后、需要基于个人身份进行授权的信息系统，必须使用基于证书的身份验证所提供的身份来支持访问控制决策。
+    <p>要求身份验证的网站必须使用 PKI 作为 Web 用户身份验证机制。位于 Web 服务器之后、需要基于个人身份进行授权的信息系统，必须使用基于证书的身份验证所提供的身份来支持访问控制决策。</p>
 
 severity: medium
 

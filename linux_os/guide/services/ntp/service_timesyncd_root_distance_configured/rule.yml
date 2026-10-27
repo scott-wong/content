@@ -9,14 +9,14 @@ description: |-
     time required for a packet to travel to the server connected.
 
     <p><strong>中文说明：</strong></p>
-    <tt>systemd-timesyncd</tt> 服务器配置应按照本地策略设置 RootDistanceMaxSec。此设置描述数据包往返已连接服务器所需的最长估计时间。
+    <p><tt>systemd-timesyncd</tt> 服务器配置应按照本地策略设置 RootDistanceMaxSec。此设置描述数据包往返已连接服务器所需的最长估计时间。</p>
 
 rationale: |-
     Configuring <tt>systemd-timesyncd</tt> RootDistanceMaxSec ensures time synchronization
     is using servers that are close enough to the client.
 
     <p><strong>中文理由：</strong></p>
-    配置 <tt>systemd-timesyncd</tt> 的 RootDistanceMaxSec 可确保时间同步使用与客户端距离足够近的服务器。
+    <p>配置 <tt>systemd-timesyncd</tt> 的 RootDistanceMaxSec 可确保时间同步使用与客户端距离足够近的服务器。</p>
 
 severity: medium
 

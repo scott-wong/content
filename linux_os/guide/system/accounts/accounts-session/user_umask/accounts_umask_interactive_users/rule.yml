@@ -7,7 +7,7 @@ description: |-
     Remove the <tt>UMASK</tt> environment variable from all interactive users initialization files.
 
     <p><strong>中文说明：</strong></p>
-    从所有交互用户的初始化文件中移除 <tt>UMASK</tt> 环境变量。
+    <p>从所有交互用户的初始化文件中移除 <tt>UMASK</tt> 环境变量。</p>
 
 rationale: |-
     The umask controls the default access mode assigned to newly created files. A
@@ -18,7 +18,7 @@ rationale: |-
     user defaults for each account on the system.
 
     <p><strong>中文理由：</strong></p>
-    umask 控制新创建文件的默认访问模式。077 的 umask 将新文件的模式限制为 700 或更严格。虽然 umask 可表示为四位数，但表示特殊访问模式的第一位通常会被忽略或要求为 0。此要求适用于全局配置的系统默认值以及系统上每个账户的本地交互用户默认值。
+    <p>umask 控制新创建文件的默认访问模式。077 的 umask 将新文件的模式限制为 700 或更严格。虽然 umask 可表示为四位数，但表示特殊访问模式的第一位通常会被忽略或要求为 0。此要求适用于全局配置的系统默认值以及系统上每个账户的本地交互用户默认值。</p>
 
 severity: medium
 

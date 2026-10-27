@@ -9,7 +9,7 @@ description: |-
     <pre>$ sudo chmod o-w <i>FILE</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令设置用户初始化文件所执行文件的模式：
+    <p>使用以下命令设置用户初始化文件所执行文件的模式：</p>
     <pre>$ sudo chmod o-w <i>FILE</i></pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     compromise the system at the root and network level.
 
     <p><strong>中文理由：</strong></p>
-    如果用户启动文件执行全局可写程序，尤其是在不受保护的目录中，这些程序可能被恶意修改，以销毁用户文件或以其他方式在用户级别攻陷系统。如果系统在用户级别被攻陷，则更容易提升权限，最终在 root 和网络级别攻陷系统。
+    <p>如果用户启动文件执行全局可写程序，尤其是在不受保护的目录中，这些程序可能被恶意修改，以销毁用户文件或以其他方式在用户级别攻陷系统。如果系统在用户级别被攻陷，则更容易提升权限，最终在 root 和网络级别攻陷系统。</p>
 
 severity: medium
 

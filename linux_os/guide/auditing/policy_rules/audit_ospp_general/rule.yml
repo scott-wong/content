@@ -143,9 +143,9 @@ description: |-
     Note: This rule uses a special set of Audit rules to comply with OSPP 4.2.1. You may reuse this rule in different profiles. If you decide to do so, it is recommended that you inspect contents of the file closely and make sure that they are aligned with your needs.
 
     <p><strong>中文说明：</strong></p>
-    配置 OSPP 配置档所需的一些基本 <tt>Audit</tt> 参数。具体而言，将 <tt>Audit</tt> 配置为监视对存储系统用户和组信息的文件的直接修改，以及对具有可更改系统配置特殊权限的应用的使用。其他审计事件包括对审计日志本身的访问、尝试更改进程和会话初始化信息，以及尝试修改 MAC 控制项。
+    <p>配置 OSPP 配置档所需的一些基本 <tt>Audit</tt> 参数。具体而言，将 <tt>Audit</tt> 配置为监视对存储系统用户和组信息的文件的直接修改，以及对具有可更改系统配置特殊权限的应用的使用。其他审计事件包括对审计日志本身的访问、尝试更改进程和会话初始化信息，以及尝试修改 MAC 控制项。
 
-    以下规则按上述说明配置审计：
+    以下规则按上述说明配置审计：</p>
     <pre>{{{ file_contents_audit_ospp_general|indent }}}</pre>
 
     运行以下命令将新审计规则加载到内核：
@@ -157,7 +157,7 @@ rationale: |-
     Auditing of events listed in the description provides data for monitoring and investigation of potentially malicious events e.g. tampering with <tt>Audit</tt> logs, malicious access to files storing information about system users and groups etc.
 
     <p><strong>中文理由：</strong></p>
-    审计描述中列出的事件可为监控和调查潜在恶意事件提供数据，例如篡改 <tt>Audit</tt> 日志、恶意访问存储系统用户和组信息的文件等。
+    <p>审计描述中列出的事件可为监控和调查潜在恶意事件提供数据，例如篡改 <tt>Audit</tt> 日志、恶意访问存储系统用户和组信息的文件等。</p>
 
 severity: medium
 

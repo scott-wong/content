@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/ipsec.secrets", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>/etc/ipsec.secrets</tt> 文件的文件所有者必须为 <tt>root</tt>。
+    <p><tt>/etc/ipsec.secrets</tt> 文件的文件所有者必须为 <tt>root</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/ipsec.secrets file by the root user is important
@@ -15,7 +15,7 @@ rationale: |-
     ensures exclusive control of the Libreswan configuration.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/ipsec.secrets</tt> 由 root 用户拥有至关重要，因为该路径承载 Libreswan 配置。保护此路径对系统安全至关重要。将所有权设为 root 可确保对 Libreswan 配置的独占控制。
+    <p><tt>/etc/ipsec.secrets</tt> 由 root 用户拥有至关重要，因为该路径承载 Libreswan 配置。保护此路径对系统安全至关重要。将所有权设为 root 可确保对 Libreswan 配置的独占控制。</p>
 
 severity: medium
 

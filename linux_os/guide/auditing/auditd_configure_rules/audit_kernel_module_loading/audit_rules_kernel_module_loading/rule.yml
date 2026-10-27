@@ -18,7 +18,7 @@ description: |-
     add the lines to file <tt>/etc/audit/audit.rules</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要捕获内核模块加载和卸载事件，请使用以下行，并将 ARCH 设置为 b32（32 位系统），或在 64 位系统中同时提供 b32 和 b64 两行：
+    <p>要捕获内核模块加载和卸载事件，请使用以下行，并将 ARCH 设置为 b32（32 位系统），或在 64 位系统中同时提供 b32 和 b64 两行：</p>
     <pre>
     -a always,exit -F arch=<i>ARCH</i> -S init_module,finit_module,delete_module {{% if 'ol' in families or 'rhel' in product %}}-F auid>=1000 -F auid!=unset {{% endif %}}-F key=modules
     </pre>
@@ -33,7 +33,7 @@ rationale: |-
     to have an audit trail of modules that have been introduced into the kernel.
 
     <p><strong>中文理由：</strong></p>
-    添加或移除内核模块可用于改变内核行为，并可能将恶意代码引入内核空间。必须保留已引入内核的模块的审计轨迹。
+    <p>添加或移除内核模块可用于改变内核行为，并可能将恶意代码引入内核空间。必须保留已引入内核的模块的审计轨迹。</p>
 
 severity: medium
 

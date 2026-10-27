@@ -15,7 +15,7 @@ description: |-
     while still allowing local users on the system to print normally.
 
     <p><strong>中文说明：</strong></p>
-    为防止远程用户可能连接并使用本地配置的打印机，请禁用 CUPS 打印服务器共享功能。为此，请通过从 <tt>/etc/cups/cupsd.conf</tt> 中删除更通用的端口指令来限制服务器监听打印作业的方式：
+    <p>为防止远程用户可能连接并使用本地配置的打印机，请禁用 CUPS 打印服务器共享功能。为此，请通过从 <tt>/etc/cups/cupsd.conf</tt> 中删除更通用的端口指令来限制服务器监听打印作业的方式：</p>
     <pre>Port 631</pre>
     并将其替换为 <tt>Listen</tt> 指令：
     <pre>Listen localhost:631</pre>
@@ -30,7 +30,7 @@ rationale: |-
     a particular set of users, use the Policy directive.
 
     <p><strong>中文理由：</strong></p>
-    默认情况下，本地配置的打印机不会通过网络共享，但如果此功能已以某种方式启用，这些建议会再次将其禁用。请务必禁用传出打印机列表广播，否则即使远程用户无法实际打印，他们仍可看到本地配置的打印机。要将打印服务限制为特定用户集，请使用 Policy 指令。
+    <p>默认情况下，本地配置的打印机不会通过网络共享，但如果此功能已以某种方式启用，这些建议会再次将其禁用。请务必禁用传出打印机列表广播，否则即使远程用户无法实际打印，他们仍可看到本地配置的打印机。要将打印服务限制为特定用户集，请使用 Policy 指令。</p>
 
 severity: unknown
 

@@ -6,7 +6,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="fs.suid_dumpable", value="0") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>fs.suid_dumpable</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w fs.suid_dumpable=0</tt>；要持久化，请将 <tt>fs.suid_dumpable = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>fs.suid_dumpable</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w fs.suid_dumpable=0</tt>；要持久化，请将 <tt>fs.suid_dumpable = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     The core dump of a setuid program is more likely to contain
@@ -16,7 +16,7 @@ rationale: |-
     of such data.
 
     <p><strong>中文理由：</strong></p>
-    setuid 程序的核心转储更可能包含敏感数据，因为程序本身以高于启动执行的用户的权限运行。禁止任何 setuid 程序写入核心转储文件可降低此类数据被未经授权访问的风险。
+    <p>setuid 程序的核心转储更可能包含敏感数据，因为程序本身以高于启动执行的用户的权限运行。禁止任何 setuid 程序写入核心转储文件可降低此类数据被未经授权访问的风险。</p>
 
 severity: medium
 

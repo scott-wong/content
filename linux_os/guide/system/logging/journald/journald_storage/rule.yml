@@ -8,13 +8,13 @@ description: |-
     If the logs are only stored in volatile memory they will be lost upon reboot.
 
     <p><strong>中文说明：</strong></p>
-    journald 系统可以将日志文件存储在易失性内存中，也可以存储在本地磁盘上。如果日志仅存储在易失性内存中，则系统重启后日志将丢失。
+    <p>journald 系统可以将日志文件存储在易失性内存中，也可以存储在本地磁盘上。如果日志仅存储在易失性内存中，则系统重启后日志将丢失。</p>
 
 rationale: |-
     Log files contain valuable data and need to be persistent to aid in possible investigations.
 
     <p><strong>中文理由：</strong></p>
-    日志文件包含宝贵数据，必须持久保存，以支持可能的调查。
+    <p>日志文件包含宝贵数据，必须持久保存，以支持可能的调查。</p>
 
 severity: medium
 

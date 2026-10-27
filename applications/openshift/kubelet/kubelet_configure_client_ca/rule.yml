@@ -28,10 +28,9 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，Kubelet 未配置 CA 证书，这可能使 Kubelet 遭受中间人攻击。
+    <p>默认情况下，Kubelet 未配置 CA 证书，这可能使 Kubelet 遭受中间人攻击。
 
-    要配置客户端 CA 证书，请在 Kubelet 节点上编辑 Kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt>，并设置以下参数：
-
+    要配置客户端 CA 证书，请在 Kubelet 节点上编辑 Kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt>，并设置以下参数：</p>
     <pre>
     authentication:
     ...
@@ -47,7 +46,7 @@ rationale: |-
     the kubelet's identity.
 
     <p><strong>中文理由：</strong></p>
-    Kubelet 未配置 CA 证书会使其可能遭受中间人攻击，尤其是在不安全或不受信任的网络上。Kubelet 的证书验证允许 API 服务器验证 Kubelet 的身份。
+    <p>Kubelet 未配置 CA 证书会使其可能遭受中间人攻击，尤其是在不安全或不受信任的网络上。Kubelet 的证书验证允许 API 服务器验证 Kubelet 的身份。</p>
 
 severity: medium
 

@@ -10,7 +10,7 @@ description: |-
     integrity and ensuring continued operation even in the event of zone failures.
 
     <p><strong>中文说明：</strong></p>
-    将 Kubernetes 控制平面节点分布到不同故障域，可降低单点故障风险，并减轻 API 不可用或针对特定可用区的攻击所造成的影响，从而增强安全性。在不同故障域中维持三个 etcd 实例可确保容错能力，使系统能够达到法定人数，从而保护关键数据的完整性，并确保即使发生可用区故障也能持续运行。
+    <p>将 Kubernetes 控制平面节点分布到不同故障域，可降低单点故障风险，并减轻 API 不可用或针对特定可用区的攻击所造成的影响，从而增强安全性。在不同故障域中维持三个 etcd 实例可确保容错能力，使系统能够达到法定人数，从而保护关键数据的完整性，并确保即使发生可用区故障也能持续运行。</p>
 
 rationale: |-
     Distributing Kubernetes control plane nodes across failure zones is crucial for enhancing overall 
@@ -25,7 +25,7 @@ rationale: |-
     manually in other environments
 
     <p><strong>中文理由：</strong></p>
-    将 Kubernetes 控制平面节点分布到不同故障域对于增强系统整体韧性和安全性至关重要。通过将控制平面组件分散到不同可用区，系统可具备更强的容错能力，降低单区故障或攻击造成大范围中断的风险。在这些可用区中分布多个 etcd 实例可确保数据完整性和可用性，因为节点需要达到法定人数才能达成共识。使用三个可用区时，Kubernetes 可通过简单多数（即三选二）为 etcd 等关键组件实现法定人数，确保即使一个可用区发生故障，系统仍保持稳定。节点使用名为 <tt>topology.kubernetes.io/zone</tt> 的已知标签标记故障域。云提供程序会自动为每个节点分配此标签，但在其他环境中可能需要手动管理。
+    <p>将 Kubernetes 控制平面节点分布到不同故障域对于增强系统整体韧性和安全性至关重要。通过将控制平面组件分散到不同可用区，系统可具备更强的容错能力，降低单区故障或攻击造成大范围中断的风险。在这些可用区中分布多个 etcd 实例可确保数据完整性和可用性，因为节点需要达到法定人数才能达成共识。使用三个可用区时，Kubernetes 可通过简单多数（即三选二）为 etcd 等关键组件实现法定人数，确保即使一个可用区发生故障，系统仍保持稳定。节点使用名为 <tt>topology.kubernetes.io/zone</tt> 的已知标签标记故障域。云提供程序会自动为每个节点分配此标签，但在其他环境中可能需要手动管理。</p>
 
 identifiers:
     cce@ocp4: CCE-88713-3

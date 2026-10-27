@@ -20,14 +20,14 @@ description: |-
     to unlock a user. This should be done using the <tt>faillock</tt> tool.
 
     <p><strong>中文说明：</strong></p>
-    本规则配置系统在使用 <tt>pam_faillock.so</tt> 多次错误登录后，在指定时间段内锁定账户。
+    <p>本规则配置系统在使用 <tt>pam_faillock.so</tt> 多次错误登录后，在指定时间段内锁定账户。
 
     确保 <tt>/etc/security/faillock.conf</tt> 文件包含以下条目：
     <tt>unlock_time=&lt;interval-in-seconds&gt;</tt>，其中 <tt>interval-in-seconds</tt> 设置为 <tt>0</tt>，或设置为 <tt>{{{xccdf_value("var_accounts_passwords_pam_faillock_unlock_time") }}}</tt> 或更大值。
 
     <tt>pam_faillock.so</tt> 模块要求在 PAM 文件中配置多个条目。这些条目必须仔细定义才能按预期工作。为避免手动编辑这些文件时出错，建议根据操作系统版本使用适当工具，例如 <tt>authselect</tt> 或 <tt>authconfig</tt>。
 
-    如果 <tt>unlock_time</tt> 设置为 <tt>0</tt>，需要管理员手动干预才能解锁用户。应使用 <tt>faillock</tt> 工具完成此操作。
+    如果 <tt>unlock_time</tt> 设置为 <tt>0</tt>，需要管理员手动干预才能解锁用户。应使用 <tt>faillock</tt> 工具完成此操作。</p>
 
 rationale: |-
     By limiting the number of failed logon attempts the risk of unauthorized system
@@ -35,7 +35,7 @@ rationale: |-
     Limits are imposed by locking the account.
 
     <p><strong>中文理由：</strong></p>
-    通过限制失败的登录尝试次数，可降低未经授权人员通过猜测用户密码（即暴力破解）访问系统的风险。锁定账户可实施该限制。
+    <p>通过限制失败的登录尝试次数，可降低未经授权人员通过猜测用户密码（即暴力破解）访问系统的风险。锁定账户可实施该限制。</p>
 
 severity: medium
 

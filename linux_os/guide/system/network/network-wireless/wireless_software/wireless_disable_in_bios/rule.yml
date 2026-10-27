@@ -10,7 +10,7 @@ description: |-
     boot.
 
     <p><strong>中文说明：</strong></p>
-    某些内置无线支持的机器允许通过 BIOS 禁用该设备。这取决于具体硬件；请查阅硬件手册或在启动期间进入 BIOS 设置。
+    <p>某些内置无线支持的机器允许通过 BIOS 禁用该设备。这取决于具体硬件；请查阅硬件手册或在启动期间进入 BIOS 设置。</p>
 
 rationale: |-
     Disabling wireless support in the BIOS prevents easy
@@ -18,7 +18,7 @@ rationale: |-
     to reboot the system first.
 
     <p><strong>中文理由：</strong></p>
-    在 BIOS 中禁用无线支持可防止轻易激活无线接口，通常需要管理员先重启系统。
+    <p>在 BIOS 中禁用无线支持可防止轻易激活无线接口，通常需要管理员先重启系统。</p>
 
 severity: unknown
 

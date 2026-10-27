@@ -9,7 +9,7 @@ description: |-
     untrusted networks. {{{ describe_package_install(package="strongswan") }}}
 
     <p><strong>中文说明：</strong></p>
-    Strongswan 软件包提供 IPsec 和 IKE 实现，允许通过不受信任的网络创建安全隧道。应安装 <tt>strongswan</tt> 软件包。
+    <p>Strongswan 软件包提供 IPsec 和 IKE 实现，允许通过不受信任的网络创建安全隧道。应安装 <tt>strongswan</tt> 软件包。</p>
 
 rationale: |-
     Providing the ability for remote users or systems
@@ -17,7 +17,7 @@ rationale: |-
     transmitted over a wide area network.
 
     <p><strong>中文理由：</strong></p>
-    为远程用户或系统提供发起安全 VPN 连接的能力，可在信息通过广域网传输时保护信息。
+    <p>为远程用户或系统提供发起安全 VPN 连接的能力，可在信息通过广域网传输时保护信息。</p>
 
 severity: medium
 

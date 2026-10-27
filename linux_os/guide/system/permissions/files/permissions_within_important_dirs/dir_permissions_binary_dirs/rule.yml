@@ -17,7 +17,7 @@ description: |-
     <pre>$ sudo chmod go-w <i>DIR</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    系统可执行文件默认存储在以下目录中：
+    <p>系统可执行文件默认存储在以下目录中：</p>
     <pre>/bin
     /sbin
     /usr/bin
@@ -33,7 +33,7 @@ rationale: |-
     cannot be co-opted.
 
     <p><strong>中文理由：</strong></p>
-    系统二进制文件由特权用户和系统服务执行，必须使用限制性权限，以确保这些程序的执行无法被劫持利用。
+    <p>系统二进制文件由特权用户和系统服务执行，必须使用限制性权限，以确保这些程序的执行无法被劫持利用。</p>
 
 identifiers:
     cce@slmicro5: CCE-93801-9

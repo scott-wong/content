@@ -6,7 +6,7 @@ description: |-
         The telnet daemon should be uninstalled.
 
         <p><strong>中文说明：</strong></p>
-        应卸载 telnet 守护进程。
+        <p>应卸载 telnet 守护进程。</p>
 
 rationale: |-
         <tt>telnet</tt> allows clear text communications, and does not protect
@@ -14,7 +14,7 @@ rationale: |-
         can be listened and no integrity checking is made.'
 
         <p><strong>中文理由：</strong></p>
-        <tt>telnet</tt> 允许明文通信，不保护客户端与服务器之间的任何数据传输。任何机密数据都可能被监听，并且不会执行完整性检查。
+        <p><tt>telnet</tt> 允许明文通信，不保护客户端与服务器之间的任何数据传输。任何机密数据都可能被监听，并且不会执行完整性检查。</p>
 
 severity: high
 

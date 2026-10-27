@@ -8,16 +8,16 @@ description: |-
     This effectively prevents usage of this uncommon filesystem.
 
     <p><strong>中文说明：</strong></p>
-    要将系统配置为防止加载 <tt>hfsplus</tt> 内核模块，请将以下行添加到 <tt>/etc/modprobe.d/hfsplus.conf</tt> 文件：<tt>install hfsplus /bin/false</tt>。此条目会在安装 <tt>hfsplus</tt> 模块时返回非零值，并通过错误消息向用户说明该条目的含义。如果希望省略非零返回值和错误消息，可改为添加 <tt>install hfsplus /bin/true</tt>（OVAL 允许 <tt>/bin/true</tt> 和 <tt>/bin/false</tt>，扫描时均会接受）。在适用产品上，还可将 <tt>blacklist hfsplus</tt> 添加到同一文件，以配置系统防止使用该模块。
+    <p>要将系统配置为防止加载 <tt>hfsplus</tt> 内核模块，请将以下行添加到 <tt>/etc/modprobe.d/hfsplus.conf</tt> 文件：<tt>install hfsplus /bin/false</tt>。此条目会在安装 <tt>hfsplus</tt> 模块时返回非零值，并通过错误消息向用户说明该条目的含义。如果希望省略非零返回值和错误消息，可改为添加 <tt>install hfsplus /bin/true</tt>（OVAL 允许 <tt>/bin/true</tt> 和 <tt>/bin/false</tt>，扫描时均会接受）。在适用产品上，还可将 <tt>blacklist hfsplus</tt> 添加到同一文件，以配置系统防止使用该模块。
 
-    这可有效防止使用这种不常见的文件系统。
+    这可有效防止使用这种不常见的文件系统。</p>
 
 rationale: |-
     Linux kernel modules which implement filesystems that are not needed by the
     local system should be disabled.
 
     <p><strong>中文理由：</strong></p>
-    禁用本地系统不需要的、用于实现文件系统的 Linux 内核模块。
+    <p>禁用本地系统不需要的、用于实现文件系统的 Linux 内核模块。</p>
 
 severity: low
 

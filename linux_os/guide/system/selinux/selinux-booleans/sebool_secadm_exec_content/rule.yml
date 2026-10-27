@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_enable(sebool="secadm_exec_content") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>secadm_exec_content</tt> 处于启用状态。如果该设置为禁用状态，应将其启用。
-    应启用 SELinux 布尔值 <tt>secadm_exec_content</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>secadm_exec_content</tt> 处于启用状态。如果该设置为禁用状态，应将其启用。
+    应启用 SELinux 布尔值 <tt>secadm_exec_content</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用此布尔值可允许安全管理员执行内容，同时 SELinux 继续限制其他访问，以支持必要的安全管理操作。
+    <p>启用此布尔值可允许安全管理员执行内容，同时 SELinux 继续限制其他访问，以支持必要的安全管理操作。</p>
 
 severity: medium
 

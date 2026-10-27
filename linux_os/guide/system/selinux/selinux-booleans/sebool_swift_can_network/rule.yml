@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="swift_can_network") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>swift_can_network</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>swift_can_network</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P swift_can_network off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>swift_can_network</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>swift_can_network</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P swift_can_network off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 Swift 服务发起任意网络连接会扩大网络攻击面。
+    <p>允许 Swift 服务发起任意网络连接会扩大网络攻击面。</p>
 
 severity: medium
 

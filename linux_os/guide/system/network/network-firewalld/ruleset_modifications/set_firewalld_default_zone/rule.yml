@@ -11,7 +11,7 @@ description: |-
     <pre>DefaultZone=drop</pre>
 
     <p><strong>中文说明：</strong></p>
-    要为处理传入 IPv4 和 IPv6 数据包的内置默认区域将默认区域设置为 <tt>drop</tt>，请将 <tt>/etc/firewalld/firewalld.conf</tt> 中的以下行修改为：
+    <p>要为处理传入 IPv4 和 IPv6 数据包的内置默认区域将默认区域设置为 <tt>drop</tt>，请将 <tt>/etc/firewalld/firewalld.conf</tt> 中的以下行修改为：</p>
     <pre>DefaultZone=drop</pre>
 
 rationale: |-
@@ -22,7 +22,7 @@ rationale: |-
     accepted.
 
     <p><strong>中文理由：</strong></p>
-    在 <tt>firewalld</tt> 中，仅当检查表中所有适用规则后，才应用默认区域。将默认区域设置为 <tt>drop</tt> 可实现防火墙的正确设计，即任何未明确允许的数据包都不应被接受。
+    <p>在 <tt>firewalld</tt> 中，仅当检查表中所有适用规则后，才应用默认区域。将默认区域设置为 <tt>drop</tt> 可实现防火墙的正确设计，即任何未明确允许的数据包都不应被接受。</p>
 
 severity: medium
 

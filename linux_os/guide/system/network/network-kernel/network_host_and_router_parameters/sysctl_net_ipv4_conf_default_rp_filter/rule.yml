@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.default.rp_filter", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>net.ipv4.conf.default.rp_filter</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.rp_filter=1</tt>；要持久化，请将 <tt>net.ipv4.conf.default.rp_filter = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>net.ipv4.conf.default.rp_filter</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.rp_filter=1</tt>；要持久化，请将 <tt>net.ipv4.conf.default.rp_filter = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     Enabling reverse path filtering drops packets with source addresses
@@ -17,7 +17,7 @@ rationale: |-
     networks.
 
     <p><strong>中文理由：</strong></p>
-    启用反向路径过滤会丢弃源地址本不应从接收接口到达的数据包。对于复杂网络中的路由器，不应使用该设置，但对终端主机和提供小型网络服务的路由器有帮助。
+    <p>启用反向路径过滤会丢弃源地址本不应从接收接口到达的数据包。对于复杂网络中的路由器，不应使用该设置，但对终端主机和提供小型网络服务的路由器有帮助。</p>
 
 severity: medium
 

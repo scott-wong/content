@@ -33,7 +33,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    为确保 API Server 配置为仅使用强密码算法，请验证 <tt>openshift-kube-apiserver</tt> configmap 包含以下密码套件集合且未增补其他项：
+    <p>为确保 API Server 配置为仅使用强密码算法，请验证 <tt>openshift-kube-apiserver</tt> configmap 包含以下密码套件集合且未增补其他项：</p>
     <pre>
     "servingInfo":{
       ...
@@ -58,7 +58,7 @@ rationale: |-
     weakening the protection provided.
 
     <p><strong>中文理由：</strong></p>
-    TLS 密码套件存在若干已知漏洞和弱点，可能降低所提供的保护。默认情况下，OpenShift 支持多种 TLS 密码套件，其中一些存在安全问题，从而削弱所提供的保护。
+    <p>TLS 密码套件存在若干已知漏洞和弱点，可能降低所提供的保护。默认情况下，OpenShift 支持多种 TLS 密码套件，其中一些存在安全问题，从而削弱所提供的保护。</p>
 
 severity: medium
 

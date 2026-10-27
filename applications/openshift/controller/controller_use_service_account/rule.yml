@@ -26,7 +26,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    为确保使用各个服务账户的凭据，请在主节点上的 <tt>openshift-kube-controller-manager</tt> configmap 中将 <tt>use-service-account-credentials</tt> 选项设置为 <tt>true</tt>：
+    <p>为确保使用各个服务账户的凭据，请在主节点上的 <tt>openshift-kube-controller-manager</tt> configmap 中将 <tt>use-service-account-credentials</tt> 选项设置为 <tt>true</tt>：</p>
     <pre>
     "extendedArguments": {
     ...
@@ -48,7 +48,7 @@ rationale: |-
     perform their intended tasks.
 
     <p><strong>中文理由：</strong></p>
-    控制器管理器会在 <tt>kube-system</tt> 命名空间中为每个控制器创建服务账户，为其生成 API 令牌和凭据，然后构建供每个控制器循环使用的专用 API 客户端。将 <tt>use-service-account-credentials</tt> 设置为 <tt>true</tt> 后，控制器管理器内的每个控制循环都会使用独立的服务账户凭据运行。与 RBAC 结合使用时，这可确保控制循环仅具有执行预期任务所需的最低权限。
+    <p>控制器管理器会在 <tt>kube-system</tt> 命名空间中为每个控制器创建服务账户，为其生成 API 令牌和凭据，然后构建供每个控制器循环使用的专用 API 客户端。将 <tt>use-service-account-credentials</tt> 设置为 <tt>true</tt> 后，控制器管理器内的每个控制循环都会使用独立的服务账户凭据运行。与 RBAC 结合使用时，这可确保控制循环仅具有执行预期任务所需的最低权限。</p>
 
 severity: medium
 

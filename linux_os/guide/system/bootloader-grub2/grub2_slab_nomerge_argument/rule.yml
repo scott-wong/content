@@ -13,11 +13,11 @@ description: |-
     {{{ describe_grub2_argument("slab_nomerge=yes") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    内核可能合并相似的 slab，以降低开销并提高对象的缓存热度。禁用 slab 合并可保持 slab 分离，并降低内核堆溢出覆盖合并缓存中对象的风险。
+    <p>内核可能合并相似的 slab，以降低开销并提高对象的缓存热度。禁用 slab 合并可保持 slab 分离，并降低内核堆溢出覆盖合并缓存中对象的风险。
 
     要禁用内核中的 slab 合并，请将参数 <tt>slab_nomerge=yes</tt> 添加到 Linux 操作系统的默认 GRUB 2 命令行。
 
-    为确保新安装的内核将 <tt>slab_nomerge=yes</tt> 作为内核命令行参数，请按产品要求将 <tt>slab_nomerge=yes</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+    为确保新安装的内核将 <tt>slab_nomerge=yes</tt> 作为内核命令行参数，请按产品要求将 <tt>slab_nomerge=yes</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。</p>
 
 rationale: |-
     Disabling the merge of slabs of similar sizes prevents the kernel from
@@ -27,7 +27,7 @@ rationale: |-
     Overall, this reduces the kernel attack surface area by isolating slabs from each other.
 
     <p><strong>中文理由：</strong></p>
-    禁用相似大小 slab 的合并可防止内核将看似无用但存在漏洞的 slab 与有用且价值高的 slab 合并。这会降低堆溢出覆盖合并缓存中对象的风险；对于未合并缓存，堆溢出只会影响同一缓存中的对象。总体而言，这通过将 slab 相互隔离来减小内核攻击面。
+    <p>禁用相似大小 slab 的合并可防止内核将看似无用但存在漏洞的 slab 与有用且价值高的 slab 合并。这会降低堆溢出覆盖合并缓存中对象的风险；对于未合并缓存，堆溢出只会影响同一缓存中的对象。总体而言，这通过将 slab 相互隔离来减小内核攻击面。</p>
 
 warnings:
     - performance: |-

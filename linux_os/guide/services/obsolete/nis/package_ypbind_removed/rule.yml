@@ -10,7 +10,7 @@ description: |-
     and receive the distributed configuration files.
 
     <p><strong>中文说明：</strong></p>
-    Network Information Service（NIS），以前称为 Yellow Pages，是一种客户端-服务器目录服务协议，用于分发系统配置文件。NIS 客户端（<tt>ypbind</tt>）用于将系统绑定到 NIS 服务器并接收分发的配置文件。
+    <p>Network Information Service（NIS），以前称为 Yellow Pages，是一种客户端-服务器目录服务协议，用于分发系统配置文件。NIS 客户端（<tt>ypbind</tt>）用于将系统绑定到 NIS 服务器并接收分发的配置文件。</p>
 
 rationale: |-
     The NIS service is inherently an insecure system that has been vulnerable
@@ -20,7 +20,7 @@ rationale: |-
     removed.
 
     <p><strong>中文理由：</strong></p>
-    NIS 服务本质上是一个不安全的系统，容易受到 DoS 攻击和缓冲区溢出影响，并且查询 NIS 映射时的身份验证能力很差。NIS 通常已被 Lightweight Directory Access Protocol（LDAP）等协议取代。建议删除该服务。
+    <p>NIS 服务本质上是一个不安全的系统，容易受到 DoS 攻击和缓冲区溢出影响，并且查询 NIS 映射时的身份验证能力很差。NIS 通常已被 Lightweight Directory Access Protocol（LDAP）等协议取代。建议删除该服务。</p>
 
 severity: unknown
 

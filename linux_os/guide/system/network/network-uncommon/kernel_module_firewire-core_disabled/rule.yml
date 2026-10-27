@@ -9,15 +9,15 @@ description: |-
     {{{ describe_module_disable(module="firewire-core") }}}
 
     <p><strong>中文说明：</strong></p>
-    IEEE 1394（FireWire）是一种用于高速实时通信的串行总线标准。
-    应禁用内核模块 <tt>firewire-core</tt>。
+    <p>IEEE 1394（FireWire）是一种用于高速实时通信的串行总线标准。
+    应禁用内核模块 <tt>firewire-core</tt>。</p>
 
 rationale: |-
     Disabling FireWire protects the system against exploitation of any
     flaws in its implementation.
 
     <p><strong>中文理由：</strong></p>
-    禁用该内核模块可防止攻击者利用其实现中的缺陷。
+    <p>禁用该内核模块可防止攻击者利用其实现中的缺陷。</p>
 
 severity: low
 

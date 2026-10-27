@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="nagios_run_sudo") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>nagios_run_sudo</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>nagios_run_sudo</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P nagios_run_sudo off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>nagios_run_sudo</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>nagios_run_sudo</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P nagios_run_sudo off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 Nagios 使用 sudo，避免监控服务通过权限提升执行命令。
+    <p>禁用后，可防止 Nagios 使用 sudo，避免监控服务通过权限提升执行命令。</p>
 
 severity: medium
 

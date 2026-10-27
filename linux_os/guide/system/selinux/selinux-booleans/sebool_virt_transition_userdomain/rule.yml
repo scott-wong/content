@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="virt_transition_userdomain") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>virt_transition_userdomain</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>virt_transition_userdomain</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_transition_userdomain off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>virt_transition_userdomain</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>virt_transition_userdomain</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_transition_userdomain off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许虚拟化进程转换到用户域会扩大域转换路径；除非明确需要，否则应保持禁用。
+    <p>允许虚拟化进程转换到用户域会扩大域转换路径；除非明确需要，否则应保持禁用。</p>
 
 severity: medium
 

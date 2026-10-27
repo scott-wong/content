@@ -9,7 +9,7 @@ description: |-
     <pre>$ sudo chage -m 1 <i>USER</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    配置不符合要求的账户强制执行 24 小时/1 天的密码最短使用期限，请运行以下命令：
+    <p>配置不符合要求的账户强制执行 24 小时/1 天的密码最短使用期限，请运行以下命令：</p>
     <pre>$ sudo chage -m 1 <i>USER</i></pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     organization's policy regarding password reuse.
 
     <p><strong>中文理由：</strong></p>
-    强制设置密码最短使用期限有助于防止用户反复更改密码，从而规避密码重用或历史记录要求。如果允许用户立即并持续更改密码，则用户可在短时间内反复更改密码，从而规避组织关于密码重用的策略。
+    <p>强制设置密码最短使用期限有助于防止用户反复更改密码，从而规避密码重用或历史记录要求。如果允许用户立即并持续更改密码，则用户可在短时间内反复更改密码，从而规避组织关于密码重用的策略。</p>
 
 severity: medium
 

@@ -14,18 +14,18 @@ description: |-
     {{{ describe_grub2_argument("mce=0") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    机器检查异常（MCE）是 CPU 检测到自身、内存或 I/O 设备中的错误时生成的错误。这些错误可能被纠正并生成检查日志条目；如果错误无法纠正，内核可能触发 panic 或 SIGBUS。
+    <p>机器检查异常（MCE）是 CPU 检测到自身、内存或 I/O 设备中的错误时生成的错误。这些错误可能被纠正并生成检查日志条目；如果错误无法纠正，内核可能触发 panic 或 SIGBUS。
 
     要强制内核在任何机器检查报告的未纠正错误上触发 panic，请通过添加 <tt>mce=0</tt> 将 MCE 容限设置为零。
 
-    为确保新安装的内核将 <tt>mce=0</tt> 作为内核命令行参数，请按产品要求将 <tt>mce=0</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+    为确保新安装的内核将 <tt>mce=0</tt> 作为内核命令行参数，请按产品要求将 <tt>mce=0</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。</p>
 
 rationale: |-
     Allowing uncorrected errors to result on a SIGBUS may allow an attacker to continue
     trying to exploit a vulnerability such as Rowhammer.
 
     <p><strong>中文理由：</strong></p>
-    允许未纠正错误导致 SIGBUS，可能使攻击者继续尝试利用 Rowhammer 等漏洞。
+    <p>允许未纠正错误导致 SIGBUS，可能使攻击者继续尝试利用 Rowhammer 等漏洞。</p>
 
 severity: medium
 

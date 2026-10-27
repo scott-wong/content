@@ -9,7 +9,7 @@ description: |-
     network.
 
     <p><strong>中文说明：</strong></p>
-    配置环回接口以接受流量。配置所有其他接口拒绝发往环回网络的流量。
+    <p>配置环回接口以接受流量。配置所有其他接口拒绝发往环回网络的流量。</p>
 
 rationale: |-
     Loopback traffic is generated between processes on machine and is
@@ -19,7 +19,7 @@ rationale: |-
     anti-spoofing measure.
 
     <p><strong>中文理由：</strong></p>
-    环回流量在机器上的进程之间生成，通常对系统运行至关重要。环回接口是唯一应看到环回流量的位置，所有其他接口都应忽略该网络上的流量，作为反欺骗措施。
+    <p>环回流量在机器上的进程之间生成，通常对系统运行至关重要。环回接口是唯一应看到环回流量的位置，所有其他接口都应忽略该网络上的流量，作为反欺骗措施。</p>
 
 severity: medium
 

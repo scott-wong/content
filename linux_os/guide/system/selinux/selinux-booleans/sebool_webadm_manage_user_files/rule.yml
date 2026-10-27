@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="webadm_manage_user_files") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>webadm_manage_user_files</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>webadm_manage_user_files</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P webadm_manage_user_files off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>webadm_manage_user_files</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>webadm_manage_user_files</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P webadm_manage_user_files off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 Web 管理员管理用户文件会授予其超出管理任务所需的文件访问权限。
+    <p>允许 Web 管理员管理用户文件会授予其超出管理任务所需的文件访问权限。</p>
 
 severity: medium
 

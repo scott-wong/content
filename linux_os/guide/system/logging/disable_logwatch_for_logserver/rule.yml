@@ -13,13 +13,14 @@ description: |-
     easier and less time-intensive for administrators.
 
     <p><strong>中文说明：</strong></p>
-    您的站点是否有已配置为报告从所有系统接收日志的中央日志服务器？如果有：
+    <p>您的站点是否有已配置为报告从所有系统接收日志的中央日志服务器？如果有：</p>
     <pre>$ sudo rm /etc/cron.daily/0logwatch</pre>
     如果不存在日志服务器，则每台系统都需要单独运行 Logwatch。使用中央日志服务器可提供前面讨论的安全性和可靠性优势，还可使管理员更轻松、更省时地监控日志。
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    如果中央日志服务器已汇总所有系统的日志，则应禁用各系统上重复的本地 Logwatch 任务，以避免重复报告和增加管理员负担。
+    <p>如果中央日志服务器已汇总所有系统的日志，则应禁用各系统上重复的本地 Logwatch 任务，以避免重复报告和增加管理员负担。</p>
 
 severity: unknown
 

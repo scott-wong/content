@@ -13,9 +13,9 @@ description: |-
     <pre>ssl_key = &lt;/etc/pki/dovecot/private/dovecot.pem</pre>
 
     <p><strong>中文说明：</strong></p>
-    此选项指定 Dovecot 在何处查找邮件服务器的 SSL 密钥。
+    <p>此选项指定 Dovecot 在何处查找邮件服务器的 SSL 密钥。
     <br /><br />
-    编辑 <tt>/etc/dovecot/conf.d/10-ssl.conf</tt>，并添加或更正以下行（<i>注意：以下路径是 Dovecot 安装设置的默认路径。如果使用其他路径，请确保引用相应文件</i>）：
+    编辑 <tt>/etc/dovecot/conf.d/10-ssl.conf</tt>，并添加或更正以下行（<i>注意：以下路径是 Dovecot 安装设置的默认路径。如果使用其他路径，请确保引用相应文件</i>）：</p>
     <pre>ssl_key = &lt;/etc/pki/dovecot/private/dovecot.pem</pre>
 
 rationale: |-
@@ -26,7 +26,7 @@ rationale: |-
     network.
 
     <p><strong>中文理由：</strong></p>
-    客户端使用 SSL 证书验证服务器身份，并加密凭据和邮件流量。如果不使用 SSL 加密邮件服务器流量，凭据和邮件消息可能以明文通过网络发送，从而导致未授权访问。
+    <p>客户端使用 SSL 证书验证服务器身份，并加密凭据和邮件流量。如果不使用 SSL 加密邮件服务器流量，凭据和邮件消息可能以明文通过网络发送，从而导致未授权访问。</p>
 
 severity: unknown
 

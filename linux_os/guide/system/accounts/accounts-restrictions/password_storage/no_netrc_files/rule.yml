@@ -10,14 +10,14 @@ description: |-
     users and should not be used.  Any <tt>.netrc</tt> files should be removed.
 
     <p><strong>中文说明：</strong></p>
-    <tt>.netrc</tt> 文件包含用于自动登录 FTP 服务器的登录信息，并位于用户主目录中。这些文件可能包含远程 FTP 服务器的未加密密码，容易被未授权用户访问，因此不应使用。应移除任何 <tt>.netrc</tt> 文件。
+    <p><tt>.netrc</tt> 文件包含用于自动登录 FTP 服务器的登录信息，并位于用户主目录中。这些文件可能包含远程 FTP 服务器的未加密密码，容易被未授权用户访问，因此不应使用。应移除任何 <tt>.netrc</tt> 文件。</p>
 
 rationale: |-
     Unencrypted passwords for remote FTP servers may be stored in <tt>.netrc</tt>
     files.
 
     <p><strong>中文理由：</strong></p>
-    远程 FTP 服务器的未加密密码可能存储在 <tt>.netrc</tt> 文件中。
+    <p>远程 FTP 服务器的未加密密码可能存储在 <tt>.netrc</tt> 文件中。</p>
 
 severity: medium
 

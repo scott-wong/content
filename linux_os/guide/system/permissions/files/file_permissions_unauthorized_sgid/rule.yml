@@ -14,7 +14,7 @@ description: |-
     through an RPM will be flagged for further review.
 
     <p><strong>中文说明：</strong></p>
-    SGID（set group id）位应仅设置在通过授权方式安装的文件上。识别未经授权的 SGID 文件的一种直接方法是确定是否有文件不是作为 RPM 软件包的一部分安装的，而 RPM 软件包经过密码学验证。请调查任何未打包 SGID 文件的来源。此配置检查将通过 RPM 安装的 SGID 文件视为授权文件。假定个人拥有安装 RPM 的 sudo 访问权限且所有软件包均使用组织认可的 GPG 密钥签名时，该软件应被视为系统上已批准的软件包。任何不是通过 RPM 部署的 SGID 文件都将被标记以供进一步审查。
+    <p>SGID（set group id）位应仅设置在通过授权方式安装的文件上。识别未经授权的 SGID 文件的一种直接方法是确定是否有文件不是作为 RPM 软件包的一部分安装的，而 RPM 软件包经过密码学验证。请调查任何未打包 SGID 文件的来源。此配置检查将通过 RPM 安装的 SGID 文件视为授权文件。假定个人拥有安装 RPM 的 sudo 访问权限且所有软件包均使用组织认可的 GPG 密钥签名时，该软件应被视为系统上已批准的软件包。任何不是通过 RPM 部署的 SGID 文件都将被标记以供进一步审查。</p>
 
 rationale: |-
     Executable files with the SGID permission run with the privileges of the owner of the file.
@@ -22,7 +22,7 @@ rationale: |-
     The presence of these files should be strictly controlled on the system.
 
     <p><strong>中文理由：</strong></p>
-    具有 SGID 权限的可执行文件以文件所有者的权限运行。来源不确定的 SGID 文件可能使非特权用户提升权限。应严格控制这些文件在系统上的存在。
+    <p>具有 SGID 权限的可执行文件以文件所有者的权限运行。来源不确定的 SGID 文件可能使非特权用户提升权限。应严格控制这些文件在系统上的存在。</p>
 
 severity: medium
 

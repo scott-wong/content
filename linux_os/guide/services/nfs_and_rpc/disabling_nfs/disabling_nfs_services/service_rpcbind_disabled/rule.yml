@@ -13,14 +13,14 @@ description: |-
     {{{ describe_service_disable(service="rpcbind") }}}
 
     <p><strong>中文说明：</strong></p>
-    rpcbind 工具将 RPC 服务映射到其侦听端口。RPC 进程启动时会通知 rpcbind，注册其侦听端口以及预期提供的 RPC 程序编号。rpcbind 服务会将客户端重定向到正确的端口号，以便其与请求的服务通信。如果系统不需要 RPC（例如作为 NFS 服务器），则应禁用此服务。应禁用 <tt>rpcbind</tt> 服务。
+    <p>rpcbind 工具将 RPC 服务映射到其侦听端口。RPC 进程启动时会通知 rpcbind，注册其侦听端口以及预期提供的 RPC 程序编号。rpcbind 服务会将客户端重定向到正确的端口号，以便其与请求的服务通信。如果系统不需要 RPC（例如作为 NFS 服务器），则应禁用此服务。应禁用 <tt>rpcbind</tt> 服务。</p>
 
 rationale: |-
     If the system does not require rpc based services, it is recommended that
     rpcbind be disabled to reduce the attack surface.
 
     <p><strong>中文理由：</strong></p>
-    如果系统不需要基于 RPC 的服务，建议禁用 rpcbind，以减少攻击面。
+    <p>如果系统不需要基于 RPC 的服务，建议禁用 rpcbind，以减少攻击面。</p>
 
 severity: low
 

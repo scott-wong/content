@@ -31,9 +31,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    在 <tt>/etc/profile</tt> 中设置 <tt>TMOUT</tt> 选项可确保所有用户会话在空闲后终止。值 <tt>0</tt>（零）会禁用自动注销功能，因此不符合要求。TMOUT 的值应为正整数，并应导出且设为只读。应将 <tt>TMOUT</tt>
+    <p>在 <tt>/etc/profile</tt> 中设置 <tt>TMOUT</tt> 选项可确保所有用户会话在空闲后终止。值 <tt>0</tt>（零）会禁用自动注销功能，因此不符合要求。TMOUT 的值应为正整数，并应导出且设为只读。应将 <tt>TMOUT</tt>
     {{% if 'sle' in product or 'slmicro' in product %}}
-    设置于 <tt>/etc/profile.d/autologout.sh</tt>，内容如下：
+    设置于 <tt>/etc/profile.d/autologout.sh</tt>，内容如下：</p>
     <pre>TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</pre>
     readonly TMOUT
     export TMOUT
@@ -58,7 +58,7 @@ rationale: |-
     left unattended.
 
     <p><strong>中文理由：</strong></p>
-    在短时间内终止空闲会话，可缩短未授权人员控制无人值守控制台或控制台端口上启用的管理会话的时间窗口。
+    <p>在短时间内终止空闲会话，可缩短未授权人员控制无人值守控制台或控制台端口上启用的管理会话的时间窗口。</p>
 
 severity: medium
 

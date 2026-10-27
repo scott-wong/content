@@ -8,15 +8,15 @@ description: |-
     {{{ describe_service_enable(service="rngd") }}}
 
     <p><strong>中文说明：</strong></p>
-    应启用 Hardware RNG Entropy Gatherer 服务。
-    要启用 <tt>rngd</tt> 服务，请运行 <tt>sudo systemctl enable --now rngd</tt>。
+    <p>应启用 Hardware RNG Entropy Gatherer 服务。
+    要启用 <tt>rngd</tt> 服务，请运行 <tt>sudo systemctl enable --now rngd</tt>。</p>
 
 rationale: |-
     The <tt>rngd</tt> service
     feeds random data from hardware device to kernel random device.
 
     <p><strong>中文理由：</strong></p>
-    <tt>rngd</tt> 服务将硬件设备产生的随机数据提供给内核随机设备。
+    <p><tt>rngd</tt> 服务将硬件设备产生的随机数据提供给内核随机设备。</p>
 
 severity: low
 

@@ -12,7 +12,7 @@ description: |-
     <pre>firewall-cmd --permanent --add-service=<i>service_name</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    将 <tt>firewalld</tt> 端口配置为允许经批准的服务访问系统。要将 <tt>firewalld</tt> 配置为打开端口，请运行以下命令：
+    <p>将 <tt>firewalld</tt> 端口配置为允许经批准的服务访问系统。要将 <tt>firewalld</tt> 配置为打开端口，请运行以下命令：</p>
     <pre>firewall-cmd --permanent --add-port=<i>port_number/tcp</i></pre>
     要将 <tt>firewalld</tt> 配置为允许访问预定义服务，请运行以下命令：
     <pre>firewall-cmd --permanent --add-service=<i>service_name</i></pre>
@@ -36,11 +36,11 @@ rationale: |-
     conduct official business.
 
     <p><strong>中文理由：</strong></p>
-    为防止未授权连接设备、未授权传输信息或未授权隧道传输（即在数据类型中嵌入其他数据类型），组织必须禁用或限制信息系统中未使用或不必要的物理和逻辑端口/协议。
+    <p>为防止未授权连接设备、未授权传输信息或未授权隧道传输（即在数据类型中嵌入其他数据类型），组织必须禁用或限制信息系统中未使用或不必要的物理和逻辑端口/协议。
     <br /><br />
     操作系统能够提供多种功能和服务。默认提供的某些功能和服务可能并非支持基本组织运行所必需。此外，有时从单一组件提供多个服务（例如 VPN 和 IPS）很方便；但是，与限制单个组件提供的服务相比，这样做会增加风险。
     <br /><br />
-    为支持最小功能要求和原则，操作系统必须支持组织要求，仅提供必要能力，并将端口、协议和/或服务的使用限制为执行公务所需、授权和批准的范围内。
+    为支持最小功能要求和原则，操作系统必须支持组织要求，仅提供必要能力，并将端口、协议和/或服务的使用限制为执行公务所需、授权和批准的范围内。</p>
 
 severity: medium
 

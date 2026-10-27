@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="zebra_write_config") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>zebra_write_config</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P zebra_write_config off</tt> 将其禁用。
+    <p>默认情况下，SELinux 布尔值 <tt>zebra_write_config</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P zebra_write_config off</tt> 将其禁用。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用此布尔值会允许 Zebra 写入路由配置，可能使路由服务获得不必要的系统配置修改能力。
+    <p>启用此布尔值会允许 Zebra 写入路由配置，可能使路由服务获得不必要的系统配置修改能力。</p>
 
 severity: medium
 

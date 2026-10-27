@@ -12,7 +12,7 @@ description: |-
     <pre>/etc/dconf/db/local.d</pre>
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，DConf 使用二进制数据库作为数据后端。系统级数据库由 <tt>/etc/dconf/db/</tt> 目录中的键文件通过以下命令编译：
+    <p>默认情况下，DConf 使用二进制数据库作为数据后端。系统级数据库由 <tt>/etc/dconf/db/</tt> 目录中的键文件通过以下命令编译：</p>
     <pre>dconf update</pre>
     更具体地说，内容包括以下目录中的内容：
     <pre>/etc/dconf/db/{{{dconf_gdm_dir}}}</pre>
@@ -25,7 +25,7 @@ rationale: |-
     which gives confidence that it reflects them.
 
     <p><strong>中文理由：</strong></p>
-    与基于文本的键文件不同，二进制数据库无法由 OVAL 检查。因此，要评估 dconf 配置，必须同时满足以下两个条件：配置文件必须合规，并且数据库必须比这些键文件更新，才能确认数据库反映了这些配置。
+    <p>与基于文本的键文件不同，二进制数据库无法由 OVAL 检查。因此，要评估 dconf 配置，必须同时满足以下两个条件：配置文件必须合规，并且数据库必须比这些键文件更新，才能确认数据库反映了这些配置。</p>
 
 severity: high
 

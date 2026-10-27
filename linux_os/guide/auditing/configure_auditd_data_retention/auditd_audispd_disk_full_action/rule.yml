@@ -15,8 +15,8 @@ description: |-
     determined.
 
     <p><strong>中文说明：</strong></p>
-    配置审计记录写入磁盘已满时操作系统采取的操作。编辑文件 <tt>{{ audisp_conf_path }}/audisp-remote.conf</tt>。
-    适当替换 <i>ACTION</i>，添加或修改以下行：
+    <p>配置审计记录写入磁盘已满时操作系统采取的操作。编辑文件 <tt>{{ audisp_conf_path }}/audisp-remote.conf</tt>。
+    适当替换 <i>ACTION</i>，添加或修改以下行：</p>
     <pre>disk_full_action = <i>ACTION</i></pre>
     将该值设置为 <tt>single</tt>，使系统切换到单用户模式以执行纠正操作。可接受的值还包括 <tt>syslog</tt> 和 <tt>halt</tt>。对于某些系统，可用性需求高于记录所有操作的需求，应确定不同的设置。
 
@@ -25,7 +25,7 @@ rationale: |-
     minimize the possibility of losing audit records.
 
     <p><strong>中文理由：</strong></p>
-    在审计存储卷已满时采取适当操作，可最大限度减少审计记录丢失的可能性。
+    <p>在审计存储卷已满时采取适当操作，可最大限度减少审计记录丢失的可能性。</p>
 
 severity: medium
 

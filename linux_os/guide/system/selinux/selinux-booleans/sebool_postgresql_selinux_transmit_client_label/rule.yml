@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="postgresql_selinux_transmit_client_label") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>postgresql_selinux_transmit_client_label</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>postgresql_selinux_transmit_client_label</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>postgresql_selinux_transmit_client_label</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>postgresql_selinux_transmit_client_label</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用客户端标签传输可减少标签信息暴露，并避免不必要的客户端标签传播。
+    <p>禁用客户端标签传输可减少标签信息暴露，并避免不必要的客户端标签传播。</p>
 
 severity: medium
 

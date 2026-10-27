@@ -9,13 +9,13 @@ description: |-
     thus control over the entire system.
 
     <p><strong>中文说明：</strong></p>
-    有多种方法可以直接访问 root 账户。如果未设置密码，任何用户都可能获得访问权限，从而控制整个系统。
+    <p>有多种方法可以直接访问 root 账户。如果未设置密码，任何用户都可能获得访问权限，从而控制整个系统。</p>
 
 rationale: |-
     Access to root should be secured at all times.
 
     <p><strong>中文理由：</strong></p>
-    必须始终保护对 root 的访问。
+    <p>必须始终保护对 root 的访问。</p>
 
 severity: medium
 

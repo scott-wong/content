@@ -9,15 +9,15 @@ description: |-
     {{{ describe_audit_rules_watch("/var/run/utmp", "session") }}}
 
     <p><strong>中文说明：</strong></p>
-    审计系统已为所有用户和 root 收集进程信息。
-    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将监视 <tt>/var/run/utmp</tt> 且审计键为 <tt>session</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将相应规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+    <p>审计系统已为所有用户和 root 收集进程信息。
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将监视 <tt>/var/run/utmp</tt> 且审计键为 <tt>session</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将相应规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。</p>
 
 rationale: |-
     Manual editing of these files may indicate nefarious activity, such
     as an attacker attempting to remove evidence of an intrusion.
 
     <p><strong>中文理由：</strong></p>
-    手动编辑这些文件可能表明恶意活动，例如攻击者试图删除入侵证据。
+    <p>手动编辑这些文件可能表明恶意活动，例如攻击者试图删除入侵证据。</p>
 
 severity: medium
 

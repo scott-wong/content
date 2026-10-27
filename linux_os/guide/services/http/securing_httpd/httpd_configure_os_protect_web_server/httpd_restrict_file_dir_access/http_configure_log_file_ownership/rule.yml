@@ -10,7 +10,7 @@ description: |-
     {{{ describe_file_owner(file="/var/log/httpd/*", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    所有 <tt>httpd</tt> 日志必须由 root 用户和 root 组拥有。默认情况下，<tt>httpd</tt> 日志的路径为 <tt>/var/log/httpd/</tt>。应确保 <tt>/var/log/httpd</tt> 及其中的文件由 root 拥有，可使用 <tt>sudo chown root /var/log/httpd /var/log/httpd/*</tt> 等命令进行设置。
+    <p>所有 <tt>httpd</tt> 日志必须由 root 用户和 root 组拥有。默认情况下，<tt>httpd</tt> 日志的路径为 <tt>/var/log/httpd/</tt>。应确保 <tt>/var/log/httpd</tt> 及其中的文件由 root 拥有，可使用 <tt>sudo chown root /var/log/httpd /var/log/httpd/*</tt> 等命令进行设置。</p>
 
 rationale: |-
     A major tool in exploring the web site use, attempted use, unusual conditions,
@@ -20,7 +20,7 @@ rationale: |-
     critical that only authorized individuals have access to the logs.
 
     <p><strong>中文理由：</strong></p>
-    访问日志和错误日志是研究网站使用情况、尝试使用情况、异常状况和问题的主要工具。发生安全事件时，这些日志可为 SA 和 Web 管理员提供有价值的信息。由于日志中会记录信息，只有经过授权的人员才能访问这些日志，这一点至关重要。
+    <p>访问日志和错误日志是研究网站使用情况、尝试使用情况、异常状况和问题的主要工具。发生安全事件时，这些日志可为 SA 和 Web 管理员提供有价值的信息。由于日志中会记录信息，只有经过授权的人员才能访问这些日志，这一点至关重要。</p>
 
 severity: medium
 

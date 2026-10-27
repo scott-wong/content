@@ -12,9 +12,9 @@ description: |-
     with workloads of lower protection requirements.
 
     <p><strong>中文说明：</strong></p>
-    使用节点或集群隔离具有高保护要求的工作负载。
+    <p>使用节点或集群隔离具有高保护要求的工作负载。
 
-    运行以下命令，查看 Pod 及其在节点上的部署方式。
+    运行以下命令，查看 Pod 及其在节点上的部署方式。</p>
     <pre>$ oc get pod -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,APP:.metadata.labels.app\.kubernetes\.io/name,NODE:.spec.nodeName --all-namespaces | grep -v "openshift-"</pre>
     可使用标签或其他数据作为自定义字段，帮助识别应用的各个部分。
     确保具有高保护要求的应用不与保护要求较低的工作负载共置在同一节点或集群中。
@@ -26,7 +26,7 @@ rationale: |-
     additional obstacles for their movement towards the higher protected workloads.
 
     <p><strong>中文理由：</strong></p>
-    将具有高保护要求的工作负载分配到特定节点，可在高保护要求工作负载与可能遵循较宽松要求的工作负载之间建立额外边界（节点）。攻击者攻陷保护较弱的工作负载后，若要向保护要求更高的负载移动，就会面临额外障碍。
+    <p>将具有高保护要求的工作负载分配到特定节点，可在高保护要求工作负载与可能遵循较宽松要求的工作负载之间建立额外边界（节点）。攻击者攻陷保护较弱的工作负载后，若要向保护要求更高的负载移动，就会面临额外障碍。</p>
 
 severity: medium
 

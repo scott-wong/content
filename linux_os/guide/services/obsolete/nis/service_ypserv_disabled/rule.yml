@@ -9,7 +9,7 @@ description: |-
     {{{ describe_service_disable(service="ypserv") }}}
 
     <p><strong>中文说明：</strong></p>
-    应禁用 <tt>ypserv</tt> 服务。
+    <p>应禁用 <tt>ypserv</tt> 服务。</p>
 
 rationale: |-
     Disabling the <tt>ypserv</tt> service ensures the system is not acting
@@ -17,7 +17,7 @@ rationale: |-
     unless in use.
 
     <p><strong>中文理由：</strong></p>
-    禁用 <tt>ypserv</tt> 服务可确保系统不充当 NIS 或 NIS+ 域中的客户端。除非正在使用该服务，否则应将其禁用。
+    <p>禁用 <tt>ypserv</tt> 服务可确保系统不充当 NIS 或 NIS+ 域中的客户端。除非正在使用该服务，否则应将其禁用。</p>
 
 severity: medium
 

@@ -8,8 +8,8 @@ description: |-
     {{{ describe_service_enable(service="sshd") }}}
 
     <p><strong>中文说明：</strong></p>
-    SSH 服务器服务 sshd 通常需要使用。
-    要启用 <tt>sshd</tt> 服务，请运行 <tt>sudo systemctl enable --now sshd</tt>。
+    <p>SSH 服务器服务 sshd 通常需要使用。
+    要启用 <tt>sshd</tt> 服务，请运行 <tt>sudo systemctl enable --now sshd</tt>。</p>
 
 rationale: |-
     Without protection of the transmitted information, confidentiality, and
@@ -23,7 +23,7 @@ rationale: |-
     of interception and modification.
 
     <p><strong>中文理由：</strong></p>
-    如果传输的信息未受到保护，机密性和完整性可能受到破坏，因为未受保护的通信可被截获并读取或更改。<br /><br />本检查项适用于内部和外部网络，以及可传输信息的各类信息系统组件（例如服务器、移动设备、笔记本电脑、打印机、复印机、扫描仪等）。受控边界物理保护之外的通信路径可能被截获和修改。
+    <p>如果传输的信息未受到保护，机密性和完整性可能受到破坏，因为未受保护的通信可被截获并读取或更改。<br /><br />本检查项适用于内部和外部网络，以及可传输信息的各类信息系统组件（例如服务器、移动设备、笔记本电脑、打印机、复印机、扫描仪等）。受控边界物理保护之外的通信路径可能被截获和修改。</p>
 
 severity: medium
 

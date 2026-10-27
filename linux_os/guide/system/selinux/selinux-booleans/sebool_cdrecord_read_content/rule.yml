@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="cdrecord_read_content") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>cdrecord_read_content</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>cdrecord_read_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cdrecord_read_content off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>cdrecord_read_content</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>cdrecord_read_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cdrecord_read_content off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 cdrecord 读取所有内容会授予其不必要的访问权限，从而扩大攻击面。
+    <p>允许 cdrecord 读取所有内容会授予其不必要的访问权限，从而扩大攻击面。</p>
 
 severity: medium
 

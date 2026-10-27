@@ -10,7 +10,7 @@ description: |-
     intended for use as an LDAP Server it should be removed.
 
     <p><strong>中文说明：</strong></p>
-    在 {{{ full_name }}} 系统上默认不安装 389-ds-base RPM。只有 389-ds 服务器需要它，使用 LDAP 进行身份验证的客户端不需要。如果系统不打算用作 LDAP 服务器，则应移除它。
+    <p>在 {{{ full_name }}} 系统上默认不安装 389-ds-base RPM。只有 389-ds 服务器需要它，使用 LDAP 进行身份验证的客户端不需要。如果系统不打算用作 LDAP 服务器，则应移除它。</p>
 
 rationale: |-
     Unnecessary packages should not be installed to decrease the attack
@@ -18,7 +18,7 @@ rationale: |-
     server, it is not necessary on typical desktop or workstation systems.
 
     <p><strong>中文理由：</strong></p>
-    不应安装不必要的软件包，以减少系统攻击面。虽然此软件在 LDAP 服务器上显然必不可少，但在典型桌面或工作站系统上并非必需。
+    <p>不应安装不必要的软件包，以减少系统攻击面。虽然此软件在 LDAP 服务器上显然必不可少，但在典型桌面或工作站系统上并非必需。</p>
 
 severity: low
 

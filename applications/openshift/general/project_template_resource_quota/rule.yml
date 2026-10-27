@@ -13,9 +13,9 @@ description: |-
     text="the relevant documentation") }}}.
 
     <p><strong>中文说明：</strong></p>
-    为新创建的项目配置一个模板，以使用默认资源配额，并确保默认项目模板引用此模板。
+    <p>为新创建的项目配置一个模板，以使用默认资源配额，并确保默认项目模板引用此模板。
 
-    有关更多信息，请参阅<a href="https://docs.openshift.com/container-platform/4.12/applications/projects/configuring-project-creation.html">相关文档</a>。
+    有关更多信息，请参阅<a href="https://docs.openshift.com/container-platform/4.12/applications/projects/configuring-project-creation.html">相关文档</a>。</p>
 
 rationale: |-
     Running different applications on the same Kubernetes cluster creates a risk of 
@@ -31,9 +31,9 @@ rationale: |-
     that all new projects will be set in accordance with centralized settings.
 
     <p><strong>中文理由：</strong></p>
-    在同一 Kubernetes 集群上运行不同应用程序会带来“吵闹邻居”风险，即某个应用程序独占集群资源。由 ResourceQuota 对象定义的资源配额提供约束，限制每个项目的总体资源消耗。它可以按类型限制项目中可创建的对象数量，还可限制项目中资源可能消耗的计算资源和存储总量。
+    <p>在同一 Kubernetes 集群上运行不同应用程序会带来“吵闹邻居”风险，即某个应用程序独占集群资源。由 ResourceQuota 对象定义的资源配额提供约束，限制每个项目的总体资源消耗。它可以按类型限制项目中可创建的对象数量，还可限制项目中资源可能消耗的计算资源和存储总量。
 
-    确保项目配置引用一个为新项目设置所需对象的项目模板，可确保所有新项目都按照集中配置进行设置。
+    确保项目配置引用一个为新项目设置所需对象的项目模板，可确保所有新项目都按照集中配置进行设置。</p>
 
 severity: medium
 

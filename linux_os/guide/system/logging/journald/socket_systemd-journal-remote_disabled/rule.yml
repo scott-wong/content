@@ -13,16 +13,16 @@ description: |-
         systemd-journal-remote.socket and systemd-journal-remote.service.
 
     <p><strong>中文说明：</strong></p>
-    Journald 支持从远程主机接收消息，从而充当日志服务器。客户端不应从其他主机接收数据。
+    <p>Journald 支持从远程主机接收消息，从而充当日志服务器。客户端不应从其他主机接收数据。
     注意：
-        同一个软件包 systemd-journal-remote 既用于向远程主机发送日志，也用于接收传入日志。就接收日志而言，有两个 systemd 单元文件：systemd-journal-remote.socket 和 systemd-journal-remote.service。
+        同一个软件包 systemd-journal-remote 既用于向远程主机发送日志，也用于接收传入日志。就接收日志而言，有两个 systemd 单元文件：systemd-journal-remote.socket 和 systemd-journal-remote.service。</p>
 
 rationale: |-
     If a client is configured to also receive data, thus turning it into
     a server, the client system is acting outside it's operational boundary.
 
     <p><strong>中文理由：</strong></p>
-    如果客户端还配置为接收数据，从而变成服务器，则客户端系统的行为将超出其运行边界。
+    <p>如果客户端还配置为接收数据，从而变成服务器，则客户端系统的行为将超出其运行边界。</p>
 
 severity: medium
 

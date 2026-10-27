@@ -6,13 +6,13 @@ description: |-
     {{{ describe_file_group_owner(file="/var/log/*.journal(~)", group="systemd-journal|root") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>/var/log/*.journal(~)</tt> 的文件所属组必须为 <tt>systemd-journal</tt> 或 <tt>root</tt>。
+    <p><tt>/var/log/*.journal(~)</tt> 的文件所属组必须为 <tt>systemd-journal</tt> 或 <tt>root</tt>。</p>
 
 rationale: |-
     The <tt>/var/log/*.journal(~)</tt> files are system logs managed by the "systemd" service.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/var/log/*.journal(~)</tt> 文件是由 "systemd" 服务管理的系统日志。
+    <p><tt>/var/log/*.journal(~)</tt> 文件是由 "systemd" 服务管理的系统日志。</p>
 
 severity: medium
 

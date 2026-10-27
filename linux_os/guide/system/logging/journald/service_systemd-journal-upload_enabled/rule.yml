@@ -10,7 +10,7 @@ description: |-
     {{{ describe_service_enable(service="systemd-journal-upload") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>systemd-journal-upload</tt> 服务是 <tt>systemd-journal-remote</tt> 软件包的一部分，通过 HTTPS 将本地 systemd journal 条目上传到远程日志服务器，从而实现集中式日志记录。此服务作为客户端，将 journal 数据推送到运行 <tt>systemd-journal-remote</tt> 接收器服务的远程主机。应启用并启动 <tt>systemd-journal-upload</tt> 服务。
+    <p><tt>systemd-journal-upload</tt> 服务是 <tt>systemd-journal-remote</tt> 软件包的一部分，通过 HTTPS 将本地 systemd journal 条目上传到远程日志服务器，从而实现集中式日志记录。此服务作为客户端，将 journal 数据推送到运行 <tt>systemd-journal-remote</tt> 接收器服务的远程主机。应启用并启动 <tt>systemd-journal-upload</tt> 服务。</p>
 
 rationale: |-
     Centralized logging through <tt>systemd-journal-upload</tt> is essential for security monitoring,
@@ -22,7 +22,7 @@ rationale: |-
     detection of distributed attacks and security incidents.
 
     <p><strong>中文理由：</strong></p>
-    通过 <tt>systemd-journal-upload</tt> 实现集中式日志记录，对于安全监控、事件响应和合规要求至关重要。将日志数据存储在远程主机上可保护日志完整性，防止本地攻击。如果攻击者在本地系统上获得 root 访问权限，他们可能篡改或删除本地存储的日志数据以掩盖其活动。即使本地系统遭到入侵，远程日志记录也可确保审计跟踪保持完整。此外，集中式日志便于跨多个系统关联事件，从而更好地检测分布式攻击和安全事件。
+    <p>通过 <tt>systemd-journal-upload</tt> 实现集中式日志记录，对于安全监控、事件响应和合规要求至关重要。将日志数据存储在远程主机上可保护日志完整性，防止本地攻击。如果攻击者在本地系统上获得 root 访问权限，他们可能篡改或删除本地存储的日志数据以掩盖其活动。即使本地系统遭到入侵，远程日志记录也可确保审计跟踪保持完整。此外，集中式日志便于跨多个系统关联事件，从而更好地检测分布式攻击和安全事件。</p>
 
 severity: medium
 

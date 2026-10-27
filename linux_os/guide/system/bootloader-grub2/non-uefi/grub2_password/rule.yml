@@ -35,9 +35,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    grub2 引导加载程序应启用超级用户账户和密码保护，以保护启动时设置。<br /><br />
+    <p>grub2 引导加载程序应启用超级用户账户和密码保护，以保护启动时设置。<br /><br />
     由于明文密码存在安全风险，请运行以下命令为密码生成哈希：
-    {{% if 'sle' in product or 'slmicro' in product or 'ubuntu' in product %}}
+    {{% if 'sle' in product or 'slmicro' in product or 'ubuntu' in product %}}</p>
     <pre># grub2-mkpasswd-pbkdf2</pre>
     {{% else %}}
     <pre># grub2-setpassword</pre>
@@ -63,7 +63,7 @@ rationale: |-
     and whether to enter single-user mode.
 
     <p><strong>中文理由：</strong></p>
-    对引导加载程序配置实施密码保护可确保具有物理访问权限的用户无法轻易更改重要引导设置，包括使用哪个内核以及是否进入单用户模式。
+    <p>对引导加载程序配置实施密码保护可确保具有物理访问权限的用户无法轻易更改重要引导设置，包括使用哪个内核以及是否进入单用户模式。</p>
 
 severity: high
 

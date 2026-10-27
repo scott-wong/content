@@ -11,8 +11,8 @@ description: |-
     {{{ describe_service_disable(service="oddjobd") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>oddjobd</tt> 服务提供一个接口和访问控制机制，使指定的特权任务能够为非特权客户端应用程序运行任务。与 <tt>oddjobd</tt> 的通信通过系统消息总线进行。
-    应禁用 <tt>oddjobd</tt> 服务。
+    <p><tt>oddjobd</tt> 服务提供一个接口和访问控制机制，使指定的特权任务能够为非特权客户端应用程序运行任务。与 <tt>oddjobd</tt> 的通信通过系统消息总线进行。
+    应禁用 <tt>oddjobd</tt> 服务。</p>
 
 rationale: |-
     The <tt>oddjobd</tt> service may provide necessary functionality in
@@ -21,7 +21,7 @@ rationale: |-
     been a source of privilege escalation security issues.
 
     <p><strong>中文理由：</strong></p>
-    <tt>oddjobd</tt> 服务在某些环境中可能提供必要功能，如不需要则可禁用。特权程序代表非特权程序执行任务历来是权限提升安全问题的来源。
+    <p><tt>oddjobd</tt> 服务在某些环境中可能提供必要功能，如不需要则可禁用。特权程序代表非特权程序执行任务历来是权限提升安全问题的来源。</p>
 
 severity: medium
 

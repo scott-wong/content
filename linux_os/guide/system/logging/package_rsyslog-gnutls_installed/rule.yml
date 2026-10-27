@@ -13,7 +13,7 @@ description: |-
     {{{ describe_package_install(package=package) }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 rsyslog 的 TLS 协议支持。
+    <p>应安装 rsyslog 的 TLS 协议支持。</p>
 
 
 rationale: |-
@@ -21,7 +21,7 @@ rationale: |-
     for the rsyslog daemon, which enables secure remote logging.
 
     <p><strong>中文理由：</strong></p>
-    软件包 <tt>{{{ package }}}</tt> 为 rsyslog 守护进程提供传输层安全（TLS）支持，可实现安全的远程日志记录。
+    <p>软件包 <tt>{{{ package }}}</tt> 为 rsyslog 守护进程提供传输层安全（TLS）支持，可实现安全的远程日志记录。</p>
 
 severity: medium
 

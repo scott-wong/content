@@ -14,11 +14,11 @@ description: |-
     <pre>GSSAPIAuthentication no</pre>
 
     <p><strong>中文说明：</strong></p>
-    除非需要，SSH 不应允许 GSSAPI 等额外或不必要的身份验证机制。
+    <p>除非需要，SSH 不应允许 GSSAPI 等额外或不必要的身份验证机制。
     <br/>
     默认 SSH 配置禁止基于 GSSAPI 的身份验证。如果未设置 <tt>GSSAPIAuthentication</tt>，则使用适当配置。
     <br/>
-    要显式禁用 GSSAPI 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    要显式禁用 GSSAPI 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：</p>
     <pre>GSSAPIAuthentication no</pre>
 
 rationale: |-
@@ -27,7 +27,7 @@ rationale: |-
     GSSAPI to remote hosts, increasing the attack surface of the system.
 
     <p><strong>中文理由：</strong></p>
-    GSSAPI 身份验证用于为应用提供额外的身份验证机制。允许通过 SSH 使用 GSSAPI 身份验证会向远程主机暴露系统的 GSSAPI，从而扩大系统攻击面。
+    <p>GSSAPI 身份验证用于为应用提供额外的身份验证机制。允许通过 SSH 使用 GSSAPI 身份验证会向远程主机暴露系统的 GSSAPI，从而扩大系统攻击面。</p>
 
 severity: medium
 

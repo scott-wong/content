@@ -11,15 +11,15 @@ description: |-
     {{{ describe_module_disable(module="sctp") }}}
 
     <p><strong>中文说明：</strong></p>
-    Stream Control Transmission Protocol（SCTP）是一种传输层协议，旨在支持面向消息的通信，并可在单个连接中包含多条消息流。
-    应禁用内核模块 <tt>sctp</tt>。
+    <p>Stream Control Transmission Protocol（SCTP）是一种传输层协议，旨在支持面向消息的通信，并可在单个连接中包含多条消息流。
+    应禁用内核模块 <tt>sctp</tt>。</p>
 
 rationale: |-
     Disabling SCTP protects
     the system against exploitation of any flaws in its implementation.
 
     <p><strong>中文理由：</strong></p>
-    禁用该内核模块可防止攻击者利用其实现中的缺陷。
+    <p>禁用该内核模块可防止攻击者利用其实现中的缺陷。</p>
 
 severity: medium
 

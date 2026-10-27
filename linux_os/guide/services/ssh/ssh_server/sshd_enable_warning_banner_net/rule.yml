@@ -15,12 +15,12 @@ description: |-
     appropriate system-wide warning banner.
 
     <p><strong>中文说明：</strong></p>
-    要启用警告横幅并确保整个系统一致，请在
+    <p>要启用警告横幅并确保整个系统一致，请在
     {{% if sshd_distributed_config == "true" %}}
     <tt>/etc/ssh/sshd_config.d/00-complianceascode-hardening.conf</tt> 中添加或更正以下行：
     {{% else %}}
     <tt>/etc/ssh/sshd_config</tt> 中添加或更正以下行：
-    {{% endif %}}
+    {{% endif %}}</p>
     <pre>Banner /etc/issue.net</pre>
     另一节包含有关如何创建适当的系统级警告横幅的信息。
 
@@ -31,7 +31,7 @@ rationale: |-
     not provide easy attribution.
 
     <p><strong>中文理由：</strong></p>
-    警告消息可在登录过程中强化策略意识，并便于对攻击者采取可能的法律行动。或者，如果系统所有者身份不应显而易见，则系统应确保使用不会轻易暴露归属信息的横幅。
+    <p>警告消息可在登录过程中强化策略意识，并便于对攻击者采取可能的法律行动。或者，如果系统所有者身份不应显而易见，则系统应确保使用不会轻易暴露归属信息的横幅。</p>
 
 severity: medium
 

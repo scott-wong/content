@@ -11,8 +11,8 @@ description: |-
     {{{ describe_package_remove(package="talk") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>talk</tt> 软件包包含 Internet talk 协议的客户端程序，该协议允许用户与其他系统上的用户聊天。Talk 是一种通信程序，可将一个终端上的行复制到另一个用户的终端。
-    应删除 <tt>talk</tt> 软件包。
+    <p><tt>talk</tt> 软件包包含 Internet talk 协议的客户端程序，该协议允许用户与其他系统上的用户聊天。Talk 是一种通信程序，可将一个终端上的行复制到另一个用户的终端。
+    应删除 <tt>talk</tt> 软件包。</p>
 
 rationale: |-
     The talk software presents a security risk as it uses unencrypted protocols
@@ -20,7 +20,7 @@ rationale: |-
     risk of the accidental (or intentional) activation of talk client program.
 
     <p><strong>中文理由：</strong></p>
-    talk 软件存在安全风险，因为它使用未加密的协议进行通信。删除 <tt>talk</tt> 软件包可降低 talk 客户端程序被意外（或故意）激活的风险。
+    <p>talk 软件存在安全风险，因为它使用未加密的协议进行通信。删除 <tt>talk</tt> 软件包可降低 talk 客户端程序被意外（或故意）激活的风险。</p>
 
 severity: medium
 

@@ -8,7 +8,7 @@ description: |-
     If the above command returns the status as "inactive" or any type of error, this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令验证系统上的 ufw 已启用：
+    <p>使用以下命令验证系统上的 ufw 已启用：</p>
     <pre># sudo ufw status</pre>
     如果上述命令返回“inactive”状态或任何类型的错误，则属于发现问题。
 
@@ -22,7 +22,7 @@ rationale: |-
     enforcing connection rules of remote access applications on a variety of information system components.
 
     <p><strong>中文理由：</strong></p>
-    远程访问服务（例如提供对网络设备和信息系统远程访问的服务）如果缺少自动化控制能力，会增加风险，并使远程用户访问管理至少变得困难。远程访问是授权用户（或信息系统）通过外部的、不受组织控制的网络访问非公开信息系统。远程访问方法包括拨号、宽带和无线连接。Ubuntu 22.04 LTS 功能（例如 RDP）必须能够在审计发现未经授权活动时采取强制执行措施。自动化控制远程访问会话使组织能够通过对各种信息系统组件中的远程访问应用程序执行连接规则，确保持续符合远程访问策略。
+    <p>远程访问服务（例如提供对网络设备和信息系统远程访问的服务）如果缺少自动化控制能力，会增加风险，并使远程用户访问管理至少变得困难。远程访问是授权用户（或信息系统）通过外部的、不受组织控制的网络访问非公开信息系统。远程访问方法包括拨号、宽带和无线连接。Ubuntu 22.04 LTS 功能（例如 RDP）必须能够在审计发现未经授权活动时采取强制执行措施。自动化控制远程访问会话使组织能够通过对各种信息系统组件中的远程访问应用程序执行连接规则，确保持续符合远程访问策略。</p>
 
 severity: medium
 

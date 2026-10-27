@@ -10,12 +10,13 @@ description: |-
     {{{ describe_sebool_enable(sebool="postfix_local_write_mail_spool") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>postfix_local_write_mail_spool</tt> 处于启用状态。如果该设置为禁用状态，应将其启用。
-    应启用 SELinux 布尔值 <tt>postfix_local_write_mail_spool</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>postfix_local_write_mail_spool</tt> 处于启用状态。如果该设置为禁用状态，应将其启用。
+    应启用 SELinux 布尔值 <tt>postfix_local_write_mail_spool</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    此布尔值允许 Postfix 写入邮件队列目录。应启用它，以确保 Postfix 能正常投递邮件，同时由 SELinux 规则限制其他访问。
+    <p>此布尔值允许 Postfix 写入邮件队列目录。应启用它，以确保 Postfix 能正常投递邮件，同时由 SELinux 规则限制其他访问。</p>
 
 severity: medium
 

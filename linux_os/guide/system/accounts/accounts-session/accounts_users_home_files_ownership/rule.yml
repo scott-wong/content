@@ -14,7 +14,7 @@ description: |-
     to an interactive user is owned by an interactive user.
 
     <p><strong>中文说明：</strong></p>
-    从系统中删除所有没有有效用户的文件和目录，或为所有无属主文件和目录分配有效用户。要为本地交互用户的文件和目录分配有效所有者，请使用以下命令：
+    <p>从系统中删除所有没有有效用户的文件和目录，或为所有无属主文件和目录分配有效用户。要为本地交互用户的文件和目录分配有效所有者，请使用以下命令：</p>
     <pre>$ sudo chown -R <i>USER</i> /home/<i>USER</i></pre>
 
     此规则确保交互用户主目录下的每个文件或目录均由交互用户拥有。
@@ -25,7 +25,7 @@ rationale: |-
     owned by the user, this could be an indication of system compromise.
 
     <p><strong>中文理由：</strong></p>
-    如果本地交互用户不拥有其目录中的文件，未授权用户可能能够访问这些文件。此外，如果文件不属于该用户，还可能表明系统已失陷。
+    <p>如果本地交互用户不拥有其目录中的文件，未授权用户可能能够访问这些文件。此外，如果文件不属于该用户，还可能表明系统已失陷。</p>
 
 severity: medium
 

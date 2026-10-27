@@ -7,7 +7,7 @@ description: |-
     Check that official Debian repositories, including security repository, are configured in apt.
 
     <p><strong>中文说明：</strong></p>
-    检查 apt 中是否配置了官方 Debian 仓库（包括安全仓库）。
+    <p>检查 apt 中是否配置了官方 Debian 仓库（包括安全仓库）。</p>
 
 rationale: |-
     The Debian distribution deliver DSA (Debian Security Announce), through the official
@@ -16,6 +16,6 @@ rationale: |-
         updates are integrated soon enough.
 
     <p><strong>中文理由：</strong></p>
-    Debian 发行版通过官方 Debian 安全仓库发布 DSA（Debian Security Announce），以修复影响 Debian 软件包的各种漏洞。使用官方仓库是确保及时整合 Debian 更新的最佳方式。
+    <p>Debian 发行版通过官方 Debian 安全仓库发布 DSA（Debian Security Announce），以修复影响 Debian 软件包的各种漏洞。使用官方仓库是确保及时整合 Debian 更新的最佳方式。</p>
 
 severity: unknown

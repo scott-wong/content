@@ -7,7 +7,7 @@ description: |-
   {{{ describe_file_permissions(file="/etc/kubernetes/static-pod-resources/kube-apiserver-certs/secrets/node-kubeconfigs/*.kubeconfig", perms="0600") }}}
 
   <p><strong>中文说明：</strong></p>
-  要正确设置 <tt>/etc/kubernetes/static-pod-resources/kube-apiserver-certs/secrets/node-kubeconfigs/*.kubeconfig</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-apiserver-certs/secrets/node-kubeconfigs/*.kubeconfig</tt>。
+  <p>要正确设置 <tt>/etc/kubernetes/static-pod-resources/kube-apiserver-certs/secrets/node-kubeconfigs/*.kubeconfig</tt> 的权限，请运行 <tt>sudo chmod 0600 /etc/kubernetes/static-pod-resources/kube-apiserver-certs/secrets/node-kubeconfigs/*.kubeconfig</tt>。</p>
 
 rationale: |-
   There are various kubeconfig files that can be used by the administrator,
@@ -19,7 +19,7 @@ rationale: |-
   files can take over the cluster.
 
   <p><strong>中文理由：</strong></p>
-  管理员可使用多种 kubeconfig 文件，这些文件定义集群管理的各种设置。它们包含可用于控制集群的凭据，并且是灾难恢复所必需的；每个 kubeconfig 指向集群中的不同端点。应限制其文件权限以保持 kubeconfig 文件的完整性，因为获得这些文件访问权限的攻击者可接管集群。
+  <p>管理员可使用多种 kubeconfig 文件，这些文件定义集群管理的各种设置。它们包含可用于控制集群的凭据，并且是灾难恢复所必需的；每个 kubeconfig 指向集群中的不同端点。应限制其文件权限以保持 kubeconfig 文件的完整性，因为获得这些文件访问权限的攻击者可接管集群。</p>
 
 identifiers:
   cce@ocp4: CCE-84278-1

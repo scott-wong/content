@@ -7,7 +7,7 @@ description: |-
     {{{ describe_file_permissions(file="/var/lib/etcd", perms="0700") }}}
 
     <p><strong>中文说明：</strong></p>
-    要正确设置 <tt>/var/lib/etcd</tt> 的权限，请运行 <tt>sudo chmod 0700 /var/lib/etcd</tt>。
+    <p>要正确设置 <tt>/var/lib/etcd</tt> 的权限，请运行 <tt>sudo chmod 0700 /var/lib/etcd</tt>。</p>
 
 rationale: |-
     The <tt>/var/lib/etcd</tt> directory contains highly-available distributed key/value data storage
@@ -15,7 +15,7 @@ rationale: |-
     data and the cluster.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/var/lib/etcd</tt> 目录包含跨 OpenShift 集群的高可用分布式键值数据存储。允许用户访问此目录可能危及 OpenShift 数据和集群。
+    <p><tt>/var/lib/etcd</tt> 目录包含跨 OpenShift 集群的高可用分布式键值数据存储。允许用户访问此目录可能危及 OpenShift 数据和集群。</p>
 
 severity: medium
 

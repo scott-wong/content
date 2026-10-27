@@ -11,13 +11,13 @@ description: |-
     The ntpd service should be installed.
 
     <p><strong>中文说明：</strong></p>
-    应安装 ntpd 服务。
+    <p>应安装 ntpd 服务。</p>
 
 rationale: |-
     Time synchronization (using NTP) is required by almost all network and administrative tasks (syslog, cryptographic based services (authentication, etc.), etc.). Ntpd is regularly maintained and updated, supporting security features such as RFC 5906.
 
     <p><strong>中文理由：</strong></p>
-    几乎所有网络和管理任务（syslog、基于加密的服务（身份验证等）等）都需要时间同步（使用 NTP）。Ntpd 会定期维护和更新，并支持 RFC 5906 等安全功能。
+    <p>几乎所有网络和管理任务（syslog、基于加密的服务（身份验证等）等）都需要时间同步（使用 NTP）。Ntpd 会定期维护和更新，并支持 RFC 5906 等安全功能。</p>
 
 severity: high
 

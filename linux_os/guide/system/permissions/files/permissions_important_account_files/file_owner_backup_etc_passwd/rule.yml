@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/passwd-", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>/etc/passwd-</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/passwd-</tt>。
+    <p>要将 <tt>/etc/passwd-</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/passwd-</tt>。</p>
 
 rationale: |-
     The <tt>/etc/passwd-</tt> file is a backup file of <tt>/etc/passwd</tt>, and as such,
@@ -14,7 +14,7 @@ rationale: |-
     Protection of this file is critical for system security.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/passwd-</tt> 文件是 <tt>/etc/passwd</tt> 的备份文件，因此包含有关系统上已配置用户的信息。保护该文件对系统安全至关重要。
+    <p><tt>/etc/passwd-</tt> 文件是 <tt>/etc/passwd</tt> 的备份文件，因此包含有关系统上已配置用户的信息。保护该文件对系统安全至关重要。</p>
 
 severity: medium
 

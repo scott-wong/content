@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="unconfined_login") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>unconfined_login</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>unconfined_login</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P unconfined_login on</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>unconfined_login</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>unconfined_login</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P unconfined_login on</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用 unconfined_login 可维持预期的登录行为，避免受策略管理的用户无法正常登录。
+    <p>启用 unconfined_login 可维持预期的登录行为，避免受策略管理的用户无法正常登录。</p>
 
 severity: medium
 

@@ -22,8 +22,8 @@ description: |-
     <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '.data."config.yaml"' | jq '.apiServerArguments."enable-admission-plugins"' </pre>
 
     <p><strong>中文说明：</strong></p>
-    不应为 Pod 使用自定义 SecurityContext，而应使用 Pod Security Policy（PSP）或 SecurityContextConstraint。这些是集群级资源，用于控制 Pod 可执行的操作以及 Pod 可访问的资源。<tt>SecurityContextDeny</tt> 禁止用户设置 Pod 的 <tt>securityContext</tt> 字段。请确保准入控制器列表不包含 SecurityContextDeny：
-    <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '.data."config.yaml"' | jq '.apiServerArguments."enable-admission-plugins"' </pre>
+    <p>不应为 Pod 使用自定义 SecurityContext，而应使用 Pod Security Policy（PSP）或 SecurityContextConstraint。这些是集群级资源，用于控制 Pod 可执行的操作以及 Pod 可访问的资源。<tt>SecurityContextDeny</tt> 禁止用户设置 Pod 的 <tt>securityContext</tt> 字段。请确保准入控制器列表不包含 SecurityContextDeny：</p>
+    <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '.data."config.yaml"' | jq '.apiServerArguments."enable-admission-plugins"'</pre>
 
 rationale: |-
     The <tt>SecurityContextDeny</tt> admission control plugin disallows
@@ -33,7 +33,7 @@ rationale: |-
     will deter you from enforcing granular permissions on your pods.
 
     <p><strong>中文理由：</strong></p>
-    <tt>SecurityContextDeny</tt> 准入控制插件禁止为 Pod 设置任何安全选项。<tt>SecurityContextConstraints</tt> 允许你对谁可以在 Pod 上设置这些选项以及允许设置哪些选项实施 RBAC 规则。因此，使用 <tt>SecurityContextDeny</tt> 会阻碍你对 Pod 实施细粒度权限。
+    <p><tt>SecurityContextDeny</tt> 准入控制插件禁止为 Pod 设置任何安全选项。<tt>SecurityContextConstraints</tt> 允许你对谁可以在 Pod 上设置这些选项以及允许设置哪些选项实施 RBAC 规则。因此，使用 <tt>SecurityContextDeny</tt> 会阻碍你对 Pod 实施细粒度权限。</p>
 
 identifiers:
   cce@ocp4: CCE-83586-8

@@ -7,7 +7,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/hosts.deny", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/hosts.deny</tt> 的文件所有者为 <tt>root</tt>。
+    <p>确保 <tt>/etc/hosts.deny</tt> 的文件所有者为 <tt>root</tt>。</p>
 
 rationale: |-
     The <tt>/etc/hosts.deny</tt> file is used to control access of clients to daemons in the
@@ -15,7 +15,7 @@ rationale: |-
     access or no access at all to services in the server.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/hosts.deny</tt> 文件用于控制客户端对服务器守护进程的访问。此文件不安全的组所有权可能允许用户授予客户端对服务器服务的不受限访问，或完全禁止访问。
+    <p><tt>/etc/hosts.deny</tt> 文件用于控制客户端对服务器守护进程的访问。此文件不安全的组所有权可能允许用户授予客户端对服务器服务的不受限访问，或完全禁止访问。</p>
 
 severity: medium
 

@@ -7,14 +7,14 @@ description: |-
     Configure the firewall rules for new outbound and established connections.
 
     <p><strong>中文说明：</strong></p>
-    为新出站连接和已建立连接配置防火墙规则。
+    <p>为新出站连接和已建立连接配置防火墙规则。</p>
 
 rationale: |-
     If rules are not in place for new outbound, and established connections all packets will
     be dropped by the default policy preventing network usage.
 
     <p><strong>中文理由：</strong></p>
-    如果没有针对新出站连接和已建立连接的规则，默认策略将丢弃所有数据包，从而阻止网络使用。
+    <p>如果没有针对新出站连接和已建立连接的规则，默认策略将丢弃所有数据包，从而阻止网络使用。</p>
 
 severity: medium
 

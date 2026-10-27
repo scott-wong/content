@@ -6,14 +6,14 @@ description: |-
     {{{ describe_package_install(package="libnss-sss") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>libnss-sss</tt> 软件包。
+    <p>应安装 <tt>libnss-sss</tt> 软件包。</p>
 
 rationale: |-
     libnss-sss contains library that is needed
     by SSSD (System Security Services Daemon)..
 
     <p><strong>中文理由：</strong></p>
-    libnss-sss 包含 SSSD（System Security Services Daemon）所需的库。
+    <p>libnss-sss 包含 SSSD（System Security Services Daemon）所需的库。</p>
 
 severity: medium
 

@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_remove(package="rsh-server") }}}
 
     <p><strong>中文说明：</strong></p>
-    应删除 <tt>rsh-server</tt> 软件包。
+    <p>应删除 <tt>rsh-server</tt> 软件包。</p>
 
 rationale: |-
     The <tt>rsh-server</tt> service provides unencrypted remote access service which does not
@@ -18,7 +18,7 @@ rationale: |-
     activation.
 
     <p><strong>中文理由：</strong></p>
-    <tt>rsh-server</tt> 服务提供未加密的远程访问服务，无法保证用户密码或远程会话的机密性和完整性，并且身份验证能力非常弱。如果特权用户使用此服务登录，特权用户密码可能被泄露。<tt>rsh-server</tt> 软件包提供多个已过时且不安全的网络服务。删除该软件包可降低这些服务被意外（或故意）激活的风险。
+    <p><tt>rsh-server</tt> 服务提供未加密的远程访问服务，无法保证用户密码或远程会话的机密性和完整性，并且身份验证能力非常弱。如果特权用户使用此服务登录，特权用户密码可能被泄露。<tt>rsh-server</tt> 软件包提供多个已过时且不安全的网络服务。删除该软件包可降低这些服务被意外（或故意）激活的风险。</p>
 
 severity: high
 

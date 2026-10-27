@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="tmpreaper_use_nfs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>tmpreaper_use_nfs</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>tmpreaper_use_nfs</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P tmpreaper_use_nfs off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>tmpreaper_use_nfs</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>tmpreaper_use_nfs</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P tmpreaper_use_nfs off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 tmpreaper 使用 NFS 会扩大临时文件清理服务的文件系统访问范围。
+    <p>允许 tmpreaper 使用 NFS 会扩大临时文件清理服务的文件系统访问范围。</p>
 
 severity: medium
 

@@ -11,7 +11,7 @@ description: |-
     to prevent logins with empty passwords.
 
     <p><strong>中文说明：</strong></p>
-    如果账户配置为使用密码身份验证但未分配密码，则可能无需身份验证即可登录该账户。请从 <tt>/etc/pam.d/common-{password,auth,account,session,session-noninteractive}</tt> 中移除所有 <tt>nullok</tt> 实例，以防止使用空密码登录。
+    <p>如果账户配置为使用密码身份验证但未分配密码，则可能无需身份验证即可登录该账户。请从 <tt>/etc/pam.d/common-{password,auth,account,session,session-noninteractive}</tt> 中移除所有 <tt>nullok</tt> 实例，以防止使用空密码登录。</p>
 
 rationale: |-
     If an account has an empty password, anyone could log in and
@@ -19,7 +19,7 @@ rationale: |-
     empty passwords should never be used in operational environments.
 
     <p><strong>中文理由：</strong></p>
-    如果账户密码为空，任何人都可以登录并以该账户的权限运行命令。运行环境中绝不应使用空密码账户。
+    <p>如果账户密码为空，任何人都可以登录并以该账户的权限运行命令。运行环境中绝不应使用空密码账户。</p>
 
 severity: high
 

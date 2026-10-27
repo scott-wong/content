@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_enable(sebool="mount_anyfile") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>mount_anyfile</tt> 处于启用状态。如果此设置已禁用，应启用，以允许挂载任何文件或目录。要启用 <tt>mount_anyfile</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mount_anyfile on</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>mount_anyfile</tt> 处于启用状态。如果此设置已禁用，应启用，以允许挂载任何文件或目录。要启用 <tt>mount_anyfile</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mount_anyfile on</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用后，可允许 mount 工具挂载任意文件或目录，这是正常挂载操作所需的，同时仍由 SELinux 策略约束。
+    <p>启用后，可允许 mount 工具挂载任意文件或目录，这是正常挂载操作所需的，同时仍由 SELinux 策略约束。</p>
 
 severity: medium
 

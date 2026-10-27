@@ -11,7 +11,7 @@ description: |-
     If any output returned is not owned by "root", this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    验证 /run/log/journal 和 /var/log/journal 目录由 "root" 拥有，使用以下命令：
+    <p>验证 /run/log/journal 和 /var/log/journal 目录由 "root" 拥有，使用以下命令：</p>
     <pre>
     $ sudo find /run/log/journal /var/log/journal  -type d -exec stat -c "%n %U" {} \;
     </pre>
@@ -25,7 +25,7 @@ rationale: |-
     unauthorized personnel or their designated representatives.
 
     <p><strong>中文理由：</strong></p>
-    只有经过授权的人员才应了解错误及其详细信息。错误消息可表明组织的运行状态，也可能标识操作系统或平台。此外，不得通过错误消息向未授权人员或其指定代表泄露个人身份信息（PII）和运行信息。
+    <p>只有经过授权的人员才应了解错误及其详细信息。错误消息可表明组织的运行状态，也可能标识操作系统或平台。此外，不得通过错误消息向未授权人员或其指定代表泄露个人身份信息（PII）和运行信息。</p>
 
 severity: medium
 

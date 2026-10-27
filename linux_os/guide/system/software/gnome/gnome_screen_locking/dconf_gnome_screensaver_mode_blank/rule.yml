@@ -40,7 +40,7 @@ description: |-
     After the settings have been set, run <tt>dconf update</tt>.
 
     <p><strong>中文说明：</strong></p>
-    {{# The SLE12 and SLE15 STIG unfortunately requires per-user settings, #}}
+    <p>{{# The SLE12 and SLE15 STIG unfortunately requires per-user settings, #}}
     {{# not a globally locked one, so we don't require but only suggest the latter. #}}
     {{% if product in ["sle12","sle15"] %}}
     在 SUSE 上，用户应通过以下操作将屏幕保护程序设置为使用可公开查看的图像或空白屏幕：
@@ -62,7 +62,7 @@ description: |-
     <tt>- 退出 Settings 对话框。</tt>
     {{% endif %}}
     {{% endif %}}
-    要将 GNOME3 桌面中的屏幕保护程序模式设置为空白屏幕，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>picture-uri</tt> 为 <tt>string ''</tt>。例如：
+    要将 GNOME3 桌面中的屏幕保护程序模式设置为空白屏幕，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>picture-uri</tt> 为 <tt>string ''</tt>。例如：</p>
     <pre>[org/gnome/desktop/screensaver]
     picture-uri=string ''
     </pre>
@@ -75,7 +75,7 @@ rationale: |-
     contents of the display from passersby.
 
     <p><strong>中文理由：</strong></p>
-    将屏幕保护程序模式设置为仅空白可向路过人员隐藏显示内容。
+    <p>将屏幕保护程序模式设置为仅空白可向路过人员隐藏显示内容。</p>
 
 severity: medium
 

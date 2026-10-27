@@ -7,9 +7,9 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="fs.protected_regular", value="2") }}}
 
     <p><strong>中文说明：</strong></p>
-    要设置内核参数 <tt>fs.protected_regular</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w fs.protected_regular=2</tt>
+    <p>要设置内核参数 <tt>fs.protected_regular</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w fs.protected_regular=2</tt>
 
-    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>fs.protected_regular = 2</tt>
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>fs.protected_regular = 2</tt></p>
 
 rationale: |-
     This parameter is available since Linux Kernel 4.19 and allows to prohibit opening
@@ -18,7 +18,7 @@ rationale: |-
     when a program expects to create the regular file.
 
     <p><strong>中文理由：</strong></p>
-    此参数自 Linux 内核 4.19 起可用，可禁止在世界和组可写的粘性目录中打开不属于用户的“常规”文件。例如，当程序期望创建常规文件时，这可避免写入攻击者控制的常规文件。
+    <p>此参数自 Linux 内核 4.19 起可用，可禁止在世界和组可写的粘性目录中打开不属于用户的“常规”文件。例如，当程序期望创建常规文件时，这可避免写入攻击者控制的常规文件。</p>
 
 severity: medium
 

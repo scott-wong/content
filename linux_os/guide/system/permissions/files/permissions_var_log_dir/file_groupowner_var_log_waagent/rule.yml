@@ -6,14 +6,14 @@ description: |-
     {{{ describe_file_group_owner(file="/var/log/waagent.log", group="adm|root") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>/var/log/waagent.log</tt> 的文件所属组必须为 <tt>adm</tt> 或 <tt>root</tt>。
+    <p><tt>/var/log/waagent.log</tt> 的文件所属组必须为 <tt>adm</tt> 或 <tt>root</tt>。</p>
 
 rationale: |-
     The <tt>/var/log/waagent.log</tt> file contains Azure Linux Guest Agent records
     events that can be used for troubleshooting and should only be accessed by authorized personnel.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/var/log/waagent.log</tt> 文件包含 Azure Linux Guest Agent 的事件记录，这些事件可用于故障排查，只应由经过授权的人员访问。
+    <p><tt>/var/log/waagent.log</tt> 文件包含 Azure Linux Guest Agent 的事件记录，这些事件可用于故障排查，只应由经过授权的人员访问。</p>
 
 severity: medium
 

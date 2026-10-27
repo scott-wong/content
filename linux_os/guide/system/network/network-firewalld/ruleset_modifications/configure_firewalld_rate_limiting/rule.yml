@@ -10,7 +10,7 @@ description: |-
     <pre>$ sudo firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT_direct 0 -p tcp -m limit --limit 25/minute --limit-burst 100  -j INPUT_ZONES</pre>
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令创建直接防火墙规则，以防范 DoS 攻击：
+    <p>使用以下命令创建直接防火墙规则，以防范 DoS 攻击：</p>
     <pre>$ sudo firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT_direct 0 -p tcp -m limit --limit 25/minute --limit-burst 100  -j INPUT_ZONES</pre>
 
 rationale: |-
@@ -28,9 +28,9 @@ rationale: |-
     the susceptibility to some DoS attacks.
 
     <p><strong>中文理由：</strong></p>
-    DoS 是指资源无法供合法用户使用的情况。发生这种情况时，组织要么无法完成任务，要么必须以降级容量运行。
+    <p>DoS 是指资源无法供合法用户使用的情况。发生这种情况时，组织要么无法完成任务，要么必须以降级容量运行。
     <br /><br />
-    此要求涉及将操作系统配置为缓解已经发生或正在进行的 DoS 攻击对系统可用性的影响。对于每个系统，必须识别已知和潜在的 DoS 攻击，并为每种攻击实施解决方案。存在多种技术可用于限制甚至在某些情况下消除 DoS 攻击的影响（例如限制进程或建立内存分区）。增加容量和带宽并结合服务冗余，可降低对某些 DoS 攻击的易感性。
+    此要求涉及将操作系统配置为缓解已经发生或正在进行的 DoS 攻击对系统可用性的影响。对于每个系统，必须识别已知和潜在的 DoS 攻击，并为每种攻击实施解决方案。存在多种技术可用于限制甚至在某些情况下消除 DoS 攻击的影响（例如限制进程或建立内存分区）。增加容量和带宽并结合服务冗余，可降低对某些 DoS 攻击的易感性。</p>
 
 severity: medium
 

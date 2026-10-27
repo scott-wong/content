@@ -10,7 +10,7 @@ description: |-
     <pre>*     hard   core    0</pre>
 
     <p><strong>中文说明：</strong></p>
-    要为所有用户禁用核心转储，请将以下行添加到 <tt>/etc/security/limits.conf</tt> 或 <tt>/etc/security/limits.d/</tt> 目录中的文件：
+    <p>要为所有用户禁用核心转储，请将以下行添加到 <tt>/etc/security/limits.conf</tt> 或 <tt>/etc/security/limits.d/</tt> 目录中的文件：</p>
     <pre>*     hard   core    0</pre>
 
 rationale: |-
@@ -19,7 +19,7 @@ rationale: |-
     only for developers trying to debug problems.
 
     <p><strong>中文理由：</strong></p>
-    核心转储包含操作系统终止应用程序时的内存映像。该内存映像可能包含敏感数据，通常仅对尝试调试问题的开发者有用。
+    <p>核心转储包含操作系统终止应用程序时的内存映像。该内存映像可能包含敏感数据，通常仅对尝试调试问题的开发者有用。</p>
 
 severity: medium
 

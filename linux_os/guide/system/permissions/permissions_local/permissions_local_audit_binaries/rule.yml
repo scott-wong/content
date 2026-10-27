@@ -27,9 +27,9 @@ description: |-
     generators.
 
     <p><strong>中文说明：</strong></p>
-    SUSE 操作系统审计工具必须配置适当的权限，以防止未经授权访问。
+    <p>SUSE 操作系统审计工具必须配置适当的权限，以防止未经授权访问。
 
-    使用以下命令检查“permissions.local”文件是否包含正确的权限规则：
+    使用以下命令检查“permissions.local”文件是否包含正确的权限规则：</p>
     <pre>grep "^/usr/sbin/au" /etc/permissions.local
 
     /usr/sbin/audispd root:root 0750
@@ -54,9 +54,9 @@ rationale: |-
     regarding the access to audit tools.
 
     <p><strong>中文理由：</strong></p>
-    保护审计信息还包括识别并保护用于查看和操作日志数据的工具。因此，保护审计工具对于防止对审计信息进行未经授权操作是必要的。
+    <p>保护审计信息还包括识别并保护用于查看和操作日志数据的工具。因此，保护审计工具对于防止对审计信息进行未经授权操作是必要的。
 
-    提供审计信息接口工具的 SUSE 操作系统将利用用户权限和角色，识别访问工具的用户及其拥有的相应权限，从而对审计工具的访问作出访问决策。
+    提供审计信息接口工具的 SUSE 操作系统将利用用户权限和角色，识别访问工具的用户及其拥有的相应权限，从而对审计工具的访问作出访问决策。</p>
 
 severity: medium
 

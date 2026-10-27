@@ -7,14 +7,14 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.kexec_load_disabled", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>kernel.kexec_load_disabled</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.kexec_load_disabled=1</tt>；要持久化，请将 <tt>kernel.kexec_load_disabled = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>kernel.kexec_load_disabled</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.kexec_load_disabled=1</tt>；要持久化，请将 <tt>kernel.kexec_load_disabled = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |
     Disabling kexec_load allows greater control of the kernel memory.
     It makes it impossible to load another kernel image after it has been disabled.
 
     <p><strong>中文理由：</strong></p>
-    禁用 kexec_load 可以更好地控制内核内存。禁用后，将无法加载另一个内核映像。
+    <p>禁用 kexec_load 可以更好地控制内核内存。禁用后，将无法加载另一个内核映像。</p>
 
 severity: medium
 

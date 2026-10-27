@@ -11,7 +11,7 @@ description: |-
     log_ftp_protocol=YES</pre>
 
     <p><strong>中文说明：</strong></p>
-    在位于 <tt>/etc/vsftpd/vsftpd.conf</tt> 的 <tt>vsftpd</tt> 配置文件中添加或更正以下配置选项：
+    <p>在位于 <tt>/etc/vsftpd/vsftpd.conf</tt> 的 <tt>vsftpd</tt> 配置文件中添加或更正以下配置选项：</p>
     <pre>xferlog_enable=YES
     xferlog_std_format=NO
     log_ftp_protocol=YES</pre>
@@ -22,7 +22,7 @@ rationale: |-
     format. The default vsftpd log file is <tt>/var/log/vsftpd.log</tt>.
 
     <p><strong>中文理由：</strong></p>
-    为了追踪由 FTP 服务促成的恶意活动，必须将其配置为使用详细的 vsftpd 日志格式记录发送到 FTP 服务器的所有命令。vsftpd 的默认日志文件为 <tt>/var/log/vsftpd.log</tt>。
+    <p>为了追踪由 FTP 服务促成的恶意活动，必须将其配置为使用详细的 vsftpd 日志格式记录发送到 FTP 服务器的所有命令。vsftpd 的默认日志文件为 <tt>/var/log/vsftpd.log</tt>。</p>
 
 severity: unknown
 

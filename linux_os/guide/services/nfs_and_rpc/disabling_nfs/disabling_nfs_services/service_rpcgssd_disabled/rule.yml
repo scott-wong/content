@@ -11,12 +11,12 @@ description: |-
     {{{ describe_service_disable(service="rpcgssd") }}}
 
     <p><strong>中文说明：</strong></p>
-    rpcgssd 服务管理保护使用 RPC 的协议（最常见的是 Kerberos 和 NFS）所需的 RPCSEC GSS 上下文。rpcgssd 服务是 RPCSEC GSS 的客户端侧。如果系统不需要安全 RPC，则应禁用此服务。应禁用 <tt>rpcgssd</tt> 服务。
+    <p>rpcgssd 服务管理保护使用 RPC 的协议（最常见的是 Kerberos 和 NFS）所需的 RPCSEC GSS 上下文。rpcgssd 服务是 RPCSEC GSS 的客户端侧。如果系统不需要安全 RPC，则应禁用此服务。应禁用 <tt>rpcgssd</tt> 服务。</p>
 
 rationale: |-
 
     <p><strong>中文理由：</strong></p>
-    如果系统不需要安全 RPC，rpcgssd 并非必需。禁用该服务可减少不必要的 RPC 安全上下文管理进程和攻击面。
+    <p>如果系统不需要安全 RPC，rpcgssd 并非必需。禁用该服务可减少不必要的 RPC 安全上下文管理进程和攻击面。</p>
 
 severity: unknown
 

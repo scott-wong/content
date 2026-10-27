@@ -7,14 +7,14 @@ description: |-
   Encrypt traffic to HTTPS load balancers using TLS certificates.
 
   <p><strong>中文说明：</strong></p>
-  使用 TLS 证书加密发往 HTTPS 负载均衡器的流量。
+  <p>使用 TLS 证书加密发往 HTTPS 负载均衡器的流量。</p>
 
 rationale: |-
   Encrypting traffic between users and your Kubernetes workload is fundamental
   to protecting data sent over the web.
 
   <p><strong>中文理由：</strong></p>
-  加密用户与 Kubernetes 工作负载之间的流量，是保护通过 Web 发送的数据的基础。
+  <p>加密用户与 Kubernetes 工作负载之间的流量，是保护通过 Web 发送的数据的基础。</p>
 
 severity: unknown
 

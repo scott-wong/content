@@ -10,7 +10,7 @@ description: |-
     <pre>KexAlgorithms {{{ xccdf_value("sshd_strong_kex") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    将密钥交换限制为强算法。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示这些算法：
+    <p>将密钥交换限制为强算法。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示这些算法：</p>
     <pre>KexAlgorithms {{{ xccdf_value("sshd_strong_kex") }}}</pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     sent and decrypt messages received
 
     <p><strong>中文理由：</strong></p>
-    密钥交换是密码学中两方之间交换密钥的任何方法，可使双方使用某种加密算法。如果发送方和接收方希望交换加密消息，双方都必须能够加密要发送的消息并解密接收到的消息。
+    <p>密钥交换是密码学中两方之间交换密钥的任何方法，可使双方使用某种加密算法。如果发送方和接收方希望交换加密消息，双方都必须能够加密要发送的消息并解密接收到的消息。</p>
 
 severity: medium
 

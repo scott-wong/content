@@ -19,9 +19,9 @@ description: |-
     After the settings have been set, run <tt>dconf update</tt>.
 
     <p><strong>中文说明：</strong></p>
-    在默认图形环境中，可以通过将 <tt>removal-action</tt> 设置为 <tt>'lock-screen'</tt> 来启用移除智能卡时锁定屏幕。
+    <p>在默认图形环境中，可以通过将 <tt>removal-action</tt> 设置为 <tt>'lock-screen'</tt> 来启用移除智能卡时锁定屏幕。
     <br /><br />
-    要启用该功能，请在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中添加或编辑 <tt>removal-action</tt>。例如：
+    要启用该功能，请在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中添加或编辑 <tt>removal-action</tt>。例如：</p>
     <pre>[org/gnome/settings-daemon/peripherals/smartcard]
     removal-action='lock-screen'</pre>
     添加设置后，请将锁添加到 <tt>/etc/dconf/db/local.d/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
@@ -33,7 +33,7 @@ rationale: |-
     prevent undesired access to system.
 
     <p><strong>中文理由：</strong></p>
-    在移除智能卡时自动锁定屏幕，可防止对系统进行不期望的访问。
+    <p>在移除智能卡时自动锁定屏幕，可防止对系统进行不期望的访问。</p>
 
 severity: medium
 

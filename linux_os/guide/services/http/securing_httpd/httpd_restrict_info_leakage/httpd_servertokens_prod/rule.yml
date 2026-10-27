@@ -10,9 +10,9 @@ description: |-
     <pre>ServerTokens Prod</pre>
 
     <p><strong>中文说明：</strong></p>
-    <tt>ServerTokens Prod</tt> 可限制页面标头中的信息，仅返回“Apache”一词。
+    <p><tt>ServerTokens Prod</tt> 可限制页面标头中的信息，仅返回“Apache”一词。
     <br /><br />
-    在 <tt>/etc/httpd/conf/httpd.conf</tt> 中添加或更正以下指令：
+    在 <tt>/etc/httpd/conf/httpd.conf</tt> 中添加或更正以下指令：</p>
     <pre>ServerTokens Prod</pre>
 
 rationale: |-
@@ -20,7 +20,7 @@ rationale: |-
     to plan an attack on the given system. This information disclosure should be restricted to a minimum.
 
     <p><strong>中文理由：</strong></p>
-    向客户端披露有关 Web 服务器和系统配置的信息可能被用于策划对该系统的攻击。此类信息披露应限制在最低程度。
+    <p>向客户端披露有关 Web 服务器和系统配置的信息可能被用于策划对该系统的攻击。此类信息披露应限制在最低程度。</p>
 
 severity: unknown
 

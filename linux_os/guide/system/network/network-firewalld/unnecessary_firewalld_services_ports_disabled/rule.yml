@@ -15,17 +15,17 @@ description: |-
        specific rules and no information sent to the source machine.
 
     <p><strong>中文说明：</strong></p>
-    区域可以接受或显式拒绝或丢弃服务和端口。对于每个区域，都可以设置处理未进一步指定传入流量的默认行为。此类行为通过设置区域目标来定义。可选选项包括：
+    <p>区域可以接受或显式拒绝或丢弃服务和端口。对于每个区域，都可以设置处理未进一步指定传入流量的默认行为。此类行为通过设置区域目标来定义。可选选项包括：
     - <tt>ACCEPT</tt> - 接受所有传入数据包，但被特定规则禁用的数据包除外。
     - <tt>REJECT</tt> - 禁用所有传入数据包，但已由特定规则允许的数据包除外，并通知源计算机该数据包被拒绝。
-    - <tt>DROP</tt> - 禁用所有传入数据包，但已由特定规则允许的数据包除外，且不向源计算机发送信息。
+    - <tt>DROP</tt> - 禁用所有传入数据包，但已由特定规则允许的数据包除外，且不向源计算机发送信息。</p>
 
 rationale: |-
     To reduce the attack surface of a system, all services and ports should be blocked unless
     required.
 
     <p><strong>中文理由：</strong></p>
-    为减少系统攻击面，除非确有需要，否则应阻止所有服务和端口。
+    <p>为减少系统攻击面，除非确有需要，否则应阻止所有服务和端口。</p>
 
 severity: medium
 

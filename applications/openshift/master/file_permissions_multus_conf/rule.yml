@@ -9,7 +9,7 @@ description: |-
     {{{ describe_file_permissions(file="/var/run/multus/cni/net.d/*", perms="0644") }}}
 
     <p><strong>中文说明：</strong></p>
-    要正确设置 <tt>/var/run/multus/cni/net.d/*</tt> 的权限，请运行 <tt>sudo chmod 0644 /var/run/multus/cni/net.d/*</tt>。
+    <p>要正确设置 <tt>/var/run/multus/cni/net.d/*</tt> 的权限，请运行 <tt>sudo chmod 0644 /var/run/multus/cni/net.d/*</tt>。</p>
 
 rationale: |-
     CNI (Container Network Interface) files consist of a specification and libraries for
@@ -18,7 +18,7 @@ rationale: |-
     the networking configuration potentially adding a rogue network connection.
 
     <p><strong>中文理由：</strong></p>
-    CNI（Container Network Interface）文件由规范和用于编写插件以配置 Linux 容器网络接口的库及若干受支持的插件组成。允许对这些文件进行可写访问可能使攻击者修改网络配置，并可能添加恶意的网络连接。
+    <p>CNI（Container Network Interface）文件由规范和用于编写插件以配置 Linux 容器网络接口的库及若干受支持的插件组成。允许对这些文件进行可写访问可能使攻击者修改网络配置，并可能添加恶意的网络连接。</p>
 
 severity: medium
 

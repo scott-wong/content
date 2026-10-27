@@ -9,11 +9,12 @@ description: |-
     <br/>{{{ describe_sebool_var(sebool="polyinstantiation_enabled") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>polyinstantiation_enabled</tt> 处于禁用状态。应将该设置配置为 {{{ xccdf_value("var_polyinstantiation_enabled") }}}。应将该 SELinux 布尔值设置为 {{{ xccdf_value("var_polyinstantiation_enabled") }}}。
+    <p>默认情况下，SELinux 布尔值 <tt>polyinstantiation_enabled</tt> 处于禁用状态。应将该设置配置为 {{{ xccdf_value("var_polyinstantiation_enabled") }}}。应将该 SELinux 布尔值设置为 {{{ xccdf_value("var_polyinstantiation_enabled") }}}。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    多实例化通过为不同用户或实例提供隔离的目录视图，帮助防止信息泄露。应按本地策略设置该布尔值，以兼顾隔离要求和兼容性。
+    <p>多实例化通过为不同用户或实例提供隔离的目录视图，帮助防止信息泄露。应按本地策略设置该布尔值，以兼顾隔离要求和兼容性。</p>
 
 severity: medium
 

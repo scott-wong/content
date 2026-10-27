@@ -8,7 +8,7 @@ description: |-
     {{{ describe_package_remove(package="autofs") }}}
 
    <p><strong>中文说明：</strong></p>
-   autofs 允许自动挂载设备，通常包括 CD/DVD 和 USB 驱动器。应移除 <tt>autofs</tt> 软件包。
+   <p>autofs 允许自动挂载设备，通常包括 CD/DVD 和 USB 驱动器。应移除 <tt>autofs</tt> 软件包。</p>
 
 rationale: |-
     With automounting enabled anyone with physical access could attach a USB drive or
@@ -16,7 +16,7 @@ rationale: |-
     mount it themselves.
 
     <p><strong>中文理由：</strong></p>
-    启用自动挂载后，任何具有物理访问权限的人员都可连接 USB 驱动器或光盘，即使其自身没有挂载权限，也能使内容出现在文件系统中。
+    <p>启用自动挂载后，任何具有物理访问权限的人员都可连接 USB 驱动器或光盘，即使其自身没有挂载权限，也能使内容出现在文件系统中。</p>
 
 severity: low
 

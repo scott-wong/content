@@ -67,7 +67,7 @@ rationale: |-
     capabilities based on USB device attributes.
 
     <p><strong>中文理由：</strong></p>
-    <tt>usbguard</tt> 是一种软件框架，通过基于 USB 设备属性实施基本白名单/黑名单能力，帮助防范恶意 USB 设备。
+    <p><tt>usbguard</tt> 是一种软件框架，通过基于 USB 设备属性实施基本白名单/黑名单能力，帮助防范恶意 USB 设备。</p>
 
 severity: medium
 

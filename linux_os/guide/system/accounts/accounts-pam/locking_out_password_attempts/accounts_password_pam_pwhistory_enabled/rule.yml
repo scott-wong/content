@@ -12,16 +12,16 @@ description: |-
     generally impractical, as other machines can not access local password histories.
 
     <p><strong>中文说明：</strong></p>
-    <tt>pam_pwhistory.so</tt> 模块是 PAM 框架的一部分，旨在提高密码安全性。它通过存储每个用户以前使用过的密码历史记录，确保用户不能过于频繁地在相同密码之间轮换。
+    <p><tt>pam_pwhistory.so</tt> 模块是 PAM 框架的一部分，旨在提高密码安全性。它通过存储每个用户以前使用过的密码历史记录，确保用户不能过于频繁地在相同密码之间轮换。
     <br /><br />
-    此模块与 Kerberos 不兼容。此外，将其与 <tt>NIS</tt> 或 <tt>LDAP</tt> 一起使用通常不切实际，因为其他机器无法访问本地密码历史记录。
+    此模块与 Kerberos 不兼容。此外，将其与 <tt>NIS</tt> 或 <tt>LDAP</tt> 一起使用通常不切实际，因为其他机器无法访问本地密码历史记录。</p>
 
 rationale: |-
     Enforcing strong passwords increases the difficulty and resources required 
     for password compromise.
 
     <p><strong>中文理由：</strong></p>
-    强制执行强密码会增加密码被攻陷所需的难度和资源。
+    <p>强制执行强密码会增加密码被攻陷所需的难度和资源。</p>
 
 severity: medium
 

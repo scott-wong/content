@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="polipo_session_users") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>polipo_session_users</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>polipo_session_users</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>polipo_session_users</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>polipo_session_users</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    应限制 Polipo 对所有用户会话的访问，以减少跨用户信息暴露。
+    <p>应限制 Polipo 对所有用户会话的访问，以减少跨用户信息暴露。</p>
 
 severity: medium
 

@@ -8,7 +8,7 @@ description: |-
     <pre>FAIL_DELAY {{{ xccdf_value("var_accounts_fail_delay") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    要确保由 <tt>{{{ login_defs_path }}}</tt> 控制的登录失败延迟设置正确，请将 <tt>{{{ login_defs_path }}}</tt> 中的 <tt>FAIL_DELAY</tt> 设置添加或更正为如下内容：
+    <p>要确保由 <tt>{{{ login_defs_path }}}</tt> 控制的登录失败延迟设置正确，请将 <tt>{{{ login_defs_path }}}</tt> 中的 <tt>FAIL_DELAY</tt> 设置添加或更正为如下内容：</p>
     <pre>FAIL_DELAY {{{ xccdf_value("var_accounts_fail_delay") }}}</pre>
 
 rationale: |-
@@ -16,7 +16,7 @@ rationale: |-
     enter credentials helps to slow a single-threaded brute force attack.
 
     <p><strong>中文理由：</strong></p>
-    增加身份验证失败到重新提示输入凭据之间的时间，有助于减缓单线程暴力破解攻击。
+    <p>增加身份验证失败到重新提示输入凭据之间的时间，有助于减缓单线程暴力破解攻击。</p>
 
 severity: medium
 

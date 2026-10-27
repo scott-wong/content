@@ -28,7 +28,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    必须提供证书才能完整配置 TLS 客户端证书身份验证。为确保 API Server 使用其自身的 TLS 证书，必须配置 <tt>clientCA</tt>。请验证 <tt>openshift-kube-apiserver</tt> <tt>config</tt> configmap 中的 <tt>servingInfo</tt> 已将 <tt>clientCA</tt> 配置为类似以下内容：
+    <p>必须提供证书才能完整配置 TLS 客户端证书身份验证。为确保 API Server 使用其自身的 TLS 证书，必须配置 <tt>clientCA</tt>。请验证 <tt>openshift-kube-apiserver</tt> <tt>config</tt> configmap 中的 <tt>servingInfo</tt> 已将 <tt>clientCA</tt> 配置为类似以下内容：</p>
     <pre>
     "apiServerArguments": {
       ...
@@ -47,7 +47,7 @@ rationale: |-
     the client certificate.
 
     <p><strong>中文理由：</strong></p>
-    API Server 通信包含应保持传输加密的敏感参数。应将 API Server 配置为仅提供 HTTPS 流量。如果设置了 <tt>-clientCA</tt>，任何出示由 <tt>client-ca-file</tt> 中某个证书颁发机构签发的客户端证书的请求，都将使用与该客户端证书的 <i>CommonName</i> 对应的身份进行身份验证。
+    <p>API Server 通信包含应保持传输加密的敏感参数。应将 API Server 配置为仅提供 HTTPS 流量。如果设置了 <tt>-clientCA</tt>，任何出示由 <tt>client-ca-file</tt> 中某个证书颁发机构签发的客户端证书的请求，都将使用与该客户端证书的 <i>CommonName</i> 对应的身份进行身份验证。</p>
 
 severity: medium
 

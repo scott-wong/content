@@ -18,14 +18,14 @@ description: |-
     {{{ describe_service_disable(service=service_name) }}}
 
     <p><strong>中文说明：</strong></p>
-    应禁用 <tt>{{{ service_name }}}</tt> 服务。
+    <p>应禁用 <tt>{{{ service_name }}}</tt> 服务。</p>
 
 rationale: |-
     Disabling the <tt>{{{ service_name }}}</tt> service ensures the system is not acting
     as a TFTP server, which does not provide encryption or authentication.
 
     <p><strong>中文理由：</strong></p>
-    禁用 <tt>{{{ service_name }}}</tt> 服务可确保系统不充当 TFTP 服务器，因为 TFTP 不提供加密或身份验证。
+    <p>禁用 <tt>{{{ service_name }}}</tt> 服务可确保系统不充当 TFTP 服务器，因为 TFTP 不提供加密或身份验证。</p>
 
 severity: high
 

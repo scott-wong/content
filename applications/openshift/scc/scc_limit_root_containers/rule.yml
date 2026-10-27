@@ -10,7 +10,7 @@ description: |-
     <tt>.runAsUser.type</tt> to <tt>MustRunAsRange</tt>.
 
     <p><strong>中文说明：</strong></p>
-    容器应以随机非特权用户身份运行。为防止容器以 root 用户身份运行，相应的 Security Context Constraints（SCC）应将 <tt>.runAsUser.type</tt> 设置为 <tt>MustRunAsRange</tt>。
+    <p>容器应以随机非特权用户身份运行。为防止容器以 root 用户身份运行，相应的 Security Context Constraints（SCC）应将 <tt>.runAsUser.type</tt> 设置为 <tt>MustRunAsRange</tt>。</p>
 
 rationale: |-
     It is strongly recommended that containers running on OpenShift
@@ -26,7 +26,7 @@ rationale: |-
     an scc policy.
 
     <p><strong>中文理由：</strong></p>
-    强烈建议在 OpenShift 上运行的容器支持以任意 UID 运行。OpenShift 随后会为运行中的容器实例分配一个随机的非特权 UID。这可避免容器以可能映射到主机服务账户的特定 UID 运行所带来的风险，也可避免以 root 级服务身份运行这一更大风险。OpenShift 使用默认安全上下文约束（SCC）restricted，防止容器以 root 或其他特权用户 ID 运行。经批准后，可将 Pod 配置为使用允许容器以特定 UID（包括 root(0)）运行的 SCC 策略。只有集群管理员才能批准更改 SCC 策略。
+    <p>强烈建议在 OpenShift 上运行的容器支持以任意 UID 运行。OpenShift 随后会为运行中的容器实例分配一个随机的非特权 UID。这可避免容器以可能映射到主机服务账户的特定 UID 运行所带来的风险，也可避免以 root 级服务身份运行这一更大风险。OpenShift 使用默认安全上下文约束（SCC）restricted，防止容器以 root 或其他特权用户 ID 运行。经批准后，可将 Pod 配置为使用允许容器以特定 UID（包括 root(0)）运行的 SCC 策略。只有集群管理员才能批准更改 SCC 策略。</p>
 
 severity: medium
 

@@ -13,11 +13,11 @@ description: |-
     <pre>PermitUserEnvironment no</pre>
 
     <p><strong>中文说明：</strong></p>
-    确保用户无法覆盖 SSH 守护进程的环境变量。
+    <p>确保用户无法覆盖 SSH 守护进程的环境变量。
     <br/>
     默认 SSH 配置禁用环境处理。如果未设置 <tt>PermitUserEnvironment</tt>，则使用相应默认配置。
     <br/>
-    要显式禁用环境选项，请在 {{{ sshd_config_file() }}} 中添加或更正以下内容：
+    要显式禁用环境选项，请在 {{{ sshd_config_file() }}} 中添加或更正以下内容：</p>
     <pre>PermitUserEnvironment no</pre>
 
 rationale: |-
@@ -25,7 +25,7 @@ rationale: |-
     access restriction in some configurations.
 
     <p><strong>中文理由：</strong></p>
-    SSH 环境选项在某些配置中可能允许用户绕过访问限制。
+    <p>SSH 环境选项在某些配置中可能允许用户绕过访问限制。</p>
 
 severity: medium
 

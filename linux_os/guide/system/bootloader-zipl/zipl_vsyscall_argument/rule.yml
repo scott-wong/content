@@ -11,15 +11,15 @@ description: |-
     add <tt>vsyscall=none</tt> to <tt>/etc/kernel/cmdline</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要禁用虚拟系统调用，请检查 <tt>/boot/loader/entries/*.conf</tt> 中的所有启动条目是否在其选项中包含 <tt>vsyscall=none</tt>。<br />
-    为确保新内核和启动条目继续禁用虚拟系统调用，请将 <tt>vsyscall=none</tt> 添加到 <tt>/etc/kernel/cmdline</tt>。
+    <p>要禁用虚拟系统调用，请检查 <tt>/boot/loader/entries/*.conf</tt> 中的所有启动条目是否在其选项中包含 <tt>vsyscall=none</tt>。<br />
+    为确保新内核和启动条目继续禁用虚拟系统调用，请将 <tt>vsyscall=none</tt> 添加到 <tt>/etc/kernel/cmdline</tt>。</p>
 
 rationale: |-
     Virtual Syscalls provide an opportunity of attack for a user who has control
     of the return instruction pointer.
 
     <p><strong>中文理由：</strong></p>
-    虚拟系统调用为能够控制返回指令指针的用户提供了攻击机会。
+    <p>虚拟系统调用为能够控制返回指令指针的用户提供了攻击机会。</p>
 
 severity: medium
 

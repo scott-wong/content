@@ -9,8 +9,8 @@ description: |-
     <pre>systemctl disable nftables</pre>
 
     <p><strong>中文说明：</strong></p>
-    nftables 是 Linux 内核的子系统，用于对网络数据包、数据报和帧进行过滤和分类，是 iptables 的后继产品。
-    可使用以下命令禁用 <code>nftables</code> 服务：
+    <p>nftables 是 Linux 内核的子系统，用于对网络数据包、数据报和帧进行过滤和分类，是 iptables 的后继产品。
+    可使用以下命令禁用 <code>nftables</code> 服务：</p>
     <pre>systemctl disable nftables</pre>
 
 rationale: |-

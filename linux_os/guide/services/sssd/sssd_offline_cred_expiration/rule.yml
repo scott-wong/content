@@ -21,9 +21,9 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    SSSD 应配置为在 1 天后使离线凭据过期。
+    <p>SSSD 应配置为在 1 天后使离线凭据过期。
     {{% if product in ["ol8", "ol9", "rhel8", "rhel9"] %}}
-    使用以下命令检查 SSSD 是否允许缓存的身份验证：
+    使用以下命令检查 SSSD 是否允许缓存的身份验证：</p>
     <pre>
     $ sudo grep cache_credentials /etc/sssd/sssd.conf
     cache_credentials = true
@@ -40,7 +40,7 @@ rationale: |-
     authentication information may be questionable.
 
     <p><strong>中文理由：</strong></p>
-    如果缓存的身份验证信息已过时，则身份验证信息的有效性可能存疑。
+    <p>如果缓存的身份验证信息已过时，则身份验证信息的有效性可能存疑。</p>
 
 severity: medium
 

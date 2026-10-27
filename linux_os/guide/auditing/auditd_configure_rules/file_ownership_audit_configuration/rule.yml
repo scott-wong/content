@@ -8,9 +8,9 @@ description: |-
     {{{ describe_file_owner(file="/etc/audit/rules.d/", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    所有审计配置文件必须由 root 用户所有。
+    <p>所有审计配置文件必须由 root 用户所有。
     要将 <tt>/etc/audit/</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/audit/</tt>。
-    要将 <tt>/etc/audit/rules.d/</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/audit/rules.d/</tt>。
+    要将 <tt>/etc/audit/rules.d/</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/audit/rules.d/</tt>。</p>
 
 rationale: |-
     Without the capability to restrict which roles and individuals can
@@ -22,7 +22,7 @@ rationale: |-
     to an incident or identify those responsible for one.
 
     <p><strong>中文理由：</strong></p>
-    如果无法限制哪些角色和个人可以选择要审计的事件，未经授权人员可能阻止对关键事件的审计。配置错误的审计可能因审计日志过载而降低系统性能。配置错误的审计还可能使建立、关联和调查与事件相关的事件或确定责任人变得更加困难。
+    <p>如果无法限制哪些角色和个人可以选择要审计的事件，未经授权人员可能阻止对关键事件的审计。配置错误的审计可能因审计日志过载而降低系统性能。配置错误的审计还可能使建立、关联和调查与事件相关的事件或确定责任人变得更加困难。</p>
 
 severity: medium
 

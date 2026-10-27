@@ -15,8 +15,8 @@ description: |-
     <pre>$ sudo {{{ pkg_manager }}} remove xorg-x11-server-common</pre>
 
     <p><strong>中文说明：</strong></p>
-    移除 xorg-x11-server-common 软件包后，系统将不再安装 X Windows。如果未安装 X Windows，系统无法启动到图形用户模式。这可防止系统意外或恶意启动到 <tt>graphical.target</tt> 模式。为此，请运行以下命令：
-    {{%- if product in ['ol8', 'ol9', 'rhel8', 'rhel9', 'rhv4'] -%}}
+    <p>移除 xorg-x11-server-common 软件包后，系统将不再安装 X Windows。如果未安装 X Windows，系统无法启动到图形用户模式。这可防止系统意外或恶意启动到 <tt>graphical.target</tt> 模式。为此，请运行以下命令：
+    {{%- if product in ['ol8', 'ol9', 'rhel8', 'rhel9', 'rhv4'] -%}}</p>
     <pre>$ sudo {{{ pkg_manager }}} groupremove base-x</pre>
     {{%- else %}}
     <pre>$ sudo {{{ pkg_manager }}} groupremove "X Window System"</pre>
@@ -28,7 +28,7 @@ rationale: |-
     vulnerabilities and should not be installed unless approved and documented.
 
     <p><strong>中文理由：</strong></p>
-    不得安装不必要的服务软件包，以减少系统攻击面。X Windows 有长期的安全漏洞历史，除非经过批准并记录在案，否则不应安装。
+    <p>不得安装不必要的服务软件包，以减少系统攻击面。X Windows 有长期的安全漏洞历史，除非经过批准并记录在案，否则不应安装。</p>
 
 severity: medium
 

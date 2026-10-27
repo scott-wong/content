@@ -19,7 +19,7 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    要启用智能卡身份验证，请参阅以下文档：
+    <p>要启用智能卡身份验证，请参阅以下文档：</p>
     <ul>
     {{% if product == "ol7" %}}
     <li><b><a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/userauth/userauth-AuthenticationConfiguration.html#ol7-s4-auth">Oracle Linux 身份验证配置文档</a></b></li>
@@ -39,7 +39,7 @@ rationale: |-
     (public key infrastructure) in order to provide and verify credentials.
 
     <p><strong>中文理由：</strong></p>
-    会话超时锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。操作系统不应依赖用户在离开前手动锁定操作系统会话，而应能够识别用户会话何时空闲并采取措施启动会话锁。<br /><br /><tt>screen</tt> 软件包允许实现和配置会话锁。
+    <p>会话超时锁是用户停止工作并离开信息系统附近的即时物理环境，但因暂时离开而不想注销时采取的临时措施。操作系统不应依赖用户在离开前手动锁定操作系统会话，而应能够识别用户会话何时空闲并采取措施启动会话锁。<br /><br /><tt>screen</tt> 软件包允许实现和配置会话锁。</p>
 
 severity: medium
 

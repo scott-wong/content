@@ -10,15 +10,15 @@ description: |-
     another bootloader is in use in your environment, enact equivalent settings.
 
     <p><strong>中文说明：</strong></p>
-    将 AppArmor 配置为在启动时启用，并验证其未被引导加载程序启动参数覆盖。
+    <p>将 AppArmor 配置为在启动时启用，并验证其未被引导加载程序启动参数覆盖。
 
-    注意：此建议基于 GRUB 引导加载程序；如果环境中使用 LILO 或其他引导加载程序，请实施等效设置。
+    注意：此建议基于 GRUB 引导加载程序；如果环境中使用 LILO 或其他引导加载程序，请实施等效设置。</p>
 
 rationale: |-
     AppArmor must be enabled at boot time in your bootloader configuration to
     ensure that the controls it provides are not overridden.
 
     <p><strong>中文理由：</strong></p>
-    必须在引导加载程序配置中于启动时启用 AppArmor，以确保其提供的控制项不会被覆盖。
+    <p>必须在引导加载程序配置中于启动时启用 AppArmor，以确保其提供的控制项不会被覆盖。</p>
 
 severity: medium

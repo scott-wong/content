@@ -7,14 +7,14 @@ description: |-
     {{{ describe_package_remove(package="xinetd") }}}
 
     <p><strong>中文说明：</strong></p>
-    应删除 <tt>xinetd</tt> 软件包。
+    <p>应删除 <tt>xinetd</tt> 软件包。</p>
 
 rationale: |-
     Removing the <tt>xinetd</tt> package decreases the risk of the
     xinetd service's accidental (or intentional) activation.
 
     <p><strong>中文理由：</strong></p>
-    删除 <tt>xinetd</tt> 软件包可降低 xinetd 服务被意外（或故意）激活的风险。
+    <p>删除 <tt>xinetd</tt> 软件包可降低 xinetd 服务被意外（或故意）激活的风险。</p>
 
 severity: low
 

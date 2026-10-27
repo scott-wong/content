@@ -13,16 +13,16 @@ description: |-
     {{{ describe_grub2_argument_absent("nosmep") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    SMEP 用于防止内核态执行用户空间代码；自 Linux 内核 3.0 起默认启用，但可通过内核启动参数禁用。请确保 Supervisor Mode Execution Prevention（SMEP）未通过 <tt>nosmep</tt> 启动参数禁用。
+    <p>SMEP 用于防止内核态执行用户空间代码；自 Linux 内核 3.0 起默认启用，但可通过内核启动参数禁用。请确保 Supervisor Mode Execution Prevention（SMEP）未通过 <tt>nosmep</tt> 启动参数禁用。
 
-    检查 <tt>/etc/default/grub</tt> 中的 <tt>GRUB_CMDLINE_LINUX</tt> 行不包含 <tt>nosmep</tt>，并从已安装内核的命令行中移除该参数。
+    检查 <tt>/etc/default/grub</tt> 中的 <tt>GRUB_CMDLINE_LINUX</tt> 行不包含 <tt>nosmep</tt>，并从已安装内核的命令行中移除该参数。</p>
 
 rationale: |-
     Disabling SMEP can facilitate exploitation of certain vulnerabilities because it allows
     the kernel to unintentionally execute code in less privileged memory space.
 
     <p><strong>中文理由：</strong></p>
-    禁用 SMEP 可能便于利用某些漏洞，因为它允许内核在权限较低的内存空间中意外执行代码。
+    <p>禁用 SMEP 可能便于利用某些漏洞，因为它允许内核在权限较低的内存空间中意外执行代码。</p>
 
 severity: medium
 

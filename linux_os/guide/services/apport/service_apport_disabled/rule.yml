@@ -8,7 +8,7 @@ description: |-
     {{{ describe_service_disable(service="apport") }}}
 
     <p><strong>中文说明：</strong></p>
-    Apport 会在运行时修改某些内核配置值，这可能降低系统整体安全性并暴露敏感数据。应禁用 <tt>apport</tt> 服务。
+    <p>Apport 会在运行时修改某些内核配置值，这可能降低系统整体安全性并暴露敏感数据。应禁用 <tt>apport</tt> 服务。</p>
 
 rationale: |-
     The Apport service modifies the kernel
@@ -17,7 +17,7 @@ rationale: |-
     service prevents this behavior.
 
     <p><strong>中文理由：</strong></p>
-    Apport 服务会在运行时修改内核的 <tt>fs.suid_dumpable</tt> 配置，导致其他加固措施无法持久生效。禁用该服务可防止此行为。
+    <p>Apport 服务会在运行时修改内核的 <tt>fs.suid_dumpable</tt> 配置，导致其他加固措施无法持久生效。禁用该服务可防止此行为。</p>
 
 severity: unknown
 

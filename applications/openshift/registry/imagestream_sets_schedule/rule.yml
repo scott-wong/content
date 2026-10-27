@@ -40,7 +40,7 @@ rationale: |-
     and apply any relevant updates in a timely manner.
 
     <p><strong>中文理由：</strong></p>
-    定期刷新容器镜像有助于保持镜像最新，并及时应用任何相关更新。
+    <p>定期刷新容器镜像有助于保持镜像最新，并及时应用任何相关更新。</p>
 
 severity: medium
 

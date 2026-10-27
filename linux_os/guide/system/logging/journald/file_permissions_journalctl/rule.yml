@@ -11,7 +11,7 @@ description: |-
     If "journalctl" is not set to "740", this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    验证 "journalctl" 命令的权限设置为 "740"，使用以下命令：
+    <p>验证 "journalctl" 命令的权限设置为 "740"，使用以下命令：</p>
     <pre>
      $ sudo find /usr/bin/journalctl -exec stat -c "%n %a" {} \;
     </pre>
@@ -23,7 +23,7 @@ rationale: |-
     needs to be carefully considered by the organization.
 
     <p><strong>中文理由：</strong></p>
-    在错误消息中提供过多信息的任何操作系统都可能危及数据以及错误消息结构和内容的安全性，组织必须审慎考虑错误消息的内容。
+    <p>在错误消息中提供过多信息的任何操作系统都可能危及数据以及错误消息结构和内容的安全性，组织必须审慎考虑错误消息的内容。</p>
 
 severity: medium
 

@@ -20,7 +20,7 @@ description: |-
     </ul>
 
     <p><strong>中文说明：</strong></p>
-    对于系统上的每个接口（例如 eth0），请编辑 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 并进行以下更改：
+    <p>对于系统上的每个接口（例如 eth0），请编辑 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 并进行以下更改：</p>
     <ul>
     <li> 将 BOOTPROTO 行更正为：
     <pre>BOOTPROTO=none</pre>
@@ -39,7 +39,7 @@ rationale: |-
     unacceptable burden in many circumstances.
 
     <p><strong>中文理由：</strong></p>
-    DHCP 依赖信任本地网络。如果本地网络不受信任，则不应使用。但是，DHCP 提供的自动配置很常用，而在许多情况下，手动配置这一替代方案会造成不可接受的负担。
+    <p>DHCP 依赖信任本地网络。如果本地网络不受信任，则不应使用。但是，DHCP 提供的自动配置很常用，而在许多情况下，手动配置这一替代方案会造成不可接受的负担。</p>
 
 severity: unknown
 

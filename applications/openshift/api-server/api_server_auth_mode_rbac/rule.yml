@@ -17,7 +17,7 @@ description: |-
   <tt>authorization-mode</tt> configuration option list contains RBAC.
 
   <p><strong>中文说明：</strong></p>
-  为确保 OpenShift 将不同身份限制在为其定义的一组允许操作内，请检查 API Server 的 <tt>authorization-mode</tt> 配置选项列表包含 RBAC。
+  <p>为确保 OpenShift 将不同身份限制在为其定义的一组允许操作内，请检查 API Server 的 <tt>authorization-mode</tt> 配置选项列表包含 RBAC。</p>
 
 rationale: |-
   Role Based Access Control (RBAC) allows fine-grained control over the
@@ -27,7 +27,7 @@ rationale: |-
   can be executed over a set of namespaced or cluster-wide resources.
 
   <p><strong>中文理由：</strong></p>
-  基于角色的访问控制 (RBAC) 允许对不同实体可在集群中不同对象上执行的操作进行细粒度控制。启用 RBAC 对于规范 OpenShift 集群访问至关重要，因为 RBAC 规则规定了给定用户可在一组命名空间范围或集群范围资源上执行哪些操作。
+  <p>基于角色的访问控制 (RBAC) 允许对不同实体可在集群中不同对象上执行的操作进行细粒度控制。启用 RBAC 对于规范 OpenShift 集群访问至关重要，因为 RBAC 规则规定了给定用户可在一组命名空间范围或集群范围资源上执行哪些操作。</p>
 
 identifiers:
   cce@ocp4: CCE-84102-3

@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="telepathy_connect_all_ports") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>telepathy_connect_all_ports</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>telepathy_connect_all_ports</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P telepathy_connect_all_ports off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>telepathy_connect_all_ports</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>telepathy_connect_all_ports</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P telepathy_connect_all_ports off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 Telepathy 连接所有端口会扩大即时通信组件的网络访问范围。
+    <p>允许 Telepathy 连接所有端口会扩大即时通信组件的网络访问范围。</p>
 
 severity: medium
 

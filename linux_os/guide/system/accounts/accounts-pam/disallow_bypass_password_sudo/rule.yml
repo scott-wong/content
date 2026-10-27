@@ -9,7 +9,7 @@ description: |-
     If any occurrences of "pam_succeed_if" is returned from the command, this is a finding.
 
     <p><strong>中文说明：</strong></p>
-    验证操作系统未配置为在权限提升时绕过密码要求。使用以下命令检查 "/etc/pam.d/sudo" 文件的配置：
+    <p>验证操作系统未配置为在权限提升时绕过密码要求。使用以下命令检查 "/etc/pam.d/sudo" 文件的配置：</p>
     <pre>$ sudo grep pam_succeed_if /etc/pam.d/sudo</pre>
     如果命令返回任何 "pam_succeed_if" 的出现，则这是不合规项。
 
@@ -20,7 +20,7 @@ rationale: |-
     capability, it is critical the user re-authenticate.
 
     <p><strong>中文理由：</strong></p>
-    如果不重新进行身份验证，用户可能访问其无权访问的资源或执行其无权执行的任务。当操作系统提供提升功能能力的方式时，用户重新进行身份验证至关重要。
+    <p>如果不重新进行身份验证，用户可能访问其无权访问的资源或执行其无权执行的任务。当操作系统提供提升功能能力的方式时，用户重新进行身份验证至关重要。</p>
 
 severity: medium
 

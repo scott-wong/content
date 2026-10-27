@@ -27,7 +27,7 @@ description: |-
     <pre>-a always,exit -F arch=b64 -S adjtimex,settimeofday -F key=audit_time_rules</pre>
 
     <p><strong>中文说明：</strong></p>
-    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请为 32 位和 64 位系统将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+    <p>如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请为 32 位和 64 位系统将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：</p>
     <pre>-a always,exit -F arch=b32 -S stime -F key=audit_time_rules</pre>
     由于审计查找表中未定义 64 位版本的 "stime" 系统调用，因此不应在 64 位系统上定义对应的 "-F arch=b64" 规则形式（上述 "-F arch=b32" stime 规则形式本身已足以适用于 32 位和 64 位系统）。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请为 32 位和 64 位系统将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件：
     <pre>-a always,exit -F arch=b32 -S stime -F key=audit_time_rules</pre>
@@ -41,7 +41,7 @@ rationale: |-
     to the system time should be audited.
 
     <p><strong>中文理由：</strong></p>
-    对系统时间的任意更改可用于混淆日志文件中的恶意活动，并可能干扰高度依赖准确系统时间的网络服务（例如 sshd）。应审计对系统时间的所有更改。
+    <p>对系统时间的任意更改可用于混淆日志文件中的恶意活动，并可能干扰高度依赖准确系统时间的网络服务（例如 sshd）。应审计对系统时间的所有更改。</p>
 
 severity: medium
 

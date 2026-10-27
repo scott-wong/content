@@ -12,7 +12,7 @@ description: |-
     your network.
 
     <p><strong>中文说明：</strong></p>
-    将 <tt>lockd</tt> 守护进程配置为使用静态 UDP 端口，而不是让 RPC Bind 服务动态分配端口。编辑 <tt>/etc/sysconfig/nfs</tt>。添加或修正以下行：
+    <p>将 <tt>lockd</tt> 守护进程配置为使用静态 UDP 端口，而不是让 RPC Bind 服务动态分配端口。编辑 <tt>/etc/sysconfig/nfs</tt>。添加或修正以下行：</p>
     <pre>LOCKD_UDPPORT=lockd-port</pre>
     其中 <tt>lockd-port</tt> 是网络中任何其他服务都未使用的端口。
 
@@ -21,7 +21,7 @@ rationale: |-
     to be done more effectively.
 
     <p><strong>中文理由：</strong></p>
-    将服务限制为始终使用指定端口，可以更有效地实施防火墙规则。
+    <p>将服务限制为始终使用指定端口，可以更有效地实施防火墙规则。</p>
 
 severity: unknown
 

@@ -28,7 +28,7 @@ description: |-
     <tt>cat /sys/devices/system/cpu/vulnerabilities/mds</tt>
 
     <p><strong>中文说明：</strong></p>
-    Microarchitectural Data Sampling（MDS）是一种硬件漏洞，允许非特权推测访问各种 CPU 内部缓冲区中可用的数据。
+    <p>Microarchitectural Data Sampling（MDS）是一种硬件漏洞，允许非特权推测访问各种 CPU 内部缓冲区中可用的数据。
 
     在执行存储、加载和 L1 重填操作时，处理器会将数据写入临时微架构结构（缓冲区），并且缓冲区中的数据可作为优化措施转发给加载操作。
 
@@ -41,13 +41,13 @@ description: |-
     并非所有处理器都会受 MDS 所有变体影响，但所有变体的缓解机制相同。
 
     自 Linux 内核 5.2 起，可使用以下命令检查系统是否存在漏洞或已缓解：
-    <tt>cat /sys/devices/system/cpu/vulnerabilities/mds</tt>
+    <tt>cat /sys/devices/system/cpu/vulnerabilities/mds</tt></p>
 
 rationale: |-
     The MDS vulnerability allows an attacker to sample data from internal CPU buffers.
 
     <p><strong>中文理由：</strong></p>
-    MDS 漏洞允许攻击者从 CPU 内部缓冲区采样数据。
+    <p>MDS 漏洞允许攻击者从 CPU 内部缓冲区采样数据。</p>
 
 warnings:
     - performance: |-

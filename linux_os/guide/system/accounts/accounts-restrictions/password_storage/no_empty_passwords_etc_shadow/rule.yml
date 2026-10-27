@@ -15,7 +15,7 @@ description: |-
     <pre>$ sudo passwd -l [username]</pre>
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令检查 "/etc/shadow" 文件中的空密码：
+    <p>使用以下命令检查 "/etc/shadow" 文件中的空密码：</p>
     <pre>$ sudo awk -F: '!$2 {print $1}' /etc/shadow</pre>
     如果该命令返回任何结果，则构成发现项。使用以下命令为系统上的所有账户配置密码或锁定账户：
     执行密码重置：
@@ -29,7 +29,7 @@ rationale: |-
     empty passwords should never be used in operational environments.
 
     <p><strong>中文理由：</strong></p>
-    如果账户密码为空，任何人都可以登录并以该账户的权限运行命令。运行环境中绝不应使用空密码账户。
+    <p>如果账户密码为空，任何人都可以登录并以该账户的权限运行命令。运行环境中绝不应使用空密码账户。</p>
 
 severity: high
 

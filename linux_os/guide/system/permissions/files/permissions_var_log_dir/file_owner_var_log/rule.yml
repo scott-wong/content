@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/var/log", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>/var/log</tt> 的文件所有者必须为 <tt>root</tt>。
+    <p><tt>/var/log</tt> 的文件所有者必须为 <tt>root</tt>。</p>
 
 rationale: |-
     The <tt>/var/log</tt> directory contains files with logs of error
@@ -14,7 +14,7 @@ rationale: |-
     personnel.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/var/log</tt> 目录包含系统错误消息日志文件，只应由经过授权的人员访问。
+    <p><tt>/var/log</tt> 目录包含系统错误消息日志文件，只应由经过授权的人员访问。</p>
 
 severity: medium
 

@@ -10,7 +10,7 @@ description: |-
     {{{ describe_file_permissions(file=kubeletconf_path, perms="0700") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/var/lib/kubelet/seccomp/kubevirt/kubevirt.json</tt> 文件的权限为 <tt>0700</tt> 或更严格。
+    <p>确保 <tt>/var/lib/kubelet/seccomp/kubevirt/kubevirt.json</tt> 文件的权限为 <tt>0700</tt> 或更严格。</p>
 
 rationale: |-
     This configuration ensures that only authorized users have access to modify the
@@ -19,7 +19,7 @@ rationale: |-
     associated with unrestricted access to sensitive system calls can be mitigated.
 
     <p><strong>中文理由：</strong></p>
-    此配置确保只有授权用户才能修改 seccomp 配置文件，从而防止未经授权更改 virt-launcher Pod 允许使用的系统调用。通过实施严格的权限控制，可降低与不受限制地访问敏感系统调用相关的潜在安全风险。
+    <p>此配置确保只有授权用户才能修改 seccomp 配置文件，从而防止未经授权更改 virt-launcher Pod 允许使用的系统调用。通过实施严格的权限控制，可降低与不受限制地访问敏感系统调用相关的潜在安全风险。</p>
 
 severity: medium
 

@@ -16,12 +16,12 @@ description: |-
     <tt>X11UseLocalhost yes</tt>
 
     <p><strong>中文说明：</strong></p>
-    SSH 守护进程应阻止远程主机连接到代理显示。
+    <p>SSH 守护进程应阻止远程主机连接到代理显示。
     <br />
     <tt>X11UseLocalhost</tt> 的默认 SSH 配置为 <tt>yes</tt>，可阻止远程主机连接到代理显示。
     <br />
     要显式阻止远程主机连接到代理显示，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
-    <tt>X11UseLocalhost yes</tt>
+    <tt>X11UseLocalhost yes</tt></p>
 
 rationale: |-
     When X11 forwarding is enabled, there may be additional exposure to the
@@ -32,7 +32,7 @@ rationale: |-
     connecting to the proxy display.
 
     <p><strong>中文理由：</strong></p>
-    启用 X11 转发时，如果 sshd 代理显示配置为监听通配符地址，服务器和客户端显示可能面临额外暴露风险。默认情况下，sshd 将转发服务器绑定到环回地址，并将 <tt>DISPLAY</tt> 环境变量的主机名部分设置为 localhost。这可阻止远程主机连接到代理显示。
+    <p>启用 X11 转发时，如果 sshd 代理显示配置为监听通配符地址，服务器和客户端显示可能面临额外暴露风险。默认情况下，sshd 将转发服务器绑定到环回地址，并将 <tt>DISPLAY</tt> 环境变量的主机名部分设置为 localhost。这可阻止远程主机连接到代理显示。</p>
 
 severity: medium
 

@@ -9,7 +9,7 @@ description: |-
     protected sessions.
 
     <p><strong>中文说明：</strong></p>
-    操作系统必须仅允许使用可信的 PKI 建立的证书颁发机构来验证受保护会话的建立。
+    <p>操作系统必须仅允许使用可信的 PKI 建立的证书颁发机构来验证受保护会话的建立。</p>
 
 rationale: |-
     Untrusted Certificate Authorities (CA) can issue certificates, but they
@@ -23,7 +23,7 @@ rationale: |-
     SSL/TLS certificates.
 
     <p><strong>中文理由：</strong></p>
-    不受信任的证书颁发机构（CA）可以签发证书，但这些证书可能由试图破坏系统的组织或个人签发，也可能由安全控制不足的组织签发。如果用于验证证书的 CA 不是已批准的 CA，则尚未建立对该 CA 的信任。环境仅接受由已批准的内部或外部证书颁发机构获得的 PKI 证书。依赖 CA 建立安全会话包括使用 SSL/TLS 证书等情形。
+    <p>不受信任的证书颁发机构（CA）可以签发证书，但这些证书可能由试图破坏系统的组织或个人签发，也可能由安全控制不足的组织签发。如果用于验证证书的 CA 不是已批准的 CA，则尚未建立对该 CA 的信任。环境仅接受由已批准的内部或外部证书颁发机构获得的 PKI 证书。依赖 CA 建立安全会话包括使用 SSL/TLS 证书等情形。</p>
 
 severity: medium
 identifiers:

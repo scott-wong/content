@@ -11,7 +11,8 @@ description: |-
     depending on your settings and Open vSwitch version.
 
     <p><strong>中文说明：</strong></p>
-    确保文件 <pre>/var/run/openvswitch/ovs-vswitchd.pid</pre> 的所属组为 <pre>openvswitch</pre> 或 <pre>hugetlbfs</pre>，具体取决于您的设置和 Open vSwitch 版本。
+    <p>确保文件</p>
+    <pre>/var/run/openvswitch/ovs-vswitchd.pid</pre> 的所属组为 <pre>openvswitch</pre> 或 <pre>hugetlbfs</pre>，具体取决于您的设置和 Open vSwitch 版本。
 
 rationale: |-
     CNI (Container Network Interface) files consist of a specification and libraries for
@@ -20,7 +21,7 @@ rationale: |-
     the networking configuration potentially adding a rogue network connection.
 
     <p><strong>中文理由：</strong></p>
-    CNI（Container Network Interface）文件包括用于编写插件以配置 Linux 容器网络接口的规范和库，以及多个受支持的插件。允许对这些文件进行可写访问可能使攻击者修改网络配置，并可能添加恶意网络连接。
+    <p>CNI（Container Network Interface）文件包括用于编写插件以配置 Linux 容器网络接口的规范和库，以及多个受支持的插件。允许对这些文件进行可写访问可能使攻击者修改网络配置，并可能添加恶意网络连接。</p>
 
 severity: medium
 

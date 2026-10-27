@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="nfsd_anon_write") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>nfsd_anon_write</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>nfsd_anon_write</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P nfsd_anon_write off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>nfsd_anon_write</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>nfsd_anon_write</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P nfsd_anon_write off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 NFS 服务器允许匿名写入，保护导出数据免受未授权修改。
+    <p>禁用后，可防止 NFS 服务器允许匿名写入，保护导出数据免受未授权修改。</p>
 
 severity: medium
 

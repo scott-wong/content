@@ -7,13 +7,13 @@ description: |-
     {{{ describe_package_install(package="SuSEfirewall2") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>SuSEfirewall2</tt> 软件包。
+    <p>应安装 <tt>SuSEfirewall2</tt> 软件包。</p>
 
 rationale: |-
     The SuSEfirewall2 package should be installed to provide access control methods.
 
     <p><strong>中文理由：</strong></p>
-    应安装 SuSEfirewall2 软件包以提供访问控制方法。
+    <p>应安装 SuSEfirewall2 软件包以提供访问控制方法。</p>
 
 severity: medium
 

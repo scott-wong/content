@@ -6,7 +6,7 @@ description: |-
     The ntpd service should not be installed.
 
     <p><strong>中文说明：</strong></p>
-    不应安装 ntpd 服务。
+    <p>不应安装 ntpd 服务。</p>
 
 rationale: |
    Inaccurate time stamps make it more difficult to correlate events
@@ -17,7 +17,7 @@ rationale: |
    may be inaccurate.
 
    <p><strong>中文理由：</strong></p>
-   不准确的时间戳会增加关联事件的难度，并可能导致分析不准确。在进行取证分析和调查系统事件时，确定特定事件在系统上发生的正确时间至关重要。超出配置的可接受偏差范围的时间源可能不准确。
+   <p>不准确的时间戳会增加关联事件的难度，并可能导致分析不准确。在进行取证分析和调查系统事件时，确定特定事件在系统上发生的正确时间至关重要。超出配置的可接受偏差范围的时间源可能不准确。</p>
 
 severity: low
 

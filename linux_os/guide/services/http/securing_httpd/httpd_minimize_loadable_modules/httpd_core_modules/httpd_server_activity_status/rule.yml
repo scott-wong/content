@@ -13,7 +13,7 @@ description: |-
     configuration.
 
     <p><strong>中文说明：</strong></p>
-    <tt>status</tt> 模块提供对 Web 服务器内部运行统计信息的实时访问。这可能造成不必要的信息泄露，除非确有需要，否则应禁用。要禁用该模块，请注释掉相关模块：
+    <p><tt>status</tt> 模块提供对 Web 服务器内部运行统计信息的实时访问。这可能造成不必要的信息泄露，除非确有需要，否则应禁用。要禁用该模块，请注释掉相关模块：</p>
     <pre>#LoadModule status_module modules/mod_status.so</pre>
     如果确实需要使用此模块，请确保在状态处理程序配置中将状态页面的访问权限正确限制到有限的主机集合。
 
@@ -22,7 +22,7 @@ rationale: |-
     by limiting the capabilities allowed by the web server.
 
     <p><strong>中文理由：</strong></p>
-    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
+    <p>尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。</p>
 
 severity: unknown
 

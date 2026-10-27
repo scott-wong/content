@@ -14,7 +14,7 @@ description: |-
     use cases.
 
     <p><strong>中文说明：</strong></p>
-    SELinux 的 <tt>targeted</tt> 策略适用于通用桌面和服务器以及许多其他角色的系统。要将系统配置为使用此策略，请在 <tt>/etc/selinux/config</tt> 中添加或更正以下行：
+    <p>SELinux 的 <tt>targeted</tt> 策略适用于通用桌面和服务器以及许多其他角色的系统。要将系统配置为使用此策略，请在 <tt>/etc/selinux/config</tt> 中添加或更正以下行：</p>
     <pre>SELINUXTYPE={{{ xccdf_value("var_selinux_policy_name") }}}</pre>
     <tt>mls</tt> 等其他策略提供额外的安全标记和更严格的限制，但与许多通用场景不兼容。
 
@@ -30,9 +30,9 @@ rationale: |-
     <tt>{{{ xccdf_value("var_selinux_policy_name") }}}</tt>.
 
     <p><strong>中文理由：</strong></p>
-    将 SELinux 策略设置为 <tt>targeted</tt> 或更专门的策略，可确保系统限制可能成为攻击目标的进程，例如网络服务或系统服务。
+    <p>将 SELinux 策略设置为 <tt>targeted</tt> 或更专门的策略，可确保系统限制可能成为攻击目标的进程，例如网络服务或系统服务。
     <br /><br />
-    注意：在开发和调试 SELinux 模块期间，通常会将非生产系统临时置于 <tt>permissive</tt> 模式。在此类临时情况下，应开发 SELinux 策略；工作完成后，应将系统重新配置为 <tt>{{{ xccdf_value("var_selinux_policy_name") }}}</tt>。
+    注意：在开发和调试 SELinux 模块期间，通常会将非生产系统临时置于 <tt>permissive</tt> 模式。在此类临时情况下，应开发 SELinux 策略；工作完成后，应将系统重新配置为 <tt>{{{ xccdf_value("var_selinux_policy_name") }}}</tt>。</p>
 
 severity: medium
 

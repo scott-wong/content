@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_remove(package="ypserv") }}}
 
     <p><strong>中文说明：</strong></p>
-    应删除 <tt>ypserv</tt> 软件包。
+    <p>应删除 <tt>ypserv</tt> 软件包。</p>
 
 rationale: |-
     The NIS service provides an unencrypted authentication service which does
@@ -18,7 +18,7 @@ rationale: |-
     (or intentional) activation of NIS or NIS+ services.
 
     <p><strong>中文理由：</strong></p>
-    NIS 服务提供未加密的身份验证服务，无法保证用户密码或远程会话的机密性和完整性。<br /><br />删除 <tt>ypserv</tt> 软件包可降低 NIS 或 NIS+ 服务被意外（或故意）激活的风险。
+    <p>NIS 服务提供未加密的身份验证服务，无法保证用户密码或远程会话的机密性和完整性。<br /><br />删除 <tt>ypserv</tt> 软件包可降低 NIS 或 NIS+ 服务被意外（或故意）激活的风险。</p>
 
 severity: high
 

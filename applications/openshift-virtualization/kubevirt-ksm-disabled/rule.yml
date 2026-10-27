@@ -18,9 +18,9 @@ description: |-
     configured.
 
     <p><strong>中文说明：</strong></p>
-    内核同页合并（Kernel Samepage Merging，KSM）会对节点上虚拟机之间的相同内存页进行去重。虽然这可节省内存，但 KSM 是一种众所周知的侧信道媒介：同一节点上的客户机可通过页去重时序攻击推断彼此的内存内容。KSM 默认处于禁用状态，在运行不受信任或多租户工作负载的主机上应保持禁用。
+    <p>内核同页合并（Kernel Samepage Merging，KSM）会对节点上虚拟机之间的相同内存页进行去重。虽然这可节省内存，但 KSM 是一种众所周知的侧信道媒介：同一节点上的客户机可通过页去重时序攻击推断彼此的内存内容。KSM 默认处于禁用状态，在运行不受信任或多租户工作负载的主机上应保持禁用。
 
-    HyperConverged Operator 默认提供一个空的 <tt>.spec.ksmConfiguration</tt>（<tt>{}</tt>），这不会启用 KSM（已根据节点的 <tt>/sys/kernel/mm/ksm/run</tt> 验证）。通过配置 <tt>nodeLabelSelector</tt> 可启用 KSM；仅当配置了节点选择器时，此检查才会失败。
+    HyperConverged Operator 默认提供一个空的 <tt>.spec.ksmConfiguration</tt>（<tt>{}</tt>），这不会启用 KSM（已根据节点的 <tt>/sys/kernel/mm/ksm/run</tt> 验证）。通过配置 <tt>nodeLabelSelector</tt> 可启用 KSM；仅当配置了节点选择器时，此检查才会失败。</p>
 
 rationale: |-
     Memory deduplication across tenant boundaries allows an attacker in one
@@ -29,7 +29,7 @@ rationale: |-
     breaking confidentiality between workloads.
 
     <p><strong>中文理由：</strong></p>
-    跨租户边界的内存去重使一台虚拟机中的攻击者能够通过写入时序差异，判断同一节点上另一台虚拟机中是否存在具有已知内容的页，从而破坏工作负载之间的机密性。
+    <p>跨租户边界的内存去重使一台虚拟机中的攻击者能够通过写入时序差异，判断同一节点上另一台虚拟机中是否存在具有已知内容的页，从而破坏工作负载之间的机密性。</p>
 
 severity: medium
 

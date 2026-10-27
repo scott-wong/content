@@ -15,10 +15,10 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    在 64 位 {{{ full_name }}} 系统上默认启用 ExecShield，只有在硬件不支持 ExecShield 或在 <tt>/etc/default/grub</tt> 中禁用它时，才可以禁用。
+    <p>在 64 位 {{{ full_name }}} 系统上默认启用 ExecShield，只有在硬件不支持 ExecShield 或在 <tt>/etc/default/grub</tt> 中禁用它时，才可以禁用。
     {{% if "rhel" not in product and product != "fedora" and "ol" not in families %}}
     对于 32 位 {{{ full_name }}} 系统，可以使用 <tt>sysctl</tt> 启用 ExecShield。
-    {{% endif %}}
+    {{% endif %}}</p>
 
 rationale: |-
     ExecShield uses the segmentation feature on all x86 systems to prevent
@@ -30,7 +30,7 @@ rationale: |-
     latest Red Hat and Fedora systems if supported by the hardware.
 
     <p><strong>中文理由：</strong></p>
-    ExecShield 使用所有 x86 系统上的分段功能，阻止在高于特定地址的内存中执行。它会将地址写入代码段描述符作为限制，以按进程控制可执行代码的位置。当内核将进程的栈和堆等内存区域放在该地址之上时，硬件会阻止在该地址范围内执行。在支持该功能的硬件上，最新的 Red Hat 和 Fedora 系统默认启用此功能。
+    <p>ExecShield 使用所有 x86 系统上的分段功能，阻止在高于特定地址的内存中执行。它会将地址写入代码段描述符作为限制，以按进程控制可执行代码的位置。当内核将进程的栈和堆等内存区域放在该地址之上时，硬件会阻止在该地址范围内执行。在支持该功能的硬件上，最新的 Red Hat 和 Fedora 系统默认启用此功能。</p>
 
 severity: medium
 

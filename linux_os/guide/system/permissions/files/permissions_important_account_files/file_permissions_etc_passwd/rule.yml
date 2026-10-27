@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/passwd", perms="0644") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/passwd</tt> 的权限必须为 <tt>0644</tt>。
+    <p>文件 <tt>/etc/passwd</tt> 的权限必须为 <tt>0644</tt>。</p>
 
 rationale: |-
     If the <tt>/etc/passwd</tt> file is writable by a group-owner or the
@@ -15,7 +15,7 @@ rationale: |-
     is critical for system security.
 
     <p><strong>中文理由：</strong></p>
-    如果 <tt>/etc/passwd</tt> 文件可被文件所属组或全局用户写入，其遭到破坏的风险会增加。该文件包含系统上的账户列表及相关信息，保护此文件对系统安全至关重要。
+    <p>如果 <tt>/etc/passwd</tt> 文件可被文件所属组或全局用户写入，其遭到破坏的风险会增加。该文件包含系统上的账户列表及相关信息，保护此文件对系统安全至关重要。</p>
 
 severity: medium
 

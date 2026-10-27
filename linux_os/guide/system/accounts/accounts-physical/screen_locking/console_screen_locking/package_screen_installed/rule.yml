@@ -12,9 +12,9 @@ description: |-
     <pre>ctrl+a x</pre>
 
     <p><strong>中文说明：</strong></p>
-    要启用控制台屏幕锁定，请安装 <tt>screen</tt> 软件包。
+    <p>要启用控制台屏幕锁定，请安装 <tt>screen</tt> 软件包。
     请使用适当的软件包管理工具安装 <tt>screen</tt> 软件包。
-    指示用户使用以下命令启动新的终端会话：
+    指示用户使用以下命令启动新的终端会话：</p>
     <pre>$ screen</pre>
     现在可使用以下组合键锁定控制台：
     <pre>ctrl+a x</pre>
@@ -29,7 +29,7 @@ rationale: |-
     The <tt>screen</tt> package allows for a session lock to be implemented and configured.
 
     <p><strong>中文理由：</strong></p>
-    在无活动一段时间后锁定会话，可限制会话无人值守时的潜在暴露。
+    <p>在无活动一段时间后锁定会话，可限制会话无人值守时的潜在暴露。</p>
 
 severity: medium
 

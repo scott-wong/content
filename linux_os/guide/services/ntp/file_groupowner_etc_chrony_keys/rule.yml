@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_group_owner(file="/etc/chrony.keys", group="chrony") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/chrony.keys</tt> 文件的所属组为 <tt>chrony</tt>。
+    <p>确保 <tt>/etc/chrony.keys</tt> 文件的所属组为 <tt>chrony</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/chrony.keys file by the chrony group is important
@@ -15,7 +15,7 @@ rationale: |-
     chrony ensures exclusive control of the chrony cryptography keys.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/chrony.keys</tt> 文件由 <tt>chrony</tt> 组所属非常重要，因为此文件存放 chrony 加密密钥。保护此文件对系统安全至关重要。将所属组分配给 <tt>chrony</tt> 可确保对 chrony 加密密钥的独占控制。
+    <p><tt>/etc/chrony.keys</tt> 文件由 <tt>chrony</tt> 组所属非常重要，因为此文件存放 chrony 加密密钥。保护此文件对系统安全至关重要。将所属组分配给 <tt>chrony</tt> 可确保对 chrony 加密密钥的独占控制。</p>
 
 severity: medium
 

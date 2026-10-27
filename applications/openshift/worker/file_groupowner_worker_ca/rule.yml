@@ -9,7 +9,7 @@ description: |-
     {{{ describe_file_group_owner(file="/etc/kubernetes/kubelet-ca.crt", group="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/kubernetes/kubelet-ca.crt</tt> 的所属组为 <tt>root</tt>。
+    <p>确保 <tt>/etc/kubernetes/kubelet-ca.crt</tt> 的所属组为 <tt>root</tt>。</p>
 
 rationale: |-
     The worker certificate authority file contains the certificate authority
@@ -17,7 +17,7 @@ rationale: |-
     critical for OpenShift security.
 
     <p><strong>中文理由：</strong></p>
-    worker 证书颁发机构文件包含为系统上配置的 OpenShift 节点签发的证书颁发机构证书。保护此文件对 OpenShift 安全至关重要。
+    <p>worker 证书颁发机构文件包含为系统上配置的 OpenShift 节点签发的证书颁发机构证书。保护此文件对 OpenShift 安全至关重要。</p>
 
 severity: medium
 

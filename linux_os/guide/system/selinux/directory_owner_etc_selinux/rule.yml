@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/selinux", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/selinux</tt> 的文件所有者为 <tt>root</tt>。
+    <p>确保 <tt>/etc/selinux</tt> 的文件所有者为 <tt>root</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/selinux directory by the root user is important
@@ -15,7 +15,7 @@ rationale: |-
     ensures exclusive control of the SELinux configuration.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/selinux</tt> 目录由 root 用户拥有很重要，因为该目录存放 SELinux 配置。保护此目录对系统安全至关重要。将所有权分配给 root 可确保对 SELinux 配置的独占控制。
+    <p><tt>/etc/selinux</tt> 目录由 root 用户拥有很重要，因为该目录存放 SELinux 配置。保护此目录对系统安全至关重要。将所有权分配给 root 可确保对 SELinux 配置的独占控制。</p>
 
 severity: medium
 

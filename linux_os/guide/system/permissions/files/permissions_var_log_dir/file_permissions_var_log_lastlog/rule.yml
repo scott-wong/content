@@ -6,14 +6,14 @@ description: |-
     {{{ describe_file_permissions(file="/var/log/lastlog", perms="0664") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/var/log/lastlog</tt> 的权限必须为 <tt>0664</tt>。
+    <p>文件 <tt>/var/log/lastlog</tt> 的权限必须为 <tt>0664</tt>。</p>
 
 rationale: |-
     The <tt>/var/log/lastlog</tt> file contains logs of reports the most recent login of all users
     and should only be accessed by authorized personnel.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/var/log/lastlog</tt> 文件包含所有用户最近一次登录报告，只应由经过授权的人员访问。
+    <p><tt>/var/log/lastlog</tt> 文件包含所有用户最近一次登录报告，只应由经过授权的人员访问。</p>
 
 severity: medium
 

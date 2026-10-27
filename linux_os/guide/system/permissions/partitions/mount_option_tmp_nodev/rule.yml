@@ -10,14 +10,14 @@ description: |-
     {{{ describe_mount(option="nodev", part="/tmp") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/tmp</tt> 使用 <tt>nodev</tt> 挂载选项。
+    <p>确保 <tt>/tmp</tt> 使用 <tt>nodev</tt> 挂载选项。</p>
 
 rationale: |-
     The only legitimate location for device files is the <tt>/dev</tt> directory
     located on the root partition. The only exception to this is chroot jails.
 
     <p><strong>中文理由：</strong></p>
-    设备文件的唯一合法位置是根分区上的 <tt>/dev</tt> 目录；唯一例外是为系统服务构建的 chroot 环境。
+    <p>设备文件的唯一合法位置是根分区上的 <tt>/dev</tt> 目录；唯一例外是为系统服务构建的 chroot 环境。</p>
 
 {{{ complete_ocil_entry_mount_option("/tmp", "nodev") }}}
 

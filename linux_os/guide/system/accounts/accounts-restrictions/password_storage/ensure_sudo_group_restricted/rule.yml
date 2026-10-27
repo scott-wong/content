@@ -15,16 +15,16 @@ description: |-
     privilege capabilities.
 
     <p><strong>中文说明：</strong></p>
-    开发人员和实施人员可通过采用定义明确的安全策略模型、结构化且严格规范的硬件和软件开发技术以及健全的系统/安全工程原则，提高安全功能的保证程度。实施过程中可以包括隔离内存空间和库。
+    <p>开发人员和实施人员可通过采用定义明确的安全策略模型、结构化且严格规范的硬件和软件开发技术以及健全的系统/安全工程原则，提高安全功能的保证程度。实施过程中可以包括隔离内存空间和库。
 
-    Ubuntu 操作系统通过访问控制机制和实施最小权限能力，限制对安全功能的访问。
+    Ubuntu 操作系统通过访问控制机制和实施最小权限能力，限制对安全功能的访问。</p>
 
 rationale: |-
     Any users assigned to the sudo group would be granted administrator
     access to the system.
 
     <p><strong>中文理由：</strong></p>
-    分配给 sudo 组的任何用户都将被授予系统的管理员访问权限。
+    <p>分配给 sudo 组的任何用户都将被授予系统的管理员访问权限。</p>
 
 severity: medium
 

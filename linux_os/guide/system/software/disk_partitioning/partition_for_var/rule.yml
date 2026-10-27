@@ -8,7 +8,7 @@ description: |-
     or logical volume at installation time, or migrate it using LVM.
 
     <p><strong>中文说明：</strong></p>
-    <tt>/var</tt> 目录由守护进程和其他系统服务用于存储频繁变化的数据。确保 <tt>/var</tt> 在安装时具有独立分区或逻辑卷，或使用 LVM 迁移。
+    <p><tt>/var</tt> 目录由守护进程和其他系统服务用于存储频繁变化的数据。确保 <tt>/var</tt> 在安装时具有独立分区或逻辑卷，或使用 LVM 迁移。</p>
 
 rationale: |-
     Ensuring that <tt>/var</tt> is mounted on its own partition enables the
@@ -18,7 +18,7 @@ rationale: |-
     world-writable directories installed by other software packages.
 
     <p><strong>中文理由：</strong></p>
-    确保 <tt>/var</tt> 挂载在其自身的分区上，可以设置更严格的挂载选项。这有助于保护使用该分区的守护进程或其他程序等系统服务。<tt>/var</tt> 目录经常包含由其他软件包安装的全局可写目录。
+    <p>确保 <tt>/var</tt> 挂载在其自身的分区上，可以设置更严格的挂载选项。这有助于保护使用该分区的守护进程或其他程序等系统服务。<tt>/var</tt> 目录经常包含由其他软件包安装的全局可写目录。</p>
 
 severity: low
 

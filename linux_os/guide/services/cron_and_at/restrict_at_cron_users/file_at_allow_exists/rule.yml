@@ -8,14 +8,14 @@ description: |-
     of <tt>/etc/at.deny</tt>.
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/at.allow</tt> 应存在，并应使用它代替 <tt>/etc/at.deny</tt>。
+    <p>文件 <tt>/etc/at.allow</tt> 应存在，并应使用它代替 <tt>/etc/at.deny</tt>。</p>
 
 rationale: |-
     Using the at.allow file to control who can run at jobs enforces this who can schedule jobs.
-    It is easier to manage an allow list than a deny list. 
+    It is easier to manage an allow list than a deny list.
 
     <p><strong>中文理由：</strong></p>
-    使用 <tt>at.allow</tt> 文件控制谁可以运行 at 作业，可强制执行谁可以调度作业。允许列表比拒绝列表更易于管理。
+    <p>使用 <tt>at.allow</tt> 文件控制谁可以运行 at 作业，可强制执行谁可以调度作业。允许列表比拒绝列表更易于管理。</p>
 
 severity: medium
 

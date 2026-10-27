@@ -19,7 +19,7 @@ description: |-
     <pre>-a always,exit -F arch=ARCH -S setdomainname -F auid&gt;={{{ auid }}} -F auid!=unset -F key=system-locale</pre>
 
     <p><strong>中文说明：</strong></p>
-    审计系统应为所有用户和 root 收集 <tt>setdomainname</tt> 事件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，并将 ARCH 设置为 b32（32 位系统）；如果系统为 64 位，则应分别为 b32 和 b64 添加两行：
+    <p>审计系统应为所有用户和 root 收集 <tt>setdomainname</tt> 事件。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，并将 ARCH 设置为 b32（32 位系统）；如果系统为 64 位，则应分别为 b32 和 b64 添加两行：</p>
     <pre>-a always,exit -F arch=ARCH -S setdomainname -F auid&gt;={{{ auid }}} -F auid!=unset -F key=system-locale</pre>
     如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，并将 ARCH 设置为 b32（32 位系统）；如果系统为 64 位，则应分别为 b32 和 b64 添加两行：
     <pre>-a always,exit -F arch=ARCH -S setdomainname -F auid&gt;={{{ auid }}} -F auid!=unset -F key=system-locale</pre>
@@ -33,7 +33,7 @@ rationale: |-
     potentially break security parameters that are set based on this name.
 
     <p><strong>中文理由：</strong></p>
-    监视 <tt>setdomainname</tt> 可识别对系统主机名的潜在未经授权更改。更改主机名可能破坏基于该名称设置的安全参数。
+    <p>监视 <tt>setdomainname</tt> 可识别对系统主机名的潜在未经授权更改。更改主机名可能破坏基于该名称设置的安全参数。</p>
 
 severity: medium
 

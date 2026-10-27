@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="virt_use_usb") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>virt_use_usb</tt> 为 enabled。应禁用此设置。要禁用 <tt>virt_use_usb</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_use_usb off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>virt_use_usb</tt> 为 enabled。应禁用此设置。要禁用 <tt>virt_use_usb</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_use_usb off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许虚拟化组件访问 USB 设备会扩大主机设备的暴露范围；除非明确需要，否则应保持禁用。
+    <p>允许虚拟化组件访问 USB 设备会扩大主机设备的暴露范围；除非明确需要，否则应保持禁用。</p>
 
 severity: medium
 

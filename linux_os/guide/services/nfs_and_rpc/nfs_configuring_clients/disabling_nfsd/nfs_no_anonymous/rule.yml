@@ -15,7 +15,7 @@ description: |-
     Alternatively, functionally equivalent values of 60001, 65534, 65535 may be used.
 
     <p><strong>中文说明：</strong></p>
-    要为远程 root 用户指定 UID 和 GID，请编辑 <tt>/etc/exports</tt> 文件，并为每个导出项添加以下内容：
+    <p>要为远程 root 用户指定 UID 和 GID，请编辑 <tt>/etc/exports</tt> 文件，并为每个导出项添加以下内容：</p>
     <pre>
     anonuid=<tt>value greater than UID_MAX from {{{ login_defs_path }}}</tt>
     anongid=<tt>value greater than GID_MAX from {{{ login_defs_path }}}</tt>
@@ -27,7 +27,7 @@ rationale: |-
     to a local account which has no permissions on the system.
 
     <p><strong>中文理由：</strong></p>
-    指定匿名 UID 和 GID 可确保远程 root 用户映射到系统上没有任何权限的本地账户。
+    <p>指定匿名 UID 和 GID 可确保远程 root 用户映射到系统上没有任何权限的本地账户。</p>
 
 severity: unknown
 

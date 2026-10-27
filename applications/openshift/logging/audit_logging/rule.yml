@@ -12,7 +12,7 @@ description: |-
   calls to the Amazon EKS API operations.
 
   <p><strong>中文说明：</strong></p>
-  审计日志是由 Amazon EKS 管理的 EKS 托管 Kubernetes 控制平面日志的一部分。Amazon EKS 与 AWS CloudTrail 集成，后者是一项提供 Amazon EKS 中用户、角色或 AWS 服务所执行操作记录的服务。CloudTrail 会将 Amazon EKS 的所有 API 调用捕获为事件。捕获的调用包括来自 Amazon EKS 控制台的调用，以及对 Amazon EKS API 操作的代码调用。
+  <p>审计日志是由 Amazon EKS 管理的 EKS 托管 Kubernetes 控制平面日志的一部分。Amazon EKS 与 AWS CloudTrail 集成，后者是一项提供 Amazon EKS 中用户、角色或 AWS 服务所执行操作记录的服务。CloudTrail 会将 Amazon EKS 的所有 API 调用捕获为事件。捕获的调用包括来自 Amazon EKS 控制台的调用，以及对 Amazon EKS API 操作的代码调用。</p>
 
 rationale: |-
   Exporting logs and metrics to a dedicated, persistent datastore such as
@@ -21,7 +21,7 @@ rationale: |-
   collated from multiple sources.
 
   <p><strong>中文理由：</strong></p>
-  将日志和指标导出到 CloudTrail 等专用持久数据存储，可确保集群安全事件后审计数据仍然可用，并为分析来自多个来源的日志和指标数据提供集中位置。
+  <p>将日志和指标导出到 CloudTrail 等专用持久数据存储，可确保集群安全事件后审计数据仍然可用，并为分析来自多个来源的日志和指标数据提供集中位置。</p>
 
 severity: unknown
 

@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="mmap_low_allowed") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>mmap_low_allowed</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mmap_low_allowed</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mmap_low_allowed off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>mmap_low_allowed</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mmap_low_allowed</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mmap_low_allowed off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止进程映射低地址内存，降低利用空指针或低地址内存布局缺陷的风险。
+    <p>禁用后，可防止进程映射低地址内存，降低利用空指针或低地址内存布局缺陷的风险。</p>
 
 severity: medium
 

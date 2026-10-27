@@ -8,14 +8,14 @@ description: |-
     This is the default setting.
 
     <p><strong>中文说明：</strong></p>
-    要将 Audit 守护进程配置为将 Audit 日志写入磁盘，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>write_logs</tt> 设为 <tt>yes</tt>。这是默认设置。
+    <p>要将 Audit 守护进程配置为将 Audit 日志写入磁盘，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>write_logs</tt> 设为 <tt>yes</tt>。这是默认设置。</p>
 
 rationale: |-
     If <tt>write_logs</tt> isn't set to <tt>yes</tt>, the Audit logs will
     not be written to the disk.
 
     <p><strong>中文理由：</strong></p>
-    如果 <tt>write_logs</tt> 未设为 <tt>yes</tt>，Audit 日志将不会写入磁盘。
+    <p>如果 <tt>write_logs</tt> 未设为 <tt>yes</tt>，Audit 日志将不会写入磁盘。</p>
 
 severity: medium
 

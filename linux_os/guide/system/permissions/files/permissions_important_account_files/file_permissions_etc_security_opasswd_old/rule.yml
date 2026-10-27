@@ -6,14 +6,14 @@ description:  |-
     {{{ describe_file_permissions(file="/etc/security/opasswd.old", perms="0600") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/security/opasswd.old</tt> 的权限必须为 <tt>0600</tt>。
+    <p>文件 <tt>/etc/security/opasswd.old</tt> 的权限必须为 <tt>0600</tt>。</p>
 
 rationale: |-
     The <tt>/etc/security/opasswd.old</tt> file stores backups of old passwords to prevent
     password reuse. Protection of this file is critical for system security.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/security/opasswd.old</tt> 文件存储旧密码的备份，以防止密码重用。保护此文件对系统安全至关重要。
+    <p><tt>/etc/security/opasswd.old</tt> 文件存储旧密码的备份，以防止密码重用。保护此文件对系统安全至关重要。</p>
 
 severity: medium
 

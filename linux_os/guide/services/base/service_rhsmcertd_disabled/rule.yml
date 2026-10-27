@@ -10,8 +10,8 @@ description: |-
     {{{ describe_service_disable(service="rhsmcertd") }}}
 
     <p><strong>中文说明：</strong></p>
-    Red Hat Subscription Manager（rhsmcertd）定期检查已注册系统的权利证书变更，并相应更新。
-    应禁用 <tt>rhsmcertd</tt> 服务。
+    <p>Red Hat Subscription Manager（rhsmcertd）定期检查已注册系统的权利证书变更，并相应更新。
+    应禁用 <tt>rhsmcertd</tt> 服务。</p>
 
 rationale: |-
     The <tt>rhsmcertd</tt> service can provide administrators with some
@@ -21,7 +21,7 @@ rationale: |-
     unnecessary and can be disabled.
 
     <p><strong>中文理由：</strong></p>
-    <tt>rhsmcertd</tt> 服务可为管理员提供一些额外控制，用于确定其系统有权使用哪些订阅。但是，对于本地管理或预计不需要远程更改订阅状态的系统，该服务不必要，可以禁用。
+    <p><tt>rhsmcertd</tt> 服务可为管理员提供一些额外控制，用于确定其系统有权使用哪些订阅。但是，对于本地管理或预计不需要远程更改订阅状态的系统，该服务不必要，可以禁用。</p>
 
 severity: low
 

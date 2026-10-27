@@ -26,7 +26,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    API Server 最小请求超时定义处理程序在超时前必须保持请求打开的最少秒数。要设置此值，请编辑 <tt>openshift-kube-apiserver</tt> configmap，并在 <tt>apiServerArguments</tt> 字段下设置 <tt>min-request-timeout</tt>：
+    <p>API Server 最小请求超时定义处理程序在超时前必须保持请求打开的最少秒数。要设置此值，请编辑 <tt>openshift-kube-apiserver</tt> configmap，并在 <tt>apiServerArguments</tt> 字段下设置 <tt>min-request-timeout</tt>：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -46,7 +46,7 @@ rationale: |-
     as appropriate and change the default limit of 1800 seconds only if needed.
 
     <p><strong>中文理由：</strong></p>
-    设置全局请求超时可以将 API Server 请求超时限制延长到适合用户连接速度的时长。默认值为 1800 秒，可能不适合某些环境。将限制设得过低可能导致超时过多，而限制过大会耗尽 API Server 资源，使其容易遭受拒绝服务攻击。建议根据实际情况设置此限制，仅在需要时更改默认的 1800 秒限制。
+    <p>设置全局请求超时可以将 API Server 请求超时限制延长到适合用户连接速度的时长。默认值为 1800 秒，可能不适合某些环境。将限制设得过低可能导致超时过多，而限制过大会耗尽 API Server 资源，使其容易遭受拒绝服务攻击。建议根据实际情况设置此限制，仅在需要时更改默认的 1800 秒限制。</p>
 
 severity: medium
 

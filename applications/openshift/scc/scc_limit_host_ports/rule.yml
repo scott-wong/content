@@ -10,7 +10,7 @@ description: |-
     should set <tt>allowHostPorts</tt> to <tt>false</tt>.
 
     <p><strong>中文说明：</strong></p>
-    应限制容器只能在主机上直接绑定非特权端口。为防止容器绑定主机上的特权端口，相应的 Security Context Constraints（SCC）应将 <tt>allowHostPorts</tt> 设置为 <tt>false</tt>。
+    <p>应限制容器只能在主机上直接绑定非特权端口。为防止容器绑定主机上的特权端口，相应的 Security Context Constraints（SCC）应将 <tt>allowHostPorts</tt> 设置为 <tt>false</tt>。</p>
 
 rationale: |-
     Privileged ports are those ports below 1024 and that require system
@@ -22,7 +22,7 @@ rationale: |-
     mapping port 8080 externally to port 80 in the container.
 
     <p><strong>中文理由：</strong></p>
-    特权端口是低于 1024 且需要系统特权才能使用的端口。如果容器能够使用这些端口，则容器必须以特权用户身份运行。容器平台必须阻止尝试直接映射到这些端口的容器。当需要特定端口时，允许将非特权端口映射到容器的特权端口是一种可行方式，例如将外部端口 8080 映射到容器内的端口 80。
+    <p>特权端口是低于 1024 且需要系统特权才能使用的端口。如果容器能够使用这些端口，则容器必须以特权用户身份运行。容器平台必须阻止尝试直接映射到这些端口的容器。当需要特定端口时，允许将非特权端口映射到容器的特权端口是一种可行方式，例如将外部端口 8080 映射到容器内的端口 80。</p>
 
 severity: medium
 

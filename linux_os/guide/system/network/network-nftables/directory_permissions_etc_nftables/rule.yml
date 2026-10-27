@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/nftables", perms="0700") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/nftables</tt> 的权限为 <tt>0700</tt>。
+    <p>确保 <tt>/etc/nftables</tt> 的权限为 <tt>0700</tt>。</p>
 
 rationale: |-
     Setting correct permissions on the /etc/nftables directory is important
@@ -15,7 +15,7 @@ rationale: |-
     ensures exclusive control of the nftables configuration.
 
     <p><strong>中文理由：</strong></p>
-    对 <tt>/etc/nftables</tt> 目录设置正确权限很重要，因为该目录存放 nftables 配置。保护此目录对系统安全至关重要。限制权限可确保对 nftables 配置的独占控制。
+    <p>对 <tt>/etc/nftables</tt> 目录设置正确权限很重要，因为该目录存放 nftables 配置。保护此目录对系统安全至关重要。限制权限可确保对 nftables 配置的独占控制。</p>
 
 severity: medium
 

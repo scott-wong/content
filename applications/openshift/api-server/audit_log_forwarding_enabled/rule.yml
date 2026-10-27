@@ -12,7 +12,8 @@ description: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/latest/observability/logging/logging-6.0/log6x-clf.html") }}}
 
   <p><strong>中文说明：</strong></p>
-  OpenShift 审计在 API Server 级别工作，记录发往服务器的所有请求。审计默认启用，最佳实践是将审计日志发送到集群外进行保留。cluster-logging-operator 可通过 <pre>ClusterLogForwarders</pre> 资源实现此目的。上述资源可配置为将日志发送到不同的第三方系统。有关更多信息，请参阅官方文档：
+  <p>OpenShift 审计在 API Server 级别工作，记录发往服务器的所有请求。审计默认启用，最佳实践是将审计日志发送到集群外进行保留。cluster-logging-operator 可通过</p>
+  <pre>ClusterLogForwarders</pre> 资源实现此目的。上述资源可配置为将日志发送到不同的第三方系统。有关更多信息，请参阅官方文档：
   <a href="https://docs.openshift.com/container-platform/latest/observability/logging/logging-6.0/log6x-clf.html">官方文档</a>
 
 rationale: |-
@@ -21,7 +22,7 @@ rationale: |-
   tamper with the logs because of the logs being stored off-site.
 
   <p><strong>中文理由：</strong></p>
-  保留日志可确保能够回溯调查或关联任何事件。将审计日志转移到集群外可确保即使攻击者获得集群访问权限，也无法篡改日志，因为日志存储在异地。
+  <p>保留日志可确保能够回溯调查或关联任何事件。将审计日志转移到集群外可确保即使攻击者获得集群访问权限，也无法篡改日志，因为日志存储在异地。</p>
 
 severity: medium
 

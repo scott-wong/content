@@ -14,7 +14,7 @@ description: |-
     <tt>Vulnerable</tt>.
 
     <p><strong>中文说明：</strong></p>
-    Linux 内核通过 <tt>/sys/devices/system/cpu/vulnerabilities/</tt> 下的 sysfs 文件公开已知 CPU 硬件漏洞的缓解状态。每个文件都报告正在运行的内核是否已针对特定漏洞（例如 Spectre、Meltdown、MDS、Retbleed）应用缓解措施。这些文件均不应报告以 <tt>Vulnerable</tt> 开头的状态。
+    <p>Linux 内核通过 <tt>/sys/devices/system/cpu/vulnerabilities/</tt> 下的 sysfs 文件公开已知 CPU 硬件漏洞的缓解状态。每个文件都报告正在运行的内核是否已针对特定漏洞（例如 Spectre、Meltdown、MDS、Retbleed）应用缓解措施。这些文件均不应报告以 <tt>Vulnerable</tt> 开头的状态。</p>
 
 rationale: |-
     Unmitigated CPU vulnerabilities expose the host to speculative
@@ -26,7 +26,7 @@ rationale: |-
     of the virtualization host.
 
     <p><strong>中文理由：</strong></p>
-    未缓解的 CPU 漏洞会使主机暴露于推测执行攻击，此类攻击可能跨越安全边界泄露敏感数据。在虚拟化环境中，风险会被放大，因为已失陷的客户机可能利用硬件漏洞读取其他客户机或虚拟机监控程序的内存。确保所有已知 CPU 漏洞均得到缓解，可减小虚拟化主机的攻击面。
+    <p>未缓解的 CPU 漏洞会使主机暴露于推测执行攻击，此类攻击可能跨越安全边界泄露敏感数据。在虚拟化环境中，风险会被放大，因为已失陷的客户机可能利用硬件漏洞读取其他客户机或虚拟机监控程序的内存。确保所有已知 CPU 漏洞均得到缓解，可减小虚拟化主机的攻击面。</p>
 
 severity: medium
 

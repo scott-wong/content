@@ -6,14 +6,14 @@ description: |-
     Rsyslog is installed by default. {{{ describe_package_install(package="rsyslog") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认安装 rsyslog。应确保已安装 <tt>rsyslog</tt> 软件包。
+    <p>默认安装 rsyslog。应确保已安装 <tt>rsyslog</tt> 软件包。</p>
 
 rationale: |-
     The rsyslog package provides the rsyslog daemon, which provides
     system logging services.
 
     <p><strong>中文理由：</strong></p>
-    rsyslog 软件包提供 rsyslog 守护进程，该守护进程提供系统日志记录服务。
+    <p>rsyslog 软件包提供 rsyslog 守护进程，该守护进程提供系统日志记录服务。</p>
 
 severity: medium
 

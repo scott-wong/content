@@ -16,7 +16,7 @@ description: |-
     active firewalls can lead to rule conflicts and security gaps.
 
     <p><strong>中文说明：</strong></p>
-    系统必须恰好运行一个活动防火墙服务，以避免冲突并确保数据包过滤一致。任何时间只应启用并激活以下服务之一：
+    <p>系统必须恰好运行一个活动防火墙服务，以避免冲突并确保数据包过滤一致。任何时间只应启用并激活以下服务之一：</p>
     <ul>
         <li>ufw - Uncomplicated Firewall（Ubuntu/Debian 默认）</li>
         <li>iptables - 经典 Linux 防火墙</li>
@@ -33,9 +33,9 @@ rationale: |-
     attacks and unauthorized access.
 
     <p><strong>中文理由：</strong></p>
-    同时运行多个防火墙服务可能导致规则处理冲突、行为不可预测和潜在安全缺口。单个防火墙服务可确保数据包过滤一致且可预测。
+    <p>同时运行多个防火墙服务可能导致规则处理冲突、行为不可预测和潜在安全缺口。单个防火墙服务可确保数据包过滤一致且可预测。
 
-    没有活动防火墙服务会使系统暴露于基于网络的攻击和未授权访问。
+    没有活动防火墙服务会使系统暴露于基于网络的攻击和未授权访问。</p>
 
 severity: medium
 

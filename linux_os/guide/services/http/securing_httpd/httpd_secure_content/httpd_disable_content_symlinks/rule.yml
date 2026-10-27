@@ -11,7 +11,7 @@ description: |-
     <pre>Options SymLinksIfOwnerMatchDisable</pre>
 
     <p><strong>中文说明：</strong></p>
-    对于每个 <tt>&lt;Directory&gt;</tt> 实例，请移除以下内容：
+    <p>对于每个 <tt>&lt;Directory&gt;</tt> 实例，请移除以下内容：</p>
     <pre>FollowSymLinks</pre>
     如果允许符号链接，可以为每个 <tt>&lt;Directory&gt;</tt> 实例添加以下内容：
     <pre>Options SymLinksIfOwnerMatchDisable</pre>
@@ -24,7 +24,7 @@ rationale: |-
     the web document root or home directory.
 
     <p><strong>中文理由：</strong></p>
-    符号链接允许使用符号名称引用文件或目录，如果符号链接指向敏感区域，会带来潜在危险。执行 Web 脚本并允许符号链接时，Web 用户可能被允许访问 Web 文档根目录或主目录范围之外的服务器位置。
+    <p>符号链接允许使用符号名称引用文件或目录，如果符号链接指向敏感区域，会带来潜在危险。执行 Web 脚本并允许符号链接时，Web 用户可能被允许访问 Web 文档根目录或主目录范围之外的服务器位置。</p>
 
 severity: high
 

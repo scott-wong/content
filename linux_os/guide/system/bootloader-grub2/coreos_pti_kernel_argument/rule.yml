@@ -9,7 +9,7 @@ description: |-
     operating system in <tt>/boot/loader/entries/*.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要启用内核页表隔离，请将参数 <tt>pti=on</tt> 添加到 <tt>/boot/loader/entries/*.conf</tt> 中 Linux 操作系统的所有 BLS（Boot Loader Specification）条目（"options" 行）。
+    <p>要启用内核页表隔离，请将参数 <tt>pti=on</tt> 添加到 <tt>/boot/loader/entries/*.conf</tt> 中 Linux 操作系统的所有 BLS（Boot Loader Specification）条目（"options" 行）。</p>
 
 rationale: |-
     Kernel page-table isolation is a kernel feature that mitigates
@@ -18,7 +18,7 @@ rationale: |-
     randomization (KASLR).
 
     <p><strong>中文理由：</strong></p>
-    内核页表隔离是一项内核功能，可缓解 Meltdown 安全漏洞，并增强内核抵御绕过内核地址空间布局随机化（KASLR）尝试的能力。
+    <p>内核页表隔离是一项内核功能，可缓解 Meltdown 安全漏洞，并增强内核抵御绕过内核地址空间布局随机化（KASLR）尝试的能力。</p>
 
 severity: high
 

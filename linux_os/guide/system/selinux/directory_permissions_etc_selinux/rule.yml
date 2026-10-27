@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/selinux", perms="0755") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/selinux</tt> 的权限为 <tt>0755</tt>。
+    <p>确保 <tt>/etc/selinux</tt> 的权限为 <tt>0755</tt>。</p>
 
 rationale: |-
     Setting correct permissions on the /etc/selinux directory is important
@@ -15,7 +15,7 @@ rationale: |-
     ensures exclusive control of the SELinux configuration.
 
     <p><strong>中文理由：</strong></p>
-    对 <tt>/etc/selinux</tt> 目录设置正确权限很重要，因为该目录存放 SELinux 配置。保护此目录对系统安全至关重要。限制权限可确保对 SELinux 配置的独占控制。
+    <p>对 <tt>/etc/selinux</tt> 目录设置正确权限很重要，因为该目录存放 SELinux 配置。保护此目录对系统安全至关重要。限制权限可确保对 SELinux 配置的独占控制。</p>
 
 severity: medium
 

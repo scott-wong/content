@@ -7,14 +7,14 @@ description: |-
     {{{ describe_service_enable(service="rsyslog") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>rsyslog</tt> 服务默认在 {{{ full_name }}} 上提供 syslog 风格日志记录。应启用并启动 <tt>rsyslog</tt> 服务。
+    <p><tt>rsyslog</tt> 服务默认在 {{{ full_name }}} 上提供 syslog 风格日志记录。应启用并启动 <tt>rsyslog</tt> 服务。</p>
 
 rationale: |-
     The <tt>rsyslog</tt> service must be running in order to provide
     logging services, which are essential to system administration.
 
     <p><strong>中文理由：</strong></p>
-    必须运行 <tt>rsyslog</tt> 服务才能提供日志记录服务，而这些服务对系统管理至关重要。
+    <p>必须运行 <tt>rsyslog</tt> 服务才能提供日志记录服务，而这些服务对系统管理至关重要。</p>
 
 severity: medium
 

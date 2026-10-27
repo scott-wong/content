@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="minidlna_read_generic_user_content") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>minidlna_read_generic_user_content</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>minidlna_read_generic_user_content</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P minidlna_read_generic_user_content off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>minidlna_read_generic_user_content</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>minidlna_read_generic_user_content</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P minidlna_read_generic_user_content off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 MiniDLNA 读取通用用户内容，降低媒体服务器意外暴露个人数据的风险。
+    <p>禁用后，可防止 MiniDLNA 读取通用用户内容，降低媒体服务器意外暴露个人数据的风险。</p>
 
 severity: medium
 

@@ -14,13 +14,13 @@ description: |-
   that are modified during the initial run of the daemon set pods.
 
   <p><strong>中文说明：</strong></p>
-  <a href="https://docs.openshift.com/container-platform/4.7/security/file_integrity_operator/file-integrity-operator-understanding.html">File Integrity Operator</a> 会持续对集群节点执行文件完整性检查。该 Operator 会部署 DaemonSet，以初始化并在每个节点上运行具有特权的 AIDE 容器，并提供一个状态对象，其中包含 DaemonSet Pod 初次运行期间被修改文件的日志。
+  <p><a href="https://docs.openshift.com/container-platform/4.7/security/file_integrity_operator/file-integrity-operator-understanding.html">File Integrity Operator</a> 会持续对集群节点执行文件完整性检查。该 Operator 会部署 DaemonSet，以初始化并在每个节点上运行具有特权的 AIDE 容器，并提供一个状态对象，其中包含 DaemonSet Pod 初次运行期间被修改文件的日志。</p>
 
 rationale: |-
   File integrity scanning able to detect potential and unauthorised access.
 
   <p><strong>中文理由：</strong></p>
-  文件完整性扫描能够发现潜在的未经授权访问。
+  <p>文件完整性扫描能够发现潜在的未经授权访问。</p>
 
 severity: medium
 

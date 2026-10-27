@@ -27,9 +27,9 @@ description: |-
     <pre>$ sudo ufw limit in on eth0</pre>
 
     <p><strong>中文说明：</strong></p>
-    操作系统必须配置 uncomplicated firewall，以对受影响的网络接口进行速率限制。
+    <p>操作系统必须配置 uncomplicated firewall，以对受影响的网络接口进行速率限制。
 
-    使用以下命令检查所有正在监听端口的服务：
+    使用以下命令检查所有正在监听端口的服务：</p>
     <pre>$ sudo ss -l46ut
     Netid State Recv-Q Send-Q Local Address:Port Peer Address:Port Process
     tcp LISTEN 0 128 [::]:ssh [::]:*</pre>
@@ -54,7 +54,7 @@ rationale: |-
     service redundancy, may reduce the susceptibility to some DoS attacks.
 
     <p><strong>中文理由：</strong></p>
-    本要求涉及操作系统配置，以减轻已发生或正在进行的 DoS 攻击对系统可用性的影响。对于每个系统，必须识别已知和潜在的 DoS 攻击，并针对每种攻击实施解决方案。存在多种技术可限制或有时消除 DoS 攻击影响（例如限制进程或建立内存分区）。增加容量和带宽并结合服务冗余，可降低对某些 DoS 攻击的敏感性。
+    <p>本要求涉及操作系统配置，以减轻已发生或正在进行的 DoS 攻击对系统可用性的影响。对于每个系统，必须识别已知和潜在的 DoS 攻击，并针对每种攻击实施解决方案。存在多种技术可限制或有时消除 DoS 攻击影响（例如限制进程或建立内存分区）。增加容量和带宽并结合服务冗余，可降低对某些 DoS 攻击的敏感性。</p>
 
 severity: medium
 

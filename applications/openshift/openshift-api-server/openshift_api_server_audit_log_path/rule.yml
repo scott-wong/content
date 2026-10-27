@@ -24,7 +24,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    要启用 OpenShift API Server 审计，必须设置审计日志路径。请编辑 <tt>openshift-apiserver</tt> ConfigMap，并将 <tt>audit-log-path</tt> 设置为应写入审计日志的适当路径和文件。例如：
+    <p>要启用 OpenShift API Server 审计，必须设置审计日志路径。请编辑 <tt>openshift-apiserver</tt> ConfigMap，并将 <tt>audit-log-path</tt> 设置为应写入审计日志的适当路径和文件。例如：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -39,7 +39,7 @@ rationale: |-
     system components.
 
     <p><strong>中文理由：</strong></p>
-    默认情况下未启用 API Server 审计。审计 API Server 可提供与安全相关的时间顺序记录集，记录用户、管理员或其他系统组件对系统执行的活动序列。
+    <p>默认情况下未启用 API Server 审计。审计 API Server 可提供与安全相关的时间顺序记录集，记录用户、管理员或其他系统组件对系统执行的活动序列。</p>
 
 identifiers:
   cce@ocp4: CCE-83547-0

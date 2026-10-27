@@ -10,7 +10,7 @@ description: |-
     <pre>auth required pam_wheel.so use_uid group={{{ xccdf_value("var_pam_wheel_group_for_su") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    要确保只有 <tt>pam_wheel.so</tt> 模块 <tt>group</tt> 选项所设置组的成员可以通过 <tt>su</tt> 命令运行具有变更权限的命令，请确保 <tt>/etc/pam.d/su</tt> 文件中存在以下行：
+    <p>要确保只有 <tt>pam_wheel.so</tt> 模块 <tt>group</tt> 选项所设置组的成员可以通过 <tt>su</tt> 命令运行具有变更权限的命令，请确保 <tt>/etc/pam.d/su</tt> 文件中存在以下行：</p>
     <pre>auth required pam_wheel.so use_uid group={{{ xccdf_value("var_pam_wheel_group_for_su") }}}</pre>
 
 rationale: |-
@@ -19,7 +19,7 @@ rationale: |-
     Limiting access to such command is considered a good security practice.
 
     <p><strong>中文理由：</strong></p>
-    <tt>su</tt> 程序允许以替代用户和组 ID 运行命令。它常用于以 root 用户身份运行命令。限制对此类命令的访问被视为良好的安全实践。
+    <p><tt>su</tt> 程序允许以替代用户和组 ID 运行命令。它常用于以 root 用户身份运行命令。限制对此类命令的访问被视为良好的安全实践。</p>
 
 severity: medium
 

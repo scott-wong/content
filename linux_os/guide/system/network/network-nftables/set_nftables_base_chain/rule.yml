@@ -11,14 +11,14 @@ description: |-
    be used as jump target and is used for better rule organization.
 
    <p><strong>中文说明：</strong></p>
-   nftables 中的表包含链。每个表只有一个地址族，并且只应用于该地址族的数据包。表可以属于六种地址族之一。链是规则的容器，分为基础链和常规链。基础链是来自网络栈的数据包的入口点，常规链可用作跳转目标，用于更好地组织规则。
+   <p>nftables 中的表包含链。每个表只有一个地址族，并且只应用于该地址族的数据包。表可以属于六种地址族之一。链是规则的容器，分为基础链和常规链。基础链是来自网络栈的数据包的入口点，常规链可用作跳转目标，用于更好地组织规则。</p>
 
 rationale: |-
     If a base chain doesn't exist with a hook for input, forward, and delete, packets that would
     flow through those chains will not be touched by nftables.
 
     <p><strong>中文理由：</strong></p>
-    如果不存在用于 input、forward 和 output 钩子的基础链，流经这些链的数据包将不会受到 nftables 处理。
+    <p>如果不存在用于 input、forward 和 output 钩子的基础链，流经这些链的数据包将不会受到 nftables 处理。</p>
 
 severity: medium
 

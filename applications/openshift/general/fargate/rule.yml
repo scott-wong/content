@@ -8,7 +8,7 @@ description: |-
   a multi-tenant environment.
 
   <p><strong>中文说明：</strong></p>
-  在多租户环境中运行时，限制或隔离不受信任的工作负载是最佳实践。
+  <p>在多租户环境中运行时，限制或隔离不受信任的工作负载是最佳实践。</p>
 
 rationale: |-
   AWS Fargate is a technology that provides on-demand, right-sized compute
@@ -35,13 +35,13 @@ rationale: |-
   interface with another pod.
 
   <p><strong>中文理由：</strong></p>
-  AWS Fargate 是一种为容器提供按需、合适规模计算容量的技术。使用 AWS Fargate 后，无需再为运行容器而预置、配置或扩展虚拟机组。这消除了选择服务器类型、决定何时扩展节点组或优化集群装箱的需要。
+  <p>AWS Fargate 是一种为容器提供按需、合适规模计算容量的技术。使用 AWS Fargate 后，无需再为运行容器而预置、配置或扩展虚拟机组。这消除了选择服务器类型、决定何时扩展节点组或优化集群装箱的需要。
 
   可通过 Fargate 配置文件控制哪些 Pod 在 Fargate 上启动以及如何运行，这些配置文件在 Amazon EKS 集群中定义。
 
   Amazon EKS 使用 AWS 基于 Kubernetes 提供的上游可扩展模型构建的控制器，将 Kubernetes 与 AWS Fargate 集成。这些控制器作为 Amazon EKS 托管 Kubernetes 控制平面的一部分运行，负责将原生 Kubernetes Pod 调度到 Fargate。Fargate 控制器包括一个与默认 Kubernetes 调度器并行运行的新调度器，以及若干变更型（mutating）和验证型（validating）准入控制器。当启动符合 Fargate 运行条件的 Pod 时，集群中运行的 Fargate 控制器会识别、更新并将该 Pod 调度到 Fargate。
 
-  在 Fargate 上运行的每个 Pod 都有独立的隔离边界，不与另一个 Pod 共享底层内核、CPU 资源、内存资源或弹性网络接口。
+  在 Fargate 上运行的每个 Pod 都有独立的隔离边界，不与另一个 Pod 共享底层内核、CPU 资源、内存资源或弹性网络接口。</p>
 
 severity: unknown
 

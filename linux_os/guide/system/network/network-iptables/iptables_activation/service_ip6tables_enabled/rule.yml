@@ -6,14 +6,14 @@ description: |-
     {{{ describe_service_enable(service="ip6tables") }}}
 
     <p><strong>中文说明：</strong></p>
-    应启用 <tt>ip6tables</tt> 服务。
+    <p>应启用 <tt>ip6tables</tt> 服务。</p>
 
 rationale: |-
     The <tt>ip6tables</tt> service provides the system's host-based firewalling
     capability for IPv6 and ICMPv6.
 
     <p><strong>中文理由：</strong></p>
-    <tt>ip6tables</tt> 服务为 IPv6 和 ICMPv6 提供基于主机的防火墙功能。
+    <p><tt>ip6tables</tt> 服务为 IPv6 和 ICMPv6 提供基于主机的防火墙功能。</p>
 
 severity: medium
 

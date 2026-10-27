@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="guest_exec_content") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>guest_exec_content</tt> 处于启用状态。由于不应使用 guest 账户，应将其禁用。可使用 <tt>sudo setsebool -P guest_exec_content off</tt> 将其禁用。
+    <p>默认情况下，SELinux 布尔值 <tt>guest_exec_content</tt> 处于启用状态。由于不应使用 guest 账户，应将其禁用。可使用 <tt>sudo setsebool -P guest_exec_content off</tt> 将其禁用。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    不应使用 guest 账户；禁用此布尔值可防止 guest 用户执行内容，降低未授权代码执行风险。
+    <p>不应使用 guest 账户；禁用此布尔值可防止 guest 用户执行内容，降低未授权代码执行风险。</p>
 
 severity: medium
 

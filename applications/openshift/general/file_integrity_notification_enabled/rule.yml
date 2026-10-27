@@ -11,13 +11,13 @@ description: |-
   administrators and security personnel are notified about the alerts
 
   <p><strong>中文说明：</strong></p>
-  OpenShift 平台提供 File Integrity Operator，用于监控非预期的文件更改。本控制项确保启用适当的通知告警，使系统管理员和安全人员能够收到告警。
+  <p>OpenShift 平台提供 File Integrity Operator，用于监控非预期的文件更改。本控制项确保启用适当的通知告警，使系统管理员和安全人员能够收到告警。</p>
 
 rationale: |-
   File Integrity Operator is able to send out alerts
 
   <p><strong>中文理由：</strong></p>
-  File Integrity Operator 能够发出告警。
+  <p>File Integrity Operator 能够发出告警。</p>
 
 severity: medium
 

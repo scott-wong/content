@@ -8,7 +8,7 @@ description: |-
   allow read- only access to Amazon ECR.
 
   <p><strong>中文说明：</strong></p>
-  将 Cluster Service Account 配置为具有 Storage Object Viewer Role，以仅允许对 Amazon ECR 的只读访问。
+  <p>将 Cluster Service Account 配置为具有 Storage Object Viewer Role，以仅允许对 Amazon ECR 的只读访问。</p>
 
 rationale: |-
   The Cluster Service Account does not require administrative access to Amazon
@@ -17,7 +17,7 @@ rationale: |-
   prevents credentials from being abused beyond the required role.
 
   <p><strong>中文理由：</strong></p>
-  Cluster Service Account 不需要对 Amazon ECR 具有管理访问权限，仅需要拉取容器以部署到 Amazon EKS 的权限。限制权限遵循最小权限原则，并可防止凭据被用于超出所需角色的操作。
+  <p>Cluster Service Account 不需要对 Amazon ECR 具有管理访问权限，仅需要拉取容器以部署到 Amazon EKS 的权限。限制权限遵循最小权限原则，并可防止凭据被用于超出所需角色的操作。</p>
 
 severity: unknown
 

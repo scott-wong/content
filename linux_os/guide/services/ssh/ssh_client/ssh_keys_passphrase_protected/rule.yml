@@ -11,9 +11,9 @@ description: |-
     {{{ full_name }}}, for certificate-based authentication, must enforce authorized access to the corresponding private key.
 
     <p><strong>中文说明：</strong></p>
-    创建 SSH 密钥对时，始终使用口令。
+    <p>创建 SSH 密钥对时，始终使用口令。
     <br />
-    可使用以下命令创建此类密钥：
+    可使用以下命令创建此类密钥：</p>
     <pre>$ sudo ssh-keygen -n [passphrase]</pre>
     {{{ full_name }}} 在基于证书的身份验证中必须强制对相应私钥进行授权访问。
 
@@ -23,7 +23,7 @@ rationale: |-
     public key has been installed.
 
     <p><strong>中文理由：</strong></p>
-    如果未经授权的用户获得未设置口令的私钥访问权限，该用户将能够未经授权访问所有已安装相应公钥的系统。
+    <p>如果未经授权的用户获得未设置口令的私钥访问权限，该用户将能够未经授权访问所有已安装相应公钥的系统。</p>
 
 severity: medium
 

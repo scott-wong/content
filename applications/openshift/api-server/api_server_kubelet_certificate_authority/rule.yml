@@ -26,9 +26,9 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    为确保 OpenShift 在建立连接前验证 kubelet 证书，请遵循 OpenShift 文档，在 API Server 与 kubelet 之间建立 TLS 连接。
+    <p>为确保 OpenShift 在建立连接前验证 kubelet 证书，请遵循 OpenShift 文档，在 API Server 与 kubelet 之间建立 TLS 连接。
 
-    编辑 <tt>openshift-kube-apiserver</tt> configmap，若尚未配置，请设置以下参数：
+    编辑 <tt>openshift-kube-apiserver</tt> configmap，若尚未配置，请设置以下参数：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -45,7 +45,7 @@ rationale: |-
     and unsafe to run over untrusted and/or public networks.
 
     <p><strong>中文理由：</strong></p>
-    从 API Server 到 kubelet 的连接用于获取 Pod 日志、附加到正在运行的 Pod（通过 kubectl）以及使用 kubelet 端口转发功能。这些连接终止于 kubelet HTTPS 端点。默认情况下，API Server 不验证 kubelet 服务证书，这会使连接容易受到中间人攻击，并且在不可信和/或公共网络上运行不安全。
+    <p>从 API Server 到 kubelet 的连接用于获取 Pod 日志、附加到正在运行的 Pod（通过 kubectl）以及使用 kubelet 端口转发功能。这些连接终止于 kubelet HTTPS 端点。默认情况下，API Server 不验证 kubelet 服务证书，这会使连接容易受到中间人攻击，并且在不可信和/或公共网络上运行不安全。</p>
 
 identifiers:
   cce@ocp4: CCE-84196-5

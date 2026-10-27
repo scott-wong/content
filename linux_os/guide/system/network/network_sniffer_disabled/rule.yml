@@ -12,7 +12,7 @@ description: |-
     <pre>$ sudo ip link set dev <tt>device_name</tt> multicast off promisc off</pre>
 
     <p><strong>中文说明：</strong></p>
-    系统不应充当网络嗅探器，否则可能捕获其连接网络上的所有流量。请运行以下命令确定是否有任何接口处于混杂模式：
+    <p>系统不应充当网络嗅探器，否则可能捕获其连接网络上的所有流量。请运行以下命令确定是否有任何接口处于混杂模式：</p>
     <pre>$ ip link | grep PROMISC</pre>
     可使用以下命令禁用接口的混杂模式：
     <pre>$ sudo ip link set dev <tt>device_name</tt> multicast off promisc off</pre>
@@ -28,7 +28,7 @@ rationale: |-
     to only authorized personnel.
 
     <p><strong>中文理由：</strong></p>
-    处于混杂模式的网络接口允许捕获系统可见的所有网络流量。如果未经授权人员可以访问这些应用，他们可能收集登录 ID、密码和系统间密钥交换等信息。<br /><br />如果系统用于执行网络故障排查功能，这些工具的使用必须由信息系统安全经理（ISSM）记录，并且仅限授权人员使用。
+    <p>处于混杂模式的网络接口允许捕获系统可见的所有网络流量。如果未经授权人员可以访问这些应用，他们可能收集登录 ID、密码和系统间密钥交换等信息。<br /><br />如果系统用于执行网络故障排查功能，这些工具的使用必须由信息系统安全经理（ISSM）记录，并且仅限授权人员使用。</p>
 
 severity: medium
 

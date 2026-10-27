@@ -29,18 +29,18 @@ description: |-
       recognized with this variable.
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SSH 配置允许任何拥有账户的用户访问系统。可以使用多种选项限制哪些用户和组可通过 SSH 访问系统。建议至少利用以下选项之一：
+    <p>默认情况下，SSH 配置允许任何拥有账户的用户访问系统。可以使用多种选项限制哪些用户和组可通过 SSH 访问系统。建议至少利用以下选项之一：
     - AllowUsers 变量使系统管理员能够允许特定用户通过 SSH 登录系统。列表由空格分隔的用户名组成。此变量无法识别数字用户 ID。如果系统管理员希望进一步限制用户访问，仅允许用户从特定主机访问，则条目可以采用 user@host 形式。
     - AllowGroups 变量使系统管理员能够允许特定用户组通过 SSH 登录系统。列表由空格分隔的组名组成。此变量无法识别数字组 ID。
     - DenyUsers 变量使系统管理员能够拒绝特定用户通过 SSH 登录系统。列表由空格分隔的用户名组成。此变量无法识别数字用户 ID。如果系统管理员希望进一步限制用户访问，明确拒绝用户从特定主机访问，则条目可以采用 user@host 形式。
-    - DenyGroups 变量使系统管理员能够拒绝特定用户组通过 SSH 登录系统。列表由空格分隔的组名组成。此变量无法识别数字组 ID。
+    - DenyGroups 变量使系统管理员能够拒绝特定用户组通过 SSH 登录系统。列表由空格分隔的组名组成。此变量无法识别数字组 ID。</p>
 
 rationale: |-
     Specifying which accounts are allowed SSH access into the system reduces the
     possibility of unauthorized access to the system.
 
     <p><strong>中文理由：</strong></p>
-    指定允许通过 SSH 访问系统的账户，可降低未授权访问系统的可能性。
+    <p>指定允许通过 SSH 访问系统的账户，可降低未授权访问系统的可能性。</p>
 
 severity: unknown
 

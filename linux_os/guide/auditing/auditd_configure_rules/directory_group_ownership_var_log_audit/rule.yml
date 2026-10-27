@@ -12,7 +12,8 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    所有审计目录的所属组必须为 root 用户。默认情况下，审计日志路径为 <pre>/var/log/audit/</pre>。
+    <p>所有审计目录的所属组必须为 root 用户。默认情况下，审计日志路径为</p>
+    <pre>/var/log/audit/</pre>。
     要将 <tt>/var/log/audit</tt> 的所属组正确设置为 <tt>root</tt>，请运行 <tt>sudo chgrp root /var/log/audit</tt>。
     {{% if product != "ol8" %}}
     如果 <tt>/etc/audit/auditd.conf</tt> 中的 <tt>log_group</tt> 设置为 <tt>root</tt> 组账户以外的组，请将审计目录的所属组更改为该特定组。
@@ -23,7 +24,7 @@ rationale: |-
     attackers, thus compromising its confidentiality.
 
     <p><strong>中文理由：</strong></p>
-    未经授权披露审计记录可能向攻击者泄露系统和配置数据，从而损害其机密性。
+    <p>未经授权披露审计记录可能向攻击者泄露系统和配置数据，从而损害其机密性。</p>
 
 severity: medium
 

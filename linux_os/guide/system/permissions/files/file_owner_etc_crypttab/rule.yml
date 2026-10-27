@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/crypttab", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>/etc/crypttab</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/crypttab</tt>。
+    <p>要将 <tt>/etc/crypttab</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/crypttab</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/crypttab file by the root user is important
@@ -16,7 +16,7 @@ rationale: |-
     configuration.
 
     <p><strong>中文理由：</strong></p>
-    /etc/crypttab 文件由 root 用户所有很重要，因为该文件包含加密块设备配置。保护该文件对系统安全至关重要。将所有权分配给 root 可确保对加密块设备配置的独占控制。
+    <p>/etc/crypttab 文件由 root 用户所有很重要，因为该文件包含加密块设备配置。保护该文件对系统安全至关重要。将所有权分配给 root 可确保对加密块设备配置的独占控制。</p>
 
 severity: medium
 

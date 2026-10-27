@@ -11,9 +11,9 @@ description: |-
     {{{ describe_package_remove(package="ftp") }}}
 
     <p><strong>中文说明：</strong></p>
-    FTP（File Transfer Protocol）是一种传统且广泛使用的标准工具，用于通过网络在服务器和客户端之间传输文件，尤其适用于不需要身份验证的情况（允许匿名用户连接到服务器）。
+    <p>FTP（File Transfer Protocol）是一种传统且广泛使用的标准工具，用于通过网络在服务器和客户端之间传输文件，尤其适用于不需要身份验证的情况（允许匿名用户连接到服务器）。
     <br/>
-    请使用适当的软件包管理工具移除 <tt>ftp</tt> 软件包。
+    请使用适当的软件包管理工具移除 <tt>ftp</tt> 软件包。</p>
 
 rationale: |-
     FTP does not protect the confidentiality of data or authentication credentials. It
@@ -22,7 +22,7 @@ rationale: |-
     recommended that the package be removed to reduce the potential attack surface.
 
     <p><strong>中文理由：</strong></p>
-    FTP 不保护数据或身份验证凭据的机密性。如果需要传输文件，建议使用 SFTP。除非需要将系统作为 FTP 服务器运行（例如允许匿名下载），否则建议移除该软件包以减少潜在攻击面。
+    <p>FTP 不保护数据或身份验证凭据的机密性。如果需要传输文件，建议使用 SFTP。除非需要将系统作为 FTP 服务器运行（例如允许匿名下载），否则建议移除该软件包以减少潜在攻击面。</p>
 
 severity: low
 

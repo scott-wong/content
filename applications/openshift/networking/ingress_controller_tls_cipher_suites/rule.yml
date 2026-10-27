@@ -7,7 +7,7 @@ description: |-
   Ensure that the Ingress Controller is configured to only use strong cryptographic ciphers.
 
   <p><strong>中文说明：</strong></p>
-  确保 Ingress Controller 配置为仅使用强密码套件。
+  <p>确保 Ingress Controller 配置为仅使用强密码套件。</p>
 
 rationale: |-
   TLS ciphers have had a number of known vulnerabilities and weaknesses,
@@ -16,7 +16,7 @@ rationale: |-
   concerns, weakening the protection provided.
 
   <p><strong>中文理由：</strong></p>
-  TLS 密码套件存在若干已知漏洞和弱点，可能降低其提供的保护。默认情况下，Kubernetes 支持多种 TLS 密码套件，其中一些存在安全问题，会削弱所提供的保护。
+  <p>TLS 密码套件存在若干已知漏洞和弱点，可能降低其提供的保护。默认情况下，Kubernetes 支持多种 TLS 密码套件，其中一些存在安全问题，会削弱所提供的保护。</p>
 
 severity: medium
 

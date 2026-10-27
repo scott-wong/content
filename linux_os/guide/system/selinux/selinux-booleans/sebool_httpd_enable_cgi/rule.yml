@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="httpd_enable_cgi") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>httpd_enable_cgi</tt> 处于启用状态。除非 <tt>httpd</tt> 与 <tt>CGI</tt> 脚本一起使用，否则应将其禁用。可使用 <tt>sudo setsebool -P httpd_enable_cgi off</tt> 将其禁用。
+    <p>默认情况下，SELinux 布尔值 <tt>httpd_enable_cgi</tt> 处于启用状态。除非 <tt>httpd</tt> 与 <tt>CGI</tt> 脚本一起使用，否则应将其禁用。可使用 <tt>sudo setsebool -P httpd_enable_cgi off</tt> 将其禁用。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    如果不需要 CGI 脚本，保持此布尔值启用会扩大 Web 服务器的代码执行和攻击面。
+    <p>如果不需要 CGI 脚本，保持此布尔值启用会扩大 Web 服务器的代码执行和攻击面。</p>
 
 severity: medium
 

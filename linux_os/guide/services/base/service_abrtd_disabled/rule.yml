@@ -12,8 +12,8 @@ description: |-
     {{{ describe_service_disable(service="abrtd") }}}
 
     <p><strong>中文说明：</strong></p>
-    Automatic Bug Reporting Tool（<tt>abrtd</tt>）守护进程在检测到应用程序崩溃时会收集并报告崩溃数据。通过多种插件，abrtd 可以将崩溃报告通过电子邮件发送给系统管理员、记录到文件，或转发到 RHTSupport 等集中式问题跟踪系统。
-    应禁用 <tt>abrtd</tt> 服务。
+    <p>Automatic Bug Reporting Tool（<tt>abrtd</tt>）守护进程在检测到应用程序崩溃时会收集并报告崩溃数据。通过多种插件，abrtd 可以将崩溃报告通过电子邮件发送给系统管理员、记录到文件，或转发到 RHTSupport 等集中式问题跟踪系统。
+    应禁用 <tt>abrtd</tt> 服务。</p>
 
 rationale: |-
     Mishandling crash data could expose sensitive information about
@@ -21,7 +21,7 @@ rationale: |-
     information from within a process's address space or registers.
 
     <p><strong>中文理由：</strong></p>
-    对崩溃数据的处理不当可能泄露系统上运行软件漏洞的敏感信息，以及进程地址空间或寄存器中的敏感信息。
+    <p>对崩溃数据的处理不当可能泄露系统上运行软件漏洞的敏感信息，以及进程地址空间或寄存器中的敏感信息。</p>
 
 severity: medium
 

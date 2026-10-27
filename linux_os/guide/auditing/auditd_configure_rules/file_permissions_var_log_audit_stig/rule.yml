@@ -12,7 +12,7 @@ description: |-
     <pre>$ sudo stat -c "%n %a" /var/log/audit/*</pre>
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令确定审计日志的存储位置：
+    <p>使用以下命令确定审计日志的存储位置：</p>
     <pre>$ sudo grep -iw log_file /etc/audit/auditd.conf
     log_file = /var/log/audit/audit.log</pre>
 
@@ -23,7 +23,7 @@ rationale: |-
     If users can write to audit logs, audit trails can be modified or destroyed.
 
     <p><strong>中文理由：</strong></p>
-    如果用户可以写入审计日志，则审计追踪可能被修改或销毁。
+    <p>如果用户可以写入审计日志，则审计追踪可能被修改或销毁。</p>
 
 severity: medium
 

@@ -18,7 +18,7 @@ description: |-
     <pre>$ sudo semanage login -m -s user_u <i>USER</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    将操作系统配置为防止非特权用户执行特权功能，包括禁用、规避或更改已实施的安全保护措施或对策。所有管理员都必须映射到具有适当域的 <tt>sysadm_u</tt> 或 <tt>staff_u</tt> 用户（<tt>sysadm_t</tt> 和 <tt>staff_t</tt>）。
+    <p>将操作系统配置为防止非特权用户执行特权功能，包括禁用、规避或更改已实施的安全保护措施或对策。所有管理员都必须映射到具有适当域的 <tt>sysadm_u</tt> 或 <tt>staff_u</tt> 用户（<tt>sysadm_t</tt> 和 <tt>staff_t</tt>）。</p>
     <pre>$ sudo semanage login -m -s sysadm_u <i>USER</i></pre> 或
     <pre>$ sudo semanage login -m -s staff_u <i>USER</i></pre>
     <br /><br />
@@ -38,9 +38,9 @@ rationale: |-
     of privileged functions that require protection from non-privileged users.
 
     <p><strong>中文理由：</strong></p>
-    防止非特权用户执行特权功能，可降低未授权个人或进程获得不必要的信息或权限的风险。
+    <p>防止非特权用户执行特权功能，可降低未授权个人或进程获得不必要的信息或权限的风险。
     <br /><br />
-    特权功能包括建立账户、执行系统完整性检查或管理加密密钥管理活动等。非特权用户是指不具备适当授权的个人。规避入侵检测和防御机制或恶意代码保护机制，就是需要防止非特权用户执行的特权功能示例。
+    特权功能包括建立账户、执行系统完整性检查或管理加密密钥管理活动等。非特权用户是指不具备适当授权的个人。规避入侵检测和防御机制或恶意代码保护机制，就是需要防止非特权用户执行的特权功能示例。</p>
 
 severity: medium
 

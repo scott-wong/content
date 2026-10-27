@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="virt_use_sanlock") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>virt_use_sanlock</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>virt_use_sanlock</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_use_sanlock off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>virt_use_sanlock</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>virt_use_sanlock</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_use_sanlock off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许虚拟化组件使用 sanlock 会扩大其锁管理和存储访问范围。
+    <p>允许虚拟化组件使用 sanlock 会扩大其锁管理和存储访问范围。</p>
 
 severity: medium
 

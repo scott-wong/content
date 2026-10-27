@@ -9,7 +9,7 @@ description: |-
     <pre>relayhost = {{{ xccdf_value("var_postfix_relayhost") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    设置中继主机作为所有出站电子邮件的网关。编辑 <tt>/etc/postfix/main.cf</tt>，确保仅出现以下 <tt>relayhost</tt> 行：
+    <p>设置中继主机作为所有出站电子邮件的网关。编辑 <tt>/etc/postfix/main.cf</tt>，确保仅出现以下 <tt>relayhost</tt> 行：</p>
     <pre>relayhost = {{{ xccdf_value("var_postfix_relayhost") }}}</pre>
 
 rationale: |-
@@ -18,7 +18,7 @@ rationale: |-
     may help prevent spam or viruses from being delivered.
 
     <p><strong>中文理由：</strong></p>
-    集中的出站电子邮件位置可确保能够审计从任何网络主机发送的邮件，以发现潜在的非预期内容。中央服务器上的工具可帮助防止传送垃圾邮件或病毒。
+    <p>集中的出站电子邮件位置可确保能够审计从任何网络主机发送的邮件，以发现潜在的非预期内容。中央服务器上的工具可帮助防止传送垃圾邮件或病毒。</p>
 
 severity: medium
 

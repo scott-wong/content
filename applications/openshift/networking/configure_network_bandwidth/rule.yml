@@ -6,7 +6,7 @@ description: |-
     Network bandwidth, SHOULD be appropriately reserved and limited.
 
     <p><strong>中文说明：</strong></p>
-    应适当预留并限制网络带宽。
+    <p>应适当预留并限制网络带宽。</p>
 
 ocil: |-
     Network bandwidth is limited at the pod level and can be determined separately according
@@ -42,4 +42,4 @@ rationale: |-
     A network bandwidth limitation on the pod level can mitigate the bearing onto the cluster.
 
     <p><strong>中文理由：</strong></p>
-    通过为 Pod 配置添加网络带宽注解，可防止恶意行为者或 Pod 故障耗尽集群中的所有带宽。Pod 级别的网络带宽限制可减轻对集群造成的压力。
+    <p>通过为 Pod 配置添加网络带宽注解，可防止恶意行为者或 Pod 故障耗尽集群中的所有带宽。Pod 级别的网络带宽限制可减轻对集群造成的压力。</p>

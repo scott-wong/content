@@ -8,7 +8,7 @@ description: |-
     {{{ describe_package_install(package="mod_security") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>mod_security</tt> 软件包，以提供 <tt>security</tt> 模块。
+    <p>应安装 <tt>mod_security</tt> 软件包，以提供 <tt>security</tt> 模块。</p>
 
 rationale: |-
     <tt>mod_security</tt> provides an additional level of protection for the web server by
@@ -16,7 +16,7 @@ rationale: |-
     application layer.
 
     <p><strong>中文理由：</strong></p>
-    <tt>mod_security</tt> 使管理员能够在应用层实施内容访问策略和过滤器，从而为 Web 服务器提供额外一层保护。
+    <p><tt>mod_security</tt> 使管理员能够在应用层实施内容访问策略和过滤器，从而为 Web 服务器提供额外一层保护。</p>
 
 severity: unknown
 

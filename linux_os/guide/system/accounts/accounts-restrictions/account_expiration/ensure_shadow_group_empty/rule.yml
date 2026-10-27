@@ -8,7 +8,7 @@ description: |-
     to read the /etc/shadow file. No users should be assigned to the shadow group.
 
     <p><strong>中文说明：</strong></p>
-    shadow 组允许需要访问的系统程序读取 /etc/shadow 文件。不应将任何用户分配到 shadow 组。
+    <p>shadow 组允许需要访问的系统程序读取 /etc/shadow 文件。不应将任何用户分配到 shadow 组。</p>
 
 rationale: |-
     Any users assigned to the shadow group would be granted read access to the
@@ -19,7 +19,7 @@ rationale: |-
     accounts.
 
     <p><strong>中文理由：</strong></p>
-    如果不将用于身份验证的证书映射到用户账户，就无法确定个人用户或组的身份以进行取证分析。
+    <p>如果不将用于身份验证的证书映射到用户账户，就无法确定个人用户或组的身份以进行取证分析。</p>
 
 severity: medium
 

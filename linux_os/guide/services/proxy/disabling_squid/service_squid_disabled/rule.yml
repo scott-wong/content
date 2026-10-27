@@ -7,14 +7,14 @@ description: |-
     {{{ describe_service_disable(service="squid") }}}
 
     <p><strong>中文说明：</strong></p>
-    要禁用 <tt>squid</tt> 服务，请运行 <tt>sudo systemctl disable --now squid</tt>。
+    <p>要禁用 <tt>squid</tt> 服务，请运行 <tt>sudo systemctl disable --now squid</tt>。</p>
 
 rationale: |-
     Running proxy server software provides a network-based avenue
     of attack, and should be removed if not needed.
 
     <p><strong>中文理由：</strong></p>
-    运行代理服务器软件会提供基于网络的攻击途径，如果不需要，应将其移除。
+    <p>运行代理服务器软件会提供基于网络的攻击途径，如果不需要，应将其移除。</p>
 
 severity: unknown
 

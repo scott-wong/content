@@ -36,9 +36,9 @@ description: |-
     There must be a resolvable DNS CNAME or Alias record set to "{{{ xccdf_value("rsyslog_remote_loghost_address") }}}" for logs to be sent correctly to the centralized logging utility.
 
     <p><strong>中文说明：</strong></p>
-    要将 rsyslog 配置为向远程日志服务器发送日志，请打开 <tt>/etc/rsyslog.conf</tt>，阅读并理解文件最后一节，其中说明了启用远程日志记录所需的多个指令。除这些其他指令外，还可以通过添加或更正以下行之一，并将 <tt><i>{{{ xccdf_value("rsyslog_remote_loghost_address") }}}</i></tt> 适当替换，将系统本身配置为将日志转发到特定日志服务器。协议的选择取决于系统环境；尽管 TCP 和 RELP 提供更可靠的消息传递，但并非所有环境都支持。
+    <p>要将 rsyslog 配置为向远程日志服务器发送日志，请打开 <tt>/etc/rsyslog.conf</tt>，阅读并理解文件最后一节，其中说明了启用远程日志记录所需的多个指令。除这些其他指令外，还可以通过添加或更正以下行之一，并将 <tt><i>{{{ xccdf_value("rsyslog_remote_loghost_address") }}}</i></tt> 适当替换，将系统本身配置为将日志转发到特定日志服务器。协议的选择取决于系统环境；尽管 TCP 和 RELP 提供更可靠的消息传递，但并非所有环境都支持。
     <br />
-    要使用 UDP 传递日志消息：
+    要使用 UDP 传递日志消息：</p>
     <pre>*.* @<i>{{{ xccdf_value("rsyslog_remote_loghost_address") }}}</i></pre>
     <br />
     或在 RainerScript 中：
@@ -66,7 +66,7 @@ rationale: |-
     place to view the status of multiple hosts within the enterprise.
 
     <p><strong>中文理由：</strong></p>
-    日志服务器（loghost）从一个或多个系统接收 syslog 消息。如果系统遭到入侵且其本地日志可疑，这些数据可作为额外的日志来源。将日志消息转发到远程日志主机还可为系统管理员提供一个集中查看企业中多台主机状态的位置。
+    <p>日志服务器（loghost）从一个或多个系统接收 syslog 消息。如果系统遭到入侵且其本地日志可疑，这些数据可作为额外的日志来源。将日志消息转发到远程日志主机还可为系统管理员提供一个集中查看企业中多台主机状态的位置。</p>
 
 severity: medium
 

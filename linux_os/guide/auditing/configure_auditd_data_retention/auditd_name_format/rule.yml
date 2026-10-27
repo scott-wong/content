@@ -10,7 +10,7 @@ description: |-
     in <tt>/etc/audit/auditd.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要将 Audit 守护进程配置为在审计事件中使用唯一标识符作为计算机节点名，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>name_format</tt> 设为 <tt>{{{ xccdf_value("var_auditd_name_format") }}}</tt>。
+    <p>要将 Audit 守护进程配置为在审计事件中使用唯一标识符作为计算机节点名，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>name_format</tt> 设为 <tt>{{{ xccdf_value("var_auditd_name_format") }}}</tt>。</p>
 
 rationale: |-
     If option <tt>name_format</tt> is left at its default value of
@@ -18,7 +18,7 @@ rationale: |-
     to distinguish.
 
     <p><strong>中文理由：</strong></p>
-    如果选项 <tt>name_format</tt> 保留默认值 <tt>none</tt>，则可能难以区分来自不同计算机的审计事件。
+    <p>如果选项 <tt>name_format</tt> 保留默认值 <tt>none</tt>，则可能难以区分来自不同计算机的审计事件。</p>
 
 severity: medium
 

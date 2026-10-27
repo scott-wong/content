@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="secure_mode") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>secure_mode</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>secure_mode</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>secure_mode</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>secure_mode</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用 secure_mode 可能阻止合法服务和管理操作。除非本地策略明确要求，否则应保持禁用。
+    <p>启用 secure_mode 可能阻止合法服务和管理操作。除非本地策略明确要求，否则应保持禁用。</p>
 
 severity: medium
 

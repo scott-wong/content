@@ -21,9 +21,9 @@ description: |-
                 text="the relevant documentation") }}}.
 
     <p><strong>中文说明：</strong></p>
-    配置 <tt>tlsSecurityProfile</tt> 指定与外部公开服务器建立连接时使用的 TLS 配置。尽管连接采用安全传输模式，但所用协议未必始终足够强，无法避免数据在传输过程中被截获和篡改。使用 Custom TLS Security Profile 时，最好始终配置 TLS 1.2 或更高版本，以避免任何安全泄露。
+    <p>配置 <tt>tlsSecurityProfile</tt> 指定与外部公开服务器建立连接时使用的 TLS 配置。尽管连接采用安全传输模式，但所用协议未必始终足够强，无法避免数据在传输过程中被截获和篡改。使用 Custom TLS Security Profile 时，最好始终配置 TLS 1.2 或更高版本，以避免任何安全泄露。
 
-    使用以下命令更新 Custom tlsSecurityProfile 中配置的 minTLSVersion：
+    使用以下命令更新 Custom tlsSecurityProfile 中配置的 minTLSVersion：</p>
     <pre>oc patch -n openshift-ingress-operator ingresscontrollers.operator.openshift.io default --type 'merge' --patch '{"spec":{"tlsSecurityProfile":{"custom":{"minTLSVersion":"VersionTLS12"}}}}'</pre>
 
     有关更多信息，请参阅<a href="https://docs.openshift.com/container-platform/latest/security/tls-security-profiles.html">相关文档</a>。
@@ -36,7 +36,7 @@ rationale: |-
     transmission secure protocol, cipher and algorithms must be used.
 
     <p><strong>中文理由：</strong></p>
-    容器平台以及节点和组件之间通信的真实性和完整性必须得到安全保障。如果在数据传输期间使用不安全的协议、密码套件或算法，数据可能被截获和篡改。为防止数据在传输过程中被篡改，必须使用安全的协议、密码套件和算法。
+    <p>容器平台以及节点和组件之间通信的真实性和完整性必须得到安全保障。如果在数据传输期间使用不安全的协议、密码套件或算法，数据可能被截获和篡改。为防止数据在传输过程中被篡改，必须使用安全的协议、密码套件和算法。</p>
 
 severity: medium
 

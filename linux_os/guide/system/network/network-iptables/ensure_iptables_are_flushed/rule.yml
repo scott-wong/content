@@ -7,7 +7,7 @@ description: |-
     nftables is a replacement for iptables, ip6tables, ebtables and arptables
 
     <p><strong>中文说明：</strong></p>
-    nftables 是 iptables、ip6tables、ebtables 和 arptables 的替代品。
+    <p>nftables 是 iptables、ip6tables、ebtables 和 arptables 的替代品。</p>
 
 rationale: |-
     It is possible to mix iptables and nftables. However, this increases complexity
@@ -15,7 +15,7 @@ rationale: |-
     rules, and ensure it is not loaded.
 
     <p><strong>中文理由：</strong></p>
-    可以混用 iptables 和 nftables。但这会增加复杂性，也会增加引入错误的可能性。为简单起见，请清空所有 iptables 规则，并确保未加载 iptables。
+    <p>可以混用 iptables 和 nftables。但这会增加复杂性，也会增加引入错误的可能性。为简单起见，请清空所有 iptables 规则，并确保未加载 iptables。</p>
 
 severity: medium
 

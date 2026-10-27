@@ -16,7 +16,7 @@ description: |-
     <pre>umask {{{ xccdf_value("var_accounts_user_umask") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    为确保 Bash shell 用户的默认 umask 设置正确，请在 <tt>{{{ etc_bash_rc }}}</tt> 中添加或修正 <tt>umask</tt> 设置，使其如下所示：
+    <p>为确保 Bash shell 用户的默认 umask 设置正确，请在 <tt>{{{ etc_bash_rc }}}</tt> 中添加或修正 <tt>umask</tt> 设置，使其如下所示：</p>
     <pre>umask {{{ xccdf_value("var_accounts_user_umask") }}}</pre>
 
 rationale: |-
@@ -25,7 +25,7 @@ rationale: |-
     written to by unauthorized users.
 
     <p><strong>中文理由：</strong></p>
-    umask 值会影响创建文件时分配的权限。配置错误的 umask 值可能导致文件权限过多，使未授权用户能够读取或写入这些文件。
+    <p>umask 值会影响创建文件时分配的权限。配置错误的 umask 值可能导致文件权限过多，使未授权用户能够读取或写入这些文件。</p>
 
 severity: medium
 

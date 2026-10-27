@@ -53,7 +53,7 @@ rationale: |-
     these events could serve as evidence of potential system compromise.
 
     <p><strong>中文理由：</strong></p>
-    未成功删除文件的尝试可能表明系统存在恶意活动。审计这些事件可作为系统可能遭到入侵的证据。
+    <p>未成功删除文件的尝试可能表明系统存在恶意活动。审计这些事件可作为系统可能遭到入侵的证据。</p>
 severity: medium
 
 identifiers:

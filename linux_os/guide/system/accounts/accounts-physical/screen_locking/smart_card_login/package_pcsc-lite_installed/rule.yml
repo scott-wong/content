@@ -7,14 +7,14 @@ description: |-
     {{{ describe_package_install(package="pcsc-lite") }}}
 
     <p><strong>中文说明：</strong></p>
-    请使用适当的软件包管理工具安装 <tt>pcsc-lite</tt> 软件包。
+    <p>请使用适当的软件包管理工具安装 <tt>pcsc-lite</tt> 软件包。</p>
 
 rationale: |-
     The pcsc-lite package must be installed if it is to be available for
     multifactor authentication using smartcards.
 
     <p><strong>中文理由：</strong></p>
-    智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）提供并验证凭据。
+    <p>智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）提供并验证凭据。</p>
 
 severity: medium
 

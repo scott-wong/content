@@ -21,7 +21,7 @@ description: |-
     Replace <tt><i>audit_log_file</i></tt> with the correct audit log file path.
 
     <p><strong>中文说明：</strong></p>
-    首先使用以下命令确定审计日志的存储位置，以验证审计日志文件的权限模式是否为 "0640" 或更严格：
+    <p>首先使用以下命令确定审计日志的存储位置，以验证审计日志文件的权限模式是否为 "0640" 或更严格：</p>
     <pre>$ sudo grep -iw log_file /etc/audit/auditd.conf
     log_file = /var/log/audit/audit.log</pre>
     默认情况下，审计日志文件为 <tt>/var/log/audit/audit.log</tt>。
@@ -38,7 +38,7 @@ rationale: |-
     If users can write to audit logs, audit trails can be modified or destroyed.
 
     <p><strong>中文理由：</strong></p>
-    如果用户可以写入审计日志，则审计追踪可能被修改或销毁。
+    <p>如果用户可以写入审计日志，则审计追踪可能被修改或销毁。</p>
 
 severity: medium
 

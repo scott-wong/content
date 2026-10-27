@@ -14,7 +14,7 @@ description:  |-
     {{{ describe_file_permissions(file="/etc/shadow-", perms=target_perms_octal) }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/etc/shadow-</tt> 的权限必须为 <tt>{{{ target_perms_octal }}}</tt>。
+    <p>文件 <tt>/etc/shadow-</tt> 的权限必须为 <tt>{{{ target_perms_octal }}}</tt>。</p>
 
 rationale: |-
     The <tt>/etc/shadow-</tt> file is a backup file of <tt>/etc/shadow</tt>, and as such,
@@ -22,7 +22,7 @@ rationale: |-
     Protection of this file is critical for system security.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/shadow-</tt> 是 <tt>/etc/shadow</tt> 的备份文件，因此包含本地系统账户列表和密码哈希。保护此文件对系统安全至关重要。
+    <p><tt>/etc/shadow-</tt> 是 <tt>/etc/shadow</tt> 的备份文件，因此包含本地系统账户列表和密码哈希。保护此文件对系统安全至关重要。</p>
 
 severity: medium
 

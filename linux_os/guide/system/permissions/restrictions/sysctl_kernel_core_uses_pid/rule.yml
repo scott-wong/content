@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.core_uses_pid", value=0) }}}
 
     <p><strong>中文说明：</strong></p>
-    应将内核参数 <tt>kernel.core_uses_pid</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.core_uses_pid=0</tt>；要持久化，请将 <tt>kernel.core_uses_pid = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    <p>应将内核参数 <tt>kernel.core_uses_pid</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.core_uses_pid=0</tt>；要持久化，请将 <tt>kernel.core_uses_pid = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     The default coredump filename is <tt>core</tt>. By setting
@@ -20,7 +20,7 @@ rationale: |-
     messages are printed by a shell.
 
     <p><strong>中文理由：</strong></p>
-    默认核心转储文件名为 <tt>core</tt>。通过将 <tt>core_uses_pid</tt> 设置为 <tt>1</tt>，核心转储文件名将变为 <tt>core.PID</tt>。如果 <tt>core_pattern</tt> 不包含 <tt>%p</tt>（默认不包含）且设置了 <tt>core_uses_pid</tt>，则会将 <tt>.PID</tt> 追加到文件名。与 <tt>kernel.core_pattern = ""</tt> 配置结合使用时，可确保不生成核心转储，也不会由 shell 输出令人困惑的错误消息。
+    <p>默认核心转储文件名为 <tt>core</tt>。通过将 <tt>core_uses_pid</tt> 设置为 <tt>1</tt>，核心转储文件名将变为 <tt>core.PID</tt>。如果 <tt>core_pattern</tt> 不包含 <tt>%p</tt>（默认不包含）且设置了 <tt>core_uses_pid</tt>，则会将 <tt>.PID</tt> 追加到文件名。与 <tt>kernel.core_pattern = ""</tt> 配置结合使用时，可确保不生成核心转储，也不会由 shell 输出令人困惑的错误消息。</p>
 
 severity: medium
 

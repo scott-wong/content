@@ -18,8 +18,7 @@ description: |-
     <pre>tlsCertFile: /path/to/TLS/cert.key</pre>
 
     <p><strong>中文说明：</strong></p>
-    为确保已配置 Kubelet TLS 客户端证书，请编辑 Kubelet 配置文件 <tt>/etc/kubernetes/kubelet.conf</tt> 并配置 Kubelet 证书文件。
-
+    <p>为确保已配置 Kubelet TLS 客户端证书，请编辑 Kubelet 配置文件 <tt>/etc/kubernetes/kubelet.conf</tt> 并配置 Kubelet 证书文件。</p>
     <pre>tlsCertFile: /path/to/TLS/cert.key</pre>
 
 rationale: |-
@@ -27,7 +26,7 @@ rationale: |-
     altered by unauthorized users without detection.
 
     <p><strong>中文理由：</strong></p>
-    如果没有密码学完整性保护，未授权用户可在不被发现的情况下更改信息。
+    <p>如果没有密码学完整性保护，未授权用户可在不被发现的情况下更改信息。</p>
 
 severity: medium
 

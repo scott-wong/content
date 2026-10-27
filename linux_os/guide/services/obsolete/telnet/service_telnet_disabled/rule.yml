@@ -8,8 +8,8 @@ description: |-
     {{{ describe_socket_disable(socket="telnet") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保在系统启动时禁用 <tt>telnet</tt> 服务。
-    应禁用 <tt>telnet</tt> systemd socket。
+    <p>确保在系统启动时禁用 <tt>telnet</tt> 服务。
+    应禁用 <tt>telnet</tt> systemd socket。</p>
 
 rationale: |-
     The telnet protocol uses unencrypted network communication, which means that data from the
@@ -18,7 +18,7 @@ rationale: |-
     man-in-the-middle attacks.
 
     <p><strong>中文理由：</strong></p>
-    telnet 协议使用未加密的网络通信，这意味着登录会话中的数据（包括密码和会话期间传输的所有其他信息）可能被网络上的窃听者窃取。telnet 协议还容易受到中间人攻击。
+    <p>telnet 协议使用未加密的网络通信，这意味着登录会话中的数据（包括密码和会话期间传输的所有其他信息）可能被网络上的窃听者窃取。telnet 协议还容易受到中间人攻击。</p>
 
 severity: high
 

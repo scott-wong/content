@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/etc/sestatus.conf", perms="0644") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/sestatus.conf</tt> 的权限为 <tt>0644</tt>。
+    <p>确保 <tt>/etc/sestatus.conf</tt> 的权限为 <tt>0644</tt>。</p>
 
 rationale: |-
     Setting correct permissions on the /etc/sestatus.conf file is important
@@ -15,7 +15,7 @@ rationale: |-
     ensures exclusive control of the SELinux configuration.
 
     <p><strong>中文理由：</strong></p>
-    对 <tt>/etc/sestatus.conf</tt> 文件设置正确权限很重要，因为该文件存放 SELinux 配置。保护此文件对系统安全至关重要。限制权限可确保对 SELinux 配置的独占控制。
+    <p>对 <tt>/etc/sestatus.conf</tt> 文件设置正确权限很重要，因为该文件存放 SELinux 配置。保护此文件对系统安全至关重要。限制权限可确保对 SELinux 配置的独占控制。</p>
 
 severity: medium
 

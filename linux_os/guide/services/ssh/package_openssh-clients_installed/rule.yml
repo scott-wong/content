@@ -13,14 +13,14 @@ description: |-
     {{{ describe_package_install(package=package) }}}
 
     <p><strong>中文说明：</strong></p>
-    请使用适当的软件包管理工具安装 <tt>{{{ package }}}</tt> 软件包。
+    <p>请使用适当的软件包管理工具安装 <tt>{{{ package }}}</tt> 软件包。</p>
 
 rationale: |-
     This package includes utilities to make encrypted connections and transfer
     files securely to SSH servers.
 
     <p><strong>中文理由：</strong></p>
-    此软件包包含用于建立加密连接并安全地向 SSH 服务器传输文件的实用程序。
+    <p>此软件包包含用于建立加密连接并安全地向 SSH 服务器传输文件的实用程序。</p>
 
 severity: medium
 

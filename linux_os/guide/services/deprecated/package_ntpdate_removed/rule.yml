@@ -6,13 +6,13 @@ description: |-
     ntpdate is a historical ntp synchronization client for unixes. It should be uninstalled.
 
     <p><strong>中文说明：</strong></p>
-    ntpdate 是 UNIX 系统历史上使用的 NTP 同步客户端。应卸载该软件。
+    <p>ntpdate 是 UNIX 系统历史上使用的 NTP 同步客户端。应卸载该软件。</p>
 
 rationale: |-
     ntpdate is an old not security-compliant ntp client. It should be replaced by modern ntp clients such as ntpd, able to use cryptographic mechanisms integrated in NTP.
 
     <p><strong>中文理由：</strong></p>
-    ntpdate 是旧式且不符合安全要求的 NTP 客户端。应将其替换为能够使用 NTP 中集成的加密机制的现代 NTP 客户端，例如 ntpd。
+    <p>ntpdate 是旧式且不符合安全要求的 NTP 客户端。应将其替换为能够使用 NTP 中集成的加密机制的现代 NTP 客户端，例如 ntpd。</p>
 
 severity: low
 

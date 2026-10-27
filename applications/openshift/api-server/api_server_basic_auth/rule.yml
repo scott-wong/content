@@ -28,7 +28,7 @@ description: |-
     used. Username and password for basic authentication will be disabled.
 
     <p><strong>中文说明：</strong></p>
-    任何情况下都不应使用基本身份验证。如确有必要，编辑 <tt>openshift-kube-apiserver</tt> configmap 并删除 <tt>basic-auth-file</tt> 参数：
+    <p>任何情况下都不应使用基本身份验证。如确有必要，编辑 <tt>openshift-kube-apiserver</tt> configmap 并删除 <tt>basic-auth-file</tt> 参数：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -48,7 +48,7 @@ rationale: |-
     not intended for production workloads.
 
     <p><strong>中文理由：</strong></p>
-    基本身份验证使用明文凭据进行身份验证。目前基本身份验证凭据永久有效，且不重启 API Server 就无法更改密码。当前支持基本身份验证仅为方便使用，不适用于生产工作负载。
+    <p>基本身份验证使用明文凭据进行身份验证。目前基本身份验证凭据永久有效，且不重启 API Server 就无法更改密码。当前支持基本身份验证仅为方便使用，不适用于生产工作负载。</p>
 
 identifiers:
   cce@ocp4: CCE-83936-5

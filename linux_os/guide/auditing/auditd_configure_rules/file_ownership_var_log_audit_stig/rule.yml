@@ -10,7 +10,8 @@ description: |-
     {{{ describe_file_owner(file="/var/log/audit/*", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    所有审计日志都必须由 root 用户所有。审计日志路径可通过 <pre>/etc/audit/auditd.conf</pre> 中的 <tt>log_file</tt> 参数配置，或默认为 <pre>/var/log/audit/</pre>。
+    <p>所有审计日志都必须由 root 用户所有。审计日志路径可通过</p>
+    <pre>/etc/audit/auditd.conf</pre> 中的 <tt>log_file</tt> 参数配置，或默认为 <pre>/var/log/audit/</pre>。
     要将 <tt>/var/log/audit/*</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /var/log/audit/*</tt>。
 
 rationale: |-
@@ -18,7 +19,7 @@ rationale: |-
     attackers, thus compromising its confidentiality.
 
     <p><strong>中文理由：</strong></p>
-    未经授权披露审计记录可能向攻击者泄露系统和配置数据，从而损害其机密性。
+    <p>未经授权披露审计记录可能向攻击者泄露系统和配置数据，从而损害其机密性。</p>
 
 severity: medium
 

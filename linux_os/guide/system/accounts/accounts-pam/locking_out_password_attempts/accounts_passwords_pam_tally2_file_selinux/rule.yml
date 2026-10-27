@@ -7,14 +7,14 @@ description: |-
     Default is /var/log/tallylog. The configured directory must have the correct SELinux context.
 
     <p><strong>中文说明：</strong></p>
-    PAM <tt>pam_tally2.so</tt> 模块中的 <tt>file</tt> 配置选项定义计数保存位置。默认值为 <tt>/var/log/tallylog</tt>。所配置的目录必须具有正确的 SELinux 上下文。
+    <p>PAM <tt>pam_tally2.so</tt> 模块中的 <tt>file</tt> 配置选项定义计数保存位置。默认值为 <tt>/var/log/tallylog</tt>。所配置的目录必须具有正确的 SELinux 上下文。</p>
 
 rationale: |-
     Not having the correct SELinux context on the pam_tally2.so file may lead to
     unauthorized access to the directory.
 
     <p><strong>中文理由：</strong></p>
-    如果 <tt>pam_tally2.so</tt> 文件没有正确的 SELinux 上下文，可能导致对该目录的未经授权访问。
+    <p>如果 <tt>pam_tally2.so</tt> 文件没有正确的 SELinux 上下文，可能导致对该目录的未经授权访问。</p>
 
 severity: medium
 

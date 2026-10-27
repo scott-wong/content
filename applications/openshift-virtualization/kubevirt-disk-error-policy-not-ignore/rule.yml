@@ -9,7 +9,7 @@ description: |-
     failures and tampering. The default (report) or 'stop' should be used.
 
     <p><strong>中文说明：</strong></p>
-    将磁盘设置为 <tt>errorPolicy: ignore</tt> 会指示 Hypervisor 抑制 I/O 错误，而不是报告错误或停止操作。被忽略的存储错误会导致客户机内部发生静默数据损坏，从而掩盖硬件故障和篡改行为。应使用默认值（<tt>report</tt>）或 <tt>stop</tt>。
+    <p>将磁盘设置为 <tt>errorPolicy: ignore</tt> 会指示 Hypervisor 抑制 I/O 错误，而不是报告错误或停止操作。被忽略的存储错误会导致客户机内部发生静默数据损坏，从而掩盖硬件故障和篡改行为。应使用默认值（<tt>report</tt>）或 <tt>stop</tt>。</p>
 
 rationale: |-
     Suppressed I/O errors deny the guest and the platform the signal needed
@@ -17,7 +17,7 @@ rationale: |-
     integrity guarantees for the workload.
 
     <p><strong>中文理由：</strong></p>
-    被抑制的 I/O 错误使客户机和平台无法获得故障转移、告警或停止存储损坏所需的信号，从而破坏工作负载的数据完整性保证。
+    <p>被抑制的 I/O 错误使客户机和平台无法获得故障转移、告警或停止存储损坏所需的信号，从而破坏工作负载的数据完整性保证。</p>
 
 severity: medium
 

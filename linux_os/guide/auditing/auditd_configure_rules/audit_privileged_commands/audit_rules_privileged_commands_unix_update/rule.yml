@@ -7,7 +7,7 @@ description: |-
     {{{ describe_arpc("/usr/sbin/unix_update") }}}
 
     <p><strong>中文说明：</strong></p>
-    最低限度，审计系统应收集所有用户和 root 执行特权命令的记录。
+    <p>最低限度，审计系统应收集所有用户和 root 执行特权命令的记录。
 
     如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将形式如下的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
     <tt>-a always,exit -F path=/usr/sbin/unix_update -F auid&gt;={{{ auid }}} -F auid!=unset -F key=privileged</tt>
@@ -19,7 +19,7 @@ description: |-
     该规则使用 <tt>-F arch=ARCH</tt>，请将 <tt>ARCH</tt> 设置为 <tt>b32</tt>（32 位系统），或在 64 位系统上分别添加 <tt>b32</tt> 和 <tt>b64</tt> 两行。
     {{% endif %}}
 
-    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将同一规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将同一规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。</p>
 
 rationale: |-
     Misuse of privileged functions, either intentionally or unintentionally by
@@ -34,7 +34,7 @@ rationale: |-
     unusual activity.
 
     <p><strong>中文理由：</strong></p>
-    无论是授权用户有意或无意滥用特权功能，还是已攻陷系统账户的未授权外部实体滥用特权功能，都是严重且持续存在的问题，可能对组织造成重大不利影响。审计特权功能的使用是检测此类滥用并识别内部人员和高级持续性威胁风险的一种方法。<br /><br />特权程序容易受到权限提升攻击，此类攻击试图破坏其提供某些必要但有限能力的正常角色。因此，需要监控这些程序的异常活动。
+    <p>无论是授权用户有意或无意滥用特权功能，还是已攻陷系统账户的未授权外部实体滥用特权功能，都是严重且持续存在的问题，可能对组织造成重大不利影响。审计特权功能的使用是检测此类滥用并识别内部人员和高级持续性威胁风险的一种方法。<br /><br />特权程序容易受到权限提升攻击，此类攻击试图破坏其提供某些必要但有限能力的正常角色。因此，需要监控这些程序的异常活动。</p>
 
 severity: medium
 

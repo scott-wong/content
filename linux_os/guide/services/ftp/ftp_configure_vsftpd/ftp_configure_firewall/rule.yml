@@ -12,16 +12,16 @@ description: |-
     <pre>IPTABLES_MODULES="ip_conntrack_ftp"</pre>
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，<tt>iptables</tt> 会阻止对 Web 服务器所用端口的访问。
+    <p>默认情况下，<tt>iptables</tt> 会阻止对 Web 服务器所用端口的访问。
 
     要允许通过 TCP 端口 21 的传入连接，请添加相应的 iptables 规则。
-    编辑 <tt>/etc/sysconfig/iptables-config</tt> 文件。确保以空格分隔的模块列表包含 FTP 连接跟踪模块：
+    编辑 <tt>/etc/sysconfig/iptables-config</tt> 文件。确保以空格分隔的模块列表包含 FTP 连接跟踪模块：</p>
     <pre>IPTABLES_MODULES="ip_conntrack_ftp"</pre>
 
 rationale: |-
     These settings configure the firewall to allow connections to an FTP server.
 
     <p><strong>中文理由：</strong></p>
-    这些设置将防火墙配置为允许连接到 FTP 服务器。
+    <p>这些设置将防火墙配置为允许连接到 FTP 服务器。</p>
 
 severity: unknown

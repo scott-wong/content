@@ -15,7 +15,7 @@ description: |-
     {{{ describe_file_permissions(file=kubeletconf_path, perms="0644") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt> 的权限为 <tt>0644</tt> 或更严格。
+    <p>确保 kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt> 的权限为 <tt>0644</tt> 或更严格。</p>
 
 rationale: |-
     If the kubelet configuration file is writable by a group-owner or the
@@ -24,7 +24,7 @@ rationale: |-
     critical for OpenShift security.
 
     <p><strong>中文理由：</strong></p>
-    如果 kubelet 配置文件可被文件所属组或其他任何用户写入，其失陷风险会增加。该文件包含系统上配置的 OpenShift 节点的配置。保护此文件对 OpenShift 安全至关重要。
+    <p>如果 kubelet 配置文件可被文件所属组或其他任何用户写入，其失陷风险会增加。该文件包含系统上配置的 OpenShift 节点的配置。保护此文件对 OpenShift 安全至关重要。</p>
 
 severity: medium
 

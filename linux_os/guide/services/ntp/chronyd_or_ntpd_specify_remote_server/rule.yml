@@ -80,7 +80,7 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    根据具体生产环境的功能需求，可将 {{{ full_name }}} 系统配置为使用 <tt>chronyd</tt> NTP 守护进程（默认）或 <tt>ntpd</tt> NTP 守护进程的服务。请参阅
+    <p>根据具体生产环境的功能需求，可将 {{{ full_name }}} 系统配置为使用 <tt>chronyd</tt> NTP 守护进程（默认）或 <tt>ntpd</tt> NTP 守护进程的服务。请参阅
     {{% if product == "ol7" %}}
     <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/network/ol7-nettime.html">Oracle Linux 7 网络时间文档</a>
     {{% elif product == "ol8" %}}
@@ -90,7 +90,7 @@ description: |-
     {{% endif %}}
     以获取两种选项功能的详细比较，以及有关如何在这两种 NTP 守护进程之间进行选择的进一步指导。
     <br />
-    要为时间同步指定远程 NTP 服务器，请执行以下操作：
+    要为时间同步指定远程 NTP 服务器，请执行以下操作：</p>
     <ul>
     <li> 如果系统配置为使用 <tt>chronyd</tt> 作为 NTP 守护进程（默认），请按如下方式编辑 <tt>{{{ chrony_conf_path }}}</tt> 文件，</li>
     <li> 如果系统配置为使用 <tt>ntpd</tt> 作为 NTP 守护进程，请按下文所述编辑 <tt>/etc/ntp.conf</tt> 文件。</li>
@@ -148,7 +148,7 @@ rationale: |-
     logs from multiple sources or correlate computer events with real time events.
 
     <p><strong>中文理由：</strong></p>
-    与 NTP 服务器同步可以使多个来源的系统日志能够汇总，或将计算机事件与实时事件关联起来。
+    <p>与 NTP 服务器同步可以使多个来源的系统日志能够汇总，或将计算机事件与实时事件关联起来。</p>
 
 severity: medium
 

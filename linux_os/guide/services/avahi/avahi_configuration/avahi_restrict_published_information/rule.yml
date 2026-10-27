@@ -21,7 +21,7 @@ description: |-
     delete the corresponding file.
 
     <p><strong>中文说明：</strong></p>
-    如果必须向网络发布某些信息，则不得附带任何无关信息，也不得包含系统上非受信任来源提供的信息。要在 <tt>[publish]</tt> 节中添加或修正以下行，以阻止用户应用使用 Avahi 发布服务：
+    <p>如果必须向网络发布某些信息，则不得附带任何无关信息，也不得包含系统上非受信任来源提供的信息。要在 <tt>[publish]</tt> 节中添加或修正以下行，以阻止用户应用使用 Avahi 发布服务：</p>
     <pre>disable-user-service-publishing=yes</pre>
     请尽可能实施以下各行，以限制 Avahi 发布的信息：
     <pre>publish-addresses=no
@@ -38,7 +38,7 @@ rationale: |-
     must be published.
 
     <p><strong>中文理由：</strong></p>
-    这些选项可防止发布尝试成功，即使已通过 disable-publishing 完全禁用发布，也可应用这些选项。或者，当必须发布某些信息时，这些选项可用于限制所发布信息的类型。
+    <p>这些选项可防止发布尝试成功，即使已通过 disable-publishing 完全禁用发布，也可应用这些选项。或者，当必须发布某些信息时，这些选项可用于限制所发布信息的类型。</p>
 
 severity: low
 

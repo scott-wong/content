@@ -10,14 +10,14 @@ description: |-
     to <tt>/etc/usbguard/rules.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要允许 USBGuard 守护进程授权 USB 集线器设备，请将以下行添加到 <tt>/etc/usbguard/rules.conf</tt>：<tt>allow with-interface match-all { 09:00:* }</tt>
+    <p>要允许 USBGuard 守护进程授权 USB 集线器设备，请将以下行添加到 <tt>/etc/usbguard/rules.conf</tt>：<tt>allow with-interface match-all { 09:00:* }</tt></p>
 
 rationale: |-
     Without allowing hubs, it might not be possible to use any
     USB devices on the system.
 
     <p><strong>中文理由：</strong></p>
-    如果不允许集线器，可能无法在系统上使用任何 USB 设备。
+    <p>如果不允许集线器，可能无法在系统上使用任何 USB 设备。</p>
 
 warnings:
     - general: |-

@@ -8,7 +8,7 @@ description: |-
     inavailability or attacks targeting a specific zone.
 
     <p><strong>中文说明：</strong></p>
-    将 Kubernetes 基础设施节点分布到不同故障域，可降低单点故障风险，并减轻基础设施服务不可用或针对特定可用区的攻击所造成的影响，从而增强安全性。
+    <p>将 Kubernetes 基础设施节点分布到不同故障域，可降低单点故障风险，并减轻基础设施服务不可用或针对特定可用区的攻击所造成的影响，从而增强安全性。</p>
 
 rationale: |-
     Distributing Kubernetes infrastructure nodes across failure zones is crucial for enhancing overall 
@@ -24,9 +24,9 @@ rationale: |-
     manually in other environments
 
     <p><strong>中文理由：</strong></p>
-    将 Kubernetes 基础设施节点分布到不同故障域对于增强系统整体韧性和安全性至关重要。通过将基础设施组件分散到不同可用区，系统可具备更强的容错能力，降低单区故障或攻击造成大范围中断的风险。
+    <p>将 Kubernetes 基础设施节点分布到不同故障域对于增强系统整体韧性和安全性至关重要。通过将基础设施组件分散到不同可用区，系统可具备更强的容错能力，降低单区故障或攻击造成大范围中断的风险。
 
-    对于基础设施节点，通常认为两个故障域已足够，因为基础设施服务通常不依赖 etcd 这类基于法定人数的应用。Ingress 负载均衡器、日志记录或监控系统等基础设施服务通常在各可用区独立运行，不需要为数据一致性或故障转移进行协调。节点使用名为 <tt>topology.kubernetes.io/zone</tt> 的已知标签标记故障域。云提供程序会自动为每个节点分配此标签，但在其他环境中可能需要手动管理。
+    对于基础设施节点，通常认为两个故障域已足够，因为基础设施服务通常不依赖 etcd 这类基于法定人数的应用。Ingress 负载均衡器、日志记录或监控系统等基础设施服务通常在各可用区独立运行，不需要为数据一致性或故障转移进行协调。节点使用名为 <tt>topology.kubernetes.io/zone</tt> 的已知标签标记故障域。云提供程序会自动为每个节点分配此标签，但在其他环境中可能需要手动管理。</p>
 
 identifiers:
     cce@ocp4: CCE-87050-1

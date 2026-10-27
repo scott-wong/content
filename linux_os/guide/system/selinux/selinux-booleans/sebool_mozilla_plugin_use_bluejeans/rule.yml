@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="mozilla_plugin_use_bluejeans") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>mozilla_plugin_use_bluejeans</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mozilla_plugin_use_bluejeans</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mozilla_plugin_use_bluejeans off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>mozilla_plugin_use_bluejeans</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mozilla_plugin_use_bluejeans</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mozilla_plugin_use_bluejeans off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 Mozilla 插件访问 BlueJeans 相关资源，减少不必要的第三方集成和数据暴露。
+    <p>禁用后，可防止 Mozilla 插件访问 BlueJeans 相关资源，减少不必要的第三方集成和数据暴露。</p>
 
 severity: medium
 

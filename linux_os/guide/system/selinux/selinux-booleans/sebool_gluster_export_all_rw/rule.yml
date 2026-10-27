@@ -10,11 +10,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="gluster_export_all_rw") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>gluster_export_all_rw</tt> 处于启用状态。如果正在使用 <tt>GlusterFS</tt>，应保持启用；否则应将其禁用。可使用 <tt>sudo setsebool -P gluster_export_all_rw off</tt> 将其禁用。
+    <p>默认情况下，SELinux 布尔值 <tt>gluster_export_all_rw</tt> 处于启用状态。如果正在使用 <tt>GlusterFS</tt>，应保持启用；否则应将其禁用。可使用 <tt>sudo setsebool -P gluster_export_all_rw off</tt> 将其禁用。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用此布尔值会广泛导出可读写 GlusterFS 内容；仅在确实使用 GlusterFS 时应启用，否则会显著扩大数据修改风险。
+    <p>启用此布尔值会广泛导出可读写 GlusterFS 内容；仅在确实使用 GlusterFS 时应启用，否则会显著扩大数据修改风险。</p>
 
 severity: medium
 

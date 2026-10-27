@@ -13,18 +13,18 @@ description: |-
     {{{ describe_kernel_build_config("CONFIG_ARM64_SW_TTBR0_PAN", "y") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    启用此选项后，通过将 TTBR0_EL1 指向保留的零填充区域和保留的 ASID，可阻止内核直接访问用户空间内存。用户访问例程会临时恢复有效的 TTBR0_EL1。
+    <p>启用此选项后，通过将 TTBR0_EL1 指向保留的零填充区域和保留的 ASID，可阻止内核直接访问用户空间内存。用户访问例程会临时恢复有效的 TTBR0_EL1。
     此配置从内核 4.10 开始可用，但如果发行版回移该功能，也可能可用。
     用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_ARM64_SW_TTBR0_PAN</tt> 的配置值，请运行：
     <tt>grep CONFIG_ARM64_SW_TTBR0_PAN /boot/config-*</tt>
-    对于每个已安装内核，应返回一行包含值“y”的配置。
+    对于每个已安装内核，应返回一行包含值“y”的配置。</p>
 
 rationale: |-
     The Privileged Access Never (PAN) is the ARM equivalent of the x86 Supervisor Mode Access
     Prevention (SMAP), and it prevents privileged access to user data unless explicitly enabled.
 
     <p><strong>中文理由：</strong></p>
-    Privileged Access Never（PAN）是 ARM 对 x86 Supervisor Mode Access Prevention（SMAP）的对应实现，可阻止对用户数据的特权访问，除非明确启用。
+    <p>Privileged Access Never（PAN）是 ARM 对 x86 Supervisor Mode Access Prevention（SMAP）的对应实现，可阻止对用户数据的特权访问，除非明确启用。</p>
 
 platform: aarch64_arch
 

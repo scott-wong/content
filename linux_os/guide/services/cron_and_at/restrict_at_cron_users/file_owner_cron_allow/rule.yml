@@ -8,14 +8,14 @@ description: |-
     {{{ describe_file_owner(file="/etc/cron.allow", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    如果 <tt>/etc/cron.allow</tt> 存在，其文件所有者必须为 <tt>root</tt>。
+    <p>如果 <tt>/etc/cron.allow</tt> 存在，其文件所有者必须为 <tt>root</tt>。</p>
 
 rationale: |-
     If the owner of the cron.allow file is not set to root, the possibility exists for an
     unauthorized user to view or edit sensitive information.
 
     <p><strong>中文理由：</strong></p>
-    如果 cron.allow 文件的所有者未设置为 root，未授权用户可能查看或编辑敏感信息。
+    <p>如果 cron.allow 文件的所有者未设置为 root，未授权用户可能查看或编辑敏感信息。</p>
 
 severity: medium
 

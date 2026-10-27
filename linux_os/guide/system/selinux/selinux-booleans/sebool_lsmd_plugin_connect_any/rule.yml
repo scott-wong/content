@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="lsmd_plugin_connect_any") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>lsmd_plugin_connect_any</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>lsmd_plugin_connect_any</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P lsmd_plugin_connect_any off</tt>
+    <p>默认情况下，SELinux 布尔值 <tt>lsmd_plugin_connect_any</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>lsmd_plugin_connect_any</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P lsmd_plugin_connect_any off</tt></p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用后，可防止 lsmd 插件进行任意网络连接，减少该服务不必要的网络访问面。
+    <p>禁用后，可防止 lsmd 插件进行任意网络连接，减少该服务不必要的网络访问面。</p>
 
 severity: medium
 

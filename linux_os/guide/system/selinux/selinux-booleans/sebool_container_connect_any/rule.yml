@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="container_connect_any") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>container_connect_any</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>container_connect_any</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P container_connect_any off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>container_connect_any</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>container_connect_any</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P container_connect_any off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许容器连接到任意网络会绕过更精细的网络隔离控制。
+    <p>允许容器连接到任意网络会绕过更精细的网络隔离控制。</p>
 
 severity: medium
 

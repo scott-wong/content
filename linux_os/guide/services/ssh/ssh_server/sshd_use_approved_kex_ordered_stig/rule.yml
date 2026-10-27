@@ -28,7 +28,7 @@ description: |-
     order of algorithms.
 
     <p><strong>中文说明：</strong></p>
-    将密钥交换算法限制为 FIPS 批准的算法。在 <tt>{{{ path }}}</tt> 中添加或修改以下行：
+    <p>将密钥交换算法限制为 FIPS 批准的算法。在 <tt>{{{ path }}}</tt> 中添加或修改以下行：</p>
     <pre>{{{ conf }}}</pre>
     此规则确保仅配置上述密钥交换算法（或其子集），并保持给定算法顺序。
 
@@ -39,7 +39,7 @@ rationale: |-
     of the strongest algorithm available to secure the SSH connection.
 
     <p><strong>中文理由：</strong></p>
-    必须使用 FIPS 批准的密钥交换算法。系统将尝试使用客户端提供的第一种与服务器列表匹配的算法。按“从最强到最弱”的顺序列出值，可确保使用可用于保护 SSH 连接的最强算法。
+    <p>必须使用 FIPS 批准的密钥交换算法。系统将尝试使用客户端提供的第一种与服务器列表匹配的算法。按“从最强到最弱”的顺序列出值，可确保使用可用于保护 SSH 连接的最强算法。</p>
 
 severity: medium
 

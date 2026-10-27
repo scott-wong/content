@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="exim_manage_user_files") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>exim_manage_user_files</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>exim_manage_user_files</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P exim_manage_user_files off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>exim_manage_user_files</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>exim_manage_user_files</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P exim_manage_user_files off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 Exim 管理用户文件会授予邮件服务超出邮件投递所需的文件权限。
+    <p>允许 Exim 管理用户文件会授予邮件服务超出邮件投递所需的文件权限。</p>
 
 severity: medium
 

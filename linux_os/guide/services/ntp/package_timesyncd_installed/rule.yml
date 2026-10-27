@@ -7,13 +7,13 @@ description: |-
     The systemd_timesyncd service should be installed.
 
     <p><strong>中文说明：</strong></p>
-    应安装 systemd_timesyncd 服务。
+    <p>应安装 systemd_timesyncd 服务。</p>
 
 rationale: |-
     Time synchronization (using NTP) is required by almost all network and administrative tasks (syslog, cryptographic based services (authentication, etc.), etc.). systemd_timesyncd is a part of the systemd suite and acts as a NTP client.
 
     <p><strong>中文理由：</strong></p>
-    几乎所有网络和管理任务（syslog、基于加密的服务（身份验证等）等）都需要时间同步（使用 NTP）。systemd_timesyncd 是 systemd 套件的一部分，并充当 NTP 客户端。
+    <p>几乎所有网络和管理任务（syslog、基于加密的服务（身份验证等）等）都需要时间同步（使用 NTP）。systemd_timesyncd 是 systemd 套件的一部分，并充当 NTP 客户端。</p>
 
 severity: high
 

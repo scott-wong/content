@@ -10,9 +10,9 @@ description: |-
     deny will be blocked.
 
     <p><strong>中文说明：</strong></p>
-    对连接采用默认拒绝策略可确保任何未配置的网络使用都会被拒绝。
+    <p>对连接采用默认拒绝策略可确保任何未配置的网络使用都会被拒绝。
 
-    注意：在默认拒绝规则之前未明确允许的任何端口或协议都将被阻止。
+    注意：在默认拒绝规则之前未明确允许的任何端口或协议都将被阻止。</p>
 
 rationale: |-
     With a default accept policy the firewall will accept any packet that
@@ -20,7 +20,7 @@ rationale: |-
     usage than to block unacceptable usage.
 
     <p><strong>中文理由：</strong></p>
-    采用默认接受策略时，防火墙将接受任何未配置为拒绝的数据包。允许可接受的用法比阻止不可接受的用法更容易。
+    <p>采用默认接受策略时，防火墙将接受任何未配置为拒绝的数据包。允许可接受的用法比阻止不可接受的用法更容易。</p>
 
 severity: medium
 

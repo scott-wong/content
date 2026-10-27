@@ -7,7 +7,7 @@ description: |-
   {{{ describe_file_group_owner(file="/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/configmaps/controller-manager-kubeconfig/kubeconfig", group="root") }}}
 
   <p><strong>中文说明：</strong></p>
-  确保 <tt>/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/configmaps/controller-manager-kubeconfig/kubeconfig</tt> 的文件所属组为 <tt>root</tt>。
+  <p>确保 <tt>/etc/kubernetes/static-pod-resources/kube-controller-manager-pod-*/configmaps/controller-manager-kubeconfig/kubeconfig</tt> 的文件所属组为 <tt>root</tt>。</p>
 
 rationale: |-
   The Controller Manager's kubeconfig contains information about how the
@@ -15,7 +15,7 @@ rationale: |-
   maintain the integrity of the file.
 
   <p><strong>中文理由：</strong></p>
-  Controller Manager 的 kubeconfig 包含该组件访问 API Server 方式的信息。应设置其文件所有权，以维护文件完整性。
+  <p>Controller Manager 的 kubeconfig 包含该组件访问 API Server 方式的信息。应设置其文件所有权，以维护文件完整性。</p>
 
 identifiers:
   cce@ocp4: CCE-84095-9

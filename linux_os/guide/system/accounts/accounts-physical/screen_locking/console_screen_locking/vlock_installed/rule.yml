@@ -34,7 +34,7 @@ rationale: |-
     unlock the system.
 
     <p><strong>中文理由：</strong></p>
-    <tt>tmux</tt> 软件包允许实现和配置会话锁。但是，会话锁由外部命令实现。<tt>tmux</tt> 默认配置不包含有效的会话锁。
+    <p><tt>tmux</tt> 软件包允许实现和配置会话锁。但是，会话锁由外部命令实现。<tt>tmux</tt> 默认配置不包含有效的会话锁。</p>
 
 severity: medium
 

@@ -10,7 +10,7 @@ description: |-
     <pre>smtpd_banner = $myhostname ESMTP</pre>
 
     <p><strong>中文说明：</strong></p>
-    编辑 <tt>/etc/postfix/main.cf</tt>，添加或修正以下行；如有需要，可将横幅信息替换为其他措辞：
+    <p>编辑 <tt>/etc/postfix/main.cf</tt>，添加或修正以下行；如有需要，可将横幅信息替换为其他措辞：</p>
     <pre>smtpd_banner = $myhostname ESMTP</pre>
 
 rationale: |-
@@ -25,7 +25,7 @@ rationale: |-
     variant is supported.
 
     <p><strong>中文理由：</strong></p>
-    默认问候横幅会泄露正在侦听的邮件进程是 Postfix。远程邮件发送方连接到端口 25 上的 MTA 时，会在 SMTP 对话中收到初始横幅。此横幅是必需的，但它经常泄露过多信息，包括正在使用的 MTA 软件，有时还包括其版本号。远程邮件发送方发送邮件并不需要这些信息，因此应更改横幅，使其仅显示主机名（主机名已为人知且可能有用）和 ESMTP 字样，以表明支持现代 SMTP 协议变体。
+    <p>默认问候横幅会泄露正在侦听的邮件进程是 Postfix。远程邮件发送方连接到端口 25 上的 MTA 时，会在 SMTP 对话中收到初始横幅。此横幅是必需的，但它经常泄露过多信息，包括正在使用的 MTA 软件，有时还包括其版本号。远程邮件发送方发送邮件并不需要这些信息，因此应更改横幅，使其仅显示主机名（主机名已为人知且可能有用）和 ESMTP 字样，以表明支持现代 SMTP 协议变体。</p>
 
 severity: low
 

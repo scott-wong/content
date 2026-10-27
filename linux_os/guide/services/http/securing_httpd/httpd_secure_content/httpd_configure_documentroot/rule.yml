@@ -9,7 +9,7 @@ description: |-
     configured <tt>DocumentRoot</tt>.
 
     <p><strong>中文说明：</strong></p>
-    每个已配置的 <tt>DocumentRoot</tt> 都应包含一个 <tt>index.html</tt> 文件。请为每个已配置的 <tt>DocumentRoot</tt> 添加 <tt>index.html</tt> 文件。
+    <p>每个已配置的 <tt>DocumentRoot</tt> 都应包含一个 <tt>index.html</tt> 文件。请为每个已配置的 <tt>DocumentRoot</tt> 添加 <tt>index.html</tt> 文件。</p>
 
 rationale: |-
     The goal is to completely control the web users experience in navigating any
@@ -23,7 +23,7 @@ rationale: |-
     version.
 
     <p><strong>中文理由：</strong></p>
-    目标是完全控制 Web 用户在浏览 Web 文档根目录任意部分时的体验。确保所有 Web 内容目录至少包含等效的 index.html 文件，是实现此目标的重要因素。此外，URL 参数操纵等枚举技术依赖于通过定位具有默认页面的目录来获取 Web 服务器目录结构信息。此做法有助于确保匿名 Web 用户不会获取目录浏览信息，也不会收到泄露服务器类型和版本的错误消息。
+    <p>目标是完全控制 Web 用户在浏览 Web 文档根目录任意部分时的体验。确保所有 Web 内容目录至少包含等效的 index.html 文件，是实现此目标的重要因素。此外，URL 参数操纵等枚举技术依赖于通过定位具有默认页面的目录来获取 Web 服务器目录结构信息。此做法有助于确保匿名 Web 用户不会获取目录浏览信息，也不会收到泄露服务器类型和版本的错误消息。</p>
 
 severity: low
 

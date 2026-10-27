@@ -9,14 +9,14 @@ description: |-
     operating system in <tt>/boot/loader/entries/*.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要禁用虚拟系统调用，请将参数 <tt>vsyscall=none</tt> 添加到 <tt>/boot/loader/entries/*.conf</tt> 中 Linux 操作系统的所有 BLS（Boot Loader Specification）条目（"options" 行）。
+    <p>要禁用虚拟系统调用，请将参数 <tt>vsyscall=none</tt> 添加到 <tt>/boot/loader/entries/*.conf</tt> 中 Linux 操作系统的所有 BLS（Boot Loader Specification）条目（"options" 行）。</p>
 
 rationale: |-
     Virtual Syscalls provide an opportunity of attack for a user who has control
     of the return instruction pointer.
 
     <p><strong>中文理由：</strong></p>
-    虚拟系统调用为能够控制返回指令指针的用户提供了攻击机会。
+    <p>虚拟系统调用为能够控制返回指令指针的用户提供了攻击机会。</p>
 
 severity: medium
 

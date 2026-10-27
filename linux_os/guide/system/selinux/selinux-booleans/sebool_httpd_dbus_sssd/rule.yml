@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="httpd_dbus_sssd") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>httpd_dbus_sssd</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P httpd_dbus_sssd off</tt> 将其禁用。
+    <p>默认情况下，SELinux 布尔值 <tt>httpd_dbus_sssd</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P httpd_dbus_sssd off</tt> 将其禁用。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用此布尔值会允许 Web 服务器通过 D-Bus 访问 SSSD，增加身份服务交互风险。
+    <p>启用此布尔值会允许 Web 服务器通过 D-Bus 访问 SSSD，增加身份服务交互风险。</p>
 
 severity: medium
 

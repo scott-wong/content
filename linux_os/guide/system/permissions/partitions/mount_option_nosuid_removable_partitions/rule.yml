@@ -12,7 +12,7 @@ description: |-
     {{{ describe_mount(option="nosuid", part="any removable media partitions") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保任何可移动介质分区使用 <tt>nosuid</tt> 挂载选项。
+    <p>确保任何可移动介质分区使用 <tt>nosuid</tt> 挂载选项。</p>
 
 rationale: |-
     The presence of SUID and SGID executables should be tightly controlled. Allowing
@@ -20,7 +20,7 @@ rationale: |-
     removable media would allow them to introduce their own highly-privileged programs.
 
     <p><strong>中文理由：</strong></p>
-    SUID 和 SGID 可执行文件的存在应受到严格控制。允许用户从可移动介质挂载的分区引入 SUID 或 SGID 二进制文件，会使其能够引入自己的高特权程序。
+    <p>SUID 和 SGID 可执行文件的存在应受到严格控制。允许用户从可移动介质挂载的分区引入 SUID 或 SGID 二进制文件，会使其能够引入自己的高特权程序。</p>
 
 severity: medium
 

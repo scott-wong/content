@@ -17,7 +17,7 @@ description: |-
     <tt>useradd</tt> man page for more information.
 
     <p><strong>中文说明：</strong></p>
-    要指定密码过期（表示无活动）后经过多少天永久禁用账户，请在 <tt>/etc/default/useradd</tt> 中添加或更正以下行：
+    <p>要指定密码过期（表示无活动）后经过多少天永久禁用账户，请在 <tt>/etc/default/useradd</tt> 中添加或更正以下行：</p>
     <pre>INACTIVE=<i>{{{ xccdf_value("var_account_disable_post_pw_expiration") }}}</i></pre>
     如果密码当前即将过期，则距离账户自动禁用还剩 <tt>{{{ xccdf_value("var_account_disable_post_pw_expiration") }}}</tt> 天。但是，如果密码再过 60 天才会过期，则可能经过 60 天加上 <tt>{{{ xccdf_value("var_account_disable_post_pw_expiration") }}}</tt> 天后账户才会自动禁用。有关更多信息，请参阅 <tt>useradd</tt> 手册页。
 
@@ -27,7 +27,7 @@ rationale: |-
     Owners of inactive accounts will not notice if unauthorized access to their user account has been obtained.
 
     <p><strong>中文理由：</strong></p>
-    智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）提供并验证凭据。
+    <p>智能卡登录提供比用户名和密码组合更强的双因素身份验证。智能卡利用 PKI（公钥基础设施）提供并验证凭据。</p>
 
 severity: medium
 

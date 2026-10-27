@@ -27,7 +27,7 @@ description: |-
     Multiple servers may be configured.
 
     <p><strong>中文说明：</strong></p>
-    <tt>Chrony</tt> 是实现网络时间协议（NTP）的守护进程。它用于在多种系统之间同步系统时钟，并使用高度精确的源。有关 <tt>chrony</tt> 的更多信息，请参阅 <a href="https://chrony-project.org/">chrony 项目网站</a>。<tt>Chrony</tt> 可配置为客户端和/或服务器。根据需要向 <tt>{{{ chrony_conf_path }}}</tt> 添加或编辑 server 或 pool 行：
+    <p><tt>Chrony</tt> 是实现网络时间协议（NTP）的守护进程。它用于在多种系统之间同步系统时钟，并使用高度精确的源。有关 <tt>chrony</tt> 的更多信息，请参阅 <a href="https://chrony-project.org/">chrony 项目网站</a>。<tt>Chrony</tt> 可配置为客户端和/或服务器。根据需要向 <tt>{{{ chrony_conf_path }}}</tt> 添加或编辑 server 或 pool 行：</p>
     <pre>server &lt;remote-server&gt;</pre>
     或者，可以通过 <tt>{{{ chrony_conf_path }}}</tt> 中的 <tt>sourcedir</tt> 或 <tt>confdir</tt> 指令，在包含文件中指定 server 或 pool 指令。使用 <tt>sourcedir</tt> 时，请在指定目录中创建 <tt>.sources</tt> 文件：
     <pre># In {{{ chrony_conf_path }}}:
@@ -48,7 +48,7 @@ rationale: |-
     synchronization is working properly.
 
     <p><strong>中文理由：</strong></p>
-    如果系统使用 <tt>chrony</tt>，正确的配置对于确保时间同步正常工作至关重要。
+    <p>如果系统使用 <tt>chrony</tt>，正确的配置对于确保时间同步正常工作至关重要。</p>
 
 severity: medium
 

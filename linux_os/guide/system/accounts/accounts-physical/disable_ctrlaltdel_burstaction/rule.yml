@@ -41,11 +41,11 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，如果在 2 秒内按下 <tt>Ctrl-Alt-Del</tt> 键序列 Ctrl-Alt-Delete 超过 7 次，<tt>SystemD</tt> 将重启系统。
+    <p>默认情况下，如果在 2 秒内按下 <tt>Ctrl-Alt-Del</tt> 键序列 Ctrl-Alt-Delete 超过 7 次，<tt>SystemD</tt> 将重启系统。
     <br /><br />
     要将系统配置为忽略 <tt>CtrlAltDelBurstAction</tt>
     {{% if product != "rhcos4" %}}
-    设置，请在 <tt>/etc/systemd/system.conf</tt> 中添加或修改以下内容：
+    设置，请在 <tt>/etc/systemd/system.conf</tt> 中添加或修改以下内容：</p>
     <pre>CtrlAltDelBurstAction=none</pre>
     {{% else %}}
     设置，请创建类似以下内容的 <tt>MachineConfig</tt>：
@@ -87,7 +87,7 @@ rationale: |-
     loss of availability of systems due to unintentional reboot.
 
     <p><strong>中文理由：</strong></p>
-    本地登录用户在控制台按下 Ctrl-Alt-Del 时可重启系统。如果误按，例如在混合操作系统环境中可能发生，这可能导致系统意外重启，带来短期可用性损失风险。
+    <p>本地登录用户在控制台按下 Ctrl-Alt-Del 时可重启系统。如果误按，例如在混合操作系统环境中可能发生，这可能导致系统意外重启，带来短期可用性损失风险。</p>
 
 severity: high
 

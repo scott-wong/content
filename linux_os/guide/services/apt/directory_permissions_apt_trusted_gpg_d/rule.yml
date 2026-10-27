@@ -6,14 +6,14 @@ description: |-
     {{{ describe_directory_permissions(directory="/etc/apt/trusted.gpg.d", perms="0755") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保目录 <tt>/etc/apt/trusted.gpg.d</tt> 的权限为 <tt>0755</tt> 或更严格。
+    <p>确保目录 <tt>/etc/apt/trusted.gpg.d</tt> 的权限为 <tt>0755</tt> 或更严格。</p>
 
 rationale: |-
     A non-privileged user with write access to /etc/apt/trusted.gpg.d can
     compromise the APT chain of trust by adding trusted keys.
 
     <p><strong>中文理由：</strong></p>
-    对 <tt>/etc/apt/trusted.gpg.d</tt> 具有写访问权限的非特权用户可以通过添加受信任密钥来破坏 APT 信任链。
+    <p>对 <tt>/etc/apt/trusted.gpg.d</tt> 具有写访问权限的非特权用户可以通过添加受信任密钥来破坏 APT 信任链。</p>
 
 severity: medium
 

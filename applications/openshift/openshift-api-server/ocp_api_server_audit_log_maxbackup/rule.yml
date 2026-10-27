@@ -24,7 +24,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    要配置保留的审计日志轮转数量，请编辑 <tt>openshift-apiserver</tt> ConfigMap，并将 <tt>audit-log-maxbackup</tt> 参数设置为 <tt>10</tt> 或组织认为适当的值：
+    <p>要配置保留的审计日志轮转数量，请编辑 <tt>openshift-apiserver</tt> ConfigMap，并将 <tt>audit-log-maxbackup</tt> 参数设置为 <tt>10</tt> 或组织认为适当的值：</p>
     <pre>
     "apiServerArguments":{
       ...
@@ -40,7 +40,7 @@ rationale: |-
     would have approximately 1 GB of log data to use during analysis.
 
     <p><strong>中文理由：</strong></p>
-    OpenShift 会自动轮转日志文件。保留旧日志文件可确保 OpenShift Operator 拥有足够的日志数据来执行调查或关联分析。例如，如果审计日志大小设为 100 MB，保留的日志文件数设为 10，则 OpenShift Operator 进行分析时将有约 1 GB 的日志数据可用。
+    <p>OpenShift 会自动轮转日志文件。保留旧日志文件可确保 OpenShift Operator 拥有足够的日志数据来执行调查或关联分析。例如，如果审计日志大小设为 100 MB，保留的日志文件数设为 10，则 OpenShift Operator 进行分析时将有约 1 GB 的日志数据可用。</p>
 
 identifiers:
   cce@ocp4: CCE-83977-9

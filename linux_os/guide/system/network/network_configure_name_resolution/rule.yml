@@ -50,7 +50,7 @@ rationale: |-
     time synchronization, centralized authentication, and remote system logging.
 
     <p><strong>中文理由：</strong></p>
-    为确保名称解析服务可用，必须使用多个冗余名称服务器。名称解析失败可能导致依赖名称解析的安全功能失败，这些功能可能包括时间同步、集中式身份验证和远程系统日志记录。
+    <p>为确保名称解析服务可用，必须使用多个冗余名称服务器。名称解析失败可能导致依赖名称解析的安全功能失败，这些功能可能包括时间同步、集中式身份验证和远程系统日志记录。</p>
 
 severity: medium
 

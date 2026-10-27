@@ -16,19 +16,19 @@ description: |-
     exists is an approved organizational connection.
 
     <p><strong>中文说明：</strong></p>
-    Libreswan 提供 IPsec 和 IKE 实现，允许通过不受信任的网络创建安全隧道。因此，IPsec 可用于绕过某些网络要求（例如过滤）。如果存在任何 IPsec 连接
+    <p>Libreswan 提供 IPsec 和 IKE 实现，允许通过不受信任的网络创建安全隧道。因此，IPsec 可用于绕过某些网络要求（例如过滤）。如果存在任何 IPsec 连接
     {{% if product in ['sle15', 'sle16'] %}}
     （在 <tt>/etc/swanctl/swanctl.conf</tt> 和 <tt>/etc/swanctl/conf.d/</tt> 中配置的 <tt>conn</tt>）
     {{% else %}}
     （在 <tt>/etc/ipsec.conf</tt> 和 <tt>/etc/ipsec.d</tt> 中配置的 <tt>conn</tt>）
     {{% endif %}}
-    请验证其是否为组织批准的连接。
+    请验证其是否为组织批准的连接。</p>
 
 rationale: |-
     IP tunneling mechanisms can be used to bypass network filtering.
 
     <p><strong>中文理由：</strong></p>
-    IP 隧道机制可用于绕过网络过滤。
+    <p>IP 隧道机制可用于绕过网络过滤。</p>
 
 severity: medium
 

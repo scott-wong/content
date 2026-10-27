@@ -7,7 +7,7 @@ description: |-
     {{{ describe_service_disable(service="vsftpd") }}}
 
     <p><strong>中文说明：</strong></p>
-    要禁用 <tt>vsftpd</tt> 服务，请运行 <tt>sudo systemctl disable --now vsftpd</tt>。
+    <p>要禁用 <tt>vsftpd</tt> 服务，请运行 <tt>sudo systemctl disable --now vsftpd</tt>。</p>
 
 rationale: |-
     Running FTP server software provides a network-based avenue
@@ -16,7 +16,7 @@ rationale: |-
     a risk of compromising sensitive information.
 
     <p><strong>中文理由：</strong></p>
-    运行 FTP 服务器软件会提供基于网络的攻击途径，如果不需要，应将其禁用。此外，FTP 协议未加密，存在泄露敏感信息的风险。
+    <p>运行 FTP 服务器软件会提供基于网络的攻击途径，如果不需要，应将其禁用。此外，FTP 协议未加密，存在泄露敏感信息的风险。</p>
 
 severity: medium
 

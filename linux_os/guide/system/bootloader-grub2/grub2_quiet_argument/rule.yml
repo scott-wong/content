@@ -13,9 +13,9 @@ description: |-
     {{{ describe_grub2_argument("quiet") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    如果没有 <tt>quiet</tt> 内核参数，硬件和服务信息会在启动期间以及之后有时打印到控制台。这些信息可能对有物理控制台访问权限的攻击者或所谓的“肩窥者”有用。要抑制这些消息，请将 <tt>quiet</tt> 参数添加到 Linux 操作系统的默认 GRUB 2 命令行。
+    <p>如果没有 <tt>quiet</tt> 内核参数，硬件和服务信息会在启动期间以及之后有时打印到控制台。这些信息可能对有物理控制台访问权限的攻击者或所谓的“肩窥者”有用。要抑制这些消息，请将 <tt>quiet</tt> 参数添加到 Linux 操作系统的默认 GRUB 2 命令行。
 
-    为确保新安装的内核将 <tt>quiet</tt> 作为内核命令行参数，请按产品要求将 <tt>quiet</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。
+    为确保新安装的内核将 <tt>quiet</tt> 作为内核命令行参数，请按产品要求将 <tt>quiet</tt> 添加到默认 GRUB 2 命令行并更新已安装内核的引导配置。对于使用 <tt>/etc/default/grub</tt> 的系统，请修改 <tt>GRUB_CMDLINE_LINUX</tt> 行；对于使用 <tt>grub2-editenv</tt> 的系统，请按产品要求设置默认内核命令行。</p>
 
 rationale: |-
     Boot messages can disclose hardware details, service names and other
@@ -23,7 +23,7 @@ rationale: |-
     failures are still shown, as is the LUKS passphrase prompt.
 
     <p><strong>中文理由：</strong></p>
-    启动消息可能向任何能看到控制台的人泄露硬件详细信息、服务名称及其他系统信息。启动失败以及 LUKS 口令短语提示仍会显示。
+    <p>启动消息可能向任何能看到控制台的人泄露硬件详细信息、服务名称及其他系统信息。启动失败以及 LUKS 口令短语提示仍会显示。</p>
 
 severity: medium
 

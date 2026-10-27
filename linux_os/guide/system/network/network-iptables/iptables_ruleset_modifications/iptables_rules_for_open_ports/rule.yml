@@ -7,14 +7,14 @@ description: |-
     need firewall rules to govern traffic.
 
     <p><strong>中文说明：</strong></p>
-    任何在非回环地址上开放的端口都需要防火墙规则来管理流量。
+    <p>任何在非回环地址上开放的端口都需要防火墙规则来管理流量。</p>
 
 rationale: |-
     Without a firewall rule configured for open ports default
     firewall policy will drop all packets to these ports.
 
     <p><strong>中文理由：</strong></p>
-    如果未为开放端口配置防火墙规则，默认防火墙策略将丢弃发往这些端口的所有数据包。
+    <p>如果未为开放端口配置防火墙规则，默认防火墙策略将丢弃发往这些端口的所有数据包。</p>
 
 severity: medium
 

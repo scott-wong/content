@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_permissions(file="/var/log/auth.log", perms="0640") }}}
 
     <p><strong>中文说明：</strong></p>
-    文件 <tt>/var/log/auth.log</tt> 的权限必须为 <tt>0640</tt>。
+    <p>文件 <tt>/var/log/auth.log</tt> 的权限必须为 <tt>0640</tt>。</p>
 
 rationale: |-
     The <tt>/var/log/auth.log</tt> file contains records information about user
@@ -14,7 +14,7 @@ rationale: |-
     authorized personnel.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/var/log/auth.log</tt> 文件包含有关用户登录尝试和身份验证过程的信息，只应由经过授权的人员访问。
+    <p><tt>/var/log/auth.log</tt> 文件包含有关用户登录尝试和身份验证过程的信息，只应由经过授权的人员访问。</p>
 
 severity: medium
 

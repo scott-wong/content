@@ -62,7 +62,7 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    应将 <tt>maxpoll</tt> 配置为 {{{ xccdf_value("var_time_service_set_maxpoll") }}}（在 <tt>/etc/ntp.conf</tt> 或 <tt>{{{ chrony_conf_path }}}</tt>（或 <tt>{{{ chrony_d_path }}}</tt>）中），以持续轮询时间服务器。要在 <tt>/etc/ntp.conf</tt> 或 <tt>{{{ chrony_conf_path }}}</tt>（或 <tt>{{{ chrony_d_path }}}</tt>）中配置 <tt>maxpoll</tt>，请在每个 <tt>server</tt>、<tt>pool</tt> 或 <tt>peer</tt> 条目后添加以下内容：
+    <p>应将 <tt>maxpoll</tt> 配置为 {{{ xccdf_value("var_time_service_set_maxpoll") }}}（在 <tt>/etc/ntp.conf</tt> 或 <tt>{{{ chrony_conf_path }}}</tt>（或 <tt>{{{ chrony_d_path }}}</tt>）中），以持续轮询时间服务器。要在 <tt>/etc/ntp.conf</tt> 或 <tt>{{{ chrony_conf_path }}}</tt>（或 <tt>{{{ chrony_d_path }}}</tt>）中配置 <tt>maxpoll</tt>，请在每个 <tt>server</tt>、<tt>pool</tt> 或 <tt>peer</tt> 条目后添加以下内容：</p>
     <pre>maxpoll {{{ xccdf_value("var_time_service_set_maxpoll") }}}</pre>
     将其添加到 <tt>server</tt> 指令。如果使用 chrony，所有 <tt>pool</tt> 指令也应配置 <tt>maxpoll</tt>。
 
@@ -116,9 +116,9 @@ rationale: |-
     Organizations should consider endpoints that may not have regular access to the authoritative time server (e.g., mobile, teleworking, and tactical endpoints).
 
     <p><strong>中文理由：</strong></p>
-    不准确的时间戳会使关联事件更加困难，并可能导致分析不准确。在开展取证分析和调查系统事件时，确定特定事件在系统上发生的准确时间至关重要。超出配置的可接受偏差（drift）范围的来源可能不准确。
+    <p>不准确的时间戳会使关联事件更加困难，并可能导致分析不准确。在开展取证分析和调查系统事件时，确定特定事件在系统上发生的准确时间至关重要。超出配置的可接受偏差（drift）范围的来源可能不准确。
 
-    同步内部信息系统时钟可为具有多个系统时钟和通过网络连接的系统提供一致的时间戳。组织应考虑可能无法定期访问权威时间服务器的端点（例如移动、远程办公和战术端点）。
+    同步内部信息系统时钟可为具有多个系统时钟和通过网络连接的系统提供一致的时间戳。组织应考虑可能无法定期访问权威时间服务器的端点（例如移动、远程办公和战术端点）。</p>
 
 severity: medium
 

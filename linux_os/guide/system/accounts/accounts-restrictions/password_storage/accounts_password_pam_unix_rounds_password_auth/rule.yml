@@ -24,10 +24,10 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    配置密码哈希算法的轮数。可通过为 <tt>pam_unix</tt> PAM 模块使用 <tt>rounds</tt> 选项来实现。
+    <p>配置密码哈希算法的轮数。可通过为 <tt>pam_unix</tt> PAM 模块使用 <tt>rounds</tt> 选项来实现。
     <br /><br />
     在文件 <tt>{{{ pam_passwd_file_path }}}</tt> 中，将 <tt>rounds={{{ xccdf_value("var_password_pam_unix_rounds") }}}</tt> 追加到 <tt>pam_unix.so</tt> 条目，如下所示：
-    {{% if product in ["debian12", "debian13", 'ubuntu2204', 'ubuntu2404'] %}}
+    {{% if product in ["debian12", "debian13", 'ubuntu2204', 'ubuntu2404'] %}}</p>
     <pre>password [success=1 default=ignore] pam_unix.so <i>...existing_options...</i> rounds={{{ xccdf_value("var_password_pam_unix_rounds") }}}</pre>
     {{% else %}}
     <pre>password sufficient pam_unix.so <i>...existing_options...</i> rounds={{{ xccdf_value("var_password_pam_unix_rounds") }}}</pre>
@@ -39,7 +39,7 @@ rationale: |-
     Using a higher number of rounds makes password cracking attacks more difficult.
 
     <p><strong>中文理由：</strong></p>
-    使用更多轮数可使密码破解攻击更加困难。
+    <p>使用更多轮数可使密码破解攻击更加困难。</p>
 
 warnings:
     - performance: |-

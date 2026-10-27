@@ -7,7 +7,7 @@ description: |-
     {{{ describe_file_owner(file="/var/lib/etcd/member/wal/*", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>/var/lib/etcd/member/wal/*</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /var/lib/etcd/member/wal/*</tt>。
+    <p>要将 <tt>/var/lib/etcd/member/wal/*</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /var/lib/etcd/member/wal/*</tt>。</p>
 
 rationale: |-
     etcd is a highly-available key-value store used by Kubernetes deployments for
@@ -15,7 +15,7 @@ rationale: |-
     be protected from any unauthorized reads or writes.
 
     <p><strong>中文理由：</strong></p>
-    etcd 是 Kubernetes 部署用于持久存储其所有 REST API 对象的高可用键值存储。应保护此数据目录，防止任何未经授权的读取或写入。
+    <p>etcd 是 Kubernetes 部署用于持久存储其所有 REST API 对象的高可用键值存储。应保护此数据目录，防止任何未经授权的读取或写入。</p>
 
 severity: medium
 

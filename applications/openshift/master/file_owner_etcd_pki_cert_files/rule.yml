@@ -7,7 +7,7 @@ description: |-
   {{{ describe_file_owner(file="/etc/kubernetes/static-pod-resources/*/*/*/*.crt", owner="root") }}}
 
   <p><strong>中文说明：</strong></p>
-  要将 <tt>/etc/kubernetes/static-pod-resources/*/*/*/*.crt</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/kubernetes/static-pod-resources/*/*/*/*.crt</tt>。
+  <p>要将 <tt>/etc/kubernetes/static-pod-resources/*/*/*/*.crt</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/kubernetes/static-pod-resources/*/*/*/*.crt</tt>。</p>
 
 rationale: |-
   OpenShift makes use of a number of certificates as part of its operation.
@@ -16,7 +16,7 @@ rationale: |-
   The directory and files should be owned by the system administrator.
 
   <p><strong>中文理由：</strong></p>
-  OpenShift 在运行过程中使用多种证书。应验证包含 PKI 信息的目录及该目录中所有文件的所有者，以保持其完整性。该目录和文件应由系统管理员所有。
+  <p>OpenShift 在运行过程中使用多种证书。应验证包含 PKI 信息的目录及该目录中所有文件的所有者，以保持其完整性。该目录和文件应由系统管理员所有。</p>
 
 identifiers:
   cce@ocp4: CCE-83898-7

@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="puppetmaster_use_db") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>puppetmaster_use_db</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>puppetmaster_use_db</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>puppetmaster_use_db</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>puppetmaster_use_db</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    仅在 Puppet 主服务器需要数据库后端时启用此布尔值；否则应禁用，以减少数据库访问面。
+    <p>仅在 Puppet 主服务器需要数据库后端时启用此布尔值；否则应禁用，以减少数据库访问面。</p>
 
 severity: medium
 

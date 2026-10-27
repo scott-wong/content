@@ -16,9 +16,9 @@ description: |-
     for CEL rules (CMP-4483) will mark it Not Applicable instead.
 
     <p><strong>中文说明：</strong></p>
-    虚拟机使用的 SR-IOV 网络必须通过在 <tt>.spec.vlan</tt> 中声明的专用 VLAN 对流量进行分段。未配置 VLAN 的 SR-IOV 网络会将虚拟机流量置于未标记的提供商网段，使租户流量与基础设施流量混在一起。对于有意使用未标记提供商网络的环境，应调整配置档以针对这些对象排除此规则。
+    <p>虚拟机使用的 SR-IOV 网络必须通过在 <tt>.spec.vlan</tt> 中声明的专用 VLAN 对流量进行分段。未配置 VLAN 的 SR-IOV 网络会将虚拟机流量置于未标记的提供商网段，使租户流量与基础设施流量混在一起。对于有意使用未标记提供商网络的环境，应调整配置档以针对这些对象排除此规则。
 
-    注意：此规则读取 SriovNetwork 资源，因此需要 SR-IOV Network Operator。在未安装该 Operator 的集群上，资源类型不存在，检查会报告错误；CEL 规则的 CPE 适用性（CMP-4483）会将其标记为不适用。
+    注意：此规则读取 SriovNetwork 资源，因此需要 SR-IOV Network Operator。在未安装该 Operator 的集群上，资源类型不存在，检查会报告错误；CEL 规则的 CPE 适用性（CMP-4483）会将其标记为不适用。</p>
 
 rationale: |-
     Without VLAN segmentation, workloads attached to SR-IOV networks share
@@ -26,7 +26,7 @@ rationale: |-
     sniffing and spoofing between tenants and toward the infrastructure.
 
     <p><strong>中文理由：</strong></p>
-    如果没有 VLAN 分段，连接到 SR-IOV 网络的工作负载将与其他流量共享广播域，从而可能在租户之间以及面向基础设施的方向实施横向移动、嗅探和欺骗。
+    <p>如果没有 VLAN 分段，连接到 SR-IOV 网络的工作负载将与其他流量共享广播域，从而可能在租户之间以及面向基础设施的方向实施横向移动、嗅探和欺骗。</p>
 
 severity: medium
 

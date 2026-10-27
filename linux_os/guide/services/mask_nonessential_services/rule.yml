@@ -13,13 +13,13 @@ description: |-
     incoming packets from remote locations.
 
     <p><strong>中文说明：</strong></p>
-    网络端口由端口号、关联的 IP 地址以及通信协议类型（例如 TCP 或 UDP）标识。侦听端口是应用程序或进程侦听的网络端口，用作通信端点。每个侦听端口都可以通过防火墙打开或关闭（过滤）。一般而言，开放端口是接受来自远程位置传入数据包的网络端口。
+    <p>网络端口由端口号、关联的 IP 地址以及通信协议类型（例如 TCP 或 UDP）标识。侦听端口是应用程序或进程侦听的网络端口，用作通信端点。每个侦听端口都可以通过防火墙打开或关闭（过滤）。一般而言，开放端口是接受来自远程位置传入数据包的网络端口。</p>
 
 rationale: |-
     Services listening on the system pose a potential risk as an attack vector. These services should be reviewed, and if not required, the service should be stopped, and the package containing the service should be removed. If required packages have a dependency, the service should be stopped and masked to reduce the attack surface of the system.
 
     <p><strong>中文理由：</strong></p>
-    侦听系统上的服务会构成潜在攻击途径。应审查这些服务；如果不需使用，应停止该服务并移除包含该服务的软件包。如果所需软件包存在依赖关系，应停止并屏蔽该服务，以减小系统攻击面。
+    <p>侦听系统上的服务会构成潜在攻击途径。应审查这些服务；如果不需使用，应停止该服务并移除包含该服务的软件包。如果所需软件包存在依赖关系，应停止并屏蔽该服务，以减小系统攻击面。</p>
 
 severity: low
 

@@ -9,7 +9,7 @@ description: |-
     directories.
 
     <p><strong>中文说明：</strong></p>
-    Web 内容目录不应通过 <tt>nfs</tt> 和 <tt>smb</tt> 等远程文件系统匿名共享。请从相关目录中移除这些共享。
+    <p>Web 内容目录不应通过 <tt>nfs</tt> 和 <tt>smb</tt> 等远程文件系统匿名共享。请从相关目录中移除这些共享。</p>
 
 rationale: |-
     Sharing web content is a security risk when a web server is involved. Users
@@ -20,7 +20,7 @@ rationale: |-
     the web content or cause web server performance problems.
 
     <p><strong>中文理由：</strong></p>
-    在涉及 Web 服务器时，共享 Web 内容会带来安全风险。匿名访问共享的用户可能获得对这些目录内容的特权访问。可网络共享的目录会使这些目录及其内容面临不必要的访问。任何不必要的暴露都会增加他人利用该访问权限来破坏 Web 内容或造成 Web 服务器性能问题的风险。
+    <p>在涉及 Web 服务器时，共享 Web 内容会带来安全风险。匿名访问共享的用户可能获得对这些目录内容的特权访问。可网络共享的目录会使这些目录及其内容面临不必要的访问。任何不必要的暴露都会增加他人利用该访问权限来破坏 Web 内容或造成 Web 服务器性能问题的风险。</p>
 
 severity: medium
 

@@ -13,10 +13,10 @@ description: |-
   [2] https://docs.openshift.com/container-platform/latest/machine_management/creating_machinesets/creating-machineset-gcp.html#machineset-enabling-customer-managed-encryption_creating-machineset-gcp
 
   <p><strong>中文说明：</strong></p>
-  当选择全盘加密以保护静态持卡数据时，OpenShift 可根据托管环境提供多种解决方案。LUKS（使用 TPM2 或 Tang）可用于裸金属场景，也可以使用云提供程序特定的磁盘加密。[1][2]
+  <p>当选择全盘加密以保护静态持卡数据时，OpenShift 可根据托管环境提供多种解决方案。LUKS（使用 TPM2 或 Tang）可用于裸金属场景，也可以使用云提供程序特定的磁盘加密。[1][2]
 
   [1] https://docs.openshift.com/container-platform/latest/machine_management/creating_machinesets/creating-machineset-azure.html#machineset-enabling-customer-managed-encryption-azure_creating-machineset-azure
-  [2] https://docs.openshift.com/container-platform/latest/machine_management/creating_machinesets/creating-machineset-gcp.html#machineset-enabling-customer-managed-encryption_creating-machineset-gcp
+  [2] https://docs.openshift.com/container-platform/latest/machine_management/creating_machinesets/creating-machineset-gcp.html#machineset-enabling-customer-managed-encryption_creating-machineset-gcp</p>
 rationale: |-
   Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to
   protect data. The system must implement cryptographic modules adhering to the higher
@@ -24,7 +24,7 @@ rationale: |-
   and validated.
 
   <p><strong>中文理由：</strong></p>
-  使用薄弱或未经测试的加密算法会削弱利用加密保护数据的目的。系统必须实现符合联邦政府批准的更高标准的加密模块，因为这可确保这些模块已经过测试和验证。
+  <p>使用薄弱或未经测试的加密算法会削弱利用加密保护数据的目的。系统必须实现符合联邦政府批准的更高标准的加密模块，因为这可确保这些模块已经过测试和验证。</p>
 
 
 identifiers:

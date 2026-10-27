@@ -18,7 +18,7 @@ description: |-
     and make sure the output is empty.
 
     <p><strong>中文说明：</strong></p>
-    为确保除 PodSecurity 外没有任何准入控制插件被显式禁用，请运行以下命令：
+    <p>为确保除 PodSecurity 外没有任何准入控制插件被显式禁用，请运行以下命令：</p>
     <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '{{{ default_jqfilter }}}'</pre>
     并确保输出为空。
 
@@ -29,7 +29,7 @@ rationale: |-
     enabled and providing the security benefits required.
 
     <p><strong>中文理由：</strong></p>
-    若干强化控制项依赖特定的 API Server 准入插件处于启用状态。检查没有准入控制插件被禁用，有助于确认所有关键准入控制插件确实已启用并提供所需的安全收益。
+    <p>若干强化控制项依赖特定的 API Server 准入插件处于启用状态。检查没有准入控制插件被禁用，有助于确认所有关键准入控制插件确实已启用并提供所需的安全收益。</p>
 
 identifiers:
   cce@ocp4: CCE-83799-7

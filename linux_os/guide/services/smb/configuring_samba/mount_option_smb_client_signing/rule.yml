@@ -14,16 +14,16 @@ description: |-
     packet signing.
 
     <p><strong>中文说明：</strong></p>
-    要求使用 <tt>mount.cifs</tt> 程序挂载 Samba 共享的客户端启用数据包签名（例如在 <tt>/etc/fstab</tt> 中指定共享的客户端）。为此，请确保使用签名选项（<tt>sec=krb5i</tt> 或 <tt>sec=ntlmv2i</tt>）。
+    <p>要求使用 <tt>mount.cifs</tt> 程序挂载 Samba 共享的客户端启用数据包签名（例如在 <tt>/etc/fstab</tt> 中指定共享的客户端）。为此，请确保使用签名选项（<tt>sec=krb5i</tt> 或 <tt>sec=ntlmv2i</tt>）。
     <br /><br />
-    有关更多信息，请参阅 <tt>mount.cifs(8)</tt> 手册页。Samba 客户端应仅与支持 SMB 数据包签名的服务器通信。
+    有关更多信息，请参阅 <tt>mount.cifs(8)</tt> 手册页。Samba 客户端应仅与支持 SMB 数据包签名的服务器通信。</p>
 
 rationale: |-
     Packet signing can prevent man-in-the-middle
     attacks which modify SMB packets in transit.
 
     <p><strong>中文理由：</strong></p>
-    数据包签名可防止在传输过程中修改 SMB 数据包的中间人攻击。
+    <p>数据包签名可防止在传输过程中修改 SMB 数据包的中间人攻击。</p>
 
 severity: unknown
 

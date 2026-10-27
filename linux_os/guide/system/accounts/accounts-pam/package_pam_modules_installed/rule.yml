@@ -6,14 +6,14 @@ description: |-
     {{{ describe_package_install(package="libpam-modules") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>libpam-modules</tt> 软件包。
+    <p>应安装 <tt>libpam-modules</tt> 软件包。</p>
 
 rationale: |-
     libpam-modules contains PAM modules that are needed
     by other rules when configuring PAM options.
 
     <p><strong>中文理由：</strong></p>
-    libpam-modules 包含配置 PAM 选项时其他规则所需的 PAM 模块。
+    <p>libpam-modules 包含配置 PAM 选项时其他规则所需的 PAM 模块。</p>
 
 severity: medium
 

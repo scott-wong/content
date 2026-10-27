@@ -9,13 +9,13 @@ description: |-
     {{{ describe_file_permissions(file=grub2_uefi_boot_path, perms="0600") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>{{{ grub2_uefi_boot_path }}}</tt> 中的文件应具有模式 <tt>0600</tt>，以防文件被破坏或修改。确保这些文件的权限为 <tt>0600</tt> 或更严格。
+    <p><tt>{{{ grub2_uefi_boot_path }}}</tt> 中的文件应具有模式 <tt>0600</tt>，以防文件被破坏或修改。确保这些文件的权限为 <tt>0600</tt> 或更严格。</p>
 
 rationale: |-
     The file mode 0600 prevents unauthorized access and modifications to boot settings.
 
     <p><strong>中文理由：</strong></p>
-    文件模式 0600 可防止未经授权访问和修改引导设置。
+    <p>文件模式 0600 可防止未经授权访问和修改引导设置。</p>
 
 severity: medium
 

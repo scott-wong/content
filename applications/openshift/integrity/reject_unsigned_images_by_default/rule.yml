@@ -63,7 +63,7 @@ rationale: |-
   unauthorized images into the deployment.
 
   <p><strong>中文理由：</strong></p>
-  确保容器运行时在拉取容器镜像前验证其完整性，可防止恶意行为者将未经授权的镜像引入部署环境。
+  <p>确保容器运行时在拉取容器镜像前验证其完整性，可防止恶意行为者将未经授权的镜像引入部署环境。</p>
 
 identifiers:
   cce@ocp4: CCE-90254-4

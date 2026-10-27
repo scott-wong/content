@@ -11,7 +11,7 @@ description: |-
     If it is set, it must have the minimum value of {{{ xccdf_value("var_password_yescrypt_cost_factor_login_defs") }}}.
 
     <p><strong>中文说明：</strong></p>
-    在 <tt>{{{ login_defs_path }}}</tt> 中，确保 <tt>YESCRYPT_COST_FACTOR</tt> 的最小值为 <tt>{{{ xccdf_value("var_password_yescrypt_cost_factor_login_defs") }}}</tt>。例如：
+    <p>在 <tt>{{{ login_defs_path }}}</tt> 中，确保 <tt>YESCRYPT_COST_FACTOR</tt> 的最小值为 <tt>{{{ xccdf_value("var_password_yescrypt_cost_factor_login_defs") }}}</tt>。例如：</p>
     <pre>YESCRYPT_COST_FACTOR {{{ xccdf_value("var_password_yescrypt_cost_factor_login_defs") }}}
     YESCRYPT_COST_FACTOR {{{ xccdf_value("var_password_yescrypt_cost_factor_login_defs") }}}</pre>
     请注意，如果未设置，它已经具有默认值 5。如果设置了该项，则其最小值必须为 <tt>{{{ xccdf_value("var_password_yescrypt_cost_factor_login_defs") }}}</tt>。
@@ -26,7 +26,7 @@ rationale: |-
     Using a higher cost factor makes password cracking attacks more difficult.
 
     <p><strong>中文理由：</strong></p>
-    密码必须始终受到保护，而哈希是保护密码的标准方法。如果密码未哈希，它们可被明文读取并轻易泄露。使用弱算法哈希的密码并不比明文存储更受保护。<br /><br />使用更高的成本因子会使密码破解攻击更加困难。
+    <p>密码必须始终受到保护，而哈希是保护密码的标准方法。如果密码未哈希，它们可被明文读取并轻易泄露。使用弱算法哈希的密码并不比明文存储更受保护。<br /><br />使用更高的成本因子会使密码破解攻击更加困难。</p>
 
 severity: medium
 

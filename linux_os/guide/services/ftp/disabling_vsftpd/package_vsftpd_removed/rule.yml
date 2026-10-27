@@ -7,14 +7,14 @@ description: |-
     {{{ describe_package_remove(package="vsftpd") }}}
 
     <p><strong>中文说明：</strong></p>
-    请使用适当的软件包管理工具移除 <tt>vsftpd</tt> 软件包。
+    <p>请使用适当的软件包管理工具移除 <tt>vsftpd</tt> 软件包。</p>
 
 rationale: |-
     Removing the <tt>vsftpd</tt> package decreases the risk of its
     accidental activation.
 
     <p><strong>中文理由：</strong></p>
-    移除 <tt>vsftpd</tt> 软件包可降低其意外激活的风险。
+    <p>移除 <tt>vsftpd</tt> 软件包可降低其意外激活的风险。</p>
 
 severity: high
 

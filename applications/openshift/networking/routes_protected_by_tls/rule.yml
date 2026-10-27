@@ -13,7 +13,7 @@ description: |-
   is used for edge-terminated routes.
 
   <p><strong>中文说明：</strong></p>
-  OpenShift Container Platform 提供从集群外部与集群内运行的服务通信的方法。必须使用 TLS 保护这些通信。此规则专门针对边缘终止（edge-terminated）的 OpenShift Route，此类 Route 需要额外的 TLS 配置。对于这些 Route，请将 <tt>.spec.tls.insecureEdgeTerminationPolicy</tt> 设置为 <tt>None</tt> 或 <tt>Redirect</tt>，以确保来自外部的任何请求都必须使用 TLS，从而为边缘终止 Route 使用安全端点。
+  <p>OpenShift Container Platform 提供从集群外部与集群内运行的服务通信的方法。必须使用 TLS 保护这些通信。此规则专门针对边缘终止（edge-terminated）的 OpenShift Route，此类 Route 需要额外的 TLS 配置。对于这些 Route，请将 <tt>.spec.tls.insecureEdgeTerminationPolicy</tt> 设置为 <tt>None</tt> 或 <tt>Redirect</tt>，以确保来自外部的任何请求都必须使用 TLS，从而为边缘终止 Route 使用安全端点。</p>
 
 rationale: |-
   Using clear-text communications for edge-terminated routes may leak
@@ -21,7 +21,7 @@ rationale: |-
   external communication channels.
 
   <p><strong>中文理由：</strong></p>
-  对边缘终止 Route 使用明文通信可能泄露敏感信息，从而危及集群外部通信通道的安全。
+  <p>对边缘终止 Route 使用明文通信可能泄露敏感信息，从而危及集群外部通信通道的安全。</p>
 
 identifiers:
   cce@ocp4: CCE-84225-2

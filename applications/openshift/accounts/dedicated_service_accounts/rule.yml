@@ -10,7 +10,7 @@ description: |-
   dedicated Service account.
 
   <p><strong>中文说明：</strong></p>
-  Kubernetes 工作负载不应使用集群节点服务账户向 Amazon EKS API 进行身份验证。每个需要使用 AWS IAM 向其他 AWS 服务进行身份验证的 Kubernetes 工作负载，都应配置专用服务账户。
+  <p>Kubernetes 工作负载不应使用集群节点服务账户向 Amazon EKS API 进行身份验证。每个需要使用 AWS IAM 向其他 AWS 服务进行身份验证的 Kubernetes 工作负载，都应配置专用服务账户。</p>
 
 rationale: |-
   Manual approaches for authenticating Kubernetes workloads running on Amazon
@@ -22,7 +22,7 @@ rationale: |-
   Service account does not.
 
   <p><strong>中文理由：</strong></p>
-  在 Amazon EKS 上运行的 Kubernetes 工作负载向 AWS API 进行身份验证的手动方法包括：将服务账户密钥存储为 Kubernetes Secret（这会引入手动密钥轮换和密钥泄露的可能性）；或使用底层节点的 IAM 服务账户，这违反多租户节点上的最小权限原则，因为当一个 Pod 需要访问某项服务时，该节点上使用该服务账户的其他所有 Pod 并不需要此访问权限。
+  <p>在 Amazon EKS 上运行的 Kubernetes 工作负载向 AWS API 进行身份验证的手动方法包括：将服务账户密钥存储为 Kubernetes Secret（这会引入手动密钥轮换和密钥泄露的可能性）；或使用底层节点的 IAM 服务账户，这违反多租户节点上的最小权限原则，因为当一个 Pod 需要访问某项服务时，该节点上使用该服务账户的其他所有 Pod 并不需要此访问权限。</p>
 
 severity: unknown
 

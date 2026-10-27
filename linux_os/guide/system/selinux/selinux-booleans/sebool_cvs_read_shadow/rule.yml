@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="cvs_read_shadow") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>cvs_read_shadow</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>cvs_read_shadow</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cvs_read_shadow off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>cvs_read_shadow</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>cvs_read_shadow</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cvs_read_shadow off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 CVS 读取 shadow 文件会暴露密码哈希并扩大凭据泄露风险。
+    <p>允许 CVS 读取 shadow 文件会暴露密码哈希并扩大凭据泄露风险。</p>
 
 severity: medium
 

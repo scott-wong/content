@@ -20,9 +20,9 @@ description: |-
     {{%- endif %}}
 
     <p><strong>中文说明：</strong></p>
-    如果必须运行 Trivial File Transfer Protocol（TFTP）服务，则应将其配置为在启动时更改根目录。为此，
+    <p>如果必须运行 Trivial File Transfer Protocol（TFTP）服务，则应将其配置为在启动时更改根目录。为此，
     {{%- if product in ["ol7","rhel8","ol8","rhv4"] %}}
-    确保 <tt>/etc/xinetd.d/tftp</tt> 在命令行参数中包含 <tt>-s</tt>，如下例所示：
+    确保 <tt>/etc/xinetd.d/tftp</tt> 在命令行参数中包含 <tt>-s</tt>，如下例所示：</p>
     <pre>server_args = -s {{{ xccdf_value("var_tftpd_secure_directory") }}}</pre>
     {{%- else %}}
     查找 <tt>tftp</tt> systemd 服务的路径：
@@ -39,7 +39,7 @@ rationale: |-
     reduces the risk of sharing files which should remain private.
 
     <p><strong>中文理由：</strong></p>
-    使用 <tt>-s</tt> 选项会使 TFTP 服务仅从指定目录提供文件。从明确指定的目录提供文件可降低共享本应保密的文件的风险。
+    <p>使用 <tt>-s</tt> 选项会使 TFTP 服务仅从指定目录提供文件。从明确指定的目录提供文件可降低共享本应保密的文件的风险。</p>
 
 severity: medium
 

@@ -10,9 +10,9 @@ description: |-
     {{{ describe_iptables_allow(proto="tcp", port=443) }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，<tt>iptables</tt> 会阻止访问 Web 服务器使用的端口。应配置 <tt>iptables</tt> 允许到 TCP 80 和 443 端口的流量。编辑 <tt>/etc/sysconfig/iptables</tt> 和 <tt>/etc/sysconfig/ip6tables</tt>（如果使用 IPv6），并确保在 INPUT 链最终的 LOG 和 DROP 规则之前添加类似以下内容的规则：
+    <p>默认情况下，<tt>iptables</tt> 会阻止访问 Web 服务器使用的端口。应配置 <tt>iptables</tt> 允许到 TCP 80 和 443 端口的流量。编辑 <tt>/etc/sysconfig/iptables</tt> 和 <tt>/etc/sysconfig/ip6tables</tt>（如果使用 IPv6），并确保在 INPUT 链最终的 LOG 和 DROP 规则之前添加类似以下内容的规则：
     <tt>-A INPUT -m state --state NEW -p tcp --dport 80 -j ACCEPT</tt>
-    <tt>-A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT</tt>
+    <tt>-A INPUT -m state --state NEW -p tcp --dport 443 -j ACCEPT</tt></p>
 
 rationale: |-
     Failure to properly manage and restricts ports, protocols, and services (PPS)
@@ -20,7 +20,7 @@ rationale: |-
     of the AIS.
 
     <p><strong>中文理由：</strong></p>
-    未能正确管理和限制端口、协议和服务（PPS）可能导致边界保护措施和/或 AIS 功能遭到破坏。
+    <p>未能正确管理和限制端口、协议和服务（PPS）可能导致边界保护措施和/或 AIS 功能遭到破坏。</p>
 
 severity: low
 

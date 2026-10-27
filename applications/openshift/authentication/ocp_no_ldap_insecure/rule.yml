@@ -63,7 +63,7 @@ rationale: |-
   an attacker.
 
   <p><strong>中文理由：</strong></p>
-  以明文传输身份验证令牌可能导致令牌泄露给攻击者。
+  <p>以明文传输身份验证令牌可能导致令牌泄露给攻击者。</p>
 
 identifiers:
   cce@ocp4: CCE-83699-9

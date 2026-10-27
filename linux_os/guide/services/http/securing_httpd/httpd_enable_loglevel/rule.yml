@@ -9,7 +9,7 @@ description: |-
     <pre>LogLevel {{{ xccdf_value("var_httpd_loglevel") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    应启用 <tt>LogLevel</tt> 并将其设置为 {{{ xccdf_value("var_httpd_loglevel") }}}。在 <tt>/etc/httpd/conf/httpd.conf</tt> 中添加或编辑以下内容：
+    <p>应启用 <tt>LogLevel</tt> 并将其设置为 {{{ xccdf_value("var_httpd_loglevel") }}}。在 <tt>/etc/httpd/conf/httpd.conf</tt> 中添加或编辑以下内容：</p>
     <pre>LogLevel {{{ xccdf_value("var_httpd_loglevel") }}}</pre>
 
 rationale: |-
@@ -24,7 +24,7 @@ rationale: |-
     warn, notice, info and debug.
 
     <p><strong>中文理由：</strong></p>
-    服务器错误日志非常宝贵，因为它们可用于识别潜在问题并支持主动修复。日志数据可以揭示“未找到”或“未授权”错误等异常行为，这些行为可能表明存在攻击尝试。未能启用错误日志记录会显著降低 Web 管理员检测或修复问题的能力。<tt>ErrorLog</tt> 指令用于配置错误日志文件名，而 <tt>LogLevel</tt> 指令用于配置错误日志的严重级别。日志级别值采用标准 syslog 级别：emerg、alert、crit、error、warn、notice、info 和 debug。
+    <p>服务器错误日志非常宝贵，因为它们可用于识别潜在问题并支持主动修复。日志数据可以揭示“未找到”或“未授权”错误等异常行为，这些行为可能表明存在攻击尝试。未能启用错误日志记录会显著降低 Web 管理员检测或修复问题的能力。<tt>ErrorLog</tt> 指令用于配置错误日志文件名，而 <tt>LogLevel</tt> 指令用于配置错误日志的严重级别。日志级别值采用标准 syslog 级别：emerg、alert、crit、error、warn、notice、info 和 debug。</p>
 
 severity: medium
 

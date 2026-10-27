@@ -8,15 +8,15 @@ description: |-
     {{{ describe_service_enable(service="fapolicyd") }}}
 
     <p><strong>中文说明：</strong></p>
-    应启用 File Access Policy 服务。
-    要启用 <tt>fapolicyd</tt> 服务，请运行 <tt>sudo systemctl enable --now fapolicyd</tt>。
+    <p>应启用 File Access Policy 服务。
+    要启用 <tt>fapolicyd</tt> 服务，请运行 <tt>sudo systemctl enable --now fapolicyd</tt>。</p>
 
 rationale: |-
     The <tt>fapolicyd</tt> service (File Access Policy Daemon)
     implements application whitelisting to decide file access rights.
 
     <p><strong>中文理由：</strong></p>
-    <tt>fapolicyd</tt> 服务（File Access Policy Daemon）实现应用允许列表，以决定文件访问权限。
+    <p><tt>fapolicyd</tt> 服务（File Access Policy Daemon）实现应用允许列表，以决定文件访问权限。</p>
 
 severity: medium
 

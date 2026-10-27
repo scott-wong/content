@@ -10,7 +10,7 @@ description: |-
     Files that begin with a "." are excluded from this requirement.
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令设置本地交互用户主目录中文件和目录的模式：
+    <p>使用以下命令设置本地交互用户主目录中文件和目录的模式：</p>
     <pre>$ sudo chmod 0750 /home/<i>USER</i>/<i>FILE_DIR</i></pre>
     以 "." 开头的文件不受此要求约束。
 
@@ -19,7 +19,7 @@ rationale: |-
     may be able to access or modify them.
 
     <p><strong>中文理由：</strong></p>
-    如果本地交互用户文件拥有过多权限，非预期用户可能能够访问或修改这些文件。
+    <p>如果本地交互用户文件拥有过多权限，非预期用户可能能够访问或修改这些文件。</p>
 
 severity: medium
 

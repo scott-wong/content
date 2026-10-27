@@ -6,7 +6,7 @@ description: |-
     {{{ describe_file_owner(file="/etc/shadow", owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    要将 <tt>/etc/shadow</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/shadow</tt>。
+    <p>要将 <tt>/etc/shadow</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/shadow</tt>。</p>
 
 rationale: |-
     The <tt>/etc/shadow</tt> file contains the list of local
@@ -16,7 +16,7 @@ rationale: |-
     which could weaken the system security posture.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/etc/shadow</tt> 文件包含本地系统账户列表并存储密码哈希。保护该文件对系统安全至关重要。未能将该文件的所有权授予 root 会使指定所有者获得敏感信息访问权限，从而可能削弱系统安全态势。
+    <p><tt>/etc/shadow</tt> 文件包含本地系统账户列表并存储密码哈希。保护该文件对系统安全至关重要。未能将该文件的所有权授予 root 会使指定所有者获得敏感信息访问权限，从而可能削弱系统安全态势。</p>
 
 severity: medium
 

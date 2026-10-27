@@ -10,16 +10,16 @@ description: |-
     Run <tt>zipl</tt> command to generate an updated <tt>/boot/bootmap</tt>.
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/boot/bootmap</tt> 是最新的。<br />
+    <p>确保 <tt>/boot/bootmap</tt> 是最新的。<br />
     每次更改启动条目或 zIPL 配置时，都需要更新 <tt>/boot/bootmap</tt> 以反映这些更改。<br />
-    运行 <tt>zipl</tt> 命令生成更新后的 <tt>/boot/bootmap</tt>。
+    运行 <tt>zipl</tt> 命令生成更新后的 <tt>/boot/bootmap</tt>。</p>
 
 rationale: |-
     The file <tt>/boot/bootmap</tt> contains all boot data, keeping it up to date is crucial to
     boot correct kernel and options.
 
     <p><strong>中文理由：</strong></p>
-    <tt>/boot/bootmap</tt> 文件包含所有启动数据，保持其最新对于引导正确的内核和选项至关重要。
+    <p><tt>/boot/bootmap</tt> 文件包含所有启动数据，保持其最新对于引导正确的内核和选项至关重要。</p>
 
 severity: medium
 

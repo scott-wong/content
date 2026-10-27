@@ -9,7 +9,7 @@ description: |-
     classes of messages.
 
     <p><strong>中文说明：</strong></p>
-    <tt>/etc/rsyslog.conf</tt> 和 <tt>/etc/rsyslog.d/*.conf</tt> 文件指定日志记录规则，以及用于记录某些类别消息的文件。
+    <p><tt>/etc/rsyslog.conf</tt> 和 <tt>/etc/rsyslog.d/*.conf</tt> 文件指定日志记录规则，以及用于记录某些类别消息的文件。</p>
 
 rationale: |-
     A great deal of important security-related information is sent via
@@ -17,7 +17,7 @@ rationale: |-
     root login attempts, etc.).
 
     <p><strong>中文理由：</strong></p>
-    大量重要的安全相关信息通过 rsyslog 发送（例如成功和失败的 su 尝试、失败的登录尝试、root 登录尝试等）。
+    <p>大量重要的安全相关信息通过 rsyslog 发送（例如成功和失败的 su 尝试、失败的登录尝试、root 登录尝试等）。</p>
 
 severity: medium
 

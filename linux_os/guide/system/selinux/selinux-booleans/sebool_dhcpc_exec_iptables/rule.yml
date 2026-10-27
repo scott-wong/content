@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="dhcpc_exec_iptables") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>dhcpc_exec_iptables</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>dhcpc_exec_iptables</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P dhcpc_exec_iptables off</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>dhcpc_exec_iptables</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>dhcpc_exec_iptables</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P dhcpc_exec_iptables off</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    允许 DHCP 客户端执行 iptables 会使网络配置服务获得修改防火墙规则的能力，扩大其权限。
+    <p>允许 DHCP 客户端执行 iptables 会使网络配置服务获得修改防火墙规则的能力，扩大其权限。</p>
 
 severity: medium
 

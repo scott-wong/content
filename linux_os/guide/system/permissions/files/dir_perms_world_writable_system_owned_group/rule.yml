@@ -12,7 +12,7 @@ description: |-
     appropriate group.
 
     <p><strong>中文说明：</strong></p>
-    本地分区中所有全局可写目录的所属组都应为 root 或其他系统账户。如果任何全局可写目录不是由系统账户所有，应进行调查。随后，应删除这些文件或将其分配给适当组。
+    <p>本地分区中所有全局可写目录的所属组都应为 root 或其他系统账户。如果任何全局可写目录不是由系统账户所有，应进行调查。随后，应删除这些文件或将其分配给适当组。</p>
 
 rationale: |-
     Allowing a user account to group own a world-writable directory is
@@ -21,7 +21,7 @@ rationale: |-
     users.
 
     <p><strong>中文理由：</strong></p>
-    允许用户账户拥有全局可写目录并不可取，因为这会使该目录的所有者能够删除或替换其他用户可能放入该目录的任何文件。
+    <p>允许用户账户拥有全局可写目录并不可取，因为这会使该目录的所有者能够删除或替换其他用户可能放入该目录的任何文件。</p>
 
 severity: medium
 

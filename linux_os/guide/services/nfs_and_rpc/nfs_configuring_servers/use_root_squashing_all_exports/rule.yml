@@ -12,16 +12,16 @@ description: |-
     Ensure that no line in <tt>/etc/exports</tt> contains the option <tt>no_root_squash</tt>.
 
     <p><strong>中文说明：</strong></p>
-    如果文件系统使用 root squashing 导出，客户端上来自 root 的请求将被视为非特权请求（映射到 nobody 等用户）。这可以针对 NFS 服务器的远程滥用提供一定防护。root squashing 默认启用，不应禁用。
+    <p>如果文件系统使用 root squashing 导出，客户端上来自 root 的请求将被视为非特权请求（映射到 nobody 等用户）。这可以针对 NFS 服务器的远程滥用提供一定防护。root squashing 默认启用，不应禁用。
     <br /><br />
-    确保 <tt>/etc/exports</tt> 中没有任何行包含 <tt>no_root_squash</tt> 选项。
+    确保 <tt>/etc/exports</tt> 中没有任何行包含 <tt>no_root_squash</tt> 选项。</p>
 
 rationale: |-
     If the NFS server allows root access to local file systems from remote hosts, this
     access could be used to compromise the system.
 
     <p><strong>中文理由：</strong></p>
-    如果 NFS 服务器允许远程主机对本地文件系统进行 root 访问，此访问可能被用于使系统失陷。
+    <p>如果 NFS 服务器允许远程主机对本地文件系统进行 root 访问，此访问可能被用于使系统失陷。</p>
 
 severity: unknown
 

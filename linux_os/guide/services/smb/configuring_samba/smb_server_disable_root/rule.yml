@@ -13,7 +13,7 @@ description: |-
     passwords and Samba service passwords do not match.
 
     <p><strong>中文说明：</strong></p>
-    管理员不应使用管理员账户访问 Samba 文件和打印机共享。请禁用 root 用户和 wheel 管理员组：
+    <p>管理员不应使用管理员账户访问 Samba 文件和打印机共享。请禁用 root 用户和 wheel 管理员组：</p>
     <pre>[<i>share</i>]
       invalid users = root @wheel</pre>
     如果无法禁用管理员账户，请确保本地系统密码和 Samba 服务密码不相同。
@@ -25,7 +25,7 @@ rationale: |-
     users parameter to <tt>[global]</tt> instead.
 
     <p><strong>中文理由：</strong></p>
-    通常，当 Samba 必须创建用户、系统账户和共享时，需要管理员访问权限。域成员服务器和独立服务器可能完全不需要管理员访问权限。如果是这样，应改为将 invalid users 参数添加到 <tt>[global]</tt>。
+    <p>通常，当 Samba 必须创建用户、系统账户和共享时，需要管理员访问权限。域成员服务器和独立服务器可能完全不需要管理员访问权限。如果是这样，应改为将 invalid users 参数添加到 <tt>[global]</tt>。</p>
 
 severity: unknown
 

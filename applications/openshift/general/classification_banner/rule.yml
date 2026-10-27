@@ -7,14 +7,14 @@ description: |-
     A classification banner can be configured by creating a Console Notification CR on OpenShift
 
     <p><strong>中文说明：</strong></p>
-    可通过在 OpenShift 上创建 Console Notification CR 来配置分类横幅。
+    <p>可通过在 OpenShift 上创建 Console Notification CR 来配置分类横幅。</p>
 
 rationale: |-
     Displays to users organization-defined system use notification message or banner before granting
     access to the system that provides privacy and security notices consistent with applicable federal laws
 
     <p><strong>中文理由：</strong></p>
-    在授予系统访问权限前，向用户显示组织定义的系统使用通知消息或横幅，以按照适用的联邦法律提供隐私和安全通知。
+    <p>在授予系统访问权限前，向用户显示组织定义的系统使用通知消息或横幅，以按照适用的联邦法律提供隐私和安全通知。</p>
 
 identifiers:
     cce@ocp4: CCE-84197-3

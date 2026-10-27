@@ -9,14 +9,14 @@ description: |-
     {{{ describe_service_disable(service="cockpit") }}}
 
     <p><strong>中文说明：</strong></p>
-    Cockpit Management Server（<tt>cockpit</tt>）提供基于 Web 的登录和管理框架。
-    应禁用 <tt>cockpit</tt> 服务。
+    <p>Cockpit Management Server（<tt>cockpit</tt>）提供基于 Web 的登录和管理框架。
+    应禁用 <tt>cockpit</tt> 服务。</p>
 
 rationale: |-
     Cockpit provides a form of remote login.
 
     <p><strong>中文理由：</strong></p>
-    Cockpit 提供一种远程登录方式。
+    <p>Cockpit 提供一种远程登录方式。</p>
 
 severity: medium
 

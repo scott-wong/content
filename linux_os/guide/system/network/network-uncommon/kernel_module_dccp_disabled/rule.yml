@@ -10,15 +10,15 @@ description: |-
     {{{ describe_module_disable(module="dccp") }}}
 
     <p><strong>中文说明：</strong></p>
-    Datagram Congestion Control Protocol（DCCP）是一种较新的传输层协议，旨在支持流媒体和电话通信。
-    应禁用内核模块 <tt>dccp</tt>。
+    <p>Datagram Congestion Control Protocol（DCCP）是一种较新的传输层协议，旨在支持流媒体和电话通信。
+    应禁用内核模块 <tt>dccp</tt>。</p>
 
 rationale: |-
     Disabling DCCP protects
     the system against exploitation of any flaws in its implementation.
 
     <p><strong>中文理由：</strong></p>
-    禁用该内核模块可防止攻击者利用其实现中的缺陷。
+    <p>禁用该内核模块可防止攻击者利用其实现中的缺陷。</p>
 
 severity: medium
 

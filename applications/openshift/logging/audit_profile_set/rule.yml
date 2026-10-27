@@ -89,7 +89,7 @@ rationale: |-
   unauthorised access.
 
   <p><strong>中文理由：</strong></p>
-  日志记录是所有系统的重要检测控制，用于发现潜在的未经授权访问。
+  <p>日志记录是所有系统的重要检测控制，用于发现潜在的未经授权访问。</p>
 
 identifiers:
   cce@ocp4: CCE-83577-7

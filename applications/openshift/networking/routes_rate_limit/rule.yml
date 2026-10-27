@@ -11,14 +11,14 @@ description: |-
   [1] https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html#nw-route-specific-annotations_route-configuration
 
   <p><strong>中文说明：</strong></p>
-  创建新 Route 时，OpenShift 提供为 Route 设置速率限制的选项 [1]。排除命名空间（由变量 <tt>ocp4-var-routes-excluded-namespaces-regex</tt> 定义）之外的所有 Route 都应使用速率限制注解。
+  <p>创建新 Route 时，OpenShift 提供为 Route 设置速率限制的选项 [1]。排除命名空间（由变量 <tt>ocp4-var-routes-excluded-namespaces-regex</tt> 定义）之外的所有 Route 都应使用速率限制注解。
 
-  [1] https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html#nw-route-specific-annotations_route-configuration
+  [1] https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html#nw-route-specific-annotations_route-configuration</p>
 rationale: |-
   The usage of rate limit for Routes provides basic protection against distributed denial-of-service (DDoS) attacks.
 
   <p><strong>中文理由：</strong></p>
-  为 Route 使用速率限制可提供针对分布式拒绝服务（DDoS）攻击的基本防护。
+  <p>为 Route 使用速率限制可提供针对分布式拒绝服务（DDoS）攻击的基本防护。</p>
 
 
 identifiers:

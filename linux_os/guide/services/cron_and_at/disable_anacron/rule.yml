@@ -9,8 +9,8 @@ description: |-
     {{{ describe_package_remove(package="cronie-anacron") }}}
 
     <p><strong>中文说明：</strong></p>
-    提供 <tt>anacron</tt> 功能的 <tt>cronie-anacron</tt> 软件包默认已安装。
-    应删除 <tt>cronie-anacron</tt> 软件包。
+    <p>提供 <tt>anacron</tt> 功能的 <tt>cronie-anacron</tt> 软件包默认已安装。
+    应删除 <tt>cronie-anacron</tt> 软件包。</p>
 
 rationale: |-
     The <tt>anacron</tt> service provides <tt>cron</tt> functionality for systems
@@ -20,7 +20,7 @@ rationale: |-
     attack surface for an intruder.
 
     <p><strong>中文理由：</strong></p>
-    <tt>anacron</tt> 服务为笔记本电脑和工作站等可能在 cron 作业计划正常运行时间关机的系统提供 <tt>cron</tt> 功能。在不需要此附加功能的系统上，<tt>anacron</tt> 可能毫无必要地增加入侵者可能利用的攻击面。
+    <p><tt>anacron</tt> 服务为笔记本电脑和工作站等可能在 cron 作业计划正常运行时间关机的系统提供 <tt>cron</tt> 功能。在不需要此附加功能的系统上，<tt>anacron</tt> 可能毫无必要地增加入侵者可能利用的攻击面。</p>
 
 severity: unknown
 

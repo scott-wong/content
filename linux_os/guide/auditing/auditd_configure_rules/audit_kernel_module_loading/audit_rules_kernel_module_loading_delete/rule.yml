@@ -7,7 +7,7 @@ description: |-
     {{{ describe_audit_rules_kernel_module_loading("delete_module") }}}
 
     <p><strong>中文说明：</strong></p>
-    要捕获 <tt>delete_module</tt> 内核模块加载和卸载事件，请添加使用 <tt>-S delete_module</tt> 和 <tt>-F key=modules</tt> 的审计规则，并将 ARCH 设置为 b32（32 位系统），或在 64 位系统中同时提供 b32 和 b64 两行。在适用产品中，还应按规则模板加入所需的 auid 过滤条件。规则添加位置取决于 <tt>auditd</tt> 的配置：使用 <tt>augenrules</tt>（默认）时，将规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件；使用 <tt>auditctl</tt> 时，将规则添加到 <tt>/etc/audit/audit.rules</tt>。
+    <p>要捕获 <tt>delete_module</tt> 内核模块加载和卸载事件，请添加使用 <tt>-S delete_module</tt> 和 <tt>-F key=modules</tt> 的审计规则，并将 ARCH 设置为 b32（32 位系统），或在 64 位系统中同时提供 b32 和 b64 两行。在适用产品中，还应按规则模板加入所需的 auid 过滤条件。规则添加位置取决于 <tt>auditd</tt> 的配置：使用 <tt>augenrules</tt>（默认）时，将规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件；使用 <tt>auditctl</tt> 时，将规则添加到 <tt>/etc/audit/audit.rules</tt>。</p>
 
 rationale: |-
     The removal of kernel modules can be used to alter the behavior of
@@ -15,7 +15,7 @@ rationale: |-
     to have an audit trail of modules that have been introduced into the kernel.
 
     <p><strong>中文理由：</strong></p>
-    移除内核模块可用于改变内核行为，并可能将恶意代码引入内核空间。必须保留已引入内核的模块的审计轨迹。
+    <p>移除内核模块可用于改变内核行为，并可能将恶意代码引入内核空间。必须保留已引入内核的模块的审计轨迹。</p>
 
 severity: medium
 

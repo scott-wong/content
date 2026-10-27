@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="samba_portmapper") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>samba_portmapper</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>samba_portmapper</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>samba_portmapper</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>samba_portmapper</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用此布尔值可阻止 Samba 使用 portmapper，减少端口映射服务暴露。
+    <p>禁用此布尔值可阻止 Samba 使用 portmapper，减少端口映射服务暴露。</p>
 
 severity: medium
 

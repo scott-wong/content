@@ -10,8 +10,8 @@ description: |-
     {{{ describe_service_enable(service="psacct") }}}
 
     <p><strong>中文说明：</strong></p>
-    进程记账服务 <tt>psacct</tt> 与 <tt>acct</tt> 和 <tt>ac</tt> 等程序配合，使系统管理员能够查看用户活动，例如系统用户发出的命令。
-    应启用 <tt>psacct</tt> 服务。
+    <p>进程记账服务 <tt>psacct</tt> 与 <tt>acct</tt> 和 <tt>ac</tt> 等程序配合，使系统管理员能够查看用户活动，例如系统用户发出的命令。
+    应启用 <tt>psacct</tt> 服务。</p>
 
 rationale: |-
     The <tt>psacct</tt> service can provide administrators a convenient
@@ -20,7 +20,7 @@ rationale: |-
     records.
 
     <p><strong>中文理由：</strong></p>
-    <tt>psacct</tt> 服务可为管理员提供便捷的用户活动视图。但应注意，审计系统及其审计记录提供更权威、全面的记录。
+    <p><tt>psacct</tt> 服务可为管理员提供便捷的用户活动视图。但应注意，审计系统及其审计记录提供更权威、全面的记录。</p>
 
 severity: low
 

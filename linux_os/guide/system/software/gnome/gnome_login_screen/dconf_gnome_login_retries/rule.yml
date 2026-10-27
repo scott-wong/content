@@ -20,9 +20,9 @@ description: |-
     After the settings have been set, run <tt>dconf update</tt>.
 
     <p><strong>中文说明：</strong></p>
-    在默认图形环境中，可以将 GNOME3 登录屏幕配置为在达到设定尝试次数后重新启动身份验证过程。可通过将 <tt>allowed-failures</tt> 设置为 <tt>3</tt> 或更小值来实现。
+    <p>在默认图形环境中，可以将 GNOME3 登录屏幕配置为在达到设定尝试次数后重新启动身份验证过程。可通过将 <tt>allowed-failures</tt> 设置为 <tt>3</tt> 或更小值来实现。
     <br /><br />
-    要启用该功能，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或编辑 <tt>allowed-failures</tt>。例如：
+    要启用该功能，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或编辑 <tt>allowed-failures</tt>。例如：</p>
     <pre>[org/gnome/login-screen]
     allowed-failures=3</pre>
     添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
@@ -35,7 +35,7 @@ rationale: |-
     draw additional attention to some types of password-guessing attacks.
 
     <p><strong>中文理由：</strong></p>
-    将会话允许的密码重试提示次数设置为较低值，会使 SSH 等软件必须重新连接。这可减慢某些类型的密码猜测攻击，并使其更引人注意。
+    <p>将会话允许的密码重试提示次数设置为较低值，会使 SSH 等软件必须重新连接。这可减慢某些类型的密码猜测攻击，并使其更引人注意。</p>
 
 severity: medium
 

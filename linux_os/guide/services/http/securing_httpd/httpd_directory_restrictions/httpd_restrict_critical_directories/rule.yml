@@ -10,14 +10,14 @@ description: |-
     should be used to deny access by default, allowing access only where necessary.
 
     <p><strong>中文说明：</strong></p>
-    所有可访问的 Web 目录都应配置为同样严格的设置。<tt>Options</tt> 指令应限制为必要功能，<tt>AllowOverride</tt> 指令仅在需要时使用。应使用 <tt>Order</tt> 和 <tt>Deny</tt> 访问控制标签默认拒绝访问，仅允许必要的访问。
+    <p>所有可访问的 Web 目录都应配置为同样严格的设置。<tt>Options</tt> 指令应限制为必要功能，<tt>AllowOverride</tt> 指令仅在需要时使用。应使用 <tt>Order</tt> 和 <tt>Deny</tt> 访问控制标签默认拒绝访问，仅允许必要的访问。</p>
 
 rationale: |-
     Directories accessible from a web client should be configured with the least amount of
     access possible in order to avoid unauthorized access to restricted content or server information.
 
     <p><strong>中文理由：</strong></p>
-    可从 Web 客户端访问的目录应配置尽可能少的访问权限，以避免对受限内容或服务器信息进行未授权访问。
+    <p>可从 Web 客户端访问的目录应配置尽可能少的访问权限，以避免对受限内容或服务器信息进行未授权访问。</p>
 
 severity: unknown
 

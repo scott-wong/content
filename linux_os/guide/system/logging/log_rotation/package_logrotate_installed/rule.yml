@@ -6,13 +6,13 @@ description: |-
     logrotate is installed by default. {{{ describe_package_install(package="logrotate") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认安装 logrotate。应确保已安装 <tt>logrotate</tt> 软件包。
+    <p>默认安装 logrotate。应确保已安装 <tt>logrotate</tt> 软件包。</p>
 
 rationale: |-
     The logrotate package provides the logrotate services.
 
     <p><strong>中文理由：</strong></p>
-    logrotate 软件包提供 logrotate 服务。
+    <p>logrotate 软件包提供 logrotate 服务。</p>
 
 severity: medium
 

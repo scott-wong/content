@@ -18,7 +18,7 @@ description: |-
     <pre>$ sudo chown root <i>DIR</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    系统命令默认存储在以下目录中：
+    <p>系统命令默认存储在以下目录中：</p>
     <pre>/bin
     /sbin
     /usr/bin
@@ -43,7 +43,7 @@ rationale: |-
     including upgrades and modifications.
 
     <p><strong>中文理由：</strong></p>
-    允许用户账户作为全局可写目录的所属组并不可取，因为这会使该目录的所有者能够删除或替换其他用户可能放入该目录的任何文件。
+    <p>允许用户账户作为全局可写目录的所属组并不可取，因为这会使该目录的所有者能够删除或替换其他用户可能放入该目录的任何文件。</p>
 
 severity: medium
 

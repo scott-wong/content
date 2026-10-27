@@ -7,7 +7,7 @@ description: |-
     {{{ describe_file_group_owner(file="/etc/issue.net", group="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/etc/issue.net</tt> 文件的所属组为 <tt>root</tt>。
+    <p>确保 <tt>/etc/issue.net</tt> 文件的所属组为 <tt>root</tt>。</p>
 
 rationale: |-
     Display of a standardized and approved use notification before granting
@@ -17,7 +17,7 @@ rationale: |-
     Proper group ownership will ensure that only root user can modify the banner.
 
     <p><strong>中文理由：</strong></p>
-    在授予操作系统访问权限前显示标准化且经批准的使用通知，可确保所用的隐私和安全通知措辞符合适用的联邦法律、行政命令、指令、政策、法规、标准和指南。<br />正确的文件所属组可确保只有 root 用户可以修改该横幅。
+    <p>在授予操作系统访问权限前显示标准化且经批准的使用通知，可确保所用的隐私和安全通知措辞符合适用的联邦法律、行政命令、指令、政策、法规、标准和指南。<br />正确的文件所属组可确保只有 root 用户可以修改该横幅。</p>
 
 severity: medium
 

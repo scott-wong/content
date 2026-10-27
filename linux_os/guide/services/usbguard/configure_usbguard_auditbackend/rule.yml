@@ -10,14 +10,14 @@ description: |-
     needs to be set to <tt>LinuxAudit</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要将 USBGuard 守护进程配置为通过 Linux Audit 记录日志（而不是直接写入文件），需要将 <tt>/etc/usbguard/usbguard-daemon.conf</tt> 中的 <tt>AuditBackend</tt> 选项设置为 <tt>LinuxAudit</tt>。
+    <p>要将 USBGuard 守护进程配置为通过 Linux Audit 记录日志（而不是直接写入文件），需要将 <tt>/etc/usbguard/usbguard-daemon.conf</tt> 中的 <tt>AuditBackend</tt> 选项设置为 <tt>LinuxAudit</tt>。</p>
 
 rationale: |-
     Using the Linux Audit logging allows for centralized trace
     of events.
 
     <p><strong>中文理由：</strong></p>
-    使用 Linux Audit 记录日志可集中追踪事件。
+    <p>使用 Linux Audit 记录日志可集中追踪事件。</p>
 
 severity: low
 

@@ -11,19 +11,19 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>named</tt> 服务由 <tt>bind</tt> 软件包提供。
+    <p><tt>named</tt> 服务由 <tt>bind</tt> 软件包提供。
     请使用适当的软件包管理工具移除 <tt>bind</tt> 软件包。
     {{% if product == "rhel9" %}}
     在 Red Hat Enterprise Linux 9.6 及更新版本中，<tt>bind</tt> 命令也由 <tt>bind9.18</tt> 软件包提供。
     请使用适当的软件包管理工具移除 <tt>bind9.18</tt> 软件包。
-    {{% endif %}}
+    {{% endif %}}</p>
 
 rationale: |-
     If there is no need to make DNS server software available,
     removing it provides a safeguard against its activation.
 
     <p><strong>中文理由：</strong></p>
-    如果无需提供 DNS 服务器软件，移除该软件可防止其被激活。
+    <p>如果无需提供 DNS 服务器软件，移除该软件可防止其被激活。</p>
 
 severity: low
 

@@ -10,7 +10,7 @@ description: |-
     <pre>$ sudo mkdir /home/<i>USER</i></pre>
 
     <p><strong>中文说明：</strong></p>
-    为当前未分配主目录的所有本地交互用户创建主目录。使用以下命令创建 <tt>/etc/passwd</tt> 中为用户分配的主目录：
+    <p>为当前未分配主目录的所有本地交互用户创建主目录。使用以下命令创建 <tt>/etc/passwd</tt> 中为用户分配的主目录：</p>
     <pre>$ sudo mkdir /home/<i>USER</i></pre>
 
 rationale: |-
@@ -21,7 +21,7 @@ rationale: |-
     to system files they normally would not be able to access.
 
     <p><strong>中文理由：</strong></p>
-    如果本地交互用户定义了主目录但该目录不存在，用户登录时可能获得对 <tt>/</tt> 目录作为当前工作目录的访问权限。这可能导致拒绝服务，因为用户将无法访问其登录配置文件，并且可能看到其通常无权访问的系统文件。
+    <p>如果本地交互用户定义了主目录但该目录不存在，用户登录时可能获得对 <tt>/</tt> 目录作为当前工作目录的访问权限。这可能导致拒绝服务，因为用户将无法访问其登录配置文件，并且可能看到其通常无权访问的系统文件。</p>
 
 severity: medium
 

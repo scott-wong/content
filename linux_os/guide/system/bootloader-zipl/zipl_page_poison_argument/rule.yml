@@ -11,8 +11,8 @@ description: |-
     add <tt>page_poison=1</tt> to <tt>/etc/kernel/cmdline</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要启用空闲页面毒化，请检查 <tt>/boot/loader/entries/*.conf</tt> 中的所有启动条目是否在其选项中包含 <tt>page_poison=1</tt>。<br />
-    为确保新内核和启动条目继续启用页面毒化，请将 <tt>page_poison=1</tt> 添加到 <tt>/etc/kernel/cmdline</tt>。
+    <p>要启用空闲页面毒化，请检查 <tt>/boot/loader/entries/*.conf</tt> 中的所有启动条目是否在其选项中包含 <tt>page_poison=1</tt>。<br />
+    为确保新内核和启动条目继续启用页面毒化，请将 <tt>page_poison=1</tt> 添加到 <tt>/etc/kernel/cmdline</tt>。</p>
 
 rationale: |-
     Poisoning writes an arbitrary value to freed pages, so any modification or
@@ -22,7 +22,7 @@ rationale: |-
     Also prevents leak of data and detection of corrupted memory.
 
     <p><strong>中文理由：</strong></p>
-    毒化会向已释放页面写入任意值，因此对释放后或初始化前页面的任何修改或引用都会被检测并阻止。这可以以很小的性能代价防止多种释放后使用漏洞，还可防止数据泄露并检测内存损坏。
+    <p>毒化会向已释放页面写入任意值，因此对释放后或初始化前页面的任何修改或引用都会被检测并阻止。这可以以很小的性能代价防止多种释放后使用漏洞，还可防止数据泄露并检测内存损坏。</p>
 
 severity: medium
 

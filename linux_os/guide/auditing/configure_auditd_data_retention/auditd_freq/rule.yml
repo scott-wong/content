@@ -8,7 +8,7 @@ description: |-
     in <tt>/etc/audit/auditd.conf</tt>.
 
     <p><strong>中文说明：</strong></p>
-    要将 Audit 守护进程配置为在写入 {{{ xccdf_value("var_auditd_freq") }}} 条记录后发出显式刷新磁盘命令，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>freq</tt> 设为 <tt>{{{ xccdf_value("var_auditd_freq") }}}</tt>。
+    <p>要将 Audit 守护进程配置为在写入 {{{ xccdf_value("var_auditd_freq") }}} 条记录后发出显式刷新磁盘命令，请在 <tt>/etc/audit/auditd.conf</tt> 中将 <tt>freq</tt> 设为 <tt>{{{ xccdf_value("var_auditd_freq") }}}</tt>。</p>
 
 rationale: |-
     If option <tt>freq</tt> isn't set to <tt>{{{ xccdf_value("var_auditd_freq") }}}</tt>, the flush to disk
@@ -16,7 +16,7 @@ rationale: |-
     of audit loss.
 
     <p><strong>中文理由：</strong></p>
-    如果选项 <tt>freq</tt> 未设为 <tt>{{{ xccdf_value("var_auditd_freq") }}}</tt>，刷新磁盘可能在写入更多记录后才发生，从而增加审计数据丢失的风险。
+    <p>如果选项 <tt>freq</tt> 未设为 <tt>{{{ xccdf_value("var_auditd_freq") }}}</tt>，刷新磁盘可能在写入更多记录后才发生，从而增加审计数据丢失的风险。</p>
 
 severity: medium
 

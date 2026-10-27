@@ -66,7 +66,7 @@ rationale: |-
     of opportunity for unauthorized personnel to take control of the session.
 
     <p><strong>中文理由：</strong></p>
-    将令牌最大有效期设置为较短的时间段，可缩短未经授权人员接管会话的机会窗口。
+    <p>将令牌最大有效期设置为较短的时间段，可缩短未经授权人员接管会话的机会窗口。</p>
 
 references:
   nist: AC-12

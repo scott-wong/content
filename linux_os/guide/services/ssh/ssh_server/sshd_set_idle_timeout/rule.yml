@@ -18,9 +18,9 @@ description: |-
     some processes may stop SSH from correctly detecting that the user is idle.
 
     <p><strong>中文说明：</strong></p>
-    SSH 允许管理员设置网络响应超时间隔。经过此间隔后，无响应的客户端将被自动注销。
+    <p>SSH 允许管理员设置网络响应超时间隔。经过此间隔后，无响应的客户端将被自动注销。
     <br /><br />
-    要设置此超时间隔，请按如下方式编辑 <tt>/etc/ssh/sshd_config</tt> 中的以下行：
+    要设置此超时间隔，请按如下方式编辑 <tt>/etc/ssh/sshd_config</tt> 中的以下行：</p>
     <pre>ClientAliveInterval <b>{{{ xccdf_value("sshd_idle_timeout_value") }}}</b></pre>
     <br/><br/>
     超时<b>间隔</b>以秒为单位。例如，要将超时设置为 10 分钟，请将<b>间隔</b>设置为 600。
@@ -33,7 +33,7 @@ rationale: |-
     enabled on the console or console port that has been let unattended.
 
     <p><strong>中文理由：</strong></p>
-    在短时间内终止空闲 SSH 会话，可缩短未授权人员控制无人值守控制台或控制台端口上启用的管理会话的时间窗口。
+    <p>在短时间内终止空闲 SSH 会话，可缩短未授权人员控制无人值守控制台或控制台端口上启用的管理会话的时间窗口。</p>
 
 severity: medium
 

@@ -11,7 +11,7 @@ description: |-
     empty <tt>PATH</tt> entries or references to relative paths.
 
     <p><strong>中文说明：</strong></p>
-    假设 root shell 为 bash，请编辑以下文件：
+    <p>假设 root shell 为 bash，请编辑以下文件：</p>
     <pre>~/.profile</pre>
     <pre>~/.bashrc</pre>
     将任何 <tt>PATH</tt> 变量更改为 root 的供应商默认值，并移除任何空 <tt>PATH</tt> 条目或相对路径引用。
@@ -21,7 +21,7 @@ rationale: |-
     contain only absolute paths.
 
     <p><strong>中文理由：</strong></p>
-    root 账户的可执行文件搜索路径必须是供应商默认值，并且只能包含绝对路径。
+    <p>root 账户的可执行文件搜索路径必须是供应商默认值，并且只能包含绝对路径。</p>
 
 severity: unknown
 

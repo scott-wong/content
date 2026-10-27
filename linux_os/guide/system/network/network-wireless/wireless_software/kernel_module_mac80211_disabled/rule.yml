@@ -7,7 +7,7 @@ description: |-
     {{{ describe_module_disable(module="mac80211") }}}
 
     <p><strong>中文说明：</strong></p>
-    应禁用内核模块 <tt>mac80211</tt>。
+    <p>应禁用内核模块 <tt>mac80211</tt>。</p>
 
 rationale: |-
     If Wireless functionality must be disabled, preventing the kernel
@@ -15,7 +15,7 @@ rationale: |-
     activation.
 
     <p><strong>中文理由：</strong></p>
-    如果必须禁用无线功能，阻止内核加载该内核模块可为防止其激活提供额外保障。
+    <p>如果必须禁用无线功能，阻止内核加载该内核模块可为防止其激活提供额外保障。</p>
 
 severity: medium
 

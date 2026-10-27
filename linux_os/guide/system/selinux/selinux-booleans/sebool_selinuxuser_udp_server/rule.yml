@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="selinuxuser_udp_server") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>selinuxuser_udp_server</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>selinuxuser_udp_server</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>selinuxuser_udp_server</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>selinuxuser_udp_server</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    禁用此布尔值可防止 SELinux 用户启动 UDP 服务器，减少网络服务暴露。
+    <p>禁用此布尔值可防止 SELinux 用户启动 UDP 服务器，减少网络服务暴露。</p>
 
 severity: medium
 

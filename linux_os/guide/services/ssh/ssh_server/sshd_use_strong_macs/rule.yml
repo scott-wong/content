@@ -10,7 +10,7 @@ description: |-
     <pre>MACs {{{ xccdf_value("sshd_strong_macs") }}}</pre>
 
     <p><strong>中文说明：</strong></p>
-    将 MAC 限制为强哈希算法。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示这些 MAC：
+    <p>将 MAC 限制为强哈希算法。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示这些 MAC：</p>
     <pre>MACs {{{ xccdf_value("sshd_strong_macs") }}}</pre>
 
 rationale: |-
@@ -21,7 +21,7 @@ rationale: |-
     SSH tunnel and capture credentials and information
 
     <p><strong>中文理由：</strong></p>
-    MD5 和 96 位 MAC 算法被视为弱算法，并已被证明会增加 SSH 降级攻击的可利用性。弱算法仍备受关注，是可能通过增强计算能力加以利用的弱点。攻破该算法的攻击者可利用中间人（MiTM）位置解密 SSH 隧道并捕获凭据和信息。
+    <p>MD5 和 96 位 MAC 算法被视为弱算法，并已被证明会增加 SSH 降级攻击的可利用性。弱算法仍备受关注，是可能通过增强计算能力加以利用的弱点。攻破该算法的攻击者可利用中间人（MiTM）位置解密 SSH 隧道并捕获凭据和信息。</p>
 
 severity: medium
 

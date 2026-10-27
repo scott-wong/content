@@ -8,7 +8,7 @@ description: |-
     {{{ describe_package_install(package="mod_ssl") }}}
 
     <p><strong>中文说明：</strong></p>
-    应安装 <tt>mod_ssl</tt> 模块。
+    <p>应安装 <tt>mod_ssl</tt> 模块。</p>
 
 rationale: |-
     <tt>mod_ssl</tt> provides encryption capabilities for the <tt>httpd</tt> Web server. Unencrypted
@@ -16,7 +16,7 @@ rationale: |-
     unauthorized parties.
 
     <p><strong>中文理由：</strong></p>
-    <tt>mod_ssl</tt> 为 <tt>httpd</tt> Web 服务器提供加密能力。未加密内容以明文传输，可能被未授权方被动监视和访问。
+    <p><tt>mod_ssl</tt> 为 <tt>httpd</tt> Web 服务器提供加密能力。未加密内容以明文传输，可能被未授权方被动监视和访问。</p>
 
 severity: unknown
 

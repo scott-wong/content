@@ -9,7 +9,7 @@ description: |-
     properly stored, or the account should be deleted entirely.
 
     <p><strong>中文说明：</strong></p>
-    如果任何密码哈希存储在 <tt>/etc/passwd</tt> 中（位于第二个字段，而不是 <tt>x</tt> 或 <tt>*</tt>），应调查造成此错误配置的原因。应重置该账户的密码并正确存储哈希，或彻底删除该账户。
+    <p>如果任何密码哈希存储在 <tt>/etc/passwd</tt> 中（位于第二个字段，而不是 <tt>x</tt> 或 <tt>*</tt>），应调查造成此错误配置的原因。应重置该账户的密码并正确存储哈希，或彻底删除该账户。</p>
 
 rationale: |-
     The hashes for all user account passwords should be stored in
@@ -17,7 +17,7 @@ rationale: |-
     which is readable by all users.
 
     <p><strong>中文理由：</strong></p>
-    所有用户账户密码的哈希都应存储在 <tt>/etc/shadow</tt> 文件中，绝不能存储在可被所有用户读取的 <tt>/etc/passwd</tt> 中。
+    <p>所有用户账户密码的哈希都应存储在 <tt>/etc/shadow</tt> 文件中，绝不能存储在可被所有用户读取的 <tt>/etc/passwd</tt> 中。</p>
 
 severity: medium
 

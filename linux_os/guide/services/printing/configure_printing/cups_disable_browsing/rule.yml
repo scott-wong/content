@@ -12,7 +12,7 @@ description: |-
     BrowseAllow none</pre>
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，CUPS 在网络上监听 UDP 端口 631 上的打印机列表广播。此功能称为打印机浏览。要完全禁用打印机浏览，请编辑位于 <tt>/etc/cups/cupsd.conf</tt> 的 CUPS 配置文件，使其包含以下内容：
+    <p>默认情况下，CUPS 在网络上监听 UDP 端口 631 上的打印机列表广播。此功能称为打印机浏览。要完全禁用打印机浏览，请编辑位于 <tt>/etc/cups/cupsd.conf</tt> 的 CUPS 配置文件，使其包含以下内容：</p>
     <pre>Browsing Off
     BrowseAllow none</pre>
 
@@ -24,7 +24,7 @@ rationale: |-
     capability, the system will no longer generate or receive such broadcasts.
 
     <p><strong>中文理由：</strong></p>
-    CUPS 打印服务可配置为向网络广播可用打印机列表。网络上运行 CUPS 打印服务的其他系统可配置为监听这些广播，并添加和配置这些打印机以供立即使用。禁用此浏览功能后，系统将不再生成或接收此类广播。
+    <p>CUPS 打印服务可配置为向网络广播可用打印机列表。网络上运行 CUPS 打印服务的其他系统可配置为监听这些广播，并添加和配置这些打印机以供立即使用。禁用此浏览功能后，系统将不再生成或接收此类广播。</p>
 
 severity: unknown
 

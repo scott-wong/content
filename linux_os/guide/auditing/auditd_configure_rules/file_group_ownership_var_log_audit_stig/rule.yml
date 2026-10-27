@@ -31,9 +31,9 @@ description: |-
     <pre>$ sudo systemctl kill auditd -s SIGHUP</pre>
 
     <p><strong>中文说明：</strong></p>
-    所有审计日志的所属组必须为 root 用户。
+    <p>所有审计日志的所属组必须为 root 用户。
 
-    使用以下命令确定审计日志的存储位置：
+    使用以下命令确定审计日志的存储位置：</p>
     <pre>$ sudo grep -iw log_file /etc/audit/auditd.conf
     log_file = /var/log/audit/audit.log</pre>
 
@@ -56,7 +56,7 @@ rationale: |-
     attackers, thus compromising its confidentiality.
 
     <p><strong>中文理由：</strong></p>
-    未经授权披露审计记录可能向攻击者泄露系统和配置数据，从而损害其机密性。
+    <p>未经授权披露审计记录可能向攻击者泄露系统和配置数据，从而损害其机密性。</p>
 
 severity: medium
 

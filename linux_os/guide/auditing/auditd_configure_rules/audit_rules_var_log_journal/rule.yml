@@ -21,8 +21,7 @@ description: |-
     {{{ describe_audit_rules_watch("/var/log/journal", "systemd_journal") }}}
 
     <p><strong>中文说明：</strong></p>
-    审计 systemd journal 文件可提供用于取证目的的日志。使用以下命令验证系统是否为所有影响 "/var/log/journal" 的事件生成审计记录：
-
+    <p>审计 systemd journal 文件可提供用于取证目的的日志。使用以下命令验证系统是否为所有影响 "/var/log/journal" 的事件生成审计记录：</p>
     <pre>
     $ sudo auditctl -l | grep journal
     -w /var/log/journal/ -p wa -k systemd_journal
@@ -42,7 +41,7 @@ rationale: |-
     forensic purposes.
 
     <p><strong>中文理由：</strong></p>
-    攻击者获得系统访问权限后，通常会尝试建立重新获得访问权限的持久方法。一种方法是修改系统级二进制文件及其操作。审计 systemd journal 文件可提供可用于取证目的的日志。
+    <p>攻击者获得系统访问权限后，通常会尝试建立重新获得访问权限的持久方法。一种方法是修改系统级二进制文件及其操作。审计 systemd journal 文件可提供可用于取证目的的日志。</p>
 
 severity: medium
 

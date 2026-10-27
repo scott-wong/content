@@ -9,7 +9,7 @@ description: |-
     <pre>$ sudo passwd -l root</pre>
 
     <p><strong>中文说明：</strong></p>
-    通过执行以下操作，将操作系统配置为阻止直接登录 <tt>root</tt> 账户：
+    <p>通过执行以下操作，将操作系统配置为阻止直接登录 <tt>root</tt> 账户：</p>
     <pre>$ sudo passwd -l root</pre>
 
 rationale: |-
@@ -17,7 +17,7 @@ rationale: |-
     multifactor authentication to privileged accounts.
 
     <p><strong>中文理由：</strong></p>
-    禁用直接 root 登录可确保对特权账户进行适当的问责和多因素身份验证。
+    <p>禁用直接 root 登录可确保对特权账户进行适当的问责和多因素身份验证。</p>
 
 severity: medium
 

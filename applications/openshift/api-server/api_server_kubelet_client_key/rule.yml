@@ -25,7 +25,7 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    要启用基于证书的 kubelet 身份验证，请编辑 <tt>openshift-kube-apiserver</tt> 命名空间中的 <tt>config</tt> configmap，若尚未配置，请在 <tt>config.yaml</tt> 键中设置以下参数：
+    <p>要启用基于证书的 kubelet 身份验证，请编辑 <tt>openshift-kube-apiserver</tt> 命名空间中的 <tt>config</tt> configmap，若尚未配置，请在 <tt>config.yaml</tt> 键中设置以下参数：</p>
     <pre>
     "apiServerArguments":{
     ...
@@ -41,7 +41,7 @@ rationale: |-
     API Server authenticates itself to kubelets when submitting requests.
 
     <p><strong>中文理由：</strong></p>
-    默认情况下，API Server 不会向 kubelet 的 HTTPS 端点证明自身身份。来自 API Server 的请求会被视为匿名请求。配置基于证书的 kubelet 身份验证可确保 API Server 在提交请求时向 kubelet 证明自身身份。
+    <p>默认情况下，API Server 不会向 kubelet 的 HTTPS 端点证明自身身份。来自 API Server 的请求会被视为匿名请求。配置基于证书的 kubelet 身份验证可确保 API Server 在提交请求时向 kubelet 证明自身身份。</p>
 
 identifiers:
   cce@ocp4: CCE-83591-8

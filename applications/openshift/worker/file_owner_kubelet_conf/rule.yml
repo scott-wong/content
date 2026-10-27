@@ -15,7 +15,7 @@ description: |-
     {{{ describe_file_owner(file=kubeletconf_path, owner="root") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt> 的所有者为 <tt>root</tt>。
+    <p>确保 kubelet 配置文件 <tt>{{{ kubeletconf_path }}}</tt> 的所有者为 <tt>root</tt>。</p>
 
 rationale: |-
     The kubelet configuration file contains information about the configuration of the
@@ -23,7 +23,7 @@ rationale: |-
     critical for OpenShift security.
 
     <p><strong>中文理由：</strong></p>
-    kubelet 配置文件包含有关系统上配置的 OpenShift 节点的信息。保护此文件对 OpenShift 安全至关重要。
+    <p>kubelet 配置文件包含有关系统上配置的 OpenShift 节点的信息。保护此文件对 OpenShift 安全至关重要。</p>
 
 severity: medium
 

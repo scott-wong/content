@@ -9,13 +9,13 @@ description: |-
     {{{ describe_file_permissions(file="/var/log/kube-apiserver/.*", perms="0600") }}}
 
     <p><strong>中文说明：</strong></p>
-    确保 <tt>/var/log/kube-apiserver/.*</tt> 的文件权限为 <tt>0600</tt>。
+    <p>确保 <tt>/var/log/kube-apiserver/.*</tt> 的文件权限为 <tt>0600</tt>。</p>
 
 rationale: |-
     If users can write to audit logs, audit trails can be modified or destroyed.
 
     <p><strong>中文理由：</strong></p>
-    如果用户能够写入审计日志，审计跟踪就可能被修改或销毁。
+    <p>如果用户能够写入审计日志，审计跟踪就可能被修改或销毁。</p>
 
 severity: medium
 

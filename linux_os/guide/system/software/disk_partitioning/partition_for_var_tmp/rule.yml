@@ -9,7 +9,7 @@ description: |-
     logical volume at installation time, or migrate it using LVM.
 
     <p><strong>中文说明：</strong></p>
-    <tt>/var/tmp</tt> 目录是全局可写的临时文件存储目录。确保其在安装时具有独立分区或逻辑卷，或使用 LVM 迁移。
+    <p><tt>/var/tmp</tt> 目录是全局可写的临时文件存储目录。确保其在安装时具有独立分区或逻辑卷，或使用 LVM 迁移。</p>
 
 rationale: |-
     The <tt>/var/tmp</tt> partition is used as temporary storage by many programs.
@@ -17,7 +17,7 @@ rationale: |-
     restrictive mount options, which can help protect programs which use it.
 
     <p><strong>中文理由：</strong></p>
-    许多程序将 <tt>/var/tmp</tt> 分区用作临时存储。将 <tt>/var/tmp</tt> 放在独立分区上，可以设置更严格的挂载选项，从而帮助保护使用该分区的程序。
+    <p>许多程序将 <tt>/var/tmp</tt> 分区用作临时存储。将 <tt>/var/tmp</tt> 放在独立分区上，可以设置更严格的挂载选项，从而帮助保护使用该分区的程序。</p>
 
 severity: medium
 

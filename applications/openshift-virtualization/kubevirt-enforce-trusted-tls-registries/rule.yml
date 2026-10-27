@@ -10,7 +10,7 @@ description: |-
     require TLS connections to protect the integrity and authenticity of images.
 
     <p><strong>中文说明：</strong></p>
-    通过仅从使用 TLS 的可信镜像仓库拉取容器镜像，组织可以降低将未知漏洞或恶意软件引入系统的风险。这有助于确保应用和系统保持安全稳定。KubeVirt 使用的所有容器镜像仓库都应要求 TLS 连接，以保护镜像的完整性和真实性。
+    <p>通过仅从使用 TLS 的可信镜像仓库拉取容器镜像，组织可以降低将未知漏洞或恶意软件引入系统的风险。这有助于确保应用和系统保持安全稳定。KubeVirt 使用的所有容器镜像仓库都应要求 TLS 连接，以保护镜像的完整性和真实性。</p>
 
 rationale: |-
     When the <tt>.spec.storageImport.insecureRegistries</tt> field contains entries in
@@ -22,7 +22,7 @@ rationale: |-
     TLS should be permitted, and the insecureRegistries list should be empty.
 
     <p><strong>中文理由：</strong></p>
-    当 <tt>kubevirt-hyperconverged</tt> 资源中的 <tt>.spec.storageImport.insecureRegistries</tt> 字段包含条目时，KubeVirt 被配置为允许连接到不使用 TLS 加密的容器镜像仓库。这会带来重大安全风险，因为镜像在传输过程中可能被截获或篡改。中间人攻击可能导致恶意镜像被拉取并在虚拟机内执行。为维护安全性，应仅允许使用 TLS 的镜像仓库，且 insecureRegistries 列表应为空。
+    <p>当 <tt>kubevirt-hyperconverged</tt> 资源中的 <tt>.spec.storageImport.insecureRegistries</tt> 字段包含条目时，KubeVirt 被配置为允许连接到不使用 TLS 加密的容器镜像仓库。这会带来重大安全风险，因为镜像在传输过程中可能被截获或篡改。中间人攻击可能导致恶意镜像被拉取并在虚拟机内执行。为维护安全性，应仅允许使用 TLS 的镜像仓库，且 insecureRegistries 列表应为空。</p>
 
 severity: medium
 

@@ -10,15 +10,15 @@ description: |-
     {{{ describe_kernel_build_config("CONFIG_MODULE_SIG", "y") | indent(4) }}}
 
     <p><strong>中文说明：</strong></p>
-    在加载模块时检查其签名是否有效。请注意，此选项会将 OpenSSL 开发软件包添加为内核构建依赖，以便签名工具使用其加密库。
+    <p>在加载模块时检查其签名是否有效。请注意，此选项会将 OpenSSL 开发软件包添加为内核构建依赖，以便签名工具使用其加密库。
 
-    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_MODULE_SIG</tt> 的配置值，请运行 <tt>grep CONFIG_MODULE_SIG /boot/config-*</tt>。对于每个已安装的内核，应返回值为 <tt>y</tt> 的行。
+    用于构建内核的配置位于 <tt>/boot/config-*</tt>。要检查 <tt>CONFIG_MODULE_SIG</tt> 的配置值，请运行 <tt>grep CONFIG_MODULE_SIG /boot/config-*</tt>。对于每个已安装的内核，应返回值为 <tt>y</tt> 的行。</p>
 
 rationale: |-
     Loaded modules must be signed.
 
     <p><strong>中文理由：</strong></p>
-    加载的模块必须经过签名。
+    <p>加载的模块必须经过签名。</p>
 
 warnings:
     {{{ warning_kernel_build_config() | indent(4) }}}

@@ -8,7 +8,7 @@ description: |-
     their GID changed.
 
     <p><strong>中文说明：</strong></p>
-    如果除 root 外的任何组的 GID 为 0，应调查此错误配置，并移除这些非 root 组或更改其 GID。
+    <p>如果除 root 外的任何组的 GID 为 0，应调查此错误配置，并移除这些非 root 组或更改其 GID。</p>
 
 rationale: |-
     Ensuring that only the <tt>root</tt> group has a GID of 0 helps prevent
@@ -16,7 +16,7 @@ rationale: |-
     non-privileged users.
 
     <p><strong>中文理由：</strong></p>
-    确保只有 <tt>root</tt> 组的 GID 为 0，有助于防止 root 组拥有的文件意外被非特权用户访问。
+    <p>确保只有 <tt>root</tt> 组的 GID 为 0，有助于防止 root 组拥有的文件意外被非特权用户访问。</p>
 
 severity: high
 

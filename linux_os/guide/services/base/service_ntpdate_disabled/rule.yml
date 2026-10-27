@@ -12,8 +12,8 @@ description: |-
     {{{ describe_service_disable(service="ntpdate") }}}
 
     <p><strong>中文说明：</strong></p>
-    <tt>ntpdate</tt> 服务在系统启动时轮询 NTP 服务器以设置本地硬件时钟。它与 <tt>/etc/ntp/step-tickers</tt> 或 <tt>/etc/ntp.conf</tt> 中列出的 NTP 服务器同步，然后将本地硬件时钟设置为新同步的系统时间。
-    应禁用 <tt>ntpdate</tt> 服务。
+    <p><tt>ntpdate</tt> 服务在系统启动时轮询 NTP 服务器以设置本地硬件时钟。它与 <tt>/etc/ntp/step-tickers</tt> 或 <tt>/etc/ntp.conf</tt> 中列出的 NTP 服务器同步，然后将本地硬件时钟设置为新同步的系统时间。
+    应禁用 <tt>ntpdate</tt> 服务。</p>
 
 rationale: |-
     The <tt>ntpdate</tt> service may only be suitable for systems which
@@ -22,7 +22,7 @@ rationale: |-
     available in the ntpd program and should be considered deprecated.
 
     <p><strong>中文理由：</strong></p>
-    <tt>ntpdate</tt> 服务可能仅适用于重启足够频繁、重启之间时钟漂移不会造成问题的系统。无论如何，ntpdate 服务的功能现已在 ntpd 程序中提供，应视为已弃用。
+    <p><tt>ntpdate</tt> 服务可能仅适用于重启足够频繁、重启之间时钟漂移不会造成问题的系统。无论如何，ntpdate 服务的功能现已在 ntpd 程序中提供，应视为已弃用。</p>
 
 severity: low
 

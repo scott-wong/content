@@ -44,11 +44,11 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，按下 <tt>Ctrl-Alt-Del</tt> 键序列时，<tt>SystemD</tt> 将重启系统。
+    <p>默认情况下，按下 <tt>Ctrl-Alt-Del</tt> 键序列时，<tt>SystemD</tt> 将重启系统。
     <br /><br />
     要将系统配置为忽略来自
     {{% if product != "rhcos4" %}}
-    命令行的 <tt>Ctrl-Alt-Del</tt> 键序列而不重启系统，请执行以下任一操作：
+    命令行的 <tt>Ctrl-Alt-Del</tt> 键序列而不重启系统，请执行以下任一操作：</p>
     <pre>ln -sf /dev/null /etc/systemd/system/ctrl-alt-del.target</pre>
     或
     <pre>systemctl mask ctrl-alt-del.target</pre>
@@ -91,7 +91,7 @@ rationale: |-
     loss of availability of systems due to unintentional reboot.
 
     <p><strong>中文理由：</strong></p>
-    本地登录用户在控制台按下 Ctrl-Alt-Del 时可重启系统。如果误按，例如在混合操作系统环境中可能发生，这可能导致系统意外重启，带来短期可用性损失风险。
+    <p>本地登录用户在控制台按下 Ctrl-Alt-Del 时可重启系统。如果误按，例如在混合操作系统环境中可能发生，这可能导致系统意外重启，带来短期可用性损失风险。</p>
 
 severity: high
 

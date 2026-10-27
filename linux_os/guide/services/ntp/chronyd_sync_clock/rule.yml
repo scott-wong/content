@@ -10,7 +10,7 @@ description: |-
     systems connected over a network.
 
     <p><strong>中文说明：</strong></p>
-    同步内部信息系统时钟可为具有多个系统时钟和通过网络连接的系统提供一致的时间戳。
+    <p>同步内部信息系统时钟可为具有多个系统时钟和通过网络连接的系统提供一致的时间戳。</p>
 
 rationale: |-
     Inaccurate time stamps make it more difficult to correlate events and
@@ -19,7 +19,7 @@ rationale: |-
     forensic analysis and investigating system events.
 
     <p><strong>中文理由：</strong></p>
-    不准确的时间戳会使关联事件更加困难，并可能导致分析不准确。在开展取证分析和调查系统事件时，确定特定事件在系统上发生的准确时间至关重要。
+    <p>不准确的时间戳会使关联事件更加困难，并可能导致分析不准确。在开展取证分析和调查系统事件时，确定特定事件在系统上发生的准确时间至关重要。</p>
 
 severity: medium
 

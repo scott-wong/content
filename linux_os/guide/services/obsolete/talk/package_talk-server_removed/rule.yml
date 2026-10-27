@@ -7,7 +7,7 @@ description: |-
     {{{ describe_package_remove(package="talk-server") }}}
 
     <p><strong>中文说明：</strong></p>
-    应删除 <tt>talk-server</tt> 软件包。
+    <p>应删除 <tt>talk-server</tt> 软件包。</p>
 
 rationale: |-
     The talk software presents a security risk as it uses unencrypted protocols
@@ -15,7 +15,7 @@ rationale: |-
     risk of the accidental (or intentional) activation of talk services.
 
     <p><strong>中文理由：</strong></p>
-    talk 软件存在安全风险，因为它使用未加密的协议进行通信。删除 <tt>talk-server</tt> 软件包可降低 talk 服务被意外（或故意）激活的风险。
+    <p>talk 软件存在安全风险，因为它使用未加密的协议进行通信。删除 <tt>talk-server</tt> 软件包可降低 talk 服务被意外（或故意）激活的风险。</p>
 
 severity: medium
 

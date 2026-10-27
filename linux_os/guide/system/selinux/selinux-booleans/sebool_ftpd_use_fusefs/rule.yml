@@ -9,11 +9,12 @@ description: |-
     {{{ describe_sebool_disable(sebool="ftpd_use_fusefs") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>ftpd_use_fusefs</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P ftpd_use_fusefs off</tt> 将其禁用。
+    <p>默认情况下，SELinux 布尔值 <tt>ftpd_use_fusefs</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P ftpd_use_fusefs off</tt> 将其禁用。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    启用此布尔值会允许 FTP 守护进程访问 FUSE 文件系统，增加不必要的文件系统访问能力。
+    <p>启用此布尔值会允许 FTP 守护进程访问 FUSE 文件系统，增加不必要的文件系统访问能力。</p>
 
 severity: medium
 

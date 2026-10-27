@@ -8,7 +8,7 @@ description: |-
     <pre>$ sudo chmod 0600 /home/<i>USER</i>/.bash_history</pre>
 
     <p><strong>中文说明：</strong></p>
-    使用以下命令将 bash 历史文件的模式设置为 <tt>0600</tt>：
+    <p>使用以下命令将 bash 历史文件的模式设置为 <tt>0600</tt>：</p>
     <pre>$ sudo chmod 0600 /home/<i>USER</i>/.bash_history</pre>
 
 rationale: |-
@@ -16,7 +16,7 @@ rationale: |-
     other users' command history.
 
     <p><strong>中文理由：</strong></p>
-    不正确的权限可能使恶意用户恢复其他用户的命令历史记录。
+    <p>不正确的权限可能使恶意用户恢复其他用户的命令历史记录。</p>
 
 severity: medium
 

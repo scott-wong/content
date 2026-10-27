@@ -9,12 +9,13 @@ description: |-
     {{{ describe_sebool_disable(sebool="postgresql_can_rsync") }}}
 
     <p><strong>中文说明：</strong></p>
-    默认情况下，SELinux 布尔值 <tt>postgresql_can_rsync</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
-    应禁用 SELinux 布尔值 <tt>postgresql_can_rsync</tt>。
+    <p>默认情况下，SELinux 布尔值 <tt>postgresql_can_rsync</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>postgresql_can_rsync</tt>。</p>
 
 rationale: |-
+
     <p><strong>中文理由：</strong></p>
-    限制 PostgreSQL 使用 rsync 可减少数据库进程复制文件的能力，从而降低数据暴露和被滥用风险。
+    <p>限制 PostgreSQL 使用 rsync 可减少数据库进程复制文件的能力，从而降低数据暴露和被滥用风险。</p>
 
 severity: medium
 
