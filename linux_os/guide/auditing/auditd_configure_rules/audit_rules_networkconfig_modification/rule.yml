@@ -39,25 +39,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：</p>
-    <pre>-a always,exit -F arch=ARCH -S sethostname,setdomainname -F key=audit_rules_networkconfig_modification
-    -w /etc/issue -p wa -k audit_rules_networkconfig_modification
-    -w /etc/issue.net -p wa -k audit_rules_networkconfig_modification
-    -w /etc/hosts -p wa -k audit_rules_networkconfig_modification
-    {{% if product in ['ubuntu2404'] %}}
-    -w /etc/netplan/ -p wa -k audit_rules_networkconfig_modification
-    {{% endif %}}
-    {{% if 'ubuntu' in product or 'debian' in product -%}}
-    -w /etc/networks -p wa -k audit_rules_networkconfig_modification
-    -w /etc/network/ -p wa -k audit_rules_networkconfig_modification</pre>
-    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：
-    <pre>-a always,exit -F arch=ARCH -S sethostname,setdomainname -F key=audit_rules_networkconfig_modification
-    -w /etc/issue -p wa -k audit_rules_networkconfig_modification
-    -w /etc/issue.net -p wa -k audit_rules_networkconfig_modification
-    -w /etc/hosts -p wa -k audit_rules_networkconfig_modification
-    {{% if 'ubuntu' in product or 'debian' in product -%}}
-    -w /etc/networks -p wa -k audit_rules_networkconfig_modification
-    -w /etc/network/ -p wa -k audit_rules_networkconfig_modification</pre>
+    <p>如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将监视网络配置文件的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。</p>
+    <p>规则必须记录 <tt>/etc/issue</tt>、<tt>/etc/issue.net</tt> 和 <tt>/etc/hosts</tt> 的写入和属性变更，并使用审计键 <tt>audit_rules_networkconfig_modification</tt>。Ubuntu 24.04 还应监视 <tt>/etc/netplan/</tt>；Ubuntu 或 Debian 产品还应监视 <tt>/etc/networks</tt> 和 <tt>/etc/network/</tt>；其他产品应监视 <tt>/etc/sysconfig/network</tt>。</p>
+    <p>如果使用 <tt>auditctl</tt>，请将等价规则添加到 <tt>/etc/audit/audit.rules</tt>。对于 32 位系统，应将 <tt>ARCH</tt> 设置为 b32；对于 64 位系统，应分别包含 b32 和 b64 两条规则。传统语法使用 <tt>-p wa</tt>，现代语法使用 <tt>-F perm=wa</tt>。</p>
 
 rationale: |-
     The network environment should not be modified by anything other

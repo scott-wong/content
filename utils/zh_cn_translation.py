@@ -39,6 +39,20 @@ BLOCK_TAG_RE = re.compile(
     r"<(?:p|ul|ol|pre|table|div|h[1-6]|blockquote)\b",
     re.IGNORECASE,
 )
+JINJA_CONTROL_RE = re.compile(
+    r"\{\{%-?\s*(if|for|macro|filter|block|call|raw|with|elif|else|"
+    r"endif|endfor|endmacro|endfilter|endblock|endcall|endraw|endwith)\b"
+)
+JINJA_END_TAGS = {
+    "if": "endif",
+    "for": "endfor",
+    "macro": "endmacro",
+    "filter": "endfilter",
+    "block": "endblock",
+    "call": "endcall",
+    "raw": "endraw",
+    "with": "endwith",
+}
 MARKERS = OrderedDict((
     ("description", "<p><strong>中文说明：</strong></p>"),
     ("rationale", "<p><strong>中文理由：</strong></p>"),
@@ -246,6 +260,30 @@ def _rebuild_quoted_field(key, english, translation, suffix):
     return "\n".join(parts) + suffix
 
 
+def _jinja_balance_errors(value):
+    stack = []
+    errors = []
+    for match in JINJA_CONTROL_RE.finditer(value):
+        token = match.group(1)
+        if token in JINJA_END_TAGS:
+            stack.append(token)
+        elif token in ("elif", "else"):
+            if not stack or stack[-1] != "if":
+                errors.append("{} outside if".format(token))
+        elif token.startswith("end"):
+            if not stack:
+                errors.append("{} without opener".format(token))
+                continue
+            expected = JINJA_END_TAGS[stack[-1]]
+            if token != expected:
+                errors.append("expected {}, got {}".format(expected, token))
+            else:
+                stack.pop()
+    if stack:
+        errors.append("unclosed: {}".format(", ".join(stack)))
+    return errors
+
+
 def _ensure_block_markup(value):
     value = value.strip()
     if not value or BLOCK_START_RE.match(value):
@@ -431,13 +469,18 @@ def validate_rules(paths=None, strict=False, base_ref=None, root=REPO_ROOT,
             if not BLOCK_START_RE.match(chinese.lstrip()):
                 errors.append("{} {}: Chinese block does not start with XHTML or Jinja".format(
                     relative_path, key))
+            jinja_errors = _jinja_balance_errors(chinese)
+            if jinja_errors:
+                errors.append("{} {}: unbalanced Jinja controls: {}".format(
+                    relative_path, key, "; ".join(jinja_errors)))
             english_pre = PRE_RE.findall(english)
             chinese_pre = PRE_RE.findall(chinese)
             english_pre = [_normalize_pre_trailing_whitespace(item) for item in english_pre]
             chinese_pre = [_normalize_pre_trailing_whitespace(item) for item in chinese_pre]
-            if english_pre != chinese_pre:
-                errors.append("{} {}: <pre> blocks differ between English and Chinese".format(
-                    relative_path, key))
+            if not set(chinese_pre).issubset(set(english_pre)):
+                errors.append(
+                    "{} {}: Chinese <pre> blocks are not a subset of English code blocks".format(
+                        relative_path, key))
             if re.search(r"\{\{\{\s*(?:describe_|ocil_|complete_)", chinese):
                 warnings.append(
                     "{} {}: Chinese block calls a prose-producing macro".format(

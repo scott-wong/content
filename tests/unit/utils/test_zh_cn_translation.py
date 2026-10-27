@@ -167,3 +167,19 @@ def test_plain_chinese_text_is_wrapped_in_paragraph():
 
 def test_hash_ignores_trailing_whitespace():
     assert zh._field_hash("English text  \n") == zh._field_hash("English text")
+
+
+def test_jinja_balance_checker():
+    balanced = "{{% if product == 'rhel' %}}RHEL{{% else %}}Other{{% endif %}}"
+    assert zh._jinja_balance_errors(balanced) == []
+    assert zh._jinja_balance_errors("{{% if product == 'rhel' %}}RHEL")
+
+
+def test_chinese_pre_blocks_may_be_omitted():
+    translated = zh.inject_translation(
+        RULE_YAML, "description", "<p>安装软件包并参考英文代码块。</p>"
+    )
+    _, chinese = zh._split_english(
+        zh.extract_field_value(translated, "description"), "description"
+    )
+    assert zh.PRE_RE.findall(chinese) == []
