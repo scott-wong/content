@@ -1,0 +1,10 @@
+{
+  "base_repository": "ComplianceAsCode/content",
+  "base_commit": "e4083bb6e9b61bb7aed4981ec12c8e53dda84c4d",
+  "branch": "zh-cn",
+  "production_rules": 2566,
+  "translated_description_fields": 2566,
+  "translated_rationale_fields": 2566,
+  "translated_fields": 5132,
+  "missing_translated_fields": 0
+}
