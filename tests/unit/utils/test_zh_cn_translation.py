@@ -152,3 +152,18 @@ severity: medium
     assert zh._field_hash(zh.extract_field_value(translated, "description").split(
         zh.MARKERS["description"])[0].rstrip("\n")
     ) == zh._field_hash("English description.")
+
+
+def test_plain_chinese_text_is_wrapped_in_paragraph():
+    translated = zh.inject_translation(
+        RULE_YAML, "description", "安装 example 软件包。"
+    )
+
+    _, chinese = zh._split_english(
+        zh.extract_field_value(translated, "description"), "description"
+    )
+    assert chinese.startswith("<p>安装 example 软件包。</p>")
+
+
+def test_hash_ignores_trailing_whitespace():
+    assert zh._field_hash("English text  \n") == zh._field_hash("English text")

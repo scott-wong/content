@@ -31,6 +31,14 @@ TOP_LEVEL_KEY_RE = re.compile(r"^([A-Za-z_][A-Za-z0-9_-]*):[ \t]*(.*)$")
 CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
 JINJA_RE = re.compile(r"\{\{\{.*?\}\}\}", re.DOTALL)
 PRE_RE = re.compile(r"<pre\b[^>]*>.*?</pre>", re.DOTALL | re.IGNORECASE)
+BLOCK_START_RE = re.compile(
+    r"^(?:<(?:p|ul|ol|pre|table|div|h[1-6]|blockquote|hr)\b|\{\{[%{])",
+    re.IGNORECASE,
+)
+BLOCK_TAG_RE = re.compile(
+    r"<(?:p|ul|ol|pre|table|div|h[1-6]|blockquote)\b",
+    re.IGNORECASE,
+)
 MARKERS = OrderedDict((
     ("description", "<p><strong>中文说明：</strong></p>"),
     ("rationale", "<p><strong>中文理由：</strong></p>"),
@@ -238,6 +246,20 @@ def _rebuild_quoted_field(key, english, translation, suffix):
     return "\n".join(parts) + suffix
 
 
+def _ensure_block_markup(value):
+    value = value.strip()
+    if not value or BLOCK_START_RE.match(value):
+        return value
+    block_match = BLOCK_TAG_RE.search(value)
+    if not block_match:
+        return "<p>{}</p>".format(value)
+    prefix = value[:block_match.start()].strip()
+    suffix = value[block_match.start():].strip()
+    if not prefix:
+        return suffix
+    return "<p>{}</p>\n{}".format(prefix, suffix)
+
+
 def _normalize_pre_trailing_whitespace(value):
     def clean_block(match):
         return re.sub(r"(?m)[ \t]+(?=\n|</pre>|\Z)", "", match.group(0))
@@ -249,6 +271,7 @@ def inject_translation(text, key, translation):
     if not translation or not CJK_RE.search(translation):
         raise TranslationError("translation for {!r} is empty or has no Chinese text".format(key))
     translation = _normalize_pre_trailing_whitespace(translation)
+    translation = _ensure_block_markup(translation)
     if MARKERS[key] in translation:
         raise TranslationError("translation for {!r} contains the localization marker".format(key))
     start, end = _field_range(text, key)
@@ -299,7 +322,7 @@ def governed_rule_paths(root=REPO_ROOT):
 
 
 def _normalize_for_hash(value):
-    return value.replace("\r\n", "\n").rstrip("\n")
+    return value.replace("\r\n", "\n").rstrip()
 
 
 def _field_hash(value):
@@ -321,7 +344,7 @@ def _load_baseline(path=BASELINE_PATH):
     return rows
 
 
-def create_baseline(output_path=BASELINE_PATH, root=REPO_ROOT):
+def create_baseline(output_path=BASELINE_PATH, root=REPO_ROOT, base_ref=None):
     paths = governed_rule_paths(root)
     if len(paths) != EXPECTED_RULE_COUNT:
         raise TranslationError(
@@ -334,7 +357,10 @@ def create_baseline(output_path=BASELINE_PATH, root=REPO_ROOT):
         "# path\tdescription_sha256\trationale_sha256",
     ]
     for relative_path in paths:
-        text = _read_text(os.path.join(root, relative_path))
+        if base_ref:
+            text = _git_file_at_ref(base_ref, relative_path, root)
+        else:
+            text = _read_text(os.path.join(root, relative_path))
         hashes = [_field_hash(extract_field_value(text, key)) for key in FIELD_NAMES]
         lines.append("{}\t{}\t{}".format(relative_path, hashes[0], hashes[1]))
     _write_text(output_path, "\n".join(lines) + "\n")
@@ -401,6 +427,9 @@ def validate_rules(paths=None, strict=False, base_ref=None, root=REPO_ROOT,
             translated_fields += 1
             if not CJK_RE.search(chinese):
                 errors.append("{} {}: Chinese block contains no Chinese text".format(
+                    relative_path, key))
+            if not BLOCK_START_RE.match(chinese.lstrip()):
+                errors.append("{} {}: Chinese block does not start with XHTML or Jinja".format(
                     relative_path, key))
             english_pre = PRE_RE.findall(english)
             chinese_pre = PRE_RE.findall(chinese)
@@ -568,6 +597,7 @@ def _parse_args(argv):
     baseline = subparsers.add_parser("baseline", help="create the English baseline hash file")
     baseline.add_argument("--output", default=BASELINE_PATH)
     baseline.add_argument("--root", default=REPO_ROOT)
+    baseline.add_argument("--base-ref", help="generate hashes from this Git revision")
 
     apply_parser = subparsers.add_parser("apply", help="apply Chinese translations from JSON")
     apply_parser.add_argument("translations")
@@ -593,7 +623,7 @@ def main(argv=None):
     args = _parse_args(argv or sys.argv[1:])
     try:
         if args.command == "baseline":
-            create_baseline(args.output, args.root)
+            create_baseline(args.output, args.root, args.base_ref)
         elif args.command == "apply":
             apply_translations(args.translations, args.root)
         elif args.command == "validate":
