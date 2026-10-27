@@ -14,12 +14,24 @@ description: |-
     do not belong to a valid user using the following command:
     <pre>$ sudo find <i>MOUNTPOINT</i> -xdev -nouser 2&gt;/dev/null</pre>
 
+    <p><strong>中文说明：</strong></p>
+    如果任何文件或目录不是由用户所有，应调查其缺少所有权的原因。随后，应删除这些文件或将其分配给适当的用户。
+
+    使用以下命令查找与本地设备相关的挂载点：
+    <pre>$ findmnt -n -l -k -it $(awk '/nodev/ { print $2 }' /proc/filesystems | paste -sd,)</pre>
+
+    对于上一条命令列出的所有挂载点，必须使用以下命令搜索不属于有效用户的文件和目录：
+    <pre>$ sudo find <i>MOUNTPOINT</i> -xdev -nouser 2&gt;/dev/null</pre>
+
 rationale: |-
     Unowned files and directories do not directly imply a security problem, but they are generally a sign that
     something is amiss. They may be caused by an intruder, by incorrect software installation or
     draft software removal, or by failure to remove all files belonging to a deleted account, or
     other similar cases. The files and directories should be repaired so they will not cause problems when
     accounts are created in the future, and the cause should be discovered and addressed.
+
+    <p><strong>中文理由：</strong></p>
+    无主文件和目录并不直接意味着存在安全问题，但通常是出现异常的迹象。它们可能由入侵者、软件安装错误或软件删除不完整、未移除已删除账户的所有文件或其他类似情况引起。应修复这些文件和目录，以免将来创建账户时引发问题，并应查明和解决原因。
 
 severity: medium
 

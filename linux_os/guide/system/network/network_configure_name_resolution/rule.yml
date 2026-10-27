@@ -28,11 +28,29 @@ description: |-
     nameserver 192.168.0.1
     nameserver 192.168.0.2</pre>
 
+    <p><strong>中文说明：</strong></p>
+    {{% if "ol" in families or "rhel" in product %}}
+    使用以下命令确定系统使用本地名称解析还是 DNS 名称解析：
+    <pre>$ sudo grep hosts /etc/nsswitch.conf
+    hosts: files dns</pre>
+    如果 <tt>/etc/nsswitch.conf</tt> 的 hosts 行缺少 DNS 条目，则 <tt>/etc/resolv.conf</tt> 文件必须为空。使用以下命令验证 <tt>/etc/resolv.conf</tt> 为空：
+    <pre>$ sudo ls -al /etc/resolv.conf
+    -rw-r--r-- 1 root root 0 Aug 19 08:31 resolv.conf</pre>
+    如果在 <tt>/etc/nsswitch.conf</tt> 的 hosts 行中找到 DNS 条目，则验证以下内容：<br/>
+    {{% endif %}}
+    应在 <tt>/etc/resolv.conf</tt> 中配置多个域名系统（DNS）服务器。这样可在某个域服务器崩溃时提供冗余名称解析服务。要将系统配置为至少包含 <tt>2</tt> 个 DNS 服务器，请为每个 DNS 服务器在 <tt>/etc/resolv.conf</tt> 中添加相应的 <tt>nameserver <i>ip_address</i></tt> 条目，其中 <i>ip_address</i> 是有效 DNS 服务器的 IP 地址。例如：
+    <pre>search example.com
+    nameserver 192.168.0.1
+    nameserver 192.168.0.2</pre>
+
 rationale: |-
     To provide availability for name resolution services, multiple redundant
     name servers are mandated. A failure in name resolution could lead to the
     failure of security functions requiring name resolution, which may include
     time synchronization, centralized authentication, and remote system logging.
+
+    <p><strong>中文理由：</strong></p>
+    为确保名称解析服务可用，必须使用多个冗余名称服务器。名称解析失败可能导致依赖名称解析的安全功能失败，这些功能可能包括时间同步、集中式身份验证和远程系统日志记录。
 
 severity: medium
 

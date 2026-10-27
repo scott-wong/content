@@ -5,9 +5,15 @@ title: 'Verify ip6tables Enabled if Using IPv6'
 description: |-
     {{{ describe_service_enable(service="ip6tables") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应启用 <tt>ip6tables</tt> 服务。
+
 rationale: |-
     The <tt>ip6tables</tt> service provides the system's host-based firewalling
     capability for IPv6 and ICMPv6.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>ip6tables</tt> 服务为 IPv6 和 ICMPv6 提供基于主机的防火墙功能。
 
 severity: medium
 

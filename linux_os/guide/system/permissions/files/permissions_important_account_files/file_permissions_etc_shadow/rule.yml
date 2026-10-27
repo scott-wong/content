@@ -13,12 +13,18 @@ title: 'Verify Permissions on shadow File'
 description:  |-
     {{{ describe_file_permissions(file="/etc/shadow", perms=target_perms_octal) }}}
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/etc/shadow</tt> 的权限必须为 <tt>{{{ target_perms_octal }}}</tt>。
+
 rationale: |-
     The <tt>/etc/shadow</tt> file contains the list of local
     system accounts and stores password hashes. Protection of this file is
     critical for system security. Failure to give ownership of this file
     to root provides the designated owner with access to sensitive information
     which could weaken the system security posture.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/shadow</tt> 文件包含本地系统账户列表并存储密码哈希。保护此文件对系统安全至关重要。未将该文件的所有权赋予 root 会使指定所有者获得敏感信息访问权限，从而削弱系统安全状态。
 
 severity: medium
 

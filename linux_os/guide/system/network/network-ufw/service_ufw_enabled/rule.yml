@@ -5,8 +5,14 @@ title: 'Verify ufw Enabled'
 description: |-
     {{{ describe_service_enable(service="ufw") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应启用 <tt>ufw</tt> 服务。
+
 rationale: |-
     The ufw service must be enabled and running in order for ufw to protect the system
+
+    <p><strong>中文理由：</strong></p>
+    必须启用并运行 ufw 服务，ufw 才能保护系统。
 
 severity: medium
 

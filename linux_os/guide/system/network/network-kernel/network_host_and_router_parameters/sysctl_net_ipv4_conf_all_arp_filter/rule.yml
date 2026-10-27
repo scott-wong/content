@@ -2,12 +2,21 @@ documentation_complete: true
 
 title: 'Configure ARP filtering for All IPv4 Interfaces'
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.all.arp_filter", value=xccdf_value("sysctl_net_ipv4_conf_all_arp_filter_value")) }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.all.arp_filter", value=xccdf_value("sysctl_net_ipv4_conf_all_arp_filter_value")) }}}
+
+    <p><strong>中文说明：</strong></p>
+    要设置内核参数 <tt>net.ipv4.conf.all.arp_filter</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv4.conf.all.arp_filter={{{ xccdf_value("sysctl_net_ipv4_conf_all_arp_filter_value") }}}</tt>
+
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv4.conf.all.arp_filter = {{{ xccdf_value("sysctl_net_ipv4_conf_all_arp_filter_value") }}}</tt>
 
 rationale: |-
     Prevents the Linux Kernel from handling the ARP table globally.
     By default, the kernel may respond to an ARP request from a certain interface with information
     from another interface.
+
+    <p><strong>中文理由：</strong></p>
+    防止 Linux 内核全局处理 ARP 表。默认情况下，内核可能使用另一个接口的信息来响应来自某个接口的 ARP 请求。
 
 warnings:
     - functionality: |-

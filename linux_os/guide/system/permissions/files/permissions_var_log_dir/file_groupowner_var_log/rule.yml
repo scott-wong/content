@@ -9,12 +9,19 @@ documentation_complete: true
 
 title: 'Verify Group Who Owns /var/log Directory'
 
-description: '{{{ describe_file_group_owner(file="/var/log", group=gid) }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/var/log", group=gid) }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log</tt> 的文件所属组必须为 <tt>{{{ gid }}}</tt>。
 
 rationale: |-
     The <tt>/var/log</tt> directory contains files with logs of error
     messages in the system and should only be accessed by authorized
     personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log</tt> 目录包含系统错误消息日志文件，只应由经过授权的人员访问。
 
 severity: medium
 

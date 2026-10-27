@@ -7,10 +7,16 @@ description: |-
     disabled or deny, ensuring that the system does not forward packets between
     interfaces unless explicitly configured to do so.
 
+    <p><strong>中文说明：</strong></p>
+    ufw 中路由（转发）流量的默认策略应设置为禁用或拒绝，确保除非明确配置，否则系统不会在接口之间转发数据包。
+
 rationale: |-
     Unless the system is intended to act as a router, forwarding traffic between
     network interfaces should be disabled. Disabling the routed default policy
     prevents the system from accidentally or maliciously forwarding traffic.
+
+    <p><strong>中文理由：</strong></p>
+    除非系统预期充当路由器，否则应禁用网络接口之间的流量转发。禁用路由默认策略可防止系统意外或恶意转发流量。
 
 severity: medium
 

@@ -8,10 +8,16 @@ title: 'Install iptables Package'
 description: |-
     {{{ describe_package_install(package="iptables") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>iptables</tt> 软件包。
+
 rationale: |-
     <tt>iptables</tt> controls the Linux kernel network packet filtering
     code. <tt>iptables</tt> allows system operators to set up firewalls and IP
     masquerading, etc.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>iptables</tt> 控制 Linux 内核网络数据包过滤代码。<tt>iptables</tt> 允许系统操作员设置防火墙和 IP 伪装等。
 
 severity: medium
 

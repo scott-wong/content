@@ -5,9 +5,15 @@ title: 'Verify Permissions on /etc/security/opasswd File'
 description:  |-
     {{{ describe_file_permissions(file="/etc/security/opasswd", perms="0600") }}}
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/etc/security/opasswd</tt> 的权限必须为 <tt>0600</tt>。
+
 rationale: |-
     The <tt>/etc/security/opasswd</tt> file stores old passwords to prevent
     password reuse. Protection of this file is critical for system security.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/security/opasswd</tt> 文件存储旧密码，以防止密码重用。保护此文件对系统安全至关重要。
 
 severity: medium
 

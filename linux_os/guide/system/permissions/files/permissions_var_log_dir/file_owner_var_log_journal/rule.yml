@@ -2,10 +2,17 @@ documentation_complete: true
 
 title: 'Verify User Who Owns /var/log/*.journal(~) Files'
 
-description: '{{{ describe_file_owner(file="/var/log/*.journal(~)", owner="root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/var/log/*.journal(~)", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log/*.journal(~)</tt> 的文件所有者必须为 <tt>root</tt>。
 
 rationale: |-
     The <tt>/var/log/*.journal(~)</tt> files are system logs managed by the "systemd" service.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/*.journal(~)</tt> 文件是由 "systemd" 服务管理的系统日志。
 
 severity: medium
 

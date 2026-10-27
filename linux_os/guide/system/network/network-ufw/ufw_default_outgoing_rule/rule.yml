@@ -11,10 +11,18 @@ description: |-
     Note: Any port or protocol without an explicit allow before the default
     deny will be blocked.
 
+    <p><strong>中文说明：</strong></p>
+    对出站连接采用默认拒绝策略可确保仅允许明确许可的出站网络流量。在 <tt>/etc/default/ufw</tt> 中将 <tt>DEFAULT_OUTPUT_POLICY</tt> 设置为 <tt>DROP</tt> 或 <tt>REJECT</tt>。
+
+    注意：在默认拒绝规则之前未明确允许的任何端口或协议都将被阻止。
+
 rationale: |-
     With a default accept policy the firewall will allow any outgoing packet
     that is not configured to be denied. Restricting outgoing traffic reduces
     the risk of data exfiltration and limits the impact of a compromised host.
+
+    <p><strong>中文理由：</strong></p>
+    采用默认接受策略时，防火墙将允许任何未配置为拒绝的出站数据包。限制出站流量可降低数据泄露风险，并限制主机失陷后的影响。
 
 severity: medium
 

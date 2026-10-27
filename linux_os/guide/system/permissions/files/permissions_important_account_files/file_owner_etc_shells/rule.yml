@@ -6,9 +6,15 @@ title: 'Verify Who Owns /etc/shells File'
 description:  |-
     {{{ describe_file_owner(file="/etc/shells", owner="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    要将 <tt>/etc/shells</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/shells</tt>。
+
 rationale: |-
     The <tt>/etc/shells</tt> file contains the list of full pathnames to shells on the system.
     Since this file is used by many system programs this file should be protected.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/shells</tt> 文件包含系统上 shell 的完整路径名列表。由于许多系统程序使用该文件，应保护该文件。
 
 severity: medium
 

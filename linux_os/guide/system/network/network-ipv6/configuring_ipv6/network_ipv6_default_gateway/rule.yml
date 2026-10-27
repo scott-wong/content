@@ -11,6 +11,13 @@ description: |-
     Router addresses should be manually set and not accepted via any
     auto-configuration or router advertisement.
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    编辑 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 文件，并添加或修正以下行（根据需要替换为你的网关 IP）：
+    <pre>IPV6_DEFAULTGW=2001:0DB8::0001</pre>
+    路由器地址应手动设置，不应通过任何自动配置或路由器通告接受。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    手动设置默认 IPv6 网关可防止系统接受未经授权的路由器通告或自动配置提供的网关，从而降低流量被重定向或发生中间人攻击的风险。
 
 severity: unknown

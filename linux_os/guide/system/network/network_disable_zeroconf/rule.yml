@@ -11,11 +11,18 @@ description: |-
     subnet, add or correct the following line in <tt>/etc/sysconfig/network</tt>:
     <pre>NOZEROCONF=yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    Zeroconf 网络允许系统在没有静态分配地址甚至没有 DHCP 服务器的情况下为自己分配 IP 地址并进行 IP 通信。不建议通过 Zeroconf（或 DHCP）自动分配地址。要在 169.254.0.0 子网中禁用 Zeroconf 自动路由分配，请在 <tt>/etc/sysconfig/network</tt> 中添加或更正以下行：
+    <pre>NOZEROCONF=yes</pre>
+
 rationale: |-
     Zeroconf addresses are in the network 169.254.0.0. The networking
     scripts add entries to the system's routing table for these addresses. Zeroconf
     address assignment commonly occurs when the system is configured to use DHCP
     but fails to receive an address assignment from the DHCP server.
+
+    <p><strong>中文理由：</strong></p>
+    Zeroconf 地址位于 169.254.0.0 网络。网络脚本会将这些地址的条目添加到系统路由表。当系统配置为使用 DHCP 但未能从 DHCP 服务器获得地址分配时，通常会进行 Zeroconf 地址分配。
 
 severity: unknown
 

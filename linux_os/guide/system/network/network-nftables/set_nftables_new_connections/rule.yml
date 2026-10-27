@@ -6,9 +6,15 @@ title: 'Ensure all outbound and established connections are configured for nftab
 description: |-
    Configure the nftables firewall rules for new outbound and established connections
 
+   <p><strong>中文说明：</strong></p>
+   配置 nftables 防火墙规则，以允许新的出站连接和已建立的连接。
+
 rationale: |-
     If rules are not in place for new outbound and established connections, all packets
     will be dropped by the default policy preventing network usage.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有为新出站连接和已建立连接制定规则，默认策略将丢弃所有数据包，从而无法使用网络。
 
 severity: medium
 

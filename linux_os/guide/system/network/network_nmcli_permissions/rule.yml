@@ -19,10 +19,24 @@ description: |-
     ResultActive=auth_admin
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，非特权用户拥有使用 <tt>nmcli</tt> 命令修改网络接口和配置的权限。非特权用户不应更改网络配置。为确保非特权用户无权使用 <tt>nmcli</tt> 更改网络配置，请在 <tt>/etc/polkit-1/localauthority/20-org.d/10-nm-harden-access.pkla</tt> 中创建以下配置：
+    <pre>
+    [Disable General User Access to NetworkManager]
+    Identity=default
+    Action=org.freedesktop.NetworkManager.*
+    ResultAny=no
+    ResultInactive=no
+    ResultActive=auth_admin
+    </pre>
+
 rationale: |-
     Allowing non-privileged users to make changes to network settings can allow
     untrusted access, prevent system availability, and/or can lead to a compromise or
     attack.
+
+    <p><strong>中文理由：</strong></p>
+    允许非特权用户更改网络设置可能导致不受信任的访问、影响系统可用性，和/或导致系统遭入侵或攻击。
 
 platforms:
     - package[polkit]

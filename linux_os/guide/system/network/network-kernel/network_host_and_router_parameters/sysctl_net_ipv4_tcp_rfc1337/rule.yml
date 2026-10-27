@@ -3,12 +3,19 @@ documentation_complete: true
 
 title: 'Enable Kernel Parameter to Use TCP RFC 1337 on IPv4 Interfaces'
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv4.tcp_rfc1337", value="1") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv4.tcp_rfc1337", value="1") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>net.ipv4.tcp_rfc1337</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.tcp_rfc1337=1</tt>；要持久化，请将 <tt>net.ipv4.tcp_rfc1337 = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     Enable TCP behavior conformant with RFC 1337. When disabled, if a RST is
     received in TIME_WAIT state, we close the socket immediately without waiting
     for the end of the TIME_WAIT period.
+
+    <p><strong>中文理由：</strong></p>
+    启用符合 RFC 1337 的 TCP 行为。禁用时，如果在 TIME_WAIT 状态收到 RST，套接字会立即关闭，而不等待 TIME_WAIT 期间结束。
 
 severity: medium
 

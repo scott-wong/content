@@ -8,12 +8,24 @@ description: |-
     The <code>nftables</code> service can be disabled with the following command:
     <pre>systemctl disable nftables</pre>
 
+    <p><strong>中文说明：</strong></p>
+    nftables 是 Linux 内核的子系统，用于对网络数据包、数据报和帧进行过滤和分类，是 iptables 的后继产品。
+    可使用以下命令禁用 <code>nftables</code> 服务：
+    <pre>systemctl disable nftables</pre>
+
 rationale: |-
     {{%- if 'ubuntu' in product  %}}
     nftables should be disabled if another firewall service is used as it may lead to conflict.
     {{%- else %}}
     Running both <tt>firewalld</tt> and <tt>nftables</tt> may lead to conflict. <tt>nftables</tt>
     is actually one of the backends for <tt>firewalld</tt> management tools.
+    {{%- endif %}}
+
+    <p><strong>中文理由：</strong></p>
+    {{%- if 'ubuntu' in product  %}}
+    如果使用其他防火墙服务，应禁用 nftables，因为可能发生冲突。
+    {{%- else %}}
+    同时运行 <tt>firewalld</tt> 和 <tt>nftables</tt> 可能导致冲突。<tt>nftables</tt> 实际上是 <tt>firewalld</tt> 管理工具的后端之一。
     {{%- endif %}}
 severity: medium
 

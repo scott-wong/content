@@ -9,9 +9,16 @@ description: |-
     is now also used in marine, industrial, and medical applications.
     {{{ describe_module_disable(module="can") }}}
 
+    <p><strong>中文说明：</strong></p>
+    Controller Area Network（CAN）是一种串行通信协议，最初为汽车行业开发，现在也用于海事、工业和医疗应用。
+    应禁用内核模块 <tt>can</tt>。
+
 rationale: |-
     Disabling CAN protects the system against exploitation of any
     flaws in its implementation.
+
+    <p><strong>中文理由：</strong></p>
+    禁用该内核模块可防止攻击者利用其实现中的缺陷。
 
 severity: medium
 

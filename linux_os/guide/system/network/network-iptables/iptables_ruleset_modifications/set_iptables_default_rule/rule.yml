@@ -13,12 +13,24 @@ description: |-
     {{% endif %}}
     <pre>:INPUT DROP [0:0]</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要将处理传入数据包的内置 INPUT 链的默认策略设置为 DROP（而不是 ACCEPT），请在
+    {{% if 'ubuntu' in product %}}
+    <tt>/etc/iptables/rules.v4</tt>：
+    {{% else %}}
+    <tt>/etc/sysconfig/iptables</tt>：
+    {{% endif %}}
+    <pre>:INPUT DROP [0:0]</pre>
+
 rationale: |-
     In <tt>iptables</tt> the default policy is applied only after all
     the applicable rules in the table are examined for a match. Setting the
     default policy to <tt>DROP</tt> implements proper design for a firewall, i.e.
     any packets which are not explicitly permitted should not be
     accepted.
+
+    <p><strong>中文理由：</strong></p>
+    在 <tt>iptables</tt> 中，只有在检查表中所有适用规则并寻找匹配项后才会应用默认策略。将默认策略设置为 <tt>DROP</tt> 可实施适当的防火墙设计，即任何未明确允许的数据包都不应被接受。
 
 severity: medium
 

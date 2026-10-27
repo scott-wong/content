@@ -52,10 +52,53 @@ description: |-
     hosts or "tcpwrappers" is not configured to grant or deny access to
     specific hosts, this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    要验证系统的访问控制程序配置为允许或拒绝特定主机访问系统，请使用以下命令检查 "firewalld" 是否处于活动状态：
+
+    <pre># systemctl status firewalld
+    firewalld.service - firewalld - dynamic firewall daemon
+    Loaded: loaded (/usr/lib/systemd/system/firewalld.service; enabled)
+    Active: active (running) since Sun 2014-04-20 14:06:46 BST; 30s ago</pre>
+
+    如果 "firewalld" 处于活动状态，请使用以下命令检查其是否配置为允许或拒绝特定主机或服务的访问：
+
+    <pre># firewall-cmd --get-default-zone
+    public
+
+    # firewall-cmd --list-all --zone=public
+    public (active)
+    target: default
+    icmp-block-inversion: no
+    interfaces: eth0
+    sources:
+    services: mdns ssh
+    ports:
+    protocols:
+    masquerade: no
+    forward-ports:
+    icmp-blocks:</pre>
+
+    如果 "firewalld" 未处于活动状态，请使用以下命令检查 "hosts.allow" 和 "hosts.deny" 文件是否为空，以确定是否使用 "tcpwrappers"：
+
+    <pre># ls -al /etc/hosts.allow
+    rw-r----- 1 root root 9 Aug 2 23:13 /etc/hosts.allow
+
+    # ls -al /etc/hosts.deny
+    -rw-r----- 1 root root 9 Apr 9 2007 /etc/hosts.deny</pre>
+
+    如果 "firewalld" 和 "tcpwrappers" 均未安装、配置并处于活动状态，请询问系统管理员是否安装并启用了其他访问控制程序（例如 iptables）。
+
+    请系统管理员说明运行中的配置如何允许或拒绝访问特定主机或服务。
+
+    如果 "firewalld" 处于活动状态但未配置为允许特定主机访问，或者 "tcpwrappers" 未配置为允许或拒绝特定主机访问，则判定为不符合项。
+
 rationale: |-
     If the systems access control program is not configured with appropriate
     rules for allowing and denying access to system network resources,
     services may be accessible to unauthorized hosts.
+
+    <p><strong>中文理由：</strong></p>
+    如果系统的访问控制程序未配置适当的规则来允许和拒绝访问系统网络资源，服务可能被未经授权的主机访问。
 
 severity: medium
 

@@ -7,11 +7,18 @@ description: |-
     {{{ describe_service_disable(service="bluetooth") }}}
     <pre>$ sudo service bluetooth stop</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要禁用 <tt>bluetooth</tt> 服务，请运行 <tt>sudo systemctl disable --now bluetooth</tt>。
+    <pre>$ sudo service bluetooth stop</pre>
+
 rationale: |-
     Disabling the <tt>bluetooth</tt> service prevents the system from attempting
     connections to Bluetooth devices, which entails some security risk.
     Nevertheless, variation in this risk decision may be expected due to the
     utility of Bluetooth connectivity and its limited range.
+
+    <p><strong>中文理由：</strong></p>
+    禁用 <tt>bluetooth</tt> 服务可防止系统尝试连接蓝牙设备，因为此类连接存在一定安全风险。不过，由于蓝牙连接的实用性和有限范围，对此风险决策可能存在差异。
 
 severity: medium
 

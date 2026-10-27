@@ -15,10 +15,23 @@ description: |-
     following command:
     <pre>$ sudo chown root <i>DIR</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    <pre>/bin
+    /sbin
+    /usr/bin
+    /usr/sbin
+    /usr/local/bin
+    /usr/local/sbin</pre>
+    所有这些目录都应由 <tt>root</tt> 用户拥有。如果发现这些目录中的任何目录 <i>DIR</i> 由 root 以外的用户拥有，请使用以下命令更正其所有权：
+    <pre>$ sudo chown root <i>DIR</i></pre>
+
 rationale: |-
     System binaries are executed by privileged users as well as system services,
     and restrictive permissions are necessary to ensure that their
     execution of these programs cannot be co-opted.
+
+    <p><strong>中文理由：</strong></p>
+    系统二进制文件由特权用户和系统服务执行，必须设置严格权限，以确保这些程序的执行不能被劫持或滥用。
 
 severity: medium
 

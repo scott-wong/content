@@ -2,12 +2,19 @@ documentation_complete: true
 
 title: 'Verify User Who Owns /var/log/auth.log File'
 
-description: '{{{ describe_file_owner(file="/var/log/auth.log", owner="syslog|root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/var/log/auth.log", owner="syslog|root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log/auth.log</tt> 的文件所有者必须为 <tt>syslog</tt> 或 <tt>root</tt>。
 
 rationale: |-
     The <tt>/var/log/auth.log</tt> file contains records information about user
     login attempts and authentication processes and should only be accessed by
     authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/auth.log</tt> 文件包含有关用户登录尝试和身份验证过程的信息，只应由经过授权的人员访问。
 
 severity: medium
 

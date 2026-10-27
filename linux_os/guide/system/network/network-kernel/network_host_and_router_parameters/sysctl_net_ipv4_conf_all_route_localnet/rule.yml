@@ -2,12 +2,21 @@ documentation_complete: true
 
 title: 'Prevent Routing External Traffic to Local Loopback on All IPv4 Interfaces'
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.all.route_localnet", value="0")}}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.all.route_localnet", value="0")}}}
+
+    <p><strong>中文说明：</strong></p>
+    要设置内核参数 <tt>net.ipv4.conf.all.route_localnet</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv4.conf.all.route_localnet=0</tt>
+
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv4.conf.all.route_localnet = 0</tt>
 
 rationale: |-
     Refuse the routing of packets whose source or destination address is the local loopback.
     This prohibits the use of network 127/8 for local routing purposes.
     Enabling <tt>route_localnet</tt> can expose applications listening on localhost to external traffic.
+
+    <p><strong>中文理由：</strong></p>
+    拒绝转发源地址或目标地址为本地环回的数据包。这会禁止将网络 127/8 用于本地路由目的。启用 <tt>route_localnet</tt> 可能使侦听 localhost 的应用暴露于外部流量。
 
 severity: medium
 

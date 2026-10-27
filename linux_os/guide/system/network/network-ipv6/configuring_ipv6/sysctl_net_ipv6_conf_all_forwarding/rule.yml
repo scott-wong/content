@@ -3,12 +3,21 @@ documentation_complete: true
 
 title: 'Disable Kernel Parameter for IPv6 Forwarding'
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.all.forwarding", value="0") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.all.forwarding", value="0") }}}
+
+    <p><strong>中文说明：</strong></p>
+    要设置内核参数 <tt>net.ipv6.conf.all.forwarding</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv6.conf.all.forwarding=0</tt>
+
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv6.conf.all.forwarding = 0</tt>
 
 rationale: |-
     IP forwarding permits the kernel to forward packets from one network
     interface to another. The ability to forward packets between two networks is
     only appropriate for systems acting as routers.
+
+    <p><strong>中文理由：</strong></p>
+    IP 转发允许内核将数据包从一个网络接口转发到另一个接口。在两个网络之间转发数据包的能力仅适用于充当路由器的系统。
 
 severity: medium
 

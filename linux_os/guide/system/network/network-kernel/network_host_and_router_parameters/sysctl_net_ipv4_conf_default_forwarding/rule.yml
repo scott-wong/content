@@ -2,12 +2,19 @@ documentation_complete: true
 
 title: Disable Kernel Parameter for IPv4 Forwarding By Default
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.default.forwarding", value="0") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.default.forwarding", value="0") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>net.ipv4.conf.default.forwarding</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.forwarding=0</tt>；要持久化，请将 <tt>net.ipv4.conf.default.forwarding = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     IP forwarding permits the kernel to forward packets from one network
     interface to another. The ability to forward packets between two networks is
     only appropriate for systems acting as routers.
+
+    <p><strong>中文理由：</strong></p>
+    IP 转发允许内核将数据包从一个网络接口转发到另一个网络接口。只有充当路由器的系统才适合在两个网络之间转发数据包。
 
 severity: medium
 

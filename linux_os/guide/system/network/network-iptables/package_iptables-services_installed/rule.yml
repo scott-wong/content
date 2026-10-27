@@ -6,11 +6,17 @@ title: 'Install iptables-services Package'
 description: |-
     {{{ describe_package_install(package="iptables-services") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>iptables-services</tt> 软件包。
+
 rationale: |-
     <tt>iptables-services</tt> provides the services iptables and ip6tables that have been split
     out of the base package since they are not active by default anymore.
     These services load the iptables rules during the system startup and also allow one to reload
     the iptables rules during runtime.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>iptables-services</tt> 提供 iptables 和 ip6tables 服务，这些服务已从基础软件包中拆分出来，因为它们默认不再处于活动状态。这些服务在系统启动期间加载 iptables 规则，也允许在运行时重新加载 iptables 规则。
 
 severity: medium
 

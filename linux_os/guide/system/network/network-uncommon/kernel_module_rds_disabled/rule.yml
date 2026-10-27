@@ -8,9 +8,16 @@ description: |-
     low-latency communications between nodes in a cluster.
     {{{ describe_module_disable(module="rds") }}}
 
+    <p><strong>中文说明：</strong></p>
+    Reliable Datagram Sockets（RDS）协议是一种传输层协议，旨在为集群中的节点之间提供可靠的高带宽、低延迟通信。
+    应禁用内核模块 <tt>rds</tt>。
+
 rationale: |-
     Disabling RDS protects
     the system against exploitation of any flaws in its implementation.
+
+    <p><strong>中文理由：</strong></p>
+    禁用该内核模块可防止攻击者利用其实现中的缺陷。
 
 severity: low
 

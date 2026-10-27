@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify User Who Owns /var/log/lastlog File'
 
-description: '{{{ describe_file_owner(file="/var/log/lastlog", owner="root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/var/log/lastlog", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log/lastlog</tt> 的文件所有者必须为 <tt>root</tt>。
 
 rationale: |-
     The <tt>/var/log/lastlog</tt> file contains logs of reports the most recent login of all users
     and should only be accessed by authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/lastlog</tt> 文件包含所有用户最近一次登录报告，只应由经过授权的人员访问。
 
 severity: medium
 

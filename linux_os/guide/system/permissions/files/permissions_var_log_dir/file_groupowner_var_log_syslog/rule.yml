@@ -3,7 +3,11 @@ documentation_complete: true
 title: 'Verify Group Who Owns /var/log/syslog File'
 
 {{%- if product in ['ubuntu2404'] %}}
-description: '{{{ describe_file_group_owner(file="/var/log/syslog", group="adm|root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/var/log/syslog", group="adm|root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log/syslog</tt> 的文件所属组必须为 <tt>adm</tt> 或 <tt>root</tt>。
 {{%- else %}}
 description: '{{{ describe_file_group_owner(file="/var/log/syslog", group="adm") }}}'
 {{%- endif %}}
@@ -11,6 +15,9 @@ description: '{{{ describe_file_group_owner(file="/var/log/syslog", group="adm")
 rationale: |-
     The <tt>/var/log/syslog</tt> file contains logs of error messages in
     the system and should only be accessed by authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/syslog</tt> 文件包含系统错误消息日志，只应由经过授权的人员访问。
 
 severity: medium
 

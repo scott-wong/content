@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify User Who Owns gshadow File'
 
-description: '{{{ describe_file_owner(file="/etc/gshadow", owner="root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/etc/gshadow", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    要将 <tt>/etc/gshadow</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /etc/gshadow</tt>。
 
 rationale: |-
     The <tt>/etc/gshadow</tt> file contains group password hashes. Protection of this file
     is critical for system security.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/gshadow</tt> 文件包含组密码哈希。保护该文件对系统安全至关重要。
 
 severity: medium
 

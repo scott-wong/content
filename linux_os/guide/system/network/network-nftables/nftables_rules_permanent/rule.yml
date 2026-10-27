@@ -10,9 +10,15 @@ description: |-
     include in the nftables ruleset. A nftables ruleset containing the input, forward, and output
     base chains allow network traffic to be filtered.
 
+    <p><strong>中文说明：</strong></p>
+    nftables 是 Linux 内核的子系统，用于对网络数据包、数据报和帧进行过滤和分类。nftables 服务会读取 <tt>{{{ xccdf_value("var_nftables_master_config_file") }}}</tt> 文件中的一个或多个 nftables 文件，并将其包含到 nftables 规则集中。包含 input、forward 和 output 基础链的 nftables 规则集允许对网络流量进行过滤。
+
 rationale: |-
     Changes made to nftables ruleset only affect the live system, you will also need to configure
     the nftables ruleset to apply on boot
+
+    <p><strong>中文理由：</strong></p>
+    对 nftables 规则集所做的更改只影响正在运行的系统，还需要配置 nftables 规则集以便在启动时应用。
 
 severity: medium
 

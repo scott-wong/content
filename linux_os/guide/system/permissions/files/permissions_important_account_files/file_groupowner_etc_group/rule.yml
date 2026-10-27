@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Group Who Owns group File'
 
-description: '{{{ describe_file_group_owner(file="/etc/group", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/group", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    要将 <tt>/etc/group</tt> 的所属组正确设置为 <tt>root</tt>，请运行 <tt>sudo chgrp root /etc/group</tt>。
 
 rationale: |-
     The <tt>/etc/group</tt> file contains information regarding groups that are configured
     on the system. Protection of this file is important for system security.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/group</tt> 文件包含有关系统上已配置组的信息。保护该文件对系统安全很重要。
 
 severity: medium
 

@@ -13,9 +13,15 @@ description: |-
     references from the <tt>/etc/dhclient.conf</tt> configuration file and/or any
     reference from the <tt>/etc/dhcp</tt> directory.
 
+    <p><strong>中文说明：</strong></p>
+    动态 DNS 允许客户端动态更新自己的 DNS 记录。这些更新以未加密方式传输，可能向潜在恶意用户泄露信息。如果系统不需要动态 DNS，请从 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 脚本中删除所有 <tt>DHCP_HOSTNAME</tt> 引用。如果使用 <tt>dhclient</tt>，请从 <tt>/etc/dhclient.conf</tt> 配置文件中和/或 <tt>/etc/dhcp</tt> 目录的任何引用中删除所有 <tt>send host-name <i>hostname</i></tt> 引用。
+
 rationale: |-
     Dynamic DNS updates transmit unencrypted information about a system
     including its name and address and should not be used unless needed.
+
+    <p><strong>中文理由：</strong></p>
+    动态 DNS 更新以未加密方式传输有关系统的信息，包括其名称和地址，除非需要，否则不应使用。
 
 severity: medium
 

@@ -6,10 +6,16 @@ title: 'Disable Kernel cfg80211 Module'
 description: |-
     {{{ describe_module_disable(module="cfg80211") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用内核模块 <tt>cfg80211</tt>。
+
 rationale: |-
     If Wireless functionality must be disabled, preventing the kernel
     from loading the kernel module provides an additional safeguard against its
     activation.
+
+    <p><strong>中文理由：</strong></p>
+    如果必须禁用无线功能，阻止内核加载该内核模块可为防止其激活提供额外保障。
 
 severity: medium
 

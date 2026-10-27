@@ -5,9 +5,15 @@ title: 'Verify Permissions on /var/log/secure File'
 description: |-
     {{{ describe_file_permissions(file="/var/log/secure", perms="0640") }}}
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/var/log/secure</tt> 的权限必须为 <tt>0640</tt>。
+
 rationale: |-
     The <tt>/var/log/secure</tt> file contains information related to authentication
     and authorization privileges and should only be accessed by authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/secure</tt> 文件包含与身份验证和授权权限相关的信息，只应由经过授权的人员访问。
 
 severity: medium
 

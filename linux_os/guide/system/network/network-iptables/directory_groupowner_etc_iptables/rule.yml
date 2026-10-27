@@ -2,13 +2,20 @@ documentation_complete: true
 
 title: Verify Group Who Owns /etc/iptables Directory
 
-description: '{{{ describe_file_group_owner(file="/etc/iptables", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/iptables", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保目录 <tt>/etc/iptables</tt> 的所属组为 <tt>root</tt>。
 
 rationale: |-
     The ownership of the /etc/iptables directory by the root group is important
     because this directory hosts iptables configuration. Protection of this
     file is critical for system security. Assigning the ownership to root
     ensures exclusive control of the iptables configuration.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/iptables</tt> 目录由 <tt>root</tt> 组所属非常重要，因为此目录存放 iptables 配置。保护此文件对系统安全至关重要。将所有权分配给 root 可确保对 iptables 配置的独占控制。
 
 severity: medium
 

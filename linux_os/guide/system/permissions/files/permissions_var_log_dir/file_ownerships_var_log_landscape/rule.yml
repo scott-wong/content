@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Ownership of Files in /var/log/landscape'
 
-description: '{{{ describe_file_owner(file="/var/log/landscape/*", owner="root|landscape") }}}'
+description: |-
+    {{{ describe_file_owner(file="/var/log/landscape/*", owner="root|landscape") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log/landscape/*</tt> 的文件所有者必须为 <tt>root</tt> 或 <tt>landscape</tt>。
 
 rationale: |-
     The <tt>/var/log/landscape</tt> directory contains information about
     the landscape-client and should only be accessed by authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/landscape</tt> 目录包含 landscape-client 信息，只应由经过授权的人员访问。
 
 severity: medium
 

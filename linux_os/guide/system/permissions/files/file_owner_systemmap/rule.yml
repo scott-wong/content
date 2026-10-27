@@ -9,10 +9,18 @@ description: |-
 
     {{{ describe_file_owner(file="/boot/System.map*", owner="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    System.map 文件是在编译 Linux 内核期间生成的符号映射文件。它们包含内核符号与其对应内存地址之间的映射。这些文件的所有者必须为 root。
+
+    要将 <tt>/boot/System.map*</tt> 的所有者正确设置为 <tt>root</tt>，请运行 <tt>sudo chown root /boot/System.map*</tt>。
+
 rationale: |-
     The purpose of <tt>System.map</tt> files is primarily for debugging and profiling the kernel.
     Unrestricted access to these files might disclose information useful to attackers and
     malicious software leading to more sophisticated exploitation.
+
+    <p><strong>中文理由：</strong></p>
+    System.map 文件主要用于调试和分析内核。不受限制地访问这些文件可能泄露对攻击者和恶意软件有用的信息，从而导致更复杂的漏洞利用。
 
 severity: low
 

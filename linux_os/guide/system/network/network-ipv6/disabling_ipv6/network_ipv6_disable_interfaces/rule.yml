@@ -8,7 +8,14 @@ description: |-
     <pre>NETWORKING_IPV6=no
     IPV6INIT=no</pre>
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    要禁用 IPv6 的接口使用，请在 <tt>/etc/sysconfig/network</tt> 中添加或修正以下行：
+    <pre>NETWORKING_IPV6=no
+    IPV6INIT=no</pre>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用 IPv6 接口使用可减少未使用的协议栈和攻击面，并防止系统通过不需要的 IPv6 接口通信。
 
 severity: unknown
 

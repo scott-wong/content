@@ -6,9 +6,15 @@ title: 'Verify Permissions on /etc/shells File'
 description:  |-
     {{{ describe_file_permissions(file="/etc/shells", perms="0644") }}}
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/etc/shells</tt> 的权限必须为 <tt>0644</tt>。
+
 rationale: |-
     The <tt>/etc/shells</tt> file contains the list of full pathnames to shells on the system.
     Since this file is used by many system programs this file should be protected.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/shells</tt> 文件包含系统上 shell 的完整路径名列表。由于许多系统程序使用该文件，因此应保护该文件。
 
 severity: medium
 

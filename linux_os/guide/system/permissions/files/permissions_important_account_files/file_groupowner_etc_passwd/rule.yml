@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Group Who Owns passwd File'
 
-description: '{{{ describe_file_group_owner(file="/etc/passwd", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/passwd", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    要将 <tt>/etc/passwd</tt> 的所属组正确设置为 <tt>root</tt>，请运行 <tt>sudo chgrp root /etc/passwd</tt>。
 
 rationale: |-
     The <tt>/etc/passwd</tt> file contains information about the users that are configured on
     the system. Protection of this file is critical for system security.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/passwd</tt> 文件包含有关系统上已配置用户的信息。保护该文件对系统安全至关重要。
 
 severity: medium
 

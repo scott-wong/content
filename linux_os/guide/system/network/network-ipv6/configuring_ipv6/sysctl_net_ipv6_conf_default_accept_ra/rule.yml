@@ -3,9 +3,19 @@ documentation_complete: true
 
 title: 'Disable Accepting Router Advertisements on all IPv6 Interfaces by Default'
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.default.accept_ra", value="0") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.default.accept_ra", value="0") }}}
 
-rationale: 'An illicit router advertisement message could result in a man-in-the-middle attack.'
+    <p><strong>中文说明：</strong></p>
+    要设置内核参数 <tt>net.ipv6.conf.default.accept_ra</tt> 的运行时状态，请运行以下命令：<tt>sudo sysctl -w net.ipv6.conf.default.accept_ra=0</tt>
+
+    为确保该设置持久生效，请将以下行添加到 <tt>/etc/sysctl.d</tt> 目录中的文件：<tt>net.ipv6.conf.default.accept_ra = 0</tt>
+
+rationale: |-
+    An illicit router advertisement message could result in a man-in-the-middle attack.
+
+    <p><strong>中文理由：</strong></p>
+    非法的路由器通告消息可能导致中间人攻击。
 
 severity: medium
 

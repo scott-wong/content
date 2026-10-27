@@ -9,10 +9,17 @@ description: |-
     the connection tracking system, NAT, userspace queuing and logging subsystem.
     {{{ describe_package_install(package="nftables") }}}
 
+    <p><strong>中文说明：</strong></p>
+    nftables 提供新的内核内数据包分类框架，该框架基于网络专用虚拟机（VM）和新的 nft 用户空间命令行工具。nftables 复用现有 Netfilter 子系统，例如现有钩子基础设施、连接跟踪系统、NAT、用户空间排队和日志子系统。
+    应安装 <tt>nftables</tt> 软件包。
+
 rationale: |-
     <tt>nftables</tt> is a subsystem of the Linux kernel that can protect against threats
     originating from within a corporate network to include malicious mobile code and poorly
     configured software on a host.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>nftables</tt> 是 Linux 内核的子系统，可防御源自企业网络内部的威胁，包括恶意移动代码和主机上配置不当的软件。
 
 severity: medium
 

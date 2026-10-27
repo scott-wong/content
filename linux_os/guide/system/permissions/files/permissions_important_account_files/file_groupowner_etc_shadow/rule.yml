@@ -8,11 +8,18 @@ title: 'Verify Group Who Owns shadow File'
     {{% set target_group="root" %}}
 {{% endif %}}
 
-description: '{{{ describe_file_group_owner(file="/etc/shadow", group=target_group) }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/shadow", group=target_group) }}}
+
+    <p><strong>中文说明：</strong></p>
+    要将 <tt>/etc/shadow</tt> 的所属组正确设置为 <tt>{{{ target_group }}}</tt>，请运行 <tt>sudo chgrp {{{ target_group }}} /etc/shadow</tt>。
 
 rationale: |-
     The <tt>/etc/shadow</tt> file stores password hashes. Protection of this file is
     critical for system security.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/shadow</tt> 文件存储密码哈希。保护该文件对系统安全至关重要。
 
 severity: medium
 

@@ -14,6 +14,12 @@ description: |-
     To set the sticky bit on a world-writable directory <i>DIR</i>, run the following command:
     <pre>$ sudo chmod +t <i>DIR</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    在目录上设置所谓的 "sticky bit" 后，只有给定文件的所有者才能从该目录中删除该文件。如果没有 sticky bit，任何对目录具有写访问权限的用户都可删除目录中的任何文件。设置 sticky bit 可防止用户删除彼此的文件。如果目录没有理由全局可写，更好的解决方案是移除该权限，而不是设置 sticky bit。但是，如果目录由特定应用使用，请查阅该应用文档，而不要盲目更改模式。
+    <br />
+    要为全局可写目录 <i>DIR</i> 设置 sticky bit，请运行以下命令：
+    <pre>$ sudo chmod +t <i>DIR</i></pre>
+
 rationale: |-
     Failing to set the sticky bit on public directories allows unauthorized users to delete files
     in the directory structure.
@@ -22,6 +28,9 @@ rationale: |-
     system, or those designed to be temporary file repositories. The setting is normally reserved
     for directories used by the system, by users for temporary file storage (such as <tt>/tmp</tt>),
     and for directories requiring global read/write access.
+
+    <p><strong>中文理由：</strong></p>
+    未在公共目录上设置 sticky bit 会使未经授权用户能够删除目录结构中的文件。<br /><br />唯一授权的公共目录是系统提供的临时目录，或设计为临时文件存储库的目录。该设置通常保留给系统使用的目录、用户用于临时文件存储的目录（例如 <tt>/tmp</tt>）以及需要全局读写访问权限的目录。
 
 severity: medium
 

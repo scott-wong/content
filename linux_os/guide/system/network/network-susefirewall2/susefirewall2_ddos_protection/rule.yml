@@ -18,6 +18,17 @@ description: |-
     If the "FW_SERVICES_ACCEPT_EXT" rule does not contain both the
     <tt>hitcount</tt> and <tt>blockseconds</tt> parameters, this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>SuSEfirewall2</tt> 软件包并启用 <tt>SuSEfirewall2</tt> 服务。
+
+    验证“SuSEfirewall2”已配置为保护 SUSE 操作系统免受 DoS 攻击或限制其影响。
+
+    运行以下命令：
+    <pre># grep -i fw_services_accept_ext /etc/sysconfig/SuSEfirewall2
+    FW_SERVICES_ACCEPT_EXT="0/0,tcp,22,,hitcount=3,blockseconds=60,recentname=ssh"</pre>
+
+    如果“FW_SERVICES_ACCEPT_EXT”规则未同时包含 <tt>hitcount</tt> 和 <tt>blockseconds</tt> 参数，则属于发现问题。
+
 rationale: |-
     DoS is a condition when a resource is not available for legitimate users.
     When this occurs, the organization either cannot accomplish its mission or
@@ -31,6 +42,11 @@ rationale: |-
     DoS attacks (e.g., limiting processes or establishing memory partitions).
     Employing increased capacity and bandwidth, combined with service
     redundancy, may reduce the susceptibility to some DoS attacks.
+
+    <p><strong>中文理由：</strong></p>
+    DoS 是指合法用户无法使用资源的情况。发生这种情况时，组织要么无法完成任务，要么必须以降级容量运行。
+
+    本要求涉及 SUSE 操作系统配置，以减轻已发生或正在进行的 DoS 攻击对系统可用性的影响。对于每个系统，必须识别已知和潜在的 DoS 攻击，并针对每种攻击实施解决方案。存在多种技术可限制或有时消除 DoS 攻击影响（例如限制进程或建立内存分区）。增加容量和带宽并结合服务冗余，可降低对某些 DoS 攻击的敏感性。
 
 severity: medium
 

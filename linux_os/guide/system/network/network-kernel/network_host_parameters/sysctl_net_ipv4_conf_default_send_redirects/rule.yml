@@ -3,7 +3,11 @@ documentation_complete: true
 
 title: 'Disable Kernel Parameter for Sending ICMP Redirects on all IPv4 Interfaces by Default'
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.default.send_redirects", value="0") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv4.conf.default.send_redirects", value="0") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>net.ipv4.conf.default.send_redirects</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w net.ipv4.conf.default.send_redirects=0</tt>；要持久化，请将 <tt>net.ipv4.conf.default.send_redirects = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     ICMP redirect messages are used by routers to inform hosts that a more
@@ -11,6 +15,9 @@ rationale: |-
     from the system's route table possibly revealing portions of the network topology.
     <br />
     The ability to send ICMP redirects is only appropriate for systems acting as routers.
+
+    <p><strong>中文理由：</strong></p>
+    ICMP 重定向消息用于通知主机存在到达特定目标的更直接路由。这些消息包含系统路由表中的信息，可能泄露部分网络拓扑。<br />只有充当路由器的系统才适合发送 ICMP 重定向。
 
 severity: medium
 

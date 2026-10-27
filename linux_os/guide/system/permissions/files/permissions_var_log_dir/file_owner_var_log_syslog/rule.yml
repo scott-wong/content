@@ -3,7 +3,11 @@ documentation_complete: true
 title: 'Verify User Who Owns /var/log/syslog File'
 
 {{%  if product in ['ubuntu2404'] %}}
-description: '{{{ describe_file_owner(file="/var/log/syslog", owner="syslog|root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/var/log/syslog", owner="syslog|root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log/syslog</tt> 的文件所有者必须为 <tt>syslog</tt> 或 <tt>root</tt>。
 {{%- elif 'debian' in product %}}
 description: '{{{ describe_file_owner(file="/var/log/syslog", owner="root") }}}'
 {{%- else %}}
@@ -13,6 +17,9 @@ description: '{{{ describe_file_owner(file="/var/log/syslog", owner="syslog") }}
 rationale: |-
     The <tt>/var/log/syslog</tt> file contains logs of error messages in
     the system and should only be accessed by authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/syslog</tt> 文件包含系统错误消息日志，只应由经过授权的人员访问。
 
 severity: medium
 

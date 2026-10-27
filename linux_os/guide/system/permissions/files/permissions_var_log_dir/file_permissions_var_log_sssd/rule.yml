@@ -5,9 +5,15 @@ title: 'Verify Permissions of Files in /var/log/sssd'
 description: |-
     {{{ describe_file_permissions(file="/var/log/sssd/*", perms="0660") }}}
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/var/log/sssd/*</tt> 的权限必须为 <tt>0660</tt>。
+
 rationale: |-
     The <tt>/var/log/sssd</tt> directory contains debug logs for the System
     Security Services Daemon (SSSD) and should only be accessed by authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/sssd</tt> 目录包含 System Security Services Daemon（SSSD）的调试日志，只应由经过授权的人员访问。
 
 severity: medium
 

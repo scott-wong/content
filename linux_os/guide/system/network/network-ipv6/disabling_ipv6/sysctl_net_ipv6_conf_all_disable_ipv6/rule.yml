@@ -9,9 +9,17 @@ description: |-
     This disables IPv6 on all network interfaces as other services and system
     functionality require the IPv6 stack loaded to work.
 
+    <p><strong>中文说明：</strong></p>
+    要禁用所有接口上的 IPv6 地址支持，请将以下行添加到 <tt>/etc/sysctl.d/ipv6.conf</tt>（或 <tt>/etc/sysctl.d</tt> 中的另一个文件）：
+    <pre>net.ipv6.conf.all.disable_ipv6 = 1</pre>
+    这会在所有网络接口上禁用 IPv6，因为其他服务和系统功能需要加载 IPv6 栈才能正常工作。
+
 rationale: |-
     Any unnecessary network stacks - including IPv6 - should be disabled, to reduce
     the vulnerability to exploitation.
+
+    <p><strong>中文理由：</strong></p>
+    任何不必要的网络协议栈（包括 IPv6）都应禁用，以减少被利用的漏洞。
 
 severity: medium
 

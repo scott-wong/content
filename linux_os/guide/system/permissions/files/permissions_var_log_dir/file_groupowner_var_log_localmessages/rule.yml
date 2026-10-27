@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Group Who Owns /var/log/localmessages* File'
 
-description: '{{{ describe_file_group_owner(file="/var/log/localmessages*", group="adm|root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/var/log/localmessages*", group="adm|root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/log/localmessages*</tt> 的文件所属组必须为 <tt>adm</tt> 或 <tt>root</tt>。
 
 rationale: |-
     The <tt>/var/log/localmessages*</tt> file contains log messages from certain boot scripts,
     including the DHCP client, and should only be accessed by authorized personnel.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/localmessages*</tt> 文件包含某些启动脚本（包括 DHCP 客户端）的日志消息，只应由经过授权的人员访问。
 
 severity: medium
 

@@ -2,13 +2,20 @@ documentation_complete: true
 
 title: Verify Permissions On /etc/iptables Directory
 
-description: '{{{ describe_file_permissions(file="/etc/iptables", perms="0700") }}}'
+description: |-
+    {{{ describe_file_permissions(file="/etc/iptables", perms="0700") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保目录 <tt>/etc/iptables</tt> 的权限为 <tt>0700</tt> 或更严格。
 
 rationale: |-
     Setting correct permissions on the /etc/iptables directory is important
     because this directory hosts iptables configuration. Protection of this
     directory is critical for system security. Restricting the permissions
     ensures exclusive control of the iptables configuration.
+
+    <p><strong>中文理由：</strong></p>
+    为 <tt>/etc/iptables</tt> 目录设置正确权限非常重要，因为此目录存放 iptables 配置。保护此目录对系统安全至关重要。限制权限可确保对 iptables 配置的独占控制。
 
 severity: medium
 

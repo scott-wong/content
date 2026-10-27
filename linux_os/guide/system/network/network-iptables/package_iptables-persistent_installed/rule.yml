@@ -5,9 +5,15 @@ title: 'Install iptables-persistent Package'
 description: |-
     {{{ describe_package_install(package="iptables-persistent") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>iptables-persistent</tt> 软件包。
+
 rationale: |-
     A method of configuring and maintaining firewall rules is
     necessary to configure a Host Based Firewall.
+
+    <p><strong>中文理由：</strong></p>
+    需要一种配置和维护防火墙规则的方法来配置基于主机的防火墙。
 
 severity: medium
 

@@ -26,6 +26,23 @@ description: |-
     a rate-limit on the eth0 interface follows:
     <pre>$ sudo ufw limit in on eth0</pre>
 
+    <p><strong>中文说明：</strong></p>
+    操作系统必须配置 uncomplicated firewall，以对受影响的网络接口进行速率限制。
+
+    使用以下命令检查所有正在监听端口的服务：
+    <pre>$ sudo ss -l46ut
+    Netid State Recv-Q Send-Q Local Address:Port Peer Address:Port Process
+    tcp LISTEN 0 128 [::]:ssh [::]:*</pre>
+
+    对于每个条目，使用以下命令验证 ufw 已配置为对服务端口进行速率限制：
+    <pre>$ sudo ufw status</pre>
+
+    如果任何处于“LISTEN”状态的端口没有标记“LIMIT”操作，请运行以下命令，并将“service”替换为需要速率限制的服务：
+    <pre>$ sudo ufw limit "service"</pre>
+
+    也可以对接口进行速率限制。以下示例在 eth0 接口上添加速率限制：
+    <pre>$ sudo ufw limit in on eth0</pre>
+
 rationale: |-
     This requirement addresses the configuration of the operating system to
     mitigate the impact of DoS attacks that have occurred or are ongoing on
@@ -35,6 +52,9 @@ rationale: |-
     of DoS attacks (e.g., limiting processes or establishing memory
     partitions). Employing increased capacity and bandwidth, combined with
     service redundancy, may reduce the susceptibility to some DoS attacks.
+
+    <p><strong>中文理由：</strong></p>
+    本要求涉及操作系统配置，以减轻已发生或正在进行的 DoS 攻击对系统可用性的影响。对于每个系统，必须识别已知和潜在的 DoS 攻击，并针对每种攻击实施解决方案。存在多种技术可限制或有时消除 DoS 攻击影响（例如限制进程或建立内存分区）。增加容量和带宽并结合服务冗余，可降低对某些 DoS 攻击的敏感性。
 
 severity: medium
 

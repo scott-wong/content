@@ -18,8 +18,24 @@ description: |-
    type filter hook output priority 0; policy drop;
    </pre>
 
+   <p><strong>中文说明：</strong></p>
+   基础链策略是到达链末尾的数据包所应用的默认判定。有两种策略：accept（默认）和 drop。如果策略设置为 accept，防火墙将接受任何未配置为拒绝的数据包，该数据包将继续遍历网络栈。
+
+   运行以下命令并验证基础链包含 DROP 策略。
+   <pre>
+   $ nft list ruleset | grep 'hook input'
+   type filter hook input priority 0; policy drop;
+   $ nft list ruleset | grep 'hook forward'
+   type filter hook forward priority 0; policy drop;
+   $ nft list ruleset | grep 'hook output'
+   type filter hook output priority 0; policy drop;
+   </pre>
+
 rationale: |
    It is easier to allow acceptable usage than to block unacceptable usage.
+
+   <p><strong>中文理由：</strong></p>
+   允许可接受的用法比阻止不可接受的用法更容易。
 
 severity: medium
 
