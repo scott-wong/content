@@ -8,11 +8,17 @@ description: |-
   for the cluster. The flag <pre>fips: true</pre> must be enabled
   at install time in the <pre>install-config.yaml</pre> file.
 
+  <p><strong>中文说明：</strong></p>
+  OpenShift 提供了可在集群安装时启用 FIPS 模式的标志。必须在安装时启用标志 <pre>fips: true</pre>，该标志位于 <pre>install-config.yaml</pre> 文件中。
+
 rationale: |-
   Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to
   protect data. The system must implement cryptographic modules adhering to the higher
   standards approved by the federal government since this provides assurance they have been tested
   and validated.
+
+  <p><strong>中文理由：</strong></p>
+  使用薄弱或未经测试的加密算法会削弱利用加密保护数据的目的。系统必须实现符合联邦政府批准的更高标准的加密模块，因为这可确保这些模块已经过测试和验证。
 
 
 identifiers:

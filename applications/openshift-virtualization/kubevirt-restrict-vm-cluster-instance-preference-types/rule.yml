@@ -11,6 +11,9 @@ description: |-
     <tt>virtualmachineclusterpreferences</tt> resources, verifying that
     only approved subjects are bound to those permissions.
 
+    <p><strong>中文说明：</strong></p>
+    由于授权主体集合因环境而异，此规则需要手动验证。组织可以创建使用 CEL 的 CustomRule，通过评估 ClusterRoleBinding 和 ClusterRole 对 <tt>virtualmachineclusterinstancetypes</tt> 和 <tt>virtualmachineclusterpreferences</tt> 资源的 create 与 update 访问权限，验证仅批准的主体被绑定到这些权限，从而自动执行此检查。
+
 rationale: |-
     Cluster instance types and preferences govern the default hardware
     and configuration settings applied to new virtual machines. If
@@ -19,6 +22,9 @@ rationale: |-
     controls, or allocate excessive resources across the cluster.
     Restricting access ensures that only approved administrators
     define the VM profiles available to tenants.
+
+    <p><strong>中文理由：</strong></p>
+    集群实例类型和首选项决定应用于新虚拟机的默认硬件与配置设置。如果未授权主体能够创建或修改这些资源，他们可能引入过于宽松的设置、禁用安全控制或在集群范围内分配过多资源。限制访问可确保只有经批准的管理员才能定义为租户提供的 VM 配置档。
 
 severity: medium
 

@@ -10,6 +10,9 @@ description: |-
     and verifies that only approved subjects and destination namespaces are
     bound.
 
+    <p><strong>中文说明：</strong></p>
+    由于授权主体和命名空间集合因集群而异，此规则无法自动评估，因此会报告为手动检查。组织可以创建使用 CEL 的 CustomRule，列出引用 <tt>datavolume-cloner</tt> ClusterRole 的 RoleBinding，并验证仅批准的主体和目标命名空间被绑定。
+
 rationale: |-
     Cross-namespace DataVolume cloning copies disk image data between
     namespaces. If the rolebindings that grant cloning permissions are
@@ -18,6 +21,9 @@ rationale: |-
     and restricting these rolebindings ensures that only intended
     namespaces and subjects can perform cross-namespace disk cloning
     operations.
+
+    <p><strong>中文理由：</strong></p>
+    跨命名空间 DataVolume 克隆会在命名空间之间复制磁盘镜像数据。如果授予克隆权限的 RoleBinding 范围过宽，目标命名空间中的未授权用户就能克隆源命名空间中包含敏感数据的磁盘。审查并限制这些 RoleBinding 可确保只有预期命名空间和主体能执行跨命名空间磁盘克隆操作。
 
 severity: medium
 

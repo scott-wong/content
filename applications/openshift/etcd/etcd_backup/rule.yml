@@ -12,9 +12,20 @@ description: |-
                 text="the relevant documentation") }}}.
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    应定期备份集群的 etcd 数据，并将其存储在安全位置，最好位于 OpenShift Container Platform 环境之外。在首次证书轮换完成之前不要执行 etcd 备份，首次轮换会在安装后 24 小时发生，否则备份将包含已过期的证书。还建议在非高峰使用时段执行 etcd 备份，因为 etcd 快照会产生较高的 I/O 开销。
+    </p>
+    <p>
+    有关更多信息，请遵循<a href="https://docs.openshift.com/container-platform/latest/backup_and_restore/control_plane_backup_and_restore/backing-up-etcd.html#backing-up-etcd-data_backup-etcd">相关文档</a>。
+    </p>
+
 rationale: |-
     While etcd automatically recovers from temporary failures, issues may arise if an etcd cluster loses more than (N-1)/2 or when an update goes wrong.
     Recurring backups of etcd enable you to recover from a disastrous fail.
+
+    <p><strong>中文理由：</strong></p>
+    虽然 etcd 可从临时故障中自动恢复，但如果 etcd 集群失去超过 (N-1)/2 个成员，或更新出现错误，则可能发生问题。定期备份 etcd 可帮助从灾难性故障中恢复。
 
 identifiers:
     cce@ocp4: CCE-88188-8

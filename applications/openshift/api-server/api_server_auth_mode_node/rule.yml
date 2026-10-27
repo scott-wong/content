@@ -11,12 +11,19 @@ title: Ensure authorization-mode Node is configured
 {{% set custom_jqfilter = '{{if ne .hypershift_cluster "None"}}' ~ hypershift_jqfilter ~ '{{else}}' ~  default_jqfilter ~ '{{end}}' %}}
 {{% set dump_path = default_api_path ~ ',' ~ default_jqfilter ~ ',' ~ custom_jqfilter %}}
 
-description: 'Restrict kubelet nodes to reading only objects associated with them.'
+description: |-
+    Restrict kubelet nodes to reading only objects associated with them.
+
+    <p><strong>中文说明：</strong></p>
+    限制 kubelet 节点，使其只能读取与其关联的对象。
 
 rationale: |-
   The Node authorization mode only allows kubelets to read Secret,
   ConfigMap, PersistentVolume, and PersistentVolumeClaim objects
   associated with their nodes.
+
+  <p><strong>中文理由：</strong></p>
+  Node 授权模式仅允许 kubelet 读取与其节点关联的 Secret、ConfigMap、PersistentVolume 和 PersistentVolumeClaim 对象。
 
 identifiers:
   cce@ocp4: CCE-83889-6

@@ -12,6 +12,9 @@ description: |-
     enabled adds unnecessary complexity without a corresponding
     security benefit.
 
+    <p><strong>中文说明：</strong></p>
+    Intel Trusted Execution Technology (TXT) 应在主机 BIOS/固件设置中禁用。TXT 通过测量启动环境（Measured Launch Environment）提供基于硬件的内存保护，但它可能与虚拟化工作负载冲突，并在某些 Hypervisor 配置中引入兼容性问题。在未主动将 TXT 用于测量启动的环境中，使其保持启用会增加不必要的复杂性，却不会带来相应的安全收益。
+
 rationale: |-
     TXT can interfere with virtualization features and introduce
     unexpected behavior during host boot and workload scheduling.
@@ -19,6 +22,9 @@ rationale: |-
     reduces the attack surface associated with the TXT firmware
     interface and avoids potential conflicts with the hypervisor
     and virtual machine management stack.
+
+    <p><strong>中文理由：</strong></p>
+    TXT 可能干扰虚拟化功能，并在主机启动和工作负载调度期间引入意外行为。当 TXT 不属于安全架构的一部分时，将其禁用可减少与 TXT 固件接口相关的攻击面，并避免与 Hypervisor 及虚拟机管理栈发生潜在冲突。
 
 severity: medium
 

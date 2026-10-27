@@ -7,12 +7,17 @@ description: |-
   OpenShift has an installation-time flag that can enable LUKS (TPM2 or TANG) full disk encryption
   at installation. The object <pre>luks</pre> must be present at install time in the <pre>machineconfig</pre> file
   prepared with the <pre>install-config.yaml</pre> file.
-  
+
+  <p><strong>中文说明：</strong></p>
+  OpenShift 提供了可在安装时启用 LUKS（TPM2 或 TANG）全盘加密的安装时标志。必须在安装时于 <pre>luks</pre> 对象中启用全盘加密，并将该对象写入 <pre>machineconfig</pre> 文件；该文件根据 <pre>install-config.yaml</pre> 文件准备。
 rationale: |-
   Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to
   protect data. The system must implement cryptographic modules adhering to the higher
   standards approved by the federal government since this provides assurance they have been tested
   and validated.
+
+  <p><strong>中文理由：</strong></p>
+  使用薄弱或未经测试的加密算法会削弱利用加密保护数据的目的。系统必须实现符合联邦政府批准的更高标准的加密模块，因为这可确保这些模块已经过测试和验证。
 
 
 identifiers:

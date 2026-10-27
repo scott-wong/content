@@ -32,11 +32,33 @@ description: |-
       ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保 API Server 配置为仅使用强密码算法，请验证 <tt>openshift-kube-apiserver</tt> configmap 包含以下密码套件集合且未增补其他项：
+    <pre>
+    "servingInfo":{
+      ...
+      "cipherSuites": [
+        "TLS_AES_128_GCM_SHA256",
+        "TLS_AES_256_GCM_SHA384",
+        "TLS_CHACHA20_POLY1305_SHA256",
+        "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+        "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+        "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+        "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+        "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+        "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+      ],
+      ...
+    </pre>
+
 rationale: |-
     TLS ciphers have had a number of known vulnerabilities and weaknesses,
     which can reduce the protection provided. By default, OpenShift supports
     a number of TLS ciphersuites including some that have security concerns,
     weakening the protection provided.
+
+    <p><strong>中文理由：</strong></p>
+    TLS 密码套件存在若干已知漏洞和弱点，可能降低所提供的保护。默认情况下，OpenShift 支持多种 TLS 密码套件，其中一些存在安全问题，从而削弱所提供的保护。
 
 severity: medium
 

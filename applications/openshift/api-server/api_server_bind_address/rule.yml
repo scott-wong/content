@@ -16,6 +16,9 @@ description: |-
   or <tt>[::]:6443</tt> on IPv6 and dual-stack clusters, and listening with
   TLS enabled.
 
+  <p><strong>中文说明：</strong></p>
+  在 IPv4 集群中，bindAddress 默认设置为 <tt>0.0.0.0:6443</tt>；在 IPv6 和双栈集群中，默认设置为 <tt>[::]:6443</tt>，并在启用 TLS 的情况下进行监听。
+
 rationale: |-
   The OpenShift API server is served over HTTPS with authentication and authorization;
   the secure API endpoint is bound to <tt>0.0.0.0:6443</tt> (IPv4) or
@@ -23,6 +26,9 @@ rationale: |-
   supported way to access the API server pod is through the load balancer and then through
   the internal service. The value is set by the bindAddress argument under the servingInfo
   parameter.
+
+  <p><strong>中文理由：</strong></p>
+  OpenShift API Server 通过启用身份验证和授权的 HTTPS 提供服务；安全的 API 端点默认绑定到 <tt>0.0.0.0:6443</tt>（IPv4）或 <tt>[::]:6443</tt>（IPv6/双栈）。在 OpenShift 中，访问 API Server Pod 的唯一受支持方式是通过负载均衡器，再经由内部服务访问。该值由 servingInfo 参数下的 bindAddress 参数设置。
 
 identifiers:
   cce@ocp4: CCE-83646-0

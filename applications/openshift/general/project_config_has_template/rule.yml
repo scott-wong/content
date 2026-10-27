@@ -17,10 +17,20 @@ description: |-
     {{{ weblink(link="https://docs.openshift.com/container-platform/4.12/applications/projects/configuring-project-creation.html",
     text="the relevant documentation") }}}.
 
+    <p><strong>中文说明：</strong></p>
+    OpenShift Container Platform API 服务器会根据集群项目配置资源中由 <tt>projectRequestTemplate</tt> 参数标识的项目模板自动创建新项目。
+
+    作为集群管理员，可以修改默认项目模板，使新建项目满足所选合规标准。
+
+    有关更多信息，请参阅<a href="https://docs.openshift.com/container-platform/4.12/applications/projects/configuring-project-creation.html">相关文档</a>。
+
 rationale: |-
     Ensuring that the project configuration references
     a project template that sets up the required objects for new projects ensures
     that all new projects will be set in accordance with centralized settings.
+
+    <p><strong>中文理由：</strong></p>
+    确保项目配置引用一个为新项目设置所需对象的项目模板，可确保所有新项目都按照集中配置进行设置。
 
 severity: medium
 

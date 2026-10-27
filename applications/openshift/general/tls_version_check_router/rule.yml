@@ -6,11 +6,17 @@ title: Ensure TLS v1.2 is minimum for Openshift Router
 description: |-
   Verify tls version for the Openshift Router.
 
+  <p><strong>中文说明：</strong></p>
+  验证 OpenShift Router 的 TLS 版本。
+
 rationale: |-
   Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to
   protect data. The system must implement cryptographic modules adhering to the higher
   standards approved by the federal government since this provides assurance they have been tested
   and validated.
+
+  <p><strong>中文理由：</strong></p>
+  使用薄弱或未经测试的加密算法会削弱利用加密保护数据的目的。系统必须实现符合联邦政府批准的更高标准的加密模块，因为这可确保这些模块已经过测试和验证。
 
 
 identifiers:

@@ -9,6 +9,9 @@ description: |-
     granted the <tt>pods/exec</tt> permission, asserting that only your
     approved administrators appear in the results.
 
+    <p><strong>中文说明：</strong></p>
+    由于授权主体集合因组织而异，此规则需要手动验证。可考虑创建使用 CEL 的 CustomRule，检查 ClusterRoleBinding 和 RoleBinding 中被授予 <tt>pods/exec</tt> 权限的主体，并断言结果中仅出现已批准的管理员。
+
 rationale: |-
     Exec access to pods provides an interactive channel into the
     container runtime environment. In an OpenShift Virtualization
@@ -18,6 +21,9 @@ rationale: |-
     tampering, and privilege escalation. Restricting exec access
     ensures that only approved administrators can interact with
     running pods.
+
+    <p><strong>中文理由：</strong></p>
+    Pod 的 exec 访问提供了进入容器运行时环境的交互式通道。在 OpenShift Virtualization 环境中，这意味着可直接访问运行中虚拟机背后的进程。向未授权主体授予此能力会增加数据外泄、工作负载篡改和权限提升的风险。限制 exec 访问可确保只有经批准的管理员才能与运行中的 Pod 交互。
 
 severity: medium
 

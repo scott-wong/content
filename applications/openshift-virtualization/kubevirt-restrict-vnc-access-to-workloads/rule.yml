@@ -9,6 +9,9 @@ description: |-
     RoleBinding resources and verifying that only approved subjects
     are bound to the <tt>token.kubevirt.io:generate</tt> role.
 
+    <p><strong>中文说明：</strong></p>
+    由于授权主体集合因组织而异，此规则需要手动审查。组织可以创建使用 CEL 的 CustomRule，通过查询 RoleBinding 资源，验证仅批准的主体被绑定到 <tt>token.kubevirt.io:generate</tt> 角色。
+
 rationale: |-
     VNC provides direct graphical console access to a running virtual
     machine. In an OpenShift Virtualization environment, this access is
@@ -18,6 +21,9 @@ rationale: |-
     VNC access through careful role binding review ensures that only
     approved subjects can establish console sessions to cluster
     workloads.
+
+    <p><strong>中文理由：</strong></p>
+    VNC 提供对运行中虚拟机的直接图形控制台访问。在 OpenShift Virtualization 环境中，此访问由 <tt>token.kubevirt.io:generate</tt> 角色控制。如果该角色绑定范围过宽，未授权用户可查看和操作 VM 桌面、捕获屏幕内容并输入命令。通过仔细审查角色绑定来限制 VNC 访问，可确保只有经批准的主体能建立到集群工作负载的控制台会话。
 
 severity: medium
 

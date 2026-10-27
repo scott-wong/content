@@ -27,12 +27,26 @@ description: |-
       ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保将 etcd 配置为对客户端连接使用 TLS 加密，请遵循 OpenShift 文档，在 API Server 与 etcd 之间建立 TLS 连接。然后验证 <tt>openshift-kube-apiserver</tt> <tt>config</tt> configmap 中的 <tt>apiServerArguments</tt> 已将 <tt>etcd-cafile</tt> 配置为类似以下内容：
+    <pre>
+    "apiServerArguments": {
+      ...
+        "etcd-cafile": [
+            "/etc/kubernetes/static-pod-resources/configmaps/etcd-serving-ca/ca-bundle.crt"
+        ],
+      ...
+    </pre>
+
 rationale: |-
     etcd is a highly-available key-value store used by OpenShift deployments
     for persistent storage of all REST API objects. These objects are
     sensitive in nature and should be protected by client authentication. This
     requires the API Server to identify itself to the etcd server using
     a SSL Certificate Authority file.
+
+    <p><strong>中文理由：</strong></p>
+    etcd 是 OpenShift 部署使用的高可用键值存储，用于持久存储所有 REST API 对象。这些对象性质敏感，应通过客户端身份验证加以保护。这要求 API Server 使用 SSL 证书颁发机构文件向 etcd 服务器证明自身身份。
 
 identifiers:
   cce@ocp4: CCE-84216-1

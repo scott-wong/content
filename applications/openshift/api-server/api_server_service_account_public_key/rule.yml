@@ -24,6 +24,16 @@ description: |-
     ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保 API Server 使用其自身密钥对，请编辑 <tt>openshift-kube-apiserver</tt> configmap，并将 <tt>serviceAccountPublicKeyFiles</tt> 参数设置为服务账户的公钥文件：
+    <pre>
+    ...
+    "serviceAccountPublicKeyFiles":[
+      "/etc/kubernetes/static-pod-resources/configmaps/sa-token-signing-certs"
+    ],
+    ...
+    </pre>
+
 rationale: |-
     By default if no <tt>service-account-key-file</tt> is specified
     to the apiserver, it uses the private key from the TLS serving
@@ -31,6 +41,9 @@ rationale: |-
     keys for service account tokens are rotated as needed, a
     separate public/private key pair should be used for signing service
     account tokens.
+
+    <p><strong>中文理由：</strong></p>
+    默认情况下，如果未向 apiserver 指定 <tt>service-account-key-file</tt>，则它会使用 TLS 服务证书中的私钥来验证服务账户令牌。为确保服务账户令牌密钥能够按需轮换，应使用单独的公有/私有密钥对来签署服务账户令牌。
 
 identifiers:
   cce@ocp4: CCE-83350-9

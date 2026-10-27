@@ -9,6 +9,9 @@ description: |-
     machines should operate with the minimum necessary privileges, and the nonRoot
     feature gate ensures this principle is enforced at the platform level.
 
+    <p><strong>中文说明：</strong></p>
+    KubeVirt 中的 <tt>nonRoot</tt> 功能门控会启用限制，防止虚拟机以 root 权限运行。该功能强制实施安全边界，并有助于防止权限提升攻击。所有虚拟机都应以最小必要权限运行，nonRoot 功能门控可确保在平台层面强制实施这一原则。
+
 rationale: |-
     Unauthorized access to a root account without restrictions implemented by
     the nonRoot feature introduces the risk of unintended or unauthorized
@@ -17,6 +20,9 @@ rationale: |-
     in the <tt>kubevirt-hyperconverged</tt> resource, KubeVirt enforces non-root
     execution for virtual machine workloads, significantly reducing the attack
     surface and limiting the potential impact of security vulnerabilities.
+
+    <p><strong>中文理由：</strong></p>
+    如果 root 账户访问不受 <tt>nonRoot</tt> 功能门控所实施限制的约束，就会带来非预期或未经授权的权限提升及执行管理任务的风险。当 <tt>kubevirt-hyperconverged</tt> 资源中的 <tt>.spec.featureGates.nonRoot</tt> 字段设为 <tt>true</tt> 时，KubeVirt 会强制虚拟机工作负载以非 root 身份执行，从而显著减小攻击面并限制安全漏洞的潜在影响。
 
 severity: medium
 

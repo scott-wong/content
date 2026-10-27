@@ -11,10 +11,16 @@ description: |-
   default creates separate PKIs for etcd and the Kubernetes API server. The
   same is done for other points of communication in the cluster.
 
+  <p><strong>中文说明：</strong></p>
+  应为 <tt>etcd</tt> 创建唯一的 CA 证书。OpenShift 默认会为 etcd 和 Kubernetes API server 创建单独的 PKI，集群中的其他通信端点也采用相同做法。
+
 rationale: |-
   The Kubernetes API server and etcd utilize separate CA certificates in
   OpenShift.  This ensures that the etcd data is still protected in the event
   that the API server CA is compromised.
+
+  <p><strong>中文理由：</strong></p>
+  Kubernetes API server 和 etcd 在 OpenShift 中使用单独的 CA 证书。这可确保即使 API server CA 遭入侵，etcd 数据仍受到保护。
 
 severity: medium
 

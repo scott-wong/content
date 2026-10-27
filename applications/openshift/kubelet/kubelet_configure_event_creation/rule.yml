@@ -26,6 +26,22 @@ description: |-
             eventRecordQPS: {{{ xccdf_value("var_event_record_qps") }}}
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    应采集安全相关信息。Kubelet 的 eventRecordQPS 选项可用于限制事件收集速率。将该值设置得过低可能导致相关事件未被记录，而将其设置为无限制值 0 可能导致 Kubelet 发生拒绝服务。处理和存储系统应扩容，以承担预期的事件负载。要为 Kubelet 设置 <tt>eventRecordQPS</tt> 选项，请按以下方式创建 <tt>KubeletConfig</tt> 对象：
+
+    <pre>
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: KubeletConfig
+    metadata:
+       name: kubelet-config-$pool
+    spec:
+        machineConfigPoolSelector:
+            matchLabels:
+                pools.operator.machineconfiguration.openshift.io/$pool_name: ""
+        kubeletConfig:
+            eventRecordQPS: {{{ xccdf_value("var_event_record_qps") }}}
+    </pre>
+
 identifiers:
     cce@ocp4: CCE-83576-9
 
@@ -41,6 +57,9 @@ rationale: |-
     Events are an important source of security information and analytics that
     ensure that your environment is consistently monitored using the event
     data.
+
+    <p><strong>中文理由：</strong></p>
+    必须捕获所有事件，且不应限制事件创建。事件是安全信息和分析的重要来源，可确保环境持续使用事件数据进行监控。
 
 severity: medium
 

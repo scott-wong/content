@@ -6,8 +6,14 @@ title: 'Create Network Boundaries between Functional Different Nodes'
 description: |-
    Use different Networks for Control Plane, Worker and Individual Application Services.
 
+   <p><strong>中文说明：</strong></p>
+   为控制平面、工作节点和各个应用服务使用不同的网络。
+
 rationale: |-
    Separation on a Network level might help to hinder lateral movement of an attacker and subsequently reduce the impact of an attack. It might also enable you to provide additional external network control (like firewalls).
+
+   <p><strong>中文理由：</strong></p>
+   在网络层面进行隔离可能有助于阻止攻击者横向移动，从而降低攻击影响。它还可支持提供额外的外部网络控制（如防火墙）。
 
 severity: medium
 

@@ -10,10 +10,16 @@ description: |-
     Disks should not be shareable unless a reviewed clustered workload
     requires it.
 
+    <p><strong>中文说明：</strong></p>
+    标记为 <tt>shareable: true</tt> 的磁盘可同时挂载到多台虚拟机。共享可写磁盘会绕过工作负载之间的隔离：一台客户机可篡改另一台客户机读取的数据，而并发写入方如果未使用集群感知文件系统，则会损坏数据。除非经过审查的集群化工作负载需要此功能，否则磁盘不应设为可共享。
+
 rationale: |-
     Every disk with '.shareable == true' creates a data path between
     virtual machines that circumvents network controls and namespace
     isolation, enabling tampering and data corruption across workloads.
+
+    <p><strong>中文理由：</strong></p>
+    每个 <tt>.shareable == true</tt> 的磁盘都会在虚拟机之间创建一条数据路径，绕过网络控制和命名空间隔离，从而使工作负载之间可能发生篡改和数据损坏。
 
 severity: medium
 

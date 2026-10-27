@@ -10,6 +10,9 @@ description: |-
     755. By default, the path for the Kubernetes pod logs is
     <pre>/var/log/pods/</pre>.
 
+    <p><strong>中文说明：</strong></p>
+    所有日志都必须由 root 用户和组所有，并具有 755 权限。默认情况下，Kubernetes pod 日志的路径为 <pre>/var/log/pods/</pre>。
+
 rationale: |-
     Pod log files may contain sensitive information such as application
     data, user credentials, or system configurations. Unauthorized access
@@ -17,6 +20,9 @@ rationale: |-
     setting owner permissions, OpenShift ensures that only authorized users
     or processes with the necessary privileges can access the pod log files,
     preserving the confidentiality of the logged information.
+
+    <p><strong>中文理由：</strong></p>
+    Pod 日志文件可能包含应用程序数据、用户凭据或系统配置等敏感信息。未经授权访问这些日志文件可能将敏感数据暴露给恶意行为者。通过设置所有者权限，OpenShift 可确保只有具有必要权限的授权用户或进程才能访问 Pod 日志文件，从而保护所记录信息的机密性。
 
 severity: medium
 

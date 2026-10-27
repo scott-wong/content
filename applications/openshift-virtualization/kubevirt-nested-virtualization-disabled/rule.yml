@@ -13,11 +13,17 @@ description: |-
     <tt>0</tt>. Nodes where the KVM modules are not loaded do not expose
     the parameter, which is compliant.
 
+    <p><strong>中文说明：</strong></p>
+    嵌套虚拟化允许虚拟机自身充当 Hypervisor。它由 <tt>kvm_intel</tt> 或 <tt>kvm_amd</tt> 内核模块的 <tt>nested</tt> 参数控制，可在 <tt>/sys/module/kvm_intel/parameters/nested</tt>（或相应的 <tt>kvm_amd</tt> 路径）查看。该值必须为 <tt>N</tt> 或 <tt>0</tt>。未加载 KVM 模块的节点不会公开该参数，因此视为合规。
+
 rationale: |-
     Nested virtualization exposes additional virtualization interfaces to
     guest workloads, widening the attack surface of the hypervisor stack
     and enabling a compromised guest to host further, harder-to-observe
     virtual machines.
+
+    <p><strong>中文理由：</strong></p>
+    嵌套虚拟化向客户机工作负载公开更多虚拟化接口，扩大 Hypervisor 协议栈的攻击面，并使已失陷的客户机能够托管更多更难观测的虚拟机。
 
 severity: medium
 

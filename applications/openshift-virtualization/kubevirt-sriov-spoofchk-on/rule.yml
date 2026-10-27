@@ -13,10 +13,18 @@ description: |-
     type does not exist and the check reports an error; CPE applicability
     for CEL rules (CMP-4483) will mark it Not Applicable instead.
 
+    <p><strong>中文说明：</strong></p>
+    SR-IOV 网络必须将 <tt>.spec.spoofChk</tt> 设为 <tt>"on"</tt>，以便 NIC 拒绝源 MAC 地址与分配给虚拟功能的地址不一致的帧。否则，已失陷的客户机可在二层冒充其他工作负载或基础设施。
+
+    注意：此规则读取 SriovNetwork 资源，因此需要 SR-IOV Network Operator。在未安装该 Operator 的集群上，资源类型不存在，检查会报告错误；CEL 规则的 CPE 适用性（CMP-4483）会将其标记为不适用。
+
 rationale: |-
     Layer-2 identity is the basis for switching decisions on secondary
     networks. A guest that can spoof MAC addresses can intercept or
     redirect other workloads' traffic on the same segment.
+
+    <p><strong>中文理由：</strong></p>
+    二层身份是辅助网络上交换决策的基础。能够伪造 MAC 地址的客户机可以截获或重定向同一网段中其他工作负载的流量。
 
 severity: medium
 

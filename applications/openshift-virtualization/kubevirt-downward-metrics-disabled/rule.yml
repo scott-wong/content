@@ -10,11 +10,17 @@ description: |-
     fingerprinting and side-channel planning. Unless a workload specifically
     requires it, the feature gate should remain disabled.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>downwardMetrics</tt> 功能门控通过 virtio-serial 通道或磁盘向虚拟机客户机公开主机指标。在客户机内部公开主机性能指标会泄露底层节点及同宿主机工作负载的信息，从而帮助攻击者进行主机指纹识别和侧信道规划。除非工作负载明确需要此功能，否则应保持该功能门控禁用。
+
 rationale: |-
     When <tt>.spec.featureGates.downwardMetrics</tt> is enabled in the
     <tt>kubevirt-hyperconverged</tt> resource, every guest that requests a
     downwardMetrics device can read host-level metrics. Keeping the gate
     disabled preserves the isolation boundary between guests and the host.
+
+    <p><strong>中文理由：</strong></p>
+    当 <tt>kubevirt-hyperconverged</tt> 资源中的 <tt>.spec.featureGates.downwardMetrics</tt> 启用时，任何请求 downwardMetrics 设备的客户机均可读取主机级指标。保持该功能门控禁用可维持客户机与主机之间的隔离边界。
 
 severity: medium
 

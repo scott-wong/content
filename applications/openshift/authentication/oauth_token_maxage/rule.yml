@@ -40,9 +40,33 @@ description: |-
       {{{ weblink(link="https://docs.openshift.com/container-platform/4.7/authentication/configuring-internal-oauth.html") }}}
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    可将 OAuth 令牌配置为具有自定义有效期。默认情况下，令牌有效期为 24 小时（86400 秒）。
+    </p>
+    <p>
+    令牌最大有效期既可在 OAuth 服务器配置中设置，也可在任意 OAuth 客户端中设置。客户端设置会覆盖 OAuth 服务器设置。
+    </p>
+    <p>
+    要设置 OAuth 服务器令牌最大有效期，请编辑 OAuth 服务器对象：<tt>oc edit oauth cluster</tt>，并将 <tt>.spec.tokenConfig.accessTokenMaxAgeSeconds</tt> 参数设置为所需值：
+    <pre>
+    apiVersion: config.openshift.io/v1
+    kind: OAuth
+    metadata:
+    ...
+    spec:
+       tokenConfig:
+         accessTokenMaxAgeSeconds: 28800
+    </pre>
+    有关配置 OAuth 服务器的更多信息，请参阅<a href="https://docs.openshift.com/container-platform/4.7/authentication/configuring-internal-oauth.html">OpenShift 文档</a>。
+    </p>
+
 rationale: |-
     Setting a token maximum age to a shorter time period reduces the window
     of opportunity for unauthorized personnel to take control of the session.
+
+    <p><strong>中文理由：</strong></p>
+    将令牌最大有效期设置为较短的时间段，可缩短未经授权人员接管会话的机会窗口。
 
 references:
   nist: AC-12

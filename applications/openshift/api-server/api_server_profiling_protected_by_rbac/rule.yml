@@ -8,6 +8,9 @@ description: |-
   resource URL. This demonstrates that profiling is protected by RBAC, with a
   specific cluster role to allow access.
 
+  <p><strong>中文说明：</strong></p>
+  确保 cluster-debugger 集群角色包含 /metrics 资源 URL。这表明性能分析受 RBAC 保护，并使用特定集群角色来允许访问。
+
 rationale: |-
   Profiling allows for the identification of specific performance bottlenecks.
   It generates a significant amount of program data that could potentially be
@@ -16,6 +19,9 @@ rationale: |-
   via RBAC (see cluster-debugger role). By default, the profiling endpoints are
   accessible only by users bound to cluster-admin or cluster-debugger role.
   Profiling can not be disabled.
+
+  <p><strong>中文理由：</strong></p>
+  性能分析可以识别特定的性能瓶颈。它会生成大量程序数据，这些数据可能被利用来发现系统和程序详细信息。为确保收集的数据不被利用，性能分析端点通过 RBAC 加以保护（参见 cluster-debugger 角色）。默认情况下，只有绑定到 cluster-admin 或 cluster-debugger 角色的用户才能访问性能分析端点。性能分析无法禁用。
 
 identifiers:
   cce@ocp4: CCE-84212-0

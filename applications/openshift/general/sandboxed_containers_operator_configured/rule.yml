@@ -12,8 +12,18 @@ description: |-
 
     Be advised, that on AWS, Azure, IBM Z and IBM LinuxOne you need to enable PeerPods and confiugre additional resources.
 
+    <p><strong>中文说明：</strong></p>
+    <a href="https://docs.redhat.com/en/documentation/openshift_sandboxed_containers/1.7">Sandboxed Containers Operator</a> 通过在虚拟机中运行容器，为容器提供专用内核。由于不共享内核，因此可实现更强的隔离。此功能通过 RHCOS 集群扩展实现，并且仅在 RHCOS 节点上可用。
+
+    只有在已使用 KataConfig 正确配置该 Operator，并且为每个 Pod 规范配置了 <pre>runtimeClassName: kata</pre> 时，该功能才会生效。
+
+    请注意，在 AWS、Azure、IBM Z 和 IBM LinuxOne 上，需要启用 PeerPods 并配置额外资源。
+
 rationale: |-
     Using separate kernels for each container provides for better isolation, and makes it harder for adveseries to move laterally to other containers or the container-host.
+
+    <p><strong>中文理由：</strong></p>
+    为每个容器使用独立内核可提供更好的隔离，并使攻击者更难横向移动到其他容器或容器宿主机。
 
 severity: medium
 

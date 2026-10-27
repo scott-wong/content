@@ -10,9 +10,15 @@ description: |-
     (vCPU). In order to use the vCPU metric, the <tt>schedstats=enable</tt>
     kernel argument must be applied.
 
+    <p><strong>中文说明：</strong></p>
+    OpenShift Virtualization 提供可用于监控集群基础设施资源（包括虚拟 CPU，vCPU）使用情况的指标。要使用 vCPU 指标，必须应用 <tt>schedstats=enable</tt> 内核参数。
+
 rationale: |-
     Metrics are a fundamental mechanism for understanding if the guest is
     behaving in an anomalous or otherwise suspicious manner.
+
+    <p><strong>中文理由：</strong></p>
+    指标是了解客户机行为是否异常或可疑的基本机制。
 
 severity: medium
 

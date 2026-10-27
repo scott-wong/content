@@ -6,6 +6,9 @@ title: 'Ensure Seccomp Profile Pod Definitions'
 description: |-
     Enable <tt>default</tt> seccomp profiles in your pod definitions.
 
+    <p><strong>中文说明：</strong></p>
+    在 Pod 定义中启用 <tt>default</tt> seccomp 配置档。
+
 rationale: |-
     Seccomp (secure computing mode) is used to restrict the set of system calls
     applications can make, allowing cluster administrators greater control over
@@ -13,6 +16,9 @@ rationale: |-
     seccomp profiles by default for historical reasons. You should enable it to
     ensure that the workloads have restricted actions available within the
     container.
+
+    <p><strong>中文理由：</strong></p>
+    Seccomp（安全计算模式）用于限制应用可发起的系统调用集合，使集群管理员能够更好地控制集群中运行工作负载的安全性。出于历史原因，Kubernetes 默认禁用 seccomp 配置档。应启用该功能，以确保工作负载在容器内只能执行受限操作。
 
 severity: medium
 

@@ -12,6 +12,12 @@ description: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/latest/web_console/configuring-web-console.html",
               text="the relevant documentation") }}}
 
+  <p><strong>中文说明：</strong></p>
+  用户退出登录后可重定向到已配置的 URL。
+  <br/>
+
+  这可通过 OAuth 对象设置 <tt>logoutRedirect</tt> 属性来实现。请参阅<a href="https://docs.openshift.com/container-platform/latest/web_console/configuring-web-console.html">相关文档</a>。
+
 rationale: |-
   The web console's default logout will invalidate the user's session token
   and redirect back to the console page, which will redirect the user to
@@ -21,6 +27,9 @@ rationale: |-
   logged in.  To correct this, the web console needs to be configured
   to redirect the user to a logout page. If using an OIDC provider, this
   would be the logout page for that provider.
+
+  <p><strong>中文理由：</strong></p>
+  Web 控制台默认的退出登录行为会使当前用户的会话令牌失效，并重定向回控制台页面，随后又会将用户重定向到身份验证页面，且不会显示明确的退出登录消息。此外，如果身份提供程序（IdP）类型为 OIDC，则 SSO 提供程序的会话令牌仍将有效，这实际上会让用户保持登录状态。为纠正此问题，需要将 Web 控制台配置为将用户重定向到退出登录页面。如果使用 OIDC 提供程序，则应重定向到该提供程序的退出登录页面。
 
 identifiers:
   cce@ocp4: CCE-90780-8

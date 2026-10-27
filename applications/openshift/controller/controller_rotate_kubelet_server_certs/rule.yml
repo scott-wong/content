@@ -30,12 +30,29 @@ description: |-
 
     This feature gate is enabled by default as of Kubernetes 1.12.
 
+    <p><strong>中文说明：</strong></p>
+    为在 Controller Manager 上强制启用 kubelet 服务器证书轮换，请在主节点上的 <tt>openshift-kube-controller-manager</tt> configmap 中将 <tt>RotateKubeletServerCertificate</tt> 选项设置为 <tt>true</tt>：
+    <pre>
+    "extendedArguments": {
+    ...
+      "feature-gates": [
+      ...
+        "RotateKubeletServerCertificate=true",
+      ...
+    ...
+    </pre>
+
+    自 Kubernetes 1.12 起，此特性门控默认启用。
+
 rationale: |-
     Enabling kubelet certificate rotation causes the kubelet to both request
     a serving certificate after bootstrapping its client credentials and rotate the
     certificate as its existing credentials expire. This automated periodic rotation
     ensures that there are no downtimes due to expired certificates and thus
     addressing the availability in the C/I/A security triad.
+
+    <p><strong>中文理由：</strong></p>
+    启用 kubelet 证书轮换后，kubelet 会在引导其客户端凭据后请求服务证书，并在现有凭据到期时轮换证书。这种自动定期轮换可确保不会因证书过期而发生停机，从而满足 C/I/A 安全三要素中的可用性要求。
 
 severity: medium
 

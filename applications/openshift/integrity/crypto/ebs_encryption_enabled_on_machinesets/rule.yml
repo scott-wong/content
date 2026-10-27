@@ -10,10 +10,16 @@ description: |-
   EBS storage used by cluster nodes. By using EBS encryption, disk contents are
   encrypted using a AWS KMS key.
 
+  <p><strong>中文说明：</strong></p>
+  可配置 OpenShift MachineSet，为集群节点使用的 EBS 存储启用 EBS 加密。启用 EBS 加密后，磁盘内容将使用 AWS KMS 密钥加密。
+
 rationale: |-
   Enabling encryption on EBS storage used by the cluster nodes, more specifically worker nodes,
   help protect any card holder data that might be persisted on those EBS volumes. Only authorized
   AWS resources will be able, through IAM policies, to use the KMS key to eventually read or alter data on those volumes.
+
+  <p><strong>中文理由：</strong></p>
+  为集群节点（尤其是工作节点）使用的 EBS 存储启用加密，有助于保护可能持久保存在这些 EBS 卷上的持卡人数据。只有获得授权的 AWS 资源才能通过 IAM 策略使用该 KMS 密钥读取或更改这些卷中的数据。
 
 
 identifiers:

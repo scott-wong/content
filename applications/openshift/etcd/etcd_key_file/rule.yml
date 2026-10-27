@@ -21,9 +21,18 @@ description: |-
     Note that the <pre>[a-z]+</pre> is being used since the directory might
     change between OpenShift versions.
 
+    <p><strong>中文说明：</strong></p>
+    为确保 etcd 服务向客户端提供 TLS，请确保 <tt>openshift-etcd</tt> 命名空间中的 <tt>etcd-pod*</tt> ConfigMaps 为 <tt>etcd</tt> pod 中的 <tt>etcd</tt> 二进制包含以下参数：
+    <pre>oc get -nopenshift-etcd cm etcd-pod -oyaml | grep "\-\-key-file=/etc/kubernetes/static-pod-certs/secrets/etcd-all-[a-z]+/etcd-serving-NODE_NAME.key"</pre>。
+
+    请注意，由于目录可能随 OpenShift 版本而变化，此处使用 <pre>[a-z]+</pre>。
+
 rationale: |-
     Without cryptographic integrity protections, information can be
     altered by unauthorized users without detection.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有加密完整性保护，未经授权的用户可在不被发现的情况下更改信息。
 
 severity: medium
 

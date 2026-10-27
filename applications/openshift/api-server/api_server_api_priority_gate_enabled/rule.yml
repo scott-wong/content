@@ -16,6 +16,9 @@ description: |-
   As a result, this rule is only applicable to OpenShift releases prior
   to 4.7 which was the first OCP release to ship Kubernetes 1.20.
 
+  <p><strong>中文说明：</strong></p>
+  为限制 API Server 接受请求的速率，请确保已启用 API Priority and Fairness 功能。使用 <tt>APIPriorityAndFairness</tt> 功能可提供细粒度方式来控制 Kubernetes API Server 在过载情况下的行为。要启用 <tt>APIPriorityAndFairness</tt> 功能门控，请确保 <tt>feature-gates</tt> API Server 参数（通常在 <tt>openshift-kube-apiserver</tt> 命名空间中的 <tt>config</tt> ConfigMap 里设置）包含 <tt>APIPriorityAndFairness=true</tt>。请注意，自 Kubernetes 1.20 起，此功能门控默认启用。因此，此规则仅适用于 OpenShift 4.7 之前的版本，因为 4.7 是首个提供 Kubernetes 1.20 的 OCP 版本。
+
 rationale: |-
   The <tt>APIPriorityAndFairness</tt> feature gate enables the use of the
   <tt>FlowSchema</tt> API objects which enforce a limit on the number of
@@ -24,6 +27,9 @@ rationale: |-
   tenants which could have a significant impact on the performance of
   the cluster overall. It is recommended to limit the rate of events
   that the API Server will accept.
+
+  <p><strong>中文理由：</strong></p>
+  <tt>APIPriorityAndFairness</tt> 功能门控允许使用 <tt>FlowSchema</tt> API 对象，这些对象会对 API Server 在给定时间片内接受的事件数量实施限制。在大型多租户集群中，可能有很小比例的租户行为不当，却会对集群整体性能产生重大影响。建议限制 API Server 接受事件的速率。
 
 identifiers:
   cce@ocp4: CCE-83656-9

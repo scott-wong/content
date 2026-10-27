@@ -11,8 +11,14 @@ title: 'This is a helper rule to fetch the required api resource for detecting H
 description: |-
     no description
 
+    <p><strong>中文说明：</strong></p>
+    该辅助规则用于获取检测 HyperShift OCP 版本所需的 API 资源。
+
 rationale: |-
     no rationale
+
+    <p><strong>中文理由：</strong></p>
+    该规则为 HyperShift 集群版本检测提供所需的版本历史数据；其本身不定义单独的安全控制要求。
 
 severity: medium
 

@@ -11,6 +11,9 @@ description: |-
     <tt>MultiNetworkPolicy</tt> resources exist in the namespaces where
     <tt>NetworkAttachmentDefinition</tt> objects are deployed.
 
+    <p><strong>中文说明：</strong></p>
+    由于所需的多网络策略配置因各集群的辅助网络拓扑而异，此规则无法自动评估，并且始终报告手动状态。使用辅助网络的组织应考虑创建使用 CEL 表达式的 CustomRule，验证在部署了 <tt>NetworkAttachmentDefinition</tt> 对象的命名空间中存在 <tt>MultiNetworkPolicy</tt> 资源。
+
 rationale: |-
     Secondary networks configured through Multus bypass the default
     Kubernetes network policy enforcement. If multi-network policies are
@@ -20,6 +23,9 @@ rationale: |-
     <tt>MultiNetworkPolicy</tt> resources ensures that traffic on
     secondary networks is subject to the same segmentation controls
     as the primary cluster network.
+
+    <p><strong>中文理由：</strong></p>
+    通过 Multus 配置的辅助网络会绕过默认的 Kubernetes 网络策略实施。如果未应用多网络策略，这些网络上的工作负载将具有不受限制的连通性，从而增加虚拟机之间横向移动和未经授权访问的风险。部署 <tt>MultiNetworkPolicy</tt> 资源可确保辅助网络上的流量与主集群网络一样受到分段控制。
 
 severity: medium
 

@@ -11,6 +11,11 @@ description: |-
     where <i>service_account_name</i> is the name of a service account
     that is needed in the project namespace.
 
+    <p><strong>中文说明：</strong></p>
+    使用 <tt>default</tt> 服务账户会妨碍准确审查应用权限和进行审计追踪。应使用以下命令创建新的唯一服务账户，而不是使用 <tt>default</tt>：
+    <pre>$ oc create sa <i>service_account_name</i></pre>
+    其中 <i>service_account_name</i> 是项目命名空间中所需的服务账户名称。
+
 rationale: |-
     Kubernetes provides a default service account which is used by
     cluster workloads where no specific service account is assigned to the pod.
@@ -19,6 +24,9 @@ rationale: |-
     This increases auditability of service account rights and access making it
     easier and more accurate to trace potential malicious behaviors to a specific
     service account and project.
+
+    <p><strong>中文理由：</strong></p>
+    Kubernetes 提供默认服务账户，供未向 Pod 分配特定服务账户的集群工作负载使用。需要从 Pod 访问 Kubernetes API 时，应为该 Pod 创建特定服务账户，并向该服务账户授予权限。这会提高服务账户权限和访问的审计能力，更容易且更准确地追踪潜在恶意行为至特定服务账户和项目。
 
 severity: medium
 

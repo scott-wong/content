@@ -24,11 +24,24 @@ description: |-
     }
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    要启用基于证书的 kubelet 身份验证，请编辑 <tt>openshift-kube-apiserver</tt> 命名空间中的 <tt>config</tt> configmap，若尚未配置，请在 <tt>config.yaml</tt> 键中设置以下参数：
+    <pre>
+    "apiServerArguments":{
+    ...
+      "kubelet-client-key":"/etc/kubernetes/static-pod-resources/secrets/kubelet-client/tls.key",
+    ...
+    }
+    </pre>
+
 rationale: |-
     By default the API Server does not authenticate itself to the kubelet's
     HTTPS endpoints. Requests from the API Server are treated anonymously.
     Configuring certificate-based kubelet authentication ensures that the
     API Server authenticates itself to kubelets when submitting requests.
+
+    <p><strong>中文理由：</strong></p>
+    默认情况下，API Server 不会向 kubelet 的 HTTPS 端点证明自身身份。来自 API Server 的请求会被视为匿名请求。配置基于证书的 kubelet 身份验证可确保 API Server 在提交请求时向 kubelet 证明自身身份。
 
 identifiers:
   cce@ocp4: CCE-83591-8

@@ -13,10 +13,19 @@ description: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/latest/authentication/remove-kubeadmin.html",
               text="described in the documentation") }}}
 
+  <p><strong>中文说明：</strong></p>
+  kubeadmin 用户是用于引导目的的临时用户。最好分配由身份提供程序（Identity Provider）支持其用户身份的系统管理员。
+
+  <br />
+  请确保按照<a href="https://docs.openshift.com/container-platform/latest/authentication/remove-kubeadmin.html">文档所述</a>删除该用户。
+
 rationale: |-
   The kubeadmin user has an auto-generated password
   and a self-signed certificate, and has effectively <pre>cluster-admin</pre>
   permissions; therefore, it's considered a security liability.
+
+  <p><strong>中文理由：</strong></p>
+  kubeadmin 用户具有自动生成的密码和自签名证书，并实际拥有 <pre>cluster-admin</pre> 权限；因此，该用户被视为安全负担。
 
 severity: medium
 

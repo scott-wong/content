@@ -21,10 +21,17 @@ description: |-
   For more information on this, please reference the official documentation:
   {{{ weblink(link="https://hypershift-docs.netlify.app/reference/api/") }}}
 
+  <p><strong>中文说明：</strong></p>
+  审计默认启用，最佳实践是将审计日志从一个集群发送出去进行保留。HyperShift 可通过审计 Webhook 实现此目的，该 Webhook 在 HostedCluster 自定义资源中配置。上述资源可配置为将日志发送到不同的第三方系统。有关更多信息，请参阅官方文档：
+  <a href="https://hypershift-docs.netlify.app/reference/api/">官方文档</a>
+
 rationale: |-
   Retaining logs ensures the ability to go back in time to investigate or correlate any events.
   Offloading audit logs from the cluster ensures that an attacker that has access to the cluster will not be able to
   tamper with the logs because of the logs being stored off-site.
+
+  <p><strong>中文理由：</strong></p>
+  保留日志可确保能够回溯调查或关联任何事件。将审计日志转移到集群外可确保即使攻击者获得集群访问权限，也无法篡改日志，因为日志存储在异地。
 
 severity: medium
 

@@ -44,6 +44,33 @@ description: |-
                 text="the relevant documentation") }}}.
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    启用 etcd 加密后，以下 OpenShift API Server 和 Kubernetes API Server 资源将被加密：
+    <ul>
+      <li>Secrets</li>
+      <li>ConfigMaps</li>
+      <li>Routes</li>
+      <li>OAuth 访问令牌</li>
+      <li>OAuth 授权令牌</li>
+    </ul>
+    </p>
+    <p>
+    启用 etcd 加密时会创建加密密钥。这些密钥每周轮换。必须拥有这些密钥才能从 etcd 备份恢复。
+    </p>
+    <p>
+    为确保使用正确的加密算法，请在配置 API Server 本身的 <tt>apiserver</tt> 对象中将加密类型设置为 <tt>aescbc</tt> 或 <tt>aesgcm</tt>。
+    <pre>
+    spec:
+      encryption:
+        type: aescbc
+    </pre>
+    </p>
+    <p>
+    有关更多信息，请参阅
+    <a href="https://docs.openshift.com/container-platform/latest/security/encrypting-etcd.html">相关文档</a>。
+    </p>
+
 rationale: |-
     etcd is a highly available key-value store used by OpenShift deployments
     for persistent storage of all REST API objects. These objects are
@@ -51,6 +78,9 @@ rationale: |-
     disclosures. Where etcd encryption is used, it is important to ensure that the
     appropriate set of encryption providers is used. Currently, <tt>aescbc</tt>
     and <tt>aesgcm</tt> are the only types supported by OCP.
+
+    <p><strong>中文理由：</strong></p>
+    etcd 是 OpenShift 部署使用的高可用键值存储，用于持久存储所有 REST API 对象。这些对象性质敏感，应进行静态加密以避免泄露。使用 etcd 加密时，确保使用适当的加密提供程序集合非常重要。目前，OCP 仅支持 <tt>aescbc</tt> 和 <tt>aesgcm</tt> 两种类型。
 
 identifiers:
   cce@ocp4: CCE-83585-0

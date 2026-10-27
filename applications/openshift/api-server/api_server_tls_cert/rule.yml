@@ -27,10 +27,25 @@ description: |-
     }
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保 API Server 使用其自身的 TLS 证书，必须配置 <tt>tls-cert-file</tt>。请验证 <tt>openshift-kube-apiserver</tt> 命名空间中 <tt>config</tt> configmap 的 <tt>apiServerArguments</tt> 部分已配置 <tt>tls-cert-file</tt>，类似于：
+    <pre>
+    "apiServerArguments":{
+    ...
+    "tls-cert-file": [
+      "/etc/kubernetes/static-pod-certs/secrets/service-network-serving-certkey/tls.crt"
+    ],
+    ...
+    }
+    </pre>
+
 rationale: |-
     API Server communication contains sensitive parameters that should remain
     encrypted in transit. Configure the API Server to serve only HTTPS
     traffic.
+
+    <p><strong>中文理由：</strong></p>
+    API Server 通信包含应保持传输加密的敏感参数。应将 API Server 配置为仅提供 HTTPS 流量。
 
 identifiers:
   cce@ocp4: CCE-83779-9

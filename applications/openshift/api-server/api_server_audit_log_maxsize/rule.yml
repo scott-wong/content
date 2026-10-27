@@ -23,12 +23,24 @@ description: |-
       ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    要在审计日志达到最大大小时进行轮转，请编辑 <tt>openshift-kube-apiserver</tt> configmap，并将 <tt>audit-log-maxsize</tt> 参数设置为以 MB 为单位的适当大小。例如，将其设置为 100 MB：
+    <pre>
+    "apiServerArguments":{
+      ...
+      "audit-log-maxsize": ["100"],
+      ...
+    </pre>
+
 rationale: |-
     OpenShift automatically rotates log files. Retaining old log files ensures that
     OpenShift Operators have sufficient log data available for carrying out any
     investigation or correlation. If you have set file size of 100 MB and the number of
     old log files to keep as 10, there would be approximately 1 GB of log data
     available for use in analysis.
+
+    <p><strong>中文理由：</strong></p>
+    OpenShift 会自动轮转日志文件。保留旧日志文件可确保 OpenShift 运维人员有足够的日志数据可用于开展调查或关联分析。如果将文件大小设置为 100 MB，并将保留的旧日志文件数设置为 10，则进行分析时约有 1 GB 的日志数据可用。
 
 identifiers:
   cce@ocp4: CCE-83607-2

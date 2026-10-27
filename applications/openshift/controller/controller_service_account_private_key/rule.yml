@@ -25,6 +25,17 @@ description: |-
     ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保 API Server 使用其自身的密钥对，请在主节点上的 <tt>openshift-kube-controller-manager</tt> configmap 中，将 <tt>privateKeyFile</tt> 参数设置为服务账户的公钥文件：
+    <pre>
+    "extendedArguments": {
+    ...
+      "service-account-private-key-file": [
+        "/etc/kubernetes/static-pod-resources/secrets/service-account-private-key/service-account.key"
+      ],
+    ...
+    </pre>
+
 rationale: |-
     By default if no private key file is specified to the
     API Server, the API Server uses the private key from the TLS serving
@@ -32,6 +43,9 @@ rationale: |-
     for service account tokens could be rotated as needed, a separate
     public/private key pair should be used for signing service account
     tokens.
+
+    <p><strong>中文理由：</strong></p>
+    默认情况下，如果未向 API Server 指定私钥文件，API Server 会使用 TLS 服务证书中的私钥验证服务账户令牌。为确保服务账户令牌所用的密钥可按需轮换，应使用单独的公有/私有密钥对为服务账户令牌签名。
 
 identifiers:
   cce@ocp4: CCE-83526-4

@@ -14,6 +14,11 @@ description: |-
   for a container to use more resource than its request for that resource specifies.
   However, a container is not allowed to use more than its resource limit.
 
+  <p><strong>中文说明：</strong></p>
+  部署应用程序时，需要根据内存和 CPU 消耗情况进行调整，分配足够的资源以确保应用程序正常运行。OpenShift Dedicated 提供的镜像在其分配内存范围内可以正常工作。但是，所有应用程序镜像都必须关注其正常运行所需的特定资源。
+
+  如果运行 Pod 的节点有足够的可用资源，容器可以使用超过其资源请求所指定的资源量，这是允许的。但是，容器使用的资源量不得超过其资源限制。
+
 # todo : better if we can keep openshift document link for this reference,
 
 rationale: |-
@@ -21,6 +26,9 @@ rationale: |-
   per container. This helps prevent resource starvation. When deploying your
   application, it is important to tune based on memory and CPU consumption,
   allocating enough resources for the application to function properly.
+
+  <p><strong>中文理由：</strong></p>
+  资源请求和限制提供约束，限制每个容器的总体资源消耗，有助于防止资源饥饿。部署应用程序时，需要根据内存和 CPU 消耗情况进行调整，分配足够的资源以确保应用程序正常运行。
 
 
 identifiers: {}

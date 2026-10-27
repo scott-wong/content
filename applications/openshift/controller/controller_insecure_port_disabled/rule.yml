@@ -31,11 +31,29 @@ description: |-
     ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保 Controller Manager 服务绑定到安全环回地址和安全端口，请在主节点上的 <tt>openshift-kube-controller-manager</tt> configmap 中将 <tt>RotateKubeletServerCertificate</tt> 选项设置为 <tt>true</tt>：
+    <pre>
+    "extendedArguments": {
+    ...
+      "port": ["0"],
+    ...
+    </pre>
+    系统废弃不安全端口也是可接受的：
+    <pre>
+    "extendedArguments": {
+    ...
+    ...
+    </pre>
+
 rationale: |-
     The Controller Manager API service is used for health and metrics
     information and is available without authentication or encryption. As such, it
     should only be bound to a localhost interface to minimize the cluster's
     attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    Controller Manager API 服务用于提供运行状况和指标信息，并且无需身份验证或加密即可访问。因此，应仅将其绑定到 localhost 接口，以尽量缩小集群的攻击面。
 
 severity: low
 

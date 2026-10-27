@@ -22,6 +22,18 @@ description: |-
     In contrast, a request to list all projects should not be authorized:
     <pre>$ oc get --as="system:anonymous" projects</pre>
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，OpenShift API 的匿名访问处于启用状态，但同时所有请求都必须获得授权。如果未使用任何身份验证机制，请求会被分配 <tt>system:anonymous</tt> 虚拟用户和 <tt>system:unauthenticated</tt> 虚拟组。这使授权层能够确定匿名用户获准发出哪些请求（如果有）。
+
+    要验证匿名请求的授权规则，请运行以下命令：
+    <pre>$ oc describe clusterrolebindings</pre>
+    并检查 <tt>system:anonymous</tt> 虚拟用户和 <tt>system:unauthenticated</tt> 虚拟组的绑定。
+
+    要测试匿名请求是否获准访问 <tt>readyz</tt> 端点，请运行：
+    <pre>$ oc get --as="system:anonymous" --raw='/readyz?verbose'</pre>
+    相反，列出所有项目的请求不应获得授权：
+    <pre>$ oc get --as="system:anonymous" projects</pre>
+
 rationale: |-
     When enabled, requests that are not rejected by other configured
     authentication methods are treated as anonymous requests. These requests
@@ -30,6 +42,9 @@ rationale: |-
     API Server for health checks and discovery purposes, and hence this
     recommendation is not scored. However, you should consider whether
     anonymous discovery is an acceptable risk for your purposes.
+
+    <p><strong>中文理由：</strong></p>
+    启用后，未被其他已配置身份验证方法拒绝的请求会被视为匿名请求。这些请求随后由 API Server 提供服务。如果使用 RBAC 授权，通常认为允许匿名访问 API Server 以进行健康检查和发现是合理的，因此此建议不计分。但是，你应考虑匿名发现对你而言是否是可接受的风险。
 
 severity: medium
 

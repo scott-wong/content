@@ -10,11 +10,17 @@ description: |-
   Authenticator for Kubernetes and modifying your kubectl configuration file to
   use it for authentication.
 
+  <p><strong>中文说明：</strong></p>
+  Amazon EKS 通过适用于 Kubernetes 的 AWS IAM Authenticator 使用 IAM 为 Kubernetes 集群提供身份验证。您可以通过安装适用于 Kubernetes 的 AWS IAM Authenticator 并修改 kubectl 配置文件以将其用于身份验证，来配置标准 kubectl 客户端与 Amazon EKS 协同工作。
+
 rationale: |-
   On- and off-boarding users is often difficult to automate and prone to error.
   Using a single source of truth for user permissions reduces the number of
   locations that an individual must be off-boarded from, and prevents users
   gaining unique permissions sets that increase the cost of audit.
+
+  <p><strong>中文理由：</strong></p>
+  自动化用户的入职和离职通常很困难，且容易出错。为用户权限使用单一事实来源可减少必须将个人移除权限的位置数量，并防止用户获得会增加审计成本的独有权限集。
 
 severity: unknown
 

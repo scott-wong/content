@@ -15,6 +15,9 @@ description: |-
    To ensure pod permissions are managed, make sure that the
    <tt>SecurityContextConstraint</tt> admission control plugin is used.
 
+   <p><strong>中文说明：</strong></p>
+   为确保管理 Pod 权限，请确保使用 <tt>SecurityContextConstraint</tt> 准入控制插件。
+
 rationale: |-
     A Security Context Constraint is a cluster-level resource that controls the actions
     which a pod can perform and what the pod may access. The
@@ -23,6 +26,9 @@ rationale: |-
     are comprised of settings and strategies that control the security features
     a pod has access to and hence this must be used to control pod access
     permissions.
+
+    <p><strong>中文理由：</strong></p>
+    Security Context Constraint 是集群级资源，用于控制 Pod 可以执行的操作以及 Pod 可以访问的内容。<tt>SecurityContextConstraint</tt> 对象定义了一组 Pod 必须满足才能在系统中被接受的运行条件。Security Context Constraints 由控制 Pod 可访问安全功能的设置和策略组成，因此必须使用它来控制 Pod 的访问权限。
 
 identifiers:
   cce@ocp4: CCE-83602-3

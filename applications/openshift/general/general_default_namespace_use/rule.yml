@@ -8,10 +8,16 @@ description: |-
    namespace is specified for them. Placing objects in this namespace makes
    application of RBAC and other controls more difficult.
 
+   <p><strong>中文说明：</strong></p>
+   Kubernetes 提供默认命名空间，如果未为对象指定命名空间，则对象会放置在该命名空间中。将对象放置在此命名空间中会使 RBAC 及其他控制项的应用更加困难。
+
 rationale: |-
    Resources in a Kubernetes cluster should be segregated by namespace, to allow
    for security controls to be applied at that level and to make it easier to
    manage resources.
+
+   <p><strong>中文理由：</strong></p>
+   Kubernetes 集群中的资源应按命名空间隔离，以便在该级别应用安全控制项，并使资源更易于管理。
 
 severity: medium
 

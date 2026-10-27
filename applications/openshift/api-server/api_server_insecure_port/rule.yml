@@ -27,12 +27,26 @@ description: |-
       ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，OpenShift API Server 的流量通过启用身份验证和授权的 HTTPS 提供，安全 API 端点绑定到 <tt>0.0.0.0:8443</tt>。为确保未启用不安全端口配置，<tt>insecure-port</tt> 参数应设置为 0。请编辑 <tt>openshift-kube-apiserver</tt> configmap，将 <tt>insecure-port</tt> 值改为 0：
+    <pre>
+    "apiServerArguments":{
+      ...
+      "insecure-port":[
+        "1234"
+      ],
+      ...
+    </pre>
+
 rationale: |-
     Configuring the API Server on an insecure port would allow unauthenticated
     and unencrypted access to your master node(s). It is assumed firewall rules
     will be configured to ensure this port is not reachable from outside
     the cluster, however as a defense in depth measure, OpenShift should not
     be configured to use insecure ports.
+
+    <p><strong>中文理由：</strong></p>
+    在 API Server 上配置不安全端口会允许对主节点进行未经身份验证和未加密的访问。假定将配置防火墙规则以确保该端口无法从集群外部访问，但作为纵深防御措施，OpenShift 不应配置为使用不安全端口。
 
 identifiers:
   cce@ocp4: CCE-83813-6

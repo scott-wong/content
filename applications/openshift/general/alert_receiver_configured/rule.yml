@@ -17,10 +17,21 @@ description: |-
   [1]https://docs.openshift.com/container-platform/latest/post_installation_configuration/configuring-alert-notifications.html#configuring-alert-receivers_configuring-alert-notifications
   [2]https://docs.openshift.com/container-platform/latest/monitoring/managing-alerts.html#applying-custom-alertmanager-configuration_managing-alerts
 
+  <p><strong>中文说明：</strong></p>
+  在 OpenShift Container Platform 中，当告警规则中定义的条件成立时会触发告警。告警会通知集群内出现了一组特定情况。默认情况下，可在 OpenShift Container Platform Web 控制台的 Alerting UI 中查看已触发的告警。安装后，可配置 OpenShift Container Platform 向外部系统发送告警通知，以便指定人员实时收到告警。
+
+  OpenShift 提供多种告警接收器集成，可将实时告警发送到电子邮件、Slack、PagerDuty、Webhook 等不同服务。[1][2]
+
+  [1]https://docs.openshift.com/container-platform/latest/post_installation_configuration/configuring-alert-notifications.html#configuring-alert-receivers_configuring-alert-notifications
+  [2]https://docs.openshift.com/container-platform/latest/monitoring/managing-alerts.html#applying-custom-alertmanager-configuration_managing-alerts
+
 rationale: |-
   Alerts are a critical part of the OpenShift Container Platform. Proper configuration of
   receiver is required so that alerts can be sent to external systems in real-time to notify
   users of potential issues.
+
+  <p><strong>中文理由：</strong></p>
+  告警是 OpenShift Container Platform 的关键组成部分。必须正确配置接收器，以便实时向外部系统发送告警，通知用户可能存在的问题。
 
 identifiers:
   cce@ocp4: CCE-85911-6

@@ -42,10 +42,28 @@ description: |-
   traffic.
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  用户要与 OpenShift Container Platform 交互，必须先向集群进行身份验证。身份验证层识别与 OpenShift Container Platform API 请求关联的用户。随后，授权层使用请求用户的信息判断是否允许该请求。
+  <a href="https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html">了解 OpenShift Container Platform 中的身份验证</a>
+  </p>
+
+  <p>
+  OpenShift Container Platform 包含一个用于基于令牌身份验证的内置 OAuth 服务器。开发人员和管理员获取 OAuth 访问令牌，以便向 API 证明自身身份。建议管理员在集群安装完成后配置 OAuth 以指定身份提供程序。集群的用户访问通过身份提供程序管理。
+  <a href="https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html">了解身份提供程序配置</a>
+  </p>
+
+  <p>
+  如果身份提供程序为 LDAP，将 <tt>insecure</tt> 标志设置为 true 意味着密码（例如用于向 OAuth 代理验证 LDAP 服务器的密码）将以明文传输，攻击者若截获网络流量便可能读取该密码。
+  </p>
+
 
 rationale: |-
   Transmitting authentication tokens as clear-text may leak them to
   an attacker.
+
+  <p><strong>中文理由：</strong></p>
+  以明文传输身份验证令牌可能导致令牌泄露给攻击者。
 
 identifiers:
   cce@ocp4: CCE-83699-9

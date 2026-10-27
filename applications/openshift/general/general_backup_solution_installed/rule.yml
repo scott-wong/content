@@ -6,8 +6,15 @@ description: |-
     Backup and Restore are fundamental practices when it comes to disaster recovery. By utilizing a Backup Software you are able to backup (and restore) data, which is lost, if your cluster crashes beyong recoverability.
     There are multiple Backup Solutions on the Market which diverge in Features. Thus some of them might only backup your cluster, others might also be able to backup VMs or PVCs running in your Cluster.
 
+    <p><strong>中文说明：</strong></p>
+    备份和恢复是灾难恢复的基本实践。通过使用备份软件，可以备份和恢复集群发生无法恢复的崩溃时丢失的数据。
+    市面上有多种功能各异的备份解决方案。因此，有些解决方案可能只备份集群，另一些则可能还能备份集群中运行的虚拟机或 PVC。
+
 rationale: |-
     Backup and Recovery abilities are a necessity to recover from a disaster.
+
+    <p><strong>中文理由：</strong></p>
+    备份和恢复能力是从灾难中恢复所必需的。
 
 identifiers:
     cce@ocp4: CCE-90185-0

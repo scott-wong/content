@@ -54,11 +54,55 @@ description: |-
     {{{ weblink(link="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/authentication_and_authorization/index#oauth-token-inactivity-timeout_configuring-internal-oauth") }}}
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    您可以将 OAuth 令牌配置为在设定的不活动时间后过期。默认情况下，未设置令牌不活动超时。
+    </p>
+    <p>
+    不活动超时既可在 OAuth 服务器配置中设置，也可在任何 OAuth 客户端中设置。客户端设置会覆盖 OAuth 服务器设置。
+    </p>
+    <p>
+    要设置 OAuth 服务器不活动超时，请编辑 OAuth 服务器对象：<tt>oc edit oauth cluster</tt>，并将 <tt>.spec.tokenConfig.accessTokenInactivityTimeout</tt> 参数设置为所需值：
+    <pre>
+    apiVersion: config.openshift.io/v1
+    kind: OAuth
+    metadata:
+    ...
+    spec:
+       tokenConfig:
+         accessTokenInactivityTimeout: 10m0s
+    <pre>
+    Please note that the OAuth server converts the value internally to a human-readable format,
+    so that e.g. setting accessTokenInactivityTimeout=600s would be converted by the OAuth
+    server to accessTokenInactivityTimeout=10m0s.
+    </pre>
+    有关配置 OAuth 服务器的更多信息，请参阅
+    OpenShift 文档：
+    <a href="https://docs.openshift.com/container-platform/4.7/authentication/configuring-oauth-clients.html">OpenShift 文档</a>
+    </p>
+    <p>
+    要编辑 OAuth 客户端不活动超时，请编辑 OAuth 客户端对象：<tt>oc edit oauthclient $clientname</tt>，并设置顶层的 <tt>accessTokenInactivityTimeoutSeconds</tt> 属性。
+    <pre>
+    apiVersion: oauth.openshift.io/v1
+    grantMethod: auto
+    kind: OAuthClient
+    metadata:
+    ...
+    accessTokenInactivityTimeoutSeconds: 600
+    </pre>
+    有关配置 OAuth 客户端的更多信息，请参阅
+    OpenShift 文档：
+    <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html-single/authentication_and_authorization/index#oauth-token-inactivity-timeout_configuring-internal-oauth">OpenShift 文档</a>
+    </p>
+
 
 rationale: |-
     Terminating an idle session within a short time period reduces the window
     of opportunity for unauthorized personnel to take control of a session
     that has been left unattended.
+
+    <p><strong>中文理由：</strong></p>
+    在较短时间内终止空闲会话，可缩小未经授权人员控制无人值守会话的机会窗口。
 
 references:
   nerc-cip: CIP-004-6 R2.2.3,CIP-007-3 R5.1,CIP-007-3 R5.2,CIP-007-3 R5.3.1,CIP-007-3 R5.3.2,CIP-007-3 R5.3.3

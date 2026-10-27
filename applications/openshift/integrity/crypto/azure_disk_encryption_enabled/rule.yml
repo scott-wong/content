@@ -12,10 +12,18 @@ description: |-
 
   [1] https://docs.openshift.com/container-platform/latest/machine_management/creating_machinesets/creating-machineset-azure.html#machineset-enabling-customer-managed-encryption-azure_creating-machineset-azure
 
+  <p><strong>中文说明：</strong></p>
+  OpenShift 提供了一项选项，可在 Azure 上部署节点时指定 Disk Encryption Set [1]。这会启用磁盘加密，并确保 OpenShift 节点已启用该功能。
+
+  [1] https://docs.openshift.com/container-platform/latest/machine_management/creating_machinesets/creating-machineset-azure.html#machineset-enabling-customer-managed-encryption-azure_creating-machineset-azure
+
 rationale: |-
   The usage of disk encryption for the nodes protects the data at rest and
   ensures that an attacker cannot easily exfiltrate the machine contents which
   may contain private keys or other sensitive material.
+
+  <p><strong>中文理由：</strong></p>
+  对节点使用磁盘加密可保护静态数据，并确保攻击者无法轻易窃取计算机内容，这些内容可能包含私钥或其他敏感材料。
 
 identifiers:
   cce@ocp4: CCE-90322-9

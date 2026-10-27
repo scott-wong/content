@@ -9,12 +9,18 @@ description: |-
     By default, the OpenShift OAuth API Server uses Intermediate profile which
     requires a minimum TLS version of 1.2.
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，OpenShift OAuth API Server 使用 TLS。openshift-oauth-apiserver 与 kube-apiserver 之间的连接应使用 HTTPS。默认情况下，OpenShift OAuth API Server 使用 Intermediate 配置档，其要求最低 TLS 版本为 1.2。
+
 rationale: |-
     Connections between the kube-apiserver and the extension
     openshift-oauth-apiserver could potentially carry sensitive data such
     as secrets and keys. It is important to use in-transit encryption
     for any communication between the kube-apiserver and the extension
     openshift-apiserver.
+
+    <p><strong>中文理由：</strong></p>
+    kube-apiserver 与扩展组件 openshift-oauth-apiserver 之间的连接可能传输密钥等敏感数据。kube-apiserver 与扩展组件 openshift-apiserver 之间的任何通信都必须使用传输加密。
 
 severity: medium
 

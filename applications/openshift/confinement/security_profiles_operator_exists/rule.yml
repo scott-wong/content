@@ -11,9 +11,17 @@ description: |-
     provide a label-based system that restricts access and usage of processes, applications, and
     files.
 
+    <p><strong>中文说明：</strong></p>
+    Security Profiles Operator 提供一种将安全计算（seccomp）配置档和 SELinux 配置档定义为自定义资源的方法，这些资源会同步到给定命名空间中的每个节点。
+
+    使用安全配置档可提高集群中容器级别的安全性。Seccomp 安全配置档列出进程可发起的系统调用；SELinux 安全配置档提供基于标签的机制，用于限制对进程、应用和文件的访问及使用。
+
 rationale: |-
   An application that runs with privileges can be attacked to have its privileges exploited.
   Confining applications limit the actions an attacker can perform when they are compromised.
+
+  <p><strong>中文理由：</strong></p>
+  以特权运行的应用程序可能遭攻击，并被利用其权限。限制应用可缩小其被攻陷后攻击者可执行的操作范围。
 
 identifiers:
   cce@ocp4: CCE-86168-2

@@ -22,8 +22,17 @@ description: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/latest/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console",
               text="described in the documentation") }}}
 
+  <p><strong>中文说明：</strong></p>
+  自定义登录页面可向用户显示其信任且熟悉的品牌化页面，然后再将其重定向到身份验证提供程序。
+  <br/>
+
+  这可通过 OAuth 对象实现：创建自定义登录模板，将其存储在 Kubernetes Secret 中，并在相应字段中引用该模板，具体方法见<a href="https://docs.openshift.com/container-platform/latest/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console">相关文档</a>。
+
 rationale: |-
   Displays to users organization-defined IdP selection
+
+  <p><strong>中文理由：</strong></p>
+  在将用户重定向到身份验证提供程序前，向其显示组织定义的 IdP 选择项。
 
 identifiers:
   cce@ocp4: CCE-90666-9

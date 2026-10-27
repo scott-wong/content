@@ -24,6 +24,23 @@ description: |-
     for node in $(oc get node -oname); do oc debug $node -- chroot /host /bin/bash -c 'echo -n "$HOSTNAME "; find /var/log/pods/ -type f \! -user 0 | xargs -r chown root:root' 2>/dev/null; done
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    所有日志都必须由 root 用户和组所有，并具有 755 权限。默认情况下，Kubernetes pod 日志的路径为
+    <pre>/var/log/pods/</pre>。
+    </p>
+    <p>
+    如果任何文件的权限或所有权不正确，请更改位于 "/var/log/pods" 下文件的权限和所有权，以防止未经授权访问。
+
+    1. 执行以下命令，使 Pod 输出仅可由所有者读取：
+
+    for node in $(oc get node -oname); do oc debug $node -- chroot /host /bin/bash -c 'echo -n "$HOSTNAME "; find /var/log/pods/ -type f \( -perm /022 -o -perm /044 \) | xargs -r chmod 600' 2>/dev/null; done
+
+    2. 执行以下命令，将存储 Pod 输出的文件的所属组和组所有者设置为 root：
+
+    for node in $(oc get node -oname); do oc debug $node -- chroot /host /bin/bash -c 'echo -n "$HOSTNAME "; find /var/log/pods/ -type f \! -user 0 | xargs -r chown root:root' 2>/dev/null; done
+    </p>
+
 rationale: |-
     Pod log files may contain sensitive information such as application
     data, user credentials, or system configurations. Unauthorized access
@@ -31,6 +48,9 @@ rationale: |-
     setting owner permissions, OpenShift ensures that only authorized users
     or processes with the necessary privileges can access the pod log files,
     preserving the confidentiality of the logged information.
+
+    <p><strong>中文理由：</strong></p>
+    Pod 日志文件可能包含应用程序数据、用户凭据或系统配置等敏感信息。未经授权访问这些日志文件可能将敏感数据暴露给恶意行为者。通过设置所有者权限，OpenShift 可确保只有具有必要权限的授权用户或进程才能访问 Pod 日志文件，从而保护所记录信息的机密性。
 
 severity: medium
 

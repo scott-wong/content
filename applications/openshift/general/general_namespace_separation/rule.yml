@@ -5,11 +5,17 @@ title: 'Each Namespace should only host one application'
 description: |-
    Use namespaces to isolate your Kubernetes objects.
 
+   <p><strong>中文说明：</strong></p>
+   使用命名空间隔离 Kubernetes 对象。
+
 rationale: |-
    Assigning a dedicated namespace to an application (or parts of an application)
    allows you to granularly control the access to this application on a kubernetes
    level. It also allows you control the network flow from and to other namespaces
    more easily.
+
+   <p><strong>中文理由：</strong></p>
+   为应用（或应用的各个部分）分配专用命名空间，可在 Kubernetes 层面精细控制对该应用的访问，还使控制其他命名空间与该命名空间之间的网络流更加容易。
 
 severity: medium
 

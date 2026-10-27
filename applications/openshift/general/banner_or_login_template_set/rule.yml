@@ -20,9 +20,22 @@ description: |-
   {{{ weblink(link="https://docs.openshift.com/container-platform/4.7/web_console/customizing-the-web-console.html#creating-custom-notification-banners_customizing-web-console",
               text="described in the documentation") }}}
 
+  <p><strong>中文说明：</strong></p>
+  必须配置法律声明。
+  <br/>
+
+  这可以通过 OAuth 对象创建自定义登录页面来实现：将该页面存储在 Kubernetes Secret 中，并在相应字段中引用该页面，具体做法如<a href="https://docs.openshift.com/container-platform/latest/web_console/customizing-the-web-console.html#customizing-the-login-page_customizing-web-console">文档所述</a>。
+
+  <br/>
+
+  另一种方式是通过 ConsoleNotification CRD 设置自定义分类横幅，具体做法如<a href="https://docs.openshift.com/container-platform/4.7/web_console/customizing-the-web-console.html#creating-custom-notification-banners_customizing-web-console">文档所述</a>。
+
 rationale: |-
   Displays to users organization-defined system use notification message or banner before granting
   access to the system that provides privacy and security notices consistent with applicable federal laws.
+
+  <p><strong>中文理由：</strong></p>
+  在授予系统访问权限前，向用户显示组织定义的系统使用通知消息或横幅，以按照适用的联邦法律提供隐私和安全通知。
 
 identifiers:
   cce@ocp4: CCE-84195-7

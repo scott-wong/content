@@ -27,12 +27,28 @@ description: |-
     Alternate authentication mechanisms such as tokens and certificates will need to be
     used. Username and password for basic authentication will be disabled.
 
+    <p><strong>中文说明：</strong></p>
+    任何情况下都不应使用基本身份验证。如确有必要，编辑 <tt>openshift-kube-apiserver</tt> configmap 并删除 <tt>basic-auth-file</tt> 参数：
+    <pre>
+    "apiServerArguments":{
+      ...
+      "basic-auth-file":[
+        "/path/to/any/file"
+      ],
+      ...
+    </pre>
+
+    需要改用令牌和证书等其他身份验证机制。用于基本身份验证的用户名和密码将被禁用。
+
 rationale: |-
     Basic authentication uses plaintext credentials for authentication.
     Currently the basic authentication credentials last indefinitely, and
     the password cannot be changed without restarting the API Server. The
     Basic Authentication is currently supported for convenience and is
     not intended for production workloads.
+
+    <p><strong>中文理由：</strong></p>
+    基本身份验证使用明文凭据进行身份验证。目前基本身份验证凭据永久有效，且不重启 API Server 就无法更改密码。当前支持基本身份验证仅为方便使用，不适用于生产工作负载。
 
 identifiers:
   cce@ocp4: CCE-83936-5

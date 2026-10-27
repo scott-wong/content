@@ -10,6 +10,9 @@ description: |-
     claim exclusive access to storage resources, potentially impacting availability
     and enabling resource manipulation outside normal access controls.
 
+    <p><strong>中文说明：</strong></p>
+    KubeVirt 中的持久预留功能门控允许虚拟机使用 SCSI 持久预留，从而对共享存储提供独占访问。除非工作负载运行明确需要，否则应禁用此功能，因为它允许虚拟机独占访问存储资源，可能影响可用性，并使资源操作绕过正常访问控制，从而引入安全风险。
+
 rationale: |-
     The <tt>.spec.featureGates.persistentReservation</tt> field in the
     <tt>kubevirt-hyperconverged</tt> resource controls whether virtual machines can
@@ -19,6 +22,9 @@ rationale: |-
     normal Kubernetes access controls. Unless this capability is explicitly required
     for specific workload requirements, it should remain disabled to minimize the
     attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>kubevirt-hyperconverged</tt> 资源中的 <tt>.spec.featureGates.persistentReservation</tt> 字段控制虚拟机是否可使用 SCSI 持久预留。该功能启用时，虚拟机可以独占访问共享存储资源，这可能被利用来造成拒绝服务状况，或以绕过正常 Kubernetes 访问控制的方式操纵存储访问。除非特定工作负载要求明确需要此能力，否则应保持禁用，以尽量减小攻击面。
 
 severity: medium
 

@@ -41,6 +41,21 @@ description: |-
   of identity providers.
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  用户要与 OpenShift Container Platform 交互，必须先向集群进行身份验证。身份验证层识别与 OpenShift Container Platform API 请求关联的用户。随后，授权层使用请求用户的信息判断是否允许该请求。
+  <a href="https://docs.openshift.com/container-platform/latest/logging/cluster-logging-external.html">了解 OpenShift Container Platform 中的身份验证</a>
+  </p>
+
+  <p>
+  OpenShift Container Platform 包含一个用于基于令牌身份验证的内置 OAuth 服务器。开发人员和管理员获取 OAuth 访问令牌，以便向 API 证明自身身份。建议管理员在集群安装完成后配置 OAuth 以指定身份提供程序。集群的用户访问通过身份提供程序（Identity Provider）管理。
+  <a href="https://docs.openshift.com/container-platform/latest/authentication/understanding-identity-provider.html">了解身份提供程序配置</a>
+  </p>
+
+  <p>
+  但是，并非 OpenShift 支持的所有身份提供程序都具有相同能力。例如，htpasswd 身份提供程序仅检查用户名和密码是否匹配，不提供 2FA、账户锁定或通知机制。因此，本规则仅允许使用一部分身份提供程序。
+  </p>
+
 
 rationale: |-
   <p>
@@ -60,6 +75,19 @@ rationale: |-
   In addition, using an external Identity provider allows for setting up notifications
   on account creation or deletion, multi-factor authentication, disabling inactive
   accounts or other features required by different compliance standards.
+  </p>
+
+  <p><strong>中文理由：</strong></p>
+  <p>
+  对于任何身份验证机制，在凭据遭入侵或不再需要时撤销凭据的能力都是一项关键控制。Kubernetes 客户端证书身份验证由于不支持证书吊销，因此无法实现这一点。
+  </p>
+
+  <p>
+  OpenShift 的内置 OAuth 服务器通过依赖身份提供程序来支持撤销凭据，并使管理员能够撤销授予特定用户的任何令牌。
+  </p>
+
+  <p>
+  此外，使用外部身份提供程序还支持设置账户创建或删除通知、多因素身份验证、禁用非活动账户，以及满足不同合规标准所需的其他功能。
   </p>
 
 references:

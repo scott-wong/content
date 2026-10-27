@@ -18,11 +18,18 @@ description: |-
     Ensure that the plugin is enabled in the api-server configuration:
     <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '.data."config.yaml"' | jq '.apiServerArguments."enable-admission-plugins"'</pre>
 
+    <p><strong>中文说明：</strong></p>
+    为确保只有在创建并授予 <tt>ServiceAccount</tt> 对象后才允许创建 Pod，请按照文档并根据环境创建 <tt>ServiceAccount</tt> 对象。确保 api-server 配置中已启用该插件：
+    <pre>$ oc -n openshift-kube-apiserver get configmap config -o json | jq -r '.data."config.yaml"' | jq '.apiServerArguments."enable-admission-plugins"'</pre>
+
 rationale: |-
     When a pod is created, if a service account is not specified, the pod
     is automatically assigned the <i>default</i> service account in the same
     namespace. OpenShift operators should create unique service accounts
     and let the API Server manage its security tokens.
+
+    <p><strong>中文理由：</strong></p>
+    创建 Pod 时，如果未指定服务账户，Pod 会自动被分配同一命名空间中的 <i>default</i> 服务账户。OpenShift Operator 应创建唯一服务账户，并让 API Server 管理其安全令牌。
 
 identifiers:
   cce@ocp4: CCE-83791-4

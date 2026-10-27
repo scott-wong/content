@@ -11,6 +11,9 @@ description: |-
     <tt>MigrationPolicy</tt> resources, verifying that only approved
     subjects are bound to those permissions.
 
+    <p><strong>中文说明：</strong></p>
+    由于授权主体集合因环境而异，此规则需要手动验证。组织可以创建使用 CEL 的 CustomRule，通过评估 ClusterRoleBinding 和 ClusterRole 对 <tt>VirtualMachineInstanceMigration</tt> 和 <tt>MigrationPolicy</tt> 资源的 create 与 update 访问权限，验证仅批准的主体被绑定到这些权限，从而自动执行此检查。
+
 rationale: |-
     Virtual machine live migration moves a running VM between nodes.
     Granting the ability to create <tt>VirtualMachineInstanceMigration</tt>
@@ -20,6 +23,9 @@ rationale: |-
     exposure of workload data during the migration process. Restricting
     access to these resources ensures that only approved administrators
     can initiate or influence VM migration behavior.
+
+    <p><strong>中文理由：</strong></p>
+    虚拟机热迁移会在节点之间移动运行中的 VM。向不受信任或不必要的主体授予创建 <tt>VirtualMachineInstanceMigration</tt> 或 <tt>MigrationPolicy</tt> 对象的能力，会增加非计划资源争用、因迁移过多导致拒绝服务，以及在迁移过程中泄露工作负载数据的风险。限制对这些资源的访问可确保只有经批准的管理员才能发起或影响 VM 迁移行为。
 
 severity: medium
 

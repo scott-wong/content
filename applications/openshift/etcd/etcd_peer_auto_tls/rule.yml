@@ -18,12 +18,20 @@ description: |-
     The etcd pod configuration contained in the configmap should not
     contain the <tt>--peer-auto-tls=true</tt> flag.
 
+    <p><strong>中文说明：</strong></p>
+    为确保 <tt>etcd</tt> 服务不使用自签名证书，请运行以下命令：
+    <pre>$ oc get cm/etcd-pod -n openshift-etcd -o yaml</pre>
+    configmap 中包含的 etcd pod 配置不应包含 <tt>--peer-auto-tls=true</tt> 标志。
+
 rationale: |-
     Without cryptographic integrity protections, information can be
     altered by unauthorized users without detection. Using self-signed
     certificates ensures that the certificates are never validated
     against a certificate authority and could lead to compromised
     and invalidated data.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有加密完整性保护，未经授权的用户可在不被发现的情况下更改信息。使用自签名证书意味着证书永远不会由证书颁发机构验证，可能导致数据遭到破坏并失效。
 
 severity: medium
 

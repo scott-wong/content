@@ -9,10 +9,16 @@ description: |-
     To ensure pods do not automatically mount tokens, set
     <tt>automountServiceAccountToken</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    除 Pod 中运行的工作负载明确需要与 API Server 通信外，服务账户令牌不应挂载到 Pod 中。为确保 Pod 不自动挂载令牌，请将 <tt>automountServiceAccountToken</tt> 设为 <tt>false</tt>。
+
 rationale: |-
     Mounting service account tokens inside pods can provide an avenue
     for privilege escalation attacks where an attacker is able to
     compromise a single pod in the cluster.
+
+    <p><strong>中文理由：</strong></p>
+    在 Pod 内挂载服务账户令牌可为权限提升攻击提供途径，攻击者可能借此攻陷集群中的单个 Pod。
 
 severity: medium
 

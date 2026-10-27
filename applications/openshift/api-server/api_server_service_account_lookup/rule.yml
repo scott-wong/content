@@ -11,7 +11,11 @@ title: Ensure that the service-account-lookup argument is set to true
 {{% set custom_jqfilter = '{{if ne .hypershift_cluster "None"}}' ~ hypershift_jqfilter ~ '{{else}}' ~  default_jqfilter ~ '{{end}}' %}}
 {{% set dump_path = default_api_path ~ ',' ~ default_jqfilter ~ ',' ~ custom_jqfilter %}}
 
-description: Validate service account before validating token.
+description: |-
+    Validate service account before validating token.
+
+    <p><strong>中文说明：</strong></p>
+    在验证令牌之前验证服务账户。
 
 rationale: |-
   If <tt>service-account-lookup</tt> is not enabled, the apiserver
@@ -21,6 +25,9 @@ rationale: |-
   using a service account token even after the corresponding
   service account is deleted. This is an example of time of
   check to time of use security issue.
+
+  <p><strong>中文理由：</strong></p>
+  如果未启用 <tt>service-account-lookup</tt>，apiserver 仅验证身份验证令牌有效，而不验证请求中提及的服务账户令牌确实存在于 etcd 中。这会导致即使相应的服务账户已删除，仍可使用该服务账户令牌。这是检查时到使用时（TOCTOU）安全问题的示例。
 
 identifiers:
   cce@ocp4: CCE-83370-7

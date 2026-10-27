@@ -34,12 +34,35 @@ description: |-
                 text="the relevant documentation") }}}.
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    <tt>tlsSecurityProfile</tt> 配置指定在建立与外部暴露服务器的连接时使用的 TLS 配置。尽管建立连接时使用安全传输模式，但所用协议未必始终足够强，无法避免传输中的数据被截获和操纵。配置的 TLS 安全配置档不得使用任何具有已知安全漏洞的协议、密码套件和算法。
+    </p>
+
+    <p>
+    <tt>tlsSecurityProfile</tt> 可配置为使用 <tt>custom</tt>、<tt>intermediate</tt>、<tt>modern</tt> 或 <tt>old</tt> 配置档之一。任何时候都应避免使用 Old 配置档；使用 custom 配置档时应极其谨慎，因为无效配置可能造成灾难性后果。始终建议使用高度安全的 intermediate 或 modern 配置档；若未设置，则会选择默认配置档。
+    </p>
+
+    <p>
+    使用以下命令将 tlsSecurityProfile 更新为 Intermediate：
+    {{% raw %}}<pre>oc patch apiservers.config.openshift.io cluster --type 'json' --patch '[{"op": "add", "path": "/spec/tlsSecurityProfile/intermediate", "value": {}}, {"op": "replace", "path": "/spec/tlsSecurityProfile/type", "value": "Intermediate"}'</pre>{{% endraw %}}
+    </p>
+
+    <p>
+    有关更多信息，请遵循
+    OpenShift 文档：
+    <a href="https://docs.openshift.com/container-platform/latest/security/tls-security-profiles.html">相关文档</a>。
+    </p>
+
 rationale: |-
     The authenticity and integrity of the container platform and communication
     between nodes and components must be secure. If an insecure protocol,
     cipher, or algorithms is used, during transmission of data, the data can be
     intercepted and manipulated. To thwart the manipulation of the data during
     transmission secure protocol, cipher and algorithms must be used.
+
+    <p><strong>中文理由：</strong></p>
+    容器平台以及节点和组件之间通信的真实性和完整性必须得到保障。如果在数据传输过程中使用不安全的协议、密码套件或算法，数据可能被截获和操纵。为防止传输期间数据被操纵，必须使用安全的协议、密码套件和算法。
 
 severity: medium
 

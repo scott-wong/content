@@ -46,6 +46,22 @@ description: |-
               text="Using RBAC to define and apply permissions | Authentication | OpenShift Container Platform") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  用户要与 OpenShift Container Platform 交互，必须首先向集群进行身份验证。身份验证层识别与 OpenShift Container Platform API 请求关联的用户。授权层随后使用请求用户的信息判定是否允许该请求。
+  <a href="https://docs.openshift.com/container-platform/4.6/logging/cluster-logging-external.html">了解身份验证 | 身份验证 | OpenShift Container Platform</a>
+  </p>
+
+  <p>
+  OpenShift Container Platform 包含用于基于令牌身份验证的内置 OAuth 服务器。开发人员和管理员获取 OAuth 访问令牌，以向 API 验证自身身份。建议管理员在安装集群后配置 OAuth 以指定身份提供程序。对集群的用户访问通过身份提供程序管理。
+  <a href="https://docs.openshift.com/container-platform/4.6/authentication/understanding-identity-provider.html">了解身份提供程序配置 | 身份验证 | OpenShift Container Platform</a>
+  </p>
+
+  <p>
+  OpenShift 包含内置的基于角色的访问控制 (RBAC)，用于确定是否允许用户在集群中执行给定操作。角色可以具有集群范围或本地（即项目）范围。
+  <a href="https://docs.openshift.com/container-platform/4.6/authentication/using-rbac.html">使用 RBAC 定义和应用权限 | 身份验证 | OpenShift Container Platform</a>
+  </p>
+
 rationale: |-
   <p>
   With any authentication mechanism the ability to revoke credentials if they
@@ -58,6 +74,15 @@ rationale: |-
   OpenShift's built-in OAuth server allows credential revocation by relying on
   the Identity provider, as well as giving the administrators the ability to
   revoke any tokens given to a specific user.
+  </p>
+
+  <p><strong>中文理由：</strong></p>
+  <p>
+  对于任何身份验证机制，在凭据泄露或不再需要时撤销凭据的能力都是一项关键控制。由于不支持证书撤销，Kubernetes 客户端证书身份验证无法实现此能力。
+  </p>
+
+  <p>
+  OpenShift 的内置 OAuth 服务器可通过依赖身份提供程序来撤销凭据，同时使管理员能够撤销授予特定用户的任何令牌。
   </p>
 
 identifiers:

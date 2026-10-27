@@ -19,11 +19,19 @@ description: |-
   initiating reprocessing of RHACS Cloud Service policies, and interacting with
   the Admission controller.
 
+  <p><strong>中文说明：</strong></p>
+  Red Hat Advanced Cluster Security (ACS) for Kubernetes 为容器化环境提供全面的安全性。它可以深入查看跨 Kubernetes 集群部署的资源，使团队能够检测所有镜像中的漏洞、管理合规性并强制执行安全策略。通过将 ACS 集成到 Kubernetes 环境中，组织可自动执行安全检查与配置，确保每个已部署应用都按照最佳实践和组织策略接受扫描并受到保护。
+
+  Sensor 是负责分析和监控集群的服务。Sensor 监听 OpenShift Container Platform 或 Kubernetes API 以及 Collector 事件，以报告集群当前状态。Sensor 还会根据 RHACS Cloud Service 策略触发部署时和运行时违规。此外，Sensor 负责所有集群交互，例如应用网络策略、启动 RHACS Cloud Service 策略的重新处理以及与 Admission Controller 交互。
+
 
 rationale: |-
   ACS provides a method to continuously monitor and protect the Kubernetes environment against vulnerabilities
   and misconfigurations. This ensures that the infrastructure and applications are compliant
   with security standards and regulations, reducing the risk of security breaches.
+
+  <p><strong>中文理由：</strong></p>
+  ACS 提供了一种持续监控和保护 Kubernetes 环境免受漏洞及错误配置影响的方法。这可确保基础设施和应用符合安全标准与法规，从而降低安全泄露风险。
 
 identifiers:
   cce@ocp4: CCE-86171-6

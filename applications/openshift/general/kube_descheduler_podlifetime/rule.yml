@@ -6,8 +6,15 @@ description: |-
     If there is an increased risk of external influences and a very high need for protection, pods should be stopped and restarted regularly.
     No pod should run for more than 24 hours. The availability of the applications in the pod should be ensured.
 
+    <p><strong>中文说明：</strong></p>
+    如果外部影响风险升高且保护需求极高，应定期停止并重新启动 Pod。
+    任何 Pod 的运行时间都不应超过 24 小时。应确保 Pod 中应用的可用性。
+
 rationale: |-
     If there is an increased risk of external influences and a very high need for protection, pods should be stopped and restarted regularly. With this an attacker who gained control over a pod loses it and the pod gets restarted from a known good state (the image).
+
+    <p><strong>中文理由：</strong></p>
+    如果外部影响风险升高且保护需求极高，应定期停止并重新启动 Pod。这样，已取得 Pod 控制权的攻击者会失去该控制权，Pod 会从已知良好状态（镜像）重新启动。
 
 severity: medium
 

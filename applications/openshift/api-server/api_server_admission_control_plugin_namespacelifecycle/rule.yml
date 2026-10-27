@@ -14,12 +14,18 @@ title: 'Enable the NamespaceLifecycle Admission Control Plugin'
 description: |-
     OpenShift enables the <tt>NamespaceLifecycle</tt> plugin by default.
 
+    <p><strong>中文说明：</strong></p>
+    OpenShift 默认启用 <tt>NamespaceLifecycle</tt> 插件。
+
 rationale: |-
     Setting admission control policy to <tt>NamespaceLifecycle</tt> ensures that
     objects cannot be created in non-existent namespaces, and that namespaces
     undergoing termination are not used for creating new objects. This
     is recommended to enforce the integrity of the namespace termination process
     and also for the availability of new objects.
+
+    <p><strong>中文理由：</strong></p>
+    将准入控制策略设置为 <tt>NamespaceLifecycle</tt> 可确保无法在不存在的命名空间中创建对象，并确保正在终止的命名空间不会被用于创建新对象。建议采用此设置，以强制保证命名空间终止过程的完整性以及新对象的可用性。
 
 identifiers:
   cce@ocp4: CCE-83854-0

@@ -9,9 +9,15 @@ title: 'Ensure kubevirt cache directory permission is set to 755 or more restric
 description: |-
     {{{ describe_file_permissions(file=kubevirt_cache_dir, perms="0755") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/var/run/kubevirt-private/</tt> 目录的权限为 <tt>0755</tt> 或更严格。
+
 rationale: |-
     Setting the kubevirt private directory to 755 or more restrictive limits access to
     security related administrative functionality to approved administrators.
+
+    <p><strong>中文理由：</strong></p>
+    将 kubevirt 私有目录的权限设置为 0755 或更严格，可将对安全相关管理功能的访问限制为经批准的管理员。
 
 severity: medium
 

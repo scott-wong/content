@@ -33,10 +33,37 @@ description: |-
   [2] {{{ weblink(link="https://docs.openshift.com/container-platform/latest/security/container_security/security-container-signature.html") }}}
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>
+  OpenShift 平台允许在拉取容器镜像前验证其签名。此功能通过 policy.json 文件实现 [1]，并且需要通过 Machine Config Operator 进行配置 [2]。
+  </p>
+  <p>
+  必须确保 <tt>/etc/containers/policy.json</tt> 中的默认策略为 "reject"，其内容应如下所示：
+
+  <pre>
+    {
+      "default": [{"type": "reject"}],
+      "transports":
+      ...
+    }
+  </pre>
+
+  添加允许的镜像仓库必须是一项显式操作，以确保仅使用来自允许镜像仓库的容器。
+  </p>
+  <p>
+  [1] https://github.com/containers/image/blob/main/docs/containers-policy.json.5.md
+  </p>
+  <p>
+  [2] https://docs.openshift.com/container-platform/latest/security/container_security/security-container-signature.html
+  </p>
+
 rationale: |-
   By ensuring that the container runtime verifies the integrity of container images
   before pulling them one is able to prevent a malicious actor from introducing
   unauthorized images into the deployment.
+
+  <p><strong>中文理由：</strong></p>
+  确保容器运行时在拉取容器镜像前验证其完整性，可防止恶意行为者将未经授权的镜像引入部署环境。
 
 identifiers:
   cce@ocp4: CCE-90254-4
