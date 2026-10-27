@@ -9,7 +9,12 @@ description: |-
     associated user domain(s) instead of the general cronjob domain.
     {{{ describe_sebool_enable(sebool="cron_userdomain_transition") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>cron_userdomain_transition</tt> 为 enabled。应启用此设置，使最终用户的 cron 作业在其默认关联的用户域中运行，而不是在通用 cronjob 域中运行。要启用 <tt>cron_userdomain_transition</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cron_userdomain_transition on</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用用户域转换后，最终用户的 cron 作业会在其关联的用户域中受到更精确的限制，而不是在通用 cronjob 域中运行。
 
 severity: medium
 

@@ -8,11 +8,17 @@ description: |-
     <tt>/boot</tt> partition. 
     {{{ describe_mount(option="noauto", part="/boot") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/boot</tt> 使用 <tt>noauto</tt> 挂载选项。
+
 rationale: |-
     The <tt>/boot</tt> partition contains the kernel and the bootloader. Access
     to the partition after the boot process finishes should not be needed. Files
     contained within this partition can be analysed and gained information can
     be used for exploit creation.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/boot</tt> 分区包含内核和引导加载程序。引导过程完成后不应需要访问该分区。可对其中包含的文件进行分析，并利用获得的信息创建漏洞利用程序。
 
 {{{ complete_ocil_entry_mount_option("/boot", "noauto") }}}
 

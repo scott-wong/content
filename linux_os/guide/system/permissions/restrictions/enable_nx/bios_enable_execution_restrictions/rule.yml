@@ -9,9 +9,15 @@ description: |-
     under a Security section. Look for Execute Disable (XD) on Intel-based systems and No Execute (NX)
     on AMD-based systems.
 
+    <p><strong>中文说明：</strong></p>
+    重启系统并进入 BIOS 或 Setup 配置菜单。浏览 BIOS 配置菜单并确保启用该选项。该设置可能位于 Security 部分。在基于 Intel 的系统上查找 Execute Disable（XD），在基于 AMD 的系统上查找 No Execute（NX）。
+
 rationale: |-
     Computers with the ability to prevent this type of code execution frequently put an option in the BIOS that will
     allow users to turn the feature on or off at will.
+
+    <p><strong>中文理由：</strong></p>
+    能够防止此类代码执行的计算机通常会在 BIOS 中提供选项，允许用户随时打开或关闭该功能。
 
 severity: medium
 

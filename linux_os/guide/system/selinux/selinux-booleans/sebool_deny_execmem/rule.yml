@@ -8,9 +8,16 @@ description: |-
     This setting should be configured to {{{ xccdf_value("var_deny_execmem") }}}.
     <br/>{{{ describe_sebool_var(sebool="deny_execmem") }}}
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>deny_execmem</tt> 为 disabled。此设置应配置为 {{{ xccdf_value("var_deny_execmem") }}}。
+    <br/>要设置 <tt>deny_execmem</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P deny_execmem {{{ xccdf_value("var_deny_execmem") }}}</tt>。
+
 rationale: |-
     Allowing user domain applications to map a memory region as both writable and
     executable makes them more susceptible to data execution attacks.
+
+    <p><strong>中文理由：</strong></p>
+    允许用户域应用将内存区域同时映射为可写和可执行，会使其更容易受到数据执行攻击。
 
 severity: medium
 

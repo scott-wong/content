@@ -8,10 +8,16 @@ description: |-
     executed out of <tt>/home</tt>.
     {{{ describe_mount(option="noexec", part="/home") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/home</tt> 使用 <tt>noexec</tt> 挂载选项。
+
 rationale: |-
     The <tt>/home</tt> directory contains data of individual users. Binaries in
     this directory should not be considered as trusted and users should not be
     able to execute them.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/home</tt> 目录包含各个用户的数据。此目录中的二进制文件不应被视为可信，用户不应能够执行它们。
 
 severity: medium
 

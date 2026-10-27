@@ -11,12 +11,18 @@ description: |-
     are silently ignored by <tt>systemd-sysctl</tt> and do not persist across
     reboots.
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/etc/sysctl.d/99-sysctl.conf</tt> 必须是指向 <tt>/etc/sysctl.conf</tt> 的符号链接。该符号链接通常由 <tt>procps</tt> 软件包创建，可确保 <tt>systemd-sysctl</tt> 在启动期间以正确优先级处理 <tt>/etc/sysctl.conf</tt>。如果没有该链接，写入 <tt>/etc/sysctl.conf</tt> 的内核参数设置会被 <tt>systemd-sysctl</tt> 静默忽略，且无法在重启后保留。
+
 rationale: |-
     When <tt>/etc/sysctl.d/99-sysctl.conf</tt> is absent or is not a symlink to
     <tt>/etc/sysctl.conf</tt>, <tt>systemd-sysctl</tt> does not load
     <tt>/etc/sysctl.conf</tt> during boot. As a result, any kernel parameters
     configured in that file — including security hardening settings — are not
     applied at startup, undermining system hardening.
+
+    <p><strong>中文理由：</strong></p>
+    当 <tt>/etc/sysctl.d/99-sysctl.conf</tt> 不存在或不是指向 <tt>/etc/sysctl.conf</tt> 的符号链接时，<tt>systemd-sysctl</tt> 在启动期间不会加载 <tt>/etc/sysctl.conf</tt>。因此，该文件中配置的任何内核参数（包括安全强化设置）都不会在启动时应用，从而削弱系统强化。
 
 severity: medium
 

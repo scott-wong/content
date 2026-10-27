@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="global_ssp") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>global_ssp</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P global_ssp off</tt> 将其禁用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用此布尔值会向所有域授予超出最小权限策略所需的额外访问能力；应将其禁用以减少攻击面。
 
 severity: medium
 

@@ -3,12 +3,19 @@ documentation_complete: true
 
 title: 'Disable storing core dumps'
 
-description: '{{{ describe_sysctl_option_value(sysctl="kernel.core_pattern", value="|/bin/false") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="kernel.core_pattern", value="|/bin/false") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>kernel.core_pattern</tt> 设置为 <tt>|/bin/false</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.core_pattern=|/bin/false</tt>；要持久化，请将 <tt>kernel.core_pattern = |/bin/false</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     A core dump includes a memory image taken at the time the operating system
     terminates an application. The memory image could contain sensitive data and is generally useful
     only for developers trying to debug problems.
+
+    <p><strong>中文理由：</strong></p>
+    核心转储包含操作系统终止应用程序时的内存映像。该内存映像可能包含敏感数据，通常仅对尝试调试问题的开发者有用。
 
 severity: medium
 

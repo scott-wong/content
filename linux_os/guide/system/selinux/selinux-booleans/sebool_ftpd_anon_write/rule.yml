@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="ftpd_anon_write") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>ftpd_anon_write</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>ftpd_anon_write</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P ftpd_anon_write off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许 FTP 守护进程匿名写入会使未经授权的用户修改服务器上的文件。
 
 severity: medium
 

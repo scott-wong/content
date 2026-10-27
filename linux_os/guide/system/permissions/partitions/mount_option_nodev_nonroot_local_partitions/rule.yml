@@ -10,12 +10,18 @@ description: |-
     chroot jails built for system services.
     {{{ describe_mount(option="nodev", part="any non-root local partitions") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保任何非 root 本地分区使用 <tt>nodev</tt> 挂载选项。
+
 rationale: |-
     The <tt>nodev</tt> mount option prevents files from being
     interpreted as character or block devices. The only legitimate location
     for device files is the <tt>/dev</tt> directory located on the root partition.
     The only exception to this is chroot jails, for which it is not advised
     to set <tt>nodev</tt> on these filesystems.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>nodev</tt> 挂载选项可防止文件被解释为字符设备或块设备。设备文件的唯一合法位置是根分区上的 <tt>/dev</tt> 目录。唯一例外是 chroot 环境，不建议在这些文件系统上设置 <tt>nodev</tt>。
 
 ocil: |
     To verify the <tt>nodev</tt> option is configured for non-root local partitions,

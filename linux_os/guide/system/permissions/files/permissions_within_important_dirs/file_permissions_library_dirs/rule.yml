@@ -22,10 +22,29 @@ description: |-
     <pre>$ sudo chmod go-w <i>FILE</i></pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    系统范围内共享库文件会在进程加载或运行时链接到可执行文件，默认存储在以下目录中：
+    <pre>/lib
+    /lib64
+    /usr/lib
+    /usr/lib64
+    </pre>
+    {{% if product != "hummingbird" %}}
+    可在运行时添加到内核的内核模块存储在 <tt>/lib/modules</tt> 中。
+    {{% endif %}}
+    这些目录中的所有文件均不应可被组或其他用户写入。
+    {{% if product != "hummingbird" %}}
+    如果发现这些目录中的任何文件可被组或其他用户写入，请使用以下命令更正其权限：
+    <pre>$ sudo chmod go-w <i>FILE</i></pre>
+    {{% endif %}}
+
 rationale: |-
     Files from shared library directories are loaded into the address
     space of processes (including privileged ones) or of the kernel itself at
     runtime. Restrictive permissions are necessary to protect the integrity of the system.
+
+    <p><strong>中文理由：</strong></p>
+    共享库目录中的文件会在运行时加载到进程（包括特权进程）或内核本身的地址空间中。必须使用限制性权限以保护系统完整性。
 
 severity: medium
 

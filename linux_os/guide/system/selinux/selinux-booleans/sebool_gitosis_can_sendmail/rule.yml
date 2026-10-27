@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="gitosis_can_sendmail") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>gitosis_can_sendmail</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P gitosis_can_sendmail off</tt> 将其禁用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用此布尔值会允许 Gitosis 发送邮件，可能被滥用于数据外传或发送未经授权的消息。
 
 severity: medium
 

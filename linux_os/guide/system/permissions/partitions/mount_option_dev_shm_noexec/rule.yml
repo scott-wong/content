@@ -10,9 +10,15 @@ description: |-
     from world-writable temporary storage directories such as <tt>/dev/shm</tt>.
     {{{ describe_mount(option="noexec", part="/dev/shm") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/dev/shm</tt> 使用 <tt>noexec</tt> 挂载选项。
+
 rationale: |-
     Allowing users to execute binaries from world-writable directories
     such as <tt>/dev/shm</tt> can expose the system to potential compromise.
+
+    <p><strong>中文理由：</strong></p>
+    允许用户从 <tt>/dev/shm</tt> 这样的全局可写目录执行二进制文件可能使系统面临潜在的失陷风险。
 
 {{{ complete_ocil_entry_mount_option("/dev/shm", "noexec") }}}
 

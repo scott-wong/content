@@ -10,7 +10,12 @@ description: |-
     be enabled.
     {{{ describe_sebool_enable(sebool="gssd_read_tmp") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>gssd_read_tmp</tt> 处于启用状态。此设置允许 <tt>gssd</tt> 进程访问 Kerberos，以读取临时目录中的 TGT。如果该设置已禁用，应将其启用。可使用 <tt>sudo setsebool -P gssd_read_tmp on</tt> 将其启用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值会阻止 gssd 读取临时目录中的 Kerberos TGT，从而影响已经建立的 Kerberos 身份验证流程。
 
 severity: medium
 

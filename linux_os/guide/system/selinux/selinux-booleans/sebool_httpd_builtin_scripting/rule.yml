@@ -9,7 +9,12 @@ description: |-
     or some similarly scripting language.
     {{{ describe_sebool_disable(sebool="httpd_builtin_scripting") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>httpd_builtin_scripting</tt> 处于启用状态。如果 <tt>httpd</tt> 未运行 <tt>php</tt> 或类似的脚本语言，应将其禁用。可使用 <tt>sudo setsebool -P httpd_builtin_scripting off</tt> 将其禁用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    如果未使用 PHP 或类似内置脚本功能，保持此布尔值启用会向 Web 服务器授予不必要的脚本执行能力。
 
 severity: medium
 

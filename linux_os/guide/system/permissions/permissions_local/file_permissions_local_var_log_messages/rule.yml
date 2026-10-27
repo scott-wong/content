@@ -14,6 +14,15 @@ description: |-
 
     /var/log/messages root:root 640</pre>
 
+    <p><strong>中文说明：</strong></p>
+    包含敏感信息的文件应受到严格权限保护。大多数情况下，不需要任何非 root 用户读取这些文件。
+    确保 <tt>/var/log/messages</tt> 的权限为 <tt>0640</tt>。
+
+    使用以下命令检查“permissions.local”文件是否包含正确的权限规则：
+    <pre># grep -i messages /etc/permissions.local
+
+    /var/log/messages root:root 640</pre>
+
 rationale: |-
     The <tt>/var/log/messages</tt> file contains system error messages. Only
     authorized personnel should be aware of errors and the details of the
@@ -22,6 +31,9 @@ rationale: |-
     Personally Identifiable Information (PII) and operational information must
     not be revealed through error messages to unauthorized personnel or their
     designated representatives.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/var/log/messages</tt> 文件包含系统错误消息。只有授权人员才应了解错误及其详细信息。错误消息可表明组织的运行状态，也可能识别 SUSE 操作系统或平台。此外，不得通过错误消息向未授权人员或其指定代表泄露个人可识别信息（PII）和运营信息。
 
 severity: medium
 

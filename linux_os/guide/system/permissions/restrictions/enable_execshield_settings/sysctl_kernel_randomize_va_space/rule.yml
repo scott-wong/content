@@ -2,7 +2,11 @@ documentation_complete: true
 
 title: 'Enable Randomized Layout of Virtual Address Space'
 
-description: '{{{ describe_sysctl_option_value(sysctl="kernel.randomize_va_space", value="2") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="kernel.randomize_va_space", value="2") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>kernel.randomize_va_space</tt> 设置为 <tt>2</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.randomize_va_space=2</tt>；要持久化，请将 <tt>kernel.randomize_va_space = 2</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     Address space layout randomization (ASLR) makes it more difficult for an
@@ -11,6 +15,9 @@ rationale: |-
     ASLR makes it more difficult for an attacker to know the location of
     existing code in order to re-purpose it using return oriented programming
     (ROP) techniques.
+
+    <p><strong>中文理由：</strong></p>
+    地址空间布局随机化（ASLR）使攻击者更难预测其在利用尝试期间注入进程地址空间的攻击代码位置。此外，ASLR 还使攻击者更难获知现有代码的位置，从而难以使用返回导向编程（ROP）技术重用这些代码。
 
 severity: medium
 

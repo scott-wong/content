@@ -6,6 +6,9 @@ title: 'Install policycoreutils Package'
 description: |-
     {{{ describe_package_install(package="policycoreutils") }}}
 
+    <p><strong>中文说明：</strong></p>
+    请使用适当的软件包管理工具安装 <tt>policycoreutils</tt> 软件包。
+
 rationale: |-
     Security-enhanced Linux is a feature of the Linux kernel and a number of utilities
     with enhanced security functionality designed to add mandatory access controls to Linux.
@@ -19,6 +22,9 @@ rationale: |-
     basic operation of an SELinux-enabled system. These utilities include <tt>load_policy</tt>
     to load SELinux policies, <tt>setfiles</tt> to label filesystems, <tt>newrole</tt> to
     switch roles, and so on.
+
+    <p><strong>中文理由：</strong></p>
+    Security-enhanced Linux 是 Linux 内核的一项功能，并包含一组具有增强安全功能的实用程序，旨在为 Linux 添加强制访问控制。SELinux 内核包含最初为提高 Flask 操作系统安全性而开发的新架构组件。这些组件为执行多种强制访问控制策略提供通用支持，包括基于类型强制、基于角色的访问控制和多级安全的策略。<tt>policycoreutils</tt> 包含 SELinux 系统基本运行所需的策略核心实用程序，包括用于加载 SELinux 策略的 <tt>load_policy</tt>、用于标记文件系统的 <tt>setfiles</tt>、用于切换角色的 <tt>newrole</tt> 等。
 
 severity: low
 

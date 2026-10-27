@@ -9,10 +9,16 @@ description: |-
     should not be required in this directory.
     {{{ describe_mount(option="nosuid", part="/srv") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/srv</tt> 使用 <tt>nosuid</tt> 挂载选项。
+
 rationale: |-
     The presence of SUID and SGID executables should be tightly controlled. The
     <tt>/srv</tt> directory contains files served by various network services such as FTP. Users should
     not be able to execute SUID or SGID binaries from this directory.
+
+    <p><strong>中文理由：</strong></p>
+    SUID 和 SGID 可执行文件的存在应受到严格控制。<tt>/srv</tt> 目录包含由 FTP 等各种网络服务提供的文件。用户不应能够从此目录执行 SUID 或 SGID 二进制文件。
 
 {{{ complete_ocil_entry_mount_option("/srv", "nosuid") }}}
 

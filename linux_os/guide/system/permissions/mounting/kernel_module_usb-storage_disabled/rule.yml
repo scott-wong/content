@@ -11,9 +11,19 @@ description: |-
     module, but will not prevent an administrator (or another program) from using the
     <tt>insmod</tt> program to load the module manually.
 
+    <p><strong>中文说明：</strong></p>
+    要防止使用 USB 存储设备，请配置内核模块加载系统，以防止自动加载 USB 存储驱动程序。
+
+    要将系统配置为防止加载 <tt>usb-storage</tt> 内核模块，请将以下行添加到 <tt>/etc/modprobe.d/usb-storage.conf</tt> 文件：<tt>install usb-storage /bin/false</tt>。此条目会在安装 <tt>usb-storage</tt> 模块时返回非零值，并通过错误消息向用户说明该条目的含义。如果希望省略非零返回值和错误消息，可改为添加 <tt>install usb-storage /bin/true</tt>（OVAL 允许 <tt>/bin/true</tt> 和 <tt>/bin/false</tt>，扫描时均会接受）。在适用产品上，还可将 <tt>blacklist usb-storage</tt> 添加到同一文件，以配置系统防止使用该模块。
+
+    这将阻止 <tt>modprobe</tt> 程序加载 <tt>usb-storage</tt> 模块，但不会阻止管理员（或其他程序）使用 <tt>insmod</tt> 程序手动加载该模块。
+
 rationale: |-
     USB storage devices such as thumb drives can be used to introduce
     malicious software.
+
+    <p><strong>中文理由：</strong></p>
+    诸如 U 盘之类的 USB 存储设备可用于引入恶意软件。
 
 severity: medium
 

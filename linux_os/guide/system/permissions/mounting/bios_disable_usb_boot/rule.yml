@@ -7,10 +7,16 @@ description: |-
     Configure the system boot firmware (historically called BIOS on PC
     systems) to disallow booting from USB drives.
 
+    <p><strong>中文说明：</strong></p>
+    将系统引导固件（PC 系统历史上称为 BIOS）配置为禁止从 USB 驱动器引导。
+
 rationale: |-
     Booting a system from a USB device would allow an attacker to
     circumvent any security measures provided by the operating system. Attackers
     could mount partitions and modify the configuration of the OS.
+
+    <p><strong>中文理由：</strong></p>
+    从 USB 设备引导系统可允许攻击者绕过操作系统提供的任何安全措施。攻击者可能挂载分区并修改操作系统配置。
 
 severity: unknown
 

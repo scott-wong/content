@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="authlogin_nsswitch_use_ldap") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>authlogin_nsswitch_use_ldap</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>authlogin_nsswitch_use_ldap</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P authlogin_nsswitch_use_ldap off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用基于 LDAP 的 NSSwitch 身份验证会扩大身份验证路径；除非明确需要，否则应保持禁用。
 
 severity: medium
 

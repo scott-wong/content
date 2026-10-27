@@ -8,7 +8,12 @@ description: |-
     This setting should be disabled as it uses audit input to generate entropy.
     {{{ describe_sebool_disable(sebool="entropyd_use_audio") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>entropyd_use_audio</tt> 为 enabled。应禁用此设置，因为它使用音频输入生成熵。要禁用 <tt>entropyd_use_audio</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P entropyd_use_audio off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许 entropyd 使用音频输入生成熵会授予其不必要的设备访问权限，并可能使用不可靠的熵源。
 
 severity: medium
 

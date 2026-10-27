@@ -7,6 +7,9 @@ description: |-
     Assign a password to the system boot firmware (historically called BIOS on PC
     systems) to require a password for any configuration changes.
 
+    <p><strong>中文说明：</strong></p>
+    为系统引导固件（PC 系统历史上称为 BIOS）分配密码，以要求进行任何配置更改时提供密码。
+
 rationale: |-
     Assigning a password to the system boot firmware prevents anyone
     with physical access from configuring the system to boot
@@ -15,6 +18,9 @@ rationale: |-
     a data center or Sensitive Compartmented Information Facility (SCIF), this risk must be weighed
     against the risk of administrative personnel being unable to conduct recovery operations in
     a timely fashion.
+
+    <p><strong>中文理由：</strong></p>
+    为系统引导固件分配密码可防止任何具有物理访问权限的人员将系统配置为从本地介质引导并绕过操作系统的访问控制。对于位于物理安全位置（例如数据中心或敏感隔离信息设施，SCIF）的系统，必须权衡此风险与行政人员无法及时执行恢复操作的风险。
 
 severity: unknown
 

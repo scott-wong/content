@@ -2,12 +2,19 @@ documentation_complete: true
 
 title: 'Enable kernel.apparmor_restrict_unprivileged_unconfined'
 
-description: '{{{ describe_sysctl_option_value(sysctl="kernel.apparmor_restrict_unprivileged_unconfined", value="1") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="kernel.apparmor_restrict_unprivileged_unconfined", value="1") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>kernel.apparmor_restrict_unprivileged_unconfined</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.apparmor_restrict_unprivileged_unconfined=1</tt>；要持久化，请将 <tt>kernel.apparmor_restrict_unprivileged_unconfined = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     Restricting unprivileged unconfined processes with AppArmor reduces the
     attack surface available to local users and helps enforce additional
     kernel-level hardening.
+
+    <p><strong>中文理由：</strong></p>
+    使用 AppArmor 限制非特权非受限进程可减少本地用户可利用的攻击面，并有助于实施额外的内核级强化。
 
 severity: medium
 

@@ -25,6 +25,26 @@ description: |-
     <pre>$ sudo systemctl daemon-reload
     $ sudo systemctl enable sysctl-reapply-network.service</pre>
 
+    <p><strong>中文说明：</strong></p>
+    在 Debian 系统上，内核在网络接口启用时会重置某些网络 sysctl 值，覆盖 <tt>systemd-sysctl.service</tt> 在早期启动时应用的强化设置。
+    <br/><br/>
+    创建 systemd oneshot 服务 <tt>/etc/systemd/system/sysctl-reapply-network.service</tt>：
+    <pre>[Unit]
+    Description=Re-apply sysctl hardening after network interfaces come up
+    After=networking.service systemd-networkd.service
+    DefaultDependencies=no
+
+    [Service]
+    Type=oneshot
+    ExecStart=/sbin/sysctl --system
+    RemainAfterExit=yes
+
+    [Install]
+    WantedBy=multi-user.target</pre>
+    然后重新加载 systemd 守护进程并启用该服务：
+    <pre>$ sudo systemctl daemon-reload
+    $ sudo systemctl enable sysctl-reapply-network.service</pre>
+
 rationale: |-
     When a network interface is initialized, the Linux kernel may reset interface-level
     and global sysctl values to their defaults. Running <tt>sysctl --system</tt> after
@@ -34,6 +54,10 @@ rationale: |-
     Using <tt>DefaultDependencies=no</tt> prevents the ordering cycle that would arise
     from modifying <tt>systemd-sysctl.service</tt> itself to depend on
     <tt>network-online.target</tt>.
+
+    <p><strong>中文理由：</strong></p>
+    当网络接口初始化时，Linux 内核可能将接口级和全局 sysctl 值重置为默认值。在网络接口启用后运行 <tt>sysctl --system</tt>，可确保 <tt>/etc/sysctl.conf</tt> 和 <tt>/etc/sysctl.d/</tt> 中的强化值成为运行时最终生效值。
+    <br/><br/>使用 <tt>DefaultDependencies=no</tt> 可防止因修改 <tt>systemd-sysctl.service</tt> 本身以依赖 <tt>network-online.target</tt> 而产生排序循环。
 
 severity: medium
 

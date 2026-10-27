@@ -22,11 +22,30 @@ description: |-
     <pre>$ sudo chown root <i>DIR</i></pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    系统范围内共享库文件会在进程加载或运行时链接到可执行文件，默认存储在以下目录中：
+    <pre>/lib
+    /lib64
+    /usr/lib
+    /usr/lib64
+    </pre>
+    {{% if product != "hummingbird" %}}
+    可在运行时添加到内核的内核模块也存储在 <tt>/lib/modules</tt> 中。
+    {{% endif %}}
+    这些目录中的所有文件都应由 <tt>root</tt> 用户拥有。
+    {{% if product != "hummingbird" %}}
+    如果发现这些目录由非 root 用户拥有，请使用以下命令更正其所有权：
+    <pre>$ sudo chown root <i>DIR</i></pre>
+    {{% endif %}}
+
 rationale: |-
     Files from shared library directories are loaded into the address
     space of processes (including privileged ones) or of the kernel itself at
     runtime. Proper ownership of library directories is necessary to protect
     the integrity of the system.
+
+    <p><strong>中文理由：</strong></p>
+    共享库目录中的文件会在运行时加载到进程（包括特权进程）或内核本身的地址空间中。正确设置库目录的所有权对保护系统完整性至关重要。
 
 severity: medium
 

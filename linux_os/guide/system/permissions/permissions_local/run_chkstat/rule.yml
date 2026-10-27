@@ -15,6 +15,15 @@ description: |-
 
     <pre># sudo chkstat --set --system</pre>
 
+    <p><strong>中文说明：</strong></p>
+    验证 SUSE 操作系统阻止未授权用户访问系统命令和库文件。
+
+    使用以下命令检查所有审计信息文件和文件夹是否具有正确权限：
+    <pre># sudo chkstat --warn --system</pre>
+
+    使用以下命令设置正确权限：
+    <pre># sudo chkstat --set --system</pre>
+
 rationale: |-
     If the SUSE operating system were to allow any user to make changes to
     software libraries, those changes might be implemented without undergoing
@@ -27,6 +36,11 @@ rationale: |-
     with escalated privileges. Only qualified and authorized individuals must
     be allowed to obtain access to information system components to initiate
     changes, including upgrades and modifications.
+
+    <p><strong>中文理由：</strong></p>
+    如果 SUSE 操作系统允许任何用户修改软件库，这些修改可能在未经稳健变更管理流程所需的适当测试和批准的情况下实施。
+
+    本要求适用于具有可访问且可配置软件库的 SUSE 操作系统，例如解释型语言。软件库还包括以提升权限执行的程序。只有合格且经授权的人员才应能够访问信息系统组件并发起更改，包括升级和修改。
 
 severity: medium
 

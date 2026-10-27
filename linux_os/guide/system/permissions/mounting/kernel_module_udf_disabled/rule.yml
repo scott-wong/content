@@ -13,9 +13,17 @@ description: |-
     range of media. This filesystem type is necessary to support
     writing DVDs and newer optical disc formats.
 
+    <p><strong>中文说明：</strong></p>
+    要将系统配置为防止加载 <tt>udf</tt> 内核模块，请将以下行添加到 <tt>/etc/modprobe.d/udf.conf</tt> 文件：<tt>install udf /bin/false</tt>。此条目会在安装 <tt>udf</tt> 模块时返回非零值，并通过错误消息向用户说明该条目的含义。如果希望省略非零返回值和错误消息，可改为添加 <tt>install udf /bin/true</tt>（OVAL 允许 <tt>/bin/true</tt> 和 <tt>/bin/false</tt>，扫描时均会接受）。在适用产品上，还可将 <tt>blacklist udf</tt> 添加到同一文件，以配置系统防止使用该模块。
+
+    这可有效防止使用这种不常见的文件系统。<tt>udf</tt> 文件系统类型是通用磁盘格式，用于实现 ISO/IEC 13346 和 ECMA-167 规范。它是一种开放式供应商文件系统类型，用于在广泛介质上存储数据。此文件系统类型是支持写入 DVD 和较新光盘格式所必需的。
+
 rationale: |-
     Removing support for unneeded filesystem types reduces the local
     attack surface of the system.
+
+    <p><strong>中文理由：</strong></p>
+    移除对不需要的文件系统类型的支持可减少系统的本地攻击面。
 
 severity: low
 

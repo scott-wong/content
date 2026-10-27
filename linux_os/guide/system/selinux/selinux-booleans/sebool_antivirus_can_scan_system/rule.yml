@@ -9,7 +9,12 @@ description: |-
     files on a system.
     {{{ describe_sebool_enable(sebool="antivirus_can_scan_system") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>antivirus_can_scan_system</tt> 为 disabled。应启用此设置，因为它允许防病毒程序读取系统上的非安全文件。要启用 <tt>antivirus_can_scan_system</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P antivirus_can_scan_system on</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    防病毒程序需要读取系统文件才能扫描恶意软件；启用此布尔值可确保扫描覆盖非安全文件。
 
 severity: medium
 

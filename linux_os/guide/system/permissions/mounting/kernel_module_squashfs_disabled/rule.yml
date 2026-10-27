@@ -12,9 +12,17 @@ description: |-
     <tt>cramfs</tt>). A <tt>squashfs</tt> image can be used without having
     to first decompress the image.
 
+    <p><strong>中文说明：</strong></p>
+    要将系统配置为防止加载 <tt>squashfs</tt> 内核模块，请将以下行添加到 <tt>/etc/modprobe.d/squashfs.conf</tt> 文件：<tt>install squashfs /bin/false</tt>。此条目会在安装 <tt>squashfs</tt> 模块时返回非零值，并通过错误消息向用户说明该条目的含义。如果希望省略非零返回值和错误消息，可改为添加 <tt>install squashfs /bin/true</tt>（OVAL 允许 <tt>/bin/true</tt> 和 <tt>/bin/false</tt>，扫描时均会接受）。在适用产品上，还可将 <tt>blacklist squashfs</tt> 添加到同一文件，以配置系统防止使用该模块。
+
+    这可有效防止使用这种不常见的文件系统。<tt>squashfs</tt> 文件系统类型是一种压缩只读 Linux 文件系统，通常嵌入小型系统（类似于 <tt>cramfs</tt>）。无需先解压镜像即可使用 <tt>squashfs</tt> 镜像。
+
 rationale: |-
     Removing support for unneeded filesystem types reduces the local attack
     surface of the system.
+
+    <p><strong>中文理由：</strong></p>
+    移除对不需要的文件系统类型的支持可减少系统的本地攻击面。
 
 severity: low
 

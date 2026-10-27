@@ -8,7 +8,12 @@ description: |-
     If this setting is disabled, it should be enabled.
     {{{ describe_sebool_enable(sebool="domain_fd_use") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>domain_fd_use</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>domain_fd_use</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P domain_fd_use on</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用 domain_fd_use 可确保受 SELinux 约束的域按策略使用文件描述符。
 
 severity: medium
 

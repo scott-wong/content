@@ -9,6 +9,9 @@ description: |-
     of a core which will be processed. Core dumps exceeding this size may be
     stored, but the backtrace will not be generated.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>/etc/systemd/coredump.conf</tt> 的 <tt>[Coredump]</tt> 部分或 <tt>/etc/systemd/coredump.conf.d/</tt> 下的 drop-in 文件中的 <tt>ProcessSizeMax</tt> 选项指定可处理的核心转储最大字节数。超过此大小的核心转储可能会被存储，但不会生成回溯。
+
 rationale: |-
     A core dump includes a memory image taken at the time the operating system
     terminates an application. The memory image could contain sensitive data
@@ -19,6 +22,9 @@ rationale: |-
     however there may be overriding operational requirements to enable advanced
     debugging. Permitting temporary enablement of core dumps during such situations
     should be reviewed through local needs and policy.
+
+    <p><strong>中文理由：</strong></p>
+    核心转储包含操作系统终止应用程序时的内存映像。该内存映像可能包含敏感数据，通常仅对尝试调试问题的开发者或系统运维人员有用。建议不要在 production 系统上启用核心转储，但可能存在需要启用高级调试的运营要求。在这种情况下临时启用核心转储应根据本地需求和策略进行审查。
 
 severity: medium
 

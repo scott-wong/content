@@ -8,10 +8,16 @@ description: |-
     from being executed out of <tt>/tmp</tt>.
     {{{ describe_mount(option="noexec", part="/tmp") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/tmp</tt> 使用 <tt>noexec</tt> 挂载选项。
+
 rationale: |-
     Allowing users to execute binaries from world-writable directories
     such as <tt>/tmp</tt> should never be necessary in normal operation and
     can expose the system to potential compromise.
+
+    <p><strong>中文理由：</strong></p>
+    允许用户从 <tt>/tmp</tt> 等全局可写目录执行二进制文件在正常操作中绝不应成为必要，且可能使系统面临潜在的失陷风险。
 
 {{{ complete_ocil_entry_mount_option("/tmp", "noexec") }}}
 

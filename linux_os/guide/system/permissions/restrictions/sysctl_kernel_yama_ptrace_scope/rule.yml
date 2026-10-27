@@ -3,13 +3,20 @@ documentation_complete: true
 
 title: 'Restrict usage of ptrace to descendant processes'
 
-description: '{{{ describe_sysctl_option_value(sysctl="kernel.yama.ptrace_scope", value="1") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="kernel.yama.ptrace_scope", value="1") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>kernel.yama.ptrace_scope</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.yama.ptrace_scope=1</tt>；要持久化，请将 <tt>kernel.yama.ptrace_scope = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |
     Unrestricted usage of ptrace allows compromised binaries to run ptrace
     on another processes of the user. Like this, the attacker can steal
     sensitive information from the target processes (e.g. SSH sessions, web browser, ...)
     without any additional assistance from the user (i.e. without resorting to phishing).
+
+    <p><strong>中文理由：</strong></p>
+    不受限制地使用 ptrace 会使已失陷的二进制程序能够对用户的其他进程运行 ptrace。这样，攻击者无需用户额外协助（即无需借助网络钓鱼）即可从目标进程（例如 SSH 会话、Web 浏览器等）窃取敏感信息。
 
 severity: medium
 

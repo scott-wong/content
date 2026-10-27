@@ -9,10 +9,16 @@ description: |-
     should not be required in directories containing audit log files.
     {{{ describe_mount(option="nosuid", part="/var/log/audit") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/var/log/audit</tt> 使用 <tt>nosuid</tt> 挂载选项。
+
 rationale: |-
     The presence of SUID and SGID executables should be tightly controlled. Users
     should not be able to execute SUID or SGID binaries from partitions
     designated for audit log files.
+
+    <p><strong>中文理由：</strong></p>
+    SUID 和 SGID 可执行文件的存在应受到严格控制。用户不应能够从指定用于审计日志文件的分区执行 SUID 或 SGID 二进制文件。
 
 {{{ complete_ocil_entry_mount_option("/var/log/audit", "nosuid") }}}
 

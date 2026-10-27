@@ -8,12 +8,19 @@ description: |-
     When containers are deployed on the machine, the value should be set
     to large non-zero value.
 
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>user.max_user_namespaces</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w user.max_user_namespaces=0</tt>；要持久化，请将 <tt>user.max_user_namespaces = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
+    当计算机上部署容器时，应将值设置为较大的非零值。
+
 rationale: |-
     It is detrimental for operating systems to provide, or install by default, functionality exceeding requirements or system objectives.
     These unnecessary capabilities or services are often overlooked and therefore may remain unsecured.
     They increase the risk to the platform by providing additional attack vectors.
     User namespaces are used primarily for Linux containers. The value 0
     disallows the use of user namespaces.
+
+    <p><strong>中文理由：</strong></p>
+    操作系统提供或默认安装超出需求或任务目标的功能是有害的。这些不必要的功能或服务往往被忽视，因此可能保持不安全状态。它们通过提供额外攻击途径增加平台风险。用户命名空间主要用于 Linux 容器。值 0 禁止使用用户命名空间。
 
 severity: medium
 

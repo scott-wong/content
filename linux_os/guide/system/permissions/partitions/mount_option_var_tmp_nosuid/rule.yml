@@ -9,9 +9,15 @@ description: |-
     should not be required in these world-writable directories.
     {{{ describe_mount(option="nosuid", part="/var/tmp") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/var/tmp</tt> 以包含 <tt>nosuid</tt> 选项的方式挂载。编辑 <tt>/etc/fstab</tt> 中与 <tt>/var/tmp</tt> 对应的条目，并将该选项添加到挂载选项列表中，然后重新挂载该文件系统或重启系统。
+
 rationale: |-
     The presence of SUID and SGID executables should be tightly controlled. Users
     should not be able to execute SUID or SGID binaries from temporary storage partitions.
+
+    <p><strong>中文理由：</strong></p>
+    SUID 和 SGID 可执行文件的存在应受到严格控制。用户不应能够从临时存储分区执行 SUID 或 SGID 二进制文件。
 
 {{{ complete_ocil_entry_mount_option("/var/tmp", "nosuid") }}}
 

@@ -14,12 +14,22 @@ description: |-
     <br /><br />
     {{{ describe_service_disable(service="autofs") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>autofs</tt> 守护进程会按需挂载和卸载文件系统，例如通过 NFS 共享的用户主目录。此外，autofs 可用于处理可移动介质，默认配置将 cdrom 设备提供为 <tt>/misc/cd</tt>。不过，这种提供可移动介质访问的方法并不常见，因此如果未使用 NFS，几乎总可以禁用 autofs。即使需要 NFS，也可以通过编辑 <tt>/etc/fstab</tt> 静态配置文件系统挂载，而不依赖自动挂载程序。
+    <br /><br />
+    应禁用 <tt>autofs</tt> 服务。
+
 rationale: |-
     Disabling the automounter permits the administrator to
     statically control filesystem mounting through <tt>/etc/fstab</tt>.
     <br /><br />
     Additionally, automatically mounting filesystems permits easy introduction of
     unknown devices, thereby facilitating malicious activity.
+
+    <p><strong>中文理由：</strong></p>
+    禁用自动挂载程序可使管理员通过 <tt>/etc/fstab</tt> 静态控制文件系统挂载。
+    <br /><br />
+    此外，自动挂载文件系统使得未知设备易于引入，从而助长恶意活动。
 
 severity: medium
 

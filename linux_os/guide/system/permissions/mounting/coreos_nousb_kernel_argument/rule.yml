@@ -9,10 +9,16 @@ description: |-
     Add the <tt>nousb</tt> kernel argument via a <tt>MachineConfig</tt>
     object.
 
+    <p><strong>中文说明：</strong></p>
+    可通过将 <tt>nousb</tt> 参数添加到内核引导加载程序配置来禁用所有 USB 支持。为此，请通过 <tt>MachineConfig</tt> 对象添加 <tt>nousb</tt> 内核参数。
+
 rationale: |-
     Disabling the USB subsystem within the Linux kernel at system boot will
     protect against potentially malicious USB devices, although it is only practical
     in specialized systems.
+
+    <p><strong>中文理由：</strong></p>
+    在系统启动时禁用 Linux 内核中的 USB 子系统可防范潜在恶意 USB 设备，但这仅适用于专用系统。
 
 severity: medium
 

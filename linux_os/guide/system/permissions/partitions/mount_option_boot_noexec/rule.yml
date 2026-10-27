@@ -8,10 +8,16 @@ description: |-
     executed out of <tt>/boot</tt>.
     {{{ describe_mount(option="noexec", part="/boot") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/boot</tt> 使用 <tt>noexec</tt> 挂载选项。
+
 rationale: |-
     The <tt>/boot</tt> partition contains the kernel and the bootloader. No
     binaries should be executed from this partition after the booting process
     finishes.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/boot</tt> 分区包含内核和引导加载程序。引导过程完成后，不应从该分区执行任何二进制文件。
 
 {{{ complete_ocil_entry_mount_option("/boot", "noexec") }}}
 

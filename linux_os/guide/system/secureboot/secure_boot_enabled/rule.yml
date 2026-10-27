@@ -5,9 +5,15 @@ title: 'Ensure that Secure Boot is enabled'
 description: |-
   Ensure that Secure Boot is enabled with the <tt>mokutil</tt> command.
 
+  <p><strong>中文说明：</strong></p>
+  使用 <tt>mokutil</tt> 命令确保已启用 Secure Boot。
+
 rationale: |-
    By ensuring the integrity of the boot process, Secure Boot protects against rootkits,
    bootkits, and other low-level malware that could compromise the system before traditional defenses activate. This helps maintain both the confidentiality and integrity of the system, ensuring that sensitive data remains protected and only trusted code is executed.
+
+   <p><strong>中文理由：</strong></p>
+   通过确保启动过程的完整性，Secure Boot 可防御 rootkit、bootkit 和其他可能在传统防御措施启动前使系统失陷的低层恶意软件。这有助于维护系统的机密性和完整性，确保敏感数据受到保护且仅执行受信任代码。
 
 severity: medium
 

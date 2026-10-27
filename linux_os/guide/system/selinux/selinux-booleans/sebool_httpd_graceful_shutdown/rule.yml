@@ -8,7 +8,12 @@ description: |-
     If this setting is disabled, it should be enabled.
     {{{ describe_sebool_enable(sebool="httpd_graceful_shutdown") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>httpd_graceful_shutdown</tt> 处于启用状态。如果该设置已禁用，应将其启用。可使用 <tt>sudo setsebool -P httpd_graceful_shutdown on</tt> 将其启用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值会阻止 Web 服务器执行正常关闭操作，可能导致服务中断或强制终止。
 
 severity: medium
 

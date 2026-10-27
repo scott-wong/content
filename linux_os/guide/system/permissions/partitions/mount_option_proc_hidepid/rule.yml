@@ -17,10 +17,25 @@ description: |-
     For example, if you choose the value 2:
     {{{ describe_mount(option="hidepid=2", part="/proc") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>hidepid</tt> 挂载选项适用于 <tt>/proc</tt>，用于控制谁可以访问 <tt>/proc/[pid]</tt> 目录中的信息。该选项可具有以下值之一：
+    <pre>
+    0: Everybody may access all /proc/[pid] directories.
+    1: Users may not access files and subdirectories inside any /proc/[pid] directories
+       but their own. The /proc/[pid] directories themselves remain visible.
+    2: Same as for mode 1, but in addition the /proc/[pid] directories belonging to other
+       users become invisible.
+    </pre>
+    例如，如果选择值 2：
+    确保 <tt>/proc</tt> 使用 <tt>hidepid=2</tt> 挂载选项。
+
 rationale: |-
     Users should not be able to see and access directories within /proc, which are not
     related to their own processes in a system. Otherwise, sensitive information from
     other users could be seem.
+
+    <p><strong>中文理由：</strong></p>
+    用户不应能够查看和访问 <tt>/proc</tt> 中与其自身系统进程无关的目录。否则可能看到其他用户的敏感信息。
 
 warnings:
     - functionality: |-

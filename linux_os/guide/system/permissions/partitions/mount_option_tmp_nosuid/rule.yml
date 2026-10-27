@@ -9,9 +9,15 @@ description: |-
     should not be required in these world-writable directories.
     {{{ describe_mount(option="nosuid", part="/tmp") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/tmp</tt> 使用 <tt>nosuid</tt> 挂载选项。
+
 rationale: |-
     The presence of SUID and SGID executables should be tightly controlled. Users
     should not be able to execute SUID or SGID binaries from temporary storage partitions.
+
+    <p><strong>中文理由：</strong></p>
+    SUID 和 SGID 可执行文件的存在应受到严格控制。用户不应能够从临时存储分区执行 SUID 或 SGID 二进制文件。
 
 {{{ complete_ocil_entry_mount_option("/tmp", "nosuid") }}}
 

@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="git_cgi_enable_homedirs") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>git_cgi_enable_homedirs</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P git_cgi_enable_homedirs off</tt> 将其禁用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用此布尔值会允许面向 Web 的 Git CGI 进程访问用户主目录，增加敏感数据泄露风险。
 
 severity: medium
 

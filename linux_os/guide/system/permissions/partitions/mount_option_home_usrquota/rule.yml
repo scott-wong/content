@@ -7,11 +7,17 @@ description: |-
     The <tt>usrquota</tt> mount option allows for the filesystem to have disk quotas configured.
     {{{ describe_mount(option="usrquota", part="/home") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/home</tt> 使用 <tt>usrquota</tt> 挂载选项。
+
 rationale: |-
     To ensure the availability of disk space on /home, it is important to limit the impact a
     single user or group can cause for other users (or the wider system) by intentionally or
     accidentally filling up the partition. Quotas can also be applied to inodes for filesystems
     where inode exhaustion is a concern.
+
+    <p><strong>中文理由：</strong></p>
+    为确保 <tt>/home</tt> 上的磁盘空间可用，必须限制单个用户或组因有意或意外填满分区而对其他用户（或更广泛系统）造成的影响。对于存在 inode 耗尽问题的文件系统，也可对 inode 应用配额。
 
 severity: medium
 

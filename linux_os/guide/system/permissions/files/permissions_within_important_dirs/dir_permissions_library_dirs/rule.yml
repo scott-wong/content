@@ -23,6 +23,22 @@ description: |-
     <pre>$ sudo chmod go-w <i>DIR</i></pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    系统范围内共享库目录会在进程加载或运行时链接到可执行文件，默认存储于以下目录：
+    <pre>/lib
+    /lib64
+    /usr/lib
+    /usr/lib64
+    </pre>
+    {{% if product != "hummingbird" %}}
+    可在运行时添加到内核的内核模块存储在 <tt>/lib/modules</tt> 中。
+    {{% endif %}}
+    这些目录中的所有子目录均不应可被组或其他用户写入。
+    {{% if product != "hummingbird" %}}
+    如果发现这些目录中的任何文件可被组或其他用户写入，请使用以下命令更正其权限：
+    <pre>$ sudo chmod go-w <i>DIR</i></pre>
+    {{% endif %}}
+
 rationale: |-
     If the operating system were to allow any user to make changes to software libraries,
     then those changes might be implemented without undergoing the appropriate testing
@@ -33,6 +49,11 @@ rationale: |-
     privileged programs which execute with escalated privileges. Only qualified and authorized
     individuals must be allowed to obtain access to information system components for purposes
     of initiating changes, including upgrades and modifications.
+
+    <p><strong>中文理由：</strong></p>
+    如果操作系统允许任何用户修改软件库，则这些更改可能在未经过稳健变更管理流程所需的测试和批准的情况下实施。
+
+    此要求适用于软件库可访问且可配置的操作系统，例如解释型语言的情况。软件库还包括以提升权限执行的程序。只有合格且经授权的人员才应被允许为发起变更（包括升级和修改）而访问信息系统组件。
 
 identifiers:
     cce@rhel8: CCE-88692-9

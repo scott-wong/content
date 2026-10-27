@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="glance_api_can_network") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>glance_api_can_network</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P glance_api_can_network off</tt> 将其禁用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用此布尔值会允许 Glance API 建立任意网络连接，扩大服务可访问的网络范围。
 
 severity: medium
 

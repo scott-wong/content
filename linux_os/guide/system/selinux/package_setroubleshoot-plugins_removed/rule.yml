@@ -8,9 +8,16 @@ description: |-
     unauthorized intrusions, and other potential errors.
     {{{ describe_package_remove(package="setroubleshoot-plugins") }}}
 
+    <p><strong>中文说明：</strong></p>
+    SETroubleshoot 插件用于分析 SELinux AVC 数据。该服务提供有关配置错误、未经授权的入侵及其他潜在错误的信息。
+    请使用适当的软件包管理工具移除 <tt>setroubleshoot-plugins</tt> 软件包。
+
 rationale: |-
     The SETroubleshoot service is an unnecessary daemon to
     have running on a server.
+
+    <p><strong>中文理由：</strong></p>
+    SETroubleshoot 服务是在服务器上运行的非必要守护进程。
 
 severity: low
 

@@ -16,10 +16,24 @@ description: |-
     following command:
     <pre>$ sudo chmod go-w <i>DIR</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    系统可执行文件默认存储在以下目录中：
+    <pre>/bin
+    /sbin
+    /usr/bin
+    /usr/sbin
+    /usr/local/bin
+    /usr/local/sbin</pre>
+    这些目录不应可被组或其他用户写入。如果发现这些目录中的任何目录可被组或其他用户写入，请使用以下命令更正其权限：
+    <pre>$ sudo chmod go-w <i>DIR</i></pre>
+
 rationale: |-
     System binaries are executed by privileged users, as well as system services,
     and restrictive permissions are necessary to ensure execution of these programs
     cannot be co-opted.
+
+    <p><strong>中文理由：</strong></p>
+    系统二进制文件由特权用户和系统服务执行，必须使用限制性权限，以确保这些程序的执行无法被劫持利用。
 
 identifiers:
     cce@slmicro5: CCE-93801-9

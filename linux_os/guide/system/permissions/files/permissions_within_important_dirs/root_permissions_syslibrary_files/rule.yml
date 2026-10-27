@@ -17,6 +17,16 @@ description: |-
     correct its group-owner with the following command:
     <pre>$ sudo chgrp root <i>FILE</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    系统范围内库文件默认存储在以下目录中：
+    <pre>/lib
+    /lib64
+    /usr/lib
+    /usr/lib64
+    </pre>
+    所有系统范围内共享库文件都应受到保护，防止未经授权的访问。如果其中任何文件的所属组不是 root，请使用以下命令更正其所属组：
+    <pre>$ sudo chgrp root <i>FILE</i></pre>
+
 rationale: |-
     If the operating system were to allow any user to make changes to software libraries,
     then those changes might be implemented without undergoing the appropriate testing and
@@ -27,6 +37,9 @@ rationale: |-
     also include privileged programs which execute with escalated privileges. Only qualified
     and authorized individuals must be allowed to obtain access to information system components
     for purposes of initiating changes, including upgrades and modifications.
+
+    <p><strong>中文理由：</strong></p>
+    如果操作系统允许任何用户修改软件库，则这些更改可能在未经过稳健变更管理流程所需的测试和批准的情况下实施。此要求适用于软件库可访问且可配置的操作系统，例如解释型语言的情况。软件库还包括以提升权限执行的程序。只有合格且经授权的人员才应被允许为发起变更（包括升级和修改）而访问信息系统组件。
 
 severity: medium
 

@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="cron_system_cronjob_use_shares") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>cron_system_cronjob_use_shares</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>cron_system_cronjob_use_shares</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P cron_system_cronjob_use_shares off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许系统 cron 作业使用共享会扩大 cron 对网络文件系统的访问范围。
 
 severity: medium
 

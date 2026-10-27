@@ -3,11 +3,18 @@ documentation_complete: true
 
 title: 'Disable Access to Network bpf() Syscall From Unprivileged Processes'
 
-description: '{{{ describe_sysctl_option_value(sysctl="kernel.unprivileged_bpf_disabled", value="1") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="kernel.unprivileged_bpf_disabled", value="1") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>kernel.unprivileged_bpf_disabled</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.unprivileged_bpf_disabled=1</tt>；要持久化，请将 <tt>kernel.unprivileged_bpf_disabled = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     Loading and accessing the packet filters programs and maps using the bpf()
     syscall has the potential of revealing sensitive information about the kernel state.
+
+    <p><strong>中文理由：</strong></p>
+    使用 bpf() 系统调用加载和访问数据包过滤器程序及映射可能泄露有关内核状态的敏感信息。
 
 severity: medium
 

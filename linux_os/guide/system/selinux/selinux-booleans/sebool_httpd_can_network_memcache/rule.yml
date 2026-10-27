@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="httpd_can_network_memcache") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>httpd_can_network_memcache</tt> 处于禁用状态。如果已启用该设置，应将其禁用。可使用 <tt>sudo setsebool -P httpd_can_network_memcache off</tt> 将其禁用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用此布尔值会允许 Web 服务器连接到 Memcache，暴露缓存数据并扩大网络访问范围。
 
 severity: medium
 

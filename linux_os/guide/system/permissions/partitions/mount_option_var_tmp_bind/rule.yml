@@ -11,10 +11,18 @@ description: |-
     <pre>/tmp     /var/tmp     none     rw,nodev,noexec,nosuid,bind     0 0</pre>
     See the <tt>mount(8)</tt> man page for further explanation of bind mounting.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>/var/tmp</tt> 目录是所有用户可写的目录。将其 bind 挂载到 <tt>/tmp</tt>，以便将临时存储整合到一个由与 <tt>/tmp</tt> 相同技术保护的位置。为此，请编辑 <tt>/etc/fstab</tt> 并添加以下行：
+    <pre>/tmp     /var/tmp     none     rw,nodev,noexec,nosuid,bind     0 0</pre>
+    有关 bind 挂载的更多说明，请参阅 <tt>mount(8)</tt> 手册页。
+
 rationale: |-
     Having multiple locations for temporary storage is not required. Unless absolutely
     necessary to meet requirements, the storage location <tt>/var/tmp</tt> should be bind mounted to
     <tt>/tmp</tt> and thus share the same protections.
+
+    <p><strong>中文理由：</strong></p>
+    不需要设置多个临时存储位置。除非绝对必要以满足需求，否则 <tt>/var/tmp</tt> 应 bind 挂载到 <tt>/tmp</tt>，从而共享相同的保护。
 
 severity: unknown
 

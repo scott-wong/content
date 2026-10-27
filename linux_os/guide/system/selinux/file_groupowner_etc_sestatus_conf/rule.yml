@@ -2,13 +2,20 @@ documentation_complete: true
 
 title: Verify Group Who Owns /etc/sestatus.conf File
 
-description: '{{{ describe_file_group_owner(file="/etc/sestatus.conf", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/sestatus.conf", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/sestatus.conf</tt> 的文件所属组为 <tt>root</tt>。
 
 rationale: |-
     The ownership of the /etc/sestatus.conf file by the root group is important
     because this file hosts SELinux configuration. Protection of this
     file is critical for system security. Assigning the ownership to root
     ensures exclusive control of the SELinux configuration.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/sestatus.conf</tt> 文件由 root 组拥有很重要，因为该文件存放 SELinux 配置。保护此文件对系统安全至关重要。将所有权分配给 root 可确保对 SELinux 配置的独占控制。
 
 severity: medium
 

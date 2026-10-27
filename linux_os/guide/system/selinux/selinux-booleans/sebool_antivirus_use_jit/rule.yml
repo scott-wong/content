@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="antivirus_use_jit") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>antivirus_use_jit</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>antivirus_use_jit</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P antivirus_use_jit off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许防病毒程序使用 JIT 可执行内存会增加可写并可执行内存的区域，从而削弱 W^X 防护。
 
 severity: medium
 

@@ -5,9 +5,15 @@ title: 'Disable the uvcvideo module'
 description: |-
     If the device contains a camera it should be covered or disabled when not in use.
 
+    <p><strong>中文说明：</strong></p>
+    如果设备包含摄像头，则在不使用时应遮盖或禁用摄像头。
+
 rationale: |-
     Failing to disconnect from collaborative computing devices (i.e., cameras) can result in subsequent compromises of organizational information.
     Providing easy methods to physically disconnect from such devices after a collaborative computing session helps to ensure participants actually carry out the disconnect activity without having to go through complex and tedious procedures.
+
+    <p><strong>中文理由：</strong></p>
+    未能断开协作计算设备（例如摄像头）可能导致组织信息随后失陷。提供在协作计算会话结束后物理断开此类设备的简便方法，有助于确保参与者实际执行断开操作，而无需经过复杂繁琐的流程。
 
 severity: medium
 

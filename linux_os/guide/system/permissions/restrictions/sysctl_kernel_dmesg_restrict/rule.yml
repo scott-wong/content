@@ -3,11 +3,18 @@ documentation_complete: true
 
 title: 'Restrict Access to Kernel Message Buffer'
 
-description: '{{{ describe_sysctl_option_value(sysctl="kernel.dmesg_restrict", value="1") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="kernel.dmesg_restrict", value="1") }}}
+
+    <p><strong>中文说明：</strong></p>
+    应将内核参数 <tt>kernel.dmesg_restrict</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.dmesg_restrict=1</tt>；要持久化，请将 <tt>kernel.dmesg_restrict = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。
 
 rationale: |-
     Unprivileged access to the kernel syslog can expose sensitive kernel
     address information.
+
+    <p><strong>中文理由：</strong></p>
+    非特权访问内核 syslog 可能暴露敏感的内核地址信息。
 
 severity: low
 

@@ -8,9 +8,15 @@ description: |-
     not exist within temporary directories like <tt>/dev/shm</tt>.
     {{{ describe_mount(option="nodev", part="/dev/shm") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/dev/shm</tt> 使用 <tt>nodev</tt> 挂载选项。
+
 rationale: |-
     The only legitimate location for device files is the <tt>/dev</tt> directory
     located on the root partition. The only exception to this is chroot jails.
+
+    <p><strong>中文理由：</strong></p>
+    设备文件的唯一合法位置是根分区上的 <tt>/dev</tt> 目录；唯一例外是为系统服务构建的 chroot 环境。
 
 {{{ complete_ocil_entry_mount_option("/dev/shm", "nodev") }}}
 
