@@ -14,6 +14,9 @@ description: |-
     The {{{ full_name }}} operating system must lock an account after - at most - {{{ xccdf_value("var_password_pam_tally2") }}}
     consecutive invalid access attempts.
 
+    <p><strong>中文说明：</strong></p>
+    <p>{{{ full_name }}} 操作系统必须在至多 {{{ xccdf_value("var_password_pam_tally2") }}} 次连续无效访问尝试后锁定账户。</p>
+
 rationale: |-
     By limiting the number of failed logon attempts, the risk of unauthorized
     system access via user password guessing, otherwise known as brute-force
@@ -30,6 +33,17 @@ rationale: |-
     <tt>deny={{{ xccdf_value("var_password_pam_tally2") }}}</tt> are present. For example:
     <pre>auth required pam_tally2.so onerr=fail silent audit deny={{{ xccdf_value("var_password_pam_tally2") }}}</pre></li>
     <li> add or modify the following line in <tt>/etc/pam.d/common-account</tt>:
+    <pre>account required pam_tally2.so</pre></li>
+    </ul>
+
+    <p><strong>中文理由：</strong></p>
+    <p>通过限制失败登录尝试的次数，可以降低攻击者通过猜测用户密码（即暴力破解攻击）未经授权访问系统的风险。此类限制通过锁定账户来实施。</p>
+    <p>要使用 <tt>pam_tally2.so</tt> 将操作系统配置为在连续三次不成功的访问尝试后锁定账户，请按如下方式同时修改 <tt>{{{ auth_config }}}</tt> 和 <tt>/etc/pam.d/common-account</tt> 中的内容：</p>
+    <br /><br />
+    <ul>
+    <li>在 <tt>{{{ auth_config }}}</tt> 中添加或修改 <tt>pam_tally2.so</tt> 模块行，确保其中同时包含 <tt>onerr=fail</tt> 和 <tt>deny={{{ xccdf_value("var_password_pam_tally2") }}}</tt>。例如：
+    <pre>auth required pam_tally2.so onerr=fail silent audit deny={{{ xccdf_value("var_password_pam_tally2") }}}</pre></li>
+    <li>在 <tt>/etc/pam.d/common-account</tt> 中添加或修改以下行：
     <pre>account required pam_tally2.so</pre></li>
     </ul>
 

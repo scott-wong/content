@@ -8,10 +8,16 @@ description: |-
     not installed by default.
     {{{ describe_package_remove(package="sendmail") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>Sendmail 不是默认邮件传输代理，且默认未安装。应确保卸载 sendmail 软件包。</p>
+
 rationale: |-
     The sendmail software was not developed with security in mind and
     its design prevents it from being effectively contained by SELinux.  Postfix
     should be used instead.
+
+    <p><strong>中文理由：</strong></p>
+    <p>sendmail 软件在开发时未将安全性作为首要考虑，其设计导致 SELinux 无法对其进行有效限制。应改用 Postfix。</p>
 
 severity: medium
 

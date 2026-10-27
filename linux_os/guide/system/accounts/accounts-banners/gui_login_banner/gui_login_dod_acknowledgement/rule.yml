@@ -41,6 +41,36 @@ description: |-
     exit 1;
     fi</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>在授予 SUSE 操作系统访问权限前显示标准化且经批准的使用通知，可确保所使用的隐私和安全通知措辞符合适用的联邦法律、行政命令、指令、政策、法规、标准和指南。<br/><br/></p>
+    <p>用户必须在获准访问 SUSE 操作系统之前确认该横幅。这可确保用户已看到消息并接受访问条件。如果用户未确认同意横幅，DoD 将不符合法律规定的系统使用通知要求。<br/><br/></p>
+    <p>系统使用通知仅在通过具备人类用户的登录界面进行访问时才有要求；不存在此类人工界面时无此要求。<br/><br/></p>
+    <p>横幅必须按照适用的 DoD 政策进行格式化。SUSE 操作系统应使用以下文本：</p>
+    <pre>You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only.
+
+    By using this IS (which includes any device attached to this IS), you consent to the following conditions:
+
+    -The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations.
+
+    -At any time, the USG may inspect and seize data stored on this IS.
+
+    -Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose.
+
+    -This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy.
+
+    -Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.</pre>
+    <p>通过运行以下命令检查配置：</p>
+    <pre># more /etc/gdm/Xsession</pre>
+    <p>文件开头必须在 <tt>#!/bin/sh</tt> 之后立即包含以下文本：</p>
+    <pre>if ! zenity --text-info \
+    --title "Consent" \
+    --filename=/etc/gdm/banner \
+    --no-markup \
+    --checkbox="Accept." 10 10; then
+    sleep 1;
+    exit 1;
+    fi</pre>
+
 rationale: |-
     Display of a standardized and approved use notification before granting access to the operating system
     ensures privacy and security notification verbiage used is consistent with applicable federal laws,
@@ -48,6 +78,11 @@ rationale: |-
     <br /><br />
     For U.S. Government systems, system use notifications are required only for access via login interfaces
     with human users and are not required when such human interfaces do not exist.
+
+    <p><strong>中文理由：</strong></p>
+    <p>在授予操作系统访问权限前显示标准化且经批准的使用通知，可确保所使用的隐私与安全通知措辞符合适用的联邦法律、行政命令、指令、政策、法规、标准和指南。</p>
+    <br /><br />
+    <p>对于美国政府系统，系统使用通知仅在通过具备人类用户的登录界面进行访问时才有要求；不存在此类人工界面时无此要求。</p>
 
 severity: medium
 

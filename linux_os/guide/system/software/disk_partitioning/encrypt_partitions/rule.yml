@@ -54,10 +54,52 @@ description: |-
         {{{ weblink(link="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/encrypting-block-devices-using-luks_security-hardening") }}}
     {{% endif %}}.
 
+    <p><strong>中文说明：</strong></p>
+    <p>{{{ full_name }}} 通过 Linux Unified Key Setup-on-disk-format（LUKS）技术原生支持分区加密。加密分区最简单的方法是在安装期间进行。</p>
+    <br /><br />
+    <p>对于手动安装，请在创建分区期间选中 <tt>Encrypt</tt> 复选框以加密该分区。选中此选项后，系统将提示输入用于解密分区的口令短语。此后，每次系统启动时都需要手动输入该口令短语。</p>
+    {{% if product not in ["sle12", "sle15", "sle16", "slmicro5", "slmicro6", "ubuntu2204", "ubuntu2404"] %}}
+    <br /><br />
+    <p>对于自动/无人值守安装，可通过在待加密分区的定义中添加 <tt>--encrypted</tt> 和 <tt>--passphrase=</tt> 选项来使用 Kickstart。例如，以下行将加密根分区：</p>
+    <pre>part / --fstype=ext4 --size=100 --onpart=hda1 --encrypted --passphrase=<i>PASSPHRASE</i></pre>
+    <p>任何 <i>PASSPHRASE</i> 都会以明文形式存储在 Kickstart 中，因此必须相应地保护 Kickstart。</p>
+    <p>如果从分区定义中省略 <tt>--passphrase=</tt> 选项，安装程序将在安装期间暂停并以交互方式询问口令短语。</p>
+    <br /><br />
+    <p>默认情况下，<tt>Anaconda</tt> 安装程序使用 <tt>aes-xts-plain64</tt> 加密算法，最小密钥长度为 <tt>512</tt> 位，应可兼容已启用 FIPS 的系统。</p>
+    {{% endif %}}
+    <br /><br />
+    <p>有关使用 LUKS 或 LUKS 加密算法加密分区的详细信息，请参阅 {{{ full_name }}} 文档网站：<br /></p>
+    {{% if product == "ol7" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/security/security-SecureInstallationandConfiguration.html#ol7-instcsdp-sec">Oracle Linux 7 文档</a>
+    {{% elif product == "ol8" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://docs.oracle.com/en/operating-systems/oracle-linux/8/install/install-InstallingOracleLinuxManually.html#system-options">Oracle Linux 8 文档</a>
+    {{% elif product == "ol9" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://docs.oracle.com/en/operating-systems/oracle-linux/9/install/install-InstallingOracleLinuxManually.html#system-options">Oracle Linux 9 文档</a>
+    {{% elif product == "ol10" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://docs.oracle.com/en/operating-systems/oracle-linux/10/install/install-InstallingOracleLinuxManually.html#system-options">Oracle Linux 10 文档</a>
+    {{% elif product == "sle12" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://documentation.suse.com/sles/12-SP5/html/SLES-all/cha-security-cryptofs.html">SUSE Linux Enterprise Server 12 文档</a>
+    {{% elif product == "sle15" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-security-cryptofs.html">SUSE Linux Enterprise Server 15 文档</a>
+    {{% elif product == "slmicro5" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://documentation.suse.com/sles/15-SP3/html/SLES-all/cha-security-cryptofs.html">SUSE Linux Enterprise Micro 5 文档</a>
+    {{% elif product == "slmicro6" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://documentation.suse.com/sle-micro/6.0/html/Micro-deployment-raw-images/index.html#deployment-jeos-firstboot">SUSE Linux Enterprise Micro 6.0 文档</a>
+    {{% elif 'ubuntu' in product %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019">Ubuntu 文档</a>
+    {{% elif product == "fedora" %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://docs.fedoraproject.org/en-US/quick-docs/encrypting-drives-using-LUKS/">Fedora 文档</a>
+    {{% else %}}
+    <a xmlns="http://www.w3.org/1999/xhtml" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/security_hardening/encrypting-block-devices-using-luks_security-hardening">Red Hat Enterprise Linux 文档</a>
+    {{% endif %}}.
+
 rationale: |-
     The risk of a system's physical compromise, particularly mobile systems such as
     laptops, places its data at risk of compromise.  Encrypting this data mitigates
     the risk of its loss if the system is lost.
+
+    <p><strong>中文理由：</strong></p>
+    <p>系统发生物理失陷的风险，尤其是笔记本电脑等移动系统，会使其数据面临泄露或篡改风险。加密这些数据可降低系统丢失时数据丢失的风险。</p>
 
 severity: high
 

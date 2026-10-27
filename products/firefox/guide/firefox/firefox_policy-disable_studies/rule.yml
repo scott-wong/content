@@ -8,8 +8,14 @@ description: |-
     <tt>DisableFirefoxStudies</tt> to <tt>true</tt>
     in the policies file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可通过在策略文件中将 <tt>DisableFirefoxStudies</tt> 设置为 <tt>true</tt> 来禁用 Pocket。</p>
+
 rationale: |-
     Studies try out different features and ideas prior to release to all Firefox users. Testing beta software is not in the profile user's mission.
+
+    <p><strong>中文理由：</strong></p>
+    <p>Studies 会在向所有 Firefox 用户发布前试用不同功能和想法。测试 Beta 软件不属于配置档用户的任务。</p>
 
 severity: medium
 

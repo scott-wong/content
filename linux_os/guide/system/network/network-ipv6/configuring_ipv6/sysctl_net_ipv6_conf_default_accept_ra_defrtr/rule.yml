@@ -3,9 +3,17 @@ documentation_complete: true
 
 title: Configure Accepting Default Router in Router Advertisements on All IPv6 Interfaces By Default
 
-description: '{{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.default.accept_ra_defrtr", value="0") }}}'
+description: |-
+    {{{ describe_sysctl_option_value(sysctl="net.ipv6.conf.default.accept_ra_defrtr", value="0") }}}
 
-rationale: An illicit router advertisement message could result in a man-in-the-middle attack.
+    <p><strong>中文说明：</strong></p>
+    <p>将 <tt>net.ipv6.conf.default.accept_ra_defrtr</tt> 内核参数设置为 <tt>0</tt>，并将相同设置写入 <tt>/etc/sysctl.d</tt> 目录中的配置文件，以确保该设置在重启后仍然生效。</p>
+
+rationale: |-
+    An illicit router advertisement message could result in a man-in-the-middle attack.
+
+    <p><strong>中文理由：</strong></p>
+    <p>非法的路由器通告消息可能导致中间人攻击。</p>
 
 severity: unknown
 

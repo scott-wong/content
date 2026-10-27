@@ -22,9 +22,26 @@ description: |-
     which is <tt>suspend</tt>) as it is more likely to get prompt attention. Acceptable values
     also include <tt>suspend</tt>, <tt>single</tt>, and <tt>halt</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p><tt>auditd</tt> 服务可配置为在磁盘空间<i>开始</i>不足时执行某项操作。编辑 <tt>/etc/audit/auditd.conf</tt> 文件，修改以下行，并相应替换 <i>ACTION</i>：</p>
+    <pre>space_left_action = <i>ACTION</i></pre>
+    <p>有关 <i>ACTION</i> 可能取值的说明，请参阅 <tt>auditd.conf</tt> 手册页。这些取值包括：</p>
+    <ul>
+    <li><tt>syslog</tt></li>
+    <li><tt>email</tt></li>
+    <li><tt>exec</tt></li>
+    <li><tt>suspend</tt></li>
+    <li><tt>single</tt></li>
+    <li><tt>halt</tt></li>
+    </ul>
+    <p>应将其设置为 <tt>email</tt>（而不是默认值 <tt>suspend</tt>），这样更可能得到及时关注。可接受的取值还包括 <tt>suspend</tt>、<tt>single</tt> 和 <tt>halt</tt>。</p>
+
 rationale: |-
     Notifying administrators of an impending disk space problem may
     allow them to take corrective action prior to any disruption.
+
+    <p><strong>中文理由：</strong></p>
+    <p>在磁盘空间即将耗尽时通知管理员，可使其在发生任何中断之前采取纠正措施。</p>
 
 severity: medium
 

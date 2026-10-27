@@ -6,6 +6,9 @@ title: Ensure TLS v1.2 is minimum for Openshift APIServer
 description: |-
   Verify tls version for the openshift APIServer.
 
+  <p><strong>中文说明：</strong></p>
+  <p>验证 OpenShift APIServer 的 TLS 版本。</p>
+
 {{% set default_jqfilter = '.data."config.yaml" | fromjson' %}}
 {{% set default_api_path = '/api/v1/namespaces/openshift-apiserver/configmaps/config' %}}
 {{% set hypershift_path = '/api/v1/namespaces/{{.hypershift_namespace_prefix}}-{{.hypershift_cluster}}/configmaps/openshift-apiserver' %}}
@@ -19,6 +22,9 @@ rationale: |-
   protect data. The system must implement cryptographic modules adhering to the higher
   standards approved by the federal government since this provides assurance they have been tested
   and validated.
+
+  <p><strong>中文理由：</strong></p>
+  <p>使用弱加密算法或未经测试的加密算法会削弱通过加密保护数据的目的。系统必须实施符合联邦政府批准的高标准的加密模块，因为这可确保这些模块已经过测试和验证。</p>
 
 
 identifiers:

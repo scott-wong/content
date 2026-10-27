@@ -7,10 +7,16 @@ description: |-
     for temporary file storage. Ensure it has its own partition or
     logical volume at installation time, or migrate it using LVM.
 
+    <p><strong>中文说明：</strong></p>
+    <p><tt>/tmp</tt> 目录是一个所有用户均可写入的目录，用于存储临时文件。应确保在安装时为其分配独立分区或逻辑卷，或使用 LVM 迁移该目录。</p>
+
 rationale: |-
     The <tt>/tmp</tt> partition is used as temporary storage by many programs.
     Placing <tt>/tmp</tt> in its own partition enables the setting of more
     restrictive mount options, which can help protect programs which use it.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>/tmp</tt> 分区被许多程序用于临时存储。将 <tt>/tmp</tt> 置于独立分区后，可对其设置更严格的挂载选项，从而有助于保护使用该分区的程序。</p>
 
 severity: low
 

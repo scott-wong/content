@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Uninstall the nis package'
 
-description: 'The support for Yellowpages should not be installed unless it is required.'
+description: |-
+    The support for Yellowpages should not be installed unless it is required.
+
+    <p><strong>中文说明：</strong></p>
+    <p>除非确有需要，否则不应安装 Yellowpages 支持。</p>
 
 rationale: |-
     NIS is the historical SUN service for central account management, more and more replaced by LDAP.
     NIS does not support efficiently security constraints, ACL, etc. and should not be used.
+
+    <p><strong>中文理由：</strong></p>
+    <p>NIS 是历史上用于集中账户管理的 SUN 服务，现已越来越多地被 LDAP 取代。NIS 无法有效支持安全约束、ACL 等机制，因此不应使用。</p>
 
 severity: low
 

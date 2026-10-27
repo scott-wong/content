@@ -9,12 +9,19 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>PermitRootLogin no</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>绝不应允许 root 用户直接通过网络登录系统。要禁用通过 SSH 进行的 root 登录，请在 {{{ sshd_config_file() }}} 中添加或修正以下行：</p>
+    <pre>PermitRootLogin no</pre>
+
 rationale: |-
     Even though the communications channel may be encrypted, an additional layer of
     security is gained by extending the policy of not logging directly on as root.
     In addition, logging in with a user-specific account provides individual
     accountability of actions performed on the system and also helps to minimize
     direct attack attempts on root's password.
+
+    <p><strong>中文理由：</strong></p>
+    <p>即使通信通道可能已加密，仍可通过将禁止直接以 root 身份登录的策略扩展至网络访问来增加一层安全防护。此外，使用用户专属账户登录可对系统上执行的操作落实个人责任，并有助于尽量减少针对 root 密码的直接攻击尝试。</p>
 
 severity: medium
 

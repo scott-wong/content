@@ -25,12 +25,26 @@ description: |-
       ...
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>默认情况下，对 Kubelet 服务器的匿名访问处于启用状态。此配置检查确保 Kubelet 服务器会拒绝匿名请求。</p>
+    <p>请在 kubelet 节点上编辑 Kubelet 服务器配置文件 <tt>{{{ kubeletconf_path }}}</tt>，并设置以下参数：</p>
+    <pre>
+    authentication:
+      ...
+      anonymous:
+        enabled: false
+      ...
+    </pre>
+
 rationale: |-
     When enabled, requests that are not rejected by other configured
     authentication methods are treated as anonymous requests. These
     requests are then served by the Kubelet server. OpenShift Operators should
     rely on authentication to authorize access and disallow anonymous
     requests.
+
+    <p><strong>中文理由：</strong></p>
+    <p>启用后，未被其他已配置身份验证方法拒绝的请求将被视为匿名请求，并由 Kubelet 服务器处理。OpenShift Operators 应依赖身份验证来授权访问，并禁止匿名请求。</p>
 
 severity: medium
 

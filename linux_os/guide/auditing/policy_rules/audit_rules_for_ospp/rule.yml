@@ -28,10 +28,28 @@ description: |-
     cp /usr/share/doc/audit*/rules/{10-base-config,11-loginuid,30-ospp-v42,43-module-load}.rules /etc/audit/rules.d/
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>配置审计以满足 OSPP v4.2.1 的要求。</p>
+    <p>审计在 <tt>/usr/share/doc/audit/rules</tt> 中定义了若干规则组，以满足特定策略。</p>
+    <p>为满足 OSPP v4.2.1 的合规要求，需要以下文件：</p>
+    <ul>
+    <li>/usr/share/doc/audit{{{ docs_dir }}}/rules/10-base-config.rules</li>
+    <li>/usr/share/doc/audit{{{ docs_dir }}}/rules/11-loginuid.rules</li>
+    <li>/usr/share/doc/audit{{{ docs_dir }}}/rules/30-ospp-v42.rules</li>
+    <li>/usr/share/doc/audit{{{ docs_dir }}}/rules/43-module-load.rules</li>
+    </ul>
+    <p>将文件从 <tt>/usr/share/doc/audit/rules</tt> 复制到 <tt>/etc/audit/rules.d</tt>：</p>
+    <pre>
+    cp /usr/share/doc/audit*/rules/{10-base-config,11-loginuid,30-ospp-v42,43-module-load}.rules /etc/audit/rules.d/
+    </pre>
+
 
 
 rationale: |-
     The audit rules defined in <tt>/usr/share/doc/audit/rules</tt> are the recommended way to meet compliance with OSPP v4.2.1.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>/usr/share/doc/audit/rules</tt> 中定义的审计规则是满足 OSPP v4.2.1 合规要求的建议方法。</p>
 
 severity: medium
 
