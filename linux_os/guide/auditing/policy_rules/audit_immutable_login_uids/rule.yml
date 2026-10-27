@@ -18,9 +18,21 @@ description: |-
     Load new Audit rules into kernel by running:
     <pre>augenrules --load</pre>
 
+    <p><strong>中文说明：</strong></p>
+    将内核配置为防止登录 UID 在设置后被修改。在强制实施此配置时，更改登录 UID 需要特殊能力，而未授权用户不具备这些能力。
+
+    以下规则按上述说明配置审计：
+    <pre>{{{ file_contents_audit_immutable_login|indent }}}</pre>
+
+    运行以下命令将新审计规则加载到内核：
+    <pre>augenrules --load</pre>
+
 rationale: |-
     If modification of login UIDs is not prevented, they can be changed by unprivileged users and
     make auditing complicated or impossible.
+
+    <p><strong>中文理由：</strong></p>
+    如果未阻止修改登录 UID，未授权用户就可能更改这些 UID，从而使审计工作变得复杂或无法进行。
 
 severity: medium
 

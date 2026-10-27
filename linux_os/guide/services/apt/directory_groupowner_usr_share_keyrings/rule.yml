@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Group Owner on /usr/share/keyrings Directory'
 
-description: '{{{ describe_directory_group_owner(directory="/usr/share/keyrings", group="root") }}}'
+description: |-
+    {{{ describe_directory_group_owner(directory="/usr/share/keyrings", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保目录 <tt>/usr/share/keyrings</tt> 的所属组为 <tt>root</tt>。
 
 rationale: |-
     The /usr/share/keyrings directory should be group-owned by root to prevent
     unauthorized changes to package repository keys.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/usr/share/keyrings</tt> 目录应由 <tt>root</tt> 所属，以防止未经授权更改软件包仓库密钥。
 
 severity: medium
 

@@ -6,6 +6,9 @@ title: 'MIME types for csh or sh shell programs must be disabled'
 description: |-
     Users must not be allowed to access the shell programs.
 
+    <p><strong>中文说明：</strong></p>
+    不得允许用户访问 shell 程序。
+
 rationale: |-
     Shell programs might execute shell escapes and could then perform
     unauthorized activities that could damage the security posture of the web
@@ -13,6 +16,9 @@ rationale: |-
     user and the operating system. In this regard, there are shells that are
     security risks in the context of a web server and shells that are
     unauthorized.
+
+    <p><strong>中文理由：</strong></p>
+    shell 程序可能执行 shell 转义，进而执行未授权活动，损害 Web 服务器的安全状态。shell 是作为用户与操作系统之间基本接口的程序。在 Web 服务器环境中，有些 shell 会带来安全风险，有些 shell 则属于未经授权的 shell。
 
 severity: medium
 

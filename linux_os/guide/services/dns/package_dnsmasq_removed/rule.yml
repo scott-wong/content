@@ -8,10 +8,18 @@ description: |-
     <br />
     {{{ describe_package_remove(package="dnsmasq") }}}
 
+    <p><strong>中文说明：</strong></p>
+    dnsmasq 是一种轻量级工具，提供 DNS 缓存、DNS 转发和 DHCP（Dynamic Host Configuration Protocol）服务。
+    <br />
+    请使用适当的软件包管理工具移除 <tt>dnsmasq</tt> 软件包。
+
 rationale: |-
     Unless a system is specifically designated to act as a DNS
     caching, DNS forwarding and/or DHCP server, it is recommended that the
     package be removed to reduce the potential attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    除非系统被明确指定用作 DNS 缓存、DNS 转发和/或 DHCP 服务器，否则建议移除该软件包以减少潜在攻击面。
 
 severity: low
 

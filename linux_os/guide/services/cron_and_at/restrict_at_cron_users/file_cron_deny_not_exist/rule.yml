@@ -7,9 +7,15 @@ description: |-
     The file <tt>/etc/cron.deny</tt> should not exist.
     Use <tt>/etc/cron.allow</tt> instead.
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/etc/cron.deny</tt> 不应存在。请改用 <tt>/etc/cron.allow</tt>。
+
 rationale: |-
     Access to <tt>cron</tt> should be restricted.
     It is easier to manage an allow list than a deny list.
+
+    <p><strong>中文理由：</strong></p>
+    应限制对 <tt>cron</tt> 的访问。允许列表比拒绝列表更易于管理。
 
 
 severity: medium

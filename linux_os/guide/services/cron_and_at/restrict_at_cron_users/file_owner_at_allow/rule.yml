@@ -7,9 +7,15 @@ description: |-
     If <tt>/etc/at.allow</tt> exists, it must be owned by <tt>root</tt>.
     {{{ describe_file_owner(file="/etc/at.allow", owner="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    如果 <tt>/etc/at.allow</tt> 存在，其文件所有者必须为 <tt>root</tt>。
+
 rationale: |-
     If the owner of the at.allow file is not set to root, the possibility exists for an
     unauthorized user to view or edit sensitive information.
+
+    <p><strong>中文理由：</strong></p>
+    如果 at.allow 文件的所有者未设置为 root，未授权用户可能查看或编辑敏感信息。
 
 severity: medium
 

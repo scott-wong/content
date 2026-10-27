@@ -12,6 +12,13 @@ description: |-
       ...
     };</pre>
 
+    <p><strong>中文说明：</strong></p>
+    是否存在启用高风险动态更新功能的任务关键型理由？如果没有，请编辑 <tt>/etc/named.conf</tt>。对于每个区域规范，必要时更正以下指令：
+    <pre>zone "example.com " IN {
+      allow-update { none; };
+      ...
+    };</pre>
+
 rationale: |-
     Dynamic updates allow remote servers to add, delete, or modify any
     entries in your zone file. Therefore, they should be considered highly risky,
@@ -20,5 +27,8 @@ rationale: |-
     are easily spoofed. Instead, use TSIG keys (see the previous section for an
     example), and consider using the update-policy directive to restrict changes to
     only the precise type of change needed.
+
+    <p><strong>中文理由：</strong></p>
+    动态更新允许远程服务器添加、删除或修改区域文件中的任何条目。因此，应将其视为高风险，除非有非常充分的理由，否则应禁用。如果必须允许动态更新，基于 IP 的 ACL 不足以提供保护，因为 IP 地址容易被伪造。应改用 TSIG 密钥（示例见上一节），并考虑使用 update-policy 指令将更改限制为仅所需的精确更改类型。
 
 severity: unknown

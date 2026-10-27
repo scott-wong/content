@@ -6,11 +6,17 @@ title: 'Disable vsftpd Service'
 description: |-
     {{{ describe_service_disable(service="vsftpd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    要禁用 <tt>vsftpd</tt> 服务，请运行 <tt>sudo systemctl disable --now vsftpd</tt>。
+
 rationale: |-
     Running FTP server software provides a network-based avenue
     of attack, and should be disabled if not needed.
     Furthermore, the FTP protocol is unencrypted and creates
     a risk of compromising sensitive information.
+
+    <p><strong>中文理由：</strong></p>
+    运行 FTP 服务器软件会提供基于网络的攻击途径，如果不需要，应将其禁用。此外，FTP 协议未加密，存在泄露敏感信息的风险。
 
 severity: medium
 

@@ -9,11 +9,17 @@ description: |-
     a storage. For setting up the LVM and configuring Docker, see the
     {{{ weblink(link="https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/", text="Docker Device Mapper Storage Documentation") }}}.
 
+    <p><strong>中文说明：</strong></p>
+    要在生产环境中使用 Docker 的 device mapper 存储驱动，应将 Docker 守护进程配置为使用 direct-lvm，而不是回环设备作为存储。有关设置 LVM 和配置 Docker 的信息，请参阅<a href="https://docs.docker.com/engine/userguide/storagedriver/device-mapper-driver/">Docker Device Mapper 存储文档</a>。
+
 rationale: |-
     For using Docker in production, the device mapper storage driver with loopback
     devices is discouraged. The suggested way of configuring device mapper storage
     driver is direct-lvm. Choosing the right storage driver and backing filesystem
     is crucial to stability and performance.
+
+    <p><strong>中文理由：</strong></p>
+    在生产环境中使用 Docker 时，不建议使用带回环设备的 device mapper 存储驱动。配置 device mapper 存储驱动的建议方式是 direct-lvm。选择正确的存储驱动和后端文件系统对稳定性和性能至关重要。
 
 severity: low
 

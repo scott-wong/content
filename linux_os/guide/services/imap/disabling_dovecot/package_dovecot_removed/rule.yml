@@ -11,9 +11,15 @@ title: 'Uninstall dovecot Package'
 description: |-
     {{{ describe_package_remove(package=package) }}}
 
+    <p><strong>中文说明：</strong></p>
+    应移除 <tt>{{{ package }}}</tt> 软件包。
+
 rationale: |-
     If there is no need to make the Dovecot software available,
     removing it provides a safeguard against its activation.
+
+    <p><strong>中文理由：</strong></p>
+    如果无需提供 Dovecot 软件，移除该软件可作为防止其被启用的保护措施。
 
 severity: unknown
 

@@ -8,9 +8,16 @@ description: |-
     and ensure the following line appears in the <tt>[server]</tt> section:
     <pre>disallow-other-stacks=yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要阻止其他 mDNS 协议栈运行，请编辑 <tt>/etc/avahi/avahi-daemon.conf</tt>，并确保 <tt>[server]</tt> 节中出现以下行：
+    <pre>disallow-other-stacks=yes</pre>
+
 rationale: |-
     This helps ensure that only Avahi is responsible for mDNS traffic coming from
     that port on the system.
+
+    <p><strong>中文理由：</strong></p>
+    这有助于确保系统上该端口的 mDNS 流量仅由 Avahi 负责处理。
 
 severity: medium
 

@@ -13,6 +13,21 @@ description: |-
     <pre>anonymous
     ftp</pre>
 
-rationale: 'Historically, the file <tt>/etc/ftpusers</tt> contained a list of users who were not allowed to access the system via FTP. It was used to prevent system users such as the root user from logging in via the insecure FTP protocol. However, when the configuration option <tt>userlist deny=NO</tt> is set, vsftpd interprets ftpusers as the set of users who are allowed to login via FTP. Since it should be possible for most users to access their accounts via secure protocols, it is recommended that this setting be used, so that non-anonymous FTP access can be limited to legacy users who have been explicitly identified.'
+    <p><strong>中文说明：</strong></p>
+    如果用户有通过不安全的 FTP 协议访问其账户的任务关键型理由，请限制允许此类访问的用户集合。编辑 vsftpd 配置文件。添加或更正以下配置选项：
+    <pre>userlist_enable=YES
+    userlist_file=/etc/vsftp.ftpusers
+    userlist_deny=NO</pre>
+    编辑 <tt>/etc/vsftp.ftpusers</tt> 文件。对于每个应允许通过 FTP 访问系统的用户 USERNAME，添加一行包含该用户名的内容：
+    <pre>USERNAME</pre>
+    如果还需要匿名访问，请将匿名用户名也添加到 <tt>/etc/vsftp.ftpusers</tt> 中。
+    <pre>anonymous
+    ftp</pre>
+
+rationale: |-
+    Historically, the file <tt>/etc/ftpusers</tt> contained a list of users who were not allowed to access the system via FTP. It was used to prevent system users such as the root user from logging in via the insecure FTP protocol. However, when the configuration option <tt>userlist deny=NO</tt> is set, vsftpd interprets ftpusers as the set of users who are allowed to login via FTP. Since it should be possible for most users to access their accounts via secure protocols, it is recommended that this setting be used, so that non-anonymous FTP access can be limited to legacy users who have been explicitly identified.
+
+    <p><strong>中文理由：</strong></p>
+    历史上，<tt>/etc/ftpusers</tt> 文件包含不允许通过 FTP 访问系统的用户列表。它用于防止 root 用户等系统用户通过不安全的 FTP 协议登录。但是，当配置选项 <tt>userlist deny=NO</tt> 设置为启用时，vsftpd 会将 ftpusers 解释为允许通过 FTP 登录的用户集合。由于大多数用户应能够通过安全协议访问其账户，建议使用此设置，以便将非匿名 FTP 访问限制为已明确标识的旧式用户。
 
 severity: unknown

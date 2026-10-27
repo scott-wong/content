@@ -6,11 +6,17 @@ title: 'Disable Avahi Server Software'
 description: |-
     {{{ describe_service_disable(service="avahi-daemon") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用 <tt>avahi-daemon</tt> 服务。
+
 rationale: |-
     Because the Avahi daemon service keeps an open network
     port, it is subject to network attacks. Its functionality
     is convenient but is only appropriate if the local network
     can be trusted.
+
+    <p><strong>中文理由：</strong></p>
+    由于 Avahi 守护进程服务保持开放的网络端口，因此容易受到网络攻击。其功能虽方便，但只有在本地网络可信任时才适用。
 
 severity: medium
 

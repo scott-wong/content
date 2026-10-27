@@ -29,8 +29,22 @@ description: |-
 
     Note: This rule uses a special set of Audit rules to comply with OSPP 4.2.1. You may reuse this rule in different profiles. If you decide to do so, it is recommended that you inspect contents of the file closely and make sure that they are aligned with your needs.
 
+    <p><strong>中文说明：</strong></p>
+    确保审计修改文件的失败尝试。
+
+    以下规则按上述说明配置审计：
+    <pre>{{{ file_contents_audit_modify_failed|indent }}}</pre>
+
+    运行以下命令将新审计规则加载到内核：
+    <pre>augenrules --load</pre>
+
+    注意：此规则使用一组特殊审计规则来符合 OSPP 4.2.1。你可以在不同配置档中复用此规则。如果决定复用此规则，建议仔细检查文件内容，并确保其与你的需求一致。
+
 rationale: |-
     Unsuccessful file modifications might be a sign of a malicious action being performed on the system. Auditing of such events helps in detection and investigation of such actions.
+
+    <p><strong>中文理由：</strong></p>
+    修改文件失败可能是系统上正在执行恶意操作的迹象。审计此类事件有助于检测和调查这些操作。
 
 severity: medium
 

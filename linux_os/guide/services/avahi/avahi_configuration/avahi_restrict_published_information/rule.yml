@@ -20,12 +20,25 @@ description: |-
     is an operational need to publish information about each of these services,
     delete the corresponding file.
 
+    <p><strong>中文说明：</strong></p>
+    如果必须向网络发布某些信息，则不得附带任何无关信息，也不得包含系统上非受信任来源提供的信息。要在 <tt>[publish]</tt> 节中添加或修正以下行，以阻止用户应用使用 Avahi 发布服务：
+    <pre>disable-user-service-publishing=yes</pre>
+    请尽可能实施以下各行，以限制 Avahi 发布的信息：
+    <pre>publish-addresses=no
+    publish-hinfo=no
+    publish-workstation=no
+    publish-domain=no</pre>
+    检查 <tt>/etc/avahi/services/</tt> 目录中的文件。除非确实有运行需要发布其中每项服务的信息，否则请删除相应文件。
+
 rationale: |-
     These options prevent publishing attempts from succeeding,
     and can be applied even if publishing is disabled entirely via
     disable-publishing. Alternatively, these can be used to restrict
     the types of published information in the event that some information
     must be published.
+
+    <p><strong>中文理由：</strong></p>
+    这些选项可防止发布尝试成功，即使已通过 disable-publishing 完全禁用发布，也可应用这些选项。或者，当必须发布某些信息时，这些选项可用于限制所发布信息的类型。
 
 severity: low
 

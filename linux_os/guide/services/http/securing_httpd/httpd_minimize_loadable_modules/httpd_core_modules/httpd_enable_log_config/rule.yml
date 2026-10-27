@@ -9,6 +9,10 @@ description: |-
     configure logging:
     <pre>log_config_module</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>log_config_module</tt> 应存在，并应通过将以下模块添加到 <tt>/etc/httpd/conf/httpd.conf</tt> 文件来配置日志记录：
+    <pre>log_config_module</pre>
+
 rationale: |-
     A major tool in exploring the web site use, attempted use, unusual conditions,
     and problems are reported in the access and error logs. In the event of a
@@ -16,6 +20,9 @@ rationale: |-
     valuable information. Without these log files, SAs and web managers are
     seriously hindered in their efforts to respond appropriately to suspicious or
     criminal actions targeted at the web site.
+
+    <p><strong>中文理由：</strong></p>
+    访问日志和错误日志是研究网站使用情况、尝试使用情况、异常状况和问题的主要工具。发生安全事件时，这些日志可为 SA 和 Web 管理员提供有价值的信息。如果没有这些日志文件，SA 和 Web 管理员在针对网站的可疑或犯罪行为做出适当响应时会受到严重阻碍。
 
 severity: medium
 

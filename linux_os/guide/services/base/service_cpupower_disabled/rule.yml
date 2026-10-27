@@ -8,11 +8,18 @@ description: |-
     the current processing load thereby conserving power and reducing heat.
     {{{ describe_service_disable(service="cpupower") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>cpupower</tt> 服务可根据当前处理负载调整受支持 CPU 的时钟速度，从而节省电量并减少发热。
+    应禁用 <tt>cpupower</tt> 服务。
+
 rationale: |-
     The <tt>cpupower</tt> service is only necessary if adjusting the CPU clock speed
     provides benefit. Traditionally this has included laptops (to enhance battery life),
     but may also apply to server or desktop environments where conserving power is
     highly desirable or necessary.
+
+    <p><strong>中文理由：</strong></p>
+    只有在调整 CPU 时钟速度有益时才需要 <tt>cpupower</tt> 服务。传统上包括笔记本电脑（以延长电池寿命），也可能适用于非常需要或必须节能的服务器或桌面环境。
 
 severity: low
 

@@ -11,11 +11,20 @@ description: |-
     Where <i>DIR</i> matches the paths from <tt>Alias</tt>,
     <tt>ScriptAlias</tt>, and <tt>ScriptAliasMatch</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    为每个现有的 <tt>Alias</tt>、<tt>ScriptAlias</tt> 和 <tt>ScriptAliasMatch</tt> 实例配置权限。
+    <pre>$ sudo find <i>DIR</i> -type d -exec chmod 755 {} \;
+    $ sudo find <i>DIR</i> -type f -exec chmod 555 {} \;</pre>
+    其中 <i>DIR</i> 与 <tt>Alias</tt>、<tt>ScriptAlias</tt> 和 <tt>ScriptAliasMatch</tt> 中的路径匹配。
+
 rationale: |-
     Excessive permissions for the anonymous web user account are one of the most
     common faults contributing to the compromise of a web server. If this user is
     able to upload and execute files on the web server, the organization or owner of
     the server will no longer have control of the asset.
+
+    <p><strong>中文理由：</strong></p>
+    匿名 Web 用户账户权限过高是导致 Web 服务器遭到入侵的最常见问题之一。如果该用户可以上载并执行 Web 服务器上的文件，组织或服务器所有者将无法继续控制该资产。
 
 severity: high
 

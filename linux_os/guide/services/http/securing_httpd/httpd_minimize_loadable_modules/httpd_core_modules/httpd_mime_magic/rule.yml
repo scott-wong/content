@@ -8,9 +8,16 @@ description: |-
     is likely extraneous. If its functionality is unnecessary, comment out the related module:
     <pre>#LoadModule mime_magic_module modules/mod_mime_magic.so</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>mime_magic</tt> 模块提供第二层 MIME 支持，在大多数配置中可能都是多余的。如果不需要其功能，请注释掉相关模块：
+    <pre>#LoadModule mime_magic_module modules/mod_mime_magic.so</pre>
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

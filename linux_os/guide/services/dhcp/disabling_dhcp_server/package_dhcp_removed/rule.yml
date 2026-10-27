@@ -15,9 +15,16 @@ description: |-
     the {{{ package }}} package can be uninstalled.
     {{{ describe_package_remove(package=package) }}}
 
+    <p><strong>中文说明：</strong></p>
+    如果系统无需充当 DHCP 服务器，则可卸载 <tt>{{{ package }}}</tt> 软件包。
+    请使用适当的软件包管理工具移除 <tt>{{{ package }}}</tt> 软件包。
+
 rationale: |-
     Removing the DHCP server ensures that it cannot be easily or
     accidentally reactivated and disrupt network operation.
+
+    <p><strong>中文理由：</strong></p>
+    移除 DHCP 服务器可确保其不会被轻易或意外重新激活并干扰网络运行。
 
 severity: medium
 

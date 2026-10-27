@@ -13,6 +13,11 @@ description: |-
     demilitarizez done (DMZ) other than application and/or database servers
     that are a part of the same system as the web server.
 
+    <p><strong>中文说明：</strong></p>
+    为最大限度降低私有资产遭受攻击者带来不必要风险的可能性，公共 Web 服务器必须与内部系统隔离。
+
+    应将公共 Web 服务器从逻辑上迁移到与内部系统隔离的位置。此外，确保公共 Web 服务器不与 DMZ（demilitarized zone）范围之外的资产建立受信任连接，但与 Web 服务器属于同一系统的应用服务器和/或数据库服务器除外。
+
 rationale: |-
     Public web servers are by nature more vulnerabile to attack from publicly
     based sources, such as the public Internet. Once compromised, a public
@@ -23,6 +28,9 @@ rationale: |-
     increase risk that private assets are exposed to attacks from public
     sources. An improperly located public web server is a potential
     threat to the entire network.
+
+    <p><strong>中文理由：</strong></p>
+    公共 Web 服务器在本质上更容易受到来自公共互联网等公开来源的攻击。一旦遭到入侵，除非实施额外的保护层，否则公共服务器可能被用作进一步攻击私有资源的基地。公共 Web 服务器托管在 NIPRNet 上时，必须位于具有严格访问控制的 DoD DMZ 扩展区中。未能以这种方式隔离资源会增加私有资产暴露于公共来源攻击的风险。位置不当的公共 Web 服务器会对整个网络构成潜在威胁。
 
 severity: medium
 

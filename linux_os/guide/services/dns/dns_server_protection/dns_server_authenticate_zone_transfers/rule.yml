@@ -40,6 +40,40 @@ description: |-
       ...
     };</pre>
 
+    <p><strong>中文说明：</strong></p>
+    如果辅助名称服务器需要通过区域传送从主服务器接收区域数据，请按照以下说明操作。使用 dnssec-keygen 在当前目录中创建对称密钥文件：
+    <pre>$ cd /tmp
+    $ sudo dnssec-keygen -a HMAC-MD5 -b 128 -n HOST dns.example.com
+    Kdns.example.com .+aaa +iiiii</pre>
+    此输出是包含新密钥的文件名。读取该文件以查找 base64 编码的密钥字符串：
+    <pre>$ sudo cat Kdns.example.com .+NNN +MMMMM .key
+    dns.example.com IN KEY 512 3 157 base64-key-string</pre>
+    在主服务器的 <tt>/etc/named.conf</tt> 中添加以下指令：
+    <pre>key zone-transfer-key {
+      algorithm hmac-md5;
+      secret "base64-key-string ";
+    };
+    zone "example.com " IN {
+      type master;
+      allow-transfer { key zone-transfer-key; };
+      ...
+    };</pre>
+    在辅助名称服务器的 <tt>/etc/named.conf</tt> 中添加以下指令：
+    <pre>key zone-transfer-key {
+      algorithm hmac-md5;
+      secret "base64-key-string ";
+    };
+
+    server IP-OF-MASTER {
+      keys { zone-transfer-key; };
+    };
+
+    zone "example.com " IN {
+      type slave;
+      masters { IP-OF-MASTER ; };
+      ...
+    };</pre>
+
 rationale: |-
     The BIND transaction signature (TSIG) functionality allows primary
     and secondary nameservers to use a shared secret to verify authorization to
@@ -49,6 +83,9 @@ rationale: |-
     instance, the secondary nameserver is not under your control and its
     administrators are unwilling to configure TSIG, you can configure an
     allow-transfer directive with numerical IP addresses or ACLs as a last resort.
+
+    <p><strong>中文理由：</strong></p>
+    BIND 事务签名（TSIG）功能允许主名称服务器和辅助名称服务器使用共享密钥验证执行区域传送的授权。由于 IP 地址容易被伪造，此方法比使用基于 IP 的限制来限制名称服务器访问更安全。但是，如果因辅助名称服务器不在您的控制之下且其管理员不愿配置 TSIG 等原因而无法在服务器之间配置 TSIG，则作为最后手段，可配置带有数字 IP 地址或 ACL 的 allow-transfer 指令。
 
 severity: medium
 

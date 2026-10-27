@@ -11,9 +11,20 @@ description: |-
 
     If the web server requires the use of CGI, enable <tt>mod_cgi</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>cgi</tt> 模块允许 HTML 与 CGI Web 编程语言交互。
+    <br /><br />
+    如果不需要此功能，请注释掉该模块：
+    <pre>#LoadModule cgi_module modules/mod_cgi.so</pre>
+
+    如果 Web 服务器需要使用 CGI，请启用 <tt>mod_cgi</tt>。
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

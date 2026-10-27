@@ -10,6 +10,10 @@ description: |-
     the following line to enable SELinux support in the Docker daemon:
     <pre>OPTIONS='--selinux-enabled'</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要为 Docker 服务启用 SELinux，必须将 Docker 服务配置为使用 <tt>--selinux-enabled</tt> 选项运行 Docker 守护进程。在 <tt>/etc/sysconfig/docker</tt> 配置文件中添加或更正以下行，以在 Docker 守护进程中启用 SELinux 支持：
+    <pre>OPTIONS='--selinux-enabled'</pre>
+
 rationale: |-
     If SELinux is not explicitly enabled in the Docker daemon configuration,
     Docker does not use SELinux which means Docker runs unconfined,
@@ -17,6 +21,9 @@ rationale: |-
     processes. However enabling SELinux for the Docker service prevents
     an attacker or rogue container from attacking other container processes
     and content as well as prevents taking over the host operating system.
+
+    <p><strong>中文理由：</strong></p>
+    如果未在 Docker 守护进程配置中显式启用 SELinux，Docker 将不使用 SELinux，这意味着 Docker 以不受限方式运行，SELinux 不会为 Docker 容器进程提供安全隔离。但是，为 Docker 服务启用 SELinux 可防止攻击者或恶意容器攻击其他容器进程和内容，还可防止其接管主机操作系统。
 
 severity: high
 

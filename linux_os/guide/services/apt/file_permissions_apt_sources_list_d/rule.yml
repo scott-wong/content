@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Permissions on Files in /etc/apt/sources.list.d'
 
-description: '{{{ describe_file_permissions(file="/etc/apt/sources.list.d/*", perms="0644") }}}'
+description: |-
+    {{{ describe_file_permissions(file="/etc/apt/sources.list.d/*", perms="0644") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/apt/sources.list.d/*</tt> 文件的权限为 <tt>0644</tt> 或更严格。
 
 rationale: |-
     Files in /etc/apt/sources.list.d contain APT repository configuration. They
     should not be writable by non-root users.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/apt/sources.list.d</tt> 中的文件包含 APT 仓库配置，不应被非 root 用户写入。
 
 severity: medium
 

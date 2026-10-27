@@ -5,9 +5,15 @@ title: 'Disable named Service'
 description: |-
     {{{ describe_service_disable(service="named") }}}
 
+    <p><strong>中文说明：</strong></p>
+    要禁用 <tt>named</tt> 服务，请运行 <tt>sudo systemctl disable --now named</tt>。
+
 rationale: |-
     All network services involve some risk of compromise due to
     implementation flaws and should be disabled if possible.
+
+    <p><strong>中文理由：</strong></p>
+    所有网络服务都可能因实现缺陷而存在遭入侵的风险，因此应尽可能禁用。
 
 severity: medium
 

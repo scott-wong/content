@@ -11,12 +11,19 @@ description: |-
     listen for connection attempts.
     {{{ describe_service_disable(service="qpidd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>qpidd</tt> 服务提供高速、安全且有保证的交付服务。它是 Advanced Message Queuing Protocol 的一种实现。默认情况下，qpidd 服务绑定到端口 5672 并监听连接尝试。
+    应禁用 <tt>qpidd</tt> 服务。
+
 rationale: |-
     The qpidd service is automatically installed when the <tt>base</tt> package
     selection is selected during installation. The qpidd service listens for
     network connections, which increases the attack surface of the system. If
     the system is not intended to receive AMQP traffic, then the <tt>qpidd</tt>
     service is not needed and should be disabled or removed.
+
+    <p><strong>中文理由：</strong></p>
+    安装时选择 <tt>base</tt> 软件包集合会自动安装 qpidd 服务。qpidd 服务监听网络连接，从而增加系统攻击面。如果系统不打算接收 AMQP 流量，则不需要 <tt>qpidd</tt> 服务，应将其禁用或删除。
 
 severity: low
 

@@ -10,10 +10,17 @@ description: |-
     solution to aid in the management of certificates.
     {{{ describe_service_disable(service="certmonger") }}}
 
+    <p><strong>中文说明：</strong></p>
+    Certmonger 是基于 D-Bus 的服务，旨在简化使用公钥基础设施的网络中与证书颁发机构的交互。它通常与 Red Hat 的 IPA（Identity Policy Audit）安全管理解决方案结合使用，以帮助管理证书。
+    应禁用 <tt>certmonger</tt> 服务。
+
 rationale: |-
     The services provided by certmonger may be essential for systems
     fulfilling some roles a PKI infrastructure, but its functionality is not necessary
     for many other use cases.
+
+    <p><strong>中文理由：</strong></p>
+    对于承担某些 PKI 基础设施角色的系统，certmonger 提供的服务可能必不可少，但在许多其他用例中并不需要其功能。
 
 severity: low
 

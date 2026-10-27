@@ -9,6 +9,10 @@ description: |-
     appears in the <tt>[server]</tt> section:
     <pre>check-response-ttl=yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要使 Avahi 忽略 TTL 字段不是 255 的数据包，请编辑 <tt>/etc/avahi/avahi-daemon.conf</tt>，并确保 <tt>[server]</tt> 节中出现以下行：
+    <pre>check-response-ttl=yes</pre>
+
 rationale: |-
     This helps to ensure that only mDNS responses from the local network are
     processed, because the TTL field in a packet is decremented from its initial
@@ -16,6 +20,9 @@ rationale: |-
     properly-configured router or firewall should not allow mDNS packets into
     the local network at all, this option provides another check to ensure they
     are not permitted.
+
+    <p><strong>中文理由：</strong></p>
+    这有助于确保仅处理来自本地网络的 mDNS 响应，因为数据包从一个网络路由到另一个网络时，其 TTL 字段会从初始值 255 递减。尽管配置正确的路由器或防火墙根本不应允许 mDNS 数据包进入本地网络，但此选项提供了另一项检查，确保这些数据包不被允许。
 
 severity: low
 

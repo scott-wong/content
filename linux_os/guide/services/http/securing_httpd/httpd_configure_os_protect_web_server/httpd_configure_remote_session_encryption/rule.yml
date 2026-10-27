@@ -7,6 +7,9 @@ description: |-
     Ensure that the SSH server service is enabled.
     {{{ describe_service_enable(service="sshd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保已启用 SSH 服务器服务。可使用 <tt>sudo systemctl enable sshd.service</tt> 启用 <tt>sshd</tt>。
+
 rationale: |-
     Logging into a web server remotely using an unencrypted protocol or service
     when performing updates and maintenance is a major risk. Data, such as user
@@ -17,6 +20,11 @@ rationale: |-
     An alternative to remote administration of
     the web server is to perform web server administration locally at the console.
     Local administration at the console implies physical access to the server.
+
+    <p><strong>中文理由：</strong></p>
+    在执行更新和维护时，使用未加密的协议或服务远程登录 Web 服务器是一项重大风险。用户账户等数据以明文传输，极易遭到泄露。执行远程管理任务时，必须使用能够加密通信通道的协议或服务。
+    <br /><br />
+    远程管理 Web 服务器的替代方法是在控制台本地执行管理。通过控制台进行本地管理意味着需要能够物理访问服务器。
 
 severity: high
 

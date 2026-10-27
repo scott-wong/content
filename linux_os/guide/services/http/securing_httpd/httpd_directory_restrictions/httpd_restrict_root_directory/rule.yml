@@ -11,9 +11,20 @@ description: |-
        Order allow,deny
     &lt;/Directory&gt;</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>httpd</tt> 根目录应始终启用限制最严格的配置。
+    <pre>&lt;Directory / &gt;
+       Options None
+       AllowOverride None
+       Order allow,deny
+    &lt;/Directory&gt;</pre>
+
 rationale: |-
     The Web Server's root directory content should be protected from unauthorized access
     by web clients.
+
+    <p><strong>中文理由：</strong></p>
+    Web 服务器的根目录内容应受到保护，防止 Web 客户端未经授权访问。
 
 severity: unknown
 

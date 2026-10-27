@@ -6,9 +6,15 @@ title: 'Install fapolicyd Package'
 description: |-
     {{{ describe_package_install(package="fapolicyd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    请使用适当的软件包管理工具安装 <tt>fapolicyd</tt> 软件包。
+
 rationale: |-
     <tt>fapolicyd</tt> (File Access Policy Daemon)
     implements application whitelisting to decide file access rights.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>fapolicyd</tt>（File Access Policy Daemon）实现应用允许列表，以决定文件访问权限。
 
 severity: medium
 

@@ -7,6 +7,9 @@ description: |-
     Copies of backup files will not execute on the server, but they can be
     read by the anonymous user if special precautions are not taken.
 
+    <p><strong>中文说明：</strong></p>
+    备份文件的副本不会在服务器上执行，但如果不采取特殊预防措施，匿名用户可以读取这些副本。
+
 rationale: |-
     Such backup copies contain the same sensitive information as the actual
     scripts being executed and, as such, are useful to malicious users.
@@ -21,6 +24,11 @@ rationale: |-
     backup scripts on the web server provides one more opportunity for
     malicious persons to view these scripts and use the information found in
     them.
+
+    <p><strong>中文理由：</strong></p>
+    此类备份副本包含与实际执行脚本相同的敏感信息，因此对恶意用户很有用。目前已有技术和系统会搜索 Web 服务器中的此类文件，并能够利用其中包含的信息。
+
+    某些文本编辑器（例如 emacs 和 VIM）会自动创建文件备份副本。编辑器可能会创建一个在原文件名后添加 ~ 扩展名的备份文件。EditPlus 编辑器会创建 .bak 文件。当然，这意味着 Web 服务器上存在并使用开发工具，而根据 WG130，这本身就会构成发现项。Web 服务器上存在备份脚本，为恶意人员查看这些脚本并利用其中发现的信息提供了又一个机会。
 
 severity: medium
 

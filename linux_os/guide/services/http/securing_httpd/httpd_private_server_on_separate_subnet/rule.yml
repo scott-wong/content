@@ -10,6 +10,11 @@ description: |-
     Isolate the private web server from the public DMZ and separate it from the
     internal general population LAN.
 
+    <p><strong>中文说明：</strong></p>
+    承载受控访问数据的私有 Web 服务器除内部威胁外，还必须受到保护以免受外部威胁。
+
+    将私有 Web 服务器与公共 DMZ 隔离，并将其与内部一般用户 LAN 分开。
+
 rationale: |-
     Insider threat may be accidental or intentional but, in either case, can
     cause a disruption in service of the web server. To protect the private
@@ -17,6 +22,9 @@ rationale: |-
     access subnet and must not be part of the public DMZ that houses the public
     web servers. it also cannot be located inside the enclave as part of the
     local general population LAN.
+
+    <p><strong>中文理由：</strong></p>
+    内部威胁可能是意外或蓄意的，但无论哪种情况，都可能造成 Web 服务器服务中断。为保护私有 Web 服务器免受这些威胁，必须将其置于单独的受控访问子网上，不得位于承载公共 Web 服务器的公共 DMZ 中，也不得作为本地一般用户 LAN 的一部分位于隔离区内部。
 
 severity: medium
 

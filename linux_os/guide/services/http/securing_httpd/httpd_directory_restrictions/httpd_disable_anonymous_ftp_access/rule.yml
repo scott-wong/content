@@ -9,6 +9,9 @@ description: |-
     directories that allow anonymous access. Also, ensure that any such
     access employs an encrypted connection.
 
+    <p><strong>中文说明：</strong></p>
+    如果任何包含动态脚本的目录可被不需要访问权限的任何组或用户通过 FTP 访问，请移除这些目录中允许匿名访问的权限。此外，确保任何此类访问都使用加密连接。
+
 rationale: |-
     The directories containing the CGI scripts, such as PERL, must not be
     accessible to anonymous users via FTP. This applies to all directories that
@@ -16,6 +19,9 @@ rationale: |-
     (i.e., scripts based upon user-provided input). Such scripts contain information
     that could be used to compromise a web service, access system resources, or
     deface a web site.
+
+    <p><strong>中文理由：</strong></p>
+    包含 CGI 脚本（例如 PERL）的目录不得被匿名用户通过 FTP 访问。这适用于所有包含以交互方式动态生成网页的脚本的目录（即基于用户提供输入的脚本）。此类脚本包含的信息可能被用于破坏 Web 服务、访问系统资源或篡改网站。
 
 severity: medium
 

@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Owner on /etc/apt/sources.list.d Directory'
 
-description: '{{{ describe_directory_owner(directory="/etc/apt/sources.list.d", owner="root") }}}'
+description: |-
+    {{{ describe_directory_owner(directory="/etc/apt/sources.list.d", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保目录 <tt>/etc/apt/sources.list.d</tt> 的所有者为 <tt>root</tt>。
 
 rationale: |-
     The /etc/apt/sources.list.d directory should be owned by root to prevent
     unauthorized changes to APT repository configuration.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/apt/sources.list.d</tt> 目录应由 <tt>root</tt> 拥有，以防止未经授权更改 APT 仓库配置。
 
 severity: medium
 

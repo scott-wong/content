@@ -8,6 +8,9 @@ description: |-
     clients, edit <tt>/etc/dhcp/dhcpd.conf</tt>, and add or correct the following global
     option: <pre>ddns-update-style none;</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要阻止 DHCP 服务器接收客户端提供的 DNS 信息，请编辑 <tt>/etc/dhcp/dhcpd.conf</tt>，并添加或更正以下全局选项：<pre>ddns-update-style none;</pre>
+
 rationale: |-
     The Dynamic DNS protocol is used to remotely update the data served
     by a DNS server. DHCP servers can use Dynamic DNS to publish information about
@@ -17,6 +20,9 @@ rationale: |-
     cryptographic authentication mechanism. See dhcpd.conf(5) for more information
     about protecting the DHCP server from passing along malicious DNS data from its
     clients.
+
+    <p><strong>中文理由：</strong></p>
+    动态 DNS 协议用于远程更新 DNS 服务器提供的数据。DHCP 服务器可使用动态 DNS 发布有关其客户端的信息。这种设置存在安全风险，不建议使用。如果尽管存在风险仍必须使用动态 DNS，则必须使用 TSIG 或其他加密身份验证机制保护动态 DNS 事务。有关保护 DHCP 服务器免于传递来自客户端的恶意 DNS 数据的更多信息，请参阅 dhcpd.conf(5)。
 
 severity: unknown
 

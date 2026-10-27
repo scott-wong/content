@@ -8,6 +8,10 @@ description: |-
     <tt>/etc/httpd/conf/httpd.conf</tt>:
     <pre>CustomLog "logs/access_log" combined</pre>
 
+    <p><strong>中文说明：</strong></p>
+    应在 <tt>/etc/httpd/conf/httpd.conf</tt> 中启用 <tt>CustomLog</tt>，并将其设置为：
+    <pre>CustomLog "logs/access_log" combined</pre>
+
 rationale: |-
     The server error logs are invaluable because they can also be used to identify
     potential problems and enable proactive remediation. Log data can reveal
@@ -16,6 +20,9 @@ rationale: |-
     significantly reduce the ability of Web Administrators to detect or remediate
     problems. The CustomLog directive specifies the log file, syslog facility, or
     piped logging utility.
+
+    <p><strong>中文理由：</strong></p>
+    服务器错误日志非常宝贵，因为它们可用于识别潜在问题并支持主动修复。日志数据可以揭示“未找到”或“未授权”错误等异常行为，这些行为可能表明存在攻击尝试。未能启用错误日志记录会显著降低 Web 管理员检测或修复问题的能力。<tt>CustomLog</tt> 指令用于指定日志文件、syslog 设施或管道日志记录实用程序。
 
 severity: medium
 

@@ -7,9 +7,15 @@ description: |-
     By default, the anonymous FTP root is the home directory of the FTP user account. The df command can
     be used to verify that this directory is on its own partition.
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，匿名 FTP 根目录是 FTP 用户账户的主目录。可使用 df 命令验证该目录是否位于独立分区上。
+
 rationale: |-
     If there is a mission-critical reason for anonymous users to upload files, precautions must be taken to prevent
     these users from filling a disk used by other services.
+
+    <p><strong>中文理由：</strong></p>
+    如果匿名用户有上传文件的任务关键型理由，必须采取预防措施，防止这些用户填满其他服务使用的磁盘。
 
 severity: unknown
 

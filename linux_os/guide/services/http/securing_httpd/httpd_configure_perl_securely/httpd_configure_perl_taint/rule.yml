@@ -9,6 +9,10 @@ description: |-
     checking, add or uncomment the following to <tt>/etc/httpd/conf.d/perl.conf</tt>:
     <pre>PerlSwitches -T</pre>
 
+    <p><strong>中文说明：</strong></p>
+    如果安装了 <tt>mod_perl</tt> 模块，请在 <tt>/etc/httpd/conf/httpd.conf</tt> 中启用 Perl Taint 检查。要启用 Perl Taint 检查，请在 <tt>/etc/httpd/conf.d/perl.conf</tt> 中添加或取消注释以下内容：
+    <pre>PerlSwitches -T</pre>
+
 rationale: |-
     PERL (Practical Extraction and Report Language) is an interpreted language
     optimized for scanning arbitrary text files, extracting information from those
@@ -24,6 +28,11 @@ rationale: |-
     malicious input sent from outside the program. When the data is tainted, it
     cannot be used in programs or functions such as eval(), system(), exec(), pipes,
     or popen(). The script will exit with a warning message.
+
+    <p><strong>中文理由：</strong></p>
+    PERL（Practical Extraction and Report Language）是一种解释型语言，专为扫描任意文本文件、从中提取信息并基于这些信息生成报告而优化。该语言常用于 shell 脚本编写，旨在成为为用户生成交互式网页的实用、易用且高效的方式。遗憾的是，许多广泛使用的免费 PERL 程序（脚本）极不安全。恶意用户很容易通过替换 POST 或 GET 操作期间发送给 PERL 脚本的输入来利用这些缺陷。
+    <br /><br />
+    因此，PERL 的创始人开发了一种名为 TAINT 的机制，用于保护系统免受来自程序外部的恶意输入影响。当数据被标记为污染数据后，就不能用于 eval()、system()、exec()、管道或 popen() 等程序或函数。脚本将退出并显示警告消息。
 
 severity: medium
 

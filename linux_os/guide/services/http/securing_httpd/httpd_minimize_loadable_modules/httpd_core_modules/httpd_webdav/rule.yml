@@ -13,9 +13,18 @@ description: |-
     Since DAV access allows remote clients to manipulate server files, any location on the
     server that is DAV enabled should be protected by access controls.
 
+    <p><strong>中文说明：</strong></p>
+    WebDAV 是 HTTP 协议的扩展，提供对 Web 内容的分布式协作访问。如果不需要其功能，请注释掉相关模块：
+    <pre>#LoadModule dav_module modules/mod_dav.so
+    #LoadModule dav_fs_module modules/mod_dav_fs.so</pre>
+    如果确实需要使用 WebDAV，应格外谨慎地进行配置。由于 DAV 访问允许远程客户端操作服务器文件，服务器上任何启用 DAV 的位置都应受到访问控制保护。
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server, reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

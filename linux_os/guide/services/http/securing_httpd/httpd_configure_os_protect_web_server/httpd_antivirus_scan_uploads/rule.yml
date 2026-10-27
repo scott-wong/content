@@ -7,6 +7,9 @@ description: |-
     Install anti-virus software on the system and set it to automatically scan new
     files that are introduced to the web server.
 
+    <p><strong>中文说明：</strong></p>
+    在系统上安装防病毒软件，并将其设置为自动扫描引入 Web 服务器的新文件。
+
 rationale: |-
     Remote web authors should not be able to upload files to the Document Root
     directory structure without virus checking and checking for malicious or mobile
@@ -17,6 +20,9 @@ rationale: |-
     scanned for viruses and content checked for malicious or mobile code. Only
     files free of viruses and malicious or mobile code will be posted to the
     appropriate DocumentRoot directory.
+
+    <p><strong>中文理由：</strong></p>
+    远程 Web 作者不应在未进行病毒检查以及恶意代码或移动代码检查的情况下，将文件上传到 Document Root 目录结构。与托管机构签有谅解备忘录（MOA）并已提交系统授权访问请求（SAAR）或等效文档的远程 Web 用户，可获准将文件发布到服务器上的临时位置。所有发布到此临时位置的文件都将接受病毒扫描，并检查其中是否包含恶意代码或移动代码。只有不含病毒且不含恶意代码或移动代码的文件才会发布到相应的 DocumentRoot 目录。
 
 severity: medium
 

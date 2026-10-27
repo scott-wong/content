@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Permissions on /etc/apt/auth.conf.d Directory'
 
-description: '{{{ describe_directory_permissions(directory="/etc/apt/auth.conf.d", perms="0755") }}}'
+description: |-
+    {{{ describe_directory_permissions(directory="/etc/apt/auth.conf.d", perms="0755") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保目录 <tt>/etc/apt/auth.conf.d</tt> 的权限为 <tt>0755</tt> 或更严格。
 
 rationale: |-
     The /etc/apt/auth.conf.d directory contains configuration that may include
     repository credentials. Its permissions should prevent unauthorized changes.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/apt/auth.conf.d</tt> 目录包含可能含有仓库凭据的配置。其权限应防止未经授权的更改。
 
 severity: medium
 

@@ -10,11 +10,18 @@ description: |-
     RHN server or satellite and managed as such.
     {{{ describe_service_disable(service="rhnsd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    Red Hat Network 服务自动查询 Red Hat Network 服务器，以确定是否有任何应执行的操作，例如软件包更新。仅当系统已注册到 RHN 服务器或 Satellite 并按此方式管理时，才会发生这种情况。
+    应禁用 <tt>rhnsd</tt> 服务。
+
 rationale: |-
     Although systems management and patching is extremely important to
     system security, management by a system outside the enterprise enclave is not
     desirable for some environments.  However, if the system is being managed by RHN or
      RHN Satellite Server the <tt>rhnsd</tt> daemon can remain on.
+
+    <p><strong>中文理由：</strong></p>
+    尽管系统管理和补丁更新对系统安全极其重要，但在某些环境中不希望由企业安全域之外的系统进行管理。但是，如果系统由 RHN 或 RHN Satellite Server 管理，<tt>rhnsd</tt> 守护进程可以保持启用。
 
 severity: low
 

@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Owner on Files in /etc/apt/auth.conf.d'
 
-description: '{{{ describe_file_owner(file="/etc/apt/auth.conf.d/*.conf", owner="root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/etc/apt/auth.conf.d/*.conf", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/apt/auth.conf.d/*.conf</tt> 文件的所有者为 <tt>root</tt>。
 
 rationale: |-
     Files in /etc/apt/auth.conf.d should be owned by root to prevent
     unauthorized changes to APT authentication configuration.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/apt/auth.conf.d</tt> 中的文件应由 <tt>root</tt> 拥有，以防止未经授权更改 APT 身份验证配置。
 
 severity: medium
 

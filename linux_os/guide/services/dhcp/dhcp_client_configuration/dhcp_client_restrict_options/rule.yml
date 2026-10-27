@@ -25,6 +25,25 @@ description: |-
     request subnet-mask;
     require subnet-mask;</pre>
 
+    <p><strong>中文说明：</strong></p>
+    创建 <tt>/etc/dhcp/dhclient.conf</tt> 文件，并为可通过 DHCP 获取的十项配置设置分别添加适当设置。对于每项设置，执行以下操作之一：
+    <br />
+    如果该设置不应由 DHCP 服务器远程配置，请选择适当的静态值，并添加以下行：
+    <pre>supersede <tt>setting value</tt>;</pre>
+    如果该设置应由 DHCP 服务器远程配置，请添加以下行：
+    <pre>request <tt>setting</tt>;
+    require <tt>setting</tt>;</pre>
+    例如，假设 DHCP 服务器只应提供 IP 地址本身和子网掩码，则整个文件应如下所示：
+    <pre>supersede domain-name "example.com";
+    supersede domain-name-servers 192.168.1.2;
+    supersede nis-domain "";
+    supersede nis-servers "";
+    supersede ntp-servers "ntp.example.com ";
+    supersede routers 192.168.1.1;
+    supersede time-offset -18000;
+    request subnet-mask;
+    require subnet-mask;</pre>
+
 rationale: |-
     By default, the DHCP client program, dhclient, requests and applies
     ten configuration options (in addition to the IP address) from the DHCP server.
@@ -39,6 +58,9 @@ rationale: |-
     hostname for the system. However, dhclient does not use the host name option
     provided by the DHCP server (instead using the value provided by a reverse DNS
     lookup).
+
+    <p><strong>中文理由：</strong></p>
+    默认情况下，DHCP 客户端程序 dhclient 会从 DHCP 服务器请求并应用十项配置选项（除 IP 地址外）：subnet-mask、broadcast-address、time-offset、routers、domain-name、domain-name-servers、host-name、nis-domain、nis-servers 和 ntp-servers。dhclient 请求并应用的许多选项在同一网络中的每台系统上可能都相同。建议几乎所有配置选项都采用静态分配，仅将通过 DHCP 分配那些必须因主机而异的选项。这可限制恶意 DHCP 服务器可能造成的损害。如果适合站点环境，还可以在 <tt>/etc/dhcp/dhclient.conf</tt> 中覆盖 host-name 指令，为系统设置静态主机名。但是，dhclient 不使用 DHCP 服务器提供的主机名选项，而使用反向 DNS 查询提供的值。
 
 severity: unknown
 

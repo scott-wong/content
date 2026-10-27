@@ -7,6 +7,9 @@ description: |-
     Set <tt>AllowOverride</tt> to <tt>none</tt> for each instant of
     <tt>&lt;Directory&gt;</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    为每个 <tt>&lt;Directory&gt;</tt> 实例将 <tt>AllowOverride</tt> 设置为 <tt>none</tt>。
+
 rationale: |-
     CGI scripts represents one of the most common and exploitable means of
     compromising a web server. By definition, CGI are executable by the operating
@@ -16,6 +19,9 @@ rationale: |-
     launch other programs and use the network. CGI programs can be written in any
     available programming language. C, PERL, PHP, Javascript, VBScript and shell
     (sh, ksh, bash) are popular choices.
+
+    <p><strong>中文理由：</strong></p>
+    CGI 脚本是最常见且最易被利用的 Web 服务器入侵途径之一。根据定义，CGI 可由宿主服务器的操作系统执行。虽然 Web 服务提供了访问控制，但除非 SA 或 Web 管理员采取特定措施，否则 CGI 程序的执行不会受到其他限制。CGI 程序可以访问和更改数据文件、启动其他程序并使用网络。CGI 程序可以用任何可用的编程语言编写，C、PERL、PHP、Javascript、VBScript 和 shell（sh、ksh、bash）都是常见选择。
 
 severity: medium
 

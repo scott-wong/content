@@ -2,12 +2,19 @@ documentation_complete: true
 
 title: 'Disable unauthenticated repositories in APT configuration'
 
-description: 'Unauthenticated repositories should not be used for updates.'
+description: |-
+    Unauthenticated repositories should not be used for updates.
+
+    <p><strong>中文说明：</strong></p>
+    更新时不应使用未通过身份验证的仓库。
 
 rationale: |-
     Repositories hosts all packages that will be installed on the system during update.
         If a repository is not authenticated, the associated packages can't be trusted,
         and then should not be installed locally.
+
+    <p><strong>中文理由：</strong></p>
+    仓库承载更新期间将在系统上安装的所有软件包。如果仓库未通过身份验证，则无法信任其中的软件包，因此不应在本地安装这些软件包。
 
 severity: unknown
 

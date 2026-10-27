@@ -7,11 +7,17 @@ description: |-
     Use only secure encrypted logons and connections for uploading files to the web
     site.
 
+    <p><strong>中文说明：</strong></p>
+    向网站上载文件时，仅使用安全的加密登录和连接。
+
 rationale: |-
     Logging in to a web server via an unencrypted protocol or service, to upload
     documents to the web site, is a risk if proper encryption is not utilized to
     protect the data being transmitted. An encrypted protocol or service must be
     used for remote access to web administration tasks.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有使用适当的加密来保护传输中的数据，通过未加密协议或服务登录 Web 服务器以向网站上载文档会带来风险。远程访问 Web 管理任务时必须使用加密协议或服务。
 
 severity: high
 

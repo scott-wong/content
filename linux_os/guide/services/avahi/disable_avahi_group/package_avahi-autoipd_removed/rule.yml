@@ -8,10 +8,16 @@ description: |-
     the DNS Service Discovery and Multicast DNS protocols,
     the avahi-autoipd and avahi packages can be uninstalled.
 
+    <p><strong>中文说明：</strong></p>
+    如果系统不需要实现 DNS Service Discovery 和 Multicast DNS 协议的 Avahi 服务器，可以卸载 <tt>avahi-autoipd</tt> 和 <tt>avahi</tt> 软件包。
+
 rationale: |-
     Automatic discovery of network services is not normally required for 
     system functionality. It is recommended to remove this package to reduce 
     the potential attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    通常不需要自动发现网络服务来维持系统功能。建议删除此软件包以减小潜在攻击面。
 
 severity: medium
 

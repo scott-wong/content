@@ -9,10 +9,17 @@ description: |-
     required for other services.
     {{{ describe_service_disable(service="portreserve") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>portreserve</tt> 服务是一种 TCP 端口保留实用程序，可用于防止 portmap 绑定到其他服务所需的知名 TCP 端口。
+    应禁用 <tt>portreserve</tt> 服务。
+
 rationale: |-
     The <tt>portreserve</tt> service provides helpful functionality by
     preventing conflicting usage of ports in the reserved port range, but it can be
     disabled if not needed.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>portreserve</tt> 服务通过防止保留端口范围内的端口冲突使用而提供有用功能，但如不需要可禁用。
 
 severity: low
 

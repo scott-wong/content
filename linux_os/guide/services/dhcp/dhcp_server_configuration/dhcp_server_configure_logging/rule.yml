@@ -10,10 +10,18 @@ description: |-
     Configure logwatch or other log monitoring tools to summarize error conditions
     reported by the dhcpd process.
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/rsyslog.conf</tt> 中存在以下行：
+    <pre>daemon.*           /var/log/daemon.log</pre>
+    配置 logwatch 或其他日志监控工具，以汇总 dhcpd 进程报告的错误情况。
+
 rationale: |-
     By default, dhcpd logs notices to the daemon facility. Sending all
     daemon messages to a dedicated log file is part of the syslog configuration
     outlined in the Logging and Auditing section
+
+    <p><strong>中文理由：</strong></p>
+    默认情况下，dhcpd 会将通知记录到 daemon facility。将所有 daemon 消息发送到专用日志文件是日志和审计部分所述 syslog 配置的一部分。
 
 severity: unknown
 

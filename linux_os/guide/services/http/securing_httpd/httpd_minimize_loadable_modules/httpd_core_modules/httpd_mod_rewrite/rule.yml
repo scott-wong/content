@@ -10,9 +10,16 @@ description: |-
     unnecessary, comment out the related module:
     <pre>#LoadModule rewrite_module modules/mod_rewrite.so</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>mod_rewrite</tt> 模块功能强大，可防范某些类型的 Web 攻击。但是，它也非常复杂，并且自身存在大量漏洞历史。如果不需要其功能，请注释掉相关模块：
+    <pre>#LoadModule rewrite_module modules/mod_rewrite.so</pre>
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

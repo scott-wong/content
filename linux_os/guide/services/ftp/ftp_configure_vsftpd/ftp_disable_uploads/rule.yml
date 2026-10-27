@@ -10,10 +10,18 @@ description: |-
     If FTP uploads are necessary, follow the guidance in the remainder of this section to secure these transactions
     as much as possible.
 
+    <p><strong>中文说明：</strong></p>
+    用户是否有通过 FTP 上传文件的任务关键型理由？如果没有，请编辑 vsftpd 配置文件，以添加或更正以下配置选项：
+    <pre>write_enable=NO</pre>
+    如果必须允许 FTP 上传，请遵循本节剩余部分的指导，尽可能保护这些传输。
+
 rationale: |-
     Anonymous FTP can be a convenient way to make files available for universal download. However, it is less
     common to have a need to allow unauthenticated users to place files on the FTP server. If this must be done, it
     is necessary to ensure that files cannot be uploaded and downloaded from the same directory.
+
+    <p><strong>中文理由：</strong></p>
+    匿名 FTP 可以是向所有人提供文件下载的便捷方式。但是，需要允许未经过身份验证的用户将文件放到 FTP 服务器上的情况并不常见。如果必须这样做，必须确保无法从同一目录上传和下载文件。
 
 severity: unknown
 

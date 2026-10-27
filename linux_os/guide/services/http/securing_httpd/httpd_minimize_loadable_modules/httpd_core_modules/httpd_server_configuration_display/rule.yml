@@ -11,9 +11,17 @@ description: |-
     If there is a critical need for this module, use the <tt>Location</tt> directive to provide
     an access control list to restrict access to the information.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>info</tt> 模块会创建一个展示 Web 服务器配置的网页。这可能造成不必要的安全泄露，应禁用。如果不需要其功能，请注释掉该模块：
+    <pre>#LoadModule info_module modules/mod_info.so</pre>
+    如果确实需要使用此模块，请使用 <tt>Location</tt> 指令提供访问控制列表，以限制对该信息的访问。
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

@@ -10,11 +10,20 @@ description: |-
     Edit <tt>/etc/dovecot/conf.d/10-ssl.conf</tt> and add or correct the following line:
     <pre>ssl = yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要允许客户端建立加密连接，需要将 Dovecot 配置文件中的 <tt>ssl</tt> 标志设置为 <tt>yes</tt>。
+    <br /><br />
+    编辑 <tt>/etc/dovecot/conf.d/10-ssl.conf</tt> 并添加或更正以下行：
+    <pre>ssl = yes</pre>
+
 rationale: |-
     SSL encrypt network traffic between the Dovecot server and its clients 
     protecting user credentials, mail as it is downloaded, and clients may use
     SSL certificates to authenticate the server, preventing another system from
     impersonating the server.
+
+    <p><strong>中文理由：</strong></p>
+    SSL 会加密 Dovecot 服务器与其客户端之间的网络流量，保护用户凭据和下载的邮件，并且客户端可以使用 SSL 证书验证服务器，防止其他系统冒充该服务器。
 
 severity: unknown
 

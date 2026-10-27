@@ -6,10 +6,16 @@ title: 'Verify Permissions on cron.monthly'
 description: |-
     {{{ describe_file_permissions(file="/etc/cron.monthly", perms="0700") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/cron.monthly</tt> 的权限为 <tt>0700</tt>。
+
 rationale: |-
     Service configuration files enable or disable features of their respective services that if configured incorrectly
     can lead to insecure and vulnerable configurations. Therefore, service configuration files should have the
     correct access rights to prevent unauthorized changes.
+
+    <p><strong>中文理由：</strong></p>
+    服务配置文件用于启用或禁用相应服务的功能；如果配置错误，可能导致不安全或易受攻击的配置。因此，服务配置文件应具有正确的访问权限，以防止未经授权的更改。
 
 severity: medium
 

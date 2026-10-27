@@ -18,9 +18,24 @@ description: |-
     #  ...
     &lt;/Directory&gt;</pre>
 
+    <p><strong>中文说明：</strong></p>
+    Web 目录（<tt>/var/www/html</tt>）的默认配置允许目录索引（<tt>Indexes</tt>）和跟随符号链接（<tt>FollowSymLinks</tt>）。不建议使用这两项设置。
+    <br /><br />
+    <tt>/var/www/html</tt> 目录层次结构不应能通过 Web 查看，并且仅当符号链接的所有者也拥有所链接文件时，才应跟随符号链接。
+    <br /><br />
+    请通过修改配置中的相关部分确保遵循此策略：
+    <pre>&lt;Directory "/var/www/html"&gt;
+    #  ...
+       Options SymLinksIfOwnerMatch
+    #  ...
+    &lt;/Directory&gt;</pre>
+
 rationale: |-
     Access to the web server's directory hierarchy could allow access to unauthorized files
     by web clients. Following symbolic links could also allow such access.
+
+    <p><strong>中文理由：</strong></p>
+    访问 Web 服务器的目录层次结构可能使 Web 客户端访问未授权文件。跟随符号链接也可能导致此类访问。
 
 severity: unknown
 

@@ -12,7 +12,20 @@ description: |-
     by default. Add or correct the following configuration options:
     <pre>banner_file=/etc/issue</pre>
 
-rationale: 'This setting will cause the system greeting banner to be used for FTP connections as well.'
+    <p><strong>中文说明：</strong></p>
+    {{% if product in ["sle12", "sle15"] %}}
+    编辑默认位于 <tt>/etc/vsftpd.conf</tt> 的 vsftpd 配置文件。
+    {{% else %}}
+    编辑默认位于 <tt>/etc/vsftpd/vsftpd.conf</tt> 的 vsftpd 配置文件。
+    {{% endif %}}
+    添加或更正以下配置选项：
+    <pre>banner_file=/etc/issue</pre>
+
+rationale: |-
+    This setting will cause the system greeting banner to be used for FTP connections as well.
+
+    <p><strong>中文理由：</strong></p>
+    此设置会使 FTP 连接同样使用系统登录横幅。
 
 severity: medium
 

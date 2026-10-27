@@ -8,9 +8,16 @@ description: |-
     If this functionality is unnecessary, comment out the related module:
     <pre>#LoadModule auth_digest_module modules/mod_auth_digest.so</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>auth_digest</tt> 模块提供加密的身份验证会话。如果不需要此功能，请注释掉相关模块：
+    <pre>#LoadModule auth_digest_module modules/mod_auth_digest.so</pre>
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

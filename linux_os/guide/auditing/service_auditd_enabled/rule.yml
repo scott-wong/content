@@ -8,6 +8,9 @@ description: |-
     disk.
     {{{ describe_service_enable(service="auditd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>auditd</tt> 服务是 Linux 审计系统的重要用户空间组件，负责将审计记录写入磁盘。应启用 <tt>auditd</tt> 服务。
+
 rationale: |-
     Without establishing what type of events occurred, it would be difficult
     to establish, correlate, and investigate the events leading up to an outage or attack.
@@ -17,6 +20,9 @@ rationale: |-
     Additionally, a properly configured audit subsystem ensures that actions of
     individual system users can be uniquely traced to those users so they
     can be held accountable for their actions.
+
+    <p><strong>中文理由：</strong></p>
+    如果不确定发生了哪种类型的事件，将难以确定、关联和调查导致中断或攻击的事件。确保 <tt>auditd</tt> 服务处于活动状态，可确保内核生成的审计记录得到妥善记录。<br /><br />此外，正确配置的审计子系统可确保能够将各个系统用户的操作唯一追溯到相应用户，从而使其对自身行为负责。
 
 severity: medium
 

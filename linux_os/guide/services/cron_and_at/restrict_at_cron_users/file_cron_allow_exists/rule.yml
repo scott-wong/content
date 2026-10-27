@@ -7,11 +7,17 @@ description: |-
     The file <tt>/etc/cron.allow</tt> should exist and should be used instead
     of <tt>/etc/cron.deny</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>/etc/cron.allow</tt> 应存在，并应使用它代替 <tt>/etc/cron.deny</tt>。
+
 rationale: |-
     Access to <tt>crontab</tt> should be restricted.
     It is easier to manage an allow list than a deny list.
     Therefore, <tt>/etc/cron.allow</tt> needs to be created and used instead of <tt>/etc/cron.deny</tt>.
     Regardless of the existence of any of these files, the root administrative user is always allowed to setup a crontab.
+
+    <p><strong>中文理由：</strong></p>
+    应限制对 <tt>crontab</tt> 的访问。允许列表比拒绝列表更易于管理。因此，需要创建 <tt>/etc/cron.allow</tt> 并使用它替代 <tt>/etc/cron.deny</tt>。无论这些文件是否存在，root 管理用户始终被允许设置 crontab。
 
 severity: medium
 

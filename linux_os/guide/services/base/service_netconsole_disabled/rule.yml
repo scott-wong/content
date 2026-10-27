@@ -10,9 +10,16 @@ description: |-
     serial consoles are impractical.
     {{{ describe_service_disable(service="netconsole") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <tt>netconsole</tt> 服务负责加载 netconsole 内核模块，该模块通过 UDP 将内核 printk 消息记录到 syslog 服务器。这样可以调试磁盘日志记录失败且串行控制台不实用的问题。
+    应禁用 <tt>netconsole</tt> 服务。
+
 rationale: |-
     The <tt>netconsole</tt> service is not necessary unless there is a need to debug
     kernel panics, which is not common.
+
+    <p><strong>中文理由：</strong></p>
+    除非需要调试内核 panic（这并不常见），否则不需要 <tt>netconsole</tt> 服务。
 
 severity: low
 

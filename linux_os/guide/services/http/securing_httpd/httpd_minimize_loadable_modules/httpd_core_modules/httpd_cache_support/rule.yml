@@ -13,9 +13,18 @@ description: |-
     <pre>#LoadModule cache_module modules/mod_cache.so</pre>
     If caching is required, it should not be enabled for any limited-access content.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>cache</tt> 模块允许 <tt>httpd</tt> 缓存数据，从而优化对频繁访问内容的访问。但是，它会引入潜在安全缺陷，例如可能绕过 <tt>Allow</tt> 和 <tt>Deny</tt> 指令。
+    <br /><br /> 如果不需要此功能，请注释掉该模块：
+    <pre>#LoadModule cache_module modules/mod_cache.so</pre>
+    如果需要缓存，则不应为任何受限访问内容启用缓存。
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

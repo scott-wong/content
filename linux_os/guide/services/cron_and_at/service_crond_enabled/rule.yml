@@ -9,9 +9,16 @@ description: |-
     maintenance tasks, such as notifying root of system activity.
     {{{ describe_service_enable(service="crond") }}}
 
+    <p><strong>中文说明：</strong></p>
+    使用 <tt>crond</tt> 服务在预配置时间执行命令。几乎所有系统都需要该服务来执行必要的维护任务，例如通知 root 系统活动。
+    要启用 <tt>crond</tt> 服务，请运行 <tt>sudo systemctl enable --now crond</tt>。
+
 rationale: |-
     Due to its usage for maintenance and security-supporting tasks,
     enabling the cron daemon is essential.
+
+    <p><strong>中文理由：</strong></p>
+    cron 守护进程用于执行维护和安全支持任务，因此必须启用。
 
 severity: medium
 

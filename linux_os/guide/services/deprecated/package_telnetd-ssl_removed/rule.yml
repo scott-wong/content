@@ -5,9 +5,15 @@ title: 'Uninstall the ssl compliant telnet server'
 description: |-
         The <tt>telnet</tt> daemon, even with ssl support, should be uninstalled.
 
+        <p><strong>中文说明：</strong></p>
+        telnet 守护进程即使支持 SSL，也应卸载。
+
 rationale: |-
         <tt>telnet</tt>, even with ssl support, should not be installed.
         When remote shell is required, up-to-date ssh daemon can be used.
+
+        <p><strong>中文理由：</strong></p>
+        <tt>telnet</tt> 即使支持 SSL，也不应安装。需要使用远程 shell 时，可使用最新的 SSH 守护进程。
 
 severity: high
 

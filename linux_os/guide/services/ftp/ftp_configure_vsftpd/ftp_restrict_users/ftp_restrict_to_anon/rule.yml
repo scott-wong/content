@@ -13,11 +13,21 @@ description: |-
     If non-anonymous FTP logins are necessary, follow the guidance in the remainder of
     this section to secure these logins as much as possible.
 
+    <p><strong>中文说明：</strong></p>
+    用户是否有任务关键型理由通过 FTP 而不是 SCP/SFTP 等安全协议，在其自己的账户之间传输文件？如果没有，请编辑 vsftpd 配置文件。添加或更正以下配置选项：
+
+    <pre>local_enable=NO</pre>
+
+    如果必须允许非匿名 FTP 登录，请遵循本节剩余部分的指导，尽可能保护这些登录。
+
 rationale: |-
         The use of non-anonymous FTP logins is strongly discouraged. Since SSH clients 
         and servers are widely available, and since SSH provides support for a transfer
         mode which resembles FTP in user interface, there is no good reason to allow
         password-based FTP access.'
+
+        <p><strong>中文理由：</strong></p>
+        强烈不建议使用非匿名 FTP 登录。由于 SSH 客户端和服务器广泛可用，并且 SSH 提供的传输模式在用户界面上类似 FTP，因此没有充分理由允许基于密码的 FTP 访问。
 
 severity: medium
 

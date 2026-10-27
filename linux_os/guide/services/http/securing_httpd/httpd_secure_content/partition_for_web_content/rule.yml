@@ -8,6 +8,9 @@ description: |-
     Ensure that the <tt>DocumentRoot</tt> directory exists on a separate logical
     volume at installation time, or migrate it using LVM.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>DocumentRoot</tt> 目录用于存储 Web 内容和数据。确保 <tt>DocumentRoot</tt> 目录在安装时位于单独的逻辑卷上，或使用 LVM 迁移该目录。
+
 rationale: |-
     Application partitioning enables an additional security measure by securing
     user traffic under one security context, while managing system and application
@@ -16,6 +19,9 @@ rationale: |-
     that is avoidable and desirable. Failure to partition the system files from the
     web site documents increases risk of attack via directory traversal, or impede
     web site availability due to drive space exhaustion.
+
+    <p><strong>中文理由：</strong></p>
+    应用程序分区通过在一个安全上下文中保护用户流量，同时在另一个安全上下文中管理系统和应用文件，提供额外的安全措施。Web 内容可能被匿名 Web 用户访问。此类账户能够访问任何类型的系统文件是一项重大安全风险，这种风险既可避免也应避免。未能将系统文件与网站文档分区隔离会增加通过目录遍历进行攻击的风险，或可能因磁盘空间耗尽而妨碍网站可用性。
 
 severity: medium
 

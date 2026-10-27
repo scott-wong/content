@@ -10,9 +10,18 @@ description: |-
     #LoadModule authnz_ldap_module modules/mod_authnz_ldap.so</pre>
     If LDAP is to be used, SSL encryption should be used as well.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>ldap</tt> 模块通过 LDAP 目录提供 HTTP 身份验证。如果不需要其功能，请注释掉相关模块：
+    <pre>#LoadModule ldap_module modules/mod_ldap.so
+    #LoadModule authnz_ldap_module modules/mod_authnz_ldap.so</pre>
+    如果要使用 LDAP，还应使用 SSL 加密。
+
 rationale: |-
     Minimizing the number of loadable modules available to the web server reduces risk
     by limiting the capabilities allowed by the web server.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 Web 服务器可加载模块的数量，可限制 Web 服务器允许的能力，从而降低风险。
 
 severity: unknown
 

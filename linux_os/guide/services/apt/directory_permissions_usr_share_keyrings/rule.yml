@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Permissions on /usr/share/keyrings Directory'
 
-description: '{{{ describe_directory_permissions(directory="/usr/share/keyrings", perms="0755") }}}'
+description: |-
+    {{{ describe_directory_permissions(directory="/usr/share/keyrings", perms="0755") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保目录 <tt>/usr/share/keyrings</tt> 的权限为 <tt>0755</tt> 或更严格。
 
 rationale: |-
     A non-root user should not be able to add or remove package repository keys
     from /usr/share/keyrings.
+
+    <p><strong>中文理由：</strong></p>
+    非 root 用户不应能够从 <tt>/usr/share/keyrings</tt> 添加或删除软件包仓库密钥。
 
 severity: medium
 

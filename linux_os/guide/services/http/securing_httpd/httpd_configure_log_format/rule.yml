@@ -8,6 +8,10 @@ description: |-
     <tt>/etc/httpd/conf/httpd.conf</tt>:
     <pre>LogFormat "a %A %h %H %l %m %s %t %u %U \"%{Referer}i\" \"%{User-Agent}i\"" combined</pre>
 
+    <p><strong>中文说明：</strong></p>
+    应在 <tt>/etc/httpd/conf/httpd.conf</tt> 中启用 <tt>LogFormat</tt> 并将其设置为以下内容：
+    <pre>LogFormat "a %A %h %H %l %m %s %t %u %U \"%{Referer}i\" \"%{User-Agent}i\"" combined</pre>
+
 rationale: |-
     The server error logs are invaluable because they can also be used to identify
     potential problems and enable proactive remediation. Log data can reveal
@@ -16,6 +20,9 @@ rationale: |-
     significantly reduce the ability of Web Administrators to detect or remediate
     problems. The LogFormat directive defines the format and information to be
     included in the access log entries.
+
+    <p><strong>中文理由：</strong></p>
+    服务器错误日志非常宝贵，因为它们还可用于识别潜在问题并主动进行修复。日志数据可揭示异常行为，例如 "not found" 或 "unauthorized" 错误，这些可能是攻击尝试的证据。未能启用错误日志会显著降低 Web 管理员检测或修复问题的能力。LogFormat 指令定义访问日志条目中包含的格式和信息。
 
 severity: medium
 

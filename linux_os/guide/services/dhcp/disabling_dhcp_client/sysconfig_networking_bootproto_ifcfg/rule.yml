@@ -19,11 +19,27 @@ description: |-
     </li>
     </ul>
 
+    <p><strong>中文说明：</strong></p>
+    对于系统上的每个接口（例如 eth0），请编辑 <tt>/etc/sysconfig/network-scripts/ifcfg-<i>interface</i></tt> 并进行以下更改：
+    <ul>
+    <li> 将 BOOTPROTO 行更正为：
+    <pre>BOOTPROTO=none</pre>
+    </li>
+    <li> 根据站点的地址方案替换适当值，添加或更正以下行：
+    <pre>NETMASK=255.255.255.0
+    IPADDR=192.168.1.2
+    GATEWAY=192.168.1.1</pre>
+    </li>
+    </ul>
+
 rationale: |-
     DHCP relies on trusting the local network. If the local network is not trusted,
     then it should not be used.  However, the automatic configuration provided by
     DHCP is commonly used and the alternative, manual configuration, presents an
     unacceptable burden in many circumstances.
+
+    <p><strong>中文理由：</strong></p>
+    DHCP 依赖信任本地网络。如果本地网络不受信任，则不应使用。但是，DHCP 提供的自动配置很常用，而在许多情况下，手动配置这一替代方案会造成不可接受的负担。
 
 severity: unknown
 

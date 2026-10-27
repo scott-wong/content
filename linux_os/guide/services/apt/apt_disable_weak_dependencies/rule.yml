@@ -6,10 +6,16 @@ description: |-
     APT should be configured to avoid installing packages listed only as
     Recommends or Suggests dependencies.
 
+    <p><strong>中文说明：</strong></p>
+    应将 APT 配置为避免安装仅列为 Recommends 或 Suggests 依赖的软件包。
+
 rationale: |-
     Unless a system specifically requires the additional capabilities provided by
     weak dependencies, those packages should not be installed in order to reduce
     the potential attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    除非系统明确需要弱依赖提供的额外能力，否则不应安装这些软件包，以减少潜在攻击面。
 
 severity: medium
 

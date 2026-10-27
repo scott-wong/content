@@ -9,6 +9,9 @@ description: |-
     allow the execution of authorized software programs and to prevent unauthorized software from
     running.
 
+    <p><strong>中文说明：</strong></p>
+    必须将 Fapolicy 模块配置为采用默认拒绝、按例外允许的策略，以允许执行经授权的软件程序并阻止未经授权的软件运行。
+
 rationale: |-
     Utilizing a whitelist provides a configuration management method for allowing the execution of
     only authorized software.
@@ -20,6 +23,11 @@ rationale: |-
     Improper configuration may render the system non-functional.
     The "fapolicyd" API is not namespace aware and can cause issues when launching or running
     containers.
+
+    <p><strong>中文理由：</strong></p>
+    使用允许列表提供了一种配置管理方法，仅允许执行经授权的软件。仅使用经授权的软件可通过减少潜在漏洞数量来降低风险。允许列表中的软件会在执行前或系统启动时进行验证。
+
+    启用此守护进程时必须谨慎。配置不当可能导致系统无法正常运行。<tt>fapolicyd</tt> API 不支持命名空间，启动或运行容器时可能引发问题。
 
 severity: medium
 

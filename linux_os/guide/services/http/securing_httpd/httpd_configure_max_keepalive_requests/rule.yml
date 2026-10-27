@@ -9,6 +9,10 @@ description: |-
     in <tt>/etc/httpd/conf/httpd.conf</tt>:
     <pre>MaxKeepAliveRequests {{{ xccdf_value("var_max_keepalive_requests") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    应通过将 <tt>/etc/httpd/conf/httpd.conf</tt> 中的以下内容设置为 <tt>{{{ xccdf_value("var_max_keepalive_requests") }}}</tt> 或更大值来配置 <tt>MaxKeepAliveRequests</tt> 指令：
+    <pre>MaxKeepAliveRequests {{{ xccdf_value("var_max_keepalive_requests") }}}</pre>
+
 rationale: |-
     Resource exhaustion can occur when an unlimited number of concurrent requests
     are allowed on a web site, facilitating a denial of service attack. Mitigating
@@ -16,6 +20,9 @@ rationale: |-
     requests per IP address and may include, where feasible, limiting parameter
     values associated with keepalive, (i.e., a parameter used to limit the amount of
     time a connection may be inactive).
+
+    <p><strong>中文理由：</strong></p>
+    如果允许网站上的并发请求数量不受限制，可能发生资源耗尽，从而助长拒绝服务攻击。缓解此类攻击包括限制每个 IP 地址的并发 HTTP/HTTPS 请求数，并可在可行时限制与 keepalive 相关的参数值（即用于限制连接可保持非活动状态的时长的参数）。
 
 severity: medium
 
