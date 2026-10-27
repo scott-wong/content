@@ -9,11 +9,17 @@ description: |-
     network namespace, the appropriate Security Context Constraints (SCCs)
     should set <tt>allowHostNetwork</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    不应允许容器访问主机的网络命名空间。为防止容器访问主机的网络命名空间，相应的 Security Context Constraints（SCC）应将 <tt>allowHostNetwork</tt> 设置为 <tt>false</tt>。
+
 rationale: |-
     A container running in the host's network namespace could
     access the host network traffic to and from other pods
     potentially allowing an attacker to exploit pods and network
     traffic.
+
+    <p><strong>中文理由：</strong></p>
+    在主机网络命名空间中运行的容器可以访问主机与其他 Pod 之间的网络流量，这可能使攻击者利用 Pod 和网络流量。
 
 severity: medium
 

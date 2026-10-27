@@ -37,10 +37,33 @@ description: |-
     -a always,exit -F arch=b64 -S open -F exit=-EPERM -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-access
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    审计系统应收集所有用户和 root 的详细未授权文件访问。为了通过 <tt>open</tt> 系统调用正确识别失败的创建、失败的修改和失败的访问，收集这些事件的审计规则必须按特定顺序排列。更具体的规则必须位于更不具体的规则之前。原因是更具体的规则涵盖的事件是更不具体规则所涵盖事件的子集，因此必须放在前面，以免被匹配更多事件的更不具体规则覆盖。请确保针对 <tt>open</tt> 系统调用失败调用的规则按以下顺序排列。如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认配置），请检查 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件内以下规则的顺序。如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 实用程序读取审计规则，请检查 <tt>/etc/audit/audit.rules</tt> 文件内以下规则的顺序。
+    <pre>
+    -a always,exit -F arch=b32 -S open -F a1&amp;0100 -F exit=-EACCES -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-create
+    -a always,exit -F arch=b32 -S open -F a1&amp;0100 -F exit=-EPERM -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-create
+    -a always,exit -F arch=b32 -S open -F a1&amp;01003 -F exit=-EACCES -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-modification
+    -a always,exit -F arch=b32 -S open -F a1&amp;01003 -F exit=-EPERM -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-modification
+    -a always,exit -F arch=b32 -S open -F exit=-EACCES -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-access
+    -a always,exit -F arch=b32 -S open -F exit=-EPERM -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-access
+    </pre>
+    如果系统为 64 位，则还应添加以下行：
+    <pre>
+    -a always,exit -F arch=b64 -S open -F a1&amp;0100 -F exit=-EACCES -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-create
+    -a always,exit -F arch=b64 -S open -F a1&amp;0100 -F exit=-EPERM -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-create
+    -a always,exit -F arch=b64 -S open -F a1&amp;01003 -F exit=-EACCES -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-modification
+    -a always,exit -F arch=b64 -S open -F a1&amp;01003 -F exit=-EPERM -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-modification
+    -a always,exit -F arch=b64 -S open -F exit=-EACCES -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-access
+    -a always,exit -F arch=b64 -S open -F exit=-EPERM -F auid>={{{ auid }}} -F auid!=unset -F key=unsuccesful-access
+    </pre>
+
 rationale: |-
     The more specific rules cover a subset of events covered by the less specific rules.
     By ordering them from more specific to less specific, it is assured that the less specific
     rule will not catch events better recorded by the more specific rule.
+
+    <p><strong>中文理由：</strong></p>
+    更具体的规则涵盖的事件是更不具体规则所涵盖事件的子集。通过按从更具体到更不具体的顺序排列，可以确保更不具体的规则不会捕获由更具体规则更好记录的事件。
 
 severity: medium
 

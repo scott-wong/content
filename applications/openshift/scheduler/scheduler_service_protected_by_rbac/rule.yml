@@ -1,9 +1,16 @@
 documentation_complete: true
 title: |-
   Verify that the scheduler API service is protected by RBAC
-description: 'Do not bind the scheduler service to non-loopback insecure addresses.'
+description: |-
+    Do not bind the scheduler service to non-loopback insecure addresses.
+
+    <p><strong>中文说明：</strong></p>
+    请勿将 Scheduler 服务绑定到非回环的不安全地址。
 rationale: |-
   The Scheduler API service which runs on port 10251/TCP by default is used for health and metrics information and is available without authentication or encryption. As such it should only be bound to a localhost interface, to minimize the cluster's attack surface
+
+  <p><strong>中文理由：</strong></p>
+  默认情况下，运行在 10251/TCP 端口上的 Scheduler API 服务用于提供健康状态和指标信息，并且无需身份验证或加密即可访问。因此，应仅将其绑定到 localhost 接口，以尽量减小集群的攻击面。
 severity: medium
 ocil: |-
   In OpenShift 4, The Kubernetes Scheduler operator manages and updates the Kubernetes Scheduler deployed on top of OpenShift. By default, the operator exposes metrics via metrics service. The metrics are collected from the Kubernetes Scheduler operator. Profiling data is sent to `healthzPort`, the port of the localhost `healthz` endpoint. Changing this value may disrupt components that monitor the kubelet health. The default `healthz` `port` value is `10251`, and the `healthz` `bindAddress` is `127.0.0.1`

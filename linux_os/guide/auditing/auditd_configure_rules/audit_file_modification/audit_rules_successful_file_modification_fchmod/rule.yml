@@ -23,9 +23,26 @@ description: |-
     If the system is 64 bit then also add the following lines:
     <pre>-a always,exit -F arch=b64 -S fchmod -F success=1 -F auid&gt;={{{ auid }}} -F auid!=unset -F key=successful-perm-change</pre>
 
+    <p><strong>中文说明：</strong></p>
+    最低限度，审计系统应收集所有用户和 root 的文件权限更改。如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+
+    <pre>-a always,exit -F arch=b32 -S fchmod -F success=1 -F auid&gt;={{{ auid }}} -F auid!=unset -F key=successful-perm-change</pre>
+
+    如果系统为 64 位，则还应添加以下行：
+    <pre>-a always,exit -F arch=b64 -S fchmod -F success=1 -F auid&gt;={{{ auid }}} -F auid!=unset -F key=successful-perm-change</pre>
+
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件：
+    <pre>-a always,exit -F arch=b32 -S fchmod -F success=1 -F auid&gt;={{{ auid }}} -F auid!=unset -F key=successful-perm-change</pre>
+
+    如果系统为 64 位，则还应添加以下行：
+    <pre>-a always,exit -F arch=b64 -S fchmod -F success=1 -F auid&gt;={{{ auid }}} -F auid!=unset -F key=successful-perm-change</pre>
+
 rationale: |-
     File permission changes could be an indicator of malicious activity on a system. Auditing
     these events could serve as evidence of potential system compromise.
+
+    <p><strong>中文理由：</strong></p>
+    文件权限更改可能是系统上恶意活动的迹象。审计这些事件可作为潜在系统失陷的证据。
 
 severity: medium
 

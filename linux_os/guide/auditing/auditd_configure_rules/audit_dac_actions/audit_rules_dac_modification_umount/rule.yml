@@ -14,11 +14,20 @@ description: |-
     <tt>/etc/audit/audit.rules</tt> file:
     <pre>-a always,exit -F arch=b32 -S umount -F auid&gt;={{{ auid }}} -F auid!=unset -F key=perm_mod</pre>
 
+    <p><strong>中文说明：</strong></p>
+    审计系统至少应收集文件系统卸载更改。如果 <tt>auditd</tt> 守护进程配置为在启动期间使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+    <pre>-a always,exit -F arch=b32 -S umount -F auid&gt;={{{ auid }}} -F auid!=unset -F key=perm_mod</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在启动期间使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件：
+    <pre>-a always,exit -F arch=b32 -S umount -F auid&gt;={{{ auid }}} -F auid!=unset -F key=perm_mod</pre>
+
 rationale: |-
     The changing of file permissions could indicate that a user is attempting to
     gain access to information that would otherwise be disallowed. Auditing DAC modifications
     can facilitate the identification of patterns of abuse among both authorized and
     unauthorized users.
+
+    <p><strong>中文理由：</strong></p>
+    更改文件权限可能表明用户正试图获取原本不允许访问的信息。审计 DAC 修改有助于识别授权用户和未授权用户中的滥用模式。
 
 severity: medium
 

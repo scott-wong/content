@@ -5,12 +5,19 @@ platform: ocp4-node
 
 title: 'Verify User Who Owns the Worker Certificate Authority File'
 
-description: '{{{ describe_file_owner(file="/etc/kubernetes/kubelet-ca.crt", owner="root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/etc/kubernetes/kubelet-ca.crt", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/kubernetes/kubelet-ca.crt</tt> 的所有者为 <tt>root</tt>。
 
 rationale: |-
     The worker certificate authority file contains the certificate authority
     certificate for an OpenShift node that is configured on the system. Protection of this file is
     critical for OpenShift security.
+
+    <p><strong>中文理由：</strong></p>
+    worker 证书颁发机构文件包含为系统上配置的 OpenShift 节点签发的证书颁发机构证书。保护此文件对 OpenShift 安全至关重要。
 
 severity: medium
 

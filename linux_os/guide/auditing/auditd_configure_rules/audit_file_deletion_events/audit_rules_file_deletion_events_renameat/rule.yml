@@ -16,10 +16,19 @@ description: |-
     system, or having two lines for both b32 and b64 in case your system is 64-bit:
     <pre>-a always,exit -F arch=ARCH -S renameat -F auid&gt;={{{ auid }}} -F auid!=unset -F key=delete</pre>
 
+    <p><strong>中文说明：</strong></p>
+    最低限度，审计系统应收集所有用户和 root 的文件删除事件。如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：
+    <pre>-a always,exit -F arch=ARCH -S renameat -F auid&gt;={{{ auid }}} -F auid!=unset -F key=delete</pre>
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件，并将 ARCH 设置为 b32（32 位系统），或者在 64 位系统上同时为 b32 和 b64 各添加一行：
+    <pre>-a always,exit -F arch=ARCH -S renameat -F auid&gt;={{{ auid }}} -F auid!=unset -F key=delete</pre>
+
 rationale: |-
     Auditing file deletions will create an audit trail for files that are removed
     from the system. The audit trail could aid in system troubleshooting, as well as, detecting
     malicious processes that attempt to delete log files to conceal their presence.
+
+    <p><strong>中文理由：</strong></p>
+    审计文件删除会为从系统中移除的文件创建审计跟踪。审计跟踪有助于进行系统故障排查，并发现试图删除日志文件以掩盖其存在的恶意进程。
 
 severity: medium
 

@@ -5,12 +5,19 @@ platform: {{{ product }}}-node
 
 title: 'Verify Group Who Owns The Worker Kubeconfig File'
 
-description: '{{{ describe_file_group_owner(file="/var/lib/kubelet/kubeconfig", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/var/lib/kubelet/kubeconfig", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/var/lib/kubelet/kubeconfig</tt> 的所属组为 <tt>root</tt>。
 
 rationale: |-
     The worker kubeconfig file contains information about the administrative configuration of the
     OpenShift cluster that is configured on the system. Protection of this file is
     critical for OpenShift security.
+
+    <p><strong>中文理由：</strong></p>
+    worker kubeconfig 文件包含有关系统上配置的 OpenShift 集群管理配置的信息。保护此文件对 OpenShift 安全至关重要。
 
 severity: medium
 

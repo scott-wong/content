@@ -10,11 +10,17 @@ description: |-
     <tt>CAP_NET_RAW</tt> capability, the appropriate Security Context Constraints (SCCs)
     should set <tt>NET_RAW</tt> in <tt>requiredDropCapabilities</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    容器不应启用超出所需的能力，因为这会为恶意使用提供可乘之机。<tt>CAP_NET_RAW</tt> 使容器能够对另一个容器或集群发起网络攻击。要禁用 <tt>CAP_NET_RAW</tt> 能力，相应的 Security Context Constraints（SCC）应将 <tt>NET_RAW</tt> 加入 <tt>requiredDropCapabilities</tt>。
+
 rationale: |-
     By default, containers run with a default set of capabilities as assigned
     by the Container Runtime which can include dangerous or highly privileged
     capabilities. If the CAP_NET_RAW is enabled, it may be misused
     by malicious containers or attackers.
+
+    <p><strong>中文理由：</strong></p>
+    默认情况下，容器使用 Container Runtime 分配的默认能力集运行，其中可能包含危险或高特权能力。如果启用了 CAP_NET_RAW，恶意容器或攻击者可能滥用该能力。
 
 severity: medium
 

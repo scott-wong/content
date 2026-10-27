@@ -28,9 +28,34 @@ description: |-
     If the system is aarch64, the 64-bit syscall table does not include
     <tt>creat</tt> and <tt>open</tt> syscalls. They are replaced by <tt>openat</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    审计系统至少应为所有用户和 root 收集未授权的文件访问。如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认设置），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+
+    <pre>-a always,exit -F arch=b32 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EACCES -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access
+    -a always,exit -F arch=b32 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EPERM -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access</pre>
+
+    如果系统为 64 位，则还应添加以下行：
+    <pre>
+    -a always,exit -F arch=b64 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EACCES -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access
+    -a always,exit -F arch=b64 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EPERM -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access</pre>
+
+    如果 <tt>auditd</tt> 守护进程配置为在启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件：
+    <pre>-a always,exit -F arch=b32 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EACCES -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access
+    -a always,exit -F arch=b32 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EPERM -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access</pre>
+
+    如果系统为 64 位，则还应添加以下行：
+    <pre>
+    -a always,exit -F arch=b64 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EACCES -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access
+    -a always,exit -F arch=b64 -S creat,open,openat,open_by_handle_at,truncate,ftruncate -F exit=-EPERM -F auid&gt;={{{ auid }}} -F auid!=unset -F key=access</pre>
+
+    在 aarch64 系统上，64 位系统调用表不包含 <tt>creat</tt> 和 <tt>open</tt> 系统调用。它们由 <tt>openat</tt> 替代。
+
 rationale: |-
     Unsuccessful attempts to access files could be an indicator of malicious activity on a system. Auditing
     these events could serve as evidence of potential system compromise.
+
+    <p><strong>中文理由：</strong></p>
+    失败的文件访问尝试可能是系统上恶意活动的迹象。审计这些事件可作为系统可能遭到入侵的证据。
 
 severity: medium
 

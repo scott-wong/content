@@ -6,6 +6,21 @@ title: 'Record Any Attempts to Run chacl'
 description: |-
     {{{ describe_arpc("/usr/bin/chacl")}}}
 
+    <p><strong>中文说明：</strong></p>
+    最低限度，审计系统应收集所有用户和 root 执行特权命令的记录。
+
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将形式如下的规则添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
+    <tt>-a always,exit -F path=/usr/bin/chacl -F auid&gt;={{{ auid }}} -F auid!=unset -F key=privileged</tt>
+
+    {{% if product in ["almalinux9", "debian12", "fedora", "ol7", "ol8", "ol9", "ol10", "rhel8", "rhel9", "rhel10", "sle12", "sle15", "slmicro5", "slmicro6", "ubuntu2204", "ubuntu2404"] %}}
+    该规则还应包含 <tt>-F perm=x</tt>。
+    {{% endif %}}
+    {{% if product in ["fedora", "rhel10"] %}}
+    该规则使用 <tt>-F arch=ARCH</tt>，请将 <tt>ARCH</tt> 设置为 <tt>b32</tt>（32 位系统），或在 64 位系统上分别添加 <tt>b32</tt> 和 <tt>b64</tt> 两行。
+    {{% endif %}}
+
+    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将该规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。
+
 rationale: |-
     Without generating audit records that are specific to the security and
     mission needs of the organization, it would be difficult to establish,
@@ -13,6 +28,9 @@ rationale: |-
     those responsible for one.
     Audit records can be generated from various components within the
     information system (e.g., module or policy filter).
+
+    <p><strong>中文理由：</strong></p>
+    如果不生成针对组织安全和任务需求的审计记录，就难以建立、关联和调查与事件有关的事件，或识别责任人。审计记录可由信息系统内的各种组件（例如模块或策略过滤器）生成。
 
 severity: medium
 

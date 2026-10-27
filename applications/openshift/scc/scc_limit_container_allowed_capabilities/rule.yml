@@ -38,12 +38,40 @@ description: |-
       {{{ weblink(link="https://docs.openshift.com/container-platform/latest/security/compliance_operator/co-scans/compliance-operator-tailor.html") }}}
     </p>
 
+    <p><strong>中文说明：</strong></p>
+    <p>
+    容器不应启用超出所需的能力，因为这会为恶意使用提供可乘之机。要仅启用所需能力，相应的 Security Context Constraints（SCC）应在 <tt>allowedCapabilities</tt> 中以列表形式设置能力。
+    </p>
+    <p>
+    如果标记出的 SCC 不在变量 <tt>var-sccs-with-allowed-capabilities-regex</tt> 的默认允许列表中，请创建 <tt>TailoredProfile</tt>，并将该额外 SCC 添加到变量 <tt>var-sccs-with-allowed-capabilities-regex</tt> 的正则表达式中。以下示例允许名为 <tt>additional</tt> 的 SCC：
+    </p>
+    <pre>
+    apiVersion: compliance.openshift.io/v1alpha1
+    kind: TailoredProfile
+    metadata:
+      name: cis-additional-scc
+    spec:
+      description: Allows an additional scc
+      setValues:
+      - name: ocp4-var-sccs-with-allowed-capabilities-regex
+        rationale: Allow our own custom SCC
+        value: ^privileged$|^hostnetwork-v2$|^restricted-v2$|^nonroot-v2$|^additional$
+      extends: ocp4-cis
+      title: Modified CIS allowing one more SCC
+    </pre>
+    <p>
+    最后，在 <tt>ScanSettingBinding</tt> 中引用此 <tt>TailoredProfile</tt>。有关为 Compliance Operator 定制配置的更多信息，请参阅 OpenShift 文档：<a href="https://docs.openshift.com/container-platform/latest/security/compliance_operator/co-scans/compliance-operator-tailor.html">相关文档</a>
+    </p>
+
 rationale: |-
     By default, containers run with a default set of capabilities as assigned
     by the Container Runtime which can include dangerous or highly privileged
     capabilities. Capabilities should be dropped unless absolutely critical for
     the container to run software as added capabilities that are not required
     allow for malicious containers or attackers.
+
+    <p><strong>中文理由：</strong></p>
+    默认情况下，容器使用 Container Runtime 分配的默认能力集运行，其中可能包含危险或高特权能力。除非对容器运行软件绝对关键，否则应移除能力；不需要的额外能力会为恶意容器或攻击者提供可乘之机。
 
 {{% set jqfilter = '[.items[] | select(.metadata.name | test("{{.var_sccs_with_allowed_capabilities_regex}}"; "") | not) | select(.allowedCapabilities != null) | .metadata.name]' %}}
 

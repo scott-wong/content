@@ -9,11 +9,17 @@ description: |-
     the appropriate Security Context Constraints (SCCs) should set
     <tt>allowHostDirVolumePlugin</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    除非必要，否则不应允许容器使用 <tt>hostPath</tt> 卷类型。为防止容器使用主机文件系统，相应的 Security Context Constraints（SCC）应将 <tt>allowHostDirVolumePlugin</tt> 设置为 <tt>false</tt>。
+
 rationale: |-
     <tt>hostPath</tt> volumes allow workloads to access the host filesystem
     from the workload. Access to the host filesystem can be used to
     escalate privileges and access resources such as keys or access
     tokens.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>hostPath</tt> 卷允许工作负载从工作负载内部访问主机文件系统。对主机文件系统的访问可用于提升权限，以及访问密钥或访问令牌等资源。
 
 severity: medium
 
