@@ -35,26 +35,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>grub2 引导加载程序应启用超级用户账户和密码保护，以保护启动时设置。<br /><br />
-    由于明文密码存在安全风险，请运行以下命令为密码生成哈希：
-    {{% if "sle" in product or "slmicro" in product or product in ["ubuntu2204", "ubuntu2404"] %}}</p>
-    <pre># grub2-mkpasswd-pbkdf2</pre>
-    {{% else %}}
-    <pre># grub2-setpassword</pre>
-    {{% endif %}}
-    出现提示时，输入所选密码。<br /><br />
-    {{% if "sle" in product or "slmicro" in product or product in ["ubuntu2204", "ubuntu2404"] %}}
-    使用输出中的哈希，按以下内容修改 <tt>/etc/grub.d/40_custom</tt> 文件：
-    <pre>set superusers="boot"
-    password_pbkdf2 boot grub.pbkdf2.sha512.VeryLongString
-    </pre>
-    注意：引导加载程序超级用户账户和密码必须不同于 root 账户和密码。添加超级用户密码后，请运行以下命令更新 <tt>grub.cfg</tt> 文件：
-    {{%- if "rhel" in product or "sle" in product or "slmicro" in product %}}
-    <pre>grub2-mkconfig -o /boot/grub2/grub.cfg</pre>
-    {{%- else %}}
-    <pre>{{{ grub_command("update") }}}</pre>
-    {{%- endif %}}
-    {{% endif %}}
+    <p>grub2 引导加载程序应启用超级用户账户和密码保护，以保护启动时设置。<br /><br />由于明文密码存在安全风险，请先生成密码哈希：SLE、SL Micro 或 Ubuntu 产品运行 <tt>grub2-mkpasswd-pbkdf2</tt>；其他产品运行 <tt>grub2-setpassword</tt>。</p>
+    <p>出现提示时，输入所选的密码。对于 SLE、SL Micro 或 Ubuntu 产品，请使用输出中的哈希修改 <tt>/etc/grub.d/40_custom</tt>，设置超级用户 <tt>boot</tt> 和 <tt>password_pbkdf2</tt> 条目。</p>
+    <p>引导加载程序超级用户账户和密码必须不同于 root 账户和密码。添加超级用户密码后，请运行适用于该产品的 grub 配置更新命令：RHEL 使用 <tt>grub2-mkconfig -o /boot/grub2/grub.cfg</tt>；其他产品使用其对应的更新命令。</p>
 
 rationale: |-
     Password protection on the boot loader configuration ensures

@@ -183,3 +183,16 @@ def test_chinese_pre_blocks_may_be_omitted():
         zh.extract_field_value(translated, "description"), "description"
     )
     assert zh.PRE_RE.findall(chinese) == []
+
+
+def test_conditional_html_balance_checker():
+    unbalanced = (
+        "<p>text{{% if product == 'rhel' %}}</p><pre>x</pre>"
+        "{{% else %}}<pre>y</pre>{{% endif %}}"
+    )
+    assert zh._html_balance_errors(unbalanced)
+    balanced = (
+        "<p>text</p>{{% if product == 'rhel' %}}<pre>x</pre>"
+        "{{% else %}}<pre>y</pre>{{% endif %}}"
+    )
+    assert zh._html_balance_errors(balanced) == []

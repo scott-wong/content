@@ -18,6 +18,7 @@ import shutil
 import subprocess
 import sys
 from collections import OrderedDict
+from html.parser import HTMLParser
 
 import yaml
 
@@ -43,6 +44,15 @@ JINJA_CONTROL_RE = re.compile(
     r"\{\{%-?\s*(if|for|macro|filter|block|call|raw|with|elif|else|"
     r"endif|endfor|endmacro|endfilter|endblock|endcall|endraw|endwith)\b"
 )
+JINJA_TAG_RE = re.compile(
+    r"\{\{%-?\s*(if|elif|else|endif|for|endfor|macro|endmacro|filter|endfilter|"
+    r"set|block|endblock|with|endwith)\b.*?-?%\}\}",
+    re.DOTALL,
+)
+HTML_VOID_TAGS = {
+    "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+    "param", "source", "track", "wbr",
+}
 JINJA_END_TAGS = {
     "if": "endif",
     "for": "endfor",
@@ -284,6 +294,119 @@ def _jinja_balance_errors(value):
     return errors
 
 
+class _HTMLBalanceChecker(HTMLParser):
+    def __init__(self):
+        HTMLParser.__init__(self, convert_charrefs=True)
+        self.stack = []
+        self.errors = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag not in HTML_VOID_TAGS:
+            self.stack.append(tag)
+
+    def handle_endtag(self, tag):
+        if tag in HTML_VOID_TAGS:
+            return
+        if not self.stack:
+            self.errors.append("unexpected </{}>".format(tag))
+            return
+        if self.stack[-1] != tag:
+            self.errors.append("expected </{}>, got </{}>".format(self.stack[-1], tag))
+        else:
+            self.stack.pop()
+
+
+def _matching_jinja_tag(text, start, opener, closer):
+    depth = 0
+    for match in JINJA_TAG_RE.finditer(text, start):
+        if match.group(1) == opener:
+            depth += 1
+        elif match.group(1) == closer:
+            depth -= 1
+            if depth == 0:
+                return match
+    return None
+
+
+def _split_jinja_branches(inner):
+    branches = []
+    last = 0
+    if_depth = 0
+    for_depth = 0
+    has_else = False
+    for match in JINJA_TAG_RE.finditer(inner):
+        token = match.group(1)
+        if token == "if":
+            if_depth += 1
+        elif token == "endif":
+            if_depth -= 1
+        elif token == "for":
+            for_depth += 1
+        elif token == "endfor":
+            for_depth -= 1
+        elif token in ("elif", "else") and if_depth == 0 and for_depth == 0:
+            branches.append(inner[last:match.start()])
+            last = match.end()
+            if token == "else":
+                has_else = True
+    branches.append(inner[last:])
+    if not has_else:
+        branches.append("")
+    return branches
+
+
+def _html_variants(fragment, budget=64):
+    if budget <= 0:
+        return [fragment]
+    match = JINJA_TAG_RE.search(fragment)
+    if not match:
+        return [fragment]
+    prefix = fragment[:match.start()]
+    token = match.group(1)
+    rest = fragment[match.end():]
+    if token == "if":
+        end = _matching_jinja_tag(fragment, match.start(), "if", "endif")
+        if end is None:
+            return [fragment]
+        inner = fragment[match.end():end.start()]
+        suffix = fragment[end.end():]
+        result = []
+        suffix_variants = _html_variants(suffix, budget)
+        for branch in _split_jinja_branches(inner):
+            for branch_variant in _html_variants(branch, budget):
+                for suffix_variant in suffix_variants:
+                    result.append(prefix + branch_variant + suffix_variant)
+                    if len(result) >= budget:
+                        return result
+        return result
+    if token == "for":
+        end = _matching_jinja_tag(fragment, match.start(), "for", "endfor")
+        if end is None:
+            return [fragment]
+        body = fragment[match.end():end.start()]
+        suffix = fragment[end.end():]
+        return _html_variants(prefix + body + suffix, budget)
+    if token in (
+        "elif", "else", "endif", "endfor", "endmacro", "endfilter", "endblock", "endwith",
+    ):
+        return _html_variants(prefix + rest, budget)
+    return _html_variants(prefix + rest, budget)
+
+
+def _html_balance_errors(value):
+    errors = []
+    for variant in _html_variants(value):
+        variant = JINJA_RE.sub("X", variant)
+        checker = _HTMLBalanceChecker()
+        checker.feed(variant)
+        checker.close()
+        if checker.errors or checker.stack:
+            errors.extend(checker.errors)
+            if checker.stack:
+                errors.append("unclosed HTML: {}".format(", ".join(checker.stack)))
+    return sorted(set(errors))
+
+
 def _ensure_block_markup(value):
     value = value.strip()
     if not value or BLOCK_START_RE.match(value):
@@ -473,6 +596,11 @@ def validate_rules(paths=None, strict=False, base_ref=None, root=REPO_ROOT,
             if jinja_errors:
                 errors.append("{} {}: unbalanced Jinja controls: {}".format(
                     relative_path, key, "; ".join(jinja_errors)))
+            if not jinja_errors and not _html_balance_errors(english):
+                html_errors = _html_balance_errors(chinese)
+                if html_errors:
+                    errors.append("{} {}: unbalanced rendered XHTML: {}".format(
+                        relative_path, key, "; ".join(html_errors)))
             english_pre = PRE_RE.findall(english)
             chinese_pre = PRE_RE.findall(chinese)
             english_pre = [_normalize_pre_trailing_whitespace(item) for item in english_pre]

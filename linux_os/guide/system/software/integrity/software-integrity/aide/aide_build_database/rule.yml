@@ -30,28 +30,11 @@ description: |-
     If this check produces any unexpected output, investigate.
 
     <p><strong>中文说明：</strong></p>
-    <p>运行以下命令生成新数据库：
-    {{% if 'ubuntu' in product or 'debian' in product %}}</p>
-    <pre>$ sudo aideinit</pre>
-    {{% else %}}
-    <pre>$ sudo {{{ aide_bin_path }}} --init</pre>
-    {{% endif %}}
-    默认情况下，数据库将写入文件
-    {{% if 'ubuntu' in product or 'sle' in product or 'slmicro' in product or 'debian' in product %}}
-    <tt>/var/lib/aide/aide.db.new</tt>。
-    {{% else %}}
-    <tt>/var/lib/aide/aide.db.new.gz</tt>。
-    {{% endif %}}
-    将数据库、配置文件 <tt>/etc/aide.conf</tt> 和二进制程序 <tt>{{{ aide_bin_path }}}</tt>（或其哈希）存储在安全位置（例如只读介质）可为其完整性提供额外保障。
-    可按以下方式安装新生成的数据库：
-    {{% if 'ubuntu' in product or 'sle' in product or 'slmicro' in product or 'debian' in product %}}
-    <pre>$ sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db</pre>
-    {{% else %}}
-    <pre>$ sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz</pre>
-    {{% endif %}}
-    要发起手动检查，请运行以下命令：
-    <pre>$ sudo {{{ aide_bin_path }}} --check</pre>
-    如果此检查产生任何意外输出，请进行调查。
+    <p>运行以下命令生成新数据库：Ubuntu 或 Debian 使用 <tt>sudo aideinit</tt>；其他产品使用 <tt>sudo {{{ aide_bin_path }}} --init</tt>。</p>
+    <p>默认情况下，数据库写入 <tt>/var/lib/aide/aide.db.new</tt>（Ubuntu、SLE、SL Micro 或 Debian）或 <tt>/var/lib/aide/aide.db.new.gz</tt>（其他产品）。</p>
+    <p>将数据库、配置文件 <tt>/etc/aide.conf</tt> 和二进制程序 <tt>{{{ aide_bin_path }}}</tt>（或其哈希）存储在安全位置（例如只读介质）可为其完整性提供额外保障。</p>
+    <p>可按以下方式安装新生成的数据库：Ubuntu、SLE、SL Micro 或 Debian 使用 <tt>sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db</tt>；其他产品使用 <tt>sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz</tt>。</p>
+    <p>要发起手动检查，请运行 <tt>sudo {{{ aide_bin_path }}} --check</tt>。如果此检查产生任何意外输出，请进行调查。</p>
 
 rationale: |-
     For AIDE to be effective, an initial database of "known-good" information about files
