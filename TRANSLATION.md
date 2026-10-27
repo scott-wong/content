@@ -3,6 +3,8 @@
 本仓库是 [ComplianceAsCode/content](https://github.com/ComplianceAsCode/content)
 的社区简体中文本地化 fork。它不是上游官方译本。
 
+当前 Release 版本：`v0.1.82`，与上游最新 Release 对齐。
+
 当前状态：2,566 个生产规则、5,132 个 Description/Rationale 字段已完成简体中文
 覆盖，并通过英文基线、代码块、非目标字段和 XHTML 完整性校验。
 

@@ -32,6 +32,9 @@ jobs:
       - name: Build All Products
         run: ninja -j$(nproc) all
         working-directory: ./build
+      - name: Build Release Archives
+        run: ninja -j$(nproc) zipfile
+        working-directory: ./build
       - name: Run Unit Tests
         run: ctest -j$(nproc) --output-on-failure -E linkchecker
         working-directory: ./build
@@ -74,4 +77,8 @@ jobs:
           retention-days: 30
           path: |
             build/ssg-ubuntu2404-ds.xml
+            build/zipfile/scap-security-guide-*.zip
+            build/zipfile/scap-security-guide-*.zip.sha512
+            build/zipfile/scap-security-guide-*.tar.gz
+            build/zipfile/scap-security-guide-*.tar.gz.sha512
             zh-cn-validation.json
