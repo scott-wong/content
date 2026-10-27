@@ -21,7 +21,7 @@ description: |-
     <p><strong>中文说明：</strong></p>
     <p>为确保 <tt>etcd</tt> 服务不使用自签名证书，请运行以下命令：</p>
     <pre>$ oc get cm/etcd-pod -n openshift-etcd -o yaml</pre>
-    configmap 中包含的 etcd pod 配置不应包含 <tt>--auto-tls=true</tt> 标志。
+    <p><tt>ConfigMap</tt> 中包含的 etcd Pod 配置不应包含 <tt>--auto-tls=true</tt> 标志。</p>
 
 rationale: |-
     Without cryptographic integrity protections, information can be

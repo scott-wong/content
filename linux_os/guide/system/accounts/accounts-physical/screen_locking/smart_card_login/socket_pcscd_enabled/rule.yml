@@ -23,7 +23,8 @@ rationale: |-
     smart cards and cryptographic tokens that are connected to the system.
 
     <p><strong>中文理由：</strong></p>
-    <p>使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。<br /><br />需要与获得访问权限的信息系统分离的设备的多因素解决方案包括：提供基于时间或质询响应身份验证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。</p>
+    <p>使用与信息系统分离的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。</p>
+    <p>pcsc-lite 和 MuscleCard 框架的守护进程程序是 pcscd。它是一个资源管理器，负责协调与连接到系统的智能卡读卡器、智能卡和加密令牌之间的通信。</p>
 
 severity: medium
 

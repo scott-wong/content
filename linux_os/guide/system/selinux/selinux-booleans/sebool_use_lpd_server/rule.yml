@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="use_lpd_server") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>use_lpd_server</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>use_lpd_server</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P use_lpd_server off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>use_lpd_server</tt> 处于禁用状态。如果启用了此设置，则应将其禁用。要禁用 <tt>use_lpd_server</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P use_lpd_server off</tt>。</p>
 
 rationale: |-
 

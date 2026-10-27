@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_enable(sebool="user_exec_content") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>user_exec_content</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>user_exec_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P user_exec_content on</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>user_exec_content</tt> 处于启用状态。如果禁用了此设置，则应将其启用。要启用 <tt>user_exec_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P user_exec_content on</tt>。</p>
 
 rationale: |-
 

@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="varnishd_connect_any") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>varnishd_connect_any</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>varnishd_connect_any</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P varnishd_connect_any off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>varnishd_connect_any</tt> 处于禁用状态。如果启用了此设置，则应将其禁用。要禁用 <tt>varnishd_connect_any</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P varnishd_connect_any off</tt>。</p>
 
 rationale: |-
 

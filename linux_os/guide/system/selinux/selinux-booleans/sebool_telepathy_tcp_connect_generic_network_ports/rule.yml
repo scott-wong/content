@@ -10,7 +10,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="telepathy_tcp_connect_generic_network_ports") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>telepathy_tcp_connect_generic_network_ports</tt> 为 enabled。应禁用此设置，因为 <tt>telepathy</tt> 不应连接到任何通用网络端口。要禁用 <tt>telepathy_tcp_connect_generic_network_ports</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P telepathy_tcp_connect_generic_network_ports off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>telepathy_tcp_connect_generic_network_ports</tt> 处于启用状态。应禁用此设置，因为 <tt>telepathy</tt> 不应连接到任何通用网络端口。要禁用 <tt>telepathy_tcp_connect_generic_network_ports</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P telepathy_tcp_connect_generic_network_ports off</tt>。</p>
 
 rationale: |-
 

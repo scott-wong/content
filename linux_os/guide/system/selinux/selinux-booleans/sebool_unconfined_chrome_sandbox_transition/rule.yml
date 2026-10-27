@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_enable(sebool="unconfined_chrome_sandbox_transition") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>unconfined_chrome_sandbox_transition</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>unconfined_chrome_sandbox_transition</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P unconfined_chrome_sandbox_transition on</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>unconfined_chrome_sandbox_transition</tt> 处于启用状态。如果禁用了此设置，则应将其启用。要启用 <tt>unconfined_chrome_sandbox_transition</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P unconfined_chrome_sandbox_transition on</tt>。</p>
 
 rationale: |-
 

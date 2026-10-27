@@ -8,6 +8,7 @@ description: |-
 
     <p><strong>中文说明：</strong></p>
     <p>审计系统至少应收集所有用户和 root 对特权命令 <tt>/usr/bin/chfn</tt> 的执行情况。如果 <tt>auditd</tt> 使用 <tt>augenrules</tt>（默认），请将记录该命令路径并使用 <tt>key=privileged</tt> 的规则添加到 <tt>/etc/audit/rules.d</tt> 下后缀为 <tt>.rules</tt> 的文件；如果使用 <tt>auditctl</tt>，请将规则添加到 <tt>/etc/audit/audit.rules</tt>。</p>
+    <p>该规则必须以 <tt>-F path=&lt;命令路径&gt;</tt> 匹配目标命令，并在适用产品上包含 <tt>-F perm=x</tt>；还必须包含当前产品配置的 <tt>-F auid&gt;=...</tt>、<tt>-F auid!=unset</tt> 和 <tt>-F key=privileged</tt>。在 Fedora 或 RHEL 10 上，应按 32 位系统设置 <tt>ARCH=b32</tt>，或在 64 位系统上分别定义 b32 和 b64 两条规则。</p>
 
 rationale: |-
     Without generating audit records that are specific to the security and

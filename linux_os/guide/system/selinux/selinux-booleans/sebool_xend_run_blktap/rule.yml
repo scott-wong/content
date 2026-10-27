@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_enable(sebool="xend_run_blktap") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>xend_run_blktap</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>xend_run_blktap</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xend_run_blktap on</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>xend_run_blktap</tt> 处于启用状态。如果禁用了此设置，则应将其启用。要启用 <tt>xend_run_blktap</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xend_run_blktap on</tt>。</p>
 
 rationale: |-
 

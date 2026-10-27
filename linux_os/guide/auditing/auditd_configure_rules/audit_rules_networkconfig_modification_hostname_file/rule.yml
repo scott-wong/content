@@ -16,6 +16,7 @@ description: |-
     <tt>-w /etc/hostname -p wa -k system-locale</tt>
 
     如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将同样的规则添加到 <tt>/etc/audit/audit.rules</tt> 文件。</p>
+    <p>该审计规则必须记录对目标路径的写入和属性变更事件；传统规则语法使用 <tt>-p wa</tt>，现代规则语法使用 <tt>-F perm=wa</tt>，并使用对应的审计键。</p>
 
 rationale: |-
     The network environment should not be modified by anything other

@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="fcron_crond") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>fcron_crond</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>fcron_crond</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P fcron_crond off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>fcron_crond</tt> 处于禁用状态。如果启用了此设置，则应将其禁用。要禁用 <tt>fcron_crond</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P fcron_crond off</tt>。</p>
 
 rationale: |-
 

@@ -9,7 +9,7 @@ description: |-
     <br/>{{{ describe_sebool_var(sebool="deny_execmem") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>deny_execmem</tt> 为 disabled。此设置应配置为 {{{ xccdf_value("var_deny_execmem") }}}。
+    <p>默认情况下，SELinux 布尔值 <tt>deny_execmem</tt> 处于禁用状态。此设置应配置为 {{{ xccdf_value("var_deny_execmem") }}}。
     <br/>要设置 <tt>deny_execmem</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P deny_execmem {{{ xccdf_value("var_deny_execmem") }}}</tt>。</p>
 
 rationale: |-

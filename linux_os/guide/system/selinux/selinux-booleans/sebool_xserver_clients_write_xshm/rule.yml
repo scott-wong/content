@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="xserver_clients_write_xshm") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>xserver_clients_write_xshm</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>xserver_clients_write_xshm</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xserver_clients_write_xshm off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>xserver_clients_write_xshm</tt> 处于禁用状态。如果启用了此设置，则应将其禁用。要禁用 <tt>xserver_clients_write_xshm</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xserver_clients_write_xshm off</tt>。</p>
 
 rationale: |-
 

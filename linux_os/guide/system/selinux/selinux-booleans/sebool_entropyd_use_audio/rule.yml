@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="entropyd_use_audio") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>entropyd_use_audio</tt> 为 enabled。应禁用此设置，因为它使用音频输入生成熵。要禁用 <tt>entropyd_use_audio</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P entropyd_use_audio off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>entropyd_use_audio</tt> 处于启用状态。应禁用此设置，因为它使用音频输入生成熵。要禁用 <tt>entropyd_use_audio</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P entropyd_use_audio off</tt>。</p>
 
 rationale: |-
 

@@ -6,7 +6,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.apparmor_restrict_unprivileged_unconfined", value="1") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>应将内核参数 <tt>kernel.apparmor_restrict_unprivileged_unconfined</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.apparmor_restrict_unprivileged_unconfined=1</tt>；要持久化，请将 <tt>kernel.apparmor_restrict_unprivileged_unconfined = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
+    <p>应将内核参数 <tt>kernel.apparmor_restrict_unprivileged_unconfined</tt> 设置为 <tt>1</tt>。要在运行时应用，请运行 <tt>sudo sysctl -w kernel.apparmor_restrict_unprivileged_unconfined=1</tt>；要持久化，请将 <tt>kernel.apparmor_restrict_unprivileged_unconfined = 1</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     Restricting unprivileged unconfined processes with AppArmor reduces the

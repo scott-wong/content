@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="fenced_can_ssh") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>fenced_can_ssh</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>fenced_can_ssh</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P fenced_can_ssh off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>fenced_can_ssh</tt> 处于禁用状态。如果启用了此设置，则应将其禁用。要禁用 <tt>fenced_can_ssh</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P fenced_can_ssh off</tt>。</p>
 
 rationale: |-
 

@@ -7,7 +7,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.core_uses_pid", value=0) }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>应将内核参数 <tt>kernel.core_uses_pid</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.core_uses_pid=0</tt>；要持久化，请将 <tt>kernel.core_uses_pid = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
+    <p>应将内核参数 <tt>kernel.core_uses_pid</tt> 设置为 <tt>0</tt>。要在运行时应用，请运行 <tt>sudo sysctl -w kernel.core_uses_pid=0</tt>；要持久化，请将 <tt>kernel.core_uses_pid = 0</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     The default coredump filename is <tt>core</tt>. By setting

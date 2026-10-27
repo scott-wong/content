@@ -10,7 +10,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="abrt_upload_watch_anon_write") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>abrt_upload_watch_anon_write</tt> 为 enabled。应禁用此设置，因为它允许 Automatic Bug Report Tool（ABRT）修改用于公共文件传输服务的公共文件。要禁用 <tt>abrt_upload_watch_anon_write</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P abrt_upload_watch_anon_write off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>abrt_upload_watch_anon_write</tt> 处于启用状态。应禁用此设置，因为它允许 Automatic Bug Report Tool（ABRT）修改用于公共文件传输服务的公共文件。要禁用 <tt>abrt_upload_watch_anon_write</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P abrt_upload_watch_anon_write off</tt>。</p>
 
 rationale: |-
 

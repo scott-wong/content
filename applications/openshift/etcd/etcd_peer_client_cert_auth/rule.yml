@@ -20,9 +20,9 @@ description: |-
     the parameter should be set to <tt>true</tt>.
 
     <p><strong>中文说明：</strong></p>
-    <p>为确保 <tt>etcd</tt> 服务向客户端提供 TLS，请确保 <tt>openshift-etcd</tt> 命名空间中的 <tt>etcd-pod*</tt> <tt>ConfigMaps</tt> 为 <tt>etcd</tt> pod 中的 <tt>etcd</tt> 二进制包含以下参数：</p>
+    <p>为确保 <tt>etcd</tt> 服务向客户端提供 TLS，请检查 <tt>openshift-etcd</tt> 命名空间中的 <tt>etcd-pod*</tt> <tt>ConfigMap</tt>，确保 <tt>etcd</tt> Pod 内的 <tt>etcd</tt> 二进制启动参数包含以下参数：</p>
     <pre>oc get -nopenshift-etcd cm etcd-pod -oyaml | grep "\-\-peer-client-cert-auth="</pre>
-    该参数应设置为 <tt>true</tt>。
+    <p>该参数应设置为 <tt>true</tt>。</p>
 
 rationale: |-
     Without cryptographic integrity protections, information can be

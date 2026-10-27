@@ -9,7 +9,7 @@ description: |-
     {{{ describe_sebool_disable(sebool="virt_sandbox_use_all_caps") }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，SELinux 布尔值 <tt>virt_sandbox_use_all_caps</tt> 为 enabled。应禁用此设置，因为容器不应以特权运行。要禁用 <tt>virt_sandbox_use_all_caps</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_sandbox_use_all_caps off</tt>。</p>
+    <p>默认情况下，SELinux 布尔值 <tt>virt_sandbox_use_all_caps</tt> 处于启用状态。应禁用此设置，因为容器不应以特权运行。要禁用 <tt>virt_sandbox_use_all_caps</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_sandbox_use_all_caps off</tt>。</p>
 
 rationale: |-
 

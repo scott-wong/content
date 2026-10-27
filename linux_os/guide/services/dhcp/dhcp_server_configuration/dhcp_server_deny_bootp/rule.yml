@@ -9,7 +9,7 @@ description: |-
     <pre>deny bootp;</pre>
 
     <p><strong>中文说明：</strong></p>
-    <p>除非网络需要支持较旧的 BOOTP 客户端，否则通过添加或更正以下全局选项来禁用对 bootp 协议的支持：</p>
+    <p>除非网络需要支持较旧的 BOOTP 客户端，否则通过添加或更正以下全局选项来禁用对 BOOTP 协议的支持：</p>
     <pre>deny bootp;</pre>
 
 rationale: |-
@@ -18,7 +18,7 @@ rationale: |-
     vectors against the DHCP server.
 
     <p><strong>中文理由：</strong></p>
-    <p>bootp 选项告知 dhcpd 响应 BOOTP 查询。如果不需要支持这种较简单的协议，则应将其禁用，以消除针对 DHCP 服务器的攻击途径。</p>
+    <p><tt>bootp</tt> 选项告知 <tt>dhcpd</tt> 响应 BOOTP 查询。如果不需要支持这种较简单的协议，则应将其禁用，以消除针对 DHCP 服务器的攻击途径。</p>
 
 severity: unknown
 

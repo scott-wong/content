@@ -6,7 +6,7 @@ description: |-
     {{{ describe_sysctl_option_value(sysctl="kernel.kptr_restrict", value=xccdf_value("sysctl_kernel_kptr_restrict_value")) }}}
 
     <p><strong>中文说明：</strong></p>
-    <p>应将内核参数 <tt>kernel.kptr_restrict</tt> 设置为 <tt>{{{ xccdf_value("sysctl_kernel_kptr_restrict_value") }}}</tt>。要在运行时应用，请运行 <tt>sysctl -w kernel.kptr_restrict={{{ xccdf_value("sysctl_kernel_kptr_restrict_value") }}}</tt>；要持久化，请将 <tt>kernel.kptr_restrict = {{{ xccdf_value("sysctl_kernel_kptr_restrict_value") }}}</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
+    <p>应将内核参数 <tt>kernel.kptr_restrict</tt> 设置为 <tt>{{{ xccdf_value("sysctl_kernel_kptr_restrict_value") }}}</tt>。要在运行时应用，请运行 <tt>sudo sysctl -w kernel.kptr_restrict={{{ xccdf_value("sysctl_kernel_kptr_restrict_value") }}}</tt>；要持久化，请将 <tt>kernel.kptr_restrict = {{{ xccdf_value("sysctl_kernel_kptr_restrict_value") }}}</tt> 添加到 <tt>/etc/sysctl.d</tt> 中的文件。</p>
 
 rationale: |-
     Exposing kernel pointers (through procfs or <tt>seq_printf()</tt>) exposes kernel
