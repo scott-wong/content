@@ -225,9 +225,17 @@ def _rebuild_quoted_field(key, english, translation, suffix):
     return "\n".join(parts) + suffix
 
 
+def _normalize_pre_trailing_whitespace(value):
+    def clean_block(match):
+        return re.sub(r"(?m)[ \t]+(?=\n|</pre>|\Z)", "", match.group(0))
+
+    return PRE_RE.sub(clean_block, value)
+
+
 def inject_translation(text, key, translation):
     if not translation or not CJK_RE.search(translation):
         raise TranslationError("translation for {!r} is empty or has no Chinese text".format(key))
+    translation = _normalize_pre_trailing_whitespace(translation)
     if MARKERS[key] in translation:
         raise TranslationError("translation for {!r} contains the localization marker".format(key))
     start, end = _field_range(text, key)
@@ -383,6 +391,8 @@ def validate_rules(paths=None, strict=False, base_ref=None, root=REPO_ROOT,
                     relative_path, key))
             english_pre = PRE_RE.findall(english)
             chinese_pre = PRE_RE.findall(chinese)
+            english_pre = [_normalize_pre_trailing_whitespace(item) for item in english_pre]
+            chinese_pre = [_normalize_pre_trailing_whitespace(item) for item in chinese_pre]
             if english_pre != chinese_pre:
                 errors.append("{} {}: <pre> blocks differ between English and Chinese".format(
                     relative_path, key))

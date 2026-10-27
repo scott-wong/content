@@ -114,3 +114,16 @@ def test_validate_rule_against_baseline(tmp_path):
         root=str(tmp_path),
         baseline_path=str(baseline),
     ) == 0
+
+
+def test_pre_trailing_whitespace_is_normalized_in_chinese_block():
+    translated = zh.inject_translation(
+        RULE_YAML,
+        "description",
+        "<p>安装 example 软件包。</p>\n<pre>dnf install example </pre>",
+    )
+
+    _, chinese = zh._split_english(
+        zh.extract_field_value(translated, "description"), "description"
+    )
+    assert chinese == "<p>安装 example 软件包。</p>\n<pre>dnf install example</pre>"
