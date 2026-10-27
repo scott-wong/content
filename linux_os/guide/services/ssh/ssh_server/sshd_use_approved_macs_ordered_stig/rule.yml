@@ -24,14 +24,7 @@ description: |-
     {{%- endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>将 MAC 限制为 FIPS 批准的哈希算法。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示 FIPS 批准的 MAC：
-    {{%- if 'ubuntu' in product %}}</p>
-    <pre>MACs {{{ sshd_approved_macs }}}</pre>
-    如果该行未按准确顺序包含这些 MAC、已被注释掉或缺失，则构成发现项。
-    {{%- else %}}
-    <pre>MACs hmac-sha2-512,hmac-sha2-256</pre>
-    此规则确保配置上述 MAC（或其子集），并保持给定算法顺序。
-    {{%- endif %}}
+    <p>将 SSH 服务端消息认证码（MAC）限制为 FIPS 批准的哈希算法，并在 <tt>/etc/ssh/sshd_config</tt> 中配置 <tt>MACs</tt> 指令。在 Ubuntu 产品中，该指令应使用 <tt>sshd_approved_macs</tt> 所定义的 MAC 并保持精确顺序；该行被注释掉、缺失或顺序不一致都构成不符合项。在其他产品中，应配置 <tt>MACs hmac-sha2-512,hmac-sha2-256</tt>，或配置其子集并保持给定算法顺序。</p>
 
 rationale: |-
     FIPS-approved cryptographic hash functions are required to be used.

@@ -31,25 +31,8 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>在 <tt>/etc/profile</tt> 中设置 <tt>TMOUT</tt> 选项可确保所有用户会话在空闲后终止。值 <tt>0</tt>（零）会禁用自动注销功能，因此不符合要求。TMOUT 的值应为正整数，并应导出且设为只读。应将 <tt>TMOUT</tt>
-    {{% if 'sle' in product or 'slmicro' in product %}}
-    设置于 <tt>/etc/profile.d/autologout.sh</tt>，内容如下：</p>
-    <pre>TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</pre>
-    readonly TMOUT
-    export TMOUT
-    {{% elif "ubuntu" in product %}}
-    设置于由 <tt>/etc/profile</tt> 加载的文件中，例如 <tt>/etc/profile.d/tmout.sh</tt>，内容如下：
-    <pre>TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</pre>
-    readonly TMOUT
-    export TMOUT
-    {{% else %}}
-    设置于由 <tt>/etc/profile</tt> 加载的文件中
-    {{{- "or <tt>/etc/bashrc</tt>" if product in ["ol7"] }}}，例如 <tt>/etc/profile.d/tmout.sh</tt>，内容如下：
-    <pre>typeset -xr TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</pre>
-    或
-    <pre>declare -xr TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</pre>
-    使用 <code>typeset</code> 关键字可更好地兼容 ksh 和其他 shell。
-    {{% endif %}}
+    <p>在 <tt>/etc/profile</tt> 中设置 <tt>TMOUT</tt> 可确保所有用户会话在空闲后终止。<tt>TMOUT</tt> 的值应为正整数，并应导出且设置为只读；值 <tt>0</tt> 会禁用自动注销功能，因此不符合要求。</p>
+    <p>在 SLE 和 SL Micro 产品中，应在 <tt>/etc/profile.d/autologout.sh</tt> 中设置 <tt>TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</tt>、<tt>readonly TMOUT</tt> 和 <tt>export TMOUT</tt>。在 Ubuntu 产品中，应在由 <tt>/etc/profile</tt> 加载的文件（例如 <tt>/etc/profile.d/tmout.sh</tt>）中设置相同三行。在其他产品中，应在由 <tt>/etc/profile</tt> 加载的文件（例如 <tt>/etc/profile.d/tmout.sh</tt>；<tt>ol7</tt> 还可使用 <tt>/etc/bashrc</tt>）中设置 <tt>typeset -xr TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</tt> 或 <tt>declare -xr TMOUT={{{ xccdf_value("var_accounts_tmout") }}}</tt>；为兼容 ksh 和其他 shell，优先使用 <tt>typeset</tt> 关键字。</p>
 
 rationale: |-
     Terminating an idle session within a short time period reduces

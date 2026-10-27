@@ -44,45 +44,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，按下 <tt>Ctrl-Alt-Del</tt> 键序列时，<tt>SystemD</tt> 将重启系统。
-    <br /><br />
-    要将系统配置为忽略来自
-    {{% if product != "rhcos4" %}}
-    命令行的 <tt>Ctrl-Alt-Del</tt> 键序列而不重启系统，请执行以下任一操作：</p>
-    <pre>ln -sf /dev/null /etc/systemd/system/ctrl-alt-del.target</pre>
-    或
-    <pre>systemctl mask ctrl-alt-del.target</pre>
-    <br /><br />
-    不要直接删除 <tt>/usr/lib/systemd/system/ctrl-alt-del.service</tt> 文件，因为该文件可能在将来的系统更新中恢复。
-    {{% else %}}
-    命令行的 <tt>Ctrl-Alt-Del</tt> 键序列而不重启系统，请创建类似以下内容的 <tt>MachineConfig</tt>：
-    <pre>
-    apiVersion: machineconfiguration.openshift.io/v1
-    kind: MachineConfig
-    metadata:
-      labels:
-        machineconfiguration.openshift.io/role: master
-      name: 75-master-disable-ctrlaltdel-reboot
-    spec:
-      config:
-        ignition:
-          version: 3.1.0
-        systemd:
-          units:
-          - name: ctrl-alt-del.target
-            mask: true
-    EOF
-    </pre>
-    <p>
-    这将为所有标记为 "master" 角色的节点屏蔽 <tt>ctrl-alt-del.target</tt> systemd target。
-    </p>
-    <p>
-    请注意，必须为每个 <tt>MachineConfigPool</tt> 执行此操作。
-    </p>
-    <p>
-    有关如何使用 Machine Config Operator 配置节点的更多信息，请参阅<a href="https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html">相关文档</a>。
-    </p>
-    {{% endif %}}
+    <p>默认情况下，按下 <tt>Ctrl-Alt-Del</tt> 键序列时，<tt>SystemD</tt> 将重启系统。</p>
+    <p>在非 RHCOS 的系统中，应将系统配置为忽略来自命令行的 <tt>Ctrl-Alt-Del</tt> 键序列，可执行 <tt>ln -sf /dev/null /etc/systemd/system/ctrl-alt-del.target</tt> 或 <tt>systemctl mask ctrl-alt-del.target</tt>。不要直接删除 <tt>/usr/lib/systemd/system/ctrl-alt-del.service</tt>，因为该文件可能在将来的系统更新中恢复。</p>
+    <p>在 RHCOS 中，应创建 <tt>machineconfiguration.openshift.io/v1</tt>、<tt>kind: MachineConfig</tt> 的配置，使用名称 <tt>75-master-disable-ctrlaltdel-reboot</tt> 和 <tt>machineconfiguration.openshift.io/role: master</tt> 标签，并在 <tt>spec.config.ignition.version: 3.1.0</tt> 下的 <tt>systemd.units</tt> 中将单元 <tt>ctrl-alt-del.target</tt> 设置为 <tt>mask: true</tt>。此配置会为所有具有 <tt>master</tt> 角色的节点屏蔽该 systemd target；必须针对每个 <tt>MachineConfigPool</tt> 执行相应配置。有关使用 Machine Config Operator 配置节点的更多信息，请参阅 <a href="https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html">OpenShift 官方文档</a>。</p>
 
 rationale: |-
     A locally logged-in user who presses Ctrl-Alt-Del, when at the console,

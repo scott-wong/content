@@ -35,29 +35,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>此要求仅适用于与设备功能特定相关或具有组织用户概念的组件（例如 VPN、代理功能）。不适用于仅为配置设备本身（管理）而进行的身份验证。
-
-    {{% if 'ubuntu' in product %}}
-    在 <tt>/etc/pam.d/common-auth</tt> 中添加或更新以下行，并将其放在任何包含 <tt>pam_unix.so</tt> 的行之前：</p>
-    <pre>auth    [success=2 default=ignore] pam_pkcs11.so</pre>
-    {{% else %}}
-    使用以下命令检查 <tt>etc/pam.d/common-auth</tt> 文件中是否配置了 <tt>pam_pkcs11.so</tt> 选项：
-
-    <pre># grep pam_pkcs11.so /etc/pam.d/common-auth
-
-    auth sufficient pam_pkcs11.so</pre>
-    {{% endif %}}
-
-    有关启用智能卡身份验证的一般信息，请参阅以下文档：
-    {{% if 'ubuntu' in product %}}
-    <ul>
-    <li><b><a href="https://pages.ubuntu.com/rs/066-EOV-335/images/SmartCardLogin_WhitePapaer_04.03.20.pdf">Ubuntu 智能卡登录白皮书</a></b></li>
-    </ul>
-    {{% else %}}
-    <ul>
-    <li><b><a href="https://www.suse.com/c/configuring-smart-card-authentication-suse-linux-enterprise/">SUSE 智能卡身份验证配置文档</a></b></li>
-    </ul>
-    {{% endif %}}
+    <p>此要求仅适用于与设备功能特定相关或具有组织用户概念的组件（例如 VPN、代理功能），不适用于仅为配置设备本身而进行的管理身份验证。</p>
+    <p>在 Ubuntu 产品中，应在 <tt>/etc/pam.d/common-auth</tt> 中添加或更新 <tt>auth [success=2 default=ignore] pam_pkcs11.so</tt>，并将其放在任何包含 <tt>pam_unix.so</tt> 的行之前。在其他产品中，应使用 <tt># grep pam_pkcs11.so /etc/pam.d/common-auth</tt> 检查该文件是否包含 <tt>auth sufficient pam_pkcs11.so</tt>。</p>
+    <p>有关启用智能卡身份验证的一般信息，Ubuntu 产品请参阅 <a href="https://pages.ubuntu.com/rs/066-EOV-335/images/SmartCardLogin_WhitePapaer_04.03.20.pdf">Ubuntu 智能卡登录白皮书</a>；其他产品请参阅 <a href="https://www.suse.com/c/configuring-smart-card-authentication-suse-linux-enterprise/">SUSE 智能卡身份验证配置文档</a>。</p>
 
 rationale: |-
     Smart card login provides two-factor authentication stronger than

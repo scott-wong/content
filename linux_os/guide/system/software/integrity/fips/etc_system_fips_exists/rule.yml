@@ -17,13 +17,8 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>在启用 FIPS 模式的系统上，<tt>/etc/system-fips</tt> 必须存在。
-    {{% if 'rhel' not in product %}}
-    要启用 FIPS 模式，请运行以下命令：</p>
-    <pre>fips-mode-setup --enable</pre>
-    {{% else %}}
-    {{{ full_name }}} 具有可在安装时启用 FIPS 模式的内核标志。安装程序必须使用 <tt>fips=1</tt> 启动，系统才会启用 FIPS 模式。不支持在现有系统上启用 FIPS 模式。如果此规则在已安装系统上失败，则属于永久性发现，无法修复。
-    {{% endif %}}
+    <p>在启用 FIPS 模式的系统上，<tt>/etc/system-fips</tt> 必须存在。在非 RHEL 产品中，可使用 <tt>fips-mode-setup --enable</tt> 启用 FIPS 模式。</p>
+    <p>RHEL 系列产品具有可在安装时启用 FIPS 模式的内核标志，安装程序必须使用 <tt>fips=1</tt> 启动，系统才会启用 FIPS 模式。RHEL 系列不支持在现有系统上启用 FIPS 模式；如果此规则在已安装系统上失败，则属于永久性发现，无法修复。</p>
 {{% if bootable_containers_supported == "true" %}}
     <br />
     To enable FIPS mode at bootable container build time configure <tt>fips=1</tt> kernel argument

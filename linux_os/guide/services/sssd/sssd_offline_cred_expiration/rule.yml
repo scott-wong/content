@@ -21,19 +21,8 @@ description: |-
     </pre>
 
     <p><strong>中文说明：</strong></p>
-    <p>SSSD 应配置为在 1 天后使离线凭据过期。
-    {{% if product in ["ol8", "ol9", "rhel8", "rhel9"] %}}
-    使用以下命令检查 SSSD 是否允许缓存的身份验证：</p>
-    <pre>
-    $ sudo grep cache_credentials /etc/sssd/sssd.conf
-    cache_credentials = true
-    </pre>
-    如果 "cache_credentials" 设置为 "false" 或缺失，则无需进一步检查。<br/>
-    {{% endif %}}
-    要将 SSSD 配置为使离线凭据过期，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[pam]</tt> 节中将 <tt>offline_credentials_expiration</tt> 设置为 <tt>1</tt>。例如：
-    <pre>[pam]
-    offline_credentials_expiration = 1
-    </pre>
+    <p>SSSD 应配置为在 1 天后使离线凭据过期。在 Oracle Linux 8/9 和 RHEL 8/9 上，应使用 <tt>sudo grep cache_credentials /etc/sssd/sssd.conf</tt> 检查 SSSD 是否允许缓存身份验证；如果 <tt>cache_credentials</tt> 设置为 <tt>false</tt> 或缺失，则无需进一步检查。</p>
+    <p>要使 SSSD 使离线凭据过期，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[pam]</tt> 节中将 <tt>offline_credentials_expiration</tt> 设置为 <tt>1</tt>，例如该节应包含 <tt>offline_credentials_expiration = 1</tt>。</p>
 
 rationale: |-
     If cached authentication information is out-of-date, the validity of the

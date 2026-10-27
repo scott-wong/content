@@ -22,14 +22,7 @@ description: |-
     {{%- endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>将密码套件限制为 FIPS 批准的算法。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示 FIPS 批准的密码套件：
-    {{%- if 'ubuntu' in product %}}</p>
-    <pre>Ciphers {{{ sshd_approved_ciphers }}}</pre>
-    如果该行未按准确顺序包含这些密码套件、已被注释掉或缺失，则构成发现项。
-    {{%- else %}}
-    <pre>Ciphers aes256-ctr,aes192-ctr,aes128-ctr</pre>
-    此规则确保配置上述密码套件（或其子集），并保持给定算法顺序。
-    {{%- endif %}}
+    <p>将 SSH 服务端密码套件限制为 FIPS 批准的算法，并在 <tt>/etc/ssh/sshd_config</tt> 中配置 <tt>Ciphers</tt> 指令。在 Ubuntu 产品中，该指令应使用 <tt>sshd_approved_ciphers</tt> 所定义的密码套件并保持精确顺序；该行被注释掉、缺失或顺序不一致都构成不符合项。在其他产品中，应配置 <tt>Ciphers aes256-ctr,aes192-ctr,aes128-ctr</tt>，或配置其子集并保持给定算法顺序。</p>
 
 rationale: |-
     Unapproved mechanisms that are used for authentication to the cryptographic module are not verified and therefore

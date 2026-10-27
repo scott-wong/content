@@ -29,19 +29,9 @@ description: |-
     {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} algorithm.
 
     <p><strong>中文说明：</strong></p>
-    <p>可配置 PAM 系统服务，使其仅存储密码的加密表示。在 "{{{ pam_passwd_file_path }}}" 中，文件的 <tt>password</tt> 部分控制密码更改期间执行哪些 PAM 模块。
-
-    将 <tt>password</tt> 部分中的 <tt>pam_unix.so</tt> 模块设置为包含选项 <tt>{{{ xccdf_value("var_password_hashing_algorithm_pam") }}}</tt>，并且不包含其他哈希算法，如下所示：
-    <br />
-    {{% if 'sle' in product or 'slmicro' in product %}}</p>
-    <pre>password    required    pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></pre>
-    {{% elif 'ubuntu' in product or 'debian' in product %}}
-    <pre>password    [success=1 default=ignore]   pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></pre>
-    {{% else %}}
-    <pre>password    sufficient    pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></pre>
-    {{% endif %}}
-    <br />
-    这有助于确保本地用户的新密码使用 <tt>{{{ xccdf_value("var_password_hashing_algorithm_pam") }}}</tt> 算法存储。
+    <p>PAM 系统服务可配置为仅存储密码的加密表示。在 <tt>{{{ pam_passwd_file_path }}}</tt> 中，<tt>password</tt> 节控制密码更改期间执行的 PAM 模块。</p>
+    <p>应将 <tt>password</tt> 节中的 <tt>pam_unix.so</tt> 配置为包含 <tt>{{{ xccdf_value("var_password_hashing_algorithm_pam") }}}</tt> 选项，且不包含其他哈希算法。在 SLE 和 SL Micro 产品中，该行应使用 <tt>password required pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></tt> 形式；在 Ubuntu 和 Debian 产品中，应使用 <tt>password [success=1 default=ignore] pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></tt> 形式；在其他产品中，应使用 <tt>password sufficient pam_unix.so {{{ xccdf_value("var_password_hashing_algorithm_pam") }}} <i>other arguments...</i></tt> 形式。</p>
+    <p>此配置可确保本地用户的新密码使用 <tt>{{{ xccdf_value("var_password_hashing_algorithm_pam") }}}</tt> 算法存储。</p>
 
 rationale: |-
     Passwords need to be protected at all times, and encryption is the standard method for

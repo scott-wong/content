@@ -13,12 +13,7 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>配置不符合要求的账户强制执行 {{{ xccdf_value("var_accounts_maximum_age_login_defs") }}} 天的最长密码生存期限制：请运行以下命令：
-    {{% if 'sle' in product or 'slmicro' in product %}}</p>
-    <pre>$ sudo passwd -x {{{ xccdf_value("var_accounts_maximum_age_login_defs") }}} <i>USER</i></pre>
-    {{% else %}}
-    <pre>$ sudo chage -M {{{ xccdf_value("var_accounts_maximum_age_login_defs") }}} <i>USER</i></pre>
-    {{% endif %}}
+    <p>配置不符合要求的账户，使其强制执行 <tt>{{{ xccdf_value("var_accounts_maximum_age_login_defs") }}}</tt> 天的最长密码生存期限制。在 SLE 和 SL Micro 产品中，应针对每个目标账户执行 <tt>$ sudo passwd -x {{{ xccdf_value("var_accounts_maximum_age_login_defs") }}} <i>USER</i></tt>；在其他产品中，应执行 <tt>$ sudo chage -M {{{ xccdf_value("var_accounts_maximum_age_login_defs") }}} <i>USER</i></tt>。</p>
 
 rationale: |-
     Any password, no matter how complex, can eventually be cracked. Therefore,

@@ -24,20 +24,8 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>augenrules</tt> 程序读取审计规则（默认情况），请将以下行添加到 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件：
-    {{% if 'ubuntu' in product %}}</p>
-    <pre>-w /etc/apparmor/ -p wa -k MAC-policy</pre>
-    <pre>-w /etc/apparmor.d/ -p wa -k MAC-policy</pre>
-    {{% else %}}
-    <pre>-w /etc/selinux/ -p wa -k MAC-policy</pre>
-    {{% endif %}}
-    如果 <tt>auditd</tt> 守护进程配置为在守护进程启动时使用 <tt>auditctl</tt> 工具读取审计规则，请将以下行添加到 <tt>/etc/audit/audit.rules</tt> 文件：
-    {{% if 'ubuntu' in product %}}
-    <pre>-w /etc/apparmor/ -p wa -k MAC-policy</pre>
-    <pre>-w /etc/apparmor.d/ -p wa -k MAC-policy</pre>
-    {{% else %}}
-    <pre>-w /etc/selinux/ -p wa -k MAC-policy</pre>
-    {{% endif %}}
+    <p>如果 <tt>auditd</tt> 使用 <tt>augenrules</tt> 程序（默认方式）在启动时读取审计规则，请将监视强制访问控制策略的审计规则加入 <tt>/etc/audit/rules.d</tt> 目录中后缀为 <tt>.rules</tt> 的文件。每条规则应采用 <tt>-w 路径 -p wa -k MAC-policy</tt> 的形式。如果使用 <tt>auditctl</tt> 工具读取审计规则，则应将这些规则加入 <tt>/etc/audit/audit.rules</tt>。</p>
+    <p>在 Ubuntu 产品中，分别监视 <tt>/etc/apparmor/</tt> 和 <tt>/etc/apparmor.d/</tt>，对应规则为 <tt>-w /etc/apparmor/ -p wa -k MAC-policy</tt> 和 <tt>-w /etc/apparmor.d/ -p wa -k MAC-policy</tt>；在其他产品中，监视 <tt>/etc/selinux/</tt>，对应规则为 <tt>-w /etc/selinux/ -p wa -k MAC-policy</tt>。</p>
 
 rationale: |-
     The system's mandatory access policy (SELinux or Apparmor) should not be

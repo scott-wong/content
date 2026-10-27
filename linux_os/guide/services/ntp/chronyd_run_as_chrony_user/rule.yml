@@ -30,17 +30,9 @@ description: |-
     This recommendation only applies if chrony is in use on the system.
 
     <p><strong>中文说明：</strong></p>
-    <p>chrony 是实现网络时间协议（NTP）的守护进程。它用于在多种系统之间同步系统时钟，并使用高度精确的源。有关 chrony 的更多信息，请参阅 <a href="https://chrony-project.org/">chrony 项目网站</a>。Chrony 可配置为客户端和/或服务器。要确保 chronyd 以 chrony 用户账户运行，
-    {{% if 'ubuntu' in product %}}
-    <tt>{{{ chrony_conf_path }}}</tt> 中的 <tt>user</tt> 变量应设置为 <tt>_chrony</tt> 或不存在：</p>
-    <pre>user _chrony</pre>
-    {{% elif not ok_by_default -%}}
-    请在 <tt>/etc/sysconfig/chronyd</tt> 中添加或编辑 <tt>OPTIONS</tt> 变量，使其包含 <tt>-u chrony</tt>：
-    <pre>OPTIONS="-u chrony"</pre>
-    {{% else -%}}
-    请从 <tt>OPTIONS</tt> 中移除除 <tt>-u chrony</tt> 之外的任何 <tt>-u ...</tt> 选项，因为 chrony 默认以其自身用户运行。
-    {{%- endif %}}
-    本建议仅在系统使用 chrony 时适用。
+    <p>chrony 是实现网络时间协议（NTP）的守护进程，用于在多种系统之间同步系统时钟并使用高度精确的时间源。有关 chrony 的更多信息，请参阅 <a href="https://chrony-project.org/">chrony 项目网站</a>。Chrony 可配置为客户端和/或服务器。</p>
+    <p>在 Ubuntu 产品中，应确保 <tt>{{{ chrony_conf_path }}}</tt> 中的 <tt>user</tt> 变量设置为 <tt>_chrony</tt>，或省略该变量（例如 <tt>user _chrony</tt>）。在 chrony 默认不以自身用户运行的系统中，应编辑 <tt>/etc/sysconfig/chronyd</tt> 的 <tt>OPTIONS</tt> 变量，使其包含 <tt>-u chrony</tt>，例如 <tt>OPTIONS="-u chrony"</tt>。在 chrony 默认以自身用户运行的系统（Oracle Linux 7/8/9、Fedora 和 RHEL 系列）中，应从 <tt>OPTIONS</tt> 中移除除 <tt>-u chrony</tt> 以外的任何 <tt>-u ...</tt> 选项。</p>
+    <p>本建议仅在系统使用 chrony 时适用。</p>
 
 rationale: |-
     If chrony is in use on the system proper configuration is vital to ensuring time synchronization

@@ -41,44 +41,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，如果在 2 秒内按下 <tt>Ctrl-Alt-Del</tt> 键序列 Ctrl-Alt-Delete 超过 7 次，<tt>SystemD</tt> 将重启系统。
-    <br /><br />
-    要将系统配置为忽略 <tt>CtrlAltDelBurstAction</tt>
-    {{% if product != "rhcos4" %}}
-    设置，请在 <tt>/etc/systemd/system.conf</tt> 中添加或修改以下内容：</p>
-    <pre>CtrlAltDelBurstAction=none</pre>
-    {{% else %}}
-    设置，请创建类似以下内容的 <tt>MachineConfig</tt>：
-    <pre>
-    apiVersion: machineconfiguration.openshift.io/v1
-    kind: MachineConfig
-    metadata:
-      labels:
-        machineconfiguration.openshift.io/role: master
-      name: 75-master-disable-ctrlaltdel-burstaction
-    spec:
-      config:
-        ignition:
-          version: 3.1.0
-        storage:
-          files:
-          - contents:
-              source: data:,CtrlAltDelBurstAction%3Dnone
-            mode: 0644
-            path: /etc/systemd/system.conf.d/disable_ctrlaltdelete_burstaction.conf
-            overwrite: true
-    EOF
-    </pre>
-    <p>
-    这会将相关配置添加到 <tt>/etc/systemd/system.conf.d/</tt>，从而正确配置 Systemd。
-    </p>
-    <p>
-    请注意，必须为每个 <tt>MachineConfigPool</tt> 执行此操作。
-    </p>
-    <p>
-    有关如何使用 Machine Config Operator 配置节点的更多信息，请参阅<a href="https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html">相关文档</a>。
-    </p>
-    {{% endif %}}
+    <p>默认情况下，如果在 2 秒内按下 <tt>Ctrl-Alt-Del</tt> 键序列超过 7 次，<tt>SystemD</tt> 将重启系统。</p>
+    <p>在非 RHCOS 的系统中，应将 <tt>/etc/systemd/system.conf</tt> 中的 <tt>CtrlAltDelBurstAction</tt> 设置为 <tt>none</tt>，即包含 <tt>CtrlAltDelBurstAction=none</tt>。</p>
+    <p>在 RHCOS 中，应创建 <tt>machineconfiguration.openshift.io/v1</tt>、<tt>kind: MachineConfig</tt> 的配置，使用名称 <tt>75-master-disable-ctrlaltdel-burstaction</tt> 和 <tt>machineconfiguration.openshift.io/role: master</tt> 标签，在 <tt>spec.config.ignition.version: 3.1.0</tt> 下通过 <tt>storage.files</tt> 创建 <tt>/etc/systemd/system.conf.d/disable_ctrlaltdelete_burstaction.conf</tt>。该文件的内容应为 <tt>CtrlAltDelBurstAction=none</tt>，权限模式为 <tt>0644</tt>，并设置 <tt>overwrite: true</tt>。此配置会应用到具有 <tt>master</tt> 角色的节点；必须针对每个 <tt>MachineConfigPool</tt> 执行相应配置。有关使用 Machine Config Operator 配置节点的更多信息，请参阅 <a href="https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html">OpenShift 官方文档</a>。</p>
 
 rationale: |-
     A locally logged-in user who presses Ctrl-Alt-Del, when at the console,

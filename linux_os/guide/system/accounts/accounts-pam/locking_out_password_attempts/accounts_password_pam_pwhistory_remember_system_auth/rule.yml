@@ -30,22 +30,9 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>不允许用户重复使用近期密码。可通过为 <tt>pam_pwhistory</tt> PAM 模块使用 <tt>remember</tt> 选项来实现。
-    <br/><br/>
-    {{% if product in ["ol7"] %}}
-    在 <tt>/etc/pam.d/system-auth</tt> 文件中，确保存在 <tt>remember</tt> 参数，并且其值等于或大于 {{{ xccdf_value("var_password_pam_remember") }}}
-    <br/><br/>
-    例如：</p>
-    <pre>password {{{ xccdf_value("var_password_pam_remember_control_flag") }}} pam_pwhistory.so use_authtok remember={{{ xccdf_value("var_password_pam_remember") }}}</pre>
-    {{% else %}}
-    在具有较新版本 <tt>authselect</tt> 的系统上，可通过 authselect 功能启用 <tt>pam_pwhistory</tt> PAM 模块：
-    <pre>authselect enable-feature with-pwhistory</pre>
-    否则，应使用 authselect 自定义配置档启用。
-
-    较新系统还具有 <tt>{{{ pwhistory_path }}}</tt> 文件，用于设置 <tt>pam_pwhistory</tt> 模块选项。只要存在此文件，就应使用它。否则，可在 PAM 文件中设置 <tt>pam_pwhistory</tt> 模块选项。
-    <br/><br/>
-    <tt>remember</tt> 选项的值必须等于或大于 {{{ xccdf_value("var_password_pam_remember") }}}
-    {{% endif %}}
+    <p>不允许用户重复使用近期密码，可通过为 <tt>pam_pwhistory</tt> PAM 模块配置 <tt>remember</tt> 选项实现。</p>
+    <p>在 <tt>ol7</tt> 中，应确保 <tt>/etc/pam.d/system-auth</tt> 包含值为 <tt>remember</tt> 的参数，且该值等于或大于 <tt>{{{ xccdf_value("var_password_pam_remember") }}}</tt>，例如 <tt>password {{{ xccdf_value("var_password_pam_remember_control_flag") }}} pam_pwhistory.so use_authtok remember={{{ xccdf_value("var_password_pam_remember") }}}</tt>。</p>
+    <p>在其他产品中，具有较新版本 <tt>authselect</tt> 的系统应使用 <tt>authselect enable-feature with-pwhistory</tt> 启用该模块，或改用 authselect 自定义配置档。如果存在 <tt>{{{ pwhistory_path }}}</tt>，应使用该文件配置 <tt>pam_pwhistory</tt> 选项；否则在 PAM 文件中配置。<tt>remember</tt> 的值必须等于或大于 <tt>{{{ xccdf_value("var_password_pam_remember") }}}</tt>。</p>
 
 rationale: |-
     Preventing reuse of previous passwords helps ensure that a compromised password is not

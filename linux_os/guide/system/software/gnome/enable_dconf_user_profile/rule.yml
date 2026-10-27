@@ -36,30 +36,8 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>默认情况下，DConf 提供标准用户配置文件。该配置文件包含一个 DConf 配置数据库列表。用户配置文件和数据库始终具有最高优先级。因此，DConf 用户配置文件应始终存在并正确配置。
-    <br /><br />
-    {{% if 'sle' in product %}}
-    为确保用户配置文件设置正确，<tt>/etc/dconf/profile/gdm</tt> 应设置如下：</p>
-    <pre>user-db:user
-    system-db:gdm
-    </pre>
-    {{% elif 'ubuntu' in product %}}
-    为确保 gdm 配置文件设置正确，<tt>/etc/dconf/profile/gdm</tt> 应设置如下：
-    <pre>user-db:user
-    system-db:gdm
-    </pre>
-    为确保用户配置文件设置正确，<tt>/etc/dconf/profile/user</tt> 应设置如下：
-    <pre>user-db:user
-    system-db:local
-    </pre>
-    {{% else %}}
-    为确保用户配置文件设置正确，<tt>/etc/dconf/profile/user</tt> 应设置如下：
-    <pre>user-db:user
-    system-db:local
-    system-db:site
-    system-db:distro
-    </pre>
-    {{% endif %}}
+    <p>默认情况下，DConf 提供标准用户配置文件。该配置文件包含一个 DConf 配置数据库列表，用户配置文件和数据库始终具有最高优先级。因此，DConf 用户配置文件应始终存在并正确配置。</p>
+    <p>在 SLE 产品中，<tt>/etc/dconf/profile/gdm</tt> 应包含 <tt>user-db:user</tt> 和 <tt>system-db:gdm</tt>。在 Ubuntu 产品中，<tt>/etc/dconf/profile/gdm</tt> 应包含 <tt>user-db:user</tt> 和 <tt>system-db:gdm</tt>，且 <tt>/etc/dconf/profile/user</tt> 应包含 <tt>user-db:user</tt> 和 <tt>system-db:local</tt>。在其他产品中，<tt>/etc/dconf/profile/user</tt> 应包含 <tt>user-db:user</tt>、<tt>system-db:local</tt>、<tt>system-db:site</tt> 和 <tt>system-db:distro</tt>。</p>
 
 rationale: |-
     Failure to have a functional DConf profile prevents GNOME3 configuration settings

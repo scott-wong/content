@@ -19,16 +19,8 @@ description: |-
     {{%- endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>nftables 中的表包含链。每个表只有一个地址族，并且只应用于该地址族的数据包。表可以属于六种地址族之一。
-    {{% if "rhel" in product %}}
-    {{{ full_name }}} 使用 <tt>firewalld</tt> 进行防火墙管理。当 <tt>nftables</tt> 是 <tt>firewalld</tt> 使用的防火墙后端时，会使用一个属于 <tt>{{{ xccdf_value("var_nftables_family") }}}</tt> 地址族、名为 <tt>{{{ xccdf_value("var_nftables_table") }}}</tt> 的表。
-
-    要验证 <tt>firewalld</tt> 使用的 <tt>nftables</tt> 表存在，请运行以下命令：</p>
-    <pre>$ sudo nft list tables
-    table {{{ xccdf_value("var_nftables_family") }}} {{{ xccdf_value("var_nftables_table") }}}
-    </pre>
-    该表会在 <tt>firewalld</tt> 启动时自动创建。
-    {{%- endif %}}
+    <p>nftables 中的表包含链。每个表只有一个地址族，并且只应用于该地址族的数据包；表可以属于六种地址族之一。</p>
+    <p>在 RHEL 系列产品中，<tt>firewalld</tt> 用于防火墙管理。当 <tt>nftables</tt> 是 <tt>firewalld</tt> 使用的防火墙后端时，会使用一个属于 <tt>{{{ xccdf_value("var_nftables_family") }}}</tt> 地址族、名为 <tt>{{{ xccdf_value("var_nftables_table") }}}</tt> 的表。应使用 <tt>$ sudo nft list tables</tt> 验证该表存在，输出中应包含 <tt>table {{{ xccdf_value("var_nftables_family") }}} {{{ xccdf_value("var_nftables_table") }}}</tt>。该表会在 <tt>firewalld</tt> 启动时自动创建。</p>
 
 rationale: |-
     Nftables doesn't have any default tables. Without a table being built, nftables will not

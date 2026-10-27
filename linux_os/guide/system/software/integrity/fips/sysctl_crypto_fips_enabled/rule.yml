@@ -23,15 +23,9 @@ description: |-
     and continuous monitoring tests in place.
 
     <p><strong>中文说明：</strong></p>
-    <p>系统运行在 FIPS 模式由内核参数 <tt>'crypto.fips_enabled'</tt> 表示。在 FIPS 模式下，该参数应设置为 <tt>1</tt>。
-    {{% if 'rhel' not in product %}}
-    要启用 FIPS 模式，请运行以下命令：</p>
-    <pre>fips-mode-setup --enable</pre>
-    {{% else %}}
-    {{{ full_name }}} 具有可在安装时启用 FIPS 模式的内核标志。安装程序必须使用 <tt>fips=1</tt> 启动，系统才会启用 FIPS 模式。不支持在现有系统上启用 FIPS 模式。如果此规则在已安装系统上失败，则属于永久性发现，无法修复。
-    {{% endif %}}
-
-    要启用严格的 FIPS 合规性，需要在系统安装期间将 <tt>fips=1</tt> 内核选项添加到内核启动参数中，以便在 FIPS 批准的算法和持续监控测试启用的情况下生成密钥。
+    <p>系统是否运行在 FIPS 模式由内核参数 <tt>crypto.fips_enabled</tt> 表示；在 FIPS 模式下，该参数应设置为 <tt>1</tt>。在非 RHEL 产品中，可使用 <tt>fips-mode-setup --enable</tt> 启用 FIPS 模式。</p>
+    <p>RHEL 系列产品具有可在安装时启用 FIPS 模式的内核标志，安装程序必须使用 <tt>fips=1</tt> 启动，系统才会启用 FIPS 模式。RHEL 系列不支持在现有系统上启用 FIPS 模式；如果此规则在已安装系统上失败，则属于永久性发现，无法修复。</p>
+    <p>要启用严格的 FIPS 合规性，需要在系统安装期间将 <tt>fips=1</tt> 添加到内核启动参数中，以便在 FIPS 批准算法和持续监控测试启用的情况下生成密钥。</p>
 
 rationale: |-
     Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to

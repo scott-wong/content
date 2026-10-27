@@ -24,19 +24,8 @@ description: |-
     {{% endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>停用无线网络接口应能阻止正常使用无线功能。
-    <br /><br />
-    {{% if product in ["sle12", "sle15", "slmicro5"] %}}
-    通过为系统中的每个活动 <tt>&lt;WIFI-INTERFACE&gt;</tt> 执行以下命令，将系统配置为禁用无线网络接口：</p>
-    <pre>$ sudo wicked ifdown &lt;WIFI-INTERFACE&gt;</pre>
-    还要从 <tt>/etc/wicked/ifconfig/&lt;WIFI-INTERFACE&gt;.xml</tt> 删除每个 Wi-Fi 适配器的配置文件，以防止将来建立连接。
-    {{% elif 'ubuntu' in product %}}
-    使用以下命令验证系统上没有配置无线接口：
-    <pre>$ ls -L -d /sys/class/net/*/wireless | xargs dirname | xargs basename -a</pre>
-    {{% else %}}
-    使用以下命令将系统配置为禁用所有无线网络接口：
-    <pre>$ sudo nmcli radio all off</pre>
-    {{% endif %}}
+    <p>停用无线网络接口应能阻止正常使用无线功能。</p>
+    <p>在 SLE 12、SLE 15 和 SL Micro 5 中，应为系统中的每个活动 <tt>&lt;WIFI-INTERFACE&gt;</tt> 执行 <tt>$ sudo wicked ifdown &lt;WIFI-INTERFACE&gt;</tt>，并从 <tt>/etc/wicked/ifconfig/&lt;WIFI-INTERFACE&gt;.xml</tt> 删除每个 Wi-Fi 适配器的配置文件，以防止将来建立连接。在 Ubuntu 产品中，应使用 <tt>$ ls -L -d /sys/class/net/*/wireless | xargs dirname | xargs basename -a</tt> 验证系统上没有配置无线接口。在其他产品中，应使用 <tt>$ sudo nmcli radio all off</tt> 禁用所有无线网络接口。</p>
 
 rationale: |-
     The use of wireless networking can introduce many different attack vectors into

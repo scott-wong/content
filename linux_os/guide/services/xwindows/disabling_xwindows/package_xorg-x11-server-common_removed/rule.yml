@@ -15,13 +15,8 @@ description: |-
     <pre>$ sudo {{{ pkg_manager }}} remove xorg-x11-server-common</pre>
 
     <p><strong>中文说明：</strong></p>
-    <p>移除 xorg-x11-server-common 软件包后，系统将不再安装 X Windows。如果未安装 X Windows，系统无法启动到图形用户模式。这可防止系统意外或恶意启动到 <tt>graphical.target</tt> 模式。为此，请运行以下命令：
-    {{%- if product in ['ol8', 'ol9', 'rhel8', 'rhel9', 'rhv4'] -%}}</p>
-    <pre>$ sudo {{{ pkg_manager }}} groupremove base-x</pre>
-    {{%- else %}}
-    <pre>$ sudo {{{ pkg_manager }}} groupremove "X Window System"</pre>
-    {{%- endif %}}
-    <pre>$ sudo {{{ pkg_manager }}} remove xorg-x11-server-common</pre>
+    <p>移除 <tt>xorg-x11-server-common</tt> 软件包后，系统将不再安装 X Windows。如果未安装 X Windows，系统便无法启动到图形用户模式，从而防止系统被意外或恶意启动到 <tt>graphical.target</tt> 模式。</p>
+    <p>在 Oracle Linux 8/9、RHEL 8/9 和 RHV4 中，使用 <tt>$ sudo {{{ pkg_manager }}} groupremove base-x</tt> 移除基础 X 组；在其他产品中，使用 <tt>$ sudo {{{ pkg_manager }}} groupremove "X Window System"</tt>。随后使用 <tt>$ sudo {{{ pkg_manager }}} remove xorg-x11-server-common</tt> 移除目标软件包。</p>
 
 rationale: |-
     Unnecessary service packages must not be installed to decrease the attack surface of the system. X windows has a long history of security

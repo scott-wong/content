@@ -17,11 +17,7 @@ description: |-
     {{%- endif %}}
 
     <p><strong>中文说明：</strong></p>
-    <p>将密码套件限制为 FIPS 批准的算法。<tt>{{{ sshc_main_config }}}</tt> 中的以下行演示了 FIPS 批准密码套件的用法：
-    {{%- if 'ubuntu' in product %}}</p>
-    <pre>Ciphers {{{ ssh_approved_ciphers }}}</pre>
-    如果该行未按确切顺序包含这些密码套件、被注释掉或缺失，则判定为不符合项。
-    {{%- endif %}}
+    <p>将 SSH 客户端密码套件限制为 FIPS 批准的算法，并在 <tt>{{{ sshc_main_config }}}</tt> 中配置。在 Ubuntu 产品中，<tt>Ciphers</tt> 指令必须使用 <tt>ssh_approved_ciphers</tt> 所定义的 FIPS 批准密码套件，并保持要求的精确顺序；如果该行被注释掉、缺失，或未按该精确顺序包含这些密码套件，则属于不符合项。其他产品应遵循其适用的 FIPS 批准密码套件及顺序要求。</p>
 
 rationale: |-
     Unapproved mechanisms that are used for authentication to the cryptographic module are not verified and therefore
