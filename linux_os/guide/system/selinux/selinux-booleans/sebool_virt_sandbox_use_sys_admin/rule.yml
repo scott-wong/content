@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="virt_sandbox_use_sys_admin") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>virt_sandbox_use_sys_admin</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>virt_sandbox_use_sys_admin</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_sandbox_use_sys_admin off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许沙箱容器使用 sys_admin 能力会授予其广泛的管理权限，并削弱隔离。
 
 severity: medium
 

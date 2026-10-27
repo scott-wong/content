@@ -35,9 +35,38 @@ description: |-
     </pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，DConf 提供标准用户配置文件。该配置文件包含一个 DConf 配置数据库列表。用户配置文件和数据库始终具有最高优先级。因此，DConf 用户配置文件应始终存在并正确配置。
+    <br /><br />
+    {{% if 'sle' in product %}}
+    为确保用户配置文件设置正确，<tt>/etc/dconf/profile/gdm</tt> 应设置如下：
+    <pre>user-db:user
+    system-db:gdm
+    </pre>
+    {{% elif 'ubuntu' in product %}}
+    为确保 gdm 配置文件设置正确，<tt>/etc/dconf/profile/gdm</tt> 应设置如下：
+    <pre>user-db:user
+    system-db:gdm
+    </pre>
+    为确保用户配置文件设置正确，<tt>/etc/dconf/profile/user</tt> 应设置如下：
+    <pre>user-db:user
+    system-db:local
+    </pre>
+    {{% else %}}
+    为确保用户配置文件设置正确，<tt>/etc/dconf/profile/user</tt> 应设置如下：
+    <pre>user-db:user
+    system-db:local
+    system-db:site
+    system-db:distro
+    </pre>
+    {{% endif %}}
+
 rationale: |-
     Failure to have a functional DConf profile prevents GNOME3 configuration settings
     from being enforced for all users and allows various security risks.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有有效的 DConf 配置文件，GNOME3 配置设置就无法对所有用户强制执行，并会带来各种安全风险。
 
 severity: high
 

@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="ssh_keysign") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>ssh_keysign</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>ssh_keysign</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P ssh_keysign off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许 SSH 使用 ssh-keysign 会启用额外的特权辅助路径；禁用该布尔值可限制 SSH 客户端访问主机密钥。
 
 severity: medium
 

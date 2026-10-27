@@ -39,9 +39,43 @@ description: |-
     <pre>/org/gnome/desktop/screensaver/picture-uri</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    {{# The SLE12 and SLE15 STIG unfortunately requires per-user settings, #}}
+    {{# not a globally locked one, so we don't require but only suggest the latter. #}}
+    {{% if product in ["sle12","sle15"] %}}
+    在 SUSE 上，用户应通过以下操作将屏幕保护程序设置为使用可公开查看的图像或空白屏幕：
+    找到“设置”菜单，然后导航到“背景”选择部分。
+    {{% if product == "sle15" %}}
+    <tt>- 单击左上角的“Activities”。</tt>
+    <tt>- 单击 Activities 菜单底部的“Show Applications”。</tt>
+    <tt>- 单击“Settings”图标。</tt>
+    <tt>- 单击左侧菜单中的“Background”。</tt>
+    <tt>- 选择图像，并将锁定屏幕图像设置为用户选择的内容。</tt>
+    <tt>- 退出 Settings 对话框。</tt>
+    {{% else %}}
+    <tt>- 单击左下角的“Applications”。</tt>
+    <tt>- 将鼠标悬停在“System Tools”上。</tt>
+    <tt>- 单击 System Tools 下的“Settings”图标。</tt>
+    <tt>- 单击“Background”，然后单击“Lock Screen”。</tt>
+    <tt>- 选择图像，并将锁定屏幕图像设置为用户选择的内容。</tt>
+    <tt>- 单击“Select”。</tt>
+    <tt>- 退出 Settings 对话框。</tt>
+    {{% endif %}}
+    {{% endif %}}
+    要将 GNOME3 桌面中的屏幕保护程序模式设置为空白屏幕，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>picture-uri</tt> 为 <tt>string ''</tt>。例如：
+    <pre>[org/gnome/desktop/screensaver]
+    picture-uri=string ''
+    </pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/desktop/screensaver/picture-uri</pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     Setting the screensaver mode to blank-only conceals the
     contents of the display from passersby.
+
+    <p><strong>中文理由：</strong></p>
+    将屏幕保护程序模式设置为仅空白可向路过人员隐藏显示内容。
 
 severity: medium
 

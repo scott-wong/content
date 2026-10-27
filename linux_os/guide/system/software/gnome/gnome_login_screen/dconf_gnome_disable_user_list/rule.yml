@@ -19,10 +19,23 @@ description: |-
     <pre>/org/gnome/login-screen/disable-user-list</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    在默认图形环境中，直接登录系统的用户会看到显示所有已知用户的登录屏幕。应通过将 <tt>disable-user-list</tt> 设置为 <tt>true</tt> 来禁用此功能。
+    <br /><br />
+    要禁用该功能，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或编辑 <tt>disable-user-list</tt>。例如：
+    <pre>[org/gnome/login-screen]
+    disable-user-list=true</pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/login-screen/disable-user-list</pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     Leaving the user list enabled is a security risk since it allows anyone
     with physical access to the system to quickly enumerate known user accounts
     without logging in.
+
+    <p><strong>中文理由：</strong></p>
+    保持用户列表启用会带来安全风险，因为任何能够物理访问系统的人无需登录即可快速枚举已知用户账户。
 
 severity: medium
 

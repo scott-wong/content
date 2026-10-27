@@ -8,7 +8,12 @@ description: |-
     This setting should be disabled.
     {{{ describe_sebool_disable(sebool="openvpn_enable_homedirs") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>openvpn_enable_homedirs</tt> 处于启用状态。应禁用此设置。要禁用 <tt>openvpn_enable_homedirs</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P openvpn_enable_homedirs off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 OpenVPN 访问用户主目录，降低 VPN 进程读取个人文件的风险。
 
 severity: medium
 

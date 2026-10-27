@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="pcp_bind_all_unreserved_ports") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>pcp_bind_all_unreserved_ports</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>pcp_bind_all_unreserved_ports</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P pcp_bind_all_unreserved_ports off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 PCP 绑定所有非保留端口，减少性能监控服务的网络暴露面。
 
 severity: medium
 

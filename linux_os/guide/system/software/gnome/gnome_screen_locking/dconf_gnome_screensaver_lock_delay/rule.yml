@@ -12,9 +12,19 @@ description: |-
     </pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要在 GNOME3 桌面中屏幕保护程序激活时启用锁定延迟，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>lock-delay</tt> 为 <tt>uint32 {{{ xccdf_value("var_screensaver_lock_delay") }}}</tt>。例如：
+    <pre>[org/gnome/desktop/screensaver]
+    lock-delay=uint32 {{{ xccdf_value("var_screensaver_lock_delay") }}}
+    </pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     A session lock is a temporary action taken when a user stops work and moves away from the immediate physical vicinity
     of the information system but does not want to logout because of the temporary nature of the absence.
+
+    <p><strong>中文理由：</strong></p>
+    会话锁定是用户停止工作并离开信息系统附近但只是临时离开而不注销时采取的临时措施。
 
 severity: medium
 

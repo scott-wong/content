@@ -8,7 +8,12 @@ description: |-
     If this setting is disabled, it should be enabled.
     {{{ describe_sebool_enable(sebool="mcelog_exec_scripts") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>mcelog_exec_scripts</tt> 处于启用状态。如果此设置已禁用，应启用，以允许 mcelog 执行分析脚本。要启用 <tt>mcelog_exec_scripts</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mcelog_exec_scripts on</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用后，可允许 mcelog 执行分析脚本处理机器检查事件，同时仍由 SELinux 域策略限制。
 
 severity: medium
 

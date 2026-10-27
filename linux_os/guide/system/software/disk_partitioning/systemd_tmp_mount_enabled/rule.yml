@@ -7,12 +7,18 @@ description: |-
     for temporary file storage. This directory is managed by <tt>systemd-tmpfiles</tt>.
     Ensure that the <tt>tmp.mount</tt> systemd unit is enabled.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>/tmp</tt> 目录是全局可写的临时文件存储目录。此目录由 <tt>systemd-tmpfiles</tt> 管理。确保已启用 <tt>tmp.mount</tt> systemd 单元。
+
 rationale: |-
     The <tt>/tmp</tt> directory is used as temporary storage by many programs.
     Placing <tt>/tmp</tt> in a tmpfs filesystem enables the setting of more
     restrictive mount options, which can help protect programs which use it.
     The <tt>tmp.mount</tt> unit configures the tmpfs filesystem and ensures
     the <tt>/tmp</tt> directory is wiped during reboot.
+
+    <p><strong>中文理由：</strong></p>
+    许多程序将 <tt>/tmp</tt> 目录用作临时存储。将 <tt>/tmp</tt> 放入 tmpfs 文件系统可以设置更严格的挂载选项，从而帮助保护使用该目录的程序。<tt>tmp.mount</tt> 单元配置 tmpfs 文件系统，并确保在重启期间清空 <tt>/tmp</tt> 目录。
 
 severity: low
 

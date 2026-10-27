@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="mozilla_read_content") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>mozilla_read_content</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mozilla_read_content</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mozilla_read_content off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 Mozilla 应用读取非必要用户内容，降低敏感文件被浏览器进程意外访问的风险。
 
 severity: medium
 

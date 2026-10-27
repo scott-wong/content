@@ -9,7 +9,12 @@ description: |-
     any media.
     {{{ describe_sebool_disable(sebool="xguest_mount_media") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>xguest_mount_media</tt> 为 enabled。应禁用此设置，因为访客用户不应能够挂载任何介质。要禁用 <tt>xguest_mount_media</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xguest_mount_media off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    访客用户不应能够挂载介质；禁用此布尔值可防止访问或操纵可移动介质。
 
 severity: medium
 

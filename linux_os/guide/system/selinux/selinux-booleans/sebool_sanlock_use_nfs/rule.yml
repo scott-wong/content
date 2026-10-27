@@ -8,7 +8,13 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="sanlock_use_nfs") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>sanlock_use_nfs</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>sanlock_use_nfs</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值可限制 sanlock 访问 NFS，减少网络文件系统暴露。
 
 severity: medium
 

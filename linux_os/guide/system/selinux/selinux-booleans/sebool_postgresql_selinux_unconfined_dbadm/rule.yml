@@ -9,7 +9,13 @@ description: |-
     execute Data Manipulation Language (DML) statements.
     {{{ describe_sebool_enable(sebool="postgresql_selinux_unconfined_dbadm") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>postgresql_selinux_unconfined_dbadm</tt> 处于启用状态。如果该设置为禁用状态，应将其启用。
+    应启用 SELinux 布尔值 <tt>postgresql_selinux_unconfined_dbadm</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用此布尔值可允许数据库管理员执行数据操作语言（DML）语句，同时 SELinux 仍限制其他类型的内核和文件访问。
 
 severity: medium
 

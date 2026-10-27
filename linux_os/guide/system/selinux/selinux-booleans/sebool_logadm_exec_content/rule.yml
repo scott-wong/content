@@ -8,7 +8,12 @@ description: |-
     If this setting is disabled, it should be enabled.
     {{{ describe_sebool_enable(sebool="logadm_exec_content") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>logadm_exec_content</tt> 处于启用状态。如果此设置已禁用，应启用。要启用 <tt>logadm_exec_content</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P logadm_exec_content on</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用后，可允许 logadm 执行其日志管理功能所需的内容操作，同时仍受 SELinux 策略约束。
 
 severity: medium
 

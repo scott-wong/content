@@ -8,12 +8,18 @@ description: |-
     Make absolutely certain that it is large enough to store all
     audit logs that will be created by the auditing daemon.
 
+    <p><strong>中文说明：</strong></p>
+    审计日志存储在 <tt>/var/log/audit</tt> 目录中。确保在安装时为 <tt>/var/log/audit</tt> 配置独立分区或逻辑卷，或使用 LVM 迁移。务必确保其容量足够大，可以存储审计守护进程创建的所有审计日志。
+
 rationale: |-
     Placing <tt>/var/log/audit</tt> in its own partition
     enables better separation between audit files
     and other files, and helps ensure that
     auditing cannot be halted due to the partition running out
     of space.
+
+    <p><strong>中文理由：</strong></p>
+    将 <tt>/var/log/audit</tt> 放在独立分区上，可以更好地将审计文件与其他文件隔离，并有助于确保审计不会因分区空间耗尽而停止。
 
 severity: low
 

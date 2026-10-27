@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="polipo_connect_all_unreserved") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>polipo_connect_all_unreserved</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>polipo_connect_all_unreserved</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P polipo_connect_all_unreserved off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 Polipo 连接任意非保留端口，减少代理服务被利用进行非预期外联的风险。
 
 severity: medium
 

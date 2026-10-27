@@ -12,9 +12,17 @@ description: |-
     <pre>[daemon]
     AutomaticLoginEnable=false</pre>
 
+    <p><strong>中文说明：</strong></p>
+    GNOME 显示管理器（GDM）可以允许用户无需交互或凭据即可自动登录。应始终要求用户向其获授权使用的系统进行身份验证。要禁用用户自动登录系统的能力，请在 <tt>/etc/gdm/custom.conf</tt> 的 <tt>[daemon]</tt> 节中将 <tt>AutomaticLoginEnable</tt> 设置为 <tt>false</tt>。例如：
+    <pre>[daemon]
+    AutomaticLoginEnable=false</pre>
+
 rationale: |-
     Failure to restrict system access to authenticated users negatively impacts operating
     system security.
+
+    <p><strong>中文理由：</strong></p>
+    未能将系统访问限制为已通过身份验证的用户，会对操作系统安全产生负面影响。
 
 severity: high
 

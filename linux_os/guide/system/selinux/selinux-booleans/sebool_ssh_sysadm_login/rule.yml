@@ -8,6 +8,9 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="ssh_sysadm_login") }}}
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>ssh_sysadm_login</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>ssh_sysadm_login</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P ssh_sysadm_login off</tt>。
+
 rationale: |-
     Preventing non-privileged users from executing privileged functions mitigates
     the risk that unauthorized individuals or processes may gain unnecessary access
@@ -19,6 +22,9 @@ rationale: |-
     authorizations. Circumventing intrusion detection and prevention mechanisms or
     malicious code protection mechanisms are examples of privileged functions that
     require protection from non-privileged users.
+
+    <p><strong>中文理由：</strong></p>
+    防止非特权用户执行特权函数可降低未经授权的个人或进程获得不必要信息或权限的风险。<br /><br />特权函数包括建立账户、执行系统完整性检查或管理加密密钥等活动。非特权用户是不具备适当授权的个人。绕过入侵检测和防御机制或恶意代码防护机制也是需要防止非特权用户执行的特权函数示例。
 
 references:
     srg: SRG-OS-000324-GPOS-00125

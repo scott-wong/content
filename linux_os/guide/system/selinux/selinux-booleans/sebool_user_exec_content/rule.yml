@@ -8,7 +8,12 @@ description: |-
     If this setting is disabled, it should be enabled.
     {{{ describe_sebool_enable(sebool="user_exec_content") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>user_exec_content</tt> 为 enabled。如果禁用了此设置，则应将其启用。要启用 <tt>user_exec_content</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P user_exec_content on</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用此布尔值可确保普通用户可以执行允许的内容，同时仍由 SELinux 策略约束。
 
 severity: medium
 

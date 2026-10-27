@@ -8,7 +8,13 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="squid_use_tproxy") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>squid_use_tproxy</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>squid_use_tproxy</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    除非需要透明代理功能，否则应禁用此布尔值，以减少不必要的网络代理能力。
 
 severity: medium
 

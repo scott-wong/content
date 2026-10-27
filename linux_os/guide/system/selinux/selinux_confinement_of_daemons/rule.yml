@@ -13,9 +13,20 @@ description: |-
     <pre>$ sudo ps -eZ | grep "unconfined_service_t"</pre>
     It should produce no output in a well-configured system.
 
+    <p><strong>中文说明：</strong></p>
+    SELinux 策略中未包含规则的守护进程将继承父进程的上下文。由于守护进程在启动期间启动并继承自 <tt>init</tt> 进程，因此会继承 <tt>unconfined_service_t</tt> 上下文。
+    <br />
+    <br />
+    要检查未受限的守护进程，请运行以下命令：
+    <pre>$ sudo ps -eZ | grep "unconfined_service_t"</pre>
+    在配置良好的系统中，该命令不应产生任何输出。
+
 rationale: |-
     Daemons which run with the <tt>unconfined_service_t</tt> context may cause AVC denials,
     or allow privileges that the daemon does not require.
+
+    <p><strong>中文理由：</strong></p>
+    以 <tt>unconfined_service_t</tt> 上下文运行的守护进程可能导致 AVC 拒绝，或获得该守护进程并不需要的权限。
 
 severity: medium
 

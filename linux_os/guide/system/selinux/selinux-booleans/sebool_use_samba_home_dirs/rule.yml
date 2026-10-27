@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="use_samba_home_dirs") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>use_samba_home_dirs</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>use_samba_home_dirs</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P use_samba_home_dirs off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许将 Samba 用于用户主目录会扩大远程文件系统访问范围，并可能暴露主目录数据。
 
 severity: medium
 

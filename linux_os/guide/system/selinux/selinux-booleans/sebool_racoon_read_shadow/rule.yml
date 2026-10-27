@@ -8,7 +8,13 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="racoon_read_shadow") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>racoon_read_shadow</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>racoon_read_shadow</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值可防止 racoon 读取 shadow 文件，保护密码哈希不被泄露。
 
 severity: medium
 

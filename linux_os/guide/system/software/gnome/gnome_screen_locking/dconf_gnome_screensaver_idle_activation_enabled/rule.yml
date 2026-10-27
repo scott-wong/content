@@ -15,6 +15,14 @@ description: |-
     <pre>/org/gnome/desktop/screensaver/idle-activation-enabled</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要在 GNOME3 桌面空闲一段时间后激活屏幕保护程序，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>idle-activation-enabled</tt> 为 <tt>true</tt>。例如：
+    <pre>[org/gnome/desktop/screensaver]
+    idle-activation-enabled=true</pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/desktop/screensaver/idle-activation-enabled</pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     A session time-out lock is a temporary action taken when a user stops work and moves away from the immediate
     physical vicinity of the information system but does not logout because of the temporary nature of the absence.
@@ -27,6 +35,11 @@ rationale: |-
     real-time screen display (such as network management products) require the
     login session does not have administrator rights and the display station is located in a
     controlled-access area.
+
+    <p><strong>中文理由：</strong></p>
+    会话超时锁定是用户停止工作并离开信息系统附近但只是临时离开而不注销时采取的临时措施。与其依赖用户在离开前手动锁定操作系统会话，不如将 GNOME 桌面配置为识别用户会话已空闲并采取措施启动会话锁定。
+    <br /><br />
+    启用屏幕保护程序空闲激活可确保在空闲延迟后激活屏幕保护程序。需要持续实时屏幕显示的应用程序（例如网络管理产品）要求登录会话不具有管理员权限，并且显示终端位于受控访问区域。
 
 severity: medium
 

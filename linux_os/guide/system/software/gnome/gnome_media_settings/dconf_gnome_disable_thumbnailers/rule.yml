@@ -20,12 +20,23 @@ description: |-
     This effectively prevents an attacker from gaining access to a
     system through a flaw in GNOME3's Nautilus thumbnail creators.
 
+    <p><strong>中文说明：</strong></p>
+    系统默认桌面环境 GNOME3 使用多种缩略图程序为已打开文件夹中的新增或修改内容生成缩略图。要禁用这些缩略图应用程序的执行，请在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中添加或设置 <tt>disable-all</tt> 为 <tt>true</tt>。例如：
+    <pre>[org/gnome/desktop/thumbnailers]
+    disable-all=true</pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/local.d/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/desktop/thumbnailers/disable-all</pre>
+    设置完成后，运行 <tt>dconf update</tt>。这可有效防止攻击者利用 GNOME3 Nautilus 缩略图创建器中的缺陷访问系统。
+
 rationale: |-
     An attacker with knowledge of a flaw in a GNOME3 thumbnailer application could craft a malicious
     file to exploit this flaw. Assuming the attacker could place the malicious file on the local filesystem
     (via a web upload for example) and assuming a user browses the same location using Nautilus, the
     malicious file would exploit the thumbnailer with the potential for malicious code execution. It
     is best to disable these thumbnailer applications unless they are explicitly required.
+
+    <p><strong>中文理由：</strong></p>
+    了解 GNOME3 缩略图应用程序缺陷的攻击者可构造恶意文件来利用该缺陷。假设攻击者可以将恶意文件放到本地文件系统上（例如通过 Web 上传），并假设用户使用 Nautilus 浏览同一位置，则该恶意文件会利用缩略图程序，可能导致恶意代码执行。除非明确需要这些缩略图程序，否则最好将其禁用。
 
 severity: unknown
 

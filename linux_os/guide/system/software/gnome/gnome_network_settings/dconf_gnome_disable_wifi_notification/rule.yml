@@ -19,9 +19,22 @@ description: |-
     <pre>/org/gnome/nm-applet/suppress-wireless-networks-available</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，<tt>GNOME</tt> 会禁用 WIFI 通知。应永久设置此选项，以免用户在系统发现无线网络时连接到该网络。虽然这对移动设备有用，但对于所有其他系统应禁用此设置。
+    要配置系统禁用 WIFI 通知，请在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中添加或设置 <tt>suppress-wireless-networks-available</tt> 为 <tt>true</tt>。例如：
+    <pre>[org/gnome/nm-applet]
+    suppress-wireless-networks-available=true
+    </pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/local.d/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/nm-applet/suppress-wireless-networks-available</pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     Wireless network connections should not be allowed to be configured by general
     users on a given system as it could open the system to backdoor attacks.
+
+    <p><strong>中文理由：</strong></p>
+    不应允许普通用户在给定系统上配置无线网络连接，因为这可能使系统面临后门攻击。
 
 severity: medium
 

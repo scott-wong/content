@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="httpd_verify_dns") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>httpd_verify_dns</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>httpd_verify_dns</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P httpd_verify_dns off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 httpd 依赖 DNS 解析结果进行主机名验证，降低 DNS 欺骗和不必要外部名称解析带来的风险。
 
 severity: medium
 

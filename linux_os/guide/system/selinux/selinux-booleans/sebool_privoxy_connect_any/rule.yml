@@ -8,7 +8,13 @@ description: |-
     This setting should be disabled.
     {{{ describe_sebool_disable(sebool="privoxy_connect_any") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>privoxy_connect_any</tt> 处于启用状态。应禁用该设置。
+    应禁用 SELinux 布尔值 <tt>privoxy_connect_any</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值可限制代理可连接的目标，减少 Privoxy 被滥用为开放代理的风险。
 
 severity: medium
 

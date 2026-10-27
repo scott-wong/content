@@ -8,7 +8,13 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="secure_mode_policyload") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>secure_mode_policyload</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>secure_mode_policyload</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值可保持正常的策略加载和更新能力，同时由其他 SELinux 控制保护策略完整性。
 
 severity: medium
 

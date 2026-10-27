@@ -14,11 +14,21 @@ description: |-
     <pre>fixfiles onboot</pre>
     Then reboot the system.
 
+    <p><strong>中文说明：</strong></p>
+    SELinux 状态应在系统引导时设置为 <tt>{{{ xccdf_value("var_selinux_state") }}}</tt>。在 <tt>/etc/selinux/config</tt> 文件中添加或更正以下行，以将系统配置为引导到 enforcing 模式：
+    <pre>SELINUX={{{ xccdf_value("var_selinux_state") }}}</pre>
+    运行以下命令确保所有文件都具有正确的 SELinux 标签：
+    <pre>fixfiles onboot</pre>
+    然后重启系统。
+
 rationale: |-
     Setting the SELinux state to enforcing ensures SELinux is able to confine
     potentially compromised processes to the security policy, which is designed to
     prevent them from causing damage to the system or further elevating their
     privileges.
+
+    <p><strong>中文理由：</strong></p>
+    将 SELinux 状态设置为 enforcing 可确保 SELinux 能够将可能遭到入侵的进程限制在安全策略内，从而防止它们对系统造成损害或进一步提升权限。
 
 severity: high
 

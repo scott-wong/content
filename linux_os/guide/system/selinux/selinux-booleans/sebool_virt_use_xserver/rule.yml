@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="virt_use_xserver") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>virt_use_xserver</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>virt_use_xserver</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_use_xserver off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许虚拟化组件访问 X server 会扩大其图形会话访问范围。
 
 severity: medium
 

@@ -8,7 +8,13 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="puppetagent_manage_all_files") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>puppetagent_manage_all_files</tt> 处于禁用状态。如果该设置为启用状态，应将其禁用。
+    应禁用 SELinux 布尔值 <tt>puppetagent_manage_all_files</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值可限制 Puppet 代理管理任意文件，降低配置管理组件被滥用时的影响。
 
 severity: medium
 

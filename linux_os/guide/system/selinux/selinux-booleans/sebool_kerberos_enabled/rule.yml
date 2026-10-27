@@ -9,7 +9,12 @@ description: |-
     applications to run with Kerberos.
     {{{ describe_sebool_enable(sebool="kerberos_enabled") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>kerberos_enabled</tt> 处于启用状态。如果此设置已禁用，应启用，以允许受限应用使用 Kerberos 运行。要启用 <tt>kerberos_enabled</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P kerberos_enabled on</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用后，可允许受限应用使用 Kerberos 身份验证，同时仍由 SELinux 域策略限制其访问范围。
 
 severity: medium
 

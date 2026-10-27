@@ -20,10 +20,23 @@ description: |-
     <pre>/org/gnome/login-screen/disable-restart-buttons</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    在默认图形环境中，直接登录系统的用户会看到登录屏幕，任何已知或未知用户都可以关闭或重启系统。应通过将 <tt>disable-restart-buttons</tt> 设置为 <tt>true</tt> 来禁用此功能。
+    <br /><br />
+    要禁用该功能，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或编辑 <tt>disable-restart-buttons</tt>。例如：
+    <pre>[org/gnome/login-screen]
+    disable-restart-buttons=true</pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/login-screen/disable-restart-buttons</pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     A user who is at the console can reboot the system at the login screen. If restart or shutdown buttons
     are pressed at the login screen, this can create the risk of short-term loss of availability of systems
     due to reboot.
+
+    <p><strong>中文理由：</strong></p>
+    位于控制台的用户可以在登录屏幕重启系统。如果在登录屏幕按下重启或关闭按钮，可能因重启而导致系统短期不可用。
 
 severity: high
 

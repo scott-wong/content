@@ -8,6 +8,9 @@ description: |-
     (if permitted) can access. If <tt>/dev/shm</tt> is not configured,
     tmpfs will be mounted to /dev/shm by systemd.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>/dev/shm</tt> 是传统的共享内存概念。一个程序会创建内存区域，其他进程（如果获准）可以访问该区域。如果未配置 <tt>/dev/shm</tt>，systemd 会将 tmpfs 挂载到 /dev/shm。
+
 rationale: |-
     Any user can upload and execute files inside the <tt>/dev/shm</tt> similar to
     the <tt>/tmp</tt> partition. Configuring <tt>/dev/shm</tt> allows an administrator
@@ -17,6 +20,9 @@ rationale: |-
     was updated, the hardlink would be broken and the attacker would have his own copy
     of the program. If the program happened to have a security vulnerability, the attacker
     could continue to exploit the known flaw.
+
+    <p><strong>中文理由：</strong></p>
+    任何用户都可以像使用 <tt>/tmp</tt> 分区一样，在 <tt>/dev/shm</tt> 中上传并执行文件。配置 <tt>/dev/shm</tt> 使管理员可以在挂载点上设置 noexec 选项，使攻击者无法利用 /dev/shm 安装可执行代码。这还可防止攻击者建立指向系统 setuid 程序的硬链接并等待该程序更新。程序更新后，硬链接会断开，攻击者将拥有该程序自己的副本。如果该程序恰好存在安全漏洞，攻击者可以继续利用该已知缺陷。
 
 severity: low
 

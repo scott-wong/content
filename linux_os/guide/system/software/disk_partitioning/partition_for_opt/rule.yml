@@ -7,11 +7,17 @@ description: |-
     It is recommended that the <tt>/opt</tt> directory resides on a separate
     partition.
 
+    <p><strong>中文说明：</strong></p>
+    建议将 <tt>/opt</tt> 目录放在单独的分区上。
+
 rationale: |-
     The <tt>/opt</tt> partition contains additional software, usually installed
     outside the packaging system. Putting this directory on a separate partition
     makes it easier to apply restrictions e.g. through the <tt>nosuid</tt> mount
     option.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/opt</tt> 分区包含附加软件，通常安装在软件包管理系统之外。将该目录放在单独分区上，可以通过 <tt>nosuid</tt> 挂载选项等方式更容易地应用限制。
 
 severity: medium
 

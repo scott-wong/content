@@ -9,7 +9,12 @@ description: |-
     Otherwise, enable it.
     {{{ describe_sebool_disable(sebool="selinuxuser_direct_dri_enabled") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>selinuxuser_direct_dri_enabled</tt> 处于启用状态。如果系统未安装或不使用 XWindows，应禁用该设置；否则应启用。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    如果系统未安装或不使用 XWindows，禁用此布尔值可减少图形栈攻击面；使用 XWindows 时应启用，以支持 Direct Rendering Infrastructure。
 
 severity: medium
 

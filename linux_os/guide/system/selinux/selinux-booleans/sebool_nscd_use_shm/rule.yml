@@ -9,7 +9,12 @@ description: |-
     to use shared memory.
     {{{ describe_sebool_enable(sebool="nscd_use_shm") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>nscd_use_shm</tt> 处于启用状态。如果此设置已禁用，应启用，以允许 <tt>nscd</tt> 使用共享内存。要启用 <tt>nscd_use_shm</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P nscd_use_shm on</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    启用后，可允许 nscd 使用共享内存缓存名称服务结果，从而支持正常名称服务功能，同时仍受 SELinux 约束。
 
 severity: medium
 

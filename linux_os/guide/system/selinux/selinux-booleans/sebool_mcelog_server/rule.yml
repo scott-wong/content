@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="mcelog_server") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>mcelog_server</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>mcelog_server</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P mcelog_server off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 mcelog 运行网络服务器，减少硬件错误记录组件的网络暴露面。
 
 severity: medium
 

@@ -9,7 +9,13 @@ description: |-
     on filesystems that do not have extended attributes e.g. FAT, CDROM, FLOPPY, etc.
     {{{ describe_sebool_disable(sebool="selinuxuser_rw_noexattrfile") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>selinuxuser_rw_noexattrfile</tt> 处于启用状态。应禁用该设置。
+    应禁用 SELinux 布尔值 <tt>selinuxuser_rw_noexattrfile</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用此布尔值可防止用户读写没有扩展属性的文件系统（例如 FAT、CDROM、FLOPPY），降低绕过标签和属性保护的风险。
 
 severity: medium
 

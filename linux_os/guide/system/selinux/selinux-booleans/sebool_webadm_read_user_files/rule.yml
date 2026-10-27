@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="webadm_read_user_files") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>webadm_read_user_files</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>webadm_read_user_files</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P webadm_read_user_files off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许 Web 管理员读取用户文件可能暴露敏感数据并扩大访问范围。
 
 severity: medium
 

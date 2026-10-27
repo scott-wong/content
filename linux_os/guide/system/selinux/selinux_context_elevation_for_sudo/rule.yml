@@ -13,6 +13,12 @@ description: |-
     SELinux context with the use of the sudo command:
     <pre>%wheel ALL=(ALL) TYPE=sysadm_t ROLE=sysadm_r ALL</pre>
 
+    <p><strong>中文说明：</strong></p>
+    将操作系统配置为在管理员调用 sudo 命令时提升 SELinux 上下文。使用以下命令编辑 /etc/sudoers.d 目录中的文件：
+    <pre>sudo visudo -f /etc/sudoers.d/<i>CUSTOM_FILE</i></pre>
+    使用以下示例在 /etc/sudoers.d 目录中构建 <i>CUSTOM_FILE</i>，以允许属于指定 sudoers 管理员组的任何管理员通过 sudo 命令提升其 SELinux 上下文：
+    <pre>%wheel ALL=(ALL) TYPE=sysadm_t ROLE=sysadm_r ALL</pre>
+
 rationale: |-
     Preventing non-privileged users from executing privileged functions mitigates
     the risk that unauthorized individuals or processes may gain unnecessary access
@@ -24,6 +30,11 @@ rationale: |-
     who do not possess appropriate authorizations. Circumventing intrusion detection
     and prevention mechanisms or malicious code protection mechanisms are examples
     of privileged functions that require protection from non-privileged users.
+
+    <p><strong>中文理由：</strong></p>
+    防止非特权用户执行特权功能，可降低未授权个人或进程获得不必要的信息或权限的风险。
+    <br /><br />
+    特权功能包括建立账户、执行系统完整性检查或管理加密密钥管理活动等。非特权用户是指不具备适当授权的个人。规避入侵检测和防御机制或恶意代码保护机制，就是需要防止非特权用户执行的特权功能示例。
 
 severity: medium
 

@@ -17,9 +17,21 @@ description: |-
     <pre>/org/gnome/Vino/require-encryption</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，<tt>GNOME</tt> 使用 <tt>Vino</tt> 进行远程访问时要求加密。要防止远程访问加密被禁用，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>require-encryption</tt> 为 <tt>true</tt>。例如：
+    <pre>[org/gnome/Vino]
+    require-encryption=true
+    </pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/Vino/require-encryption</pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     Open X displays allow an attacker to capture keystrokes and to execute commands
     remotely.
+
+    <p><strong>中文理由：</strong></p>
+    开放的 X 显示允许攻击者捕获击键并远程执行命令。
 
 severity: medium
 

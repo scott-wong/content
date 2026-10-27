@@ -10,9 +10,15 @@ description: |-
     be configured not to be mounted automatically with the <tt>noauto</tt> mount
     option.
 
+    <p><strong>中文说明：</strong></p>
+    建议将 <tt>/boot</tt> 目录放在单独的分区上。这样可以通过 <tt>noexec</tt> 挂载选项等方式更容易地应用限制。最终，可将 <tt>/boot</tt> 分区配置为使用 <tt>noauto</tt> 挂载选项，不自动挂载。
+
 rationale: |-
     The <tt>/boot</tt> partition contains the kernel and bootloader files.
     Access to this partition should be restricted.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/boot</tt> 分区包含内核和引导加载程序文件。应限制对此分区的访问。
 
 severity: medium
 

@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="virt_sandbox_use_netlink") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>virt_sandbox_use_netlink</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>virt_sandbox_use_netlink</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P virt_sandbox_use_netlink off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许沙箱容器使用 Netlink 会扩大其内核接口访问范围。
 
 severity: medium
 

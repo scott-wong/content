@@ -12,9 +12,17 @@ description: |-
     <pre>[daemon]
     TimedLoginEnable=false</pre>
 
+    <p><strong>中文说明：</strong></p>
+    GNOME 显示管理器（GDM）可以允许用户无需凭据登录，这在公共终端场景中可能有用。允许用户无需凭据登录或使用 "guest" 账户访问会带来固有安全风险，应禁用。要禁用定时登录或 guest 账户访问，请在 <tt>/etc/gdm/custom.conf</tt> 的 <tt>[daemon]</tt> 节中将 <tt>TimedLoginEnable</tt> 设置为 <tt>false</tt>。例如：
+    <pre>[daemon]
+    TimedLoginEnable=false</pre>
+
 rationale: |-
     Failure to restrict system access to authenticated users negatively impacts operating
     system security.
+
+    <p><strong>中文理由：</strong></p>
+    未能将系统访问限制为已通过身份验证的用户，会对操作系统安全产生负面影响。
 
 severity: high
 

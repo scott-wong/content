@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="xdm_write_home") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>xdm_write_home</tt> 为 disabled。如果启用了此设置，则应将其禁用。要禁用 <tt>xdm_write_home</tt> SELinux 布尔值，请运行 <tt>sudo setsebool -P xdm_write_home off</tt>。
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    允许 XDM 写入用户主目录会扩大显示管理器修改用户数据的权限。
 
 severity: medium
 

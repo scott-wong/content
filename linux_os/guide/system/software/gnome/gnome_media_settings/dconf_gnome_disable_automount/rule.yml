@@ -17,11 +17,22 @@ description: |-
     <pre>/org/gnome/desktop/media-handling/automount</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    系统默认桌面环境 GNOME3 会在设备或可移动介质（例如 DVD、CD 和 USB 闪存盘）插入系统时进行挂载。要在 GNOME3 中禁用自动挂载，请在 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/00-security-settings</tt> 中添加或设置 <tt>automount</tt> 为 <tt>false</tt>。例如：
+    <pre>[org/gnome/desktop/media-handling]
+    automount=false</pre>
+    添加设置后，请将锁添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt>，以防止用户修改。例如：
+    <pre>/org/gnome/desktop/media-handling/automount</pre>
+    设置完成后，运行 <tt>dconf update</tt>。
+
 rationale: |-
     Disabling automatic mounting in GNOME3 can prevent
     the introduction of malware via removable media.
     It will, however, also prevent desktop users from legitimate use
     of removable media.
+
+    <p><strong>中文理由：</strong></p>
+    在 GNOME3 中禁用自动挂载可防止通过可移动介质引入恶意软件。但是，这也会阻止桌面用户合法使用可移动介质。
 
 severity: medium
 

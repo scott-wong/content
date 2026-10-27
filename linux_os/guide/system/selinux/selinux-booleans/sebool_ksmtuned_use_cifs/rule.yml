@@ -8,7 +8,12 @@ description: |-
     If this setting is enabled, it should be disabled.
     {{{ describe_sebool_disable(sebool="ksmtuned_use_cifs") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>ksmtuned_use_cifs</tt> 处于禁用状态。如果此设置已启用，应将其禁用。要禁用 <tt>ksmtuned_use_cifs</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P ksmtuned_use_cifs off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 ksmtuned 访问 CIFS/SMB 挂载，减少内存调优服务跨共享访问数据的风险。
 
 severity: medium
 

@@ -8,7 +8,12 @@ description: |-
     This setting should be disabled.
     {{{ describe_sebool_disable(sebool="openvpn_can_network_connect") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    默认情况下，SELinux 布尔值 <tt>openvpn_can_network_connect</tt> 处于启用状态。应禁用此设置。要禁用 <tt>openvpn_can_network_connect</tt> SELinux 布尔值，请运行以下命令：<tt>sudo setsebool -P openvpn_can_network_connect off</tt>
+
+rationale: |-
+    <p><strong>中文理由：</strong></p>
+    禁用后，可防止 OpenVPN 发起任意网络连接，限制 VPN 进程的网络访问范围。
 
 severity: medium
 
