@@ -17,11 +17,23 @@ description: |-
     To enable FIPS, the system requires that the <tt>fips</tt> module is added in <tt>dracut</tt> configuration.
     Check if <tt>/etc/dracut.conf.d/40-fips.conf</tt> contain <tt>add_dracutmodules+=" fips "</tt>
 
+    <p><strong>中文说明：</strong></p>
+    {{% if 'rhel' not in product %}}
+    要启用 FIPS 模式，请运行以下命令：
+    <pre>fips-mode-setup --enable</pre>
+    {{% else %}}
+    {{{ full_name }}} 具有可在安装时启用 FIPS 模式的内核标志。安装程序必须使用 <tt>fips=1</tt> 启动，系统才能启用 FIPS 模式。不支持在已存在的系统上启用 FIPS 模式。如果此规则在已安装系统上失败，则属于永久性不合规项，无法修复。
+    {{% endif %}}
+    要启用 FIPS，系统需要在 <tt>dracut</tt> 配置中添加 <tt>fips</tt> 模块。请检查 <tt>/etc/dracut.conf.d/40-fips.conf</tt> 是否包含 <tt>add_dracutmodules+=" fips "</tt>。
+
 rationale: |-
     Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to
     protect data. The operating system must implement cryptographic modules adhering to the higher
     standards approved by the federal government since this provides assurance they have been tested
     and validated.
+
+    <p><strong>中文理由：</strong></p>
+    <p>使用弱算法或未经测试的加密算法会削弱使用加密保护数据的目的。操作系统必须实现符合联邦政府批准更高标准的加密模块，因为这可保证这些模块已经过测试和验证。</p>
 
 severity: high
 

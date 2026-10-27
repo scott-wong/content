@@ -2,10 +2,11 @@ documentation_complete: true
 
 title: 'Only the VDSM User Can Use sudo NOPASSWD'
 
-description: 
-    The sudo <tt>NOPASSWD</tt> tag, when specified, allows a user to execute commands using
-    sudo without having to authenticate. Only the <tt>vdsm</tt> user should have this
-    capability in any sudo configuration snippets in <tt>/etc/sudoers.d/</tt>.
+description: |-
+    The sudo <tt>NOPASSWD</tt> tag, when specified, allows a user to execute commands using sudo without having to authenticate. Only the <tt>vdsm</tt> user should have this capability in any sudo configuration snippets in <tt>/etc/sudoers.d/</tt>.
+
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>NOPASSWD</tt> 标签允许用户在使用 sudo 执行命令时无需进行身份验证。在 <tt>/etc/sudoers.d/</tt> 中的任何 sudo 配置片段里，只有 <tt>vdsm</tt> 用户应具有此能力。</p>
 
 rationale: |-
     Without re-authentication, users may access resources or perform tasks for which they
@@ -13,6 +14,9 @@ rationale: |-
     <br /><br />
     When operating systems provide the capability to escalate a functional capability, it
     is critical that the user re-authenticate.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果不重新进行身份验证，用户可能访问其未获授权访问的资源或执行其未获授权执行的任务。<br /><br />当操作系统提供提升功能权限的能力时，用户重新进行身份验证至关重要。</p>
 
 severity: medium
 

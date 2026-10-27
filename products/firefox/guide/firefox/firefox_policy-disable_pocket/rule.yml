@@ -8,9 +8,15 @@ description: |-
     <tt>DisablePocket</tt> to <tt>true</tt>
     in the policies file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在策略文件中将 <tt>DisablePocket</tt> 设置为 <tt>true</tt> 来禁用 Pocket。</p>
+
 rationale: |-
     Pocket is a social bookmarking service for storing, sharing, and discovering web bookmarks.
     Data gathering cloud services such as Pocket are generally disabled in some organizations such as the DoD.
+
+    <p><strong>中文理由：</strong></p>
+    <p>Pocket 是一种社交书签服务，用于存储、共享和发现 Web 书签。某些组织（例如 DoD）通常会禁用 Pocket 等数据收集云服务。</p>
 
 severity: medium
 

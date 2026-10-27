@@ -6,7 +6,14 @@ title: 'Install AIDE'
 description: |-
     {{{ describe_package_install(package="aide") }}}
 
-rationale: 'The AIDE package must be installed if it is to be available for integrity checking.'
+    <p><strong>中文说明：</strong></p>
+    <p>应安装 <tt>aide</tt> 软件包。</p>
+
+rationale: |-
+    The AIDE package must be installed if it is to be available for integrity checking.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果要使用 AIDE 进行完整性检查，则必须安装 AIDE 软件包。</p>
 
 severity: medium
 

@@ -6,9 +6,15 @@ title: 'Uninstall abrt-addon-kerneloops Package'
 description: |-
     {{{ describe_package_remove(package="abrt-addon-kerneloops") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>abrt-addon-kerneloops</tt> 软件包。</p>
+
 rationale: |-
     <tt>abrt-addon-kerneloops</tt> contains plugins for collecting kernel crash information and
     reporter plugin which sends this information to a specified server, usually to kerneloops.org.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>abrt-addon-kerneloops</tt> 包含用于收集内核崩溃信息的插件，以及将信息发送到指定服务器（通常为 kerneloops.org）的报告插件。</p>
 
 severity: low
 

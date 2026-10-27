@@ -6,6 +6,9 @@ title: 'Install cryptsetup Package'
 description: |-
     {{{ describe_package_install(package="cryptsetup") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>cryptsetup</tt> 软件包。</p>
+
 rationale: |-
     LUKS is the upcoming standard for Linux hard disk encryption. By providing a standard
     on-disk format, it does not only facilitate compatibility among distributions, but also
@@ -13,6 +16,9 @@ rationale: |-
     LUKS stores all necessary setup information in the partition header, enabling the user
     to transport or migrate their data seamlessly. LUKS for dm-crypt is implemented in
     <tt>cryptsetup</tt>.
+
+    <p><strong>中文理由：</strong></p>
+    <p>LUKS 是即将成为标准的 Linux 硬盘加密标准。通过提供标准磁盘格式，它不仅促进发行版之间的兼容性，还可安全管理多个用户密码。与现有解决方案相比，LUKS 将所有必要的设置信息存储在分区头中，使用户能够无缝传输或迁移数据。用于 dm-crypt 的 LUKS 由 <tt>cryptsetup</tt> 实现。</p>
 
 severity: medium
 

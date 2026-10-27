@@ -9,9 +9,15 @@ description: |-
     intrusion prevention capabilities by confining privileged programs and user
     sessions which may become compromised.
 
+    <p><strong>中文说明：</strong></p>
+    <p>基础 {{{ full_name }}} 平台已包含可检测入侵者活动的复杂审计系统，以及 SELinux，后者通过限制可能被攻陷的特权程序和用户会话提供基于主机的入侵防御能力。</p>
+
 rationale: |-
     Host-based intrusion detection tools provide a system-level defense when an
     intruder gains access to a system or network.
+
+    <p><strong>中文理由：</strong></p>
+    <p>当入侵者获得系统或网络访问权限时，基于主机的入侵检测工具可提供系统级防御。</p>
 
 severity: high
 

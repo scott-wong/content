@@ -3,6 +3,9 @@ documentation_complete: true
 title: Enable FIPS Mode
 
 description: |-
+
+    <p><strong>中文说明：</strong></p>
+    <p>要启用 FIPS 模式，系统必须在安装时通过 <tt>fips=1</tt> 启动（RHCOS 集群必须在 <tt>install-config.yaml</tt> 中设置 <tt>fips: true</tt>）；在支持的环境上，可运行 <tt>fips-mode-setup --enable</tt> 进行配置。启用后，应确保 <tt>/proc/sys/crypto/fips_enabled</tt> 的值为 <tt>1</tt>，并确认支持 FIPS 的加密模块和引导参数已正确配置。</p>
 {{% if product == "rhcos4" %}}
     OpenShift has an installation-time flag that can enable FIPS mode
     for the cluster. The flag <pre>fips: true</pre> must be enabled
@@ -42,6 +45,9 @@ rationale: |-
     protect data. The operating system must implement cryptographic modules adhering to the higher
     standards approved by the federal government since this provides assurance they have been tested
     and validated.
+
+    <p><strong>中文理由：</strong></p>
+    <p>使用弱算法或未经测试的加密算法会削弱使用加密保护数据的目的。操作系统必须实现符合联邦政府批准更高标准的加密模块，因为这可保证这些模块已经过测试和验证。</p>
 
 severity: high
 

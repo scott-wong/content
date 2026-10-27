@@ -6,9 +6,15 @@ title: 'Uninstall abrt-addon-ccpp Package'
 description: |-
     {{{ describe_package_remove(package="abrt-addon-ccpp") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>abrt-addon-ccpp</tt> 软件包。</p>
+
 rationale: |-
     <tt>abrt-addon-ccpp</tt> contains hooks for C/C++ crashed programs and <tt>abrt</tt>'s
     C/C++ analyzer plugin.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>abrt-addon-ccpp</tt> 包含用于 C/C++ 崩溃程序的 hook 以及 <tt>abrt</tt> 的 C/C++ 分析器插件。</p>
 
 severity: low
 

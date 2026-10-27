@@ -6,9 +6,15 @@ title: 'Uninstall libreport-plugin-rhtsupport Package'
 description: |-
     {{{ describe_package_remove(package="libreport-plugin-rhtsupport") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>libreport-plugin-rhtsupport</tt> 软件包。</p>
+
 rationale: |-
     <tt>libreport-plugin-rhtsupport</tt> is a ABRT plugin to report bugs into the
     Red Hat Support system.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>libreport-plugin-rhtsupport</tt> 是用于向 Red Hat Support 系统报告缺陷的 ABRT 插件。</p>
 
 severity: low
 

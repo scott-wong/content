@@ -7,8 +7,14 @@ description: |-
     Audio/Video autoplay may be disabled in an administrative policy by setting
     the <tt>Default</tt> key under <tt>Permissions</tt>, <tt>Autoplay</tt> to <tt>"block-audio-video"</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过将 <tt>Permissions</tt> 下 <tt>Autoplay</tt> 中的 <tt>Default</tt> 键设置为 <tt>"block-audio-video"</tt>，在管理策略中禁用音频/视频自动播放。</p>
+
 rationale: |-
     Autoplay allows the user to control whether videos can play automatically (without user consent) with audio content. The user must be able to select content that is run within the browser window.
+
+    <p><strong>中文理由：</strong></p>
+    <p>自动播放允许用户控制视频是否可以在带有音频内容时自动播放（未经用户同意）。用户必须能够选择在浏览器窗口中运行的内容。</p>
 
 severity: medium
 

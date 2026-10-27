@@ -6,11 +6,17 @@ title: 'Uninstall pigz Package'
 description: |-
     {{{ describe_package_remove(package="pigz") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>pigz</tt> 软件包。</p>
+
 rationale: |-
     Binaries shipped in <tt>pigz</tt> package in {{{ full_name }}}
     have not been compiled using recommended compiler flags. The binaries
     are compiled without sufficient stack protection and its address space
     layout randomization (ASLR) is weak.
+
+    <p><strong>中文理由：</strong></p>
+    {{{ full_name }}} 中 <tt>pigz</tt> 软件包附带的二进制文件未使用建议的编译器标志编译。这些二进制文件编译时没有足够的栈保护，且地址空间布局随机化（ASLR）较弱。
 
 severity: low
 

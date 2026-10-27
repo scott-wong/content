@@ -6,6 +6,9 @@ title: 'Install subscription-manager Package'
 description: |-
     {{{ describe_package_install(package="subscription-manager") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>subscription-manager</tt> 软件包。</p>
+
 rationale: |-
     Red Hat Subscription Manager is a local service which tracks installed products
     and subscriptions on a local system to help manage subscription assignments.
@@ -19,6 +22,13 @@ rationale: |-
     from the Red Hat entitlement platform - the subscription-manager and
     product-id plugins.
     {{% endif %}}
+
+    <p><strong>中文理由：</strong></p>
+    <p>Red Hat Subscription Manager 是一种本地服务，用于跟踪本地系统上已安装的产品和订阅，以帮助管理订阅分配。它与后端订阅服务（Customer Portal 或 Subscription Asset Manager 等本地服务器）通信，并与 {{{ package_manager }}} 等内容管理工具配合使用。
+
+    {{% if product in ["rhel9"] %}}
+    除其他内容外，该软件包还提供用于与 Red Hat 授权平台中的仓库和订阅交互的 {{{ package_manager }}} 插件，即 subscription-manager 和 product-id 插件。
+    {{% endif %}}</p>
 
 severity: medium
 

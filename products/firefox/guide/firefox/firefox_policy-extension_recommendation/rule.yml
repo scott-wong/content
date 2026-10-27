@@ -7,8 +7,14 @@ description: |-
     Extension recommendations may be disabled by setting
     <tt>extensions.htmlaboutaddons.recommendations.enabled</tt> to <tt>false</tt> in the policy file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在策略文件中将 <tt>extensions.htmlaboutaddons.recommendations.enabled</tt> 设置为 <tt>false</tt> 来禁用扩展推荐。</p>
+
 rationale: |-
     The Recommended Extensions program will make it easier for users to discover extensions that have been reviewed for security, functionality, and user experience.
+
+    <p><strong>中文理由：</strong></p>
+    <p>Recommended Extensions 计划可使用户更容易发现经过安全、功能和用户体验审查的扩展。</p>
 severity: medium
 
 references:

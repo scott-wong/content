@@ -10,11 +10,19 @@ description: |-
     If the system is not configured to use one of these sources, updates (in the form of RPM packages)
     can be manually downloaded and installed using <tt>rpm</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>如果系统已加入 Red Hat Network、Red Hat Satellite Server 或 yum 服务器，请运行以下命令安装更新：</p>
+    <pre>$ sudo yum update</pre>
+    如果系统未配置为使用这些来源之一，则可以手动下载 RPM 软件包形式的更新，并使用 <tt>rpm</tt> 安装。
+
 rationale: |-
     Use of versions of an application which are not supported by the vendor
     are not permitted. Vendors respond to security flaws with updates and
     patches. These updates are not available for unsupported version which
     can leave the application vulnerable to attack.
+
+    <p><strong>中文理由：</strong></p>
+    <p>不允许使用供应商不支持的应用程序版本。供应商会通过更新和补丁响应安全缺陷。这些更新不适用于不受支持的版本，这会使应用程序容易受到攻击。</p>
 
 severity: high
 

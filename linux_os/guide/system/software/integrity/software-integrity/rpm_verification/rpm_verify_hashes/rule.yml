@@ -24,10 +24,28 @@ description: |-
     Alternatively, the package can be reinstalled from trusted media using the command:
     <pre>$ sudo rpm -Uvh <i>PACKAGENAME</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>如果没有加密完整性保护，系统可执行文件和文件可能被未授权用户修改而无法被发现。RPM 软件包管理系统可以检查已安装软件包的哈希，包括许多对系统安全很重要的软件包。
+
+    要验证系统文件和命令的加密哈希与供应商值匹配，请运行以下命令列出哈希与 RPM 数据库预期值不同的文件：</p>
+    <pre>$ rpm -Va --noconfig | grep '^..5'</pre>
+
+    如果文件不应发生更改，请使用审计日志或其他方式调查更改原因。然后可重新安装软件包以恢复文件。运行以下命令确定文件所属的软件包：
+    <pre>$ rpm -qf <i>FILENAME</i></pre>
+
+    可使用以下命令从 {{{ pkg_manager }}} 存储库重新安装软件包：
+    <pre>$ sudo {{{ pkg_manager }}} reinstall <i>PACKAGENAME</i></pre>
+
+    或者，可使用以下命令从受信任介质重新安装软件包：
+    <pre>$ sudo rpm -Uvh <i>PACKAGENAME</i></pre>
+
 rationale: |-
     The hashes of important files like system executables should match the
     information given by the RPM database. Executables with erroneous hashes could
     be a sign of nefarious activity on the system.
+
+    <p><strong>中文理由：</strong></p>
+    <p>系统可执行文件等重要文件的哈希应与 RPM 数据库提供的信息匹配。哈希错误的可执行文件可能表明系统上存在恶意活动。</p>
 
 severity: high
 

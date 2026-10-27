@@ -7,8 +7,14 @@ description: |-
     Firefox has a feature to permit installed add-ons and plugins to automatically update. The check may be disabled in an
     administrative policy by setting the <tt>ExtensionUpdate</tt> key under <tt>policies</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>Firefox 具有允许已安装附加组件和插件自动更新的功能。可以通过在 <tt>policies</tt> 下将 <tt>ExtensionUpdate</tt> 键设置为 <tt>false</tt>，在管理策略中禁用自动更新。</p>
+
 rationale: |-
     Automatic updates from untrusted sites puts the entire enclave at risk and may override existing security settings.
+
+    <p><strong>中文理由：</strong></p>
+    <p>来自不受信任站点的自动更新会使整个隔离区面临风险，并可能覆盖现有安全设置。</p>
 severity: medium
 
 references:

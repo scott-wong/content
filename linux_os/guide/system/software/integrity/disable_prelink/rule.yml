@@ -11,9 +11,18 @@ description: |-
     Next, run the following command to return binaries to a normal, non-prelinked state:
     <pre>$ sudo /usr/sbin/prelink -ua</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>prelinking 功能会更改二进制文件以尝试缩短启动时间。要禁用它，请更改 <tt>/etc/sysconfig/prelink</tt> 中的以下行或添加该行：</p>
+    <pre>PRELINKING=no</pre>
+    接下来，运行以下命令将二进制文件恢复正常、未预链接状态：
+    <pre>$ sudo /usr/sbin/prelink -ua</pre>
+
 rationale: |-
     Because the prelinking feature changes binaries, it can interfere with the
     operation of certain software and/or modes such as AIDE, FIPS, etc.
+
+    <p><strong>中文理由：</strong></p>
+    <p>由于 prelinking 功能会更改二进制文件，它可能干扰 AIDE、FIPS 等某些软件和/或模式的操作。</p>
 
 severity: medium
 

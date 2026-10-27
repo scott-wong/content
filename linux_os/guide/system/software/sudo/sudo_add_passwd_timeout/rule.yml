@@ -5,6 +5,9 @@ title: 'Ensure sudo passwd_timeout is appropriate - sudo passwd_timeout'
 
 description: |-
     The sudo <tt>passwd_timeout</tt> tag sets the amount of time sudo password prompt waits.
+
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>passwd_timeout</tt> 标记设置 sudo 密码提示等待的时间。</p>
 {{%- if 'rhel' in product or 'ol' in families %}}
     On {{{ full_name }}}, the default <tt>passwd_timeout</tt> value is 5 minutes.
 {{% endif %}}
@@ -15,6 +18,9 @@ description: |-
 
 rationale: |-
     Reducing the time <tt>sudo</tt> waits for a a password reduces the time the process is exposed.
+
+    <p><strong>中文理由：</strong></p>
+    <p>缩短 <tt>sudo</tt> 等待密码的时间可减少进程暴露的时间。</p>
 
 severity: medium
 

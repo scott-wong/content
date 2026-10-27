@@ -20,9 +20,27 @@ description: |-
     to <tt>1</tt> in <tt>{{{ pkg_manager_config_file }}}</tt>.
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    <p><tt>{{{ pkg_manager }}}</tt> 应配置为在安装新版本后移除先前的软件组件。要将 <tt>{{{ pkg_manager }}}</tt> 配置为在更新后移除先前的软件组件，请将
+    {{% if 'sle' in product or 'slmicro' in product %}}
+    <tt>solver.upgradeRemoveDroppedPackages</tt>
+    {{% elif 'ubuntu' in product %}}
+    <tt>::Remove-Unused-Dependencies</tt> 和 <tt>::Remove-Unused-Kernel-Packages</tt>
+    {{% else %}}
+    <tt>clean_requirements_on_remove</tt>
+    {{% endif %}}
+    {{% if 'ubuntu' in product %}}
+    设置为 <tt>true</tt>，位置为 <tt>{{{ pkg_manager_config_file }}}</tt>。
+    {{% else %}}
+    设置为 <tt>1</tt>，位置为 <tt>{{{ pkg_manager_config_file }}}</tt>。
+    {{% endif %}}</p>
+
 rationale: |-
     Previous versions of software components that are not removed from the information
     system after updates have been installed may be exploited by some adversaries.
+
+    <p><strong>中文理由：</strong></p>
+    <p>安装更新后未从信息系统中移除的先前软件组件版本可能被某些对手利用。</p>
 
 severity: low
 

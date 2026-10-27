@@ -2,13 +2,20 @@ documentation_complete: true
 
 title: Verify Group Who Owns /etc/sudoers File
 
-description: '{{{ describe_file_group_owner(file="/etc/sudoers", group="root") }}}'
+description: |-
+    {{{ describe_file_group_owner(file="/etc/sudoers", group="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <p>确保 <tt>/etc/sudoers</tt> 的文件所属组为 <tt>root</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/sudoers file by the root group is important
     because this file hosts sudo configuration. Protection of this
     file is critical for system security. Assigning the ownership to root
     ensures exclusive control of the sudo configuration.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>/etc/sudoers</tt> 文件由 root 组拥有很重要，因为该文件存放 sudo 配置。保护此文件对系统安全至关重要。将所有权分配给 root 可确保对 sudo 配置的独占控制。</p>
 
 severity: medium
 

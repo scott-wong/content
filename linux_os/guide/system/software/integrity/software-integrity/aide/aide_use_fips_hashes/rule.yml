@@ -12,9 +12,17 @@ description: |-
     AIDE rules can be configured in multiple ways; this is merely one example that is already
     configured by default.
 
+    <p><strong>中文说明：</strong></p>
+    <p>默认情况下，AIDE 的 <tt>NORMAL</tt> 规则集中会添加 <tt>sha512</tt> 选项。如果使用自定义规则集或缺少 <tt>sha512</tt> 选项，请将 <tt>sha512</tt> 添加到相应规则集。例如，在 <tt>/etc/aide.conf</tt> 的以下行中添加 <tt>sha512</tt>：</p>
+    <pre>NORMAL = FIPSR+sha512</pre>
+    AIDE 规则可通过多种方式配置；此处仅为默认已配置的一个示例。
+
 rationale: |-
     File integrity tools use cryptographic hashes for verifying file contents and directories
     have not been altered. These hashes must be FIPS 140-2 approved cryptographic hashes.
+
+    <p><strong>中文理由：</strong></p>
+    <p>文件完整性工具使用加密哈希验证文件内容和目录未被更改。这些哈希必须是 FIPS 140-2 批准的加密哈希。</p>
 
 severity: medium
 

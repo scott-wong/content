@@ -6,9 +6,15 @@ title: 'Ensure the Content Blocker uBlock Origin is Installed'
 description: |-
     The uBlock Origin will be installed automatically by configuring Firefox policy, and updates will be enabled. It can also be installed through the Mozilla Add-Ons store at https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/.
 
+    <p><strong>中文说明：</strong></p>
+    <p>通过配置 Firefox 策略，将自动安装 uBlock Origin，并启用其更新。也可以通过 Mozilla 附加组件商店 https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/ 安装。</p>
+
 rationale: |-
     The content blocking feature of uBlock Origin stops Firefox from loading content from malicious sites. The content might be a script or an image, for example. If a site is on one of the lists uBlock Origin uses, then the content will not be loaded from that site.
     This may prevent malicious ads from confusing users and concealing the page contents, as well as the loading of content that may contain malware.
+
+    <p><strong>中文理由：</strong></p>
+    <p>uBlock Origin 的内容阻止功能会阻止 Firefox 加载来自恶意站点的内容。这些内容例如可能是脚本或图像。如果某个站点位于 uBlock Origin 使用的某个列表中，则不会从该站点加载内容。这可防止恶意广告混淆用户并掩盖页面内容，也可防止加载可能包含恶意软件的内容。</p>
 severity: medium
 
 ocil: |-

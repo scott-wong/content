@@ -8,9 +8,15 @@ description: |-
     specifically raising and lowering windows. This can be disabled by
     setting <tt>dom.disable_window_flip</tt> to <tt>true</tt> in the policy file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>JavaScript 可以通过升高和降低窗口来配置和更改 Web 浏览器的外观。可以通过在策略文件中将 <tt>dom.disable_window_flip</tt> 设置为 <tt>true</tt> 来禁用此功能。</p>
+
 rationale: |-
     JavaScript can make changes to the browser’s appearance. Allowing a website
     to use JavaScript to raise and lower browser windows may disguise an attack.
+
+    <p><strong>中文理由：</strong></p>
+    <p>JavaScript 可以更改浏览器外观。允许网站使用 JavaScript 升高和降低浏览器窗口可能掩盖攻击。</p>
 
 severity: medium
 

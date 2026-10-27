@@ -6,8 +6,14 @@ title: 'Uninstall geolite2-city Package'
 description: |-
     {{{ describe_package_remove(package="geolite2-city") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>geolite2-city</tt> 软件包。</p>
+
 rationale: |-
     <tt>geolite2-city</tt> is part of the GeoLite2 database packages, offering geolocation databases and tooling.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>geolite2-city</tt> 是 GeoLite2 数据库软件包的一部分，提供地理位置数据库和工具。</p>
 
 severity: low
 

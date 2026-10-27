@@ -8,9 +8,15 @@ title: 'Uninstall krb5-workstation Package'
 description: |-
     {{{ describe_package_remove(package="krb5-workstation") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>krb5-workstation</tt> 软件包。</p>
+
 rationale: |-
     Kerberos is a network authentication system. The <tt>krb5-workstation</tt> package contains the basic
     Kerberos programs (<tt>kinit</tt>, <tt>klist</tt>, <tt>kdestroy</tt>, <tt>kpasswd</tt>).
+
+    <p><strong>中文理由：</strong></p>
+    <p>Kerberos 是网络身份验证系统。<tt>krb5-workstation</tt> 软件包包含基本 Kerberos 程序（<tt>kinit</tt>、<tt>klist</tt>、<tt>kdestroy</tt>、<tt>kpasswd</tt>）。</p>
 
 severity: medium
 

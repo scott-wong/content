@@ -10,11 +10,18 @@ description: |-
     the <tt>"/etc/yum.repos.d/[your_repo_name].repo"</tt> file:
     <pre>gpgcheck=1</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>要确保为所有软件包仓库启用签名检查，必须为所有仓库启用 <tt>gpgcheck</tt> 选项。通过在 <tt>"/etc/yum.repos.d/[your_repo_name].repo"</tt> 文件中设置以下选项，将操作系统配置为在安装前验证来自仓库的软件包签名：</p>
+    <pre>gpgcheck=1</pre>
+
 rationale: |-
     Changes to any software components can have significant effects on the
     overall security of the operating system. This requirement ensures the
     software has not been tampered with and that it has been provided by
     a trusted vendor.
+
+    <p><strong>中文理由：</strong></p>
+    <p>对任何软件组件的更改都可能对操作系统的整体安全产生重大影响。此要求确保软件未被篡改，并且由可信供应商提供。</p>
 
 severity: high
 

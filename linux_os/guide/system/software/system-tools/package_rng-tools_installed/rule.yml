@@ -6,9 +6,15 @@ title: 'Install rng-tools Package'
 description: |-
     {{{ describe_package_install(package="rng-tools") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>rng-tools</tt> 软件包。</p>
+
 rationale: |-
     <tt>rng-tools</tt> provides hardware random number generator tools,
     such as those used in the formation of x509/PKI certificates.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>rng-tools</tt> 提供硬件随机数生成器工具，例如用于生成 x509/PKI 证书的工具。</p>
 
 severity: low
 

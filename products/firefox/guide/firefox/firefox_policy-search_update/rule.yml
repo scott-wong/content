@@ -8,10 +8,16 @@ description: |-
     To disable the automatic updates of plugins, set value of
     <tt>browser.search.update</tt> to <tt>false</tt> via policies.json.
 
+    <p><strong>中文说明：</strong></p>
+    <p>Firefox 会自动检查搜索插件的更新版本。要禁用插件自动更新，请通过 <tt>policies.json</tt> 将 <tt>browser.search.update</tt> 的值设置为 <tt>false</tt>。</p>
+
 rationale: |-
     Updates need to be controlled and installed from authorized and trusted servers.
     This setting overrides a number of other settings which may direct the application
     to access external URLs.
+
+    <p><strong>中文理由：</strong></p>
+    <p>更新必须受控，并且必须从经过授权且受信任的服务器安装。此设置会覆盖可能指示应用程序访问外部 URL 的多项其他设置。</p>
 
 severity: medium
 

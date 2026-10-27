@@ -8,9 +8,15 @@ description: |-
     <tt>TLS_RSA_WITH_3DES_EDE_CBC_SHA</tt> to <tt>true</tt> under <tt>DisabledCiphers</tt>
     in the policies file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在策略文件的 <tt>DisabledCiphers</tt> 下将 <tt>TLS_RSA_WITH_3DES_EDE_CBC_SHA</tt> 设置为 <tt>true</tt>，禁用已弃用的密码套件。</p>
+
 rationale: |-
     Weak ciphers are encryption/decryption algorithms that use keys of insufficient length. Using an insufficient length for a key increases
     the probability that the encryption scheme could be broken.
+
+    <p><strong>中文理由：</strong></p>
+    <p>弱密码套件是使用密钥长度不足的加密/解密算法。密钥长度不足会增加加密方案被攻破的可能性。</p>
 
 severity: medium
 

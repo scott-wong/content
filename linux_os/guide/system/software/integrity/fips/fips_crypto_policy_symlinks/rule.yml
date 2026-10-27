@@ -22,10 +22,32 @@ description: |-
     '/etc/crypto-policies/back-ends/openssl_fips.config' -> '/usr/share/crypto-policies/FIPS/openssl_fips.txt'
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p><tt>/etc/crypto-policies/back-ends/</tt> 中的所有文件（<tt>nss.config</tt> 除外）都应是指向 <tt>/usr/share/crypto-policies/FIPS/</tt> 的符号链接。</p>
+    <pre>
+    $ stat -c%N /etc/crypto-policies/back-ends/*
+    '/etc/crypto-policies/back-ends/bind.config' -> '/usr/share/crypto-policies/FIPS/bind.txt'
+    '/etc/crypto-policies/back-ends/gnutls.config' -> '/usr/share/crypto-policies/FIPS/gnutls.txt'
+    '/etc/crypto-policies/back-ends/java.config' -> '/usr/share/crypto-policies/FIPS/java.txt'
+    '/etc/crypto-policies/back-ends/javasystem.config' -> '/usr/share/crypto-policies/FIPS/javasystem.txt'
+    '/etc/crypto-policies/back-ends/krb5.config' -> '/usr/share/crypto-policies/FIPS/krb5.txt'
+    '/etc/crypto-policies/back-ends/libreswan.config' -> '/usr/share/crypto-policies/FIPS/libreswan.txt'
+    '/etc/crypto-policies/back-ends/libssh.config' -> '/usr/share/crypto-policies/FIPS/libssh.txt'
+    '/etc/crypto-policies/back-ends/nss.config'
+    '/etc/crypto-policies/back-ends/openssh.config' -> '/usr/share/crypto-policies/FIPS/openssh.txt'
+    '/etc/crypto-policies/back-ends/opensshserver.config' -> '/usr/share/crypto-policies/FIPS/opensshserver.txt'
+    '/etc/crypto-policies/back-ends/opensslcnf.config' -> '/usr/share/crypto-policies/FIPS/opensslcnf.txt'
+    '/etc/crypto-policies/back-ends/openssl.config' -> '/usr/share/crypto-policies/FIPS/openssl.txt'
+    '/etc/crypto-policies/back-ends/openssl_fips.config' -> '/usr/share/crypto-policies/FIPS/openssl_fips.txt'
+    </pre>
+
 rationale: |-
     Centralized cryptographic policies simplify applying secure ciphers across an operating
     system and the applications that run on that operating system. Use of weak or untested
     encryption algorithms undermines the purposes of using encryption to protect data.
+
+    <p><strong>中文理由：</strong></p>
+    <p>集中式加密策略可简化在操作系统及其应用程序中应用安全密码算法。使用弱或未经测试的加密算法会削弱利用加密保护数据的目的。</p>
 
 severity: medium
 

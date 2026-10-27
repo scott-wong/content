@@ -6,6 +6,9 @@ title: 'Configure AIDE to Verify the Audit Tools'
 description: |-
     The operating system file integrity tool must be configured to protect the integrity of the audit tools.
 
+    <p><strong>中文说明：</strong></p>
+    <p>操作系统文件完整性工具必须配置为保护审计工具的完整性。</p>
+
 rationale: |-
     Protecting the integrity of the tools used for auditing purposes is a
     critical step toward ensuring the integrity of audit information. Audit
@@ -26,6 +29,15 @@ rationale: |-
     provide the capability to identify when the audit tools have been modified,
     manipulated, or replaced. An example is a checksum hash of the file or
     files.
+
+    <p><strong>中文理由：</strong></p>
+    <p>保护用于审计目的的工具的完整性是确保审计信息完整性的关键步骤。审计信息包括成功审计信息系统活动所需的所有信息（例如审计记录、审计设置和审计报告）。
+
+    审计工具包括但不限于成功查看和操作审计信息系统活动与记录所需的供应商提供和开源审计工具。审计工具还包括自定义查询和报告生成器。
+
+    攻击者替换审计工具或向现有工具注入代码以隐藏或删除审计日志中的系统活动并不罕见。
+
+    为应对这一风险，审计工具必须经过加密签名，以便能够识别审计工具何时被修改、操纵或替换。文件校验和哈希就是一个示例。</p>
 
 severity: medium
 

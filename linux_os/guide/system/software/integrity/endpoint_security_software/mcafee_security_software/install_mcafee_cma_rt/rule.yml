@@ -3,12 +3,19 @@ documentation_complete: true
 
 title: 'Install the McAfee Runtime Libraries and Linux Agent'
 
-description: 'Install the McAfee Runtime Libraries (MFErt) and Linux Agent (MFEcma).'
+description: |-
+    Install the McAfee Runtime Libraries (MFErt) and Linux Agent (MFEcma).
+
+    <p><strong>中文说明：</strong></p>
+    <p>安装 McAfee 运行时库（MFErt）和 Linux 代理（MFEcma）。</p>
 
 rationale: |-
     The McAfee Runtime Libraries (MFErt) and Linux Agent (MFEcma) are dependencies
     for VirusScan Enterprise for Linux (VSEL) and Host-based Security System (HBSS)
     to run.
+
+    <p><strong>中文理由：</strong></p>
+    <p>McAfee 运行时库（MFErt）和 Linux 代理（MFEcma）是 VirusScan Enterprise for Linux（VSEL）和基于主机的安全系统（HBSS）运行所需的依赖项。</p>
 
 severity: medium
 

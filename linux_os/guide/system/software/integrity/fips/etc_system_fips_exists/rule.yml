@@ -15,6 +15,15 @@ description: |-
     this rule fails on an installed system, then this is a permanent
     finding and cannot be fixed.
     {{% endif %}}
+
+    <p><strong>中文说明：</strong></p>
+    <p>在启用 FIPS 模式的系统上，<tt>/etc/system-fips</tt> 必须存在。
+    {{% if 'rhel' not in product %}}
+    要启用 FIPS 模式，请运行以下命令：</p>
+    <pre>fips-mode-setup --enable</pre>
+    {{% else %}}
+    {{{ full_name }}} 具有可在安装时启用 FIPS 模式的内核标志。安装程序必须使用 <tt>fips=1</tt> 启动，系统才会启用 FIPS 模式。不支持在现有系统上启用 FIPS 模式。如果此规则在已安装系统上失败，则属于永久性发现，无法修复。
+    {{% endif %}}
 {{% if bootable_containers_supported == "true" %}}
     <br />
     To enable FIPS mode at bootable container build time configure <tt>fips=1</tt> kernel argument
@@ -29,6 +38,9 @@ rationale: |-
     protect data. The operating system must implement cryptographic modules adhering to the higher
     standards approved by the federal government since this provides assurance they have been tested
     and validated.
+
+    <p><strong>中文理由：</strong></p>
+    <p>使用弱或未经测试的加密算法会削弱利用加密保护数据的目的。操作系统必须实现符合联邦政府批准的更高标准的加密模块，以确保这些模块经过测试和验证。</p>
 
 severity: high
 

@@ -6,11 +6,17 @@ title: 'Install libcap-ng-utils Package'
 description: |-
     {{{ describe_package_install(package="libcap-ng-utils") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>libcap-ng-utils</tt> 软件包。</p>
+
 rationale: |-
     <tt>libcap-ng-utils</tt> contains applications to analyze the posix
     posix capabilities of all the programs running on a system.
     <tt>libcap-ng-utils</tt> also lets system operators set the file
     system based capabilities.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>libcap-ng-utils</tt> 包含用于分析系统上运行的所有程序的 POSIX 能力的应用。系统运维人员也可使用 <tt>libcap-ng-utils</tt> 设置基于文件系统的能力。</p>
 
 severity: medium
 

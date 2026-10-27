@@ -12,10 +12,17 @@ description: |-
     found in SAP note 1391070.
     {{{ describe_package_install(package="uuidd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p><tt>uuidd</tt> 软件包通常不会默认安装在普通 Linux 发行版上。应用程序需要此软件包，以避免重复 UUID 导致数据库不一致。特别是在使用 SAP 且短时间内创建大量 UUID 的银行服务中，安装 <tt>uuidd</tt> 软件包非常重要。更多信息可参阅 SAP Note 1391070。
+    应安装 <tt>uuidd</tt> 软件包。</p>
+
 rationale: |-
     The <tt>uuidd</tt> package contains a userspace daemon (uuidd) which is
     used to generate unique identifiers even at very high rates on
     SMP systems.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>uuidd</tt> 软件包包含用户空间守护进程（uuidd），用于在 SMP 系统上以极高频率生成唯一标识符。</p>
 
 severity: medium
 

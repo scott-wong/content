@@ -34,10 +34,38 @@ description: |-
     <tt>gpg-pubkey-dd79b481-62fe7502 --&gt; gpg(Zoom Video Communications, Inc. &lt;CryptoOpsCodeSignProd@zoom.us&gt;)</tt><br />
     <br /><br />
 
+    <p><strong>中文说明：</strong></p>
+    <p>操作系统或已安装应用可在不信任 GPG 密钥的情况下成功完成引导。但是，在信任密钥之前，无法安装或更新新软件包。
+    <br /><br />
+    大多数软件包管理器使用 GPG 密钥签名来在安装期间验证软件包完整性。
+    <br /><br />
+    要验证软件包管理器的 GPG 密钥配置正确，可根据所用软件包管理器执行以下命令组之一以获取所需信息。
+    <br /><br />
+    在 SUSE Linux 发行版中，管理员必须执行以下步骤：<br />
+    1. 以具有管理员权限的用户登录系统。<br />
+    2. 找到并下载软件包，例如 zoom_x86_64.rpm。<br />
+    3. 从软件下载站点找到并下载公钥（GPG），例如 zoom 软件包的密钥为 package-signing-key-5-12-6.pub。<br />
+    4. 导入公钥：<br />
+    <tt>$ sudo rpm --import package-signing-key-5-12-6.pub</tt><br />
+    5. 列出密钥，例如以下命令：<br />
+    <tt>$ sudo rpm -qa gpg-pubkey*</tt><br />
+    将提供：<br />
+    <tt>gpg-pubkey-dd79b481-62fe7502</tt><br />
+    6. 通过以下命令获取密钥的更多详细信息：<br />
+    <tt>$ sudo rpm -qa gpg-pubkey-dd79b481-62fe7502</tt><br />
+    7. 检查 GPG 密钥，例如以下命令：<br />
+    <tt>$ sudo rpm -q gpg-pubkey --qf '%{name}-%{version}-%{release} --&gt; %{summary}\n'</tt><br />
+    将提供：<br />
+    <tt>gpg-pubkey-dd79b481-62fe7502 --&gt; gpg(Zoom Video Communications, Inc. &lt;CryptoOpsCodeSignProd@zoom.us&gt;)</tt><br />
+    <br /><br /></p>
+
 rationale: |-
     It is important to ensure that updates are obtained from a valid source to protect
     against spoofing that could lead to the inadvertent installation of malware on the
     system.
+
+    <p><strong>中文理由：</strong></p>
+    <p>确保从有效来源获取更新非常重要，这可防止欺骗导致系统无意中安装恶意软件。</p>
 
 severity: medium
 

@@ -9,10 +9,16 @@ description: |-
     set <tt>security.default_personal_cert</tt> to <tt>Ask Every Time</tt>
     in an administrative policies file
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以将 Firefox 配置为在网站请求证书时提示用户选择要出示的证书。要启用证书验证，请在管理策略文件中将 <tt>security.default_personal_cert</tt> 设置为 <tt>Ask Every Time</tt>。</p>
+
 rationale: |-
     Websites within the organization require user authentication for access which increases
     security for the information within. Access will be denied to the user if
     certificate management is not configured.
+
+    <p><strong>中文理由：</strong></p>
+    <p>组织内的网站要求用户身份验证才能访问，这提高了其中信息的安全性。如果未配置证书管理，用户将被拒绝访问。</p>
 
 severity: medium
 

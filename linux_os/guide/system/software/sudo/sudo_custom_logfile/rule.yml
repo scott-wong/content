@@ -7,8 +7,14 @@ description: |-
     a sudo custom logfile at the default location suggested by CIS, which uses
     /var/log/sudo.log.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可使用 <tt>logfile</tt> 标记配置自定义 sudo 日志文件。此规则在 CIS 建议的默认位置 <tt>/var/log/sudo.log</tt> 配置 sudo 自定义日志文件。</p>
+
 rationale: |-
     A sudo log file simplifies auditing of sudo commands.
+
+    <p><strong>中文理由：</strong></p>
+    <p>sudo 日志文件可简化 sudo 命令的审计。</p>
 
 severity: low
 

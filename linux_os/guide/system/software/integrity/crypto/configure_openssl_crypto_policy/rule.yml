@@ -24,9 +24,15 @@ description: |-
     This file has the <tt>ini</tt> format, and it enables crypto policy support
     if there is a <tt>[ crypto_policy ]</tt> section that contains the <tt>{{{ include_directive }}}</tt> directive.
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略为许多软件包的加密算法使用提供集中控制。OpenSSL 受加密策略支持，但其配置可能被设置为忽略该策略。要检查加密策略设置是否正确，必须检查 <tt>{{{ openssl_cnf_path }}}</tt> 下的 OpenSSL 配置文件。此文件采用 <tt>ini</tt> 格式；如果存在包含 <tt>{{{ include_directive }}}</tt> 指令的 <tt>[ crypto_policy ]</tt> 节，则启用了加密策略支持。</p>
+
 rationale: |-
     Overriding the system crypto policy makes the behavior of the Java runtime violates expectations,
     and makes system configuration more fragmented.
+
+    <p><strong>中文理由：</strong></p>
+    <p>覆盖系统加密策略会使 OpenSSL 运行时的行为违背预期，并使系统配置更加碎片化。</p>
 
 severity: medium
 

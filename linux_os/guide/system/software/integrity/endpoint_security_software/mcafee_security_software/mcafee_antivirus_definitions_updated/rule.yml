@@ -3,11 +3,18 @@ documentation_complete: true
 
 title: 'Virus Scanning Software Definitions Are Updated'
 
-description: 'Ensure virus definition files are no older than 7 days or their last release.'
+description: |-
+    Ensure virus definition files are no older than 7 days or their last release.
+
+    <p><strong>中文说明：</strong></p>
+    <p>确保病毒定义文件不超过 7 天，或不早于其最近一次发布。</p>
 
 rationale: |-
     Virus scanning software can be used to detect if a system has been compromised by
     computer viruses, as well as to limit their spread to other systems.
+
+    <p><strong>中文理由：</strong></p>
+    <p>病毒扫描软件可用于检测系统是否已受到计算机病毒破坏，并限制病毒传播到其他系统。</p>
 
 severity: medium
 

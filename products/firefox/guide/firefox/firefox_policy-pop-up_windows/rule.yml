@@ -6,11 +6,17 @@ title: 'Enable Firefox Pop-up Blocker'
 description: |-
     The pop-up blocker can be enabled by setting
     <tt>Default</tt> key under <tt>PopupBlocking</tt> to <tt>true</tt> in <tt>policies.json</tt>.
-    <tt>Allowed</tt> may be set to a list of sites allowed to use popups. 
+    <tt>Allowed</tt> may be set to a list of sites allowed to use popups.
+
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在 <tt>policies.json</tt> 中将 <tt>PopupBlocking</tt> 下的 <tt>Default</tt> 键设置为 <tt>true</tt> 来启用弹出窗口阻止程序。<tt>Allowed</tt> 可以设置为允许使用弹出窗口的站点列表。</p>
 
 rationale: |-
     Popup windows may be used to launch an attack within a new browser window
     with altered settings.
+
+    <p><strong>中文理由：</strong></p>
+    <p>弹出窗口可用于在被更改的设置下于新浏览器窗口中发起攻击。</p>
 
 severity: medium
 

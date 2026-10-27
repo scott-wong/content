@@ -13,6 +13,16 @@ description: |-
   This will disable XWayland support in GDM.
   </p>
 
+  <p><strong>中文说明：</strong></p>
+  <p>编辑 <tt>/etc/gdm/custom.conf</tt> 文件，并在 <tt>[daemon]</tt> 块中添加或修改以下行：</p>
+  <pre>
+  [daemon]
+  WaylandEnable=false
+  </pre>
+  <p>
+  这将禁用 GDM 中的 XWayland 支持。
+  </p>
+
 rationale: |-
   XWayland is a compatibility layer for running X11 applications on Wayland.
   It is not secure and should be disabled. Wayland's security benefits from not relying on X11's network listener. Without X11,
@@ -23,6 +33,9 @@ rationale: |-
   windows and interactions with them.
   Malware can potentially exploit Xwayland vulnerabilities to keylog or intercept other
   input events.
+
+  <p><strong>中文理由：</strong></p>
+  <p>XWayland 是用于在 Wayland 上运行 X11 应用的兼容层。它并不安全，应禁用。Wayland 的安全性优势来自不依赖 X11 的网络侦听器。没有 X11 就不会有网络侦听器，恶意行为者更难利用 X11 漏洞。然而，启用 XWayland（在 Wayland 上运行 X11 应用）会引入 X11 的安全问题。所有 X 漏洞都适用于 XWayland，包括键盘记录，但它们只影响 X 窗口及其交互。恶意软件可能利用 XWayland 漏洞记录按键或截获其他输入事件。</p>
 
 severity: medium
 

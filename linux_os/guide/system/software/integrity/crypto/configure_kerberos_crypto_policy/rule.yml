@@ -11,9 +11,15 @@ description: |-
     /etc/krb5.conf.d/crypto-policies targeting /etc/cypto-policies/back-ends/krb5.config.
     If the symlink exists, Kerberos is configured to use the system-wide crypto policy settings.
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略为许多软件包的加密算法使用提供集中控制。Kerberos 受加密策略支持，但其配置可能被设置为忽略该策略。要检查 Kerberos 的加密策略设置是否正确，请检查 <tt>/etc/krb5.conf.d/crypto-policies</tt> 是否存在指向 <tt>/etc/crypto-policies/back-ends/krb5.config</tt> 的符号链接。如果该符号链接存在，则 Kerberos 配置为使用系统级加密策略设置。</p>
+
 rationale: |-
     Overriding the system crypto policy makes the behavior of Kerberos violate expectations,
     and makes system configuration more fragmented.
+
+    <p><strong>中文理由：</strong></p>
+    <p>覆盖系统加密策略会使 Kerberos 的行为违背预期，并使系统配置更加碎片化。</p>
 
 severity: high
 

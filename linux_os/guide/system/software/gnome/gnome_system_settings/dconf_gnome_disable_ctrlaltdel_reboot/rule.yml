@@ -19,11 +19,24 @@ description: |-
     <pre>/org/gnome/settings-daemon/plugins/media-keys/logout</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>默认情况下，按下 <tt>Ctrl-Alt-Del</tt> 键序列时，<tt>GNOME</tt> 会重启系统。
+    <br /><br />
+    要配置系统在图形用户界面（GUI）中忽略 <tt>Ctrl-Alt-Del</tt> 键序列而不是重启系统，请在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中将 <tt>logout</tt> 添加或设置为 <tt>['']</tt>。例如：</p>
+    <pre>[org/gnome/settings-daemon/plugins/media-keys]
+    logout=['']</pre>
+    添加设置后，请将锁定项添加到 <tt>/etc/dconf/db/local.d/locks/00-security-settings-lock</tt> 以防止用户修改。例如：
+    <pre>/org/gnome/settings-daemon/plugins/media-keys/logout</pre>
+    设置完成后，请运行 <tt>dconf update</tt>。
+
 rationale: |-
     A locally logged-in user who presses Ctrl-Alt-Del, when at the console,
     can reboot the system. If accidentally pressed, as could happen in
     the case of mixed OS environment, this can create the risk of short-term
     loss of availability of systems due to unintentional reboot.
+
+    <p><strong>中文理由：</strong></p>
+    <p>在控制台前本地登录的用户按下 Ctrl-Alt-Del 时可以重启系统。如果误按（例如在混合操作系统环境中），可能因非预期重启而导致系统短期不可用。</p>
 
 severity: high
 

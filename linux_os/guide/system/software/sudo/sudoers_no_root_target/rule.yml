@@ -7,10 +7,16 @@ description: |-
 
     User specifications have to explicitly list the runas spec (i.e. the list of target users that can be impersonated), and <tt>ALL</tt> or <tt>root</tt> should not be used.
 
+    <p><strong>中文说明：</strong></p>
+    <p>用户规范的目标用户应尽可能为非特权用户（即非 root）。用户规范必须显式列出 runas 规范（即可模拟的目标用户列表），且不应使用 <tt>ALL</tt> 或 <tt>root</tt>。</p>
+
 rationale: |-
     It is common that the command to be executed does not require superuser rights (editing a file
     whose the owner is not root, sending a signal to an unprivileged process,etc.). In order to limit
     any attempt of privilege escalation through a command, it is better to apply normal user rights.
+
+    <p><strong>中文理由：</strong></p>
+    <p>命令通常不需要超级用户权限（例如编辑所有者不是 root 的文件、向非特权进程发送信号等）。为限制通过命令进行权限提升的任何尝试，最好应用普通用户权限。</p>
 
 severity: medium
 

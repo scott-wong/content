@@ -18,10 +18,20 @@ description: |-
     with the following command:
     <pre>$ sudo tuxctl --license-key ESU-XXXXXXXXXXXXXXXXXXX</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>适用于 AlmaLinux 的 TuxCare Enterprise Support（ESU）仓库为 {{{ full_name }}} 提供经 FIPS 140-3 验证的加密软件包和扩展安全更新。<tt>tuxcare-esu</tt> 仓库必须在 <tt>/etc/yum.repos.d</tt> 下的仓库文件中配置并启用。该仓库由 <tt>tuxcare-release</tt> 软件包提供，可使用以下命令安装，并将 <tt>9.2</tt> 替换为所用的 ESU 发行版本（例如 <tt>9.6</tt>）：</p>
+    <pre>$ sudo dnf -y install https://repo.tuxcare.com/tuxcare/tuxcare-release-latest-9.2.noarch.rpm</pre>
+
+    访问该仓库需要 ESU 许可证密钥，可通过以下命令注册：
+    <pre>$ sudo tuxctl --license-key ESU-XXXXXXXXXXXXXXXXXXX</pre>
+
 rationale: |-
     Without the TuxCare ESU repository the system cannot receive the
     FIPS-validated cryptographic modules or the extended security updates
     required to keep the operating system in a supported and compliant state.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果没有 TuxCare ESU 仓库，系统无法接收经 FIPS 验证的加密模块或维持操作系统处于受支持和合规状态所需的扩展安全更新。</p>
 
 severity: high
 

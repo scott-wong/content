@@ -6,6 +6,9 @@ title: 'Configure dnf-automatic to Install Available Updates Automatically'
 description: |-
     To ensure that the packages comprising the available updates will be automatically installed by <tt>dnf-automatic</tt>, set <tt>apply_updates</tt> to <tt>yes</tt> under <tt>[commands]</tt> section in <tt>/etc/dnf/automatic.conf</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>要确保 <tt>dnf-automatic</tt> 自动安装可用更新中的软件包，请在 <tt>/etc/dnf/automatic.conf</tt> 的 <tt>[commands]</tt> 部分将 <tt>apply_updates</tt> 设置为 <tt>yes</tt>。</p>
+
 rationale: |-
     Installing software updates is a fundamental mitigation against
     the exploitation of publicly-known vulnerabilities. If the most
@@ -14,6 +17,9 @@ rationale: |-
     lack of prompt attention to patching could result in a system compromise.
     The automated installation of updates ensures that recent security patches
     are applied in a timely manner.
+
+    <p><strong>中文理由：</strong></p>
+    <p>安装软件更新是防范公开已知漏洞利用的基本缓解措施。如果未安装最新的安全补丁和更新，未经授权用户可能利用未修补软件中的弱点。未能及时关注补丁可能导致系统遭入侵。自动安装更新可确保及时应用最新安全补丁。</p>
 
 severity: medium
 

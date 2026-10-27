@@ -7,8 +7,14 @@ description: |-
     The update check may be disabled in an administrative policy by setting
     the <tt>DisableForgetButton</tt> key under <tt>policies</tt> to <tt>true</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在 <tt>policies</tt> 下将 <tt>DisableForgetButton</tt> 键设置为 <tt>true</tt>，在管理策略中禁用“忘记”按钮。</p>
+
 rationale: |-
     There should not be an option for a user to "forget" work they have done. This is required to meet non-repudiation controls.
+
+    <p><strong>中文理由：</strong></p>
+    <p>不应允许用户“忘记”其已完成的工作。这是满足不可否认性控制所必需的。</p>
 severity: medium
 
 references:

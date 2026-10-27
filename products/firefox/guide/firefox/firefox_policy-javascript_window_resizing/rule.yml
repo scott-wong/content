@@ -8,9 +8,15 @@ description: |-
     specifically moving and resizing browser windows. This can be disabled by
     setting <tt>dom.disable_window_move_resize</tt> to <tt>true</tt> in the policy file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>JavaScript 可以通过移动浏览器窗口和调整其大小来配置和更改 Web 浏览器的外观。可以通过在策略文件中将 <tt>dom.disable_window_move_resize</tt> 设置为 <tt>true</tt> 来禁用此功能。</p>
+
 rationale: |-
     JavaScript can make changes to the browser’s appearance. This activity
     can help disguise an attack taking place in a minimized background window.
+
+    <p><strong>中文理由：</strong></p>
+    <p>JavaScript 可以更改浏览器外观。此类活动可帮助掩盖在最小化的后台窗口中进行的攻击。</p>
 
 severity: medium
 

@@ -6,10 +6,16 @@ title: 'Install binutils Package'
 description: |-
     {{{ describe_package_install(package="binutils") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>binutils</tt> 软件包。</p>
+
 rationale: |-
     <tt>binutils</tt> is a collection of binary utilities required for
     foundational system operator activities, such as <tt>ld</tt>,
     <tt>nm</tt>, <tt>objcopy</tt> and <tt>readelf</tt>.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>binutils</tt> 是基础系统运维活动所需的二进制实用程序集合，例如 <tt>ld</tt>、<tt>nm</tt>、<tt>objcopy</tt> 和 <tt>readelf</tt>。</p>
 
 severity: medium
 

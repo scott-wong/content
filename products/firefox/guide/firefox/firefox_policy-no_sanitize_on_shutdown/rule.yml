@@ -10,8 +10,17 @@ description: |-
     <li><tt>Cache</tt> = <tt>false</tt></li>
     </ul>
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在 <tt>SanitizeOnShutdown</tt> 键下设置多个选项来配置关闭时清理行为。</p>
+    <ul>
+    <li><tt>Cache</tt> = <tt>false</tt></li>
+    </ul>
+
 rationale: |-
     For diagnostic purposes, data must remain behind when the browser is closed. This is required to meet non-repudiation controls.
+
+    <p><strong>中文理由：</strong></p>
+    <p>出于诊断目的，浏览器关闭时必须保留数据。这是满足不可否认性控制所必需的。</p>
 severity: medium
 
 references:

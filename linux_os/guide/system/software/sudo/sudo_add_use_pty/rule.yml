@@ -9,9 +9,15 @@ description: |-
     <tt>/etc/sudoers</tt> configuration file or any sudo configuration snippets
     in <tt>/etc/sudoers.d/</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>use_pty</tt> 标记指定后，只会从已登录到真实 tty 的用户执行 sudo 命令。应确保 <tt>/etc/sudoers</tt> 配置文件或 <tt>/etc/sudoers.d/</tt> 中的任何 sudo 配置片段存在 <tt>use_pty</tt> 标记，以启用此功能。</p>
+
 rationale: |-
     Requiring that sudo commands be run in a pseudo-terminal can prevent an attacker from retaining
     access to the user's terminal after the main program has finished executing.
+
+    <p><strong>中文理由：</strong></p>
+    <p>要求 sudo 命令在伪终端中运行，可防止攻击者在主程序执行完毕后仍保留对用户终端的访问权限。</p>
 
 severity: medium
 

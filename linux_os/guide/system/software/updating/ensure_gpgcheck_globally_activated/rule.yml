@@ -11,6 +11,10 @@ description: |-
     the <tt>[main]</tt> section:
     <pre>gpgcheck=1</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p><tt>gpgcheck</tt> 选项控制安装前是否始终检查 RPM 软件包的签名。要将 {{{ pkg_manager }}} 配置为在安装前检查软件包签名，请确保 <tt>{{{ pkg_manager_config_file }}}</tt> 的 <tt>[main]</tt> 部分出现以下行：</p>
+    <pre>gpgcheck=1</pre>
+
 rationale: |-
     Changes to any software components can have significant effects on the
     overall security of the operating system. This requirement ensures the
@@ -26,6 +30,9 @@ rationale: |-
     provided by a trusted vendor. Self-signed certificates are disallowed by
     this requirement. Certificates used to verify the software must be from an
     approved Certificate Authority (CA).
+
+    <p><strong>中文理由：</strong></p>
+    <p>对任何软件组件的更改都可能对操作系统的整体安全产生重大影响。此要求确保软件未被篡改，并且由可信供应商提供。<br />因此，补丁、服务包、设备驱动或操作系统组件必须使用组织认可和批准的证书签名。<br />在安装前验证软件真实性可验证从供应商收到的补丁或升级的完整性。这可确保软件未被篡改，并且由可信供应商提供。此要求禁止使用自签名证书。用于验证软件的证书必须来自批准的证书颁发机构（CA）。</p>
 
 severity: high
 

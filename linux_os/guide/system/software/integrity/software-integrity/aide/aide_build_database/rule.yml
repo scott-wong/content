@@ -29,9 +29,36 @@ description: |-
     <pre>$ sudo {{{ aide_bin_path }}} --check</pre>
     If this check produces any unexpected output, investigate.
 
+    <p><strong>中文说明：</strong></p>
+    <p>运行以下命令生成新数据库：
+    {{% if 'ubuntu' in product or 'debian' in product %}}</p>
+    <pre>$ sudo aideinit</pre>
+    {{% else %}}
+    <pre>$ sudo {{{ aide_bin_path }}} --init</pre>
+    {{% endif %}}
+    默认情况下，数据库将写入文件
+    {{% if 'ubuntu' in product or 'sle' in product or 'slmicro' in product or 'debian' in product %}}
+    <tt>/var/lib/aide/aide.db.new</tt>。
+    {{% else %}}
+    <tt>/var/lib/aide/aide.db.new.gz</tt>。
+    {{% endif %}}
+    将数据库、配置文件 <tt>/etc/aide.conf</tt> 和二进制程序 <tt>{{{ aide_bin_path }}}</tt>（或其哈希）存储在安全位置（例如只读介质）可为其完整性提供额外保障。
+    可按以下方式安装新生成的数据库：
+    {{% if 'ubuntu' in product or 'sle' in product or 'slmicro' in product or 'debian' in product %}}
+    <pre>$ sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db</pre>
+    {{% else %}}
+    <pre>$ sudo cp /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz</pre>
+    {{% endif %}}
+    要发起手动检查，请运行以下命令：
+    <pre>$ sudo {{{ aide_bin_path }}} --check</pre>
+    如果此检查产生任何意外输出，请进行调查。
+
 rationale: |-
     For AIDE to be effective, an initial database of "known-good" information about files
     must be captured and it should be able to be verified against the installed files.
+
+    <p><strong>中文理由：</strong></p>
+    <p>要使 AIDE 发挥作用，必须捕获已知良好文件的初始数据库，并且能够将其与已安装文件进行验证。</p>
 
 warnings:
     - general: |-

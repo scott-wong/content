@@ -6,6 +6,9 @@ title: 'Ensure sudo Runs In A Minimal Environment - sudo env_reset'
 description: |-
     The sudo <tt>env_reset</tt> tag, when specified, will run the command in a minimal environment,
     containing the TERM, PATH, HOME, MAIL, SHELL, LOGNAME, USER and SUDO_* variables.
+
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>env_reset</tt> 标记指定后，会在包含 TERM、PATH、HOME、MAIL、SHELL、LOGNAME、USER 和 SUDO_* 变量的最小环境中运行命令。</p>
 {{%- if 'rhel' in product or 'ol' in families %}}
     On {{{ full_name }}}, <tt>env_reset</tt> is enabled by default
 {{%- endif %}}
@@ -16,6 +19,9 @@ description: |-
 rationale: |-
     Forcing sudo to reset the environment ensures that environment variables are not passed on to the
     command accidentally, preventing leak of potentially sensitive information.
+
+    <p><strong>中文理由：</strong></p>
+    <p>强制 sudo 重置环境可确保环境变量不会意外传递给命令，防止泄露潜在敏感信息。</p>
 
 severity: medium
 

@@ -9,6 +9,9 @@ description: |-
     The definition can make use glob patterns, as well as of negations.
     Indirect definition of those commands by means of exclusion of a set of commands is trivial to bypass, so it is not allowed to use such constructs.
 
+    <p><strong>中文说明：</strong></p>
+    <p>通过 sudoers 文件由 sudo 应用的策略不应涉及否定。sudoers 文件中的每个用户规范都包含以逗号分隔的命令规范列表。定义可使用 glob 模式以及否定。通过排除一组命令来间接定义命令很容易绕过，因此不允许使用此类构造。</p>
+
 rationale: |-
     Specifying access right using negation is inefficient and can be easily circumvented.
     For example, it is expected that a specification like <pre>
@@ -17,6 +20,13 @@ rationale: |-
     </pre> prevents the execution of the shell
     but that’s not the case: just copy the binary <code>/bin/sh</code> to a different name to make it executable
     again through the rule keyword <code>ALL</code>.
+
+    <p><strong>中文理由：</strong></p>
+    <p>使用否定方式指定访问权限效率低下，且容易被绕过。<br /><br />例如，预期类似以下规范可阻止执行 shell：</p>
+    <pre>
+    # To avoid absolutely , this rule can be easily circumvented!
+    user ALL = ALL ,!/ bin/sh
+    </pre>但事实并非如此：只需将 <code>/bin/sh</code> 二进制文件复制为其他名称，即可通过规则关键字 <code>ALL</code> 再次执行它。
 
 severity: medium
 

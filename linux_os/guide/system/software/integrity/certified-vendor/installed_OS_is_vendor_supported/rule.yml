@@ -5,6 +5,9 @@ title: 'The Installed Operating System Is Vendor Supported'
 
 description: |-
     The installed operating system must be maintained by a vendor.
+
+    <p><strong>中文说明：</strong></p>
+    <p>已安装的操作系统必须由供应商维护。</p>
 {{% if 'ol' in families %}}
     Oracle Linux is supported by Oracle Corporation. As the Oracle
     Linux vendor, Oracle Corporation is responsible for providing security patches.
@@ -25,6 +28,9 @@ rationale: |-
     provide security patches for the product.  With an unsupported release, it
     will not be possible to resolve any security issue discovered in the system
     software.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果供应商继续为该产品提供安全补丁，则该操作系统被视为“受支持”。对于不受支持的发行版，将无法解决系统软件中发现的任何安全问题。</p>
 
 warnings:
     - general: |-

@@ -6,9 +6,14 @@ title: 'Install vim Package'
 description: |-
     {{{ describe_package_install(package="vim-enhanced") }}}
 
-rationale: |-
-    Vim (Vi IMproved) is an almost compatible version of the UNIX editor <tt>vi</tt>. 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>vim-enhanced</tt> 软件包。</p>
 
+rationale: |-
+    Vim (Vi IMproved) is an almost compatible version of the UNIX editor <tt>vi</tt>.
+
+    <p><strong>中文理由：</strong></p>
+    <p>Vim（Vi IMproved）是 UNIX 编辑器 <tt>vi</tt> 的几乎兼容版本。</p>
 severity: low
 
 identifiers:

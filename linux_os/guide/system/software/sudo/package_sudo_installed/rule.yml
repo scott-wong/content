@@ -6,11 +6,17 @@ title: 'Install sudo Package'
 description: |-
     {{{ describe_package_install(package="sudo") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>应安装 <tt>sudo</tt> 软件包。</p>
+
 rationale: |-
     <tt>sudo</tt> is a program designed to allow a system administrator to give
     limited root privileges to users and log root activity. The basic philosophy
     is to give as few privileges as possible but still allow system users to
     get their work done.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>sudo</tt> 是一个允许系统管理员向用户授予有限 root 权限并记录 root 活动的程序。其基本理念是授予尽可能少的权限，同时仍允许系统用户完成工作。</p>
 
 severity: medium
 

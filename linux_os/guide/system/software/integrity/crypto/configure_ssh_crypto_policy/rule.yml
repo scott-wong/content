@@ -12,9 +12,15 @@ description: |-
     the <tt>CRYPTO_POLICY</tt> variable is either commented or not set at all
     in the <tt>{{{ sshd_sysconfig }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略为许多软件包的加密算法使用提供集中控制。SSH 受加密策略支持，但其配置可能被设置为忽略该策略。要检查加密策略设置是否正确配置，请确保 <tt>{{{ sshd_sysconfig }}}</tt> 中的 <tt>CRYPTO_POLICY</tt> 变量已被注释掉或完全未设置。</p>
+
 rationale: |-
     Overriding the system crypto policy makes the behavior of the SSH service violate expectations,
     and makes system configuration more fragmented.
+
+    <p><strong>中文理由：</strong></p>
+    <p>覆盖系统加密策略会使 SSH 服务的行为违背预期，并使系统配置更加碎片化。</p>
 
 severity: medium
 

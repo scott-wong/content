@@ -7,9 +7,15 @@ description: |-
     Addon installation may be disabled in an administrative policy by setting
     the <tt>InstallAddonsPermission</tt> key under <tt>policies</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在 <tt>policies</tt> 下将 <tt>InstallAddonsPermission</tt> 键设置为 <tt>false</tt>，在管理策略中禁用扩展安装。</p>
+
 rationale: |-
     A browser extension is a program that has been installed into the browser to add functionality. Where a plug-in interacts only with a web page and usually a third-party external application (e.g., Flash, Adobe Reader), an extension interacts with the browser program itself. Extensions are not embedded in web pages and must be downloaded and installed in order to work. Extensions allow browsers to avoid restrictions that apply to web pages.
     For example, an extension can be written to combine data from multiple domains and present it when a certain page is accessed, which can be considered cross-site scripting. If a browser is configured to allow unrestricted use of extensions, plug-ins can be loaded and installed from malicious sources and used on the browser.
+
+    <p><strong>中文理由：</strong></p>
+    <p>浏览器扩展是安装到浏览器中以增加功能的程序。插件通常只与网页和第三方外部应用程序交互（例如 Flash、Adobe Reader），而扩展会与浏览器程序本身交互。扩展不嵌入网页，必须下载并安装后才能工作。扩展允许浏览器规避适用于网页的限制。例如，可以编写扩展来合并来自多个域的数据，并在访问特定页面时呈现这些数据，这种行为可被视为跨站脚本。如果浏览器配置为允许不受限制地使用扩展，则可从恶意来源加载和安装插件并在浏览器中使用。</p>
 severity: medium
 
 references:

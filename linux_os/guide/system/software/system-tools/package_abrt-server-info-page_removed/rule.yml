@@ -6,8 +6,14 @@ title: 'Uninstall abrt-server-info-page Package'
 description: |-
     {{{ describe_package_remove(package="abrt-server-info-page") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>abrt-server-info-page</tt> 软件包。</p>
+
 rationale: |-
     <tt>abrt-server-info-page</tt> provides a web page with summary of ABRT services.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>abrt-server-info-page</tt> 提供汇总 ABRT 服务的网页。</p>
 
 severity: medium
 

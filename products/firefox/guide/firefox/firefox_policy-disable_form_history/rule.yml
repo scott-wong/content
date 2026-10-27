@@ -7,8 +7,14 @@ description: |-
     The update check may be disabled in an administrative policy by setting
     the <tt>DisableFormHistory</tt> key under <tt>policies</tt> to <tt>true</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在 <tt>policies</tt> 下将 <tt>DisableFormHistory</tt> 键设置为 <tt>true</tt>，在管理策略中禁用表单历史记录。</p>
+
 rationale: |-
     To protect privacy and sensitive data, Firefox provides the ability to configure the program so that data entered into forms is not saved. This mitigates the risk of a website gleaning private information from prefilled information.
+
+    <p><strong>中文理由：</strong></p>
+    <p>为保护隐私和敏感数据，Firefox 提供了将程序配置为不保存表单中所输入数据的功能。这可降低网站从预填信息中获取私人信息的风险。</p>
 severity: medium
 
 references:

@@ -15,10 +15,22 @@ description: |-
     The package can be reinstalled from a {{{ pkg_manager }}} repository using the command:
     <pre>$ sudo {{{ pkg_manager }}} reinstall crypto-policies</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>如果没有加密完整性保护，系统可执行文件和文件可能被未授权用户修改而无法被发现。RPM 软件包管理系统可以检查已安装软件包的哈希，包括许多对系统安全很重要的软件包。
+
+    如果文件不应发生更改，请使用审计日志或其他方式调查更改原因。然后可重新安装软件包以恢复文件。运行以下命令确定文件所属的软件包：</p>
+    <pre>$ rpm -qf <i>FILENAME</i></pre>
+
+    可使用以下命令从 {{{ pkg_manager }}} 存储库重新安装软件包：
+    <pre>$ sudo {{{ pkg_manager }}} reinstall crypto-policies</pre>
+
 rationale: |-
     The crypto-policies package defines the cryptography policies for the system.
     If the files are changed from those shipped with the operating system, 
     It may be possible for {{{ full_name }}} to use cryptographic functions that are not FIPS 140-3 approved.
+
+    <p><strong>中文理由：</strong></p>
+    <p>crypto-policies 软件包定义系统的加密策略。如果文件与操作系统提供的文件不同，{{{ full_name }}} 可能使用未经 FIPS 140-3 批准的加密功能。</p>
 
 severity: high
 

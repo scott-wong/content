@@ -9,9 +9,15 @@ description: |-
     <tt>/etc/sudoers</tt> configuration file or any sudo configuration snippets
     in <tt>/etc/sudoers.d/</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>NOEXEC</tt> 标记指定后，会阻止用户执行的命令再执行其他命令（例如 shell）。应确保 <tt>/etc/sudoers</tt> 配置文件或 <tt>/etc/sudoers.d/</tt> 中的任何 sudo 配置片段存在 <tt>NOEXEC</tt> 标记，以启用此功能。</p>
+
 rationale: |-
     Restricting the capability of sudo allowed commands to execute sub-commands
     prevents users from running programs with privileges they wouldn't have otherwise.
+
+    <p><strong>中文理由：</strong></p>
+    <p>限制 sudo 允许的命令执行子命令的能力，可防止用户运行其原本无权运行的程序。</p>
 
 severity: high
 

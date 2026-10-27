@@ -29,9 +29,30 @@ description: |-
     TLS.MinProtocol = TLSv1.2
     DTLS.MinProtocol = DTLSv1.2</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略是为 OpenSSL 等选定应用强制执行特定加密设置的方法。OpenSSL 默认会根据当前加密策略修改其配置。不建议编辑加密策略后端。
+
+    请查阅 crypto-policies(7) 手册页，并选择将 TLS 协议配置为 1.2 或更高版本的策略，例如 DEFAULT、FUTURE 或 FIPS 策略。或者创建并应用将最低 TLS 版本限制为 1.2 的自定义策略。
+
+    例如，对于 crypto-policies-20210617-1.gitc776d3e.el8.noarch 之前的版本，预期结果如下：</p>
+    <pre>$ sudo grep -i MinProtocol /etc/crypto-policies/back-ends/opensslcnf.config
+
+    MinProtocol = TLSv1.2
+    </pre>
+
+    对于 crypto-policies-20210617-1.gitc776d3e.el8.noarch 及更高版本，预期结果如下：
+
+    <pre>$ sudo grep -i MinProtocol /etc/crypto-policies/back-ends/opensslcnf.config
+
+    TLS.MinProtocol = TLSv1.2
+    DTLS.MinProtocol = DTLSv1.2</pre>
+
 rationale: |-
     Without cryptographic integrity protections, information can be altered by
     unauthorized users without detection.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果没有加密完整性保护，未授权用户可以更改信息而不被发现。</p>
 
 severity: medium
 

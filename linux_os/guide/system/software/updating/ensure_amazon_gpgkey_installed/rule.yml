@@ -10,12 +10,19 @@ description: |-
     key, run:
     <pre>$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>为确保系统能够通过密码学验证基础软件包来自 Amazon（并连接到 Amazon Network 接收这些软件包），必须正确安装 Amazon GPG 密钥。要安装 Amazon GPG 密钥，请运行：</p>
+    <pre>$ sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023</pre>
+
 rationale: |-
     Changes to software components can have significant effects on the overall
     security of the operating system. This requirement ensures the software has
     not been tampered with and that it has been provided by a trusted vendor.
     The Amazon GPG key is necessary to cryptographically verify packages are
     from Amazon.
+
+    <p><strong>中文理由：</strong></p>
+    <p>对软件组件的更改可能对操作系统整体安全产生重大影响。此要求确保软件未被篡改，并且由可信供应商提供。需要 Amazon GPG 密钥来通过密码学验证软件包来自 Amazon。</p>
 
 severity: high
 

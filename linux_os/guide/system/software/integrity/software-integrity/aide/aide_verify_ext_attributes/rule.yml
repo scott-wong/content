@@ -23,9 +23,24 @@ description: |-
     <tt>{{{ aide_conf_path }}}</tt> and to any selection lines that specify attributes directly.
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>默认情况下，AIDE 的 <tt>FIPSR</tt> 规则集中会添加 <tt>xattrs</tt> 选项。如果使用自定义规则集或缺少 <tt>xattrs</tt> 选项，请将 <tt>xattrs</tt> 添加到相应规则集。例如，在 <tt>{{{ aide_conf_path }}}</tt> 的以下行中添加 <tt>xattrs</tt>：</p>
+    <pre>FIPSR = p+i+n+u+g+s+m+c+acl+selinux+xattrs+sha256</pre>
+    AIDE 规则可通过多种方式配置；此处仅为默认已配置的一个示例。<tt>xattrs</tt> 选项还必须出现在直接指定属性而不引用组的 selection 行上。例如：
+    <pre>/bin p+i+n+u+g+s+m+c+acl+selinux+xattrs+sha256</pre>
+
+    {{% if "debian" in product %}}
+    此规则提供的修复会将 <tt>xattrs</tt> 添加到 <tt>{{{ aide_conf_path }}}</tt> 中的 InodeData 规则以及任何直接指定属性的 selection 行。
+    {{% else %}}
+    此规则提供的修复会将 <tt>xattrs</tt> 添加到 <tt>{{{ aide_conf_path }}}</tt> 中所有可用规则集以及任何直接指定属性的 selection 行。
+    {{% endif %}}
+
 rationale: |-
     Extended attributes in file systems are used to contain arbitrary data and file metadata
     with security implications.
+
+    <p><strong>中文理由：</strong></p>
+    <p>文件系统中的扩展属性用于保存具有安全影响的任意数据和文件元数据。</p>
 
 severity: low
 

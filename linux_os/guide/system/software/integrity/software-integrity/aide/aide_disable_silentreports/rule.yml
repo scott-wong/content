@@ -6,9 +6,15 @@ title: 'Configure AIDE To Notify Personnel if Baseline Configurations Are Altere
 description: |-
     The operating system file integrity tool must be configured to notify designated personnel of any changes to configurations.
 
+    <p><strong>中文说明：</strong></p>
+    <p>操作系统文件完整性工具必须配置为将配置的任何变更通知指定人员。</p>
+
 rationale: |-
     Detecting changes in the system can help avoid unintended, and negative consequences
     that could affect the security state of the operating system
+
+    <p><strong>中文理由：</strong></p>
+    <p>检测系统中的变更有助于避免可能影响操作系统安全状态的非预期负面后果。</p>
 
 severity: medium
 

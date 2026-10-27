@@ -7,9 +7,15 @@ description: |-
     Firefox may be configured via administrative policy to allow TLS 1.2 at minimum
     by setting <tt>SSLVersionMin</tt> to <tt>tls1.2</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过管理策略将 <tt>SSLVersionMin</tt> 设置为 <tt>tls1.2</tt>，将 Firefox 配置为至少允许 TLS 1.2。</p>
+
 rationale: |-
     Use of versions prior to TLS 1.2 are not permitted. SSL 2.0 and SSL 3.0 contain a number of security flaws. 
     These versions must be disabled in compliance with the Network Infrastructure and Secure Remote Computing STIGs.
+
+    <p><strong>中文理由：</strong></p>
+    <p>不允许使用 TLS 1.2 之前的版本。SSL 2.0 和 SSL 3.0 包含多项安全缺陷。必须按照 Network Infrastructure 和 Secure Remote Computing STIG 禁用这些版本。</p>
 severity: medium
 
 references:

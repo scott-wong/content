@@ -2,13 +2,20 @@ documentation_complete: true
 
 title: Verify User Who Owns /etc/sudoers.d Directory
 
-description: '{{{ describe_file_owner(file="/etc/sudoers.d", owner="root") }}}'
+description: |-
+    {{{ describe_file_owner(file="/etc/sudoers.d", owner="root") }}}
+
+    <p><strong>中文说明：</strong></p>
+    <p>确保 <tt>/etc/sudoers.d</tt> 的文件所有者为 <tt>root</tt>。</p>
 
 rationale: |-
     The ownership of the /etc/sudoers.d directory by the root user is important
     because this directory hosts sudo configuration. Protection of this
     directory is critical for system security. Assigning the ownership to root
     ensures exclusive control of the sudo configuration.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>/etc/sudoers.d</tt> 目录由 root 用户拥有很重要，因为该目录存放 sudo 配置。保护此目录对系统安全至关重要。将所有权分配给 root 可确保对 sudo 配置的独占控制。</p>
 
 severity: medium
 

@@ -6,7 +6,14 @@ title: 'Install GNOME Software'
 description: |-
     {{{ describe_package_install(package="gnome-software") }}}
 
-rationale: 'The GNOME software package must be installed so that it can be used for software and firmware updates.'
+    <p><strong>中文说明：</strong></p>
+    <p>应安装 <tt>gnome-software</tt> 软件包。</p>
+
+rationale: |-
+    The GNOME software package must be installed so that it can be used for software and firmware updates.
+
+    <p><strong>中文理由：</strong></p>
+    <p>必须安装 <tt>gnome-software</tt> 软件包，以便使用它进行软件和固件更新。</p>
 
 severity: medium
 

@@ -3,13 +3,20 @@ documentation_complete: true
 
 title: 'Install the Asset Configuration Compliance Module (ACCM)'
 
-description: 'Install the Asset Configuration Compliance Module (ACCM).'
+description: |-
+    Install the Asset Configuration Compliance Module (ACCM).
+
+    <p><strong>中文说明：</strong></p>
+    <p>安装资产配置合规模块（ACCM）。</p>
 
 rationale: |-
     Without a host-based intrusion detection tool, there is no system-level defense
     when an intruder gains access to a system or network. Additionally, a host-based
     intrusion prevention tool can provide methods to immediately lock out detected
     intrusion attempts.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果没有基于主机的入侵检测工具，当入侵者获得系统或网络访问权限时将没有系统级防御。此外，基于主机的入侵防御工具可以提供立即锁定检测到的入侵尝试的方法。</p>
 
 severity: medium
 

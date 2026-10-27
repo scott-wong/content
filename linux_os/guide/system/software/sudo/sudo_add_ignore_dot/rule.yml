@@ -6,6 +6,9 @@ title: 'Ensure sudo Ignores Commands In Current Dir - sudo ignore_dot'
 description: |-
     The sudo <tt>ignore_dot</tt> tag, when specified, will ignore the current directory
     in the PATH environment variable.
+
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>ignore_dot</tt> 标记指定后，会忽略 PATH 环境变量中的当前目录。</p>
 {{%- if 'rhel' in product or 'ol' in families %}}
     On {{{ full_name }}}, <tt>ignore_dot</tt> is enabled by default
 {{%- endif %}}
@@ -16,6 +19,9 @@ description: |-
 rationale: |-
     Ignoring the commands in the user's current directory prevents an attacker from executing commands
     downloaded locally.
+
+    <p><strong>中文理由：</strong></p>
+    <p>忽略用户当前目录中的命令可防止攻击者执行本地下载的命令。</p>
 
 severity: medium
 

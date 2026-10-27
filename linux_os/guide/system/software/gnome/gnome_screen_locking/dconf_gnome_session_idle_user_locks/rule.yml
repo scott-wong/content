@@ -11,12 +11,20 @@ description: |-
     <pre>/org/gnome/desktop/session/idle-delay</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>如果尚未配置，请确保用户无法更改 GNOME3 会话空闲设置，为此请将 <tt>/org/gnome/desktop/session/idle-delay</tt> 添加到 <tt>/etc/dconf/db/{{{ dconf_gdm_dir }}}/locks/00-security-settings-lock</tt> 以防止用户修改。例如：</p>
+    <pre>/org/gnome/desktop/session/idle-delay</pre>
+    设置完成后，请运行 <tt>dconf update</tt>。
+
 rationale: |-
     A session time-out lock is a temporary action taken when a user stops work and moves away from the immediate
     physical vicinity of the information system but does not logout because of the temporary nature of the absence.
     Rather than relying on the user to manually lock their operating system session prior to vacating the vicinity,
     GNOME desktops can be configured to identify when a user's session has idled and take action to initiate the
     session lock. As such, users should not be allowed to change session settings.
+
+    <p><strong>中文理由：</strong></p>
+    <p>会话超时锁定是用户停止工作并离开信息系统即时物理周边但未注销时采取的临时操作。与其依赖用户在离开前手动锁定操作系统会话，不如将 GNOME 桌面配置为识别会话空闲并启动锁定。因此，不应允许用户更改会话设置。</p>
 
 severity: medium
 

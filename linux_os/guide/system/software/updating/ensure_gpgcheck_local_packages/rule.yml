@@ -9,6 +9,9 @@ description: |-
     packages, set the <tt>localpkg_gpgcheck</tt> to <tt>1</tt>, <tt>True</tt>, or <tt>yes</tt> in
     <tt>{{{ pkg_manager_config_file }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>应将 <tt>{{{ pkg_manager }}}</tt> 配置为在安装前验证本地软件包的签名。要将 <tt>{{{ pkg_manager }}}</tt> 配置为验证本地软件包签名，请在 <tt>{{{ pkg_manager_config_file }}}</tt> 中将 <tt>localpkg_gpgcheck</tt> 设置为 <tt>1</tt>、<tt>True</tt> 或 <tt>yes</tt>。</p>
+
 rationale: |-
     Changes to any software components can have significant effects to the overall security
     of the operating system. This requirement ensures the software has not been tampered and
@@ -16,6 +19,9 @@ rationale: |-
     <br /><br />
     Accordingly, patches, service packs, device drivers, or operating system components must
     be signed with a certificate recognized and approved by the organization.
+
+    <p><strong>中文理由：</strong></p>
+    <p>对任何软件组件的更改都可能对操作系统整体安全产生重大影响。此要求确保软件未被篡改，并且由可信供应商提供。<br /><br />因此，补丁、服务包、设备驱动或操作系统组件必须使用组织认可和批准的证书签名。</p>
 
 severity: high
 

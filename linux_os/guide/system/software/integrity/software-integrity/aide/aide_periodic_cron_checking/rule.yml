@@ -17,6 +17,13 @@ description: |-
     The usage of cron's special time codes, such as  <tt>@daily</tt> and
     <tt>@weekly</tt> is acceptable.
 
+    <p><strong>中文说明：</strong></p>
+    <p>至少应将 AIDE 配置为每周运行一次扫描。要使用 cron 在凌晨 4:05 每天执行 AIDE，请将以下行添加到 <tt>/etc/crontab</tt>：</p>
+    <pre>05 4 * * * root {{{ aide_bin_path }}} {{{ config_command_line }}}--check</pre>
+    要使用 cron 在凌晨 4:05 每周执行 AIDE，请将以下行添加到 <tt>/etc/crontab</tt>：
+    <pre>05 4 * * 0 root {{{ aide_bin_path }}} {{{ config_command_line }}}--check</pre>
+    AIDE 也可通过其他方式定期执行；此处仅为一个示例。可以使用 cron 的特殊时间代码，例如 <tt>@daily</tt> 和 <tt>@weekly</tt>。
+
 rationale: |-
     By default, AIDE does not install itself for periodic execution. Periodically
     running AIDE is necessary to reveal unexpected changes in installed files.
@@ -31,6 +38,9 @@ rationale: |-
     system. The operating system's Information Management Officer (IMO)/Information System
     Security Officer (ISSO) and System Administrators (SAs) must be notified via email and/or
     monitoring system trap when there is an unauthorized modification of a configuration item.
+
+    <p><strong>中文理由：</strong></p>
+    <p>默认情况下，AIDE 不会自行安装定期执行。定期运行 AIDE 是发现已安装文件意外变更所必需的。<br /><br />对基线配置进行未经授权的更改可能使系统易受各种攻击，或允许未经授权访问操作系统。操作系统配置变更可能产生意外副作用，其中一些可能涉及安全。<br /><br />检测此类变更并提供自动响应，有助于避免可能最终影响操作系统安全状态的意外负面后果。当配置项发生未经授权的修改时，必须通过电子邮件和/或监控系统陷阱通知操作系统的 Information Management Officer（IMO）/Information System Security Officer（ISSO）和 System Administrators（SA）。</p>
 
 severity: medium
 

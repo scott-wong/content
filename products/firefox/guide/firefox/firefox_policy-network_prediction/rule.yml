@@ -8,9 +8,15 @@ description: |-
     This can be disabled by
     setting <tt>NetworkPrediction</tt> to <tt>true</tt> in the policy file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>Firefox 具有预测和缓存 DNS 请求的功能。可以通过在策略文件中将 <tt>NetworkPrediction</tt> 设置为 <tt>true</tt> 来禁用此功能。</p>
+
 rationale: |-
     With network prediction enabled, URL requests are made without user consent.
-    Browsers should always make a direct DNS request with prefetching. 
+    Browsers should always make a direct DNS request with prefetching.
+
+    <p><strong>中文理由：</strong></p>
+    <p>启用网络预测后，会在未经用户同意的情况下发起 URL 请求。浏览器始终应通过预取直接发出 DNS 请求。</p>
 
 severity: medium
 

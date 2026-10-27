@@ -8,9 +8,15 @@ description: |-
     Other such as <tt>AD-SUPPORT</tt> should only be enabled if operationally required.
     The <tt>OSPP</tt>, <tt>NO-SHA1</tt>, <tt>NO-CAMELLIA</tt>, and <tt>ECDHE-ONLY</tt> are allowed by this rule.
 
+    <p><strong>中文说明：</strong></p>
+    <p>子策略可用于修改现有加密策略。某些子策略（例如 <tt>NO-ENFORCE-EMS</tt>）会降低系统安全性，不应使用。其他子策略（例如 <tt>AD-SUPPORT</tt>）仅在运营需要时才应启用。此规则允许 <tt>OSPP</tt>、<tt>NO-SHA1</tt>、<tt>NO-CAMELLIA</tt> 和 <tt>ECDHE-ONLY</tt>。</p>
+
 
 rationale: |-
     Sub-policies can cause insecure ciphers to be used.
+
+    <p><strong>中文理由：</strong></p>
+    <p>子策略可能导致使用不安全的密码算法。</p>
 
 identifiers:
     cce@rhel8: CCE-86536-0

@@ -12,9 +12,15 @@ description: |-
     <tt>ALL ALL=(ALL) ALL</tt>
     <tt>ALL ALL=(ALL:ALL) ALL</tt>
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 命令允许用户以提升的（管理员）权限执行程序。它会提示用户输入密码，并通过检查名为 sudoers 的文件确认执行命令的请求。请从 sudoers 文件中删除以下条目，以限制特权操作：<tt>ALL ALL=(ALL) ALL</tt>、<tt>ALL ALL=(ALL:ALL) ALL</tt>。</p>
+
 rationale: |-
     If the "sudoers" file is not configured correctly, any user defined
     on the system can initiate privileged actions on the target system.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果 "sudoers" 文件配置不正确，系统上定义的任何用户都可在目标系统上发起特权操作。</p>
 
 severity: medium
 

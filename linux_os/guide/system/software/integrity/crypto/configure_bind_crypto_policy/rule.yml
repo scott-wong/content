@@ -14,9 +14,17 @@ description: |-
     is not commented out or superseded by later includes:
     <tt>include "/etc/crypto-policies/back-ends/bind.config";</tt>
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略为许多软件包的加密算法使用提供集中控制。BIND 受加密策略支持，但其配置可能被设置为忽略该策略。
+
+    要检查加密策略设置是否正确配置，请确保 <tt>/etc/named.conf</tt> 包含适当配置：在 <tt>/etc/named.conf</tt> 的 <tt>options</tt> 节中，确保以下行未被注释掉，也未被后续 include 覆盖：<tt>include "/etc/crypto-policies/back-ends/bind.config";</tt></p>
+
 rationale: |-
     Overriding the system crypto policy makes the behavior of the BIND service violate expectations,
     and makes system configuration more fragmented.
+
+    <p><strong>中文理由：</strong></p>
+    <p>覆盖系统加密策略会使 BIND 服务的行为违背预期，并使系统配置更加碎片化。</p>
 
 severity: high
 

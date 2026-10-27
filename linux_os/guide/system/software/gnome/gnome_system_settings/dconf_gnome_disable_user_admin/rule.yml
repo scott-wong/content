@@ -19,11 +19,23 @@ description: |-
     <pre>/org/gnome/desktop/lockdown/user-administration-disabled</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>默认情况下，<tt>GNOME</tt> 允许所有用户拥有部分管理能力。应禁用此功能，以免非管理用户进行配置更改。要配置系统在图形用户界面（GUI）中禁用用户管理能力，请在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中将 <tt>user-administration-disabled</tt> 添加或设置为 <tt>true</tt>。例如：</p>
+    <pre>[org/gnome/desktop/lockdown]
+    user-administration-disabled=true
+    </pre>
+    添加设置后，请将锁定项添加到 <tt>/etc/dconf/db/local.d/locks/00-security-settings-lock</tt> 以防止用户修改。例如：
+    <pre>/org/gnome/desktop/lockdown/user-administration-disabled</pre>
+    设置完成后，请运行 <tt>dconf update</tt>。
+
 rationale: |-
     Allowing all users to have some administratrive capabilities to the system through
     the Graphical User Interface (GUI) when they would not have them otherwise could allow
     unintended configuration changes as well as a nefarious user the capability to make system
     changes such as adding new accounts, etc.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果通过图形用户界面（GUI）让所有用户获得其原本不具备的系统管理能力，可能导致非预期配置更改，并使恶意用户有能力执行添加新账户等系统更改。</p>
 
 severity: high
 

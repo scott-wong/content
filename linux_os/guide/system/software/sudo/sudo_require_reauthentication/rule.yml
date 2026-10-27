@@ -13,12 +13,18 @@ description: |-
     If the value is set to an integer less than 0, the user's time stamp will not expire
     and the user will not have to re-authenticate for privileged actions until the user's session is terminated.
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>timestamp_timeout</tt> 标记设置 sudo 密码提示等待的时间。默认 <tt>timestamp_timeout</tt> 值为 5 分钟。应确保 <tt>/etc/sudoers</tt> 配置文件或 <tt>/etc/sudoers.d/</tt> 中的任何 sudo 配置片段存在 <tt>timestamp_timeout</tt> 标记，以配置此值。如果该值设置为小于 0 的整数，用户的时间戳将不会过期，用户在会话终止前无需重新身份验证即可执行特权操作。</p>
+
 rationale: |-
     Without re-authentication, users may access resources or perform tasks for which they
     do not have authorization.
     <br /><br />
     When operating systems provide the capability to escalate a functional capability, it
     is critical that the user re-authenticate.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果没有重新身份验证，用户可能访问其无权访问的资源或执行其无权执行的任务。<br /><br />当操作系统提供提升功能能力的机制时，用户重新进行身份验证至关重要。</p>
 
 severity: medium
 

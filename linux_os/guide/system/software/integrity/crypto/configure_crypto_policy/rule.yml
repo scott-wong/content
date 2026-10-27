@@ -47,10 +47,60 @@ description: |-
     The rule checks if settings for selected crypto policy are configured as expected. Configuration files in the <tt>/etc/crypto-policies/back-ends</tt> are either symlinks to correct files provided by Crypto-policies package or they are regular files in case crypto policy customizations are applied.
     Crypto policies may be customized by crypto policy modules, in which case it is delimited from the base policy using a colon.
 
+    <p><strong>中文说明：</strong></p>
+    {{% if product != "hummingbird" -%}}
+    要将系统加密策略配置为仅使用 <tt>{{{ xccdf_value("var_system_crypto_policy") }}}</tt>
+    {{% if product != "rhcos4" -%}}
+    策略中的密码算法，请运行以下命令：
+    <pre>$ sudo update-crypto-policies --set {{{ xccdf_value("var_system_crypto_policy") }}}</pre>
+    {{% else -%}}
+    策略中的密码算法，请按如下方式创建 <tt>MachineConfig</tt>：
+    <pre>
+    ---
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+    metadata:
+      labels:
+        machineconfiguration.openshift.io/role: master
+      name: 50-master-configure-crypto-policy
+    spec:
+      config:
+        ignition:
+          version: 3.1.0
+        systemd:
+          units:
+            - name: configure-crypto-policy.service
+              enabled: true
+              contents: |
+                [Unit]
+                Before=kubelet.service
+                [Service]
+                Type=oneshot
+                ExecStart=update-crypto-policies --set {{{ xccdf_value("var_system_crypto_policy") }}}
+                RemainAfterExit=yes
+                [Install]
+                WantedBy=multi-user.target
+    </pre>
+    <p>
+    这将在所有标记为 "master" 角色的节点上配置加密策略。
+    </p>
+    <p>
+    请注意，需要对每个 <tt>MachineConfigPool</tt> 执行此操作。
+    </p>
+    <p>
+    有关如何使用 Machine Config Operator 配置节点的更多信息，请参阅 <a href="https://docs.openshift.com/container-platform/4.6/post_installation_configuration/machine-configuration-tasks.html">相关文档</a>。
+    </p>
+    {{% endif -%}}
+    {{% endif -%}}
+    此规则检查所选加密策略的设置是否按预期配置。<tt>/etc/crypto-policies/back-ends</tt> 中的配置文件要么是指向 crypto-policies 软件包所提供正确文件的符号链接，要么是在应用加密策略自定义时使用的常规文件。加密策略可通过策略模块进行自定义，此时会使用冒号与基础策略分隔。
+
 rationale: |-
     Centralized cryptographic policies simplify applying secure ciphers across an operating system and
     the applications that run on that operating system. Use of weak or untested encryption algorithms
     undermines the purposes of utilizing encryption to protect data.
+
+    <p><strong>中文理由：</strong></p>
+    <p>集中式加密策略可简化在操作系统及其上运行的应用中应用安全密码算法。使用弱算法或未经测试的加密算法会削弱使用加密保护数据的目的。</p>
 
 severity: high
 

@@ -5,8 +5,14 @@ title: 'Implement STIG Sub Crypto Policy'
 description: |-
     Create a custom cryptographic policy to follow the guidance from DISA.
 
+    <p><strong>中文说明：</strong></p>
+    <p>创建自定义加密策略，以遵循 DISA 指南。</p>
+
 rationale: |-
     To follow STIG policy.
+
+    <p><strong>中文理由：</strong></p>
+    <p>以遵循 STIG 策略。</p>
 
 severity: medium
 

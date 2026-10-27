@@ -6,9 +6,15 @@ title: 'Uninstall abrt-addon-python Package'
 description: |-
     {{{ describe_package_remove(package="abrt-addon-python") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>abrt-addon-python</tt> 软件包。</p>
+
 rationale: |-
     <tt>abrt-addon-python</tt> contains python hook and python analyzer
     plugin for handling uncaught exceptions in python programs.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>abrt-addon-python</tt> 包含用于处理 Python 程序中未捕获异常的 Python hook 和 Python 分析器插件。</p>
 
 severity: low
 

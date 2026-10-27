@@ -6,6 +6,9 @@ description: |-
     Verify that an Endpoint Security Solution has been deployed on the operating system.
     If there is not an Endpoint Security Solution deployed, this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    <p>验证操作系统上已部署终端安全解决方案。如果未部署终端安全解决方案，则属于不合规项。</p>
+
 rationale: |-
     Without the use of automated mechanisms to scan for security flaws on a continuous
     and/or periodic basis, the operating system or other system components may remain
@@ -14,6 +17,9 @@ rationale: |-
     To support this requirement, the operating system may have an integrated solution
     incorporating continuous scanning and periodic scanning using other tools,
     as specified in the requirement.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果不使用自动化机制持续和/或定期扫描安全缺陷，操作系统或其他系统组件可能仍然容易受到未检测到的软件缺陷所导致的漏洞利用。为支持此要求，操作系统可以集成了一个解决方案，结合持续扫描和使用其他工具的定期扫描，具体按需求规定。</p>
 
 severity: medium
 

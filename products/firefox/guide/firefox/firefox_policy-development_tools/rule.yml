@@ -11,9 +11,15 @@ description: |-
     This can be disabled by setting <tt>DisableDeveloperTools</tt> to
     <tt>true</tt> in <tt>policies.json</tt>
 
+    <p><strong>中文说明：</strong></p>
+    <p>Firefox 提供开发工具，可识别有关浏览器及其配置的详细信息。这些详细信息通常还会记录到日志文件中，使攻击者能够捕获有关系统的详细信息。可以通过在 <tt>policies.json</tt> 中将 <tt>DisableDeveloperTools</tt> 设置为 <tt>true</tt> 来禁用此功能。</p>
+
 rationale: |-
     In order to protect privacy and sensitive data, Mozilla provides
     the ability to configure Firefox so that development tools are prevented from being used.
+
+    <p><strong>中文理由：</strong></p>
+    <p>为保护隐私和敏感数据，Mozilla 提供了将 Firefox 配置为禁止使用开发工具的功能。</p>
 
 severity: low
 

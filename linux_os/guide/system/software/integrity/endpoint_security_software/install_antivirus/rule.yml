@@ -15,9 +15,19 @@ description: |-
     If the system processes inbound SMTP mail, the virus scanner must be configured
     to scan all received mail.
 
+    <p><strong>中文说明：</strong></p>
+    <p>病毒扫描软件可用于保护系统免受计算机病毒入侵，并限制病毒通过中间系统传播。
+
+    病毒扫描软件应配置为对访问的文件执行动态扫描。如果无法提供此能力，则必须将系统配置为至少每天扫描系统上所有已更改的文件。
+
+    如果系统处理入站 SMTP 邮件，病毒扫描程序必须配置为扫描所有收到的邮件。</p>
+
 rationale: |-
     Virus scanning software can be used to detect if a system has been compromised by
     computer viruses, as well as to limit their spread to other systems.
+
+    <p><strong>中文理由：</strong></p>
+    <p>病毒扫描软件可用于检测系统是否已受到计算机病毒破坏，并限制病毒传播到其他系统。</p>
 
 severity: high
 

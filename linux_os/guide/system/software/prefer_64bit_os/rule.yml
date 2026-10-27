@@ -5,9 +5,15 @@ title: Prefer to use a 64-bit Operating System when supported
 description: |-
   Prefer installation of 64-bit operating systems when the CPU supports it.
 
+  <p><strong>中文说明：</strong></p>
+  <p>当 CPU 支持时，优先安装 64 位操作系统。</p>
+
 rationale: |-
   Use of a 64-bit operating system offers a few advantages, like a larger address space range for
   Address Space Layout Randomization (ASLR) and systematic presence of No eXecute and Execute Disable (NX/XD) protection bits.
+
+  <p><strong>中文理由：</strong></p>
+  <p>使用 64 位操作系统具有一些优势，例如为地址空间布局随机化（ASLR）提供更大的地址空间范围，以及系统性提供 No eXecute 和 Execute Disable（NX/XD）保护位。</p>
 
 warnings:
     - general: |-

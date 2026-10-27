@@ -6,11 +6,17 @@ title: 'Uninstall tuned Package'
 description: |-
     {{{ describe_package_remove(package="tuned") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>tuned</tt> 软件包。</p>
+
 rationale: |-
     <tt>tuned</tt> contains a daemon that tunes the system settings dynamically.
     It does so by monitoring the usage of several system components periodically. Based
     on that information, components will then be put into lower or higher power savings
     modes to adapt to the current usage.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>tuned</tt> 包含一个动态调整系统设置的守护进程。它定期监控多个系统组件的使用情况，并根据这些信息将组件置于更低或更高的节能模式，以适应当前使用情况。</p>
 
 severity: medium
 

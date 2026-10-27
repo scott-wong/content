@@ -7,9 +7,15 @@ description: |-
     Systems need to have package manager repositories configured to ensure they receive the
     latest patches and updates.
 
+    <p><strong>中文说明：</strong></p>
+    <p>系统需要配置软件包管理器仓库，以确保接收最新补丁和更新。</p>
+
 rationale: |-
     If the system's package repositories are misconfigured important patches may not be
     identified or a rogue repository could introduce compromised software.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果系统的软件包仓库配置错误，重要补丁可能无法识别，或者恶意仓库可能引入已遭入侵的软件。</p>
 
 severity: medium
 

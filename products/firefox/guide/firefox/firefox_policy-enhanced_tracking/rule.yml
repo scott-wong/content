@@ -7,8 +7,14 @@ description: |-
     Enhanced Tracking Protection may be enabled by setting
     <tt>browser.contentblocking.category</tt> to <tt>strict</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过将 <tt>browser.contentblocking.category</tt> 设置为 <tt>strict</tt> 来启用增强跟踪防护。</p>
+
 rationale: |-
     Tracking generally refers to content, cookies, or scripts that can collect your browsing data across multiple sites.
+
+    <p><strong>中文理由：</strong></p>
+    <p>跟踪通常指能够在多个站点之间收集浏览数据的内容、Cookie 或脚本。</p>
 
 severity: medium
 

@@ -10,9 +10,19 @@ description: |-
 
     Audit tools must have a mode of 0755 or less permissive.
 
+    <p><strong>中文说明：</strong></p>
+    <p>提供审计信息接口工具的 {{{ full_name }}} 系统将利用用户权限和角色，识别访问工具的用户及其拥有的相应权限，从而对审计工具的访问作出访问决策。
+
+    审计工具包括但不限于成功查看和操作审计信息系统活动与记录所需的供应商提供和开源审计工具。审计工具还包括自定义查询和报告生成器。
+
+    审计工具的权限必须为 0755 或更严格。</p>
+
 rationale: |-
     Protecting audit information also includes identifying and protecting the tools used to view and manipulate log data.
     Therefore, protecting audit tools is necessary to prevent unauthorized operations on audit information.
+
+    <p><strong>中文理由：</strong></p>
+    <p>保护审计信息还包括识别并保护用于查看和操作日志数据的工具。因此，必须保护审计工具，以防止对审计信息进行未经授权操作。</p>
 
 severity: medium
 

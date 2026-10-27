@@ -6,9 +6,15 @@ title: 'Enable dnf-automatic Timer'
 description: |-
     {{{ describe_timer_enable(timer="dnf-automatic") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>应启用并启动 <tt>dnf-automatic</tt> 计时器。</p>
+
 rationale: |-
     The <tt>dnf-automatic</tt> is an alternative command line interface (CLI) to <tt>dnf upgrade</tt> with specific facilities to make it suitable to be executed automatically and regularly from systemd timers, cron jobs and similar.
     The tool is controlled by <tt>dnf-automatic.timer</tt> SystemD timer.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>dnf-automatic</tt> 是 <tt>dnf upgrade</tt> 的替代命令行界面（CLI），具备特定功能，适合由 systemd 计时器、cron 任务及类似机制自动定期执行。该工具由 <tt>dnf-automatic.timer</tt> systemd 计时器控制。</p>
 
 severity: medium
 

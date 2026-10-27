@@ -18,10 +18,26 @@ description: |-
     <pre>$ sudo apt remove gdm3</pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{% if 'ubuntu' not in product and 'debian' not in product %}}
+    通过移除 <tt>gdm</tt> 软件包，系统将不再安装 GNOME。
+    {{% else %}}
+    通过移除 <tt>gdm3</tt> 软件包，系统将不再安装 GNOME。
+    {{% endif %}}
+    如果未安装 X Windows，系统将无法启动到图形用户模式。这可防止系统意外或恶意启动到 <tt>graphical.target</tt> 模式。为此，请运行以下命令：
+    {{% if 'ubuntu' not in product and 'debian' not in product %}}
+    <pre>$ sudo yum remove gdm</pre>
+    {{% else %}}
+    <pre>$ sudo apt remove gdm3</pre>
+    {{% endif %}}
+
 rationale: |-
     Unnecessary service packages must not be installed to decrease the attack surface of the system.
     A graphical environment is unnecessary for certain types of systems including a virtualization
     hypervisor.
+
+    <p><strong>中文理由：</strong></p>
+    <p>不得安装不必要的服务软件包，以减少系统攻击面。某些类型的系统（包括虚拟化 Hypervisor）不需要图形环境。</p>
 
 severity: medium
 

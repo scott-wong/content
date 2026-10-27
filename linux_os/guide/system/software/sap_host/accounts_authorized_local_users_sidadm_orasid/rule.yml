@@ -21,11 +21,21 @@ description: |-
     SAP system. The bash remediation commands can be used to delete unexpected users on
     the operating system.
 
+    <p><strong>中文说明：</strong></p>
+    <p>SAP 通常会独占使用服务器或虚拟机。操作系统（或虚拟机）上应只存在 SAP 系统用户 <tt>sidadm</tt> 和 <tt>orasid</tt>。如果安装了 SAP Host Agent，还必须存在用户 <tt>sapadm</tt>。如果使用 Oracle Database 并使用 <tt>oracle</tt> 用户，也应存在 <tt>oracle</tt> 用户。其中 <tt>SID</tt> 是 SAP 系统 ID，始终为三个大写字母数字字符且以字母开头；用户名 <tt>sidadm</tt> 和 <tt>orasid</tt> 为小写。
+    <br /> <br />
+    除自动检测的上述 SAP 用户外，可在 refine value 变量 <tt>var_accounts_authorized_local_users_regex</tt> 中自定义其他操作系统用户。用户列表使用 OVAL 正则表达式。
+    <br /> <br />
+    <tt>fail</tt> 或 <tt>error</tt> 的测试结果均表示用户名与 SAP 系统不匹配。可使用 bash 修复命令删除操作系统上的意外用户。</p>
+
 rationale: |-
     Accounts providing no operational purpose provide additional opportunities for
     system compromise. Unnecessary accounts include user accounts for individuals not
     requiring access to the system and application accounts for applications not installed
     on the system.
+
+    <p><strong>中文理由：</strong></p>
+    <p>没有运营用途的账户会为系统失陷提供额外机会。不必要的账户包括不需要访问系统的个人用户账户，以及未安装应用程序的应用程序账户。</p>
 
 severity: medium
 

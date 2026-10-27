@@ -10,8 +10,14 @@ description: |-
     This rule checks if the file exists and if it contains required parameters and values which modify the Crypto Policy.
     During the parsing process, as soon as Openssh client parses some configuration option and its value, it remembers it and ignores any subsequent overrides. The customization mechanism provided by crypto policies appends eventual customizations at the end of the system wide crypto policy. Therefore, if the crypto policy customization overrides some parameter which is already configured in the system wide crypto policy, the SSH client will not honor that customized parameter.
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略是为包括 OpenSSH 客户端在内的选定应用强制执行特定加密设置的方法。要覆盖 OpenSSH 客户端的系统级加密策略，请将文件放入 <tt>{{{ sshc_config_dir }}}</tt> 目录，使其在 <tt>05-redhat.conf</tt> 之前加载。在此情况下，该文件为 <tt>{{{ sshc_crypto_policy_config }}}</tt>，其中包含需要相对于加密策略更改的参数。此规则检查该文件是否存在，以及是否包含用于修改加密策略的所需参数和值。解析过程中，OpenSSH 客户端一旦解析某个配置选项及其值，就会记住该选项并忽略后续覆盖。加密策略提供的自定义机制会将最终自定义项追加到系统级加密策略末尾。因此，如果加密策略自定义覆盖了系统级加密策略中已配置的某个参数，SSH 客户端将不会采用该自定义参数。</p>
+
 rationale: |-
     The Common Criteria requirements specify how certain parameters for OpenSSH Client are configured. Particular parameters are RekeyLimit, GSSAPIAuthentication, Ciphers, PubkeyAcceptedKeyTypes, MACs and KexAlgorithms. Currently particular requirements specified by CC are stricter compared to any existing Crypto Policy.
+
+    <p><strong>中文理由：</strong></p>
+    <p>通用准则（Common Criteria）要求指定 OpenSSH 客户端的某些参数。特定参数包括 RekeyLimit、GSSAPIAuthentication、Ciphers、PubkeyAcceptedKeyTypes、MACs 和 KexAlgorithms。目前 CC 规定的特定要求比任何现有加密策略都更严格。</p>
 
 severity: medium
 

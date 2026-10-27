@@ -15,8 +15,19 @@ description: |-
     {{{ openssl_strong_entropy_config_file() | indent(4) }}}
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>默认情况下，OpenSSL 并不总是使用符合 SP800-90A 的随机数生成器。配置 OpenSSL 始终使用强熵源的一种方法是设置一个包装器，定义用于遮蔽实际 <tt>openssl</tt> 二进制的 shell 函数，并确保每次调用 <tt>openssl</tt> 时都添加 <tt>-rand /dev/random</tt> 选项。
+
+    为此，请将以下 shell 片段原样放入 <tt>/etc/profile.d/openssl-rand.sh</tt>：</p>
+    <pre>
+    {{{ openssl_strong_entropy_config_file() | indent(4) }}}
+    </pre>
+
 rationale: |-
     This rule ensures that <tt>openssl</tt> invocations always uses SP800-90A compliant random number generator as a default behavior.
+
+    <p><strong>中文理由：</strong></p>
+    <p>此规则确保 <tt>openssl</tt> 调用默认始终使用符合 SP800-90A 的随机数生成器。</p>
 
 severity: medium
 identifiers:

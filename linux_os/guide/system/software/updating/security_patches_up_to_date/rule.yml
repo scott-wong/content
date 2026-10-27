@@ -4,6 +4,9 @@ documentation_complete: true
 title: 'Ensure Software Patches Installed'
 
 description: |-
+
+    <p><strong>中文说明：</strong></p>
+    <p>确保系统已安装最新的安全补丁和更新。</p>
 {{% if 'rhel' in product %}}
     If the system is joined to the Red Hat Network, a Red Hat Satellite Server,
     or a yum server, run the following command to install updates:
@@ -39,6 +42,9 @@ rationale: |-
     recent security patches and updates are not installed, unauthorized
     users may take advantage of weaknesses in the unpatched software. The
     lack of prompt attention to patching could result in a system compromise.
+
+    <p><strong>中文理由：</strong></p>
+    <p>安装软件更新是针对公开已知漏洞利用的基本缓解措施。如果未安装最新的安全补丁和更新，未授权用户可能利用未修补软件中的弱点。未能及时处理补丁可能导致系统遭到攻陷。</p>
 
 severity: medium
 

@@ -10,8 +10,14 @@ description: |-
     This can be done by dropping a file named <tt>opensshserver-xxx.config</tt>, replacing <tt>xxx</tt> with arbitrary identifier, into <tt>/etc/crypto-policies/local.d</tt>. This has to be followed by running <tt>update-crypto-policies</tt> so that changes are applied.
     Changes are propagated into <tt>{{{ openssh_server_policy_file }}}</tt>. This rule checks if this file contains predefined <tt>CRYPTO_POLICY</tt> environment variable configured with predefined value.
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略是为包括 OpenSSH 服务器在内的选定应用强制执行特定加密设置的方法。SSHD 服务默认会根据当前加密策略修改其配置。但在某些情况下，可能需要仅覆盖 OpenSSH Server 的加密策略而保留其余加密策略不变。可通过将名为 <tt>opensshserver-xxx.config</tt> 的文件放入 <tt>/etc/crypto-policies/local.d</tt> 来实现，其中 <tt>xxx</tt> 替换为任意标识符。随后必须运行 <tt>update-crypto-policies</tt> 以应用更改。更改会传播到 <tt>{{{ openssh_server_policy_file }}}</tt>。此规则检查该文件是否包含使用预定义值配置的预定义 <tt>CRYPTO_POLICY</tt> 环境变量。</p>
+
 rationale: |-
     The Common Criteria requirements specify that certain parameters for OpenSSH Server are configured e.g. supported ciphers, accepted host key algorithms, public key types, key exchange algorithms, HMACs and GSSAPI key exchange is disabled. Currently particular requirements specified by CC are stricter compared to any existing Crypto Policy.
+
+    <p><strong>中文理由：</strong></p>
+    <p>通用准则（Common Criteria）要求指定 OpenSSH 服务器的某些参数，例如支持的密码算法、接受的主机密钥算法、公钥类型、密钥交换算法、HMAC，以及禁用 GSSAPI 密钥交换。目前 CC 规定的特定要求比任何现有加密策略都更严格。</p>
 
 severity: medium
 

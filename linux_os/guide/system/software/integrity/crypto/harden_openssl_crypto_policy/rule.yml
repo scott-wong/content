@@ -17,10 +17,16 @@ description: |-
     This rule checks if this file contains predefined <tt>Ciphersuites</tt>
     variable configured with predefined value.
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略是为包括 OpenSSL 在内的选定应用强制执行特定加密设置的方法。OpenSSL 默认会根据当前加密策略修改其配置。但在某些情况下，可能需要仅覆盖 OpenSSL 的加密策略而保留其余加密策略不变。可通过将名为 <tt>opensslcnf-xxx.config</tt> 的文件放入 <tt>/etc/crypto-policies/local.d</tt> 来实现，其中 <tt>xxx</tt> 替换为任意标识符。随后必须运行 <tt>update-crypto-policies</tt> 以应用更改。更改会传播到 <tt>/etc/crypto-policies/back-ends/opensslcnf.config</tt>。此规则检查该文件是否包含使用预定义值配置的预定义 <tt>Ciphersuites</tt> 变量。</p>
+
 rationale: |-
     The Common Criteria requirements specify that certain parameters for OpenSSL
     are configured e.g. cipher suites. Currently particular requirements
     specified by CC are stricter compared to any existing Crypto Policy.
+
+    <p><strong>中文理由：</strong></p>
+    <p>通用准则（Common Criteria）要求指定 OpenSSL 的某些参数（例如密码套件）。目前 CC 规定的特定要求比任何现有加密策略都更严格。</p>
 
 severity: medium
 

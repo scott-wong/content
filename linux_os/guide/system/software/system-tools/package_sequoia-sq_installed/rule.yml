@@ -5,11 +5,17 @@ title: 'Install sequoia-sq Package'
 description: |-
     {{{ describe_package_install(package="sequoia-sq") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>sequoia-sq</tt> 软件包。</p>
+
 rationale: |-
     The <tt>sequoia-sq</tt> package provides the <tt>sq</tt> command-line tool,
     which is used for OpenPGP operations including verification of GPG signatures.
     This tool is required for cryptographic verification of software packages and
     GPG keys using modern OpenPGP implementations.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>sequoia-sq</tt> 软件包提供 <tt>sq</tt> 命令行工具，用于 OpenPGP 操作，包括验证 GPG 签名。使用现代 OpenPGP 实现通过密码学验证软件包和 GPG 密钥时需要此工具。</p>
 
 severity: low
 

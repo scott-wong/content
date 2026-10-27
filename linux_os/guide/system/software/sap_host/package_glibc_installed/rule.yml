@@ -10,11 +10,18 @@ description: |-
     SAP note of your Linux version for the minimum requirement on <tt>glibc</tt>.
     {{{ describe_package_install(package="glibc") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p><tt>glibc</tt> 软件包默认安装在 Linux 上，但其版本可能不足以支持 SAP。请参阅适用于所用 Linux 版本的 SAP Note，了解 <tt>glibc</tt> 的最低要求。
+    应安装 <tt>glibc</tt> 软件包。</p>
+
 rationale: |-
     The <tt>glibc</tt> package contains standard C and math libraries used by
     multiple programs on Linux. The <tt>glibc</tt> shipped with first release
     of each major Linux version is often not sufficient for SAP.
     An update is required after the first OS installation.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>glibc</tt> 软件包包含 Linux 上多个程序使用的标准 C 和数学库。每个 Linux 主要版本首次发布时附带的 <tt>glibc</tt> 通常不足以支持 SAP。首次安装操作系统后需要更新。</p>
 
 severity: medium
 

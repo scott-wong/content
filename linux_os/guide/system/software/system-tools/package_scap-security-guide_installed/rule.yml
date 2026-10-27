@@ -6,6 +6,9 @@ title: 'Install scap-security-guide Package'
 description: |-
     {{{ describe_package_install(package="scap-security-guide") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>scap-security-guide</tt> 软件包。</p>
+
 rationale: |-
     The <tt>scap-security-guide</tt> package provides a guide for configuration of the system
     from the final system's security point of view. The guidance is specified in the Security
@@ -16,6 +19,9 @@ rationale: |-
     package, or the SCAP Workbench GUI tool from the <tt>scap-workbench</tt> package, to verify
     that the system conforms to provided guidelines. Refer to the scap-security-guide(8) manual
     page for further information.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>scap-security-guide</tt> 软件包从最终系统的安全角度提供系统配置指南。该指南以 Security Content Automation Protocol（SCAP）格式定义，构成实用加固建议目录，并尽可能关联政府要求。SCAP Security Guide 项目弥合了通用策略要求与具体实施指南之间的差距。系统管理员可使用 <tt>openscap-scanner</tt> 软件包中的 <tt>oscap</tt> CLI 工具，或 <tt>scap-workbench</tt> 软件包中的 SCAP Workbench GUI 工具，验证系统是否符合所提供的指南。有关更多信息，请参阅 scap-security-guide(8) 手册页。</p>
 
 severity: medium
 

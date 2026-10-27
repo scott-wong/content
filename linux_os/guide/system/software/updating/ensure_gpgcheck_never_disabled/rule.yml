@@ -13,6 +13,10 @@ description: |-
     any repos, remove any lines from files in <tt>{{{ pkg_manager_repos }}}</tt> of the form:
     <pre>gpgcheck=0</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>为确保未对任何仓库禁用签名检查，请从 <tt>{{{ pkg_manager_repos }}}</tt> 中的文件删除所有形式如下的行：</p>
+    <pre>gpgcheck=0</pre>
+
 rationale: |-
     Verifying the authenticity of the software prior to installation validates
     the integrity of the patch or upgrade received from a vendor. This ensures
@@ -20,6 +24,9 @@ rationale: |-
     trusted vendor. Self-signed certificates are disallowed by this
     requirement. Certificates used to verify the software must be from an
     approved Certificate Authority (CA)."
+
+    <p><strong>中文理由：</strong></p>
+    <p>在安装前验证软件真实性可验证从供应商收到的补丁或升级的完整性。这可确保软件未被篡改，并且由可信供应商提供。此要求禁止使用自签名证书。用于验证软件的证书必须来自批准的证书颁发机构（CA）。</p>
 
 severity: high
 

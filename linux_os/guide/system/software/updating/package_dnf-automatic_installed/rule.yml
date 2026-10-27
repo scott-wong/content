@@ -6,9 +6,15 @@ title: 'Install dnf-automatic Package'
 description: |-
     {{{ describe_package_install(package="dnf-automatic") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>应安装 <tt>dnf-automatic</tt> 软件包。</p>
+
 rationale: |-
     <tt>dnf-automatic</tt> is an alternative command line interface (CLI)
     to <tt>dnf upgrade</tt> suitable for automatic, regular execution.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>dnf-automatic</tt> 是 <tt>dnf upgrade</tt> 的替代命令行界面（CLI），适合自动定期执行。</p>
 
 severity: medium
 

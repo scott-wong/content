@@ -11,12 +11,18 @@ title: 'Ensure {{{ package }}} is installed'
 description: |-
     {{{ describe_package_install(package=package) }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>{{{ package }}}</tt> 软件包。</p>
+
 rationale: |-
     Network Security Services (NSS) is a set of libraries designed to
     support cross-platform development of security-enabled client and
     server applications. Install the <tt>{{{ package }}}</tt> package
     to install command-line tools to manipulate the NSS certificate
     and key database.
+
+    <p><strong>中文理由：</strong></p>
+    <p>Network Security Services（NSS）是一组旨在支持安全客户端和服务器应用跨平台开发的库。安装 <tt>{{{ package }}}</tt> 软件包可安装用于操作 NSS 证书和密钥数据库的命令行工具。</p>
 
 severity: medium
 

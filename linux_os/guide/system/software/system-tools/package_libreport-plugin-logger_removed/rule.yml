@@ -6,6 +6,9 @@ title: 'Uninstall libreport-plugin-logger Package'
 description: |-
     {{{ describe_package_remove(package="libreport-plugin-logger") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>libreport-plugin-logger</tt> 软件包。</p>
+
 rationale: |-
     <tt>libreport-plugin-logger</tt> is a ABRT plugin to report bugs into the
     {{%- if 'ol' in families %}}
@@ -13,6 +16,15 @@ rationale: |-
     {{%- else %}}
     Red Hat Support system.
     {{%- endif %}}
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>libreport-plugin-logger</tt> 是用于向
+    {{% if 'ol' in families %}}
+    Oracle Linux Support 系统
+    {{% else %}}
+    Red Hat Support 系统
+    {{% endif %}}
+    报告缺陷的 ABRT 插件。</p>
 
 severity: low
 

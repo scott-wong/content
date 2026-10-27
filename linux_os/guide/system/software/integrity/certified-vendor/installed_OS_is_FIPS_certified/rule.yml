@@ -7,6 +7,9 @@ description: |-
     To enable processing of sensitive information the operating system must
     provide certified cryptographic modules compliant with FIPS 140-2
     standard.
+
+    <p><strong>中文说明：</strong></p>
+    <p>为处理敏感信息，操作系统必须提供符合 FIPS 140-2 标准的经过认证的加密模块。</p>
 {{% if product in ["sle12", "sle15"] %}}
     SUSE Enterprise Linux is supported by SUSE Software Solutions Germany GmbH. As the SUSE Enterprise
     Linux vendor, SUSE Software Solutions Germany GmbH is responsible for maintaining government
@@ -32,6 +35,9 @@ rationale: |-
     achieve FIPS 140-2 certification, cryptographic modules are subject to
     extensive testing by independent laboratories, accredited by National
     Institute of Standards and Technology (NIST).
+
+    <p><strong>中文理由：</strong></p>
+    <p>FIPS 140-2 标准是美国联邦信息处理标准，规定用于保护敏感非密信息的加密模块的安全要求。有关详细要求，请参阅 <a href="http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf">完整的 FIPS 140-2 标准</a>。当信息系统使用加密技术保护敏感政府信息时，美国法律要求进行 FIPS 140-2 验证。为获得 FIPS 140-2 认证，加密模块必须接受由国家标准与技术研究院（NIST）认可的独立实验室进行的广泛测试。</p>
 
 warnings:
     - general: |-

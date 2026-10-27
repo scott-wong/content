@@ -14,10 +14,18 @@ description: |-
     line and is not commented out:
     <tt>MACs {{{ xccdf_value("sshd_approved_macs") }}}</tt>
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略为许多软件包的加密算法使用提供集中控制。OpenSSH 受系统加密策略支持，但其配置可能设置不正确。
+
+    要检查加密策略设置是否正确，请确保 <tt>{{{ openssh_client_policy_file }}}</tt> 包含以下行且未被注释掉：<tt>MACs {{{ xccdf_value("sshd_approved_macs") }}}</tt></p>
+
 rationale: |-
     Overriding the system crypto policy makes the behavior of the OpenSSH
     client violate expectations, and makes system configuration more
     fragmented.
+
+    <p><strong>中文理由：</strong></p>
+    <p>覆盖系统加密策略会使 OpenSSH 客户端的行为违背预期，并使系统配置更加碎片化。</p>
 
 severity: medium
 

@@ -7,8 +7,15 @@ description: |-
     Remove the execute permission bit of <tt>/etc/bin/sudo</tt> for the other users.
     {{{ describe_file_permissions(file="/usr/bin/sudo", perms="4110") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>删除 <tt>/etc/bin/sudo</tt> 对其他用户的执行权限位。
+    确保 <tt>/usr/bin/sudo</tt> 的权限为 <tt>4110</tt>。</p>
+
 rationale: |-
     Restricting the set of users able to execute commands as privileged user reduces the attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    <p>限制能够以特权用户身份执行命令的用户集可减小攻击面。</p>
 
 severity: medium
 

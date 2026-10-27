@@ -35,11 +35,39 @@ description: |-
     {{{ package_install("dracut-fips") }}}
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    {{% if 'rhel' not in product %}}
+    要确保启用 FIPS 模式，请安装 <tt>dracut-fips</tt> 软件包，并运行以下命令重建 <tt>initramfs</tt>：
+    <pre>{{{ package_install("dracut-fips") }}}
+    dracut -f</pre>
+    运行 <tt>dracut</tt> 命令后，按以下方式将参数 <tt>fips=1</tt> 添加到 <tt>/etc/default/grub</tt> 中 Linux 操作系统的默认 GRUB 2 命令行：
+    <pre>GRUB_CMDLINE_LINUX="crashkernel=auto rd.lvm.lv=VolGroup/LogVol06 rd.lvm.lv=VolGroup/lv_swap rhgb quiet rd.shell=0 fips=1"</pre>
+    最后，使用以下命令重建 <tt>grub.cfg</tt> 文件：
+    <pre>grub2-mkconfig -o</pre>
+    <ul>
+    <li>在基于 BIOS 的机器上，以 <tt>root</tt> 身份运行以下命令：
+    <pre>~]# grub2-mkconfig -o {{{ grub2_boot_path }}}/grub.cfg</pre></li>
+    <li>在基于 UEFI 的机器上，以 <tt>root</tt> 身份运行以下命令：
+    <pre>~]# grub2-mkconfig -o {{{ grub2_uefi_boot_path }}}/grub.cfg</pre></li>
+    </ul>
+    {{% else %}}
+    {{{ full_name }}} 具有可在安装时启用 FIPS 模式的内核标志。安装程序必须使用 <tt>fips=1</tt> 启动，系统才会启用 FIPS 模式。不支持在现有系统上启用 FIPS 模式。如果此规则在已安装系统上失败，则属于永久性发现，无法修复。
+
+    验证已安装 <tt>dracut-fips</tt> 软件包，可确保 FIPS 模式处于良好状态。
+    {{% endif %}}
+    要确保启用 FIPS 模式，请运行以下命令：
+    <pre>
+    {{{ package_install("dracut-fips") }}}
+    </pre>
+
 rationale: |-
     Use of weak or untested encryption algorithms undermines the purposes of utilizing encryption to
     protect data. The operating system must implement cryptographic modules adhering to the higher
     standards approved by the federal government since this provides assurance they have been tested
     and validated.
+
+    <p><strong>中文理由：</strong></p>
+    <p>使用弱或未经测试的加密算法会削弱利用加密保护数据的目的。操作系统必须实现符合联邦政府批准的更高标准的加密模块，以确保这些模块经过测试和验证。</p>
 
 severity: high
 

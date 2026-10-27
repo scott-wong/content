@@ -5,8 +5,14 @@ title: 'Disable Installation of Weak Dependencies in Zypper'
 description: |-
     To disable weak dependencies, set the <tt>solver.onlyRequires</tt> option to <tt>true</tt> in the <tt>/etc/zypp/zypp.conf</tt> file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>要禁用弱依赖，请在 <tt>/etc/zypp/zypp.conf</tt> 文件中将 <tt>solver.onlyRequires</tt> 选项设置为 <tt>true</tt>。</p>
+
 rationale: |-
     Weak dependencies (such as recommended packages) can introduce unneeded software components on the system, increasing the attack surface. Disabling them ensures that only packages strictly required for operations are installed.
+
+    <p><strong>中文理由：</strong></p>
+    <p>弱依赖（例如推荐软件包）可能在系统中引入不必要的软件组件，从而扩大攻击面。禁用弱依赖可确保仅安装运行严格需要的软件包。</p>
 
 identifiers:
     cce@slmicro6: CCE-94883-6

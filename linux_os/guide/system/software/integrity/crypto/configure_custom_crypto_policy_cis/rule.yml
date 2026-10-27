@@ -115,6 +115,17 @@ description: |-
     $ sudo update-crypto-policies --set {{{ base_policy }}}:{{{ sub_policies | map(attribute='module_name') | join(":") }}}
     </pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>创建自定义加密策略模块，以强制 SSHD 使用强密码算法和 MAC，禁用 SSHD 中的 CBC 模式密码算法，并在全局禁用弱 MAC。
+    {{% for sub_policy in sub_policies %}}
+    请将以下行添加到 <tt>/etc/crypto-policies/policies/modules/{{{ sub_policy.module_name }}}.pmod</tt>：
+    <tt>{{{ sub_policy.key }}} = {{{ sub_policy.value }}}</tt>
+    {{% endfor %}}
+    然后将系统级加密策略设置为使用该自定义策略。</p>
+    <pre>
+    $ sudo update-crypto-policies --set {{{ base_policy }}}:{{{ sub_policies | map(attribute='module_name') | join(":") }}}
+    </pre>
+
 rationale: |-
     CBC mode ciphers are vulnerable to certain attacks, such as the BEAST attack.
     Disabling CBC mode ciphers helps protect against these attacks and ensures that only
@@ -127,6 +138,9 @@ rationale: |-
     provide integrity, and system data may be compromised. Implementing a custom crypto
     policy that disables weak MAC algorithms helps ensure that only strong, proven
     cryptographic algorithms are used to protect SSH communications.
+
+    <p><strong>中文理由：</strong></p>
+    <p>CBC 模式密码算法容易受到 BEAST 等攻击。禁用 CBC 模式密码算法有助于防范这些攻击，并确保仅使用强且经过验证的加密算法来保护 SSH 通信。用于向加密模块进行身份验证的弱密码算法无法可靠提供机密性或完整性，系统数据可能受到损害。消息认证码（MAC）是用于验证通过 SSH 连接传输的数据完整性和真实性的加密机制。用于向加密模块进行身份验证的弱 MAC 无法可靠提供完整性，系统数据可能受到损害。实施禁用弱 MAC 算法的自定义加密策略，有助于确保仅使用强且经过验证的加密算法保护 SSH 通信。</p>
 
 severity: medium
 

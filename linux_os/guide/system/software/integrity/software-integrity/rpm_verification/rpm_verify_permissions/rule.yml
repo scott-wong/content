@@ -18,10 +18,24 @@ description: |-
     Next, run the following command to reset its permissions to the correct values:
     <pre>$ sudo rpm --restore <i>PACKAGENAME</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>RPM 软件包管理系统可以检查已安装软件包的文件访问权限，包括许多对系统安全很重要的软件包。验证系统文件和命令的文件权限与供应商值匹配。使用以下命令检查文件权限：</p>
+    <pre>$ sudo rpm -Va | awk '{ if (substr($0,2,1)=="M") print $NF }'</pre>
+    输出表示与供应商默认值不匹配的文件。
+
+    找到权限不正确的文件后，运行以下命令确定它所属的软件包：
+    <pre>$ rpm -qf <i>FILENAME</i></pre>
+    <br />
+    接下来，运行以下命令将其权限重置为正确值：
+    <pre>$ sudo rpm --restore <i>PACKAGENAME</i></pre>
+
 rationale: |-
     Permissions on system binaries and configuration files that are too generous could allow an
     unauthorized user to gain privileges that they should not have. The permissions set by the
     vendor should be maintained. Any deviations from this baseline should be investigated.
+
+    <p><strong>中文理由：</strong></p>
+    <p>系统二进制程序和配置文件的权限过于宽松可能允许未授权用户获得本不应拥有的权限。应保持供应商设置的权限。任何偏离此基线的行为都应调查。</p>
 
 severity: high
 

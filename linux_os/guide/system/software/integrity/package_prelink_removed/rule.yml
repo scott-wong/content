@@ -5,9 +5,15 @@ title: 'Package "prelink" Must not be Installed'
 description: |-
    {{{ describe_package_remove(package="prelink") }}}
 
+   <p><strong>中文说明：</strong></p>
+   <p>应删除 <tt>prelink</tt> 软件包。</p>
+
 rationale: |-
     The use of the <tt>prelink</tt> package can interfere with the operation of AIDE since it binaries.
     Prelinking can also increase damage caused by vulnerability in a common library like libc.
+
+    <p><strong>中文理由：</strong></p>
+    <p>使用 <tt>prelink</tt> 软件包可能会干扰 AIDE 对二进制程序的操作。预链接还可能增加常见库（如 libc）中漏洞造成的损害。</p>
 
 severity: medium
 

@@ -7,8 +7,14 @@ description: |-
     Telemetry can be disabled by setting
     <tt>toolkit.telemetry.enabled</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过将 <tt>toolkit.telemetry.enabled</tt> 设置为 <tt>false</tt> 来禁用遥测。</p>
+
 rationale: |-
     The Telemetry feature provides this capability by sending performance and usage info to Mozilla. As you use Firefox, Telemetry measures and collects non-personal information, such as performance, hardware, usage and customizations. It then sends this information to Mozilla on a daily basis and we use it to improve Firefox
+
+    <p><strong>中文理由：</strong></p>
+    <p>遥测功能通过向 Mozilla 发送性能和用量信息来提供此能力。使用 Firefox 时，遥测会测量并收集非个人身份信息，例如性能、硬件、用量和自定义设置。随后每天向 Mozilla 发送这些信息，以帮助改进 Firefox。</p>
 severity: medium
 
 references:

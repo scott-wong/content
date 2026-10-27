@@ -8,9 +8,15 @@ description: |-
     <tt>Fingerprinting</tt> to <tt>true</tt> under <tt>EnableTrackingProtection</tt>
     in the policies file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在策略文件中将 <tt>EnableTrackingProtection</tt> 下的 <tt>Fingerprinting</tt> 设置为 <tt>true</tt> 来启用指纹识别防护。</p>
+
 rationale: |-
     The Content Blocking/Tracking Protection feature stops Firefox from loading content from malicious sites. The content might be a script or an image, for example. If a site is on one of the tracker lists you set Firefox to use, then the fingerprinting script (or other tracking script/image) will not be loaded from that site.
     Fingerprinting scripts collect information about your browser and device configuration, such as your operating system, screen resolution, and other settings. By compiling these pieces of data, fingerprinters create a unique profile of you that can be used to track you around the Web.
+
+    <p><strong>中文理由：</strong></p>
+    <p>内容阻止/跟踪防护功能会阻止 Firefox 加载来自恶意站点的内容。这些内容例如可能是脚本或图像。如果某个站点位于您设置为 Firefox 使用的跟踪器列表中，则不会从该站点加载指纹识别脚本（或其他跟踪脚本/图像）。指纹识别脚本会收集有关浏览器和设备配置的信息，例如操作系统、屏幕分辨率和其他设置。通过汇总这些数据，指纹识别器会创建用户的唯一画像，并可用于在 Web 上跟踪用户。</p>
 severity: medium
 
 references:

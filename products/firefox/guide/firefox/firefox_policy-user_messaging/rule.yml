@@ -7,9 +7,15 @@ description: |-
     The extension recommendation messages may be disabled in an administrative policy by setting
     the <tt>ExtensionRecommendations</tt> key under <tt>UserMessaging</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过将 <tt>UserMessaging</tt> 下的 <tt>ExtensionRecommendations</tt> 键设置为 <tt>false</tt>，在管理策略中禁用扩展推荐消息。</p>
+
 rationale: |-
     The Recommended Extensions program recommends extensions to users as they surf the web.
     The user must not be encouraged to install extensions from the websites they visit. Allowed extensions are to be centrally managed.
+
+    <p><strong>中文理由：</strong></p>
+    <p>Recommended Extensions 计划会在用户浏览 Web 时向其推荐扩展。不得鼓励用户从所访问的网站安装扩展。允许的扩展应由中心统一管理。</p>
 severity: medium
 
 references:

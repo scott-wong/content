@@ -7,9 +7,15 @@ description: |-
     Firefox must be configured to not automatically execute or download MIME types that are not
     authorized for auto-download.
 
+    <p><strong>中文说明：</strong></p>
+    <p>必须将 Firefox 配置为不自动执行或下载未经授权自动下载的 MIME 类型。</p>
+
 rationale: |-
     This setting ensures that some file types that may be downloaded or executed without user interaction
     are not downloaded and/or executed.
+
+    <p><strong>中文理由：</strong></p>
+    <p>此设置确保某些可能在无需用户交互的情况下下载或执行的文件类型不会被下载和/或执行。</p>
 
 severity: medium
 

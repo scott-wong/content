@@ -6,9 +6,15 @@ title: 'Install rear Package'
 description: |-
     {{{ describe_package_install(package="rear") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>rear</tt> 软件包。</p>
+
 rationale: |-
     <tt>rear</tt> contains the Relax-and-Recover (ReaR) utility. ReaR produces a bootable
     image of a system and restores from backup using this image.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>rear</tt> 包含 Relax-and-Recover（ReaR）实用程序。ReaR 生成系统的可引导映像，并使用该映像从备份恢复。</p>
 
 severity: medium
 

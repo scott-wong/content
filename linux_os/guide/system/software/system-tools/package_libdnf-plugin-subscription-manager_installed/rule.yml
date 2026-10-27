@@ -6,10 +6,16 @@ title: 'Install libdnf-plugin-subscription-manager Package'
 description: |-
     {{{ describe_package_install(package="libdnf-plugin-subscription-manager") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>libdnf-plugin-subscription-manager</tt> 软件包。</p>
+
 rationale: |-
     This package provides plugins to interact with repositories and subscriptions
     from the Red Hat entitlement platform; contains subscription-manager and
     product-id plugins.
+
+    <p><strong>中文理由：</strong></p>
+    <p>此软件包提供用于与 Red Hat 授权平台中的仓库和订阅交互的插件，包含 subscription-manager 和 product-id 插件。</p>
 
 
 severity: medium

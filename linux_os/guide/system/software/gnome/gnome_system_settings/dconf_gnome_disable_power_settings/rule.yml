@@ -18,10 +18,22 @@ description: |-
     <pre>/org/gnome/settings-daemon/plugins/power</pre>
     After the settings have been set, run <tt>dconf update</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>默认情况下，<tt>GNOME</tt> 会启用面向移动设备电池使用的电源配置档。虽然这对移动设备有用，但在所有其他系统上都应禁用此设置。要配置系统禁用电源设置，请在 <tt>/etc/dconf/db/local.d/00-security-settings</tt> 中将 <tt>active</tt> 添加或设置为 <tt>false</tt>。例如：</p>
+    <pre>[org/gnome/settings-daemon/plugins/power]
+    active=false
+    </pre>
+    添加设置后，请将锁定项添加到 <tt>/etc/dconf/db/local.d/locks/00-security-settings-lock</tt> 以防止用户修改。例如：
+    <pre>/org/gnome/settings-daemon/plugins/power</pre>
+    设置完成后，请运行 <tt>dconf update</tt>。
+
 rationale: |-
     Power settings should not be enabled on systems that are not mobile devices.
     Enabling power settings on non-mobile devices could have unintended processing
     consequences on standard systems.
+
+    <p><strong>中文理由：</strong></p>
+    <p>非移动设备不应启用电源设置。在标准系统上启用电源设置可能产生非预期的处理后果。</p>
 
 severity: medium
 

@@ -9,9 +9,15 @@ description: |-
     <tt>/etc/sudoers</tt> configuration file or any sudo configuration snippets
     in <tt>/etc/sudoers.d/</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>requiretty</tt> 标记指定后，只允许从登录到真实 tty 的用户执行 sudo 命令。应确保 <tt>/etc/sudoers</tt> 配置文件或 <tt>/etc/sudoers.d/</tt> 中的任何 sudo 配置片段存在 <tt>requiretty</tt> 标记，以启用此功能。</p>
+
 rationale: |-
     Restricting the use cases in which a user is allowed to execute sudo commands
     reduces the attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    <p>限制允许用户执行 sudo 命令的使用场景可减小攻击面。</p>
 
 severity: medium
 

@@ -7,9 +7,15 @@ description: |-
     Cryptomining protection may be enabled by setting
     <tt>privacy.trackingprotection.cryptomining.enabled</tt> to <tt>true</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过将 <tt>privacy.trackingprotection.cryptomining.enabled</tt> 设置为 <tt>true</tt> 来启用加密货币挖矿防护。</p>
+
 rationale: |-
     The Content Blocking/Tracking Protection feature stops Firefox from loading content from malicious sites. The content might be a script or an image, for example. If a site is on one of the tracker lists you set Firefox to use, then the fingerprinting script (or other tracking script/image) will not be loaded from that site.
     Cryptomining scripts use your computer’s central processing unit (CPU) to invisibly mine cryptocurrency.
+
+    <p><strong>中文理由：</strong></p>
+    <p>内容阻止/跟踪防护功能会阻止 Firefox 加载来自恶意站点的内容。这些内容例如可能是脚本或图像。如果某个站点位于您设置为 Firefox 使用的跟踪器列表中，则不会从该站点加载指纹识别脚本（或其他跟踪脚本/图像）。加密货币挖矿脚本会利用计算机的中央处理器（CPU）在用户不知情的情况下挖掘加密货币。</p>
 severity: medium
 
 references:

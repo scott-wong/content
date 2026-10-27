@@ -12,6 +12,13 @@ description: |-
     <pre>05 4 * * * root {{{ aide_bin_path }}} --check | /bin/mail -s "$(hostname) - AIDE Integrity Check" root@localhost</pre>
     AIDE can be executed periodically through other means; this is merely one example.
 
+    <p><strong>中文说明：</strong></p>
+    <p>AIDE 应在扫描运行后向适当人员通知扫描详细信息。如果已在 <tt>/etc/crontab</tt> 中配置 AIDE 定期执行，请将以下内容追加到现有 AIDE 行：</p>
+    <pre> | /bin/mail -s "$(hostname) - AIDE Integrity Check" root@localhost</pre>
+    否则，请将以下行添加到 <tt>/etc/crontab</tt>：
+    <pre>05 4 * * * root {{{ aide_bin_path }}} --check | /bin/mail -s "$(hostname) - AIDE Integrity Check" root@localhost</pre>
+    AIDE 也可通过其他方式定期执行；此处仅为一个示例。
+
 rationale: |-
     Unauthorized changes to the baseline configuration could make the system vulnerable
     to various attacks or allow unauthorized access to the operating system. Changes to
@@ -23,6 +30,9 @@ rationale: |-
     system. The operating system's Information Management Officer (IMO)/Information System
     Security Officer (ISSO) and System Administrators (SAs) must be notified via email and/or
     monitoring system trap when there is an unauthorized modification of a configuration item.
+
+    <p><strong>中文理由：</strong></p>
+    <p>对基线配置进行未经授权的更改可能使系统易受各种攻击，或允许未经授权访问操作系统。操作系统配置变更可能产生意外副作用，其中一些可能涉及安全。<br /><br />检测此类变更并提供自动响应，有助于避免可能最终影响操作系统安全状态的意外负面后果。当配置项发生未经授权的修改时，必须通过电子邮件和/或监控系统陷阱通知操作系统的 Information Management Officer（IMO）/Information System Security Officer（ISSO）和 System Administrators（SA）。</p>
 
 severity: medium
 

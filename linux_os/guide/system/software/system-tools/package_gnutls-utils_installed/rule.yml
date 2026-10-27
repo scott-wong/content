@@ -11,6 +11,9 @@ title: 'Ensure {{{ package }}} is installed'
 description: |-
     {{{ describe_package_install(package=package) }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具安装 <tt>{{{ package }}}</tt> 软件包。</p>
+
 rationale: |-
     GnuTLS is a secure communications library implementing the SSL, TLS and DTLS
     protocols and technologies around them. It provides a simple C language
@@ -19,6 +22,9 @@ rationale: |-
     other required structures.
     This package contains command line TLS client and server and certificate
     manipulation tools.
+
+    <p><strong>中文理由：</strong></p>
+    <p>GnuTLS 是实现 SSL、TLS 和 DTLS 协议及相关技术的安全通信库。它提供简单的 C 语言应用编程接口（API）来访问安全通信协议，并提供用于解析和写入 X.509、PKCS #12、OpenPGP 及其他所需结构的 API。此软件包包含命令行 TLS 客户端和服务器以及证书操作工具。</p>
 
 severity: medium
 

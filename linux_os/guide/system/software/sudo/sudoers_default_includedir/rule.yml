@@ -15,10 +15,18 @@ description: |-
     <tt>@include</tt>, <tt>#includedir</tt> or <tt>@includedir</tt> directives.
     Note that the '#' character doesn't denote a comment in the configuration file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>管理员可通过 drop-in 文件配置经授权的 <tt>sudo</tt> 用户，也可从当前解析的文件中包含其他目录和配置文件。
+
+    确保 <tt>/etc/sudoers</tt> 仅包含来自 <tt>/etc/sudoers.d</tt> 的 drop-in 配置文件，或者不包含任何 drop-in 文件。要么 <tt>/etc/sudoers</tt> 应仅包含一个指向 <tt>/etc/sudoers.d</tt> 的 <tt>#includedir</tt> 指令，且 <tt>/etc/sudoers.d/</tt> 中任何文件都不得包含其他文件或目录；要么 <tt>/etc/sudoers</tt> 不应包含任何 <tt>#include</tt>、<tt>@include</tt>、<tt>#includedir</tt> 或 <tt>@includedir</tt> 指令。请注意，在配置文件中 '#' 字符不表示注释。</p>
+
 rationale: |-
    Some <tt>sudo</tt> configuration options allow users to run programs without re-authenticating.
    Use of these configuration options makes it easier for one compromised account to be used to
    compromise other accounts.
+
+   <p><strong>中文理由：</strong></p>
+   <p>某些 <tt>sudo</tt> 配置选项允许用户无需重新身份验证即可运行程序。使用这些配置选项会使一个遭入侵的账户更容易被用于攻陷其他账户。</p>
 
 severity: medium
 

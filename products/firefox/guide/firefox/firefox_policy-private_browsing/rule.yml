@@ -7,8 +7,14 @@ description: |-
     Private browsing may be disabled in an administrative policy by setting
     the <tt>DisablePrivateBrowsing</tt> key under <tt>policies</tt> to <tt>true</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在 <tt>policies</tt> 下将 <tt>DisablePrivateBrowsing</tt> 键设置为 <tt>true</tt>，在管理策略中禁用隐私浏览。</p>
+
 rationale: |-
     Private browsing allows the user to browse the internet without recording their browsing history/activity. From a forensics perspective, this is unacceptable. Best practice requires that browser history is retained.
+
+    <p><strong>中文理由：</strong></p>
+    <p>隐私浏览允许用户在不记录浏览历史/活动的情况下浏览互联网。从取证角度看，这是不可接受的。最佳实践要求保留浏览器历史记录。</p>
 severity: medium
 
 references:

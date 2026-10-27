@@ -7,8 +7,15 @@ description: |-
     In order to use this rule, the group owner for /usr/bin/sudo needs to be changed to a
     group other than root to effectively limit access to sudo.
 
+    <p><strong>中文说明：</strong></p>
+    <p>确保 <tt>/usr/bin/sudo</tt> 的权限为 <tt>4110</tt>。
+    要使用此规则，需要将 <tt>/usr/bin/sudo</tt> 的文件所属组更改为 root 以外的组，以有效限制对 sudo 的访问。</p>
+
 rationale: |-
     The sudoers program should only be usable by people who have the correct permissions.
+
+    <p><strong>中文理由：</strong></p>
+    <p>sudoers 程序应只能由具有正确权限的人员使用。</p>
 
 identifiers:
     cce@rhel8: CCE-86950-3

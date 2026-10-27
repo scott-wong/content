@@ -16,9 +16,15 @@ description: |-
 
     {{{ describe_package_install(package=pkg) }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>安装适用于 Linux 的 McAfee Endpoint Security 防病毒软件；此软件提供给相关系统，并使用签名检索文件系统中的病毒。应安装 <tt>{{{ pkg }}}</tt> 软件包。</p>
+
 rationale: |-
     Virus scanning software can be used to detect if a system has been compromised by
     computer viruses, as well as to limit their spread to other systems.
+
+    <p><strong>中文理由：</strong></p>
+    <p>病毒扫描软件可用于检测系统是否已受到计算机病毒破坏，并限制病毒传播到其他系统。</p>
 
 severity: medium
 

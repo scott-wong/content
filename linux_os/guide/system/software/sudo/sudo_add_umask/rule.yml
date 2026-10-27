@@ -6,6 +6,9 @@ title: 'Ensure sudo umask is appropriate - sudo umask'
 description: |-
     The sudo <tt>umask</tt> tag, when specified, will be added the to the user's umask in the
     command environment.
+
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>umask</tt> 标记指定后，会将该值添加到命令环境中的用户 umask。</p>
 {{%- if 'rhel' in product or 'ol' in families %}}
     On {{{ full_name }}}, the default <tt>umask</tt> value is 0022.
 {{% endif %}}
@@ -17,6 +20,9 @@ rationale: |-
     The umask value influences the permissions assigned to files when they are created.
     A misconfigured umask value could result in files with excessive permissions that can be read or
     written to by unauthorized users.
+
+    <p><strong>中文理由：</strong></p>
+    <p>umask 值影响创建文件时分配的权限。umask 配置错误可能导致文件权限过大，被未授权用户读取或写入。</p>
 
 severity: medium
 

@@ -8,10 +8,16 @@ description: |-
     automatically, set <tt>upgrade_type</tt> to <tt>security</tt> under
     <tt>[commands]</tt> section in <tt>/etc/dnf/automatic.conf</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>要将 <tt>dnf-automatic</tt> 配置为仅自动安装安全更新，请在 <tt>/etc/dnf/automatic.conf</tt> 的 <tt>[commands]</tt> 部分将 <tt>upgrade_type</tt> 设置为 <tt>security</tt>。</p>
+
 rationale: |-
     By default, <tt>dnf-automatic</tt> installs all available updates.
     Reducing the amount of updated packages only to updates that were
     issued as a part of a security advisory increases the system stability.
+
+    <p><strong>中文理由：</strong></p>
+    <p>默认情况下，<tt>dnf-automatic</tt> 会安装所有可用更新。将更新软件包范围缩小为作为安全公告一部分发布的更新，可提高系统稳定性。</p>
 
 severity: low
 

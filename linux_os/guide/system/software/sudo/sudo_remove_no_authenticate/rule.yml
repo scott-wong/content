@@ -8,12 +8,18 @@ description: |-
     <tt>!authenticate</tt> option does not exist in <tt>/etc/sudoers</tt> configuration file or
     any sudo configuration snippets in <tt>/etc/sudoers.d/</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudo 的 <tt>!authenticate</tt> 选项指定后，允许用户在不进行身份验证的情况下使用 sudo 执行命令。应确保 <tt>/etc/sudoers</tt> 配置文件或 <tt>/etc/sudoers.d/</tt> 中的任何 sudo 配置片段不存在 <tt>!authenticate</tt> 选项，以禁用此行为。</p>
+
 rationale: |-
     Without re-authentication, users may access resources or perform tasks for which they
     do not have authorization.
     <br /><br />
     When operating systems provide the capability to escalate a functional capability, it
     is critical that the user re-authenticate.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果没有重新身份验证，用户可能访问其无权访问的资源或执行其无权执行的任务。<br /><br />当操作系统提供提升功能能力的机制时，用户重新进行身份验证至关重要。</p>
 
 severity: medium
 

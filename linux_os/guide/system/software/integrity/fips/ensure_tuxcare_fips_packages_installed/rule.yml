@@ -20,10 +20,22 @@ description: |-
     <pre>$ sudo dnf remove kernel-5.14.0-284.11.1.el9_2.x86_64
     $ sudo dnf autoremove</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>适用于 {{{ full_name }}} 的 FIPS 140-3 验证加密模块构建由 TuxCare 通过 AlmaLinux 企业支持（ESU）仓库提供，可用于 9.2 和 9.6 ESU 发行版。已安装的每个 <tt>gnutls</tt>、<tt>nettle</tt>、<tt>nss</tt>、<tt>openssl</tt>、<tt>libgcrypt</tt> 和 <tt>kernel</tt> 软件包构建都必须是 TuxCare 构建，其发布字符串中包含 <tt>tuxcare</tt>。配置 TuxCare ESU 仓库后，升级软件包并重新启动：</p>
+    <pre>$ sudo dnf -y upgrade
+    $ sudo reboot</pre>
+
+    重新启动进入 FIPS 内核后，移除剩余的默认内核软件包，例如：
+    <pre>$ sudo dnf remove kernel-5.14.0-284.11.1.el9_2.x86_64
+    $ sudo dnf autoremove</pre>
+
 rationale: |-
     Only the TuxCare builds of the cryptographic modules carry FIPS 140-3
     validation. Using the default distribution packages means the system does
     not employ validated cryptography even when FIPS mode is enabled.
+
+    <p><strong>中文理由：</strong></p>
+    <p>只有 TuxCare 构建的加密模块具有 FIPS 140-3 验证。使用默认发行版软件包意味着即使启用了 FIPS 模式，系统也未使用经过验证的加密。</p>
 
 severity: high
 

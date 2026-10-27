@@ -11,9 +11,16 @@ description: |-
     command:
     <pre>$ sudo update-ca-trust extract</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>应将 DoD 根证书安装到共享系统证书存储中，以便 Firefox 能够访问 DoD 证书。要将根证书安装到共享系统证书存储中，请将 DoD 根证书复制到 <tt>/etc/pki/ca-trust/source/anchors</tt>。复制文件后，请运行以下命令：</p>
+    <pre>$ sudo update-ca-trust extract</pre>
+
 rationale: |-
     The DOD root certificate will ensure that the trust chain is
     established for server certificates issued from the DOD CA.
+
+    <p><strong>中文理由：</strong></p>
+    <p>DoD 根证书可确保为 DoD CA 签发的服务器证书建立信任链。</p>
 
 severity: medium
 

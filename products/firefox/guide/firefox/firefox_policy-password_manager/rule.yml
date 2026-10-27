@@ -7,8 +7,14 @@ description: |-
     The update check may be disabled in an administrative policy by setting
     the <tt>PasswordManager</tt> key under <tt>policies</tt> to <tt>false</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>可以通过在 <tt>policies</tt> 下将 <tt>PasswordManager</tt> 键设置为 <tt>false</tt>，在管理策略中禁用密码管理器。</p>
+
 rationale: |-
     Firefox can be set to store passwords for sites visited by the user. These individual passwords are stored in a file and can be protected by a master password. Autofill of the password can then be enabled when the site is visited. This feature could also be used to autofill the certificate PIN, which could lead to compromise of information.
+
+    <p><strong>中文理由：</strong></p>
+    <p>可以将 Firefox 设置为存储用户所访问站点的密码。这些单独的密码存储在文件中，并可由主密码保护。访问站点时，随后可以启用密码自动填充。此功能也可能用于自动填充证书 PIN，从而可能导致信息泄露。</p>
 severity: medium
 
 references:

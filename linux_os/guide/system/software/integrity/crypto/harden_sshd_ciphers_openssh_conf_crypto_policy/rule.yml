@@ -13,12 +13,21 @@ description: |-
     line and is not commented out:
     <pre>Ciphers {{{ xccdf_value("sshd_approved_ciphers") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>加密策略为许多软件包的加密算法使用提供集中控制。OpenSSH 受系统加密策略支持，但其配置可能设置不正确。
+
+    要检查密码算法的加密策略设置是否正确，请确保 <tt>{{{ openssh_client_crypto_policy_config_file }}}</tt> 包含以下行且未被注释掉：</p>
+    <pre>Ciphers {{{ xccdf_value("sshd_approved_ciphers") }}}</pre>
+
 rationale: |-
     Overriding the system crypto policy makes the behavior of the OpenSSH client
     violate expectations, and makes system configuration more fragmented. By
     specifying a cipher list with the order of ciphers being in a “strongest to
     weakest” orientation, the system will automatically attempt to use the
     strongest cipher for securing SSH connections.
+
+    <p><strong>中文理由：</strong></p>
+    <p>覆盖系统加密策略会使 OpenSSH 客户端的行为违背预期，并使系统配置更加碎片化。通过指定按“从最强到最弱”顺序排列的密码套件列表，系统将自动尝试使用最强密码套件保护 SSH 连接。</p>
 
 severity: high
 

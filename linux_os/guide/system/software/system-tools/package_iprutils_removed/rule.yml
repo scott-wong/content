@@ -6,9 +6,15 @@ title: 'Uninstall iprutils Package'
 description: |-
     {{{ describe_package_remove(package="iprutils") }}}
 
+    <p><strong>中文说明：</strong></p>
+    <p>请使用适当的软件包管理工具移除 <tt>iprutils</tt> 软件包。</p>
+
 rationale: |-
     <tt>iprutils</tt> provides a suite of utlilities to manage and configure SCSI devices
     supported by the ipr SCSI storage device driver.
+
+    <p><strong>中文理由：</strong></p>
+    <p><tt>iprutils</tt> 提供一套用于管理和配置 ipr SCSI 存储设备驱动所支持 SCSI 设备的实用程序。</p>
 
 severity: medium
 

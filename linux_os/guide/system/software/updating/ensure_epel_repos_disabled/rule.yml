@@ -14,12 +14,23 @@ description: |-
     If EPEL repositories are found, ensure they are disabled by setting <tt>enabled=0</tt> in
     the repository configuration file.
 
+    <p><strong>中文说明：</strong></p>
+    <p>系统不得启用 EPEL（Extra Packages for Enterprise Linux）仓库。EPEL 提供不属于 RHEL 官方发行版的附加软件包，可能不满足企业安全要求。
+
+    通过运行以下命令检查 <tt>/etc/yum.repos.d/</tt> 中是否有仓库文件包含已启用的 EPEL 仓库：</p>
+    <pre>$ grep -r "^\[.*epel.*\]" /etc/yum.repos.d/</pre>
+
+    如果发现 EPEL 仓库，请通过在仓库配置文件中设置 <tt>enabled=0</tt> 确保其已禁用。
+
 rationale: |-
     The EPEL repository is not officially supported by Red Hat and may contain packages that have
     not been vetted for security in an enterprise environment. Using unsupported repositories can
     introduce vulnerabilities, compatibility issues, or packages that do not meet DoD security
     requirements. Only packages from authorized repositories should be installed to maintain
     system integrity and security.
+
+    <p><strong>中文理由：</strong></p>
+    <p>EPEL 仓库未获 Red Hat 官方支持，可能包含未针对企业环境安全进行审查的软件包。使用不受支持的仓库可能引入漏洞、兼容性问题或不满足 DoD 安全要求的软件包。应仅安装来自授权仓库的软件包，以维护系统完整性和安全性。</p>
 
 severity: medium
 

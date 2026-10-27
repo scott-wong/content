@@ -6,11 +6,17 @@ description: |-
     Install the McAfee Host Intrusion Prevention System (HIPS) Module if it is absolutely
     necessary. If SELinux is enabled, do not install or enable this module.
 
+    <p><strong>中文说明：</strong></p>
+    <p>仅在绝对必要时安装 McAfee Host Intrusion Prevention System（HIPS）模块。如果启用了 SELinux，请勿安装或启用此模块。</p>
+
 rationale: |-
     Without a host-based intrusion detection tool, there is no system-level defense
     when an intruder gains access to a system or network. Additionally, a host-based
     intrusion prevention tool can provide methods to immediately lock out detected
     intrusion attempts.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果没有基于主机的入侵检测工具，当入侵者获得系统或网络访问权限时将没有系统级防御。此外，基于主机的入侵防御工具可以提供立即锁定检测到的入侵尝试的方法。</p>
 
 severity: medium
 

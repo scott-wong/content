@@ -12,6 +12,9 @@ description: |-
     This should be configured by setting <tt>repo_gpgcheck</tt> to <tt>1</tt>
     in <tt>{{{ pkg_manager_config_file }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <p>验证操作系统防止在未验证仓库元数据的情况下安装本地软件包的补丁、服务包、设备驱动或操作系统组件。使用以下命令检查 <tt>{{{ pkg_manager }}}</tt> 是否在安装前验证仓库元数据。应通过在 <tt>{{{ pkg_manager_config_file }}}</tt> 中将 <tt>repo_gpgcheck</tt> 设置为 <tt>1</tt> 来完成配置。</p>
+
 rationale: |-
     Changes to any software components can have significant effects to the
     overall security of the operating system. This requirement ensures the
@@ -27,6 +30,9 @@ rationale: |-
     does not mandate organization-specific certificates for this purpose; however,
     the certificate used to verify the software must be from an approved
     Certificate Authority.
+
+    <p><strong>中文理由：</strong></p>
+    <p>对任何软件组件的更改都可能对操作系统整体安全产生重大影响。此要求确保软件未被篡改，并且由可信供应商提供。因此，补丁、服务包、设备驱动或操作系统组件必须使用组织认可和批准的证书签名。在安装前验证软件真实性可验证从供应商收到的补丁或升级的完整性。这可确保软件未被篡改，并且由可信供应商提供。此要求禁止使用自签名证书。操作系统不应再次验证软件。注意：对于受监管系统，此要求不强制要求为此目的使用组织特定证书；但是，用于验证软件的证书必须来自批准的证书颁发机构。</p>
 
 severity: high
 

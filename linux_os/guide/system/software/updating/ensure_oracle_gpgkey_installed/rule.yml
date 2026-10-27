@@ -20,12 +20,24 @@ description: |-
     such cases, the key can be installed by running the following command:
     <pre>sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-oracle</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>为确保系统能够通过密码学验证基础软件包来自 Oracle（并连接到 Unbreakable Linux Network 接收这些软件包），必须正确安装 Oracle GPG 密钥。要安装 Oracle GPG 密钥，请运行：</p>
+    <pre>$ sudo uln_register</pre>
+    如果系统未连接 Internet，请从可信介质（例如 Oracle 安装 CD-ROM 或 DVD）安装 Oracle GPG 密钥。假设光盘挂载在 <tt>/media/cdrom</tt>，请以 root 用户使用以下命令将其导入密钥环：
+    <pre>$ sudo rpm --import /media/cdrom/RPM-GPG-KEY-oracle</pre>
+
+    或者，密钥可在 Oracle 安装期间预加载。在这种情况下，可通过运行以下命令安装密钥：
+    <pre>sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-oracle</pre>
+
 rationale: |-
     Changes to software components can have significant effects on the
     overall security of the operating system. This requirement ensures
     the software has not been tampered with and that it has been provided
     by a trusted vendor. The Oracle GPG key is necessary to
     cryptographically verify packages are from Oracle.
+
+    <p><strong>中文理由：</strong></p>
+    <p>对软件组件的更改可能对操作系统整体安全产生重大影响。此要求确保软件未被篡改，并且由可信供应商提供。需要 Oracle GPG 密钥来通过密码学验证软件包来自 Oracle。</p>
 
 severity: high
 

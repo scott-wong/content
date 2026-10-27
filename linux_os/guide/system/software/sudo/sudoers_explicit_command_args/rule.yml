@@ -6,6 +6,9 @@ description: |-
     All commands in the sudoers file must strictly specify the arguments allowed to be used for a given user.
     If the command is supposed to be executed only without arguments, pass "" as an argument in the corresponding user specification.
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudoers 文件中的所有命令都必须严格指定允许给定用户使用的参数。如果命令仅应在不带参数时执行，请在相应用户规范中传入 "" 作为参数。</p>
+
 rationale: |-
     Any argument can modify quite significantly the behavior of a program, whether regarding the
     realized operation (read, write, delete, etc.) or accessed resources (path in a file system tree). To
@@ -15,6 +18,12 @@ rationale: |-
     For example, on some systems, the kernel messages are only accessible by root.
     If a user nevertheless must have the privileges to read them, the argument of the dmesg command has to be restricted
     in order to prevent the user from flushing the buffer through the -c option:
+    <pre>
+    user ALL = dmesg ""
+    </pre>
+
+    <p><strong>中文理由：</strong></p>
+    <p>任何参数都可能显著改变程序的行为，无论是在实际操作（读取、写入、删除等）方面，还是在访问的资源（文件系统树中的路径）方面。为避免用户误用命令的任何可能性，必须在其规范层面消除歧义。<br /><br />例如，在某些系统上，只有 root 可以访问内核消息。如果用户仍必须具有读取这些消息的权限，则必须限制 dmesg 命令的参数，以防止用户通过 -c 选项清空缓冲区：</p>
     <pre>
     user ALL = dmesg ""
     </pre>

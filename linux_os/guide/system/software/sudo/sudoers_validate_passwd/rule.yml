@@ -17,11 +17,27 @@ description: |-
           /etc/sudoers:Defaults !rootpw
           /etc/sudoers:Defaults !runaspw </pre>
 
+    <p><strong>中文说明：</strong></p>
+    <p>sudoers 安全策略要求用户在使用 sudo 前进行身份验证。当 sudoers 要求身份验证时，它会验证调用用户的凭据。
+    以下命令的预期输出为：</p>
+    <pre> sudo cvtsudoers -f sudoers /etc/sudoers | grep -E '^Defaults !?(rootpw|targetpw|runaspw)$'</pre>
+    <pre> Defaults !targetpw
+          Defaults !rootpw
+          Defaults !runaspw</pre>
+    如果 cvtsudoers 不受支持：
+    <pre> sudo find /etc/sudoers /etc/sudoers.d \( \! -name '*~' -a \! -name '*.*' \) -exec grep -E --with-filename '^[[:blank:]]*Defaults[[:blank:]](.*[[:blank:]])?!?\b(rootpw|targetpw|runaspw)' -- {} \;</pre>
+    <pre> /etc/sudoers:Defaults !targetpw
+          /etc/sudoers:Defaults !rootpw
+          /etc/sudoers:Defaults !runaspw</pre>
+
 severity: medium
 
 rationale: |-
     If the rootpw, targetpw, or runaspw flags are defined and not disabled, by default the operating system will prompt
     the invoking user for the "root" user password.
+
+    <p><strong>中文理由：</strong></p>
+    <p>如果定义了 rootpw、targetpw 或 runaspw 标志且未禁用，操作系统将默认提示调用用户输入 "root" 用户密码。</p>
 
 identifiers:
     cce@rhel8: CCE-83422-6
