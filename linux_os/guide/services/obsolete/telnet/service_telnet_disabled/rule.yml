@@ -7,11 +7,18 @@ description: |-
     Make sure that the activation of the <tt>telnet</tt> service on system boot is disabled.
     {{{ describe_socket_disable(socket="telnet") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保在系统启动时禁用 <tt>telnet</tt> 服务。
+    应禁用 <tt>telnet</tt> systemd socket。
+
 rationale: |-
     The telnet protocol uses unencrypted network communication, which means that data from the
     login session, including passwords and all other information transmitted during the session,
     can be stolen by eavesdroppers on the network. The telnet protocol is also subject to
     man-in-the-middle attacks.
+
+    <p><strong>中文理由：</strong></p>
+    telnet 协议使用未加密的网络通信，这意味着登录会话中的数据（包括密码和会话期间传输的所有其他信息）可能被网络上的窃听者窃取。telnet 协议还容易受到中间人攻击。
 
 severity: high
 

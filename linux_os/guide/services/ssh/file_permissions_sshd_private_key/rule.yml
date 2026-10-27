@@ -22,9 +22,21 @@ description: |-
     If they are owned by the <code>root</code> user, but by a dedicated group <code>{{{ dedicated_ssh_groupname }}}</code>, they still have to have the <code>{{{ perms_num }}}</code> permission or stricter.
     {{%- endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    SSH 服务器私钥（匹配 <code>/etc/ssh/*_key</code> 通配符的文件）必须具有受限权限。
+    如果这些文件由 <code>root</code> 用户和 <code>root</code> 组所有，则其权限必须为 <code>{{{ perms_num }}}</code> 或更严格。
+    {{% if dedicated_ssh_groupname and perms_num == "0640" -%}}
+    如果这些文件由 <code>root</code> 用户所有，但由专用组 <code>{{{ dedicated_ssh_groupname }}}</code> 所有，则其权限可以为 <code>0640</code> 或更严格。
+    {{%- elif dedicated_ssh_groupname -%}}
+    如果这些文件由 <code>root</code> 用户所有，但由专用组 <code>{{{ dedicated_ssh_groupname }}}</code> 所有，则其权限仍必须为 <code>{{{ perms_num }}}</code> 或更严格。
+    {{%- endif %}}
+
 rationale: |-
     If an unauthorized user obtains the private SSH host key file, the host could be
     impersonated.
+
+    <p><strong>中文理由：</strong></p>
+    如果未经授权的用户获得私有 SSH 主机密钥文件，主机可能被冒充。
 
 severity: medium
 

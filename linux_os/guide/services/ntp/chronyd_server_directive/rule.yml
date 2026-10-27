@@ -5,9 +5,15 @@ title: 'Ensure Chrony is only configured with the server directive'
 description: |-
     Check that Chrony only has time sources configured with the <tt>server</tt> directive.
 
+    <p><strong>中文说明：</strong></p>
+    检查 Chrony 是否仅使用 <tt>server</tt> 指令配置时间源。
+
 rationale: |-
     Depending on the infrastructure being used the <tt>pool</tt> directive may not be supported.
     Using the <tt>server</tt> directive allows for better control of where the system gets time data from.
+
+    <p><strong>中文理由：</strong></p>
+    根据所使用的基础设施，可能不支持 <tt>pool</tt> 指令。使用 <tt>server</tt> 指令可以更好地控制系统从何处获取时间数据。
 
 severity: medium
 

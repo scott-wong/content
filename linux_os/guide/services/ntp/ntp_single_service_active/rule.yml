@@ -14,6 +14,14 @@ description: |-
     time synchronization, while having multiple active services can lead to unexpected and
     unreliable results.
 
+    <p><strong>中文说明：</strong></p>
+    系统必须恰好有一个活动的时间同步服务，以避免冲突并确保一致的时间同步。任何时候都只应启用并激活以下服务之一：
+    <ul>
+        <li>chrony - 通用 NTP 实现</li>
+        <li>systemd-timesyncd - 轻量级 NTP 客户端</li>
+    </ul>
+    没有活动的时间同步服务会使系统缺乏准确的时间同步，而有多个活动服务可能导致意外且不可靠的结果。
+
 rationale: |-
     Running multiple time synchronization services simultaneously can lead to conflicts
     in time synchronization, unpredictable behavior, and unreliable results. A single service
@@ -22,6 +30,9 @@ rationale: |-
     Having no active time synchronization service leaves the system without accurate
     time synchronization, which can affect security mechanisms, log consistency, and forensic
     investigations.
+
+    <p><strong>中文理由：</strong></p>
+    同时运行多个时间同步服务可能导致时间同步冲突、不可预测的行为和不可靠的结果。单个服务可确保一致、准确的时间同步。没有活动的时间同步服务会使系统缺乏准确的时间同步，从而影响安全机制、日志一致性和取证调查。
 
 severity: medium
 

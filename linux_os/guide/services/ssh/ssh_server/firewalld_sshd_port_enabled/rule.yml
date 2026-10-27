@@ -10,9 +10,17 @@ description: |-
     <br /><br />
     {{{ describe_firewalld_allow_service(service="ssh") }}}
 
+    <p><strong>中文说明：</strong></p>
+    如果正在使用 SSH 服务器，应允许入站连接到 SSH 端口，以允许通过 SSH 进行远程访问。在更严格的 firewalld 设置中，应将 SSH 端口添加到正确的 firewalld 区域，以允许 SSH 远程访问。
+    <br /><br />
+    要允许 firewalld 中的 SSH 服务，请运行 <tt>sudo firewall-cmd --add-service=ssh --permanent</tt> 并重新加载 firewalld。
+
 rationale: |-
     If inbound SSH connections are expected, adding the SSH port to the proper firewalld zone
     will allow remote access through the SSH port.
+
+    <p><strong>中文理由：</strong></p>
+    如果预期存在入站 SSH 连接，将 SSH 端口添加到正确的 firewalld 区域将允许通过 SSH 端口进行远程访问。
 
 severity: medium
 

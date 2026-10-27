@@ -23,6 +23,22 @@ description: |-
     Ensure you are using the sssd authselect profile with the <tt>with-smartcard</tt> feature enabled.
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    应将 SSSD 配置为使用智能卡对系统访问进行身份验证。要在 SSSD 中启用智能卡，请在 <tt>/etc/sssd/sssd.conf</tt> 的 <tt>[pam]</tt> 节下将 <tt>pam_cert_auth</tt> 设置为 <tt>True</tt>。例如：
+    <pre>[pam]
+    pam_cert_auth = True
+    </pre>
+    {{% if product in ["fedora", "ol8", "ol9", "rhel8", "rhel9"] %}}
+    在 <tt>/etc/pam.d/system-auth</tt> 文件的 auth 部分添加或更新 <tt>pam_sss.so</tt> 行，以包含 <tt>try_cert_auth</tt> 或 <tt>require_cert_auth</tt> 选项，如下例所示：
+    <pre>
+    /etc/pam.d/system-auth:auth [success=done authinfo_unavail=ignore ignore=ignore default=die] pam_sss.so try_cert_auth
+    </pre>
+    同时在 <tt>/etc/pam.d/smartcard-auth</tt> 文件的 auth 部分添加或更新 <tt>pam_sss.so</tt> 行，以包含 <tt>allow_missing_name</tt> 选项，如下例所示：
+    <pre>/etc/pam.d/smartcard-auth:auth sufficient pam_sss.so allow_missing_name</pre>
+    {{% elif product in ["rhel10"] %}}
+    确保使用启用了 <tt>with-smartcard</tt> 功能的 sssd authselect 配置档。
+    {{% endif %}}
+
 rationale: |-
     Using an authentication device, such as a CAC or token that is separate from
     the information system, ensures that even if the information system is
@@ -33,6 +49,11 @@ rationale: |-
     information systems gaining access include, for example, hardware tokens
     providing time-based or challenge-response authenticators and smart cards
     or similar secure authentication devices issued by an organization or identity provider.
+
+    <p><strong>中文理由：</strong></p>
+    使用独立于信息系统的身份验证设备（例如 CAC 或令牌）可确保即使信息系统遭到入侵，该入侵也不会影响存储在身份验证设备上的凭据。
+    <br /><br />
+    需要独立于获取访问权的信息系统的多因素身份验证（MFA）解决方案包括提供基于时间或质询响应认证器的硬件令牌，以及由组织或身份提供程序签发的智能卡或类似安全身份验证设备。
 
 severity: medium
 

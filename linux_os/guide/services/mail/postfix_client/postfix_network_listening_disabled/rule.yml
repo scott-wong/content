@@ -8,10 +8,17 @@ description: |-
     <tt>inet_interfaces</tt> line appears:
     <pre>inet_interfaces = {{{ xccdf_value("var_postfix_inet_interfaces") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    编辑 <tt>/etc/postfix/main.cf</tt>，确保仅出现以下 <tt>inet_interfaces</tt> 行：
+    <pre>inet_interfaces = {{{ xccdf_value("var_postfix_inet_interfaces") }}}</pre>
+
 rationale: |-
     This ensures <tt>postfix</tt> accepts mail messages
     (such as cron job reports) from the local system only,
     and not from the network, which protects it from network attack.
+
+    <p><strong>中文理由：</strong></p>
+    这可确保 <tt>postfix</tt> 仅接受来自本地系统的邮件消息（例如 cron 作业报告），而不接受来自网络的消息，从而保护其免受网络攻击。
 
 severity: medium
 

@@ -7,10 +7,17 @@ description: |-
     from a given connection. To set MaxSessions edit
     <tt>/etc/ssh/sshd_config</tt> as follows: <pre>MaxSessions {{{ xccdf_value("var_sshd_max_sessions") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>MaxSessions</tt> 参数指定给定连接允许的最大打开会话数。要设置 MaxSessions，请按如下方式编辑 <tt>/etc/ssh/sshd_config</tt>：
+    <pre>MaxSessions {{{ xccdf_value("var_sshd_max_sessions") }}}</pre>
+
 rationale: |-
     To protect a system from denial of service due to a large number of concurrent
     sessions, use the rate limiting function of MaxSessions to protect availability
     of sshd logins and prevent overwhelming the daemon.
+
+    <p><strong>中文理由：</strong></p>
+    为保护系统免受大量并发会话造成的拒绝服务影响，请使用 MaxSessions 的速率限制功能来保护 sshd 登录的可用性，并防止守护进程过载。
 
 severity: medium
 

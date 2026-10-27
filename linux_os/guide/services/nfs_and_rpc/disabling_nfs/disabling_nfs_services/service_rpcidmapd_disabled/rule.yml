@@ -9,7 +9,13 @@ description: |-
     this service should be disabled.
     {{{ describe_service_disable(service="rpcidmapd") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    rpcidmapd 服务用于在 NFSv4 挂载上将用户名和组名映射到 UID 和 GID 编号。如果本地系统未使用 NFS，则应禁用此服务。应禁用 <tt>rpcidmapd</tt> 服务。
+
+rationale: |-
+
+    <p><strong>中文理由：</strong></p>
+    如果本地系统未使用 NFSv4，rpcidmapd 并非必需。禁用该服务可减少不必要的用户和组 ID 映射进程及攻击面。
 
 severity: unknown
 

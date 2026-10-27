@@ -10,10 +10,17 @@ description: |-
     line appears:
     <pre>Protocol 2</pre>
 
+    <p><strong>中文说明：</strong></p>
+    应仅允许 SSH 协议版本 2 连接。<tt>/etc/ssh/sshd_config</tt> 中的默认设置是正确的，可通过确保出现以下行来验证：
+    <pre>Protocol 2</pre>
+
 rationale: |-
     SSH protocol version 1 is an insecure implementation of the SSH protocol and
     has many well-known vulnerability exploits. Exploits of the SSH daemon could provide
     immediate root access to the system.
+
+    <p><strong>中文理由：</strong></p>
+    SSH 协议版本 1 是不安全的 SSH 协议实现，存在许多众所周知的漏洞利用。利用 SSH 守护进程的漏洞可能立即获得系统的 root 访问权限。
 
 severity: high
 

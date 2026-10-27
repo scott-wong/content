@@ -8,10 +8,16 @@ description: |-
     a NIS or NIS+ domain, should be disabled.
     {{{ describe_service_disable(service="ypserv") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用 <tt>ypserv</tt> 服务。
+
 rationale: |-
     Disabling the <tt>ypserv</tt> service ensures the system is not acting
     as a client in a NIS or NIS+ domain. This service should be disabled
     unless in use.
+
+    <p><strong>中文理由：</strong></p>
+    禁用 <tt>ypserv</tt> 服务可确保系统不充当 NIS 或 NIS+ 域中的客户端。除非正在使用该服务，否则应将其禁用。
 
 severity: medium
 

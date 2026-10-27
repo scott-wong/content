@@ -14,6 +14,14 @@ description: |-
     remote access.
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{% if product == "rhcos4" %}}
+    建议使用 <tt>oc debug</tt>，而不是使用 SSH 远程登录到集群节点。
+    要禁用 <tt>sshd</tt> 服务，请运行 <tt>sudo systemctl disable --now sshd</tt>。
+    {{% else %}}
+    SSH 服务器服务 sshd 通常需要使用。但是，如果可以禁用，则应将其禁用。这种情况并不常见，因为 SSH 是加密且经过身份验证的远程访问的常用方法。
+    {{% endif %}}
+
 rationale: |-
     {{% if product == "rhcos4" %}}
     Red Hat Enterprise Linux CoreOS (RHCOS) is a single-purpose container
@@ -23,6 +31,9 @@ rationale: |-
     any direct remote access to the RHCOS nodes is unnecessary. Disabling
     the SSHD service helps reduce the number of open ports on each host.
     {{% endif %}}
+
+    <p><strong>中文理由：</strong></p>
+    {{% if product == "rhcos4" %}}Red Hat Enterprise Linux CoreOS (RHCOS) 是单一用途容器操作系统。RHCOS 仅作为 OpenShift Container Platform 的组件受支持。RHCOS 节点的远程管理在 OpenShift Container Platform API 层执行。因此，不需要对 RHCOS 节点进行任何直接远程访问。禁用 SSHD 服务有助于减少每台主机上的开放端口数量。{{% endif %}}
 
 references:
   nist: CM-3(6),IA-2(4)

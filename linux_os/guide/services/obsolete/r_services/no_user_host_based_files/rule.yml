@@ -10,12 +10,19 @@ description: |-
     to delete them from any location:
     <pre>$ sudo find / -name '.shosts' -type f -delete</pre>
 
+    <p><strong>中文说明：</strong></p>
+    文件 <tt>~/.shosts</tt>（在每个用户的主目录中）列出本地系统信任的远程主机和用户。要删除这些文件，请运行以下命令从任意位置删除它们：
+    <pre>$ sudo find / -name '.shosts' -type f -delete</pre>
+
 rationale: |-
     The .shosts files are used to configure host-based authentication for
     individual users or the system via SSH. Host-based authentication is not
     sufficient for preventing unauthorized access to the system, as it does not
     require interactive identification and authentication of a connection request,
     or for the use of two-factor authentication.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>.shosts</tt> 文件用于配置通过 SSH 对单个用户或系统进行基于主机的身份验证。基于主机的身份验证不足以防止对系统的未经授权访问，因为它不要求对连接请求进行交互式身份识别和身份验证，也不要求使用双因素身份验证。
 
 severity: high
 

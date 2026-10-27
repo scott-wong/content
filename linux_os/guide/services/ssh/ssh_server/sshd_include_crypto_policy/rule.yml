@@ -8,9 +8,16 @@ description: |-
     The following line should be present in <tt>/etc/ssh/sshd_config</tt> or in a file included by this file (a file within the <tt>/etc/ssh/sshd_config.d</tt> directory):
     <pre>Include {{{ openssh_server_crypto_policy_config_file }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    SSHD 应遵循系统加密策略。为此，SSHD 配置应包含系统加密策略提供的配置文件。<tt>/etc/ssh/sshd_config</tt> 或该文件所包含的文件（<tt>/etc/ssh/sshd_config.d</tt> 目录中的文件）中应包含以下行：
+    <pre>Include {{{ openssh_server_crypto_policy_config_file }}}</pre>
+
 
 rationale: |-
     Without cryptographic integrity protections, information can be altered by unauthorized users without detection.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有密码学完整性保护，未授权用户可在不被发现的情况下更改信息。
 
 severity: medium
 

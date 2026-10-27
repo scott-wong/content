@@ -16,6 +16,13 @@ description: |-
     is commented out, or is missing, this is a finding.
     {{%- endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    将密码套件限制为 FIPS 批准的算法。<tt>{{{ sshc_main_config }}}</tt> 中的以下行演示了 FIPS 批准密码套件的用法：
+    {{%- if 'ubuntu' in product %}}
+    <pre>Ciphers {{{ ssh_approved_ciphers }}}</pre>
+    如果该行未按确切顺序包含这些密码套件、被注释掉或缺失，则判定为不符合项。
+    {{%- endif %}}
+
 rationale: |-
     Unapproved mechanisms that are used for authentication to the cryptographic module are not verified and therefore
     cannot be relied upon to provide confidentiality or integrity, and system data may be compromised.
@@ -26,5 +33,8 @@ rationale: |-
     FIPS 140-3 is the current standard for validating that mechanisms used to access cryptographic modules
     utilize authentication that meets industry and government requirements. For government systems, this allows
     Security Levels 1, 2, 3, or 4 for use on {{{ full_name }}}.
+
+    <p><strong>中文理由：</strong></p>
+    用于向加密模块进行身份验证的未获批准机制未经验证，因此不能依赖其提供机密性或完整性，系统数据可能受到影响。<br />使用加密的操作系统必须使用符合 FIPS 的机制向加密模块进行身份验证。<br />FIPS 140-3 是当前用于验证访问加密模块所用机制采用满足行业和政府要求的身份验证的标准。对于政府系统，这可允许在 {{{ full_name }}} 上使用安全级别 1、2、3 或 4。
 
 severity: medium

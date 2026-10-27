@@ -9,9 +9,15 @@ description: |-
     Configuring <tt>certificate_verification</tt> to <tt>ocsp_dgst={{{ xccdf_value("var_sssd_certificate_verification_digest_function") }}}</tt> ensures that certificates for
     multifactor solutions are checked via Online Certificate Status Protocol (OCSP).
 
+    <p><strong>中文说明：</strong></p>
+    需要独立于获取访问权的信息系统的多因素解决方案包括提供基于时间或质询响应认证器的硬件令牌以及智能卡。将 <tt>certificate_verification</tt> 配置为 <tt>ocsp_dgst={{{ xccdf_value("var_sssd_certificate_verification_digest_function") }}}</tt> 可确保通过在线证书状态协议（OCSP）检查多因素解决方案的证书。
+
 rationale: |-
     Ensuring that multifactor solutions certificates are checked via Online Certificate Status Protocol (OCSP)
     ensures the security of the system.
+
+    <p><strong>中文理由：</strong></p>
+    确保通过在线证书状态协议（OCSP）检查多因素解决方案的证书，可保障系统安全。
 
 severity: medium
 

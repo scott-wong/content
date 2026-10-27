@@ -6,9 +6,15 @@ title: 'Uninstall xinetd package if not used by network services'
 description: |-
     {{{ describe_package_remove(package="xinetd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应删除 <tt>xinetd</tt> 软件包。
+
 rationale: |-
     Removing the <tt>xinetd</tt> package decreases the risk of the
     xinetd service's accidental (or intentional) activation.
+
+    <p><strong>中文理由：</strong></p>
+    删除 <tt>xinetd</tt> 软件包可降低 xinetd 服务被意外（或故意）激活的风险。
 
 severity: low
 

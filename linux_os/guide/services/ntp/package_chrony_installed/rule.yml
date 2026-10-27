@@ -8,10 +8,17 @@ description: |-
     systems synchronize their clocks to them.
     {{{ describe_package_install(package="chrony") }}}
 
+    <p><strong>中文说明：</strong></p>
+    环境中所有系统之间应同步系统时间。通常通过建立权威时间服务器或一组服务器，并让所有系统将其时钟同步到这些服务器来实现。
+    应安装 <tt>chrony</tt> 软件包。
+
 rationale: |-
     Time synchronization is important to support time sensitive security mechanisms like
     Kerberos and also ensures log files have consistent time records across the enterprise,
     which aids in forensic investigations.
+
+    <p><strong>中文理由：</strong></p>
+    时间同步对于支持 Kerberos 等时间敏感的安全机制很重要，还可确保整个企业的日志文件具有一致的时间记录，从而有助于取证调查。
 
 severity: medium
 

@@ -7,10 +7,17 @@ description: |-
     to the local network with the following command:
     <pre>$ sudo postconf -e 'smtpd_client_restrictions = permit_mynetworks,reject'</pre>
 
+    <p><strong>中文说明：</strong></p>
+    修改 <pre>/etc/postfix/main.cf</pre> 文件，使用以下命令将客户端连接限制到本地网络：
+    <pre>$ sudo postconf -e 'smtpd_client_restrictions = permit_mynetworks,reject'</pre>
+
 rationale: |-
     If unrestricted mail relaying is permitted, unauthorized senders could use this
     host as a mail relay for the purpose of sending spam or other unauthorized
     activity.
+
+    <p><strong>中文理由：</strong></p>
+    如果允许不受限制的邮件中继，未授权发送方可能利用此主机作为邮件中继，以发送垃圾邮件或执行其他未经授权的活动。
 
 platform: package[postfix]
 

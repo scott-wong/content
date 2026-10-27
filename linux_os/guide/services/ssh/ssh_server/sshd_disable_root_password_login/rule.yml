@@ -7,6 +7,10 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>PermitRootLogin prohibit-password</pre>
 
+    <p><strong>中文说明：</strong></p>
+    要禁用基于密码的 SSH root 登录，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>PermitRootLogin prohibit-password</pre>
+
 warnings:
     - general: |-
          While this disables password-based root logins, direct root logins
@@ -22,6 +26,9 @@ rationale: |-
     Even though the communications channel may be encrypted, an additional
     layer of security is gained by preventing use of a password.
     This also helps to minimize direct attack attempts on root's password.
+
+    <p><strong>中文理由：</strong></p>
+    即使通信通道可能已加密，禁止使用密码仍可增加一层安全性。这也有助于尽量减少针对 root 密码的直接攻击尝试。
 
 severity: medium
 

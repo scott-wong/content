@@ -10,9 +10,18 @@ description: |-
     To explicitly disable SSHD forwarding, add or correct the following line in {{{ sshd_config_file() }}}
     <pre>DisableForwarding yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    DisableForwarding 参数禁用所有转发功能，包括 X11、ssh-agent(1)、TCP 和 StreamLocal。此选项覆盖所有其他与转发相关的选项，并可简化受限配置。
+    <br/>
+    要显式禁用 SSHD 转发，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>DisableForwarding yes</pre>
+
 rationale: |-
     Disable ssh forwarding unless there is an operational requirement to use it. 
     Leaving port forwarding enabled can expose the organization to security risks.
+
+    <p><strong>中文理由：</strong></p>
+    除非有使用 SSH 转发的运行需求，否则应禁用 SSH 转发。保持端口转发启用可能使组织面临安全风险。
 
 severity: medium
 

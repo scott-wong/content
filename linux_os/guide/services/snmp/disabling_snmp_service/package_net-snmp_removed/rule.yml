@@ -12,10 +12,22 @@ description: |-
     {{{ describe_package_remove(package="snmp") }}}
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    {{% if pkg_manager != "apt_get" %}}
+    <tt>net-snmp</tt> 软件包提供 snmpd 服务。
+    请使用适当的软件包管理工具移除 <tt>net-snmp</tt> 软件包。
+    {{% else %}}
+    <tt>snmp</tt> 软件包提供 snmpd 服务。
+    请使用适当的软件包管理工具移除 <tt>snmp</tt> 软件包。
+    {{% endif %}}
+
 rationale: |-
     If there is no need to run SNMP server software,
     removing the package provides a safeguard against its
     activation.
+
+    <p><strong>中文理由：</strong></p>
+    如果无需运行 SNMP 服务器软件，移除该软件包可防止其被激活。
 
 severity: unknown
 

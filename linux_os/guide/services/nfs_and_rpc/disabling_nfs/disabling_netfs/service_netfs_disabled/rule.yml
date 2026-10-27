@@ -10,7 +10,13 @@ description: |-
     and against flaws in the netfs script itself.
     {{{ describe_service_disable(service="netfs") }}}
 
-rationale: ""
+    <p><strong>中文说明：</strong></p>
+    netfs 脚本管理多种网络文件系统在启动时的挂载，其中 NFS 和 Samba 最常见。如果未使用这些文件系统类型，可禁用该脚本，从而在一定程度上保护系统，防止对 <tt>/etc/fstab</tt> 的意外或恶意更改，并防范 netfs 脚本自身的缺陷。应禁用 <tt>netfs</tt> 服务。
+
+rationale: |-
+
+    <p><strong>中文理由：</strong></p>
+    如果系统不需要在启动时挂载 NFS 或 Samba 等网络文件系统，禁用 netfs 可减少不必要的网络文件系统挂载逻辑和潜在攻击面，并降低 <tt>/etc/fstab</tt> 被意外或恶意更改的风险。
 
 severity: unknown
 

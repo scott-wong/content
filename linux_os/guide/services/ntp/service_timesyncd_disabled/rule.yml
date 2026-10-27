@@ -5,6 +5,9 @@ title: 'Disable systemd_timesyncd Service'
 description: |-
     {{{ describe_service_disable(service="systemd_timesyncd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用 <tt>systemd_timesyncd</tt> 服务。
+
 rationale: |-
     Disabling the <tt>systemd_timesyncd</tt> service ensures that there is
     only single one time service running.
@@ -12,6 +15,9 @@ rationale: |-
     Additional information on Ubuntu network time protocol is
     available at
     {{{ weblink(link="https://ubuntu.com/server/docs/about-time-synchronisation") }}}.
+
+    <p><strong>中文理由：</strong></p>
+    禁用 <tt>systemd_timesyncd</tt> 服务可确保只有一个时间服务在运行。<br /><br />有关 Ubuntu 网络时间协议的更多信息，请参阅 <a href="https://ubuntu.com/server/docs/about-time-synchronisation">Ubuntu 时间同步文档</a>。
 
 severity: medium
 

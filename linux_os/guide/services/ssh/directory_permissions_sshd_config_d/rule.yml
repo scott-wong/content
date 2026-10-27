@@ -5,11 +5,17 @@ title: 'Verify Permissions on SSH Server Config File'
 description: |-
     {{{ describe_directory_permissions(directory=sshd_config_dir, perms="0700") }}}
 
+    <p><strong>中文说明：</strong></p>
+    要正确设置 <tt>{{{ sshd_config_dir }}}</tt> 目录的权限，请运行 <tt>sudo chmod 0700 {{{ sshd_config_dir }}}</tt>。
+
 rationale: |-
     Service configuration files enable or disable features of their respective
     services that if configured incorrectly can lead to insecure and vulnerable
     configurations. Therefore, service configuration files should be owned by the
     correct group to prevent unauthorized changes.
+
+    <p><strong>中文理由：</strong></p>
+    服务配置文件启用或禁用相应服务的功能。如果配置错误，可能导致不安全且易受攻击的配置。因此，服务配置文件应由正确的组所有，以防止未经授权的更改。
 
 severity: medium
 

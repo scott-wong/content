@@ -6,9 +6,15 @@ description: |-
     A mail server is required for sending emails.
     {{{ describe_package_install(package="postfix") }}}
 
+    <p><strong>中文说明：</strong></p>
+    发送电子邮件需要邮件服务器。应安装 <tt>postfix</tt> 软件包。
+
 rationale: |-
     Emails can be used to notify designated personnel about important
     system events such as failures or warnings.
+
+    <p><strong>中文理由：</strong></p>
+    电子邮件可用于向指定人员通知重要系统事件，例如故障或警告。
 
 severity: medium
 

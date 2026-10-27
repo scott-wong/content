@@ -15,6 +15,14 @@ description: |-
     {{{ sshd_config_file() }}}
     <tt>X11UseLocalhost yes</tt>
 
+    <p><strong>中文说明：</strong></p>
+    SSH 守护进程应阻止远程主机连接到代理显示。
+    <br />
+    <tt>X11UseLocalhost</tt> 的默认 SSH 配置为 <tt>yes</tt>，可阻止远程主机连接到代理显示。
+    <br />
+    要显式阻止远程主机连接到代理显示，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <tt>X11UseLocalhost yes</tt>
+
 rationale: |-
     When X11 forwarding is enabled, there may be additional exposure to the
     server and client displays if the sshd proxy display is configured to listen
@@ -22,6 +30,9 @@ rationale: |-
     loopback address and sets the hostname part of the <tt>DISPLAY</tt>
     environment variable to localhost. This prevents remote hosts from
     connecting to the proxy display.
+
+    <p><strong>中文理由：</strong></p>
+    启用 X11 转发时，如果 sshd 代理显示配置为监听通配符地址，服务器和客户端显示可能面临额外暴露风险。默认情况下，sshd 将转发服务器绑定到环回地址，并将 <tt>DISPLAY</tt> 环境变量的主机名部分设置为 localhost。这可阻止远程主机连接到代理显示。
 
 severity: medium
 

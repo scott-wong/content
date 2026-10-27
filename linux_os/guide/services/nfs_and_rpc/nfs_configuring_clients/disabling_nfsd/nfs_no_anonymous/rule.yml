@@ -14,9 +14,20 @@ description: |-
     a value of <tt>-1</tt>  may cause interoperability issues, particularly with Red Hat Enterprise Linux 7 client systems.
     Alternatively, functionally equivalent values of 60001, 65534, 65535 may be used.
 
+    <p><strong>中文说明：</strong></p>
+    要为远程 root 用户指定 UID 和 GID，请编辑 <tt>/etc/exports</tt> 文件，并为每个导出项添加以下内容：
+    <pre>
+    anonuid=<tt>value greater than UID_MAX from {{{ login_defs_path }}}</tt>
+    anongid=<tt>value greater than GID_MAX from {{{ login_defs_path }}}</tt>
+    </pre>
+    请注意，值 "-1" 在技术上是可接受的，因为这会使 Red Hat Enterprise Linux 基础 NFS 服务器上的 <tt>anonuid</tt> 和 <tt>anongid</tt> 值随机化。虽然从安全角度来看可以接受，但值 <tt>-1</tt> 可能导致互操作性问题，尤其是与 Red Hat Enterprise Linux 7 客户端系统。或者，也可以使用功能等效的值 60001、65534、65535。
+
 rationale: |-
     Specifying the anonymous UID and GID ensures that the remote root user is mapped
     to a local account which has no permissions on the system.
+
+    <p><strong>中文理由：</strong></p>
+    指定匿名 UID 和 GID 可确保远程 root 用户映射到系统上没有任何权限的本地账户。
 
 severity: unknown
 

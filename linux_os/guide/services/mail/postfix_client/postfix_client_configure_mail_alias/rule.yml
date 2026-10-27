@@ -11,10 +11,18 @@ description: |-
     <pre>$ sudo echo "root: {{{ xccdf_value("var_postfix_root_mail_alias") }}}" &gt;&gt; /etc/aliases
     $ sudo newaliases</pre>
 
+    <p><strong>中文说明：</strong></p>
+    确保发送给 root 用户的邮件会转发到受监控的电子邮件地址。确保地址 {{{ xccdf_value("var_postfix_root_mail_alias") }}} 是有效的电子邮件地址，并且可从相关系统访问。使用以下命令配置别名：
+    <pre>$ sudo echo "root: {{{ xccdf_value("var_postfix_root_mail_alias") }}}" &gt;&gt; /etc/aliases
+    $ sudo newaliases</pre>
+
 rationale: |-
     A number of system services utilize email messages sent to the root user to
     notify system administrators of active or impending issues.  These messages must
     be forwarded to at least one monitored email address.
+
+    <p><strong>中文理由：</strong></p>
+    许多系统服务会使用发送给 root 用户的电子邮件来通知系统管理员当前或即将发生的问题。这些邮件必须转发到至少一个受监控的电子邮件地址。
 
 severity: medium
 

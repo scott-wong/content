@@ -8,9 +8,15 @@ description: |-
     <tt>0</tt> to stop chrony daemon from listening on the UDP port 323
     for management connections made by chronyc.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>{{{ chrony_conf_path }}}</tt> 中的 <tt>cmdport</tt> 选项可设置为 <tt>0</tt>，以阻止 chrony 守护进程侦听 UDP 端口 323 以接受 chronyc 建立的管理连接。
+
 rationale: |-
     Minimizing the exposure of the server functionality of the chrony
     daemon diminishes the attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    尽量减少 chrony 守护进程服务器功能的暴露，可缩小攻击面。
 
 severity: low
 

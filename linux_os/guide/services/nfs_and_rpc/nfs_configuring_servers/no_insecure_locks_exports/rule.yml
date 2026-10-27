@@ -15,9 +15,15 @@ description: |-
     instances of the <tt>insecure_locks</tt> option from the file
     <tt>/etc/exports</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，NFS 服务器要求安全文件锁定请求，这需要客户端提供凭据才能锁定文件。大多数 NFS 客户端会在文件锁定请求中发送凭据，但少数客户端在请求文件锁定时不发送凭据，因此只能锁定全局可读文件。为绕过此限制，可以使用 <tt>insecure_locks</tt> 选项，使这些客户端能够访问所需导出项。这可能允许客户端访问其无权访问的数据，从而带来安全风险。请从 <tt>/etc/exports</tt> 文件中移除所有 <tt>insecure_locks</tt> 选项实例。
+
 rationale: |-
     Allowing insecure file locking could allow for sensitive data to be
     viewed or edited by an unauthorized user.
+
+    <p><strong>中文理由：</strong></p>
+    允许不安全的文件锁定可能使未授权用户查看或编辑敏感数据。
 
 severity: medium
 

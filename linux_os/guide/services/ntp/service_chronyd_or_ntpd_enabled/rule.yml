@@ -28,6 +28,28 @@ description: |-
     {{% endif %}}
     for guidance which NTP daemon to choose depending on the environment used.
 
+    <p><strong>中文说明：</strong></p>
+    {{% if "debian" in product %}}
+    验证 <tt>chrony</tt> 服务已启用。
+    {{% else %}}
+    验证 <tt>chronyd</tt> 服务已启用。
+    {{% endif %}}
+    注意：<tt>chronyd</tt> 守护进程默认启用。
+    <br /><br />
+    验证 <tt>ntpd</tt> 服务已启用。
+    注意：<tt>ntpd</tt> 守护进程默认未启用。不过，如前文所述，在某些环境中可能更倾向使用 <tt>ntpd</tt> 守护进程，而不是 <tt>chronyd</tt>。请根据所用环境参阅以下指南，以选择 NTP 守护进程：
+    {{% if product == "ol7" %}}
+    <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/network/ol7-nettime.html">Oracle Linux 7 时间同步文档</a>
+    {{% elif product == "ol8" %}}
+    <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/8/network/network-ConfiguringNetworkTime.html#ol-nettime">Oracle Linux 8 时间同步文档</a>
+    {{% elif product in ["sle12", "sle15"] %}}
+    <a href="https://documentation.suse.com/sles/15-SP7/html/SLES-all/cha-ntp.html">SUSE Linux Enterprise 时间同步文档</a>
+    {{% elif product in ["sle16"] %}}
+    <a href="https://documentation.suse.com/sles/16.0/html/SLES-ntp-time-synchronization/index.html">SUSE Linux Enterprise 16 时间同步文档</a>
+    {{% elif "rhel" in product %}}
+    <a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/configuring_basic_system_settings/index#proc_migrating-to-chrony_configuring-time-synchronization">Red Hat Enterprise Linux 时间同步文档</a>
+    {{% endif %}}
+
 rationale: |-
     Enabling some of {{% if "debian" in product %}}<tt>chrony</tt>{{% else %}}<tt>chronyd</tt>{{% endif %}} or <tt>ntpd</tt> services ensures
     that the NTP daemon will be running and that the system will synchronize its
@@ -39,6 +61,9 @@ rationale: |-
     <br /><br />
     The <tt>chronyd</tt> and <tt>ntpd</tt> NTP daemons offer all of the
     functionality of <tt>ntpdate</tt>, which is now deprecated.
+
+    <p><strong>中文理由：</strong></p>
+    启用 {{% if "debian" in product %}}<tt>chrony</tt>{{% else %}}<tt>chronyd</tt>{{% endif %}} 或 <tt>ntpd</tt> 服务可确保 NTP 守护进程运行，并使系统与指定的任何服务器同步时间。无论系统配置为客户端（仅同步自身时钟），还是同时充当其他系统的 NTP 服务器，这一点都很重要。时间同步对于 Kerberos 等身份验证服务至关重要，对于维护准确的日志和审计可能的安全泄露也很重要。<br /><br /><tt>chronyd</tt> 和 <tt>ntpd</tt> NTP 守护进程提供现已弃用的 <tt>ntpdate</tt> 的全部功能。
 
 severity: medium
 

@@ -6,10 +6,16 @@ title: 'Verify Ownership of /etc/hosts.allow'
 description: |-
     {{{ describe_file_owner(file="/etc/hosts.allow", owner="root") }}}
 
+    <p><strong>中文说明：</strong></p>
+    确保 <tt>/etc/hosts.allow</tt> 的文件所有者为 <tt>root</tt>。
+
 rationale: |-
     The <tt>/etc/hosts.allow</tt> file is used to control access of clients to daemons in the
     server. Insecure groupownership of this file could allow users to grant clients unrestricted
     access or no access at all to services in the server.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>/etc/hosts.allow</tt> 文件用于控制客户端对服务器守护进程的访问。此文件不安全的组所有权可能允许用户授予客户端对服务器服务的不受限访问，或完全禁止访问。
 
 severity: medium
 

@@ -14,9 +14,20 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>IgnoreRhosts yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    SSH 可通过 <tt>.rhosts</tt> 文件模拟已废弃的 rsh 命令行为，允许用户为其账户启用不安全的访问。
+    <br />
+    默认 SSH 配置禁用对 <tt>.rhosts</tt> 的支持。如果未设置 <tt>IgnoreRhosts</tt>，则使用相应默认配置。
+    <br/>
+    要显式禁用对 .rhosts 文件的支持，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>IgnoreRhosts yes</pre>
+
 rationale: |-
     SSH trust relationships mean a compromise on one host
     can allow an attacker to move trivially to other hosts.
+
+    <p><strong>中文理由：</strong></p>
+    SSH 信任关系意味着攻陷一台主机后，攻击者可轻易移动到其他主机。
 
 severity: medium
 

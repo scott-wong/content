@@ -3,11 +3,18 @@ documentation_complete: true
 
 title: 'Uninstall squid Package'
 
-description: '{{{ describe_package_remove(package="squid") }}}'
+description: |-
+    {{{ describe_package_remove(package="squid") }}}
+
+    <p><strong>中文说明：</strong></p>
+    请使用适当的软件包管理工具移除 <tt>squid</tt> 软件包。
 
 rationale: |-
     If there is no need to make the proxy server software available,
     removing it provides a safeguard against its activation.
+
+    <p><strong>中文理由：</strong></p>
+    如果无需提供代理服务器软件，移除此类软件可防止其被激活。
 
 severity: unknown
 

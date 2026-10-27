@@ -8,11 +8,18 @@ description: |-
     system. To remove these files, run the following command to delete them from any location:
     <pre>$ sudo rm /[path]/[to]/[file]/shosts.equiv</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>shosts.equiv</tt> 文件列出本地系统信任的远程主机和用户。要删除这些文件，请运行以下命令从任意位置删除它们：
+    <pre>$ sudo rm /[path]/[to]/[file]/shosts.equiv</pre>
+
 rationale: |-
     The shosts.equiv files are used to configure host-based authentication for the system via SSH.
     Host-based authentication is not sufficient for preventing unauthorized access to the system,
     as it does not require interactive identification and authentication of a connection request,
     or for the use of two-factor authentication.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>shosts.equiv</tt> 文件用于配置通过 SSH 对系统进行基于主机的身份验证。基于主机的身份验证不足以防止对系统的未经授权访问，因为它不要求对连接请求进行交互式身份识别和身份验证，也不要求使用双因素身份验证。
 
 severity: high
 

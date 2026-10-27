@@ -20,10 +20,18 @@ description: |-
     processed before <tt>02-rekey-limit.conf</tt> containing definition of
     <tt>RekeyLimit</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>RekeyLimit</tt> 参数指定会话密钥重新协商的频率，包括可传输的数据量和经过时间。要降低默认限制，请将以下行添加到文件 <tt>{{{ sshc_rekey_config }}}</tt>：
+    <tt>RekeyLimit {{{ xccdf_value("var_ssh_client_rekey_limit_size") }}} {{{ xccdf_value("var_ssh_client_rekey_limit_time") }}}</tt>
+    确保主配置文件 <tt>{{{ sshc_main_config }}}</tt> 中的 <tt>include</tt> 指令之前没有其他 <tt>RekeyLimit</tt> 配置。还要检查 <tt>{{{ sshc_config_dir }}}</tt> 目录中的其他文件。文件按文件名的字典序处理。确保在 <tt>02-rekey-limit.conf</tt> 之前处理的文件中没有包含 <tt>RekeyLimit</tt> 的定义。
+
 rationale: |-
     By decreasing the limit based on the amount of data and enabling
     time-based limit, effects of potential attacks against
     encryption keys are limited.
+
+    <p><strong>中文理由：</strong></p>
+    通过根据数据量降低限制并启用基于时间的限制，可限制针对加密密钥的潜在攻击的影响。
 
 severity: medium
 

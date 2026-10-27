@@ -8,6 +8,9 @@ severity: medium
 description: |-
   SSSD must have acceptable trust anchor present.
 
+  <p><strong>中文说明：</strong></p>
+  SSSD 必须具有可接受的信任锚。
+
 rationale: |-
   Without path validation, an informed trust decision by the relying party cannot be made when
   presented with any certificate not already explicitly trusted.
@@ -26,6 +29,15 @@ rationale: |-
   certificate not already explicitly trusted. Status information for certification paths includes
   certificate revocation lists or online certificate status protocol responses.
   Validation of the certificate status information is out of scope for this requirement.
+
+  <p><strong>中文理由：</strong></p>
+  如果没有路径验证，当向依赖方出示任何尚未明确受信任的证书时，依赖方无法做出知情的信任决策。
+
+  信任锚是通过公钥及相关数据表示的权威实体。它用于公钥基础设施、X.509 数字证书和 DNSSEC 环境。
+
+  存在信任链时，通常最上层受信任实体将成为信任锚；例如，它可以是证书颁发机构（CA）。认证路径从主体证书开始，经过多个中间证书，直至通常由受信任 CA 签发的受信任根证书。
+
+  此要求验证用于证书验证的认证路径指向可接受的信任锚，并且该路径包含状态信息。当依赖方收到任何尚未明确受信任的证书时，必须进行路径验证才能做出知情的信任决策。认证路径的状态信息包括证书吊销列表或在线证书状态协议响应。证书状态信息的验证不在此要求范围内。
 
 identifiers:
   cce@rhel8: CCE-86312-6

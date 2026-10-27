@@ -12,10 +12,18 @@ description: |-
     clients which use RADIUS for authentication. If the system is not
     intended for use as a RADIUS Server it should be removed.
 
+    <p><strong>中文说明：</strong></p>
+    如果未使用 <tt>freeradius</tt> 软件包，则应将其移除。此系统是 RADIUS 服务器吗？如果不是，请移除该软件包。
+    请使用适当的软件包管理工具移除 <tt>freeradius</tt> 软件包。
+    {{{ full_name }}} 系统默认不安装 freeradius RPM。只有 RADIUS 服务器需要该软件包，使用 RADIUS 进行身份验证的客户端不需要。如果系统不打算用作 RADIUS 服务器，则应将其移除。
+
 rationale: |-
     Unnecessary packages should not be installed to decrease the attack
     surface of the system.  While this software is clearly essential on a
     RADIUS server, it is not necessary on typical desktop or workstation systems.
+
+    <p><strong>中文理由：</strong></p>
+    不应安装不必要的软件包，以减少系统攻击面。虽然此软件在 RADIUS 服务器上显然必需，但在典型桌面或工作站系统上并不需要。
 
 severity: low
 

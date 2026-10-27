@@ -9,10 +9,17 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>PubkeyAuthentication no</pre>
 
+    <p><strong>中文说明：</strong></p>
+    除非需要，SSH 不应允许额外或不必要的身份验证机制。要禁用 PubkeyAuthentication 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>PubkeyAuthentication no</pre>
+
 rationale: |-
     PubkeyAuthentication authentication is used to provide additional authentication mechanisms to
     applications. Allowing PubkeyAuthentication authentication through SSH allows users to
     generate their own authentication tokens, increasing the attack surface of the system.
+
+    <p><strong>中文理由：</strong></p>
+    PubkeyAuthentication 身份验证用于为应用提供额外的身份验证机制。允许通过 SSH 使用 PubkeyAuthentication 身份验证会使用户能够生成自己的身份验证令牌，从而扩大系统攻击面。
 
 severity: medium
 

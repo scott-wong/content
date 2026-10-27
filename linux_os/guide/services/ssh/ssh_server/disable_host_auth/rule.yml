@@ -16,9 +16,20 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>HostbasedAuthentication no</pre>
 
+    <p><strong>中文说明：</strong></p>
+    SSH 基于加密主机的身份验证比 <tt>.rhosts</tt> 身份验证更安全。但是，不建议主机之间单方面相互信任，即使在组织内部也是如此。
+    <br />
+    默认 SSH 配置禁用基于主机的身份验证。如果未设置 <tt>HostbasedAuthentication</tt>，则使用适当配置。
+    <br />
+    要显式禁用基于主机的身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>HostbasedAuthentication no</pre>
+
 rationale: |-
     SSH trust relationships mean a compromise on one host
     can allow an attacker to move trivially to other hosts.
+
+    <p><strong>中文理由：</strong></p>
+    SSH 信任关系意味着攻陷一台主机后，攻击者可轻易转向其他主机。
 
 severity: medium
 

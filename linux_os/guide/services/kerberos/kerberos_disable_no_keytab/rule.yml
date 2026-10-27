@@ -10,8 +10,14 @@ description: |-
     To prevent using Kerberos by system daemons, remove the Kerberos keytab files, especially
     <tt>/etc/krb5.keytab</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    Kerberos 可能依赖 Common Criteria 未批准的密钥分发功能。为防止系统守护进程使用 Kerberos，请删除 Kerberos keytab 文件，尤其是 <tt>/etc/krb5.keytab</tt>。
+
 rationale: |-
     Some key derivation functions (KDF) in Kerberos are not FIPS-compatible
+
+    <p><strong>中文理由：</strong></p>
+    Kerberos 中的某些密钥派生函数（KDF）与 FIPS 不兼容。
 
 severity: medium
 

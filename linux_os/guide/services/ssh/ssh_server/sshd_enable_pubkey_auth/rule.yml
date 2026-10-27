@@ -12,6 +12,14 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>PubkeyAuthentication yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    启用基于公钥的 SSH 登录。
+    <br/>
+    默认 SSH 配置启用基于公钥的身份验证。如果未设置 <tt>PubkeyAuthentication</tt>，则使用相应默认配置。
+    <br/>
+    要显式启用公钥身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下内容：
+    <pre>PubkeyAuthentication yes</pre>
+
 rationale: |-
     Without the use of multifactor authentication, the ease of access to
     privileged functions is greatly increased. Multifactor authentication
@@ -20,6 +28,9 @@ rationale: |-
     authorizations of a privileged user. 
     Smart cards or hardware tokens paired with digital certificates are
     common examples of multifactor implementations.
+
+    <p><strong>中文理由：</strong></p>
+    如果不使用多因素身份验证，访问特权功能的容易程度会大幅增加。多因素身份验证要求使用两个或更多因素来完成身份验证。特权账户是指具有特权用户授权的信息系统账户。智能卡或硬件令牌与数字证书结合使用，是多因素实现的常见示例。
 
 severity: medium
 

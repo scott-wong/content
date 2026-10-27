@@ -61,10 +61,64 @@ description: |-
     Note that this needs to be done for each <pre>MachineConfigPool</pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    应将 <tt>maxpoll</tt> 配置为 {{{ xccdf_value("var_time_service_set_maxpoll") }}}（在 <tt>/etc/ntp.conf</tt> 或 <tt>{{{ chrony_conf_path }}}</tt>（或 <tt>{{{ chrony_d_path }}}</tt>）中），以持续轮询时间服务器。要在 <tt>/etc/ntp.conf</tt> 或 <tt>{{{ chrony_conf_path }}}</tt>（或 <tt>{{{ chrony_d_path }}}</tt>）中配置 <tt>maxpoll</tt>，请在每个 <tt>server</tt>、<tt>pool</tt> 或 <tt>peer</tt> 条目后添加以下内容：
+    <pre>maxpoll {{{ xccdf_value("var_time_service_set_maxpoll") }}}</pre>
+    将其添加到 <tt>server</tt> 指令。如果使用 chrony，所有 <tt>pool</tt> 指令也应配置 <tt>maxpoll</tt>。
+
+    {{% if product == "rhcos4" %}}
+    <p>
+    注意，如果使用随此内容提供的修复，所提供的 <b>MachineConfig</b> 不包含可供指向的参考 NTP 服务器。需由管理员根据集群需求设置这些服务器。
+    </p>
+
+    <p>
+    上述修复确实包含 <tt>/etc/chrony.d</tt> 目录，可通过创建配置文件来设置这些服务器。
+    </p>
+
+    如果要设置如下配置：
+    <pre>
+    pool 2.rhel.pool.ntp.org iburst
+
+    server 0.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    server 1.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    server 2.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    server 3.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    </pre>
+
+    可使用以下清单完成：
+
+    <pre>
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+    metadata:
+      labels:
+        machineconfiguration.openshift.io/role: master
+      name: 75-master-chrony-servers
+    spec:
+      config:
+        ignition:
+          version: 3.1.0
+        storage:
+          files:
+          - contents:
+              source: data:,pool%202.rhel.pool.ntp.org%20iburst%0A%0Aserver%200.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010%0Aserver%201.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010%0Aserver%202.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010%0Aserver%203.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010
+            mode: 0600
+            path: /etc/chrony.d/10-rhel-pool-and-servers.conf
+            overwrite: true
+    </pre>
+
+    请注意，需要对每个 <pre>MachineConfigPool</pre> 执行此操作。
+    {{% endif %}}
+
 rationale: |-
     Inaccurate time stamps make it more difficult to correlate events and can lead to an inaccurate analysis. Determining the correct time a particular event occurred on a system is critical when conducting forensic analysis and investigating system events. Sources outside the configured acceptable allowance (drift) may be inaccurate.
     Synchronizing internal information system clocks provides uniformity of time stamps for information systems with multiple system clocks and systems connected over a network.
     Organizations should consider endpoints that may not have regular access to the authoritative time server (e.g., mobile, teleworking, and tactical endpoints).
+
+    <p><strong>中文理由：</strong></p>
+    不准确的时间戳会使关联事件更加困难，并可能导致分析不准确。在开展取证分析和调查系统事件时，确定特定事件在系统上发生的准确时间至关重要。超出配置的可接受偏差（drift）范围的来源可能不准确。
+
+    同步内部信息系统时钟可为具有多个系统时钟和通过网络连接的系统提供一致的时间戳。组织应考虑可能无法定期访问权威时间服务器的端点（例如移动、远程办公和战术端点）。
 
 severity: medium
 

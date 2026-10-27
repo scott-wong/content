@@ -18,10 +18,15 @@ description: |-
     a method for looking up information from a central database.
     {{{ describe_package_remove(package=package) }}}
 
+    <p><strong>中文说明：</strong></p>
+    轻量级目录访问协议（LDAP）是一种从中央数据库查找信息的服务。应移除 <tt>{{{ package }}}</tt> 软件包。
 
-rationale:
-    If the system does not need to act as an LDAP client, it is recommended that the software is
-    removed to reduce the potential attack surface.
+
+rationale: |-
+    If the system does not need to act as an LDAP client, it is recommended that the software is removed to reduce the potential attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    如果系统不需要充当 LDAP 客户端，建议移除此软件，以减少潜在攻击面。
 
 severity: low
 

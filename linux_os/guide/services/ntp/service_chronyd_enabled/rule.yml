@@ -12,9 +12,15 @@ description: |-
     <tt># systemctl enable chronyd.service</tt>
     This recommendation only applies if chrony is in use on the system.
 
+    <p><strong>中文说明：</strong></p>
+    chrony 是实现 Network Time Protocol（NTP）的守护进程，旨在跨多种系统同步系统时钟并使用高度准确的源。有关 chrony 的更多信息，请参阅 <a href="https://chrony-project.org/">chrony 项目网站</a>。Chrony 可配置为客户端和/或服务器。要启用 Chronyd 服务，可运行：<tt># systemctl enable chronyd.service</tt>。此建议仅在系统使用 chrony 时适用。
+
 rationale: |-
     If chrony is in use on the system proper configuration is vital to ensuring time
     synchronization is working properly.
+
+    <p><strong>中文理由：</strong></p>
+    如果系统使用 chrony，则正确配置对于确保时间同步正常工作至关重要。
 
 severity: medium
 

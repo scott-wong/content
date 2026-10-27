@@ -7,11 +7,17 @@ title: 'Disable xinetd Service'
 description: |-
     {{{ describe_service_disable(service="xinetd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用 <tt>xinetd</tt> 服务。
+
 rationale: |-
     The xinetd service provides a dedicated listener service for some programs,
     which is no longer necessary for commonly-used network services. Disabling
     it ensures that these uncommon services are not running, and also prevents
     attacks against xinetd itself.
+
+    <p><strong>中文理由：</strong></p>
+    xinetd 服务为某些程序提供专用监听服务，对于常用网络服务而言已不再必要。禁用它可确保这些不常见的服务不会运行，并可防止针对 xinetd 本身的攻击。
 
 severity: medium
 

@@ -10,9 +10,15 @@ description: |-
     recommended to leave this service enabled for local mail delivery.
     {{{ describe_service_enable(service="postfix") }}}
 
+    <p><strong>中文说明：</strong></p>
+    Postfix 邮件传输代理用于系统内的本地邮件投递。默认配置仅侦听回环接口（127.0.0.1）上的默认 SMTP 端口（端口 25）。建议保持此服务启用以进行本地邮件投递。应启用 <tt>postfix</tt> 服务。
+
 rationale: |-
     Local mail delivery is essential to some system maintenance and
     notification tasks.
+
+    <p><strong>中文理由：</strong></p>
+    本地邮件投递对某些系统维护和通知任务至关重要。
 
 severity: unknown
 

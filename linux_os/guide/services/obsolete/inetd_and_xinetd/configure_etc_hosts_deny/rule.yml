@@ -13,9 +13,17 @@ description: |-
     If there exist services which might be affected and access to them should not be blocked,
     modify the <tt>/etc/hosts.allow</tt> file appropriately before performing the remediation.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>/etc/hosts.deny</tt> 文件与 <tt>/etc/hosts.allow</tt> 文件一起，为支持 TCP wrappers 的网络服务提供简单的访问控制机制。文件中的以下行确保未在 <tt>/etc/hosts.allow</tt> 中提及的任何客户端都无法访问支持此机制的服务：
+    <pre>ALL: ALL</pre>
+    建议在执行本规则的修复之前，检查可能受上述文件修改影响的可用网络服务。如果存在可能受影响且不应阻止访问的服务，请在执行修复之前适当修改 <tt>/etc/hosts.allow</tt> 文件。
+
 
 rationale: |-
     Correct configuration in <tt>/etc/hosts.deny</tt> ensures that no explicitly mentioned clients will be able to connect to services supporting this access control mechanism.
+
+    <p><strong>中文理由：</strong></p>
+    如果在 <tt>/etc/hosts.deny</tt> 中正确配置，则未在 <tt>/etc/hosts.allow</tt> 中明确提及的客户端将无法连接支持此访问控制机制的服务。
 
 severity: medium
 

@@ -8,12 +8,18 @@ description: |-
     user or mail server. If the system is not intended to be a mail server,
     it is recommended that the MTA be configured to only process local mail.
 
+    <p><strong>中文说明：</strong></p>
+    邮件传输代理（MTA），例如 sendmail 和 Postfix，用于侦听传入邮件并将消息传输给相应用户或邮件服务器。如果系统不打算用作邮件服务器，建议将 MTA 配置为仅处理本地邮件。
+
 rationale: |-
     The software for all Mail Transfer Agents is complex and most have a
     long history of security issues. While it is important to ensure that
     the system can process local mail messages, it is not necessary to have
     the MTA's daemon listening on a port unless the server is intended to
     be a mail server that receives and processes mail from other systems.
+
+    <p><strong>中文理由：</strong></p>
+    所有邮件传输代理的软件都很复杂，且大多数都有长期的安全问题历史。虽然确保系统能够处理本地邮件消息很重要，但除非服务器打算接收和处理来自其他系统的邮件，否则不需要让 MTA 守护进程侦听端口。
 
 severity: medium
 

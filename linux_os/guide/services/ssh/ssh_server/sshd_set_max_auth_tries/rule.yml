@@ -8,9 +8,16 @@ description: |-
     to set MaxAUthTries edit <tt>/etc/ssh/sshd_config</tt> as follows:
     <pre>MaxAuthTries {{{ xccdf_value("sshd_max_auth_tries_value") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>MaxAuthTries</tt> 参数指定每个连接允许的最大身份验证尝试次数。一旦失败次数达到该值的一半，就会记录其他失败。要设置 MaxAuthTries，请按如下方式编辑 <tt>/etc/ssh/sshd_config</tt>：
+    <pre>MaxAuthTries {{{ xccdf_value("sshd_max_auth_tries_value") }}}</pre>
+
 rationale: |-
     Setting the MaxAuthTries parameter to a low number will minimize the risk of successful
     brute force attacks to the SSH server.
+
+    <p><strong>中文理由：</strong></p>
+    将 MaxAuthTries 参数设置为较小的数值，可最大限度降低 SSH 服务器遭受成功暴力破解攻击的风险。
 
 severity: medium
 

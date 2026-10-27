@@ -8,7 +8,14 @@ description: |-
     is not designated as a NFS server then this service should be disabled.
     {{{ describe_service_disable(service="nfs-server") }}}
 
-rationale: 'Unnecessary services should be disabled to decrease the attack surface of the system.'
+    <p><strong>中文说明：</strong></p>
+    网络文件系统（NFS）服务允许远程主机挂载本地系统上的共享文件系统并与之交互。如果本地系统未指定为 NFS 服务器，则应禁用此服务。应禁用 <tt>nfs-server</tt> 服务。
+
+rationale: |-
+    Unnecessary services should be disabled to decrease the attack surface of the system.
+
+    <p><strong>中文理由：</strong></p>
+    应禁用不必要的服务，以减小系统攻击面。
 
 severity: unknown
 

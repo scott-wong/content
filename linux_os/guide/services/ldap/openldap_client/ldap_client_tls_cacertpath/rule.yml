@@ -13,11 +13,20 @@ description: |-
     <pre>tls_cacertfile /etc/pki/tls/CA/cacert.pem</pre>
     Then review the LDAP server and ensure TLS has been configured.
 
+    <p><strong>中文说明：</strong></p>
+    确保受信任 CA 证书的副本已置于 <tt>/etc/pki/tls/CA/cacert.pem</tt> 文件中。将 LDAP 配置为强制使用 TLS，并信任由该 CA 签名的证书。首先，编辑 <tt>/etc/nslcd.conf</tt>，添加或修正以下任意一行：
+    <pre>tls_cacertdir /etc/pki/tls/CA</pre> 或
+    <pre>tls_cacertfile /etc/pki/tls/CA/cacert.pem</pre>
+    然后检查 LDAP 服务器，确保已配置 TLS。
+
 rationale: |-
     The tls_cacertdir or tls_cacertfile directives are required when
     tls_checkpeer is configured (which is the default for openldap versions 2.1 and
     up). These directives define the path to the trust certificates signed by the
     site CA.
+
+    <p><strong>中文理由：</strong></p>
+    当配置 tls_checkpeer 时（OpenLDAP 2.1 及更高版本的默认设置），需要 tls_cacertdir 或 tls_cacertfile 指令。这些指令定义由站点 CA 签名的信任证书路径。
 
 severity: medium
 

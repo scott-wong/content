@@ -5,9 +5,15 @@ title: 'Disable Dovecot Service'
 description: |-
     {{{ describe_service_disable(service="dovecot") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用 <tt>dovecot</tt> 服务。
+
 rationale: |-
     Running an IMAP or POP3 server provides a network-based
     avenue of attack, and should be disabled if not needed.
+
+    <p><strong>中文理由：</strong></p>
+    运行 IMAP 或 POP3 服务器会提供基于网络的攻击途径，如无必要应禁用。
 
 severity: unknown
 

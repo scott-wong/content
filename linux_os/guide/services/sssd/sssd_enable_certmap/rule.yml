@@ -14,10 +14,22 @@ description: |-
    domains = testing.test
    </pre>
 
+   <p><strong>中文说明：</strong></p>
+   应将 SSSD 配置为验证用户或组的证书。要进行此设置，请确保在 <tt>/etc/sssd/sssd.conf</tt> 中设置类似 <tt>certmap/testing.test/rule_name</tt> 的节。例如：
+   <pre>
+   [certmap/testing.test/rule_name]
+   matchrule =&lt;SAN&gt;.*EDIPI@mil
+   maprule = (userCertificate;binary={cert!bin})
+   domains = testing.test
+   </pre>
+
 rationale: |-
    Without mapping the certificate used to authenticate to the user account, the ability to
    determine the identity of the individual user or group will not be available for forensic
    analysis.
+
+   <p><strong>中文理由：</strong></p>
+   如果不将用于身份验证的证书映射到用户账户，就无法通过取证分析确定个人用户或组的身份。
 
 severity: medium
 

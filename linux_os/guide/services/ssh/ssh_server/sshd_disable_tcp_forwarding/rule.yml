@@ -8,8 +8,15 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>AllowTcpForwarding no</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>AllowTcpForwarding</tt> 参数指定是否允许 TCP 转发。要禁用 TCP 转发，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>AllowTcpForwarding no</pre>
+
 rationale: |-
     Leaving port forwarding enabled can expose the organization to security risks and back-doors.
+
+    <p><strong>中文理由：</strong></p>
+    保持端口转发启用会使组织面临安全风险和后门风险。
 
 severity: medium
 

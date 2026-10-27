@@ -8,10 +8,16 @@ description: |-
     can exist. Like other session controls in this session the Grace Period should be limited to
     appropriate limits to ensure the service is available for needed access.
 
+    <p><strong>中文说明：</strong></p>
+    SSH 服务器的 <tt>LoginGraceTime</tt> 参数指定成功通过 SSH 服务器身份验证所允许的时间。宽限期越长，可存在的未通过身份验证连接就越多。与本会话中的其他会话控制项一样，应将宽限期限制为适当值，以确保服务可用于必要的访问。
+
 rationale: |-
     Setting the <tt>LoginGraceTime</tt> parameter to a low number will minimize the risk of successful
     brute force attacks to the SSH server. It will also limit the number of concurrent
     unauthenticated connections.
+
+    <p><strong>中文理由：</strong></p>
+    将 <tt>LoginGraceTime</tt> 参数设置为较小的数值，可最大限度降低 SSH 服务器遭受成功暴力破解攻击的风险。这还会限制并发未通过身份验证的连接数量。
 
 severity: medium
 

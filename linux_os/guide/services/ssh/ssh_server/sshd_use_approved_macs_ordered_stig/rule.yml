@@ -23,9 +23,22 @@ description: |-
     above (or their subset), keeping the given order of algorithms.
     {{%- endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    将 MAC 限制为 FIPS 批准的哈希算法。<tt>/etc/ssh/sshd_config</tt> 中的以下行演示 FIPS 批准的 MAC：
+    {{%- if 'ubuntu' in product %}}
+    <pre>MACs {{{ sshd_approved_macs }}}</pre>
+    如果该行未按准确顺序包含这些 MAC、已被注释掉或缺失，则构成发现项。
+    {{%- else %}}
+    <pre>MACs hmac-sha2-512,hmac-sha2-256</pre>
+    此规则确保配置上述 MAC（或其子集），并保持给定算法顺序。
+    {{%- endif %}}
+
 rationale: |-
     FIPS-approved cryptographic hash functions are required to be used.
     The only SSHv2 hash algorithms meeting this requirement is SHA2.
+
+    <p><strong>中文理由：</strong></p>
+    必须使用 FIPS 批准的加密哈希函数。满足此要求的唯一 SSHv2 哈希算法是 SHA2。
 
 severity: medium
 

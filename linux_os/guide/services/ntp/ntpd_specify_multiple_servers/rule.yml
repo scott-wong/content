@@ -10,11 +10,18 @@ description: |-
     <em>ntpserver</em>:
     <pre>server <i>ntpserver</i></pre>
 
+    <p><strong>中文说明：</strong></p>
+    可在 <tt>/etc/ntp.conf</tt> 文件中指定其他 NTP 服务器进行时间同步。为此，请添加以下形式的其他行，并将 <em>ntpserver</em> 替换为远程 NTP 服务器的 IP 地址或主机名：
+    <pre>server <i>ntpserver</i></pre>
+
 rationale: |-
     Specifying additional NTP servers increases the availability of
     accurate time data, in the event that one of the specified servers becomes
     unavailable. This is typical for a system acting as an NTP server for
     other systems.
+
+    <p><strong>中文理由：</strong></p>
+    指定其他 NTP 服务器可在一台指定服务器不可用时提高准确时间数据的可用性。对于充当其他系统 NTP 服务器的系统，这种情况很常见。
 
 severity: unknown
 

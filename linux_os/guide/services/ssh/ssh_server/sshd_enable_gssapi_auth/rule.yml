@@ -9,6 +9,10 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>GSSAPIAuthentication yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    使用 Kerberos 或其他 GSSAPI 身份验证的站点需要将 sshd 配置为接受此身份验证。要启用 GSSAPI 身份验证，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>GSSAPIAuthentication yes</pre>
+
 rationale: |-
     Kerberos authentication for SSH is often implemented using GSSAPI. If
     Kerberos is enabled through SSH, the SSH daemon provides a means of access
@@ -18,6 +22,11 @@ rationale: |-
     For enterprises, Kerberos is often enabled and used with GSSAPI for 
     centralized user account management which may necessitate enabling of
     GSSAPI functionality in SSH. 
+
+    <p><strong>中文理由：</strong></p>
+    SSH 的 Kerberos 身份验证通常使用 GSSAPI 实现。如果通过 SSH 启用 Kerberos，SSH 守护进程会提供访问系统 Kerberos 实现的方式。系统 Kerberos 实现中的漏洞可能被利用。
+
+    对于企业环境，Kerberos 通常与 GSSAPI 结合使用以实现集中式用户账户管理，这可能需要在 SSH 中启用 GSSAPI 功能。
 
 severity: medium
 

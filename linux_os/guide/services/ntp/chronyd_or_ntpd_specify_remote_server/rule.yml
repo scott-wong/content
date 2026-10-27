@@ -79,9 +79,76 @@ description: |-
     Note that this needs to be done for each <pre>MachineConfigPool</pre>
     {{% endif %}}
 
+    <p><strong>中文说明：</strong></p>
+    根据具体生产环境的功能需求，可将 {{{ full_name }}} 系统配置为使用 <tt>chronyd</tt> NTP 守护进程（默认）或 <tt>ntpd</tt> NTP 守护进程的服务。请参阅
+    {{% if product == "ol7" %}}
+    <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/7/network/ol7-nettime.html">Oracle Linux 7 网络时间文档</a>
+    {{% elif product == "ol8" %}}
+    <a href="https://docs.oracle.com/en/operating-systems/oracle-linux/8/network/network-ConfiguringNetworkTime.html#ol-nettime">Oracle Linux 8 网络时间文档</a>
+    {{% elif "rhel" in product %}}
+    <a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/configuring_basic_system_settings/index#proc_migrating-to-chrony_configuring-time-synchronization">Red Hat Enterprise Linux 8 时间同步文档</a>
+    {{% endif %}}
+    以获取两种选项功能的详细比较，以及有关如何在这两种 NTP 守护进程之间进行选择的进一步指导。
+    <br />
+    要为时间同步指定远程 NTP 服务器，请执行以下操作：
+    <ul>
+    <li> 如果系统配置为使用 <tt>chronyd</tt> 作为 NTP 守护进程（默认），请按如下方式编辑 <tt>{{{ chrony_conf_path }}}</tt> 文件，</li>
+    <li> 如果系统配置为使用 <tt>ntpd</tt> 作为 NTP 守护进程，请按下文所述编辑 <tt>/etc/ntp.conf</tt> 文件。</li>
+    </ul>
+    添加或修正以下行，将远程 NTP 服务器的 IP 或主机名替换为 <em>ntpserver</em>：
+    <pre>server <i>ntpserver</i></pre>
+    这会指示 NTP 软件联系该远程服务器以获取时间数据。
+    {{% if product == "rhcos4" %}}
+    <p>
+    注意，如果使用随此内容提供的修复，所提供的 <b>MachineConfig</b> 不包含可供指向的参考 NTP 服务器。需由管理员根据集群需求设置这些服务器。
+    </p>
+
+    <p>
+    上述修复确实包含 <tt>/etc/chrony.d</tt> 目录，可通过创建配置文件来设置这些服务器。
+    </p>
+
+    如果要设置如下配置：
+
+    <pre>
+    pool 2.rhel.pool.ntp.org iburst
+
+    server 0.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    server 1.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    server 2.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    server 3.rhel.pool.ntp.org minpoll 4 maxpoll 10
+    </pre>
+
+    可使用以下清单完成：
+
+    <pre>
+    apiVersion: machineconfiguration.openshift.io/v1
+    kind: MachineConfig
+    metadata:
+      labels:
+        machineconfiguration.openshift.io/role: master
+      name: 75-master-chrony-servers
+    spec:
+      config:
+        ignition:
+          version: 3.1.0
+        storage:
+          files:
+          - contents:
+              source: data:,pool%202.rhel.pool.ntp.org%20iburst%0A%0Aserver%200.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010%0Aserver%201.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010%0Aserver%202.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010%0Aserver%203.rhel.pool.ntp.org%20minpoll%204%20maxpoll%2010
+            mode: 0600
+            path: /etc/chrony.d/10-rhel-pool-and-servers.conf
+            overwrite: true
+    </pre>
+
+    请注意，需要对每个 <pre>MachineConfigPool</pre> 执行此操作。
+    {{% endif %}}
+
 rationale: |-
     Synchronizing with an NTP server makes it possible to collate system
     logs from multiple sources or correlate computer events with real time events.
+
+    <p><strong>中文理由：</strong></p>
+    与 NTP 服务器同步可以使多个来源的系统日志能够汇总，或将计算机事件与实时事件关联起来。
 
 severity: medium
 

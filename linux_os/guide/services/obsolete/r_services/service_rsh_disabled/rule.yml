@@ -10,11 +10,18 @@ description: |-
     If using xinetd, set <tt>disable</tt> to <tt>yes</tt> in <tt>/etc/xinetd.d/rsh</tt>.
     {{{ describe_socket_disable(socket="rsh") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用 <tt>rsh</tt> 服务，该服务随 <tt>rsh-server</tt> 软件包提供，并通过 xinetd 作为服务运行，或作为独立的 systemd socket 运行。如果使用 xinetd，请在 <tt>/etc/xinetd.d/rsh</tt> 中将 <tt>disable</tt> 设置为 <tt>yes</tt>。
+    应禁用 <tt>rsh</tt> systemd socket。
+
 rationale: |-
     The rsh service uses unencrypted network communications, which
     means that data from the login session, including passwords and
     all other information transmitted during the session, can be
     stolen by eavesdroppers on the network.
+
+    <p><strong>中文理由：</strong></p>
+    rsh 服务使用未加密的网络通信，这意味着登录会话中的数据（包括密码和会话期间传输的所有其他信息）可能被网络上的窃听者窃取。
 
 severity: high
 

@@ -3,13 +3,20 @@ documentation_complete: true
 
 title: 'Mount Remote Filesystems with noexec'
 
-description: '{{{ describe_mount(option="noexec", part="any NFS mounts") }}}'
+description: |-
+    {{{ describe_mount(option="noexec", part="any NFS mounts") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保所有 NFS 挂载均使用 <tt>noexec</tt> 选项。
 
 rationale: |-
     The noexec mount option causes the system not to execute binary files. This option must be used
     for mounting any file system not containing approved binary files as they may be incompatible. Executing
     files from untrusted file systems increases the opportunity for unprivileged users to attain unauthorized
     administrative access.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>noexec</tt> 挂载选项使系统不执行二进制文件。对于不包含已批准二进制文件的任何文件系统，必须使用此选项，因为它们可能不兼容。从不信任的文件系统执行文件会增加未授权用户获得管理访问权限的机会。
 
 severity: medium
 

@@ -6,9 +6,15 @@ title: 'Uninstall CUPS Package'
 description: |-
     {{{ describe_package_remove(package="cups") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应删除 <tt>cups</tt> 软件包。
+
 rationale: |-
     If the system does not need to print jobs or accept print jobs from other systems, it is
     recommended that CUPS be removed to reduce the potential attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    如果系统不需要打印作业或接受来自其他系统的打印作业，建议删除 CUPS 以减小潜在攻击面。
 
 severity: unknown
 

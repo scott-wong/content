@@ -5,9 +5,15 @@ title: 'The Chronyd service is disabled'
 description: |-
     {{{ describe_service_disable(service="chrony") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应禁用 <tt>chrony</tt> 服务。
+
 rationale: |-
     Disabling the <tt>chrony</tt> service ensures that there is
     only single one time service running.
+
+    <p><strong>中文理由：</strong></p>
+    禁用 <tt>chrony</tt> 服务可确保只有一个时间服务在运行。
 
 severity: medium
 

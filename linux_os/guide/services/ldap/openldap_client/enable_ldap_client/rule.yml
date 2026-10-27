@@ -11,11 +11,20 @@ description: |-
     If <tt>USELDAPAUTH=yes</tt>, then LDAP is being used. If not, set <tt>USELDAPAUTH</tt>
     to <tt>yes</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    要确定是否使用 LDAP 进行身份验证，请运行以下命令：
+    <pre>$ sudo grep -i useldapauth /etc/sysconfig/authconfig</pre>
+    <br /><br />
+    如果 <tt>USELDAPAUTH=yes</tt>，则正在使用 LDAP。否则，请将 <tt>USELDAPAUTH</tt> 设置为 <tt>yes</tt>。
+
 rationale: |-
     Without cryptographic integrity protections, information can be
     altered by unauthorized users without detection. The ssl directive specifies
     whether to use TLS or not. If not specified it will default to no.
     It should be set to start_tls rather than doing LDAP over SSL.
+
+    <p><strong>中文理由：</strong></p>
+    如果没有加密完整性保护，未授权用户可以更改信息而不被发现。ssl 指令指定是否使用 TLS；如果未指定，默认不使用。应将其设置为 start_tls，而不是通过 SSL 运行 LDAP。
 
 severity: medium
 

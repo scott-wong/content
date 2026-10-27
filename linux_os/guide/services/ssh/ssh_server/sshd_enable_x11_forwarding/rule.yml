@@ -11,9 +11,18 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>X11Forwarding yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，用户发起的远程 X11 连接不加密。启用 SSH 的 <tt>X11Forwarding</tt> 选项后，SSH 能够加密远程 X11 连接。
+    <br /><br />
+    要启用 X11 转发，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>X11Forwarding yes</pre>
+
 rationale: |-
     Non-encrypted X displays allow an attacker to capture keystrokes and to execute commands
     remotely.
+
+    <p><strong>中文理由：</strong></p>
+    未加密的 X 显示允许攻击者捕获击键并远程执行命令。
 
 severity: high
 

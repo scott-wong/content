@@ -10,10 +10,19 @@ description: |-
     following line in <tt>/etc/ssh/sshd_config</tt>:
     <pre>RhostsRSAAuthentication no</pre>
 
+    <p><strong>中文说明：</strong></p>
+    SSH 可通过使用进行身份验证的用户的 SSH 密钥，允许通过已废弃的 rsh 命令进行身份验证。应禁用此功能。
+    <br /><br />
+    要确保禁用此行为，请在 <tt>/etc/ssh/sshd_config</tt> 中添加或更正以下行：
+    <pre>RhostsRSAAuthentication no</pre>
+
 rationale: |-
     Configuring this setting for the SSH daemon provides additional
     assurance that remote login via SSH will require a password, even
     in the event of misconfiguration elsewhere.
+
+    <p><strong>中文理由：</strong></p>
+    为 SSH 守护进程配置此设置可进一步确保远程 SSH 登录需要密码，即使其他位置存在配置错误也是如此。
 
 severity: medium
 

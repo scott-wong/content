@@ -9,11 +9,17 @@ description: |-
     to use chronyc without network address specification, allowing it to use the Unix socket
     for local communication with chronyd.
 
+    <p><strong>中文说明：</strong></p>
+    默认的 <tt>chrony-wait.service</tt> 会尝试通过 127.0.0.1、::1 等网络地址连接，当 <tt>cmdport</tt> 设置为 <tt>0</tt> 时会失败。必须替换该服务单元，使其在不指定网络地址的情况下使用 chronyc，从而允许它使用 Unix 套接字与 chronyd 进行本地通信。
+
 rationale: |-
     When network access to the chrony daemon command port is disabled for security hardening,
     the chrony-wait.service must be configured to use the Unix domain socket instead of
     network addresses. This ensures the service can still check chrony synchronization status
     without requiring network command access.
+
+    <p><strong>中文理由：</strong></p>
+    当出于安全加固目的禁用对 chrony 守护进程命令端口的网络访问时，必须将 chrony-wait.service 配置为使用 Unix 域套接字而不是网络地址。这可确保该服务仍能在不需要网络命令访问的情况下检查 chrony 同步状态。
 
 severity: low
 

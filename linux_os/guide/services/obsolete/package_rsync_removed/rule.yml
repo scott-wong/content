@@ -13,9 +13,15 @@ description: |-
     The rsyncd service can be used to synchronize files between systems over network links.
     {{{ describe_package_remove(package=pkg) }}}
 
+    <p><strong>中文说明：</strong></p>
+    应删除 <tt>{{{ pkg }}}</tt> 软件包。
+
 rationale: |-
     The rsyncd service presents a security risk as it uses unencrypted protocols for
     communication.
+
+    <p><strong>中文理由：</strong></p>
+    rsyncd 服务存在安全风险，因为它使用未加密的协议进行通信。
 
 severity: medium
 

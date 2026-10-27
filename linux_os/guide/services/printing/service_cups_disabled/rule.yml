@@ -6,7 +6,14 @@ title: 'Disable the CUPS Service'
 description: |-
     {{{ describe_service_disable(service="cups") }}}
 
-rationale: 'Turn off unneeded services to reduce attack surface.'
+    <p><strong>中文说明：</strong></p>
+    要禁用 <tt>cups</tt> 服务，请运行 <tt>sudo systemctl disable --now cups</tt>。
+
+rationale: |-
+    Turn off unneeded services to reduce attack surface.
+
+    <p><strong>中文理由：</strong></p>
+    关闭不必要的服务以减小攻击面。
 
 severity: unknown
 

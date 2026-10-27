@@ -15,12 +15,23 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>X11Forwarding no</pre>
 
+    <p><strong>中文说明：</strong></p>
+    X11Forwarding 参数提供通过连接隧道传输 X11 流量以启用远程图形连接的能力。启用 SSH 的 <tt>X11Forwarding</tt> 选项后，SSH 能够加密远程 X11 连接。
+    <br />
+    默认 SSH 配置禁用 X11Forwarding。如果未设置 <tt>X11Forwarding</tt>，则使用相应默认配置。
+    <br />
+    要显式禁用 X11 转发，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>X11Forwarding no</pre>
+
 rationale: |-
     Disable X11 forwarding unless there is an operational requirement to use X11
     applications directly. There is a small risk that the remote X11 servers of
     users who are logged in via SSH with X11 forwarding could be compromised by
     other users on the X11 server. Note that even if X11 forwarding is disabled,
     users can always install their own forwarders.
+
+    <p><strong>中文理由：</strong></p>
+    除非业务确实需要直接使用 X11 应用程序，否则应禁用 X11 转发。通过 SSH 和 X11 转发登录的用户的远程 X11 服务器可能被 X11 服务器上的其他用户攻陷，存在较小风险。请注意，即使禁用 X11 转发，用户也始终可以安装自己的转发器。
 
 severity: medium
 

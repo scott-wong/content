@@ -11,11 +11,18 @@ description: |-
     <tt>/etc/profile.d/cc-ssh-strong-rng.sh</tt> contains line
     <pre>export SSH_USE_STRONG_RNG=32</pre>.
 
+    <p><strong>中文说明：</strong></p>
+    要配置 SSH 客户端使用高质量来源的熵，请确保配置适当的 shell 环境变量。<tt>SSH_USE_STRONG_RNG</tt> 环境变量确定要使用的熵字节数。确保文件 <tt>/etc/profile.d/cc-ssh-strong-rng.sh</tt> 包含以下行：
+    <pre>export SSH_USE_STRONG_RNG=32</pre>。
+
 rationale: |-
     Some SSH implementations use the openssl library for entropy, which by default, doesn't use high-entropy sources.
     Randomness is needed to generate considerably more secure data-encryption keys. Plaintext padding, initialization vectors
     in encryption algorithms, and high-quality entropy eliminates the possibility that the output of
     the random number generator used by SSH would be known to potential attackers.
+
+    <p><strong>中文理由：</strong></p>
+    某些 SSH 实现使用 openssl 库获取熵，而该库默认不使用高熵源。生成安全性高得多的数据加密密钥需要随机性。明文填充、加密算法中的初始化向量以及高质量熵可消除潜在攻击者获知 SSH 所用随机数生成器输出的可能性。
 
 severity: medium
 

@@ -11,11 +11,19 @@ description: |-
     If the command returns any output indicating that file permissions
     have been changed, this is a finding.
 
+    <p><strong>中文说明：</strong></p>
+    验证 {{{ full_name }}} 的配置确保 SSH 服务器配置文件的权限未被修改为偏离供应商默认值。使用以下命令检查 openssh-server 软件包的验证状态：
+    <pre>$ sudo rpm --verify openssh-server</pre>
+    如果命令返回任何表明文件权限已更改的输出，则判定为不符合项。
+
 rationale: |-
     Service configuration files enable or disable features of their respective
     services, which if configured incorrectly can lead to insecure and vulnerable
     configurations. Therefore, service configuration files must be owned by the
     correct group to prevent unauthorized changes.
+
+    <p><strong>中文理由：</strong></p>
+    服务配置文件启用或禁用相应服务的功能。如果配置错误，可能导致不安全且易受攻击的配置。因此，服务配置文件必须由正确的组所有，以防止未经授权的更改。
 
 severity: medium
 

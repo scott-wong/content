@@ -6,10 +6,17 @@ description: |-
     The <tt>openssh-server</tt> package should be installed.
     {{{ describe_package_install(package="openssh-server") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>openssh-server</tt> 软件包。
+    请使用适当的软件包管理工具安装 <tt>openssh-server</tt> 软件包。
+
 rationale: |-
     Without protection of the transmitted information, confidentiality, and
     integrity may be compromised because unprotected communications can be
     intercepted and either read or altered.
+
+    <p><strong>中文理由：</strong></p>
+    如果传输的信息未受到保护，机密性和完整性可能受到破坏，因为未受保护的通信可被截获并读取或更改。
 
 severity: medium
 

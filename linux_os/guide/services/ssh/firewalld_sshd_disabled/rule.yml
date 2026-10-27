@@ -10,9 +10,17 @@ description: |-
     <br /><br />
     {{{ describe_firewalld_prevent_service(service="ssh") }}}
 
+    <p><strong>中文说明：</strong></p>
+    默认情况下，允许入站连接到 SSH 端口。如果未使用 SSH 服务器，应从防火墙配置中移除此例外。
+    <br /><br />
+    要阻止 firewalld 中的 SSH 服务，请运行 <tt>sudo firewall-cmd --remove-service=ssh --permanent</tt> 并重新加载 firewalld。
+
 rationale: |-
     If inbound SSH connections are not expected, disallowing access to the SSH port will
     avoid possible exploitation of the port by an attacker.
+
+    <p><strong>中文理由：</strong></p>
+    如果预期不会有入站 SSH 连接，禁止访问 SSH 端口可避免攻击者利用该端口。
 
 severity: unknown
 

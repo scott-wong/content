@@ -8,10 +8,16 @@ description: |-
     <tt>tcp_wrappers</tt> package should be installed.
     {{{ describe_package_install(package="tcp_wrappers") }}}
 
+    <p><strong>中文说明：</strong></p>
+    当网络服务使用 <tt>xinetd</tt> 服务时，应安装 <tt>tcp_wrappers</tt> 软件包。
+
 rationale: |-
     Access control methods provide the ability to enhance system security posture
     by restricting services and known good IP addresses and address ranges. This
     prevents connections from unknown hosts and protocols.
+
+    <p><strong>中文理由：</strong></p>
+    通过限制服务和已知良好 IP 地址及地址范围来提供访问控制方法，可以增强系统安全态势。这可以阻止来自未知主机和协议的连接。
 
 severity: medium
 

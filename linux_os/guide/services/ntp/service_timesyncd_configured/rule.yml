@@ -14,8 +14,21 @@ description: |-
     <pre>server &lt;remote-server&gt;</pre>
     Multiple servers may be configured.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>systemd-timesyncd</tt> 是为跨网络同步系统时钟而添加的守护进程。该守护进程具有以下特性：
+      - 实现 SNTP 客户端
+      - 以最小权限运行
+      - 每次获得新的 NTP 同步时，将当前时钟保存到磁盘
+      - 与 networkd 关联，仅在网络连接可用时运行
+    根据情况将 server 或 pool 行添加或编辑到 <tt>/etc/systemd/timesyncd.conf</tt>：
+    <pre>server &lt;remote-server&gt;</pre>
+    可配置多个服务器。
+
 rationale: |-
     Configuring <tt>systemd-timesyncd</tt> ensures time synchronization is working properly.
+
+    <p><strong>中文理由：</strong></p>
+    配置 <tt>systemd-timesyncd</tt> 可确保时间同步正常工作。
 
 severity: medium
 

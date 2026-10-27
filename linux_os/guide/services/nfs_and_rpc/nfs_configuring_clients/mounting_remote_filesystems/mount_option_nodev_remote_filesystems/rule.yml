@@ -3,11 +3,18 @@ documentation_complete: true
 
 title: 'Mount Remote Filesystems with nodev'
 
-description: '{{{ describe_mount(option="nodev", part="any NFS mounts") }}}'
+description: |-
+    {{{ describe_mount(option="nodev", part="any NFS mounts") }}}
+
+    <p><strong>中文说明：</strong></p>
+    确保所有 NFS 挂载均使用 <tt>nodev</tt> 选项。
 
 rationale: |-
     Legitimate device files should only exist in the /dev directory. NFS mounts
     should not present device files to users.
+
+    <p><strong>中文理由：</strong></p>
+    合法设备文件应仅存在于 /dev 目录中。NFS 挂载不应向用户提供设备文件。
 
 severity: medium
 

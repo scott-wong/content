@@ -7,10 +7,16 @@ description: |-
     This should be disabled by removing any instances of the
     <tt>all_squash</tt> option from the file <tt>/etc/exports</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    <tt>all_squash</tt> 会将所有 UID 和 GID 映射到匿名用户。应通过从 <tt>/etc/exports</tt> 文件中移除所有 <tt>all_squash</tt> 选项实例来禁用此功能。
+
 rationale: |-
     The all_squash option maps all client requests to a single anonymous
     uid/gid on the NFS server, negating the ability to track file access
     by user ID.
+
+    <p><strong>中文理由：</strong></p>
+    <tt>all_squash</tt> 选项将所有客户端请求映射到 NFS 服务器上的单个匿名 UID/GID，从而无法按用户 ID 跟踪文件访问。
 
 severity: low
 

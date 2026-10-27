@@ -12,6 +12,9 @@ title: 'Uninstall {{{ package }}} Package'
 description: |-
     {{{ describe_package_remove(package=package) }}}
 
+    <p><strong>中文说明：</strong></p>
+    应删除 <tt>{{{ package }}}</tt> 软件包。
+
 rationale: |-
     It is detrimental for operating systems to provide, or install by default,
     functionality exceeding requirements or mission objectives. These
@@ -26,6 +29,9 @@ rationale: |-
     <br />
     Removing the <tt>{{{ package }}}</tt> package decreases the risk of the
     telnet service's accidental (or intentional) activation.
+
+    <p><strong>中文理由：</strong></p>
+    操作系统提供或默认安装超出需求或任务目标的功能是有害的。这些不必要的功能往往被忽视，因此可能继续存在不安全因素。它们通过提供额外攻击途径增加平台风险。<br />telnet 服务提供未加密的远程访问服务，无法保证用户密码或远程会话的机密性和完整性。如果特权用户使用此服务登录，特权用户密码可能被泄露。<br />删除 <tt>{{{ package }}}</tt> 软件包可降低 telnet 服务被意外（或故意）激活的风险。
 
 severity: high
 

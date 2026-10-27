@@ -13,10 +13,18 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>RekeyLimit {{{ xccdf_value("var_rekey_limit_size") }}} {{{ xccdf_value("var_rekey_limit_time") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    <tt>RekeyLimit</tt> 参数指定会话密钥重新协商的频率，包括允许传输的数据量和经过的时间。<br/>
+    要降低默认限制，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>RekeyLimit {{{ xccdf_value("var_rekey_limit_size") }}} {{{ xccdf_value("var_rekey_limit_time") }}}</pre>
+
 rationale: |-
     By decreasing the limit based on the amount of data and enabling
     time-based limit, effects of potential attacks against
     encryption keys are limited.
+
+    <p><strong>中文理由：</strong></p>
+    通过基于数据量降低限制并启用基于时间的限制，可限制针对加密密钥的潜在攻击所造成的影响。
 
 severity: medium
 

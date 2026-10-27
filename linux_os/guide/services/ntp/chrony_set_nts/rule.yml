@@ -7,12 +7,18 @@ description: |-
     The specified time server must support NTS and must be configured to use NTS.
     To configure NTS for given time server add <tt>nts</tt> to each <tt>server</tt> or <tt>pool</tt> line in <tt>{{{ chrony_conf_path }}}</tt>.
 
+    <p><strong>中文说明：</strong></p>
+    系统应配置为使用支持 Network Time Security（NTS）的时间服务器。指定的时间服务器必须支持 NTS，并且必须配置为使用 NTS。要为指定时间服务器配置 NTS，请在 <tt>{{{ chrony_conf_path }}}</tt> 的每个 <tt>server</tt> 或 <tt>pool</tt> 行中添加 <tt>nts</tt>。
+
 rationale: |-
     Network Time Security (NTS) uses Transport Layer Security (TLS) to secure Network Time Protocol (NTP) communications.
     Not using NTS could allow an attacker to interpret and modify the data sent back from the time server
     Inaccurate time stamps make it more difficult to correlate events and can lead to an inaccurate analysis.
     Determining the correct time a particular event occurred on a system is critical when conducting forensic analysis and investigating system events.
     Sources outside the configured acceptable allowance (drift) may be inaccurate.
+
+    <p><strong>中文理由：</strong></p>
+    Network Time Security（NTS）使用传输层安全（TLS）来保护网络时间协议（NTP）通信。不使用 NTS 可能允许攻击者解释和修改时间服务器返回的数据。不准确的时间戳会使关联事件更加困难，并可能导致分析不准确。在开展取证分析和调查系统事件时，确定特定事件在系统上发生的准确时间至关重要。超出配置的可接受偏差（drift）范围的来源可能不准确。
 
 identifiers:
     cce@rhel10: CCE-86471-0

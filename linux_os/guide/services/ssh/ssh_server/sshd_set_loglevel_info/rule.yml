@@ -12,6 +12,14 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>LogLevel INFO</pre>
 
+    <p><strong>中文说明：</strong></p>
+    INFO 参数指定记录登录和注销活动。
+    <br/>
+    默认 SSH 配置将日志级别设置为 INFO。如果未设置 <tt>LogLevel</tt>，则使用相应默认配置。
+    <br/>
+    要在 SSH 中显式指定日志级别，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>LogLevel INFO</pre>
+
 rationale: |-
     SSH provides several logging levels with varying amounts of verbosity. <tt>DEBUG</tt> is specifically
     not recommended other than strictly for debugging SSH communications since it provides
@@ -19,6 +27,9 @@ rationale: |-
     basic level that only records login activity of SSH users. In many situations, such as Incident
     Response, it is important to determine when a particular user was active on a system. The
     logout record can eliminate those users who disconnected, which helps narrow the field.
+
+    <p><strong>中文理由：</strong></p>
+    SSH 提供多个详细程度不同的日志级别。除严格用于调试 SSH 通信外，特别不建议使用 <tt>DEBUG</tt>，因为它提供的数据过多，难以识别重要的安全信息。<tt>INFO</tt> 级别是仅记录 SSH 用户登录活动的基本级别。在许多情况下（例如事件响应），确定特定用户在系统上活跃的时间非常重要。注销记录可排除已断开的用户，从而帮助缩小范围。
 
 severity: low
 

@@ -8,10 +8,17 @@ description: |-
     Once the read write users have been removed, restart the SNMP service:
     <pre>$ sudo systemctl restart snmpd</pre>
 
+    <p><strong>中文说明：</strong></p>
+    编辑 <tt>/etc/snmp/snmpd.conf</tt>，删除所有 <tt>rwuser</tt> 条目。删除读写用户后，重启 SNMP 服务：
+    <pre>$ sudo systemctl restart snmpd</pre>
+
 rationale: |-
     Certain SNMP settings can permit users to execute system behaviors from user
     writes to the community strings.
     This may permit a compromised account to execute commands on a remote system.
+
+    <p><strong>中文理由：</strong></p>
+    某些 SNMP 设置可能允许用户通过写入 community strings 执行系统行为。这可能允许已遭入侵的账户在远程系统上执行命令。
 
 severity: medium
 

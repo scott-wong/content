@@ -9,10 +9,17 @@ description: |-
     add or edit the following line in the <tt>/etc/ssh/sshd_config</tt> file:
     <pre>MaxStartups {{{ xccdf_value("var_sshd_set_maxstartups") }}}</pre>
 
+    <p><strong>中文说明：</strong></p>
+    MaxStartups 参数指定到 SSH 守护进程的最大并发未通过身份验证连接数。在身份验证成功或连接的 LoginGraceTime 到期之前，其他连接将被丢弃。要配置 MaxStartups，应在 <tt>/etc/ssh/sshd_config</tt> 文件中添加或编辑以下行：
+    <pre>MaxStartups {{{ xccdf_value("var_sshd_set_maxstartups") }}}</pre>
+
 rationale: |-
     To protect a system from denial of service due to a large number of pending authentication
     connection attempts, use the rate limiting function of MaxStartups to protect availability of
     sshd logins and prevent overwhelming the daemon.
+
+    <p><strong>中文理由：</strong></p>
+    为保护系统免受大量待处理身份验证连接尝试造成的拒绝服务影响，请使用 MaxStartups 的速率限制功能来保护 sshd 登录的可用性，并防止守护进程过载。
 
 severity: medium
 

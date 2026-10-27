@@ -7,6 +7,9 @@ description: |-
     Limit the MACs to those hash algorithms which are FIPS-approved.
     The following line in <tt>/etc/ssh/sshd_config</tt>
     demonstrates use of FIPS-approved MACs:
+
+    <p><strong>中文说明：</strong></p>
+    将 MAC 限制为 FIPS 批准的哈希算法。应确保 <tt>/etc/ssh/sshd_config</tt> 中的配置使用 FIPS 批准的 MAC。
 {{% if product in ["sle12", "sle15", "slmicro5", "slmicro6"] %}}
     <pre>MACs hmac-sha2-512,hmac-sha2-256</pre>
 {{% else %}}
@@ -36,6 +39,9 @@ description: |-
 rationale: |-
     FIPS-approved cryptographic hash functions are required to be used.
     The only SSHv2 hash algorithms meeting this requirement is SHA2.
+
+    <p><strong>中文理由：</strong></p>
+    必须使用 FIPS 批准的加密哈希函数。满足此要求的唯一 SSHv2 哈希算法是 SHA2。
 
 severity: medium
 

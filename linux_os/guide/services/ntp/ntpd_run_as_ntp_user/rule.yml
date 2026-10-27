@@ -14,10 +14,18 @@ description: |-
     <pre>OPTIONS="-u ntp:ntp"</pre>
     This recommendation only applies if ntp is in use on the system.
 
+    <p><strong>中文说明：</strong></p>
+    ntp 是实现 Network Time Protocol（NTP）的守护进程。它旨在跨多种系统同步系统时钟，并使用高度准确的源。有关 NTP 的更多信息，请参阅 <a href="http://www.ntp.org">NTP 项目网站</a>。ntp 可配置为客户端和/或服务器。为确保 ntpd 以 ntp 用户运行，请添加或编辑 <tt>/etc/sysconfig/ntpd</tt> 中的 <tt>OPTIONS</tt> 变量，使其包含 ' -u ntp:ntp '：
+    <pre>OPTIONS="-u ntp:ntp"</pre>
+    此建议仅在系统使用 ntp 时适用。
+
 rationale: |-
     If ntp is in use on the system proper configuration is vital to ensuring time synchronization
     is working properly. Running ntpd under dedicated user accounts limits the attack surface for
     potential attacker exploiting security flaws in the daemon or the protocol.
+
+    <p><strong>中文理由：</strong></p>
+    如果系统使用 ntp，则正确配置对于确保时间同步正常工作至关重要。以专用用户账户运行 ntpd 可限制潜在攻击者利用守护进程或协议安全缺陷时的攻击面。
 
 severity: medium
 

@@ -7,6 +7,9 @@ description: |-
     The <tt>sssd</tt> package should be installed.
     {{{ describe_package_install(package="sssd") }}}
 
+    <p><strong>中文说明：</strong></p>
+    应安装 <tt>sssd</tt> 软件包。
+
 rationale: |-
     The System Security Services Daemon <tt>sssd</tt> provides
     authentication mechanisms for remote directories.
@@ -17,6 +20,11 @@ rationale: |-
     remote directories is possible. Without this package
     the system will be unable to use many centralized
     authentication systems.
+
+    <p><strong>中文理由：</strong></p>
+    系统安全服务守护进程 <tt>sssd</tt> 为远程目录提供身份验证机制。远程目录允许管理员跨多台系统管理访问权限。
+
+    需要此软件包才能通过远程目录进行身份验证。如果没有此软件包，系统将无法使用许多集中式身份验证系统。
 
 severity: medium
 

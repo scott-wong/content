@@ -3,7 +3,11 @@ documentation_complete: true
 
 title: 'Uninstall quagga Package'
 
-description: '{{{ describe_package_remove(package="quagga") }}}'
+description: |-
+    {{{ describe_package_remove(package="quagga") }}}
+
+    <p><strong>中文说明：</strong></p>
+    请使用适当的软件包管理工具移除 <tt>quagga</tt> 软件包。
 
 rationale: |-
     Routing software is typically used on routers to exchange network topology information
@@ -12,6 +16,9 @@ rationale: |-
     <br />
     If there is no need to make the router software available,
     removing it provides a safeguard against its activation.
+
+    <p><strong>中文理由：</strong></p>
+    路由软件通常用于路由器，以与其他路由器交换网络拓扑信息。如果在不需要时使用路由软件，系统网络信息可能会不必要地通过网络传输。<br />如果无需提供路由器软件，移除它可防止其被激活。
 
 severity: low
 

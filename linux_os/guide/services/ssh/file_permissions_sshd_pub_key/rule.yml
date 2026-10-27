@@ -2,11 +2,18 @@ documentation_complete: true
 
 title: 'Verify Permissions on SSH Server Public *.pub Key Files'
 
-description: '{{{ describe_file_permissions(file="/etc/ssh/*.pub", perms="0644") }}}'
+description: |-
+    {{{ describe_file_permissions(file="/etc/ssh/*.pub", perms="0644") }}}
+
+    <p><strong>中文说明：</strong></p>
+    要正确设置 <tt>/etc/ssh/*.pub</tt> 的权限，请运行 <tt>sudo chmod 0644 /etc/ssh/*.pub</tt>。
 
 rationale: |-
     If a public host key file is modified by an unauthorized user, the SSH service
     may be compromised.
+
+    <p><strong>中文理由：</strong></p>
+    如果公钥主机密钥文件被未经授权的用户修改，SSH 服务可能受到破坏。
 
 severity: medium
 

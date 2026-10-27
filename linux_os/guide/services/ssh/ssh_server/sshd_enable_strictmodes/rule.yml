@@ -14,9 +14,20 @@ description: |-
     {{{ sshd_config_file() }}}
     <pre>StrictModes yes</pre>
 
+    <p><strong>中文说明：</strong></p>
+    SSH 的 <tt>StrictModes</tt> 选项在接受登录前检查用户主目录 <tt>.ssh</tt> 文件夹中的文件和所有权权限。如果发现全局可写权限，则拒绝登录。
+    <br/>
+    默认 SSH 配置启用 <tt>StrictModes</tt>。如果未设置 <tt>StrictModes</tt>，则使用相应默认配置。
+    <br/>
+    要在 SSH 中显式启用 <tt>StrictModes</tt>，请在 {{{ sshd_config_file() }}} 中添加或更正以下行：
+    <pre>StrictModes yes</pre>
+
 rationale: |-
     If other users have access to modify user-specific SSH configuration files, they
     may be able to log into the system as another user.
+
+    <p><strong>中文理由：</strong></p>
+    如果其他用户可以修改用户专属的 SSH 配置文件，他们可能能够以其他用户身份登录系统。
 
 severity: medium
 
